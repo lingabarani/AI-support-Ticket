@@ -1,0 +1,7 @@
+{
+  "name": "ai-support-platform",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix aisupport install && npm --prefix aisupport run build"
+  }
+}
