@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import KpiCard from '../components/KpiCard';
+import QuickSightEmbed from '../components/QuickSightEmbed';
 import {
   Activity,
   Bell,
@@ -200,6 +201,8 @@ export default function AdminDashboard() {
             </div>
           </div>
         </div>
+
+        <QuickSightEmbed role="system_admin" title="System Administrator Security & Compliance Dashboard" height={440} />
       </div>
     </Layout>
   );

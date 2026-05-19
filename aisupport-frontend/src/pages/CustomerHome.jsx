@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import logo from '../assets/ai-support-logo.png';
 import ChatbotWidget from '../components/ChatbotWidget';
+import QuickSightEmbed from '../components/QuickSightEmbed';
 
 const stats = [
   { label: 'Open Tickets', value: '5', change: '+25%', icon: Ticket, color: 'purple' },
@@ -228,6 +229,8 @@ export default function CustomerHome() {
             </div>
           </div>
         </section>
+
+        <QuickSightEmbed role="customer" title="Customer Portal Sentiment & Self-Service Dashboard" height={440} />
       </main>
       <ChatbotWidget />
     </div>

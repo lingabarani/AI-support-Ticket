@@ -11,6 +11,16 @@ const dashboardEnvByRole = {
   support_agent: 'QS_DASHBOARD_SUPPORT_AGENT',
   team_manager: 'QS_DASHBOARD_TEAM_MANAGER',
   business_executive: 'QS_DASHBOARD_BUSINESS_EXECUTIVE',
+  system_admin: 'QS_DASHBOARD_SYSTEM_ADMIN',
+  customer: 'QS_DASHBOARD_CUSTOMER_PORTAL',
+};
+
+const analysisEnvByRole = {
+  support_agent: 'QS_ANALYSIS_SUPPORT_AGENT',
+  team_manager: 'QS_ANALYSIS_TEAM_MANAGER',
+  business_executive: 'QS_ANALYSIS_BUSINESS_EXECUTIVE',
+  system_admin: 'QS_ANALYSIS_SYSTEM_ADMIN',
+  customer: 'QS_ANALYSIS_CUSTOMER_PORTAL',
 };
 
 const getAllowedDomains = () => {
@@ -32,24 +42,38 @@ const getDashboardId = (role) => {
   return process.env[envName];
 };
 
+const getAnalysisId = (role) => {
+  const envName = analysisEnvByRole[role];
+  return process.env[envName];
+};
+
 const getQuickSightEmbedUrl = async (role) => {
   const dashboardId = getDashboardId(role);
+  const analysisId = getAnalysisId(role);
 
-  if (!process.env.AWS_ACCOUNT_ID || !process.env.QUICKSIGHT_USER_ARN || !dashboardId) {
+  if (!process.env.AWS_ACCOUNT_ID || !process.env.QUICKSIGHT_USER_ARN || (!dashboardId && !analysisId)) {
     const error = new Error('QuickSight embedding is not fully configured on the backend.');
     error.statusCode = 500;
     throw error;
   }
 
+  const experienceConfiguration = dashboardId
+    ? {
+      Dashboard: {
+        InitialDashboardId: dashboardId,
+      },
+    }
+    : {
+      QuickSightConsole: {
+        InitialPath: `/analyses/${analysisId}`,
+      },
+    };
+
   const command = new GenerateEmbedUrlForRegisteredUserCommand({
     AwsAccountId: process.env.AWS_ACCOUNT_ID,
     UserArn: process.env.QUICKSIGHT_USER_ARN,
     AllowedDomains: getAllowedDomains(),
-    ExperienceConfiguration: {
-      Dashboard: {
-        InitialDashboardId: dashboardId,
-      },
-    },
+    ExperienceConfiguration: experienceConfiguration,
     SessionLifetimeInMinutes: 60,
   });
 

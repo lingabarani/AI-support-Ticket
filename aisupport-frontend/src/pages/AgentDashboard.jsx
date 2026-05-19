@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import KpiCard from '../components/KpiCard';
+import QuickSightEmbed from '../components/QuickSightEmbed';
 import { Ticket, Clock, CheckCircle, AlertTriangle, TrendingUp, Bot } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { tickets, ticketTrendData, priorityData } from '../data/dummyData';
@@ -67,6 +68,8 @@ export default function AgentDashboard() {
             </div>
           </div>
         </div>
+
+        <QuickSightEmbed role="support_agent" title="Support Operations Intelligence Dashboard" height={440} />
 
         {/* Recent Tickets Table */}
         <div className="card-glass rounded-xl">
