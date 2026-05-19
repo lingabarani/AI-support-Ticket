@@ -1,0 +1,49 @@
+export const demoNotifications = [
+  {
+    "notification_id": "NOT-001",
+    "role": "support_agent",
+    "title": "High priority queue",
+    "message": "18 high priority tickets need review.",
+    "type": "ticket",
+    "read": false,
+    "created_at": "2026-05-18T09:00:00.000Z"
+  },
+  {
+    "notification_id": "NOT-002",
+    "role": "team_manager",
+    "title": "SLA risk",
+    "message": "Several breached tickets have recovery actions ready.",
+    "type": "sla",
+    "read": false,
+    "created_at": "2026-05-18T10:15:00.000Z"
+  },
+  {
+    "notification_id": "NOT-003",
+    "role": "business_executive",
+    "title": "Revenue risk updated",
+    "message": "Payment and refund issues are the top revenue risk drivers.",
+    "type": "analytics",
+    "read": true,
+    "created_at": "2026-05-18T11:30:00.000Z"
+  },
+  {
+    "notification_id": "NOT-004",
+    "role": "system_admin",
+    "title": "Support mode active",
+    "message": "Support fallback is ready.",
+    "type": "system",
+    "read": false,
+    "created_at": "2026-05-18T12:45:00.000Z"
+  },
+  {
+    "notification_id": "NOT-005",
+    "role": "customer",
+    "title": "Ticket update",
+    "message": "Your latest ticket has a suggested next step available.",
+    "type": "ticket",
+    "read": false,
+    "created_at": "2026-05-18T14:00:00.000Z"
+  }
+];
+
+export default demoNotifications;

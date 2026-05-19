@@ -1,0 +1,290 @@
+export const demoKnowledgeBase = [
+  {
+    "kb_id": "KB-001",
+    "title": "Password reset",
+    "category": "Login Issue",
+    "keywords": [
+      "password",
+      "reset",
+      "login",
+      "issue"
+    ],
+    "answer": "Open the sign-in page, choose Forgot Password, verify the email code, and set a new password.",
+    "relatedTickets": [
+      "TKT-0001",
+      "TKT-0013",
+      "TKT-0025",
+      "TKT-0037",
+      "TKT-0049"
+    ],
+    "lastUpdated": "2026-05-01"
+  },
+  {
+    "kb_id": "KB-002",
+    "title": "Payment failed but debited",
+    "category": "Payment Failure",
+    "keywords": [
+      "payment",
+      "failed",
+      "but",
+      "debited",
+      "payment",
+      "failure"
+    ],
+    "answer": "Match the bank reference with the billing record and restore access after verification.",
+    "relatedTickets": [
+      "TKT-0002",
+      "TKT-0014",
+      "TKT-0026",
+      "TKT-0038",
+      "TKT-0050"
+    ],
+    "lastUpdated": "2026-05-02"
+  },
+  {
+    "kb_id": "KB-003",
+    "title": "Refund delay",
+    "category": "Refund Request",
+    "keywords": [
+      "refund",
+      "delay",
+      "refund",
+      "request"
+    ],
+    "answer": "Share refund stage, expected date, and keep the ticket open until settlement.",
+    "relatedTickets": [
+      "TKT-0003",
+      "TKT-0015",
+      "TKT-0027",
+      "TKT-0039",
+      "TKT-0051"
+    ],
+    "lastUpdated": "2026-05-03"
+  },
+  {
+    "kb_id": "KB-004",
+    "title": "Account suspension",
+    "category": "Account Suspension",
+    "keywords": [
+      "account",
+      "suspension",
+      "account",
+      "suspension"
+    ],
+    "answer": "Request verification details and restore access after the risk review clears.",
+    "relatedTickets": [
+      "TKT-0004",
+      "TKT-0016",
+      "TKT-0028",
+      "TKT-0040",
+      "TKT-0052"
+    ],
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "kb_id": "KB-005",
+    "title": "Two-factor authentication",
+    "category": "Security Concern",
+    "keywords": [
+      "two-factor",
+      "authentication",
+      "security",
+      "concern"
+    ],
+    "answer": "Enable two-factor authentication from Security Settings and store backup codes securely.",
+    "relatedTickets": [
+      "TKT-0005",
+      "TKT-0017",
+      "TKT-0029",
+      "TKT-0041",
+      "TKT-0053"
+    ],
+    "lastUpdated": "2026-05-05"
+  },
+  {
+    "kb_id": "KB-006",
+    "title": "Dashboard slow",
+    "category": "Performance Issue",
+    "keywords": [
+      "dashboard",
+      "slow",
+      "performance",
+      "issue"
+    ],
+    "answer": "Refresh cache and escalate with timestamp plus dashboard ID if latency continues.",
+    "relatedTickets": [
+      "TKT-0006",
+      "TKT-0018",
+      "TKT-0030",
+      "TKT-0042",
+      "TKT-0054"
+    ],
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "kb_id": "KB-007",
+    "title": "File upload crash",
+    "category": "Bug Report",
+    "keywords": [
+      "file",
+      "upload",
+      "crash",
+      "bug",
+      "report"
+    ],
+    "answer": "Retry with supported file type and attach logs plus reproduction steps for engineering.",
+    "relatedTickets": [
+      "TKT-0007",
+      "TKT-0019",
+      "TKT-0031",
+      "TKT-0043",
+      "TKT-0055"
+    ],
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "kb_id": "KB-008",
+    "title": "Data sync problem",
+    "category": "Subscription Cancellation",
+    "keywords": [
+      "data",
+      "sync",
+      "problem",
+      "subscription",
+      "cancellation"
+    ],
+    "answer": "Reconnect the integration, refresh the token, and trigger a manual sync.",
+    "relatedTickets": [
+      "TKT-0008",
+      "TKT-0020",
+      "TKT-0032",
+      "TKT-0044",
+      "TKT-0056"
+    ],
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "kb_id": "KB-009",
+    "title": "Subscription cancellation",
+    "category": "Feature Request",
+    "keywords": [
+      "subscription",
+      "cancellation",
+      "feature",
+      "request"
+    ],
+    "answer": "Confirm reason, share retention options, and process with plan end date.",
+    "relatedTickets": [
+      "TKT-0009",
+      "TKT-0021",
+      "TKT-0033",
+      "TKT-0045",
+      "TKT-0057"
+    ],
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "kb_id": "KB-010",
+    "title": "Billing clarification",
+    "category": "Data Sync Issue",
+    "keywords": [
+      "billing",
+      "clarification",
+      "data",
+      "sync",
+      "issue"
+    ],
+    "answer": "Explain invoice items and correct mismatched plan labels when found.",
+    "relatedTickets": [
+      "TKT-0010",
+      "TKT-0022",
+      "TKT-0034",
+      "TKT-0046",
+      "TKT-0058"
+    ],
+    "lastUpdated": "2026-05-10"
+  },
+  {
+    "kb_id": "KB-011",
+    "title": "Suspicious login",
+    "category": "Delivery Delay",
+    "keywords": [
+      "suspicious",
+      "login",
+      "delivery",
+      "delay"
+    ],
+    "answer": "Reset password, revoke sessions, enable two-factor authentication, and review activity.",
+    "relatedTickets": [
+      "TKT-0011",
+      "TKT-0023",
+      "TKT-0035",
+      "TKT-0047",
+      "TKT-0059"
+    ],
+    "lastUpdated": "2026-05-11"
+  },
+  {
+    "kb_id": "KB-012",
+    "title": "QuickSight unavailable",
+    "category": "Billing Clarification",
+    "keywords": [
+      "quicksight",
+      "unavailable",
+      "billing",
+      "clarification"
+    ],
+    "answer": "Show the analytics dashboard and retry the secure embed later.",
+    "relatedTickets": [
+      "TKT-0012",
+      "TKT-0024",
+      "TKT-0036",
+      "TKT-0048",
+      "TKT-0060"
+    ],
+    "lastUpdated": "2026-05-12"
+  },
+  {
+    "kb_id": "KB-013",
+    "title": "Bedrock unavailable",
+    "category": "Login Issue",
+    "keywords": [
+      "bedrock",
+      "unavailable",
+      "login",
+      "issue"
+    ],
+    "answer": "Use support intelligence and answer from available ticket history and knowledge base.",
+    "relatedTickets": [
+      "TKT-0001",
+      "TKT-0013",
+      "TKT-0025",
+      "TKT-0037",
+      "TKT-0049"
+    ],
+    "lastUpdated": "2026-05-13"
+  },
+  {
+    "kb_id": "KB-014",
+    "title": "SLA breach explanation",
+    "category": "Payment Failure",
+    "keywords": [
+      "sla",
+      "breach",
+      "explanation",
+      "payment",
+      "failure"
+    ],
+    "answer": "Explain breached target, owner, recovery action, and next update time.",
+    "relatedTickets": [
+      "TKT-0002",
+      "TKT-0014",
+      "TKT-0026",
+      "TKT-0038",
+      "TKT-0050"
+    ],
+    "lastUpdated": "2026-05-14"
+  }
+];
+
+export default demoKnowledgeBase;

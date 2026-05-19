@@ -1,0 +1,28 @@
+export const demoReports = [
+  {
+    "report_id": "RPT-001",
+    "name": "Ticket Operations Summary",
+    "type": "CSV",
+    "role": "team_manager",
+    "generated_at": "2026-05-18T15:00:00.000Z",
+    "rows": 300
+  },
+  {
+    "report_id": "RPT-002",
+    "name": "Executive Revenue Risk Report",
+    "type": "CSV",
+    "role": "business_executive",
+    "generated_at": "2026-05-18T15:10:00.000Z",
+    "rows": 5
+  },
+  {
+    "report_id": "RPT-003",
+    "name": "System Admin Audit Export",
+    "type": "CSV",
+    "role": "system_admin",
+    "generated_at": "2026-05-18T15:20:00.000Z",
+    "rows": 3
+  }
+];
+
+export default demoReports;

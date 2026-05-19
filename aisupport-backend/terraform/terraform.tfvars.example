@@ -1,0 +1,8 @@
+aws_region       = "us-east-1"
+aws_profile      = null
+app_name         = "aisupport"
+environment      = "personal"
+bedrock_model_id = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+
+# If you configured a named AWS CLI profile, use this instead:
+# aws_profile = "support-ticket"

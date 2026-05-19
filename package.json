@@ -1,0 +1,10 @@
+{
+  "name": "ai-support-platform",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix aisupport-frontend install && npm --prefix aisupport-frontend run build",
+    "dev:frontend": "npm --prefix aisupport-frontend run dev",
+    "dev:backend": "npm --prefix aisupport-backend run dev",
+    "start:backend": "npm --prefix aisupport-backend start"
+  }
+}
