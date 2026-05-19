@@ -99,22 +99,6 @@ export default function ExecutiveDashboard() {
 
         <BedrockAgentChat role="business_executive" mode="card" />
 
-        {/* QuickSight Embedding Placeholder */}
-        <div className="card-glass rounded-xl p-5">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-white text-sm">Amazon QuickSight Analytics Dashboard</h3>
-            <span className="text-xs text-blue-400 px-2 py-0.5 rounded-full" style={{ background: 'rgba(14,165,233,0.15)', border: '1px solid rgba(14,165,233,0.25)' }}>QuickSight Embed</span>
-          </div>
-          <div className="rounded-xl flex flex-col items-center justify-center" style={{ height: 240, background: 'rgba(14,165,233,0.05)', border: '2px dashed rgba(14,165,233,0.2)' }}>
-            <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-3">
-              <TrendingUp size={28} className="text-blue-400" />
-            </div>
-            <p className="text-sm font-semibold text-white">QuickSight Dashboard</p>
-            <p className="text-xs text-slate-400 mt-1">Embed your Amazon QuickSight dashboard here</p>
-            <p className="text-xs text-slate-500 mt-1 font-mono">QuickSightEmbedding SDK → embedDashboard()</p>
-          </div>
-        </div>
-
         <QuickSightEmbed role="business_executive" title="Executive QuickSight Analytics Dashboard" height={460} />
       </div>
     </Layout>

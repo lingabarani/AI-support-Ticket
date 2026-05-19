@@ -15,10 +15,14 @@ router.get('/embed-url', embedLimiter, validateRole('query'), async (req, res) =
     const embedUrl = await getQuickSightEmbedUrl(req.dashboardRole);
     res.json({ embedUrl, source: 'ai' });
   } catch (error) {
+    const reason = process.env.NODE_ENV === 'production'
+      ? ''
+      : ` Reason: ${error.cause?.name || error.message}`;
+
     res.json({
       embedUrl: '',
       source: 'support_fallback',
-      message: 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.',
+      message: `QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.${reason}`,
     });
   }
 });

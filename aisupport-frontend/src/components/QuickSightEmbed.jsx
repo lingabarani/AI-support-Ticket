@@ -49,7 +49,7 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
         <div className="space-y-4">
           <div className="rounded-xl px-4 py-3 text-center" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
             <p className="text-sm font-semibold text-emerald-100">QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.</p>
-            <p className="mt-1 text-xs text-emerald-100/70">Support intelligence ready</p>
+            <p className="mt-1 text-xs text-emerald-100/70">{state.error}</p>
           </div>
           <LocalAnalyticsDashboard role={role} />
         </div>
