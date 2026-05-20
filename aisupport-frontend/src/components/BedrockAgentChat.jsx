@@ -6,28 +6,28 @@ import logo from '../assets/ai-support-logo.png';
 
 const labels = {
   customer: {
-    title: 'Support Assistant',
-    subtitle: 'Ticket status, refunds, login, and next steps',
+    title: 'Customer Support Agent',
+    subtitle: 'Authorized customer help and ticket guidance',
     welcome: 'Ask me about your ticket status, refunds, login help, billing, or next steps.',
   },
   support_agent: {
-    title: 'AI Assistant',
-    subtitle: 'Ticket resolution assistant',
+    title: 'Support Operations Agent',
+    subtitle: 'Authorized ticket resolution assistant',
     welcome: 'Ask me to summarize tickets, draft replies, detect sentiment, predict priority, or recommend next actions.',
   },
   team_manager: {
-    title: 'AI Assistant',
-    subtitle: 'SLA, workload, and escalation insights',
+    title: 'Manager Intelligence Agent',
+    subtitle: 'Authorized SLA, workload, and escalation insights',
     welcome: 'Ask me about team performance, SLA risks, recurring issues, workload balance, or escalation trends.',
   },
   business_executive: {
-    title: 'AI Assistant',
-    subtitle: 'Strategic insights assistant',
+    title: 'Executive Strategy Agent',
+    subtitle: 'Authorized strategic insights assistant',
     welcome: 'Ask me about customer sentiment, churn risk, revenue impact, and strategic improvement opportunities.',
   },
   system_admin: {
-    title: 'System Assistant',
-    subtitle: 'Health, roles, permissions, and security insights',
+    title: 'System Admin Agent',
+    subtitle: 'Authorized health, roles, and security insights',
     welcome: 'Ask me about system health, active users, role permissions, API status, or security alerts.',
   },
 };
@@ -83,7 +83,7 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
           </div>
           <div className="flex flex-wrap gap-1">
             <span className="rounded-full border border-blue-300/30 bg-blue-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-blue-200">
-              Bedrock API
+              Bedrock
             </span>
             <span className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-200">
               Ready
