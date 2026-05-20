@@ -9,26 +9,56 @@ const labels = {
     title: 'Customer Support Agent',
     subtitle: 'Authorized customer help and ticket guidance',
     welcome: 'Ask me about your ticket status, refunds, login help, billing, or next steps.',
+    badge: 'Customer Portal',
+    highlights: [
+      ['Open Requests', '5', 'Track ticket progress and pending replies'],
+      ['Self-Service', '12 articles', 'Recommended help content for your issues'],
+      ['Next Step', 'Upload proof', 'Attach screenshots or invoices to speed review'],
+    ],
   },
   support_agent: {
     title: 'Support Operations Agent',
     subtitle: 'Authorized ticket resolution assistant',
     welcome: 'Ask me to summarize tickets, draft replies, detect sentiment, predict priority, or recommend next actions.',
+    badge: 'Agent Assist',
+    highlights: [
+      ['Priority Queue', '18 high', 'High-impact tickets need first response'],
+      ['Reply Drafts', 'Ready', 'Generate customer-safe replies from ticket context'],
+      ['Resolution Hint', 'KB match', 'Recommended articles linked to top categories'],
+    ],
   },
   team_manager: {
     title: 'Manager Intelligence Agent',
     subtitle: 'Authorized SLA, workload, and escalation insights',
     welcome: 'Ask me about team performance, SLA risks, recurring issues, workload balance, or escalation trends.',
+    badge: 'Manager View',
+    highlights: [
+      ['SLA Watch', '8 risks', 'Breached and near-breach tickets grouped by owner'],
+      ['Workload', '2 overloaded', 'Rebalance agents before queue pressure rises'],
+      ['Escalations', '3 urgent', 'Engineering handoff recommended today'],
+    ],
   },
   business_executive: {
     title: 'Executive Strategy Agent',
     subtitle: 'Authorized strategic insights assistant',
     welcome: 'Ask me about customer sentiment, churn risk, revenue impact, and strategic improvement opportunities.',
+    badge: 'Executive View',
+    highlights: [
+      ['Revenue Risk', 'Rs 12.8 L', 'At-risk accounts tied to payment and login issues'],
+      ['Churn Watch', '512 customers', 'Negative sentiment and repeat tickets increasing'],
+      ['Board Action', '5 moves', 'Recommended retention and service recovery actions'],
+    ],
   },
   system_admin: {
     title: 'System Admin Agent',
     subtitle: 'Authorized health, roles, and security insights',
     welcome: 'Ask me about system health, active users, role permissions, API status, or security alerts.',
+    badge: 'Admin Control',
+    highlights: [
+      ['System Health', '99.8%', 'API, database, and AI service status monitored'],
+      ['Access Review', '7 pending', 'Role and invite checks awaiting approval'],
+      ['Security', '3 alerts', 'Review recent login and permission changes'],
+    ],
   },
 };
 
@@ -82,6 +112,9 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
             <div className="text-xs text-slate-400">{copy.subtitle}</div>
           </div>
           <div className="flex flex-wrap gap-1">
+            <span className="rounded-full border border-purple-300/30 bg-purple-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-100">
+              {copy.badge}
+            </span>
             <span className="rounded-full border border-blue-300/30 bg-blue-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-blue-200">
               Bedrock
             </span>
@@ -96,6 +129,18 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
           </button>
         )}
       </div>
+
+      {mode !== 'floating' && (
+        <div className="grid grid-cols-1 gap-3 border-b border-white/10 p-4 md:grid-cols-3">
+          {copy.highlights.map(([label, value, detail]) => (
+            <div key={label} className="rounded-xl border border-white/10 p-4" style={{ background: 'rgba(255,255,255,0.035)' }}>
+              <p className="text-xs text-slate-500">{label}</p>
+              <p className="mt-1 text-lg font-bold text-white">{value}</p>
+              <p className="mt-1 text-xs leading-relaxed text-slate-400">{detail}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <MessageList messages={messages} />
 

@@ -19,6 +19,7 @@ const ManagerDashboard = lazy(() => import('./pages/ManagerDashboard'));
 const ManagerTeam = lazy(() => import('./pages/ManagerTeam'));
 const ManagerReports = lazy(() => import('./pages/ManagerReports'));
 const ExecutiveDashboard = lazy(() => import('./pages/ExecutiveDashboard'));
+const ExecutiveAnalytics = lazy(() => import('./pages/ExecutiveAnalytics'));
 const ExecutiveInsights = lazy(() => import('./pages/ExecutiveInsights'));
 const CustomerHome = lazy(() => import('./pages/CustomerHome'));
 const RaiseTicket = lazy(() => import('./pages/RaiseTicket'));
@@ -180,7 +181,7 @@ function AppRoutes() {
         <Route path="/manager/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
         {/* Executive */}
         <Route path="/executive" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
-        <Route path="/executive/analytics" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
+        <Route path="/executive/analytics" element={<ProtectedRoute><ExecutiveAnalytics /></ProtectedRoute>} />
         <Route path="/executive/reports" element={<ProtectedRoute><ExecutiveReports /></ProtectedRoute>} />
         <Route path="/executive/insights" element={<ProtectedRoute><ExecutiveInsights /></ProtectedRoute>} />
         <Route path="/executive/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
