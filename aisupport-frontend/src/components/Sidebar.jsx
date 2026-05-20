@@ -38,6 +38,7 @@ const navConfigs = {
     { label: 'Users', icon: Users, path: '/admin/users' },
     { label: 'Roles', icon: UserCheck, path: '/admin/roles' },
     { label: 'Dataset Management', icon: Database, path: '/admin/datasets' },
+    { label: 'Reports', icon: BarChart3, path: '/admin/reports' },
     { label: 'Security', icon: Shield, path: '/admin/security' },
     { label: 'System', icon: Activity, path: '/admin/system' },
     { label: 'Settings', icon: Settings, path: '/admin/settings' },

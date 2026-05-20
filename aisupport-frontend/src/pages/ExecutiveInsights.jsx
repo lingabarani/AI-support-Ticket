@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import QuickSightEmbed from '../components/QuickSightEmbed';
 import { Lightbulb, TrendingUp, AlertTriangle, Star } from 'lucide-react';
 
 export default function ExecutiveInsights() {
@@ -60,16 +61,21 @@ export default function ExecutiveInsights() {
           </div>
         </div>
 
-        {/* QuickSight Placeholder */}
-        <div className="card-glass rounded-xl p-5">
-          <h3 className="font-semibold text-white text-sm mb-3 flex items-center gap-2">
-            <TrendingUp size={14} className="text-blue-400" /> Revenue Analytics (QuickSight)
-          </h3>
-          <div className="rounded-xl flex flex-col items-center justify-center" style={{ height: 200, background: 'rgba(14,165,233,0.05)', border: '2px dashed rgba(14,165,233,0.2)' }}>
-            <p className="text-sm font-semibold text-white">Amazon QuickSight Embedded Dashboard</p>
-            <p className="text-xs text-slate-400 mt-1">Revenue impact analytics will appear here</p>
+        <QuickSightEmbed role="business_executive" title="Revenue Analytics (QuickSight)" height={420}>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            {[
+              ['Revenue at Risk', '₹ 12.8 L', 'Driven by login, payment, and delivery issues'],
+              ['Critical Accounts', '43', 'Enterprise customers requiring proactive outreach'],
+              ['Recovery Actions', '18', 'Recommendations ready for operations teams'],
+            ].map(([label, value, detail]) => (
+              <div key={label} className="rounded-xl border border-white/10 p-4" style={{ background: 'rgba(255,255,255,0.03)' }}>
+                <p className="text-xs text-slate-400">{label}</p>
+                <p className="mt-1 text-xl font-bold text-white">{value}</p>
+                <p className="mt-1 text-xs text-slate-500">{detail}</p>
+              </div>
+            ))}
           </div>
-        </div>
+        </QuickSightEmbed>
       </div>
     </Layout>
   );

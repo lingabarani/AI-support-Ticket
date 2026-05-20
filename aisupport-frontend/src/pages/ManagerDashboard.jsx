@@ -1,12 +1,19 @@
 import Layout from '../components/Layout';
 import KpiCard from '../components/KpiCard';
 import BedrockAgentChat from '../components/BedrockAgentChat';
-import { Users, Ticket, CheckCircle, TrendingUp } from 'lucide-react';
+import { AlertTriangle, Clock, Repeat2, Route, Ticket, CheckCircle, TrendingUp } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { ticketTrendData, priorityData, slaData, agents } from '../data/dummyData';
 
 const COLORS = ['#f87171', '#fbbf24', '#4ade80'];
 const tooltipStyle = { background: 'rgba(15,13,26,0.95)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '8px', color: '#e2e8f0', fontSize: '12px' };
+
+const aiFocusCards = [
+  { title: 'SLA Risk', value: '8 tickets', detail: '2 critical queues need review', icon: AlertTriangle, color: 'text-red-300' },
+  { title: 'Workload Balance', value: '74%', detail: 'Two agents above target load', icon: Route, color: 'text-blue-300' },
+  { title: 'Recurring Themes', value: 'Login + Billing', detail: 'Top drivers this week', icon: Repeat2, color: 'text-purple-300' },
+  { title: 'Next Action', value: 'Escalate 3', detail: 'Engineering handoff recommended', icon: Clock, color: 'text-amber-300' },
+];
 
 export default function ManagerDashboard() {
   return (
@@ -60,10 +67,33 @@ export default function ManagerDashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <BedrockAgentChat role="team_manager" mode="card" />
           <div className="card-glass rounded-xl p-5">
-            <h3 className="font-semibold text-white text-sm mb-3">Manager AI Focus</h3>
-            <div className="space-y-2 text-sm text-slate-400">
-              <p>Ask for SLA breach risk, workload imbalance, recurring issue themes, and escalation recommendations.</p>
-              <p className="text-xs text-slate-500">Responses are generated through the backend Bedrock API. AWS credentials remain server-side.</p>
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <h3 className="font-semibold text-white text-sm">Manager AI Focus</h3>
+                <p className="mt-1 text-xs text-slate-500">Live team signals for faster escalation decisions</p>
+              </div>
+              <span className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-2 py-1 text-xs text-emerald-300">Ready</span>
+            </div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {aiFocusCards.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="rounded-xl border border-white/10 p-4" style={{ background: 'rgba(255,255,255,0.03)' }}>
+                    <div className="mb-3 flex items-center gap-2">
+                      <Icon size={16} className={item.color} />
+                      <span className="text-xs font-semibold text-slate-300">{item.title}</span>
+                    </div>
+                    <div className="text-lg font-bold text-white">{item.value}</div>
+                    <div className="mt-1 text-xs text-slate-500">{item.detail}</div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-4 rounded-xl border border-purple-400/20 bg-purple-500/10 p-4">
+              <p className="text-sm font-semibold text-white">Recommended manager action</p>
+              <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                Reassign overflow from high-load agents, prioritize breached high-value customer tickets, and publish a short login troubleshooting article for deflection.
+              </p>
             </div>
           </div>
         </div>

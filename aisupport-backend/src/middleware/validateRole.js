@@ -1,4 +1,4 @@
-const SUPPORTED_ROLES = ['customer', 'support_agent', 'team_manager', 'business_executive', 'system_admin'];
+const SUPPORTED_ROLES = ['customer', 'support_agent', 'team_manager', 'business_executive', 'system_admin', 'system_admin_reports'];
 
 const validateRole = (source = 'body') => (req, res, next) => {
   const role = source === 'query' ? req.query.role : req.body.role;

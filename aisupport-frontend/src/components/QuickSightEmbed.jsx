@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { BarChart3, RefreshCw } from 'lucide-react';
+import { BarChart3, Maximize2, RefreshCw } from 'lucide-react';
 import { getQuickSightEmbedUrl } from '../services/quicksightService';
 import LocalAnalyticsDashboard from './LocalAnalyticsDashboard';
 
-export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analytics Dashboard', height = 420 }) {
+export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analytics Dashboard', height = 420, children }) {
   const [state, setState] = useState({ embedUrl: '', loading: true, error: '' });
 
   useEffect(() => {
@@ -35,11 +35,18 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
           <BarChart3 size={15} className="text-blue-400" />
           {title}
         </h3>
-        <span className="text-xs text-blue-400 px-2 py-0.5 rounded-full" style={{ background: 'rgba(14,165,233,0.15)', border: '1px solid rgba(14,165,233,0.25)' }}>QuickSight Embed</span>
+        <div className="flex items-center gap-2">
+          <span className="hidden items-center gap-1 text-xs text-slate-500 sm:inline-flex">
+            <Maximize2 size={12} /> Resizable
+          </span>
+          <span className="text-xs text-blue-400 px-2 py-0.5 rounded-full" style={{ background: 'rgba(14,165,233,0.15)', border: '1px solid rgba(14,165,233,0.25)' }}>QuickSight Embed</span>
+        </div>
       </div>
 
+      {children && <div className="mb-4">{children}</div>}
+
       {state.loading && (
-        <div className="rounded-xl flex flex-col items-center justify-center gap-3" style={{ height, background: 'rgba(14,165,233,0.05)', border: '1px solid rgba(14,165,233,0.18)' }}>
+        <div className="rounded-xl flex flex-col items-center justify-center gap-3" style={{ minHeight: 320, height, resize: 'both', overflow: 'auto', background: 'rgba(14,165,233,0.05)', border: '1px solid rgba(14,165,233,0.18)' }}>
           <RefreshCw size={24} className="text-blue-400 animate-spin" />
           <p className="text-sm text-slate-300">Loading secure QuickSight dashboard...</p>
         </div>
@@ -56,13 +63,18 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
       )}
 
       {!state.loading && !state.error && state.embedUrl && (
-        <iframe
-          title={title}
-          src={state.embedUrl}
-          className="w-full rounded-xl border border-blue-400/20 bg-[#0f0d1a]"
-          style={{ height }}
-          allowFullScreen
-        />
+        <div
+          className="rounded-xl border border-blue-400/20 bg-[#0f0d1a]"
+          style={{ minHeight: 360, height, resize: 'both', overflow: 'auto' }}
+        >
+          <iframe
+            title={title}
+            src={state.embedUrl}
+            className="h-full w-full rounded-xl"
+            style={{ minHeight: 360 }}
+            allowFullScreen
+          />
+        </div>
       )}
     </div>
   );

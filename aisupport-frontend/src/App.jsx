@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
 import Layout from './components/Layout';
+import QuickSightEmbed from './components/QuickSightEmbed';
 
 const Login = lazy(() => import('./pages/Login'));
 const Register = lazy(() => import('./pages/Register'));
@@ -27,6 +28,7 @@ const Feedback = lazy(() => import('./pages/Feedback'));
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const UserManagement = lazy(() => import('./pages/UserManagement'));
 const SecurityLogs = lazy(() => import('./pages/SecurityLogs'));
+const AdminReports = lazy(() => import('./pages/AdminReports'));
 const AdminSettings = lazy(() => import('./pages/AdminSettings'));
 const DatasetManagement = lazy(() => import('./pages/admin/DatasetManagement'));
 
@@ -91,13 +93,7 @@ function ExecutiveReports() {
             </div>
           ))}
         </div>
-        <div className="card-glass rounded-xl p-5">
-          <h3 className="font-semibold text-white text-sm mb-3">QuickSight Dashboard Embed</h3>
-          <div className="rounded-xl flex flex-col items-center justify-center" style={{height:280,background:'rgba(14,165,233,0.05)',border:'2px dashed rgba(14,165,233,0.2)'}}>
-            <p className="text-sm font-semibold text-white">Amazon QuickSight</p>
-            <p className="text-xs text-slate-400 mt-1">Executive analytics will be embedded here</p>
-          </div>
-        </div>
+        <QuickSightEmbed role="business_executive" title="Executive Reports QuickSight Dashboard" height={520} />
       </div>
     </Layout>
   );
@@ -201,6 +197,7 @@ function AppRoutes() {
         <Route path="/admin/roles" element={<ProtectedRoute><AdminRoles /></ProtectedRoute>} />
         <Route path="/admin/security" element={<ProtectedRoute><SecurityLogs /></ProtectedRoute>} />
         <Route path="/admin/system" element={<ProtectedRoute><AdminSystem /></ProtectedRoute>} />
+        <Route path="/admin/reports" element={<ProtectedRoute><AdminReports /></ProtectedRoute>} />
         <Route path="/admin/api-configuration" element={<ProtectedRoute><AdminSystem /></ProtectedRoute>} />
         <Route path="/admin/datasets" element={<ProtectedRoute><DatasetManagement /></ProtectedRoute>} />
         <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />

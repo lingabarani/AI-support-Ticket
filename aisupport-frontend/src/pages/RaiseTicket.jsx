@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Upload, CheckCircle } from 'lucide-react';
-import { pipelineApi } from '../services/api';
+import { ArrowLeft, Upload, CheckCircle, FileText, X } from 'lucide-react';
+import { ticketApi } from '../services/api';
 import ChatbotWidget from '../components/ChatbotWidget';
+
+const fileToDataUrl = (file) => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = () => reject(new Error('Unable to read selected attachment.'));
+  reader.readAsDataURL(file);
+});
 
 export default function RaiseTicket() {
   const navigate = useNavigate();
@@ -10,6 +17,7 @@ export default function RaiseTicket() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [ticketId, setTicketId] = useState('');
+  const [attachment, setAttachment] = useState(null);
   const [form, setForm] = useState({ category: '', subject: '', description: '', priority: 'Medium', email: '' });
 
   const handleSubmit = async (e) => {
@@ -18,15 +26,30 @@ export default function RaiseTicket() {
     setError('');
 
     try {
-      const result = await pipelineApi.createTicket({
+      const attachmentNote = attachment
+        ? `\n\nAttachment: ${attachment.name} (${Math.ceil(attachment.size / 1024)} KB)`
+        : '';
+      const attachments = attachment
+        ? [{
+          filename: attachment.name,
+          url: await fileToDataUrl(attachment),
+          uploadedAt: new Date().toISOString(),
+        }]
+        : [];
+      const result = await ticketApi.create({
         customer_email: form.email || 'frontend.user@example.com',
+        customer_name: form.email ? form.email.split('@')[0] : 'Customer Portal User',
+        issue_category: form.category,
         category: form.category,
         product: 'Web Portal',
         priority: form.priority,
-        issue_description: `${form.subject}\n\n${form.description}`,
+        ticket_description: `${form.subject}\n\n${form.description}${attachmentNote}`,
+        description: `${form.subject}\n\n${form.description}${attachmentNote}`,
         customer_segment: 'Customer Portal',
         channel: 'Web',
         region: 'India',
+        tags: attachment ? ['customer_portal', 'attachment_uploaded'] : ['customer_portal'],
+        attachments,
       });
       setTicketId(result.ticket.ticket_id);
       setSubmitted(true);
@@ -44,7 +67,7 @@ export default function RaiseTicket() {
           <CheckCircle size={32} className="text-green-400" />
         </div>
         <h2 className="text-xl font-bold text-white mb-2">Ticket Submitted!</h2>
-        <p className="text-slate-400 text-sm mb-2">Your ticket was sent to the AWS pipeline.</p>
+        <p className="text-slate-400 text-sm mb-2">Your ticket was saved and assigned for support review.</p>
         <p className="text-purple-400 font-mono text-sm mb-6">Ticket ID: {ticketId}</p>
         <button onClick={() => navigate('/customer/tickets')} className="btn-primary px-6 py-3 rounded-xl text-sm font-semibold">
           View My Tickets
@@ -70,7 +93,7 @@ export default function RaiseTicket() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="text-xs text-slate-400 font-medium block mb-1.5">Category *</label>
-                  <select value={form.category} onChange={e => setForm({...form, category: e.target.value})} className="w-full px-3 py-2.5 text-sm rounded-lg">
+                  <select value={form.category} onChange={e => setForm({...form, category: e.target.value})} className="w-full px-3 py-2.5 text-sm rounded-lg" required>
                     <option value="">Select Category</option>
                     <option>Login Issues</option>
                     <option>Payment Issues</option>
@@ -104,11 +127,38 @@ export default function RaiseTicket() {
                 </div>
                 <div>
                   <label className="text-xs text-slate-400 font-medium block mb-1.5">Attachment (optional)</label>
-                  <div className="flex items-center gap-3 p-4 rounded-lg cursor-pointer" style={{ border: '2px dashed rgba(139,92,246,0.2)' }}>
+                  <label className="flex cursor-pointer items-center gap-3 rounded-lg p-4 transition-colors hover:bg-white/5" style={{ border: '2px dashed rgba(139,92,246,0.2)' }}>
                     <Upload size={16} className="text-slate-500" />
                     <span className="text-sm text-slate-400">Choose File</span>
-                    <span className="text-xs text-slate-600 ml-auto">No file chosen</span>
-                  </div>
+                    <span className="ml-auto text-xs text-slate-600">{attachment ? `${attachment.name} (${Math.ceil(attachment.size / 1024)} KB)` : 'No file chosen'}</span>
+                    <input
+                      type="file"
+                      className="hidden"
+                      accept=".png,.jpg,.jpeg,.pdf,.csv,.txt,.doc,.docx"
+                      onChange={(event) => {
+                        const selected = event.target.files?.[0] || null;
+                        if (selected && selected.size > 5 * 1024 * 1024) {
+                          setError('Attachment must be 5 MB or smaller.');
+                          event.target.value = '';
+                          setAttachment(null);
+                          return;
+                        }
+                        setError('');
+                        setAttachment(selected);
+                      }}
+                    />
+                  </label>
+                  {attachment && (
+                    <div className="mt-3 flex items-center justify-between rounded-lg border border-white/10 px-3 py-2" style={{ background: 'rgba(255,255,255,0.03)' }}>
+                      <div className="flex min-w-0 items-center gap-2">
+                        <FileText size={14} className="flex-shrink-0 text-purple-300" />
+                        <span className="truncate text-xs text-slate-300">{attachment.name}</span>
+                      </div>
+                      <button type="button" onClick={() => setAttachment(null)} className="rounded-md p-1 text-slate-500 hover:bg-white/10 hover:text-white">
+                        <X size={14} />
+                      </button>
+                    </div>
+                  )}
                 </div>
                 {error && <p className="text-sm text-red-400">{error}</p>}
                 <button type="submit" disabled={submitting} className="btn-primary w-full py-3 rounded-xl font-semibold text-sm">

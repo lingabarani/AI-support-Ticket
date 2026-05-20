@@ -52,6 +52,18 @@ const normalizeDate = (value) => {
   return Number.isNaN(date.getTime()) ? undefined : date;
 };
 
+const normalizeAttachments = (value) => {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((attachment) => ({
+      filename: asText(attachment.filename || attachment.name),
+      url: asText(attachment.url || attachment.dataUrl),
+      uploadedAt: normalizeDate(attachment.uploadedAt) || new Date(),
+    }))
+    .filter((attachment) => attachment.filename && attachment.url)
+    .slice(0, 5);
+};
+
 const inferSentiment = (description) => {
   const text = description.toLowerCase();
   if (includesAny(text, negativeWords)) return 'Negative';
@@ -152,6 +164,7 @@ const validateAndNormalizeTicketRow = (row, index, uploadId) => {
       ai_confidence_score: toNumber(row.ai_confidence_score, Number((0.75 + ((index % 21) / 100)).toFixed(2))),
       revenue_risk: toNumber(row.revenue_risk, priority === 'Urgent' ? 25000 : priority === 'High' ? 12000 : priority === 'Medium' ? 5000 : 1000),
       tags: Array.isArray(row.tags) ? row.tags : asText(row.tags).split(/[|,]/).map((tag) => tag.trim()).filter(Boolean),
+      attachments: normalizeAttachments(row.attachments),
       source: 'upload',
       uploadId,
     },

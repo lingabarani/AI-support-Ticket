@@ -12,6 +12,7 @@ const dashboardEnvByRole = {
   team_manager: 'QS_DASHBOARD_TEAM_MANAGER',
   business_executive: 'QS_DASHBOARD_BUSINESS_EXECUTIVE',
   system_admin: 'QS_DASHBOARD_SYSTEM_ADMIN',
+  system_admin_reports: 'QS_DASHBOARD_SYSTEM_ADMIN',
   customer: 'QS_DASHBOARD_CUSTOMER_PORTAL',
 };
 
@@ -20,6 +21,7 @@ const analysisEnvByRole = {
   team_manager: 'QS_ANALYSIS_TEAM_MANAGER',
   business_executive: 'QS_ANALYSIS_BUSINESS_EXECUTIVE',
   system_admin: 'QS_ANALYSIS_SYSTEM_ADMIN',
+  system_admin_reports: 'QS_ANALYSIS_SYSTEM_ADMIN',
   customer: 'QS_ANALYSIS_CUSTOMER_PORTAL',
 };
 
