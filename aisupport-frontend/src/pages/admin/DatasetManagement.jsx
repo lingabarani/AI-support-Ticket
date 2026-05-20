@@ -41,7 +41,19 @@ export default function DatasetManagement() {
   };
 
   useEffect(() => {
-    loadUploads();
+    let mounted = true;
+
+    const loadInitialUploads = async () => {
+      try {
+        const response = await datasetApi.uploads();
+        if (mounted) setUploads(response.uploads || []);
+      } catch (error) {
+        if (mounted) setToast(error.message || 'Unable to load upload history.');
+      }
+    };
+
+    loadInitialUploads();
+    return () => { mounted = false; };
   }, []);
 
   const acceptFile = (selected) => {

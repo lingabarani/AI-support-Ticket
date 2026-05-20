@@ -16,6 +16,6 @@ export const getQuickSightEmbedUrl = async (role) => {
     return sharedDashboardUrls[role] || Promise.reject(new Error(response?.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.'));
   } catch (error) {
     if (sharedDashboardUrls[role]) return sharedDashboardUrls[role];
-    throw new Error(error.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.');
+    throw new Error(error.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.', { cause: error });
   }
 };

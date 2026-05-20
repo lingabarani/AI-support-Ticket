@@ -95,7 +95,7 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
     try {
       const response = await sendChatMessage({ role, message: trimmed, sessionId });
       setMessages((current) => [...current, { from: 'assistant', text: response.reply }]);
-    } catch (error) {
+    } catch {
       setMessages((current) => [...current, { from: 'assistant', text: 'AI assistant is temporarily unavailable. Showing the best available support response.' }]);
     } finally {
       setLoading(false);

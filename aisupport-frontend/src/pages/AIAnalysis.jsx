@@ -33,8 +33,9 @@ export default function AIAnalysis() {
       pipelineApi.recentAnalytics(6),
     ]).then(([configResult, healthResult, analyticsResult]) => {
       if (!mounted) return;
+      const health = healthResult.status === 'fulfilled' ? healthResult.value : null;
       setPipeline({
-        status: healthResult.status === 'fulfilled' ? 'Connected' : 'Offline',
+        status: health?.status === 'connected' ? 'Connected' : health?.status === 'degraded' ? 'Degraded' : 'Offline',
         config: configResult.status === 'fulfilled' ? configResult.value.config : null,
         records: analyticsResult.status === 'fulfilled' ? analyticsResult.value.records : [],
       });
