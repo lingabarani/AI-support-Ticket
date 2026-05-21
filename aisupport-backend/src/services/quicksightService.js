@@ -87,7 +87,7 @@ const getQuickSightEmbedUrl = async (role) => {
     UserArn: process.env.QUICKSIGHT_USER_ARN,
     AllowedDomains: getAllowedDomains(),
     ExperienceConfiguration: experienceConfiguration,
-    SessionLifetimeInMinutes: 60,
+    SessionLifetimeInMinutes: 600,
   });
 
   try {

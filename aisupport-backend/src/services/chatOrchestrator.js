@@ -1,10 +1,60 @@
 const { sendChatMessage } = require('./bedrockService');
 const { generateGroqResponse } = require('./groqService');
-const { generateLocalResponse, normalizeRole } = require('./localIntelligenceService');
+const { detectIntent, generateLocalResponse, normalizeRole } = require('./localIntelligenceService');
 
 const shouldTryExternalAi = () => process.env.ENABLE_EXTERNAL_AI === 'true';
 
 const getProvider = () => String(process.env.AI_PROVIDER || 'bedrock').toLowerCase();
+
+const RELIABLE_ROLE_INTENTS = {
+  customer: new Set([
+    'customer_ticket_volume',
+    'customer_resolved_tickets',
+    'ticket_status',
+    'ticket_summary',
+    'open_tickets',
+    'knowledge_base',
+    'recommended_action',
+    'dashboard_explanation',
+  ]),
+  support_agent: new Set([
+    'ticket_summary',
+    'ticket_status',
+    'ticket_priority',
+    'ticket_sentiment',
+    'suggested_reply',
+    'recommended_action',
+    'similar_tickets',
+    'open_tickets',
+    'high_priority_tickets',
+    'sla_breaches',
+  ]),
+  team_manager: new Set([
+    'team_performance',
+    'agent_workload',
+    'open_tickets',
+    'sla_breaches',
+    'ticket_summary',
+    'escalation_risk',
+    'priority_queue',
+    'csat_risk',
+    'first_response',
+  ]),
+  business_executive: new Set([
+    'executive_summary',
+    'revenue_risk',
+    'churn_risk',
+    'sentiment_trend',
+    'dashboard_explanation',
+  ]),
+  system_admin: new Set([
+    'system_health',
+    'user_management',
+    'role_permissions',
+    'security_alerts',
+    'dashboard_explanation',
+  ]),
+};
 
 const sanitizeReply = (reply) => String(reply || '')
   .replace(/\*\*/g, '')
@@ -13,8 +63,6 @@ const sanitizeReply = (reply) => String(reply || '')
   .trim();
 
 const GREETING_PATTERN = /^(hi|hello|hey|hai|hii|good\s+(morning|afternoon|evening)|namaste)\b[!. ]*$/i;
-const SUPPORT_SIGNAL_PATTERN = /\b(ticket|tkt|case|customer|issue|problem|error|bug|login|payment|refund|status|priority|sentiment|summary|summari[sz]e|analy[sz]e|reply|draft|recommend|next action|sla|dashboard|report|agent|team|churn|revenue|security|user|permission|health)\b/i;
-
 const isLikelyGibberish = (message) => {
   const compact = String(message || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   if (compact.length < 8) return false;
@@ -35,9 +83,9 @@ const getInputGuardReply = ({ role, message }) => {
     };
   }
 
-  if (isLikelyGibberish(text) || (!SUPPORT_SIGNAL_PATTERN.test(text) && text.split(/\s+/).filter(Boolean).length <= 3)) {
+  if (isLikelyGibberish(text)) {
     return {
-      reply: 'I could not understand that request. Please enter a ticket ID, customer issue, or an action like summarize, draft reply, sentiment, priority, or next steps.',
+      reply: 'I could not understand that request. Please ask a clear question or enter a ticket ID, customer issue, or support action.',
       role,
       source: 'assistant_guard',
       cards: [],
@@ -62,6 +110,11 @@ const generateChatReply = async ({ role, message, sessionId }) => {
 
   if (guarded) {
     return { ...guarded, sessionId };
+  }
+
+  const intent = detectIntent(message);
+  if (RELIABLE_ROLE_INTENTS[normalizedRole]?.has(intent)) {
+    return generateLocalResponse({ role: normalizedRole, message, includeNotice: false });
   }
 
   if (!shouldTryExternalAi()) {

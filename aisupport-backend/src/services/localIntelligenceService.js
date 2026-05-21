@@ -32,6 +32,8 @@ const extractTicketId = (message = '') => {
 const detectIntent = (message = '') => {
   const text = String(message).toLowerCase();
   const checks = [
+    ['customer_ticket_volume', /how many tickets|tickets raised|raised by customer|raised by customers|total tickets raised|ticket count|number of tickets/],
+    ['customer_resolved_tickets', /tickets resolved|ticket resolved|resolved tickets|successfully closed|support tickets.*closed|closed tickets|number of support tickets successfully closed/],
     ['ticket_summary', /summari[sz]e|summary|analysis|analyze/],
     ['ticket_status', /status|where is|still open|progress/],
     ['ticket_priority', /priority|urgent|severity/],
@@ -42,15 +44,20 @@ const detectIntent = (message = '') => {
     ['open_tickets', /open tickets|show open|my open/],
     ['high_priority_tickets', /high priority|urgent tickets|critical/],
     ['sla_breaches', /sla|breach|breached|overdue/],
-    ['team_performance', /team performance|team summary|recurring issues/],
+    ['team_performance', /team performance|team summary|recurring issues|today'?s team summary|daily summary/],
     ['agent_workload', /workload|most open|overloaded|agent/],
+    ['escalation_risk', /escalation|escalate|handoff|queue pressure/],
+    ['priority_queue', /priority|urgent|critical|high priority/],
+    ['csat_risk', /csat|satisfaction|customer rating|poor rating/],
+    ['first_response', /first response|response time|wait time|delay/],
     ['executive_summary', /executive summary|business summary|overview/],
-    ['revenue_risk', /revenue|money|financial impact/],
+    ['revenue_risk', /revenue|money|financial impact|highest risk|risk highest/],
     ['churn_risk', /churn|retention|at risk/],
     ['sentiment_trend', /sentiment trend|customer sentiment/],
-    ['system_health', /system health|api status|connectivity|health/],
+    ['system_health', /system health|api status|connectivity|health|api|database|service status/],
     ['user_management', /users|active users|inactive users|user management/],
     ['role_permissions', /permissions|roles|role permissions/],
+    ['security_alerts', /security|alerts|risk|failed login|mfa|audit/],
     ['knowledge_base', /knowledge|kb|faq|password|refund|billing|reset/],
     ['dashboard_explanation', /dashboard|chart|analytics/],
     ['export_report', /export|download|report/],
@@ -101,20 +108,85 @@ const sum = (items, key) => items.reduce((total, item) => total + toNumber(item[
 
 const formatTicketLine = (ticket) => `${ticket.ticket_id} (${ticket.priority}, ${ticket.status}) - ${ticket.issue_category} for ${ticket.customer_name}`;
 
+const topByNumber = (items, key, limit = 4) => [...items]
+  .sort((a, b) => toNumber(b[key]) - toNumber(a[key]))
+  .slice(0, limit);
+
+const uniqueCount = (items, key) => new Set(items.map((item) => item[key]).filter(Boolean)).size;
+
+const isResolvedStatus = (status) => ['resolved', 'closed'].includes(String(status || '').toLowerCase());
+
+const buildCustomerPortalMetrics = (roleDataset) => {
+  const ticketIds = uniqueCount(roleDataset, 'ticket_id');
+  const createdTickets = roleDataset.filter((item) => (
+    String(item.portal_action || item.activity_type || '').toLowerCase().replace(/[_-]/g, ' ') === 'create ticket'
+    || String(item.activity_type || '').toLowerCase() === 'ticket_created'
+  )).length;
+  const resolvedStatus = roleDataset.filter((item) => String(item.ticket_status || item.status || '').toLowerCase() === 'resolved').length;
+  const closedStatus = roleDataset.filter((item) => String(item.ticket_status || item.status || '').toLowerCase() === 'closed').length;
+  const responseTimeRecords = roleDataset.filter((item) => item.response_time_minutes || item.first_response_minutes).length;
+  const averageRating = average(roleDataset, 'customer_rating') || average(roleDataset, 'csat_score');
+  const selfServiceUsed = roleDataset.filter((item) => isTrue(item.self_service_used)).length;
+  const portalResolved = roleDataset.filter((item) => isTrue(item.resolved_via_portal)).length;
+  const slaBreaches = roleDataset.filter((item) => isTrue(item.sla_breached) || isTrue(item.escalation_requested)).length;
+
+  return {
+    source: 'customer_portal_activity_200.csv',
+    records: roleDataset.length,
+    ticketIds,
+    createdTickets,
+    resolvedStatus,
+    closedStatus,
+    responseTimeRecords,
+    averageRating,
+    selfServiceUsed,
+    selfServiceNotUsed: roleDataset.length - selfServiceUsed,
+    portalResolved,
+    portalNotResolved: roleDataset.length - portalResolved,
+    slaBreaches,
+  };
+};
+
 const customerResponse = ({ ticket, tickets, intent, kb, roleDataset }) => {
+  if (intent === 'customer_ticket_volume') {
+    const metrics = buildCustomerPortalMetrics(roleDataset);
+    return `Customer Dashboard KPI:
+- Portal Interaction Records: ${metrics.records}
+- Unique Ticket IDs: ${metrics.ticketIds}
+- Ticket Creation Events: ${metrics.createdTickets}
+- Resolved Status Records: ${metrics.resolvedStatus}
+- Closed Status Records: ${metrics.closedStatus}
+- Response Time Records: ${metrics.responseTimeRecords}
+- Source: ${metrics.source}`;
+  }
+
+  if (intent === 'customer_resolved_tickets') {
+    const metrics = buildCustomerPortalMetrics(roleDataset);
+    return `Customer Dashboard KPI:
+- Resolved Status Records: ${metrics.resolvedStatus}
+- Closed Status Records: ${metrics.closedStatus}
+- Portal Resolution Success: true ${metrics.portalResolved}, false ${metrics.portalNotResolved}
+- Unique Ticket IDs: ${metrics.ticketIds}
+- Average Customer Rating: ${metrics.averageRating.toFixed(2)}
+- Source: ${metrics.source}`;
+  }
+
   if (roleDataset.length && ['general_help', 'dashboard_explanation', 'ticket_status', 'ticket_summary'].includes(intent)) {
+    const metrics = buildCustomerPortalMetrics(roleDataset);
     const chatbotEvents = roleDataset.filter((item) => isTrue(item.chatbot_used)).length;
-    const portalResolved = roleDataset.filter((item) => isTrue(item.resolved_via_portal)).length;
     const escalations = roleDataset.filter((item) => isTrue(item.escalation_requested)).length;
     const topActions = top(roleDataset, 'portal_action', 3).map(([name, count]) => `${name} (${count})`).join(', ');
 
     return `Customer Portal Dataset Answer:
-- Dataset Rows: ${roleDataset.length}
+- Portal Interaction Records: ${metrics.records}
+- Unique Ticket IDs: ${metrics.ticketIds}
+- Ticket Creation Events: ${metrics.createdTickets}
 - Chatbot Used: ${chatbotEvents} portal events
-- Resolved via Portal: ${portalResolved} events
+- Resolved via Portal: ${metrics.portalResolved} events
 - Escalation Requests: ${escalations}
-- Average Customer Rating: ${average(roleDataset, 'customer_rating').toFixed(1)} / 5
+- Average Customer Rating: ${metrics.averageRating.toFixed(1)} / 5
 - Top Portal Actions: ${topActions}
+- Self-Service Adoption: true ${metrics.selfServiceUsed}, false ${metrics.selfServiceNotUsed}
 - Best Action: Promote the most-viewed FAQ and chatbot flows for repeat customer questions.`;
   }
 
@@ -136,12 +208,57 @@ const customerResponse = ({ ticket, tickets, intent, kb, roleDataset }) => {
 - Estimated Resolution: ${selected.resolution_time_hours <= 24 ? 'Within 24 hours' : 'Within 2 to 4 business days'}.`;
 };
 
-const supportAgentResponse = ({ ticket, tickets, roleDataset }) => {
+const supportAgentResponse = ({ ticket, tickets, roleDataset, intent }) => {
   if (roleDataset.length && !ticket) {
     const openTickets = roleDataset.filter((item) => item.status === 'Open').length;
     const slaBreaches = roleDataset.filter((item) => isTrue(item.sla_breached)).length;
     const escalations = roleDataset.filter((item) => isTrue(item.escalation_required)).length;
     const urgentTickets = roleDataset.filter((item) => item.priority === 'Urgent').slice(0, 3);
+    const highPriority = roleDataset.filter((item) => ['High', 'Urgent'].includes(item.priority));
+    const negative = roleDataset.filter((item) => item.ai_sentiment === 'Negative');
+    const similar = top(roleDataset, 'issue_category', 4);
+
+    if (intent === 'open_tickets') {
+      return `Open Ticket Answer:
+- Open Tickets: ${openTickets}
+- Top Open Issues: ${top(roleDataset.filter((item) => item.status === 'Open'), 'issue_category', 4).map(([name, count]) => `${name} (${count})`).join(', ')}
+- Escalation Required: ${escalations}
+- Next Action: Start with open tickets that are urgent, breached, or tied to high revenue risk.`;
+    }
+
+    if (intent === 'high_priority_tickets' || intent === 'ticket_priority') {
+      return `Priority Answer:
+- High/Urgent Tickets: ${highPriority.length}
+- Urgent Samples: ${urgentTickets.map(formatTicketLine).join('; ') || 'No urgent tickets found'}
+- SLA Breached Tickets: ${slaBreaches}
+- Next Action: Handle urgent tickets first, then high priority tickets with negative sentiment.`;
+    }
+
+    if (intent === 'ticket_sentiment') {
+      return `Sentiment Answer:
+- Negative Tickets: ${negative.length}
+- Average Customer Satisfaction: ${average(roleDataset, 'customer_satisfaction').toFixed(1)} / 5
+- Top Negative Issues: ${top(negative, 'issue_category', 4).map(([name, count]) => `${name} (${count})`).join(', ') || 'No negative issue cluster found'}
+- Next Action: Prioritize negative sentiment tickets with churn or escalation risk.`;
+    }
+
+    if (intent === 'suggested_reply' || intent === 'recommended_action') {
+      const selected = urgentTickets[0] || highPriority[0] || roleDataset[0];
+      return `Agent Next Action:
+- Ticket: ${selected.ticket_id}
+- Customer: ${selected.customer_name}
+- Issue: ${selected.issue_category}
+- Priority: ${selected.priority}
+- Recommended Action: ${selected.next_best_action || selected.ai_suggested_resolution || 'Review the ticket and send a clear next-step update.'}
+- Draft Reply: Hi ${selected.customer_name}, we reviewed your ${String(selected.issue_category).toLowerCase()} issue and are prioritizing the next step now. We will update you as soon as the action is complete.`;
+    }
+
+    if (intent === 'similar_tickets') {
+      return `Similar Ticket Answer:
+- Top Similar Issue Groups: ${similar.map(([name, count]) => `${name} (${count})`).join(', ')}
+- Best Cluster to Review: ${similar[0]?.[0] || 'Login Issue'}
+- Next Action: Compare recent tickets in the top cluster and reuse the proven resolution path.`;
+    }
 
     return `Support Agent Dataset Answer:
 - Dataset Rows: ${roleDataset.length}
@@ -167,19 +284,77 @@ const supportAgentResponse = ({ ticket, tickets, roleDataset }) => {
 - Suggested Customer Reply: Hi ${selected.customer_name}, we reviewed your ${selected.issue_category.toLowerCase()} request and are taking the next action now: ${selected.ai_suggested_resolution}`;
 };
 
-const managerResponse = ({ tickets, analytics, roleDataset }) => {
+const managerResponse = ({ tickets, analytics, roleDataset, intent }) => {
   if (roleDataset.length) {
     const overloaded = roleDataset.filter((item) => toNumber(item.open_tickets) > 22 || item.coaching_flag === 'Needs Review');
+    const slaRisk = topByNumber(roleDataset, 'sla_breached_tickets', 4);
+    const workloadRisk = topByNumber(roleDataset, 'open_tickets', 4);
+    const escalationRisk = topByNumber(roleDataset, 'escalation_queue', 4);
+    const priorityRisk = topByNumber(roleDataset, 'urgent_tickets', 4);
+    const slowResponse = topByNumber(roleDataset, 'first_response_minutes', 4);
+    const lowCsat = [...roleDataset].sort((a, b) => toNumber(a.avg_csat, 5) - toNumber(b.avg_csat, 5)).slice(0, 4);
+
+    if (intent === 'sla_breaches') {
+      return `SLA Risk Answer:
+- SLA Breached Tickets: ${sum(roleDataset, 'sla_breached_tickets')}
+- Highest Risk Agents: ${slaRisk.map((item) => `${item.agent_name} (${item.sla_breached_tickets} breaches, ${item.team})`).join('; ')}
+- Average First Response: ${average(roleDataset, 'first_response_minutes').toFixed(1)} minutes
+- Immediate Action: Move breached and near-breach tickets to the fastest available agents, then review queues with more than 2 breaches.`;
+    }
+
+    if (intent === 'agent_workload' || intent === 'open_tickets') {
+      return `Workload Answer:
+- Open Tickets: ${sum(roleDataset, 'open_tickets')}
+- In Progress Tickets: ${sum(roleDataset, 'in_progress_tickets')}
+- Highest Load: ${workloadRisk.map((item) => `${item.agent_name} (${item.open_tickets} open, ${item.team_utilization_pct}% utilization)`).join('; ')}
+- Coaching Flags: ${overloaded.length}
+- Immediate Action: Reassign overflow from agents above 22 open tickets or marked Needs Review.`;
+    }
+
+    if (intent === 'escalation_risk') {
+      return `Escalation Answer:
+- Escalation Queue Items: ${sum(roleDataset, 'escalation_queue')}
+- Top Escalation Queues: ${escalationRisk.map((item) => `${item.team} / ${item.agent_name} (${item.escalation_queue})`).join('; ')}
+- Average Backlog Age: ${average(roleDataset, 'backlog_age_hours').toFixed(1)} hours
+- Immediate Action: Prioritize queues with the oldest backlog and route technical blockers to engineering.`;
+    }
+
+    if (intent === 'priority_queue') {
+      return `Priority Queue Answer:
+- Urgent Tickets: ${sum(roleDataset, 'urgent_tickets')}
+- High Priority Tickets: ${sum(roleDataset, 'high_priority_tickets')}
+- Urgent Hotspots: ${priorityRisk.map((item) => `${item.agent_name} (${item.urgent_tickets} urgent, ${item.high_priority_tickets} high)`).join('; ')}
+- Immediate Action: Put urgent tickets first, then high-priority tickets with SLA breach risk.`;
+    }
+
+    if (intent === 'csat_risk') {
+      return `CSAT Risk Answer:
+- Average CSAT: ${average(roleDataset, 'avg_csat').toFixed(1)} / 5
+- Lowest CSAT Areas: ${lowCsat.map((item) => `${item.team} / ${item.agent_name} (${item.avg_csat})`).join('; ')}
+- Risk Signal: Low CSAT combined with high backlog needs manager review.
+- Immediate Action: Audit recent replies and assign senior support to the lowest CSAT queues.`;
+    }
+
+    if (intent === 'first_response') {
+      return `First Response Answer:
+- Average First Response: ${average(roleDataset, 'first_response_minutes').toFixed(1)} minutes
+- Slowest Queues: ${slowResponse.map((item) => `${item.team} / ${item.agent_name} (${item.first_response_minutes} min)`).join('; ')}
+- Backlog Age Average: ${average(roleDataset, 'backlog_age_hours').toFixed(1)} hours
+- Immediate Action: Add coverage to slow queues and use templates for first-touch responses.`;
+    }
+
     return `Team Manager Dataset Answer:
 - Dataset Rows: ${roleDataset.length}
 - Open Tickets: ${sum(roleDataset, 'open_tickets')}
 - In Progress Tickets: ${sum(roleDataset, 'in_progress_tickets')}
 - Resolved Tickets: ${sum(roleDataset, 'resolved_tickets')}
 - SLA Breached Tickets: ${sum(roleDataset, 'sla_breached_tickets')}
+- Urgent Tickets: ${sum(roleDataset, 'urgent_tickets')}
 - Average Team Utilization: ${average(roleDataset, 'team_utilization_pct').toFixed(1)}%
 - Average Resolution Time: ${average(roleDataset, 'avg_resolution_hours').toFixed(1)} hours
 - Coaching Flags: ${overloaded.length}
-- Most Loaded Agents: ${top(overloaded, 'agent_name', 4).map(([name, count]) => `${name} (${count})`).join(', ') || 'No overloaded agents'}`;
+- Most Loaded Agents: ${workloadRisk.map((item) => `${item.agent_name} (${item.open_tickets})`).join(', ')}
+- Recommended Actions: Rebalance overloaded agents, recover SLA breaches, and watch urgent ticket queues first.`;
   }
 
   const data = analytics.teamManagerAnalytics || {};
@@ -193,9 +368,37 @@ const managerResponse = ({ tickets, analytics, roleDataset }) => {
 - Recommended Actions: Rebalance urgent tickets, prioritize breached SLAs, and publish KB guidance for recurring payment and login issues.`;
 };
 
-const executiveResponse = ({ tickets, analytics, roleDataset }) => {
+const executiveResponse = ({ tickets, analytics, roleDataset, intent }) => {
   if (roleDataset.length) {
     const criticalRows = roleDataset.filter((item) => item.executive_priority === 'Critical');
+    const highChurn = topByNumber(roleDataset, 'churn_risk_customers', 4);
+    const revenueRows = topByNumber(roleDataset, 'revenue_risk_usd', 4);
+    const negativeRows = topByNumber(roleDataset, 'negative_sentiment_pct', 4);
+
+    if (intent === 'revenue_risk') {
+      return `Revenue Risk Answer:
+- Revenue Risk: Rs ${sum(roleDataset, 'revenue_risk_usd').toLocaleString('en-IN')}
+- Highest Risk Segments: ${revenueRows.map((item) => `${item.region} / ${item.product} (Rs ${Number(item.revenue_risk_usd).toLocaleString('en-IN')})`).join('; ')}
+- Impacted Accounts: ${sum(roleDataset, 'impacted_accounts')}
+- Executive Action: Prioritize high-risk products and assign retention outreach to the largest revenue exposure segments.`;
+    }
+
+    if (intent === 'churn_risk') {
+      return `Churn Risk Answer:
+- Churn Risk Customers: ${sum(roleDataset, 'churn_risk_customers')}
+- Highest Churn Segments: ${highChurn.map((item) => `${item.region} / ${item.product} (${item.churn_risk_customers})`).join('; ')}
+- Average CSAT: ${average(roleDataset, 'avg_csat').toFixed(1)} / 5
+- Executive Action: Launch recovery outreach for high churn segments with low CSAT and repeated ticket volume.`;
+    }
+
+    if (intent === 'sentiment_trend') {
+      return `Sentiment Trend Answer:
+- Average Negative Sentiment: ${average(roleDataset, 'negative_sentiment_pct').toFixed(1)}%
+- Worst Segments: ${negativeRows.map((item) => `${item.region} / ${item.product} (${item.negative_sentiment_pct}%)`).join('; ')}
+- Top Issue Categories: ${top(roleDataset, 'top_issue_category', 4).map(([name, count]) => `${name} (${count})`).join(', ')}
+- Executive Action: Reduce the top issue categories driving negative sentiment before renewal periods.`;
+    }
+
     return `Business Executive Dataset Answer:
 - Dataset Rows: ${roleDataset.length}
 - Ticket Volume: ${sum(roleDataset, 'ticket_volume')}
@@ -217,11 +420,39 @@ const executiveResponse = ({ tickets, analytics, roleDataset }) => {
 - Strategic Recommendations: ${(data.strategicRecommendations || []).slice(0, 3).join(' ')}`;
 };
 
-const adminResponse = ({ analytics, users, roleDataset }) => {
+const adminResponse = ({ analytics, users, roleDataset, intent }) => {
   if (roleDataset.length) {
     const failed = roleDataset.filter((item) => item.status === 'Failed');
     const highRisk = roleDataset.filter((item) => item.risk_level === 'High');
     const mfaDisabled = roleDataset.filter((item) => !isTrue(item.mfa_enabled));
+    const permissionChanges = roleDataset.filter((item) => isTrue(item.permission_changed));
+
+    if (intent === 'user_management') {
+      return `User Management Answer:
+- Admin Events: ${roleDataset.length}
+- Failed User Events: ${failed.length}
+- MFA Disabled Users/Events: ${mfaDisabled.length}
+- Target Roles: ${top(roleDataset, 'target_role', 4).map(([name, count]) => `${name} (${count})`).join(', ')}
+- Admin Action: Review failed user events, pending audits, and MFA-disabled accounts first.`;
+    }
+
+    if (intent === 'role_permissions') {
+      return `Role Permission Answer:
+- Permission Changes: ${permissionChanges.length}
+- Top Roles Changed: ${top(permissionChanges, 'target_role', 4).map(([name, count]) => `${name} (${count})`).join(', ') || 'No permission changes found'}
+- Config Areas: ${top(roleDataset, 'config_area', 4).map(([name, count]) => `${name} (${count})`).join(', ')}
+- Admin Action: Validate least-privilege access for recently changed roles.`;
+    }
+
+    if (intent === 'security_alerts') {
+      return `Security Alert Answer:
+- Failed Events: ${failed.length}
+- High Risk Events: ${highRisk.length}
+- Audit Actions Required: ${roleDataset.filter((item) => isTrue(item.audit_action_required)).length}
+- Top Event Types: ${top(roleDataset, 'event_type', 4).map(([name, count]) => `${name} (${count})`).join(', ')}
+- Admin Action: Investigate high-risk failed events and enforce MFA where disabled.`;
+    }
+
     return `System Admin Dataset Answer:
 - Dataset Rows: ${roleDataset.length}
 - Failed Events: ${failed.length}
@@ -281,10 +512,10 @@ const generateLocalResponse = ({ role = 'support_agent', message = '', includeNo
 
   const replyByRole = {
     customer: () => customerResponse({ ticket, tickets: scopedTickets, intent, kb, roleDataset }),
-    support_agent: () => supportAgentResponse({ ticket, tickets: scopedTickets, roleDataset }),
-    team_manager: () => managerResponse({ tickets, analytics, roleDataset }),
-    business_executive: () => executiveResponse({ tickets, analytics, roleDataset }),
-    system_admin: () => adminResponse({ analytics, users, roleDataset }),
+    support_agent: () => supportAgentResponse({ ticket, tickets: scopedTickets, roleDataset, intent }),
+    team_manager: () => managerResponse({ tickets, analytics, roleDataset, intent }),
+    business_executive: () => executiveResponse({ tickets, analytics, roleDataset, intent }),
+    system_admin: () => adminResponse({ analytics, users, roleDataset, intent }),
   };
 
   const body = (replyByRole[normalizedRole] || replyByRole.support_agent)();
