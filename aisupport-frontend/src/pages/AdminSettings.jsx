@@ -77,11 +77,11 @@ export default function AdminSettings() {
           </div>
         </div>
 
-        {/* MongoDB */}
+        {/* DynamoDB */}
         <div className="card-glass rounded-xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <Database size={16} className="text-green-400" />
-            <h3 className="font-semibold text-white">MongoDB Configuration</h3>
+            <h3 className="font-semibold text-white">DynamoDB Configuration</h3>
           </div>
           <div className="space-y-3">
             <div>

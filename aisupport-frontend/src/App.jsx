@@ -1,207 +1,81 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
-import Layout from './components/Layout';
-import QuickSightEmbed from './components/QuickSightEmbed';
-
-const Login = lazy(() => import('./pages/Login'));
-const Register = lazy(() => import('./pages/Register'));
-const RoleSelect = lazy(() => import('./pages/RoleSelect'));
-const AgentDashboard = lazy(() => import('./pages/AgentDashboard'));
-const MyTickets = lazy(() => import('./pages/MyTickets'));
-const TicketDetail = lazy(() => import('./pages/TicketDetail'));
+const LandingPage = lazy(() => import('./pages/LandingPage'));
+const CustomerLogin = lazy(() => import('./pages/customer/CustomerLogin'));
+const CustomerRegister = lazy(() => import('./pages/customer/CustomerRegister'));
+const RaiseTicket = lazy(() => import('./pages/customer/RaiseTicket'));
+const TrackTicket = lazy(() => import('./pages/customer/TrackTicket'));
+const CustomerMyTickets = lazy(() => import('./pages/customer/MyTickets'));
+const CustomerTicketDetails = lazy(() => import('./pages/customer/TicketDetails'));
+const OrgLogin = lazy(() => import('./pages/org/OrgLogin'));
+const OrgRegister = lazy(() => import('./pages/org/OrgRegister'));
+const RoleSelect = lazy(() => import('./pages/org/RoleSelect'));
+const AgentDashboard = lazy(() => import('./pages/agent/AgentDashboard'));
+const AgentTickets = lazy(() => import('./pages/agent/AgentTickets'));
+const AgentTicketDetails = lazy(() => import('./pages/agent/TicketDetails'));
 const AIAnalysis = lazy(() => import('./pages/AIAnalysis'));
-const KnowledgeBase = lazy(() => import('./pages/KnowledgeBase'));
-const Notifications = lazy(() => import('./pages/Notifications'));
+const TeamManagerDashboard = lazy(() => import('./pages/teamManager/TeamManagerDashboard'));
+const TeamManagerDataset = lazy(() => import('./pages/teamManager/DatasetManagement'));
+const TeamManagerQuickSight = lazy(() => import('./pages/teamManager/TeamManagerQuickSight'));
 const AgentPerformance = lazy(() => import('./pages/AgentPerformance'));
-const ManagerDashboard = lazy(() => import('./pages/ManagerDashboard'));
-const ManagerTeam = lazy(() => import('./pages/ManagerTeam'));
-const ManagerReports = lazy(() => import('./pages/ManagerReports'));
-const ExecutiveDashboard = lazy(() => import('./pages/ExecutiveDashboard'));
+const ExecutiveDashboard = lazy(() => import('./pages/executive/ExecutiveDashboard'));
 const ExecutiveAnalytics = lazy(() => import('./pages/ExecutiveAnalytics'));
-const ExecutiveInsights = lazy(() => import('./pages/ExecutiveInsights'));
-const CustomerHome = lazy(() => import('./pages/CustomerHome'));
-const RaiseTicket = lazy(() => import('./pages/RaiseTicket'));
-const CustomerTickets = lazy(() => import('./pages/CustomerTickets'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Feedback = lazy(() => import('./pages/Feedback'));
-const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
-const UserManagement = lazy(() => import('./pages/UserManagement'));
-const SecurityLogs = lazy(() => import('./pages/SecurityLogs'));
-const AdminReports = lazy(() => import('./pages/AdminReports'));
-const AdminSettings = lazy(() => import('./pages/AdminSettings'));
-const DatasetManagement = lazy(() => import('./pages/admin/DatasetManagement'));
+const ExecutiveQuickSight = lazy(() => import('./pages/executive/ExecutiveQuickSight'));
 
 function RouteFallback() {
-  return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: '#0f0d1a' }}>
-      <div className="text-sm text-slate-400">Loading...</div>
-    </div>
-  );
+  return <div className="flex min-h-screen items-center justify-center bg-[#0f0d1a] text-sm text-slate-400">Loading...</div>;
 }
 
-function GenericSettings({ title }) {
-  return (
-    <Layout title={title || 'Settings'}>
-      <div className="slide-in max-w-2xl space-y-5">
-        {['General', 'Notifications', 'Security', 'Appearance'].map(section => (
-          <div key={section} className="card-glass rounded-xl p-5">
-            <h3 className="font-semibold text-white text-sm mb-4">{section}</h3>
-            <div className="space-y-3">
-              {section === 'General' && (<>
-                <div><label className="text-xs text-slate-400 block mb-1">Display Name</label><input className="w-full px-3 py-2.5 text-sm rounded-lg" defaultValue="Rohan Mehta" /></div>
-                <div><label className="text-xs text-slate-400 block mb-1">Email</label><input className="w-full px-3 py-2.5 text-sm rounded-lg" defaultValue="rohan@example.com" /></div>
-                <div><label className="text-xs text-slate-400 block mb-1">Timezone</label><select className="w-full px-3 py-2.5 text-sm rounded-lg"><option>Asia/Kolkata (IST)</option><option>UTC</option></select></div>
-              </>)}
-              {section === 'Notifications' && ['Email notifications','SLA breach alerts','New ticket alerts','Weekly reports'].map(opt => (
-                <div key={opt} className="flex items-center justify-between">
-                  <span className="text-sm text-slate-300">{opt}</span>
-                  <div className="w-10 h-5 rounded-full bg-purple-600 cursor-pointer" />
-                </div>
-              ))}
-              {section === 'Security' && (<>
-                <div><label className="text-xs text-slate-400 block mb-1">Current Password</label><input type="password" className="w-full px-3 py-2.5 text-sm rounded-lg" /></div>
-                <div><label className="text-xs text-slate-400 block mb-1">New Password</label><input type="password" className="w-full px-3 py-2.5 text-sm rounded-lg" /></div>
-              </>)}
-              {section === 'Appearance' && (
-                <div className="flex items-center gap-3">
-                  {['Dark','Light','System'].map(theme => (
-                    <button key={theme} className={`px-4 py-2 rounded-lg text-sm ${theme==='Dark' ? 'btn-primary' : 'card-glass text-slate-400'}`}>{theme}</button>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-        <button className="btn-primary px-6 py-3 rounded-xl text-sm font-semibold">Save Changes</button>
-      </div>
-    </Layout>
-  );
-}
-
-function ExecutiveReports() {
-  return (
-    <Layout title="Executive Reports">
-      <div className="slide-in space-y-5">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {['Q1 2024 Report','Q2 2024 Report','Monthly Summary May'].map(r => (
-            <div key={r} className="card-glass rounded-xl p-5 hover:border-purple-500/30 transition-all cursor-pointer">
-              <div className="text-2xl mb-3">Report</div>
-              <h3 className="font-semibold text-white text-sm">{r}</h3>
-              <p className="text-xs text-slate-400 mt-1">PDF Report</p>
-              <button className="mt-3 text-xs text-purple-400 hover:text-purple-300">Download -&gt;</button>
-            </div>
-          ))}
-        </div>
-        <QuickSightEmbed role="business_executive" title="Executive Reports QuickSight Dashboard" height={520} />
-      </div>
-    </Layout>
-  );
-}
-
-function AdminRoles() {
-  return (
-    <Layout title="Role Management">
-      <div className="slide-in space-y-4">
-        {['Support Agent','Team Manager','Business Executive','System Admin','Customer Portal User'].map((role, i) => (
-          <div key={role} className="card-glass rounded-xl p-5">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="font-semibold text-white text-sm">{role}</h3>
-              <button className="text-xs text-purple-400 hover:text-purple-300">Edit Permissions</button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {['view_tickets','manage_tickets','view_analytics','manage_users','ai_access','export_reports'].slice(0, 2 + i % 4 + 1).map(perm => (
-                <span key={perm} className="text-xs px-2 py-0.5 rounded" style={{background:'rgba(139,92,246,0.15)',color:'#a78bfa'}}>{perm}</span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </Layout>
-  );
-}
-
-function AdminSystem() {
-  return (
-    <Layout title="System Analytics">
-      <div className="slide-in space-y-5">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {[{l:'CPU Usage',v:'34%'},{l:'Memory',v:'2.1 GB'},{l:'API Calls/hr',v:'1,240'},{l:'DB Connections',v:'18/50'}].map(m => (
-            <div key={m.l} className="card-glass rounded-xl p-5">
-              <p className="text-xs text-slate-400">{m.l}</p>
-              <p className="text-2xl font-bold text-white mt-1">{m.v}</p>
-            </div>
-          ))}
-        </div>
-        <div className="card-glass rounded-xl p-5">
-          <h3 className="font-semibold text-white text-sm mb-3">Infrastructure (Terraform Ready)</h3>
-          <div className="space-y-2">
-            {['ECS Cluster: aisupport-cluster (running)','MongoDB Atlas: db.t3.medium (connected)','ALB: aisupport-alb (healthy)','Lambda: ai-processor (active)','S3: aisupport-uploads (enabled)','CloudFront: CDN (active)'].map(r => (
-              <div key={r} className="flex items-center gap-2 text-sm text-slate-400 p-2 rounded" style={{background:'rgba(255,255,255,0.02)'}}>
-                <div className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />{r}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
-}
-
-function ProtectedRoute({ children }) {
+function ProtectedRoute({ children, portal = 'org' }) {
   const { user } = useAuth();
-  if (!user) return <Navigate to="/login" replace />;
+  if (!user) return <Navigate to={portal === 'customer' ? '/customer/login' : '/org/login'} replace />;
+  if (portal === 'customer' && user.role !== 'Customer Portal User') return <Navigate to="/customer/login" replace />;
+  if (portal === 'org' && user.role === 'Customer Portal User') return <Navigate to="/org/login" replace />;
   return children;
 }
 
 function AppRoutes() {
-  const { user } = useAuth();
   return (
     <Suspense fallback={<RouteFallback />}>
       <Routes>
-        <Route path="/" element={<Navigate to={user ? '/role-select' : '/login'} replace />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/role-select" element={<ProtectedRoute><RoleSelect /></ProtectedRoute>} />
-        {/* Agent */}
-        <Route path="/agent" element={<ProtectedRoute><AgentDashboard /></ProtectedRoute>} />
-        <Route path="/agent/tickets" element={<ProtectedRoute><MyTickets /></ProtectedRoute>} />
-        <Route path="/agent/tickets/:id" element={<ProtectedRoute><TicketDetail /></ProtectedRoute>} />
+        <Route path="/" element={<LandingPage />} />
+
+        <Route path="/customer/login" element={<CustomerLogin />} />
+        <Route path="/customer/register" element={<CustomerRegister />} />
+        <Route path="/customer/raise-ticket" element={<ProtectedRoute portal="customer"><RaiseTicket /></ProtectedRoute>} />
+        <Route path="/customer/track-ticket" element={<ProtectedRoute portal="customer"><TrackTicket /></ProtectedRoute>} />
+        <Route path="/customer/my-tickets" element={<ProtectedRoute portal="customer"><CustomerMyTickets /></ProtectedRoute>} />
+        <Route path="/customer/tickets/:ticketId" element={<ProtectedRoute portal="customer"><CustomerTicketDetails /></ProtectedRoute>} />
+
+        <Route path="/org/login" element={<OrgLogin />} />
+        <Route path="/org/register" element={<OrgRegister />} />
+        <Route path="/org/role-select" element={<ProtectedRoute><RoleSelect /></ProtectedRoute>} />
+
+        <Route path="/agent/dashboard" element={<ProtectedRoute><AgentDashboard /></ProtectedRoute>} />
+        <Route path="/agent/tickets" element={<ProtectedRoute><AgentTickets /></ProtectedRoute>} />
+        <Route path="/agent/tickets/:id" element={<ProtectedRoute><AgentTicketDetails /></ProtectedRoute>} />
         <Route path="/agent/ai-analysis" element={<ProtectedRoute><AIAnalysis /></ProtectedRoute>} />
-        <Route path="/agent/knowledge" element={<ProtectedRoute><KnowledgeBase /></ProtectedRoute>} />
-        <Route path="/agent/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
-        <Route path="/agent/performance" element={<ProtectedRoute><AgentPerformance /></ProtectedRoute>} />
-        {/* Manager */}
-        <Route path="/manager" element={<ProtectedRoute><ManagerDashboard /></ProtectedRoute>} />
-        <Route path="/manager/team" element={<ProtectedRoute><ManagerTeam /></ProtectedRoute>} />
-        <Route path="/manager/tickets" element={<ProtectedRoute><MyTickets /></ProtectedRoute>} />
-        <Route path="/manager/performance" element={<ProtectedRoute><AgentPerformance /></ProtectedRoute>} />
-        <Route path="/manager/reports" element={<ProtectedRoute><ManagerReports /></ProtectedRoute>} />
-        <Route path="/manager/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
-        {/* Executive */}
-        <Route path="/executive" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
+
+        <Route path="/team-manager/dashboard" element={<ProtectedRoute><TeamManagerDashboard /></ProtectedRoute>} />
+        <Route path="/team-manager/all-tickets" element={<ProtectedRoute><AgentTickets /></ProtectedRoute>} />
+        <Route path="/team-manager/performance" element={<ProtectedRoute><AgentPerformance /></ProtectedRoute>} />
+        <Route path="/team-manager/dataset-management" element={<ProtectedRoute><TeamManagerDataset /></ProtectedRoute>} />
+        <Route path="/team-manager/quicksight" element={<ProtectedRoute><TeamManagerQuickSight /></ProtectedRoute>} />
+
+        <Route path="/executive/dashboard" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
         <Route path="/executive/analytics" element={<ProtectedRoute><ExecutiveAnalytics /></ProtectedRoute>} />
-        <Route path="/executive/reports" element={<ProtectedRoute><ExecutiveReports /></ProtectedRoute>} />
-        <Route path="/executive/insights" element={<ProtectedRoute><ExecutiveInsights /></ProtectedRoute>} />
-        <Route path="/executive/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
-        {/* Customer */}
-        <Route path="/customer" element={<ProtectedRoute><CustomerHome /></ProtectedRoute>} />
-        <Route path="/customer/raise-ticket" element={<ProtectedRoute><RaiseTicket /></ProtectedRoute>} />
-        <Route path="/customer/tickets" element={<ProtectedRoute><CustomerTickets /></ProtectedRoute>} />
-        <Route path="/customer/ticket-status" element={<ProtectedRoute><CustomerTickets /></ProtectedRoute>} />
-        <Route path="/customer/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
-        <Route path="/customer/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
-        {/* Admin */}
-        <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-        <Route path="/admin/users" element={<ProtectedRoute><UserManagement /></ProtectedRoute>} />
-        <Route path="/admin/roles" element={<ProtectedRoute><AdminRoles /></ProtectedRoute>} />
-        <Route path="/admin/security" element={<ProtectedRoute><SecurityLogs /></ProtectedRoute>} />
-        <Route path="/admin/system" element={<ProtectedRoute><AdminSystem /></ProtectedRoute>} />
-        <Route path="/admin/reports" element={<ProtectedRoute><AdminReports /></ProtectedRoute>} />
-        <Route path="/admin/api-configuration" element={<ProtectedRoute><AdminSystem /></ProtectedRoute>} />
-        <Route path="/admin/datasets" element={<ProtectedRoute><DatasetManagement /></ProtectedRoute>} />
-        <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
+        <Route path="/executive/quicksight" element={<ProtectedRoute><ExecutiveQuickSight /></ProtectedRoute>} />
+
+        <Route path="/login" element={<Navigate to="/org/login" replace />} />
+        <Route path="/register" element={<Navigate to="/org/register" replace />} />
+        <Route path="/role-select" element={<Navigate to="/org/role-select" replace />} />
+        <Route path="/agent" element={<Navigate to="/agent/dashboard" replace />} />
+        <Route path="/manager" element={<Navigate to="/team-manager/dashboard" replace />} />
+        <Route path="/executive" element={<Navigate to="/executive/dashboard" replace />} />
+        <Route path="/customer" element={<Navigate to="/customer/my-tickets" replace />} />
+        <Route path="/admin/*" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Suspense>

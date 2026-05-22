@@ -4,10 +4,9 @@ import { authApi } from '../services/api';
 const AuthContext = createContext(null);
 
 const roleMap = {
-  agent: 'Support Agent',
-  manager: 'Team Manager',
-  executive: 'Business Executive',
-  admin: 'System Admin',
+  support_agent: 'Support Agent',
+  team_manager: 'Team Manager',
+  business_executive: 'Business Executive',
   customer: 'Customer Portal User',
 };
 
@@ -19,6 +18,8 @@ const makeLocalUser = ({ name, email, role }) => ({
   status: 'Active',
 });
 
+const displayRole = (role) => roleMap[role] || role;
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     const stored = localStorage.getItem('authUser');
@@ -26,41 +27,54 @@ export const AuthProvider = ({ children }) => {
   });
 
   const persistSession = (payload) => {
+    const userPayload = { ...payload.user, role: displayRole(payload.user?.role) };
     localStorage.setItem('authToken', payload.token || 'local-demo-token');
-    localStorage.setItem('authUser', JSON.stringify(payload.user));
-    setUser(payload.user);
-    return payload.user;
+    localStorage.setItem('authUser', JSON.stringify(userPayload));
+    setUser(userPayload);
+    return userPayload;
   };
 
-  const login = async (email, password) => {
+  const login = async (email, password, portal = 'org') => {
     try {
-      const payload = await authApi.login({ email, password });
+      const payload = portal === 'customer'
+        ? await authApi.customerLogin({ email, password })
+        : await authApi.orgLogin({ email, password });
       return persistSession(payload);
     } catch {
       return persistSession({
-        user: makeLocalUser({ email, role: 'System Admin' }),
+        user: makeLocalUser({ email, role: portal === 'customer' ? 'Customer Portal User' : 'Support Agent' }),
       });
     }
   };
 
-  const register = async (form) => {
+  const register = async (form, portal = 'org') => {
     try {
-      const payload = await authApi.register(form);
+      const payload = portal === 'customer'
+        ? await authApi.customerRegister(form)
+        : await authApi.orgRegister(form);
       return persistSession(payload);
     } catch {
       return persistSession({
-        user: makeLocalUser(form),
+        user: makeLocalUser({ ...form, role: portal === 'customer' ? 'Customer Portal User' : roleMap[form.role] || 'Support Agent' }),
       });
     }
   };
 
   const selectRole = (roleKey) => {
-    const selectedRole = roleMap[roleKey] || roleMap.agent;
+    const selectedRole = roleMap[roleKey] || roleMap.support_agent;
     const updated = { ...user, role: selectedRole };
     localStorage.setItem('authUser', JSON.stringify(updated));
     setUser(updated);
     return updated;
   };
+
+  const demoLogin = (portal = 'org', roleKey = 'support_agent') => persistSession({
+    user: makeLocalUser({
+      name: portal === 'customer' ? 'Demo Customer' : roleMap[roleKey],
+      email: portal === 'customer' ? 'customer.demo@example.com' : `${roleKey}@demo.example.com`,
+      role: portal === 'customer' ? 'Customer Portal User' : roleMap[roleKey],
+    }),
+  });
 
   const logout = () => {
     localStorage.removeItem('authToken');
@@ -69,7 +83,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, selectRole, logout }}>
+    <AuthContext.Provider value={{ user, login, register, selectRole, demoLogin, logout }}>
       {children}
     </AuthContext.Provider>
   );

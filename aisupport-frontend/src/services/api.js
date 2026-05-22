@@ -34,6 +34,22 @@ export const authApi = {
     body: JSON.stringify(payload),
   }),
   me: () => request('/auth/me'),
+  customerRegister: (payload) => request('/auth/customer/register', {
+    method: 'POST',
+    body: JSON.stringify({ ...payload, role: 'customer' }),
+  }),
+  customerLogin: (payload) => request('/auth/customer/login', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  }),
+  orgRegister: (payload) => request('/auth/org/register', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  }),
+  orgLogin: (payload) => request('/auth/org/login', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  }),
 };
 
 export const pipelineApi = {
@@ -68,6 +84,7 @@ export const ticketApi = {
     method: 'POST',
     body: JSON.stringify(payload),
   }),
+  byCustomerEmail: (email) => request(`/tickets/customer/${encodeURIComponent(email)}`),
 };
 
 export const analyticsApi = {
@@ -97,7 +114,7 @@ export const datasetApi = {
     form.append('datasetType', datasetType);
 
     onProgress?.(25);
-    const response = await fetch(`${API_BASE_URL}/admin/datasets/upload`, {
+    const response = await fetch(`${API_BASE_URL}/datasets/upload`, {
       method: 'POST',
       headers: {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -112,7 +129,7 @@ export const datasetApi = {
     onProgress?.(100);
     return data;
   },
-  uploads: () => request('/admin/datasets/uploads'),
-  preview: (uploadId) => request(`/admin/datasets/preview/${encodeURIComponent(uploadId)}`),
-  remove: (uploadId) => request(`/admin/datasets/${encodeURIComponent(uploadId)}`, { method: 'DELETE' }),
+  uploads: () => request('/datasets/uploads'),
+  preview: (uploadId) => request(`/datasets/preview/${encodeURIComponent(uploadId)}`),
+  remove: (uploadId) => request(`/datasets/${encodeURIComponent(uploadId)}`, { method: 'DELETE' }),
 };

@@ -8,7 +8,6 @@ export default function ChatbotWidget() {
     'Support Agent': 'support_agent',
     'Team Manager': 'team_manager',
     'Business Executive': 'business_executive',
-    'System Admin': 'system_admin',
   };
 
   return <BedrockAgentChat role={roleMap[user?.role] || 'customer'} mode="floating" />;

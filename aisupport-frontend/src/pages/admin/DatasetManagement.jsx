@@ -6,9 +6,8 @@ import { datasetApi } from '../../services/api';
 
 const datasetTypes = [
   { label: 'Support Tickets', value: 'tickets' },
-  { label: 'Users', value: 'users' },
-  { label: 'Knowledge Base', value: 'knowledge_base' },
-  { label: 'Analytics', value: 'analytics' },
+  { label: 'Team Manager Performance', value: 'team_manager_performance' },
+  { label: 'Business Executive Insights', value: 'business_executive_insights' },
 ];
 
 const formatDate = (value) => value ? new Date(value).toLocaleString() : '-';

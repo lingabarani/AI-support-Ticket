@@ -10,16 +10,18 @@ export default function Layout({ children, title }) {
     'Support Agent': 'support_agent',
     'Team Manager': 'team_manager',
     'Business Executive': 'business_executive',
-    'System Admin': 'system_admin',
     'Customer Portal User': 'customer',
   }[user?.role] || 'support_agent';
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#0f0d1a]">
+    <div className="relative flex h-screen overflow-hidden bg-[#050816]">
+      <div className="pointer-events-none absolute inset-0 premium-grid opacity-30" />
+      <div className="pointer-events-none absolute left-1/4 top-[-12rem] h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute right-[-10rem] top-20 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" />
       <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="relative z-10 flex flex-1 flex-col overflow-hidden">
         <Topbar title={title} />
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
           <div className="mb-6">
             <BedrockAgentChat role={assistantRole} mode="card" />
           </div>

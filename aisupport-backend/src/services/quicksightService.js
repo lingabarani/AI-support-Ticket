@@ -2,36 +2,41 @@ const {
   QuickSightClient,
   GenerateEmbedUrlForRegisteredUserCommand,
 } = require('@aws-sdk/client-quicksight');
+const { fromIni } = require('@aws-sdk/credential-provider-ini');
 
-const quickSightClient = new QuickSightClient({
-  region: process.env.AWS_REGION || 'us-east-1',
-});
+const createQuickSightClient = () => {
+  const config = {
+    region: process.env.AWS_REGION || 'us-east-1',
+  };
+
+  if (process.env.AWS_PROFILE) {
+    config.credentials = fromIni({
+      profile: process.env.AWS_PROFILE,
+      filepath: process.env.AWS_SHARED_CREDENTIALS_FILE || undefined,
+    });
+  }
+
+  return new QuickSightClient(config);
+};
+
+const quickSightClient = createQuickSightClient();
 
 const dashboardEnvByRole = {
   support_agent: 'QS_DASHBOARD_SUPPORT_AGENT',
   team_manager: 'QS_DASHBOARD_TEAM_MANAGER',
   business_executive: 'QS_DASHBOARD_BUSINESS_EXECUTIVE',
-  system_admin: 'QS_DASHBOARD_SYSTEM_ADMIN',
-  system_admin_reports: 'QS_DASHBOARD_SYSTEM_ADMIN',
-  customer: 'QS_DASHBOARD_CUSTOMER_PORTAL',
 };
 
 const analysisEnvByRole = {
   support_agent: 'QS_ANALYSIS_SUPPORT_AGENT',
   team_manager: 'QS_ANALYSIS_TEAM_MANAGER',
   business_executive: 'QS_ANALYSIS_BUSINESS_EXECUTIVE',
-  system_admin: 'QS_ANALYSIS_SYSTEM_ADMIN',
-  system_admin_reports: 'QS_ANALYSIS_SYSTEM_ADMIN',
-  customer: 'QS_ANALYSIS_CUSTOMER_PORTAL',
 };
 
 const sharedDashboardUrls = {
-  support_agent: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/526f5faf-d207-4067-a046-de8f190ba5bf',
-  team_manager: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/e070b737-5990-43f1-bfb4-1bd9182c2119',
-  business_executive: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/f79b49a9-619f-407e-81ec-52a0e0ee1c52',
-  system_admin: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/a417a51c-c15f-4aa6-8efb-650fdd06bccb',
-  system_admin_reports: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/a417a51c-c15f-4aa6-8efb-650fdd06bccb',
-  customer: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/526f5faf-d207-4067-a046-de8f190ba5bf',
+  support_agent: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/0fe6b5b8-d6b7-4c9d-9268-1abf2d040c5d',
+  team_manager: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/0fcb1f44-2f3f-48cf-a292-dabb3ba3ef74',
+  business_executive: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/fcbb70c7-c980-438b-b4f0-a8f8e2d47615',
 };
 
 const getAllowedDomains = () => {
@@ -40,12 +45,10 @@ const getAllowedDomains = () => {
     .map((domain) => domain.trim())
     .filter(Boolean);
 
-  return [
+  return [...new Set([
     'http://localhost:5173',
-    'http://127.0.0.1:5173',
-    'https://your-production-domain.example',
     ...configured,
-  ];
+  ].filter((domain) => !domain.includes('127.0.0.1')))].slice(0, 3);
 };
 
 const getDashboardId = (role) => {
@@ -97,6 +100,8 @@ const getQuickSightEmbedUrl = async (role) => {
     const wrapped = new Error('Unable to generate QuickSight embed URL. Check QuickSight user, dashboard permissions, and IAM access.');
     wrapped.statusCode = 502;
     wrapped.cause = error;
+    wrapped.awsErrorName = error.name;
+    wrapped.awsErrorMessage = error.message;
     throw wrapped;
   }
 };

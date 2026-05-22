@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const Ticket = require('../models/Ticket');
+const TicketHistory = require('../models/TicketHistory');
+const TicketAnalysis = require('../models/TicketAnalysis');
 const { getDemoTickets, getPrimaryTickets } = require('../services/datasetService');
 const { validateAndNormalizeTicketRow } = require('../utils/validateTicketRow');
 
@@ -16,6 +18,68 @@ const normalizeTicketId = (value) => {
   if (uploadMatch) return uploadMatch[0].toUpperCase();
   const match = text.match(/(\d{1,4})$/);
   return match ? `TKT-${String(Number(match[1])).padStart(4, '0')}` : text.toUpperCase();
+};
+
+const makeTicketId = () => `TKT-${Date.now().toString().slice(-6)}-${Math.random().toString(36).slice(2, 5).toUpperCase()}`;
+
+const normalizePriority = (priority) => {
+  if (priority === 'Critical') return 'Urgent';
+  return ['Urgent', 'High', 'Medium', 'Low'].includes(priority) ? priority : 'Medium';
+};
+
+const buildAnalysis = (ticket) => {
+  const text = `${ticket.subject || ''} ${ticket.description || ticket.ticket_description || ''}`.toLowerCase();
+  const negative = /angry|frustrated|fail|failed|urgent|critical|refund|payment|down|blocked/.test(text);
+  const sentiment = negative ? 'Negative' : 'Neutral';
+  return {
+    sentiment,
+    priority: ticket.priority,
+    summary: `${ticket.category || ticket.issue_category || 'Support'} request: ${ticket.subject || ticket.ticket_description || 'Customer needs assistance'}`.slice(0, 220),
+    root_cause: ticket.category || ticket.issue_category || 'Customer reported product issue',
+    suggested_resolution: 'Review the customer details, acknowledge the request, and provide a clear next-step update within SLA.',
+    confidence: 0.82,
+    source: 'local_intelligence',
+  };
+};
+
+const normalizeCustomerTicket = (body) => {
+  const now = new Date();
+  const priority = normalizePriority(body.priority);
+  const slaHours = priority === 'Urgent' ? 8 : priority === 'High' ? 24 : priority === 'Low' ? 72 : 48;
+  const ticket_id = body.ticket_id || makeTicketId();
+  const tags = Array.isArray(body.tags)
+    ? body.tags
+    : String(body.tags || '').split(',').map((tag) => tag.trim()).filter(Boolean);
+  return {
+    ticket_id,
+    ticketId: ticket_id,
+    customer_name: body.customer_name || body.name || String(body.customer_email || body.email || 'Customer').split('@')[0],
+    customer_email: body.customer_email || body.email,
+    account_company: body.account_company || body.company || '',
+    category: body.category || body.issue_category || 'General Support',
+    issue_category: body.issue_category || body.category || 'General Support',
+    affected_product: body.affected_product || body.product || 'Web Portal',
+    product: body.product || body.affected_product || 'Web Portal',
+    subject: body.subject || String(body.ticket_description || body.description || 'Support request').slice(0, 120),
+    description: body.description || body.ticket_description || '',
+    ticket_description: body.ticket_description || body.description || body.subject || '',
+    tags,
+    priority,
+    status: body.status || 'Open',
+    assigned_agent: body.assigned_agent || 'Unassigned',
+    assigned_team: body.assigned_team || 'Customer Support',
+    sla_due_at: body.sla_due_at || new Date(now.getTime() + slaHours * 60 * 60 * 1000),
+    sla_breached: false,
+    resolution_summary: body.resolution_summary || '',
+    created_at: body.created_at || now,
+    updated_at: now,
+    ticket_created_date: body.ticket_created_date || now,
+    ticket_updated_date: now,
+    source: body.source || 'customer_portal',
+    attachments: body.attachments || [],
+    channel: body.channel || 'Web',
+    region: body.region || 'India',
+  };
 };
 
 const filterTickets = (items, query) => {
@@ -104,19 +168,45 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const uploadId = req.body.uploadId || 'manual-create';
-  const normalized = validateAndNormalizeTicketRow(req.body, 0, uploadId);
-  if (!normalized.valid) {
-    return res.status(400).json({ success: false, message: 'Ticket validation failed.', errors: normalized.errors });
+  try {
+    const ticketPayload = normalizeCustomerTicket(req.body);
+    if (!ticketPayload.customer_email) {
+      return res.status(400).json({ success: false, message: 'Customer email is required.' });
+    }
+
+    const analysis = buildAnalysis(ticketPayload);
+    Object.assign(ticketPayload, {
+      ai_summary: analysis.summary,
+      ai_sentiment: analysis.sentiment,
+      ai_root_cause: analysis.root_cause,
+      ai_suggested_resolution: analysis.suggested_resolution,
+      sentiment: analysis.sentiment,
+    });
+
+    const ticket = await Ticket.create(ticketPayload);
+    await Promise.all([
+      TicketHistory.create({
+        ticket_id: ticket.ticket_id,
+        action: 'created',
+        new_status: ticket.status,
+        updated_by: ticket.customer_email,
+        notes: 'Ticket created from customer portal.',
+      }),
+      TicketAnalysis.create({ ticket_id: ticket.ticket_id, ...analysis }),
+    ]);
+
+    res.status(201).json({ success: true, ticket: ticket.toObject(), analysis, source: 'mongodb' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message || 'Ticket creation failed.' });
   }
+});
 
-  const ticket = await Ticket.findOneAndUpdate(
-    { ticket_id: normalized.ticket.ticket_id },
-    { $set: normalized.ticket },
-    { upsert: true, new: true, setDefaultsOnInsert: true },
-  ).lean();
-
-  res.status(201).json({ success: true, ticket, source: 'mongodb' });
+router.get('/customer/:email', async (req, res) => {
+  const email = String(req.params.email || '').toLowerCase();
+  const rows = await Ticket.find({ customer_email: email }).sort({ created_at: -1, createdAt: -1 }).limit(100).lean();
+  if (rows.length) return res.json({ success: true, tickets: rows, source: 'mongodb' });
+  const fallback = fallbackTickets().filter((item) => String(item.customer_email || '').toLowerCase() === email);
+  return res.json({ success: true, tickets: fallback, source: 'support_fallback' });
 });
 
 router.get('/:id', async (req, res) => {
@@ -130,12 +220,25 @@ router.get('/:id', async (req, res) => {
 
 const updateTicket = async (req, res) => {
   const id = normalizeTicketId(req.params.id);
+  const existing = await Ticket.findOne({ $or: [{ ticket_id: id }, { ticketId: id }] }).lean();
   const ticket = await Ticket.findOneAndUpdate(
     { $or: [{ ticket_id: id }, { ticketId: id }] },
-    { $set: { ...req.body, ticket_updated_date: new Date() } },
+    { $set: { ...req.body, updated_at: new Date(), ticket_updated_date: new Date() } },
     { new: true },
   ).lean();
-  if (ticket) return res.json({ success: true, ticket, source: 'mongodb' });
+  if (ticket) {
+    if (req.body.status && req.body.status !== existing?.status) {
+      await TicketHistory.create({
+        ticket_id: ticket.ticket_id || ticket.ticketId,
+        action: 'status_changed',
+        previous_status: existing?.status,
+        new_status: req.body.status,
+        updated_by: req.headers['x-user-email'] || req.body.updated_by || 'organization_user',
+        notes: req.body.notes || req.body.internal_note || '',
+      });
+    }
+    return res.json({ success: true, ticket, source: 'mongodb' });
+  }
 
   const index = fallbackTickets().findIndex((item) => item.ticket_id === id);
   const targetIndex = index >= 0 ? index : 0;

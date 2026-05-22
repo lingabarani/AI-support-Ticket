@@ -6,6 +6,8 @@ const ticketSchema = new mongoose.Schema({
   subject:     { type: String },
   description: { type: String },
   category:    { type: String },
+  affected_product: String,
+  account_company: String,
   customer_name: String,
   customer_email: String,
   product: String,
@@ -27,6 +29,7 @@ const ticketSchema = new mongoose.Schema({
   ticket_updated_date: Date,
   escalation_required: Boolean,
   sla_breached: Boolean,
+  sla_due_at: Date,
   device: String,
   browser: String,
   payment_method: String,
@@ -44,6 +47,8 @@ const ticketSchema = new mongoose.Schema({
   ai_confidence_score: Number,
   revenue_risk: Number,
   source: String,
+  created_at: Date,
+  updated_at: Date,
   uploadId: { type: String, index: true },
   sentiment:   { type: String, enum: ['Positive','Neutral','Negative'], default: 'Neutral' },
   customer:    { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
@@ -77,7 +82,19 @@ ticketSchema.pre('save', function(next) {
   if (!this.subject && this.ticket_description) this.subject = this.ticket_description.slice(0, 140);
   if (!this.description && this.ticket_description) this.description = this.ticket_description;
   if (!this.category && this.issue_category) this.category = this.issue_category;
+  if (!this.issue_category && this.category) this.issue_category = this.category;
+  if (!this.product && this.affected_product) this.product = this.affected_product;
+  if (!this.affected_product && this.product) this.affected_product = this.product;
   if (!this.sentiment && this.ai_sentiment) this.sentiment = this.ai_sentiment;
+  if (!this.created_at) this.created_at = this.createdAt || new Date();
+  this.updated_at = new Date();
+  if (!this.ticket_created_date) this.ticket_created_date = this.created_at;
+  this.ticket_updated_date = this.updated_at;
+  if (!this.sla_due_at && !this.slaDueAt) {
+    const hours = this.priority === 'Urgent' ? 8 : this.priority === 'High' ? 24 : this.priority === 'Low' ? 72 : 48;
+    this.sla_due_at = new Date(Date.now() + hours * 60 * 60 * 1000);
+    this.slaDueAt = this.sla_due_at;
+  }
   next();
 });
 

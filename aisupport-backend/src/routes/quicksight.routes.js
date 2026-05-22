@@ -20,7 +20,11 @@ router.get('/embed-url', embedLimiter, validateRole('query'), async (req, res) =
       return res.json({
         embedUrl: sharedEmbedUrl,
         source: 'quicksight_shared',
-        message: 'Using shared QuickSight dashboard URL.',
+        canEmbed: true,
+        message: 'Using shared QuickSight iframe embed URL.',
+        reason: process.env.NODE_ENV === 'production'
+          ? undefined
+          : (error.awsErrorMessage || error.cause?.message || error.message),
       });
     }
 
@@ -31,7 +35,8 @@ router.get('/embed-url', embedLimiter, validateRole('query'), async (req, res) =
     res.json({
       embedUrl: '',
       source: 'support_fallback',
-      message: `QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.${reason}`,
+      canEmbed: false,
+      message: `QuickSight dashboard is temporarily unavailable. Showing built-in analytics dashboard.${reason}`,
     });
   }
 });

@@ -113,27 +113,43 @@ const generateChatReply = async ({ role, message, sessionId }) => {
   }
 
   const intent = detectIntent(message);
-  if (RELIABLE_ROLE_INTENTS[normalizedRole]?.has(intent)) {
-    return generateLocalResponse({ role: normalizedRole, message, includeNotice: false });
-  }
+  const verified = await generateLocalResponse({ role: normalizedRole, message, includeNotice: false });
+  const shouldUseVerifiedAnswer = intent === 'metric_query'
+    || verified.source === 'dataset_verified'
+    || RELIABLE_ROLE_INTENTS[normalizedRole]?.has(intent);
 
-  if (!shouldTryExternalAi()) {
-    return generateLocalResponse({ role: normalizedRole, message, includeNotice: true });
-  }
-
-  try {
-    const ai = await sendProviderMessage({ role: normalizedRole, message, sessionId });
+  if (shouldUseVerifiedAnswer) {
     return {
-      reply: sanitizeReply(ai.reply),
-      role: normalizedRole,
-      source: 'ai',
-      cards: [],
-      suggestedActions: [],
-      sessionId: ai.sessionId || sessionId,
+      ...verified,
+      intent,
+      sessionId,
+      source: verified.source || 'dataset_verified',
     };
-  } catch {
-    return generateLocalResponse({ role: normalizedRole, message, includeNotice: true });
   }
+
+  if (shouldTryExternalAi()) {
+    try {
+      const external = await sendProviderMessage({ role: normalizedRole, message, sessionId });
+      return {
+        ...verified,
+        reply: sanitizeReply(external.reply),
+        intent,
+        sessionId: external.sessionId || sessionId,
+        source: getProvider(),
+        mode: external.mode || 'chat',
+      };
+    } catch (error) {
+      return {
+        ...verified,
+        intent,
+        sessionId,
+        source: 'support_fallback',
+        providerStatus: 'unavailable',
+      };
+    }
+  }
+
+  return { ...verified, intent, sessionId, source: 'local_intelligence' };
 };
 
 module.exports = { generateChatReply };

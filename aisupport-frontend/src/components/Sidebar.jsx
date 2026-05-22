@@ -2,53 +2,36 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
-  LayoutDashboard, Ticket, Bot, BookOpen, Bell, BarChart3,
-  Users, Settings, Shield, LogOut, ChevronLeft, ChevronRight,
-  TrendingUp, AlertTriangle, Lightbulb, UserCheck, Activity,
-  Home, HelpCircle, Star, PlusCircle, Database
+  LayoutDashboard, Ticket, Bot, BarChart3,
+  Users, LogOut, ChevronLeft, ChevronRight,
+  TrendingUp, Lightbulb, Home, PlusCircle, Database, Search
 } from 'lucide-react';
 import logo from '../assets/ai-support-logo.png';
 
 const navConfigs = {
   'Support Agent': [
-    { label: 'Dashboard', icon: LayoutDashboard, path: '/agent' },
-    { label: 'My Tickets', icon: Ticket, path: '/agent/tickets' },
+    { label: 'Dashboard', icon: LayoutDashboard, path: '/agent/dashboard' },
+    { label: 'Tickets', icon: Ticket, path: '/agent/tickets' },
     { label: 'AI Analysis', icon: Bot, path: '/agent/ai-analysis' },
-    { label: 'Knowledge Base', icon: BookOpen, path: '/agent/knowledge' },
-    { label: 'Notifications', icon: Bell, path: '/agent/notifications' },
-    { label: 'Performance', icon: BarChart3, path: '/agent/performance' },
   ],
   'Team Manager': [
-    { label: 'Dashboard', icon: LayoutDashboard, path: '/manager' },
-    { label: 'My Team', icon: Users, path: '/manager/team' },
-    { label: 'All Tickets', icon: Ticket, path: '/manager/tickets' },
-    { label: 'Performance', icon: BarChart3, path: '/manager/performance' },
-    { label: 'Reports', icon: TrendingUp, path: '/manager/reports' },
-    { label: 'Settings', icon: Settings, path: '/manager/settings' },
+    { label: 'Dashboard', icon: LayoutDashboard, path: '/team-manager/dashboard' },
+    { label: 'All Tickets', icon: Ticket, path: '/team-manager/all-tickets' },
+    { label: 'Performance', icon: Users, path: '/team-manager/performance' },
+    { label: 'Dataset Management', icon: Database, path: '/team-manager/dataset-management' },
+    { label: 'QuickSight', icon: BarChart3, path: '/team-manager/quicksight' },
   ],
   'Business Executive': [
-    { label: 'Dashboard', icon: LayoutDashboard, path: '/executive' },
+    { label: 'Dashboard', icon: LayoutDashboard, path: '/executive/dashboard' },
     { label: 'Analytics', icon: TrendingUp, path: '/executive/analytics' },
-    { label: 'Reports', icon: BarChart3, path: '/executive/reports' },
-    { label: 'Insights', icon: Lightbulb, path: '/executive/insights' },
-    { label: 'Settings', icon: Settings, path: '/executive/settings' },
-  ],
-  'System Admin': [
-    { label: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
-    { label: 'Users', icon: Users, path: '/admin/users' },
-    { label: 'Roles', icon: UserCheck, path: '/admin/roles' },
-    { label: 'Dataset Management', icon: Database, path: '/admin/datasets' },
-    { label: 'Reports', icon: BarChart3, path: '/admin/reports' },
-    { label: 'Security', icon: Shield, path: '/admin/security' },
-    { label: 'System', icon: Activity, path: '/admin/system' },
-    { label: 'Settings', icon: Settings, path: '/admin/settings' },
+    { label: 'QuickSight', icon: BarChart3, path: '/executive/quicksight' },
+    { label: 'Insights', icon: Lightbulb, path: '/executive/analytics' },
   ],
   'Customer Portal User': [
-    { label: 'Home', icon: Home, path: '/customer' },
+    { label: 'Home', icon: Home, path: '/customer/my-tickets' },
     { label: 'Raise Ticket', icon: PlusCircle, path: '/customer/raise-ticket' },
-    { label: 'My Tickets', icon: Ticket, path: '/customer/tickets' },
-    { label: 'Knowledge Base', icon: HelpCircle, path: '/customer/faq' },
-    { label: 'Feedback', icon: Star, path: '/customer/feedback' },
+    { label: 'Track Ticket', icon: Search, path: '/customer/track-ticket' },
+    { label: 'My Tickets', icon: Ticket, path: '/customer/my-tickets' },
   ],
 };
 
@@ -62,16 +45,16 @@ export default function Sidebar() {
 
   return (
     <aside
-      className="sidebar-glass flex flex-col h-screen sticky top-0 transition-all duration-300 z-40"
-      style={{ width: collapsed ? 64 : 240, minWidth: collapsed ? 64 : 240 }}
+      className="sidebar-glass z-40 flex h-screen flex-col transition-all duration-300"
+      style={{ width: collapsed ? 76 : 280, minWidth: collapsed ? 76 : 280 }}
     >
       {/* Logo */}
-      <div className="flex items-center gap-3 px-4 py-5 border-b border-purple-900/30">
-        <img src={logo} alt="AI Support Intelligence" className="w-9 h-9 rounded-lg object-cover flex-shrink-0" />
+      <div className="flex items-center gap-3 border-b border-white/10 px-4 py-5">
+        <img src={logo} alt="AI Support Intelligence" className="h-10 w-10 flex-shrink-0 rounded-2xl object-cover ring-1 ring-cyan-300/25" />
         {!collapsed && (
           <div>
-            <div className="font-bold text-sm text-white leading-tight">AI Support</div>
-            <div className="text-xs text-purple-400">Intelligence</div>
+            <div className="text-sm font-black leading-tight text-white">AI Support</div>
+            <div className="text-xs text-cyan-200/80">Intelligence Cloud</div>
           </div>
         )}
       </div>
@@ -84,7 +67,7 @@ export default function Sidebar() {
           return (
             <div
               key={item.path}
-              className={`nav-item flex items-center gap-3 px-3 py-2.5 ${active ? 'active' : 'text-slate-400'}`}
+              className={`nav-item flex items-center gap-3 px-3 py-3 ${active ? 'active' : 'text-slate-400'}`}
               onClick={() => navigate(item.path)}
             >
               <Icon size={17} className="flex-shrink-0" />
@@ -95,15 +78,15 @@ export default function Sidebar() {
       </nav>
 
       {/* User + Logout */}
-      <div className="border-t border-purple-900/30 p-3 space-y-2">
+      <div className="space-y-2 border-t border-white/10 p-3">
         {!collapsed && (
-          <div className="flex items-center gap-2 px-2 py-2">
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
+          <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-3 py-3">
+            <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-400 via-blue-400 to-cyan-300 text-xs font-black text-white">
               {user?.name?.[0]}
             </div>
             <div className="min-w-0">
-              <div className="text-xs font-semibold text-white truncate">{user?.name}</div>
-              <div className="text-xs text-slate-500 truncate">{user?.role}</div>
+              <div className="truncate text-xs font-bold text-white">{user?.name}</div>
+              <div className="truncate text-xs text-slate-500">{user?.role}</div>
             </div>
           </div>
         )}
@@ -119,7 +102,7 @@ export default function Sidebar() {
       {/* Collapse toggle */}
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="absolute -right-3 top-20 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center text-white shadow-lg z-50"
+        className="absolute -right-3 top-20 z-50 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
       >
         {collapsed ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
       </button>

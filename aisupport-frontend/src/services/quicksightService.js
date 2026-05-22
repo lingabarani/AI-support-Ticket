@@ -1,21 +1,47 @@
 import { quickSightApi } from './api';
 
 const sharedDashboardUrls = {
-  support_agent: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/526f5faf-d207-4067-a046-de8f190ba5bf',
-  team_manager: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/e070b737-5990-43f1-bfb4-1bd9182c2119',
-  business_executive: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/f79b49a9-619f-407e-81ec-52a0e0ee1c52',
-  system_admin: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/a417a51c-c15f-4aa6-8efb-650fdd06bccb',
-  system_admin_reports: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/a417a51c-c15f-4aa6-8efb-650fdd06bccb',
-  customer: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/526f5faf-d207-4067-a046-de8f190ba5bf',
+  support_agent: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/0fe6b5b8-d6b7-4c9d-9268-1abf2d040c5d',
+  team_manager: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/0fcb1f44-2f3f-48cf-a292-dabb3ba3ef74',
+  business_executive: 'https://us-east-1.quicksight.aws.amazon.com/sn/account/AkashQS/embed/share/accounts/711560820682/dashboards/fcbb70c7-c980-438b-b4f0-a8f8e2d47615',
+};
+
+export const getQuickSightDashboard = async (role) => {
+  try {
+    const response = await quickSightApi.embedUrl(role);
+    if (response?.embedUrl) {
+      return {
+        embedUrl: response.embedUrl,
+        source: response.source || 'backend',
+        canEmbed: response.canEmbed !== false,
+        message: response.message || '',
+        reason: response.reason || '',
+      };
+    }
+    if (sharedDashboardUrls[role]) {
+      return {
+        embedUrl: sharedDashboardUrls[role],
+        source: 'frontend_shared',
+        canEmbed: true,
+        message: response?.message || 'Backend did not return a registered-user embed URL. Using shared QuickSight iframe embed URL.',
+      };
+    }
+    throw new Error(response?.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.');
+  } catch (error) {
+    if (sharedDashboardUrls[role]) {
+      return {
+        embedUrl: sharedDashboardUrls[role],
+        source: 'frontend_shared',
+        canEmbed: true,
+        message: 'Backend QuickSight embed endpoint is unavailable. Using shared QuickSight iframe embed URL.',
+        reason: error.message,
+      };
+    }
+    throw new Error(error.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.', { cause: error });
+  }
 };
 
 export const getQuickSightEmbedUrl = async (role) => {
-  try {
-    const response = await quickSightApi.embedUrl(role);
-    if (response?.embedUrl) return response.embedUrl;
-    return sharedDashboardUrls[role] || Promise.reject(new Error(response?.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.'));
-  } catch (error) {
-    if (sharedDashboardUrls[role]) return sharedDashboardUrls[role];
-    throw new Error(error.message || 'QuickSight dashboard is temporarily unavailable. Showing analytics dashboard.', { cause: error });
-  }
+  const dashboard = await getQuickSightDashboard(role);
+  return dashboard.embedUrl;
 };

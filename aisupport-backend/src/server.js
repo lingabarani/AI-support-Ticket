@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
       users: '/api/users',
       notifications: '/api/notifications',
       reports: '/api/reports/export',
-      datasets: '/api/admin/datasets/uploads',
+      datasets: '/api/datasets/uploads',
     },
   });
 });
@@ -60,6 +60,7 @@ app.use('/api/ai',            require('./routes/ai.routes'));
 app.use('/api/pipeline',      require('./routes/pipeline.routes'));
 app.use('/api/chat',          require('./routes/chat.routes'));
 app.use('/api/quicksight',    require('./routes/quicksight.routes'));
+app.use('/api/datasets', require('./routes/datasetRoutes'));
 app.use('/api/admin/datasets', require('./routes/datasetRoutes'));
 
 app.use('/api', (req, res) => {

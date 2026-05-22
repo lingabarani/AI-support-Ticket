@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 
 const aiInsightSchema = new mongoose.Schema({
-  ticket:      { type: mongoose.Schema.Types.ObjectId, ref: 'Ticket' },
-  type:        { type: String, enum: ['summarization','sentiment','priority','churn','root_cause','recommendation'] },
-  input:       mongoose.Schema.Types.Mixed,
-  output:      mongoose.Schema.Types.Mixed,
-  confidence:  Number,
-  model:       { type: String, default: 'anthropic.claude-3-sonnet' },
-  processedAt: { type: Date, default: Date.now },
-}, { timestamps: true });
+  insight_type: { type: String, index: true },
+  role: { type: String, index: true },
+  source: String,
+  uploadId: { type: String, index: true },
+  data: mongoose.Schema.Types.Mixed,
+}, { timestamps: true, collection: 'aiinsights' });
 
 module.exports = mongoose.model('AIInsight', aiInsightSchema);

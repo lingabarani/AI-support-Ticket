@@ -49,17 +49,6 @@ const labels = {
       ['Board Action', '5 moves', 'Recommended retention and service recovery actions'],
     ],
   },
-  system_admin: {
-    title: 'System Admin Agent',
-    subtitle: 'Authorized health, roles, and security insights',
-    welcome: 'Ask me about system health, active users, role permissions, API status, or security alerts.',
-    badge: 'Admin Control',
-    highlights: [
-      ['System Health', '99.8%', 'API, database, and AI service status monitored'],
-      ['Access Review', '7 pending', 'Role and invite checks awaiting approval'],
-      ['Security', '3 alerts', 'Review recent login and permission changes'],
-    ],
-  },
 };
 
 const MessageList = ({ messages }) => (
@@ -96,7 +85,7 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
       const response = await sendChatMessage({ role, message: trimmed, sessionId });
       setMessages((current) => [...current, { from: 'assistant', text: response.reply }]);
     } catch {
-      setMessages((current) => [...current, { from: 'assistant', text: 'AI assistant is temporarily unavailable. Showing the best available support response.' }]);
+      setMessages((current) => [...current, { from: 'assistant', text: 'Live AI service is temporarily unavailable. Showing intelligent response from the built-in enterprise dataset.' }]);
     } finally {
       setLoading(false);
     }

@@ -16,8 +16,12 @@ const ROLE_PROMPTS = {
 
 let client;
 
+const getGroqApiKey = () => process.env.GROQ_API_KEY || process.env.GROQ_API;
+
 const getClient = () => {
-  if (!process.env.GROQ_API_KEY) {
+  const apiKey = getGroqApiKey();
+
+  if (!apiKey) {
     const error = new Error('AI service is not configured.');
     error.statusCode = 500;
     throw error;
@@ -25,7 +29,7 @@ const getClient = () => {
 
   if (!client) {
     client = new OpenAI({
-      apiKey: process.env.GROQ_API_KEY,
+      apiKey,
       baseURL: process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1',
     });
   }

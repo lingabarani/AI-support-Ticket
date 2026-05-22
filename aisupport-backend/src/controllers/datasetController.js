@@ -3,18 +3,24 @@ const jwt = require('jsonwebtoken');
 const DatasetUpload = require('../models/DatasetUpload');
 const Ticket = require('../models/Ticket');
 const User = require('../models/User.model');
+const AIInsight = require('../models/AIInsight.model');
+const TeamManagerPerformance = require('../models/TeamManagerPerformance');
+const BusinessExecutiveInsight = require('../models/BusinessExecutiveInsight');
 const { parseDataset } = require('../utils/parseDataset');
 const { validateAndNormalizeTicketRow } = require('../utils/validateTicketRow');
 
 const datasetLabels = {
   tickets: 'tickets',
   support_tickets: 'tickets',
-  users: 'users',
-  knowledge_base: 'knowledge_base',
-  analytics: 'analytics',
+  'support tickets': 'tickets',
+  team_manager_performance: 'team_manager_performance',
+  'team manager performance': 'team_manager_performance',
+  business_executive_insights: 'business_executive_insights',
+  'business executive insights': 'business_executive_insights',
+  aiinsights: 'aiinsights',
 };
 
-const normalizeDatasetType = (value) => datasetLabels[String(value || '').toLowerCase()] || 'tickets';
+const normalizeDatasetType = (value) => datasetLabels[String(value || '').toLowerCase()] || datasetLabels[String(value || '')] || 'tickets';
 
 const safeError = (error) => ({
   message: error?.message || 'Dataset upload failed.',
@@ -28,12 +34,12 @@ const validateAdmin = async (req, res, next) => {
 
   const token = auth.split(' ')[1];
   if (token === 'local-demo-token') {
-    if (req.headers['x-user-role'] !== 'System Admin') {
-      return res.status(403).json({ success: false, message: 'System Admin access required.' });
+    if (!['Team Manager', 'team_manager', 'System Admin'].includes(req.headers['x-user-role'])) {
+      return res.status(403).json({ success: false, message: 'Team Manager access required.' });
     }
     req.user = {
-      role: 'System Admin',
-      email: req.headers['x-user-email'] || 'local-admin',
+      role: req.headers['x-user-role'],
+      email: req.headers['x-user-email'] || 'team-manager-demo',
     };
     return next();
   }
@@ -42,14 +48,21 @@ const validateAdmin = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findById(decoded.id).select('-password');
     if (!user) return res.status(401).json({ success: false, message: 'User not found.' });
-    if (user.role !== 'System Admin') {
-      return res.status(403).json({ success: false, message: 'System Admin access required.' });
+    if (!['Team Manager', 'team_manager', 'System Admin'].includes(user.role)) {
+      return res.status(403).json({ success: false, message: 'Team Manager access required.' });
     }
     req.user = user;
     return next();
   } catch {
-    return res.status(403).json({ success: false, message: 'System Admin access required.' });
+    return res.status(403).json({ success: false, message: 'Team Manager access required.' });
   }
+};
+
+const insertGenericDataset = async ({ rows, datasetType, uploadId }) => {
+  const payload = rows.map((row) => ({ ...row, data: row, uploadId, datasetType }));
+  if (datasetType === 'team_manager_performance') return TeamManagerPerformance.insertMany(payload, { ordered: false });
+  if (datasetType === 'business_executive_insights') return BusinessExecutiveInsight.insertMany(payload, { ordered: false });
+  return AIInsight.insertMany(payload.map((row) => ({ ...row, insight_type: datasetType, role: datasetType })), { ordered: false });
 };
 
 const uploadDataset = async (req, res) => {
@@ -82,28 +95,21 @@ const uploadDataset = async (req, res) => {
     }
 
     if (datasetType !== 'tickets') {
-      await DatasetUpload.create({
+      await insertGenericDataset({ rows, datasetType, uploadId });
+      const summary = {
         uploadId,
         fileName,
         fileType,
         datasetType,
-        uploadedBy: req.user?.email || req.headers['x-user-email'] || 'System Admin',
+        uploadedBy: req.user?.email || req.headers['x-user-email'] || 'Team Manager',
         totalRows: rows.length,
-        successRows: 0,
-        failedRows: rows.length,
-        status: 'Failed',
-        errors: [{ row: 0, message: 'This dataset type is queued for future schema support. Use Support Tickets for ticket ingestion.' }],
-      });
-      return res.status(400).json({
-        success: false,
-        message: 'This dataset type is queued for future schema support. Use Support Tickets for ticket ingestion.',
-        uploadId,
-        datasetType,
-        totalRows: rows.length,
-        successRows: 0,
-        failedRows: rows.length,
-        errors: [{ row: 0, message: 'Unsupported dataset type for database insert.' }],
-      });
+        successRows: rows.length,
+        failedRows: 0,
+        status: 'Completed',
+        errors: [],
+      };
+      await DatasetUpload.create(summary);
+      return res.json({ success: true, message: 'Dataset uploaded successfully', ...summary });
     }
 
     const normalized = rows.map((row, index) => validateAndNormalizeTicketRow(row, index, uploadId));
@@ -125,7 +131,7 @@ const uploadDataset = async (req, res) => {
       fileName,
       fileType,
       datasetType,
-      uploadedBy: req.user?.email || req.headers['x-user-email'] || 'System Admin',
+      uploadedBy: req.user?.email || req.headers['x-user-email'] || 'Team Manager',
       totalRows: rows.length,
       successRows: validRows.length,
       failedRows: rows.length - validRows.length,
@@ -174,7 +180,16 @@ const getUploads = async (req, res) => {
 
 const previewUpload = async (req, res) => {
   const { uploadId } = req.params;
-  const records = await Ticket.find({ uploadId }).sort({ createdAt: -1 }).limit(20).lean();
+  const upload = await DatasetUpload.findOne({ uploadId }).lean();
+  const datasetType = upload?.datasetType || 'tickets';
+  const Model = datasetType === 'team_manager_performance'
+    ? TeamManagerPerformance
+    : datasetType === 'business_executive_insights'
+      ? BusinessExecutiveInsight
+      : datasetType === 'tickets'
+        ? Ticket
+        : AIInsight;
+  const records = await Model.find({ uploadId }).sort({ createdAt: -1 }).limit(20).lean();
   res.json({ success: true, uploadId, records });
 };
 

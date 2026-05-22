@@ -51,7 +51,7 @@ const securityItems = [
 
 const health = [
   { service: 'API Gateway', status: 'Operational', score: '99.9%', icon: Activity },
-  { service: 'Database MongoDB', status: 'Operational', score: '99.8%', icon: Database },
+  { service: 'DynamoDB Data Layer', status: 'Operational', score: '99.8%', icon: Database },
   { service: 'AI Engine Bedrock', status: 'Operational', score: '99.7%', icon: Activity },
   { service: 'QuickSight Embed', status: 'Pending', score: 'Setup', icon: FileText },
   { service: 'Email Service', status: 'Degraded', score: '97.2%', icon: Mail },

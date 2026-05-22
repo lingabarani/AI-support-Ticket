@@ -107,7 +107,7 @@ export const slaData = Object.values(tickets.reduce((acc, ticket) => {
 export const notifications = [
   { id: 1, type: 'ticket', message: `${tickets.length} real support tickets loaded`, time: 'Now', read: false },
   { id: 2, type: 'ai', message: 'Bedrock analysis pipeline connected to AWS', time: 'Now', read: false },
-  { id: 3, type: 'system', message: 'MongoDB Atlas connection verified', time: 'Today', read: true },
+  { id: 3, type: 'system', message: 'DynamoDB data layer connection verified', time: 'Today', read: true },
 ];
 
 export const revenueRisk = categoryData.map((category) => ({
