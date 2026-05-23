@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { BarChart3, ExternalLink, Maximize2, RefreshCw } from 'lucide-react';
+import { BarChart3, Maximize2, RefreshCw } from 'lucide-react';
 import { getQuickSightDashboard } from '../services/quicksightService';
 import LocalAnalyticsDashboard from './LocalAnalyticsDashboard';
+
+const EMBED_REFRESH_INTERVAL_MS = 55 * 60 * 1000;
 
 const isNonEmbeddableQuickSightUrl = (url) => {
   const text = String(url || '');
@@ -15,13 +17,24 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
 
   useEffect(() => {
     let mounted = true;
+    let refreshTimer;
+    const currentUrl = new URL(window.location.href);
 
-    Promise.resolve()
-      .then(() => {
-        if (mounted) setState({ embedUrl: '', loading: true, error: '', message: '', reason: '', canEmbed: false });
-        return getQuickSightDashboard(role);
-      })
-      .then((dashboard) => {
+    if (currentUrl.hostname === '127.0.0.1') {
+      currentUrl.hostname = 'localhost';
+      window.location.replace(currentUrl.toString());
+      return () => {
+        mounted = false;
+      };
+    }
+
+    const loadDashboard = ({ silent = false } = {}) => {
+      if (!silent && mounted) {
+        setState({ embedUrl: '', loading: true, error: '', message: '', reason: '', canEmbed: false });
+      }
+
+      return getQuickSightDashboard(role)
+        .then((dashboard) => {
         if (!mounted) return;
         if (!dashboard.canEmbed || isNonEmbeddableQuickSightUrl(dashboard.embedUrl)) {
           setState({
@@ -40,14 +53,21 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
         if (!mounted) return;
         setState({ embedUrl: '', loading: false, error: err.message || 'Unable to load QuickSight dashboard.', message: '', reason: '', canEmbed: false });
       });
+    };
+
+    loadDashboard();
+    refreshTimer = window.setInterval(() => {
+      loadDashboard({ silent: true });
+    }, EMBED_REFRESH_INTERVAL_MS);
 
     return () => {
       mounted = false;
+      window.clearInterval(refreshTimer);
     };
   }, [role]);
 
   return (
-    <div className="card-glass rounded-xl p-5">
+    <div className="card-glass rounded-xl p-5 pb-8">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-white text-sm flex items-center gap-2">
           <BarChart3 size={15} className="text-blue-400" />
@@ -73,24 +93,10 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
       {!state.loading && state.error && (
         <div className="space-y-4">
           <div className="rounded-xl px-4 py-3 text-center" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
-            <p className="text-sm font-semibold text-emerald-100">QuickSight direct-open mode is ready. Showing built-in analytics dashboard below.</p>
+            <p className="text-sm font-semibold text-emerald-100">QuickSight embedded dashboard is temporarily unavailable. Showing built-in analytics dashboard below.</p>
             <p className="mt-1 text-xs text-emerald-100/70">{state.message || state.error}</p>
             {state.reason && <p className="mt-1 text-xs text-amber-100/80">Backend embed reason: {state.reason}</p>}
-            {state.embedUrl && (
-              <a
-                href={state.embedUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(event) => {
-                  event.preventDefault();
-                  window.open(state.embedUrl, '_blank', 'noopener,noreferrer');
-                }}
-                className="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-300/20 px-3 py-2 text-xs font-semibold text-emerald-100 hover:bg-emerald-400/10"
-              >
-                <ExternalLink size={13} /> Open QuickSight in New Tab
-              </a>
-            )}
-            <p className="mt-2 text-[11px] text-slate-400">To embed inside this page, configure the backend to generate a registered-user QuickSight embed URL.</p>
+            <p className="mt-2 text-[11px] text-slate-400">The in-page iframe requires a valid registered-user QuickSight embed URL from the backend.</p>
           </div>
           <LocalAnalyticsDashboard role={role} />
         </div>
@@ -99,7 +105,7 @@ export default function QuickSightEmbed({ role, title = 'Amazon QuickSight Analy
       {!state.loading && !state.error && state.embedUrl && (
         <div
           className="rounded-xl border border-blue-400/20 bg-[#0f0d1a]"
-          style={{ minHeight: 360, height, resize: 'both', overflow: 'auto' }}
+          style={{ minHeight: 360, height, resize: 'both', overflow: 'auto', marginBottom: 16 }}
         >
           <iframe
             title={title}

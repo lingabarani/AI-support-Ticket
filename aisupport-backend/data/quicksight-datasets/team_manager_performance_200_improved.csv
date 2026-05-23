@@ -1,0 +1,201 @@
+snapshot_date,manager_name,team,agent_name,open_tickets,in_progress_tickets,resolved_tickets,high_priority_tickets,urgent_tickets,sla_breached_tickets,avg_resolution_hours,avg_csat,backlog_age_hours,reassignment_needed,escalation_queue,team_utilization_pct,first_response_minutes,resolution_rate_pct,agent_overloaded,churn_risk_level,revenue_at_risk,coaching_flag
+2026-03-24,Neha Rao,Billing Team,Anita Verma,8,2,8,3,2,0,11.1,4.4,10,False,2,74,7,68,False,Low,28666,On Track
+2026-03-24,Neha Rao,Billing Team,Deepak Malhotra,10,4,6,4,2,0,7.4,3.61,21,False,1,65,14,66,False,Low,12042,On Track
+2026-03-24,Neha Rao,Billing Team,Priya Sharma,9,3,9,0,1,1,7.9,4.02,14,False,0,73,17,72,False,Low,13813,On Track
+2026-03-24,Neha Rao,Billing Team,Suresh Nair,8,4,15,4,2,2,6.1,3.14,12,True,5,67,13,57,False,Medium,10444,On Track
+2026-03-24,Neha Rao,Billing Team,Kavita Rao,6,2,13,3,0,1,9.8,3.69,20,False,0,69,17,78,False,Low,6707,On Track
+2026-03-24,Vikram Iyer,Technical Team,Rahul Kumar,6,4,11,0,2,2,14.1,2.64,24,False,1,81,17,76,False,Medium,24649,Burnout Risk
+2026-03-24,Vikram Iyer,Technical Team,Aditya Singh,7,3,12,1,0,2,18.0,4.05,19,True,3,73,17,64,False,Low,23825,On Track
+2026-03-24,Vikram Iyer,Technical Team,Sneha Patel,8,6,12,1,0,2,24.8,3.52,11,False,4,89,12,59,False,High,34533,On Track
+2026-03-24,Vikram Iyer,Technical Team,Vikram Iyer,3,2,12,4,0,2,24.8,2.94,24,False,1,97,9,78,False,High,32690,Burnout Risk
+2026-03-24,Vikram Iyer,Technical Team,Rohan Das,3,9,11,3,2,2,21.2,3.06,9,False,3,85,4,63,False,Medium,27795,On Track
+2026-03-24,Meera Nair,Platform Team,Priya Singh,11,6,11,2,1,2,8.1,3.97,13,True,0,79,16,90,False,Low,26066,On Track
+2026-03-24,Meera Nair,Platform Team,Nikhil Gupta,11,2,17,2,2,4,8.6,3.76,17,False,1,73,5,76,False,Low,32001,On Track
+2026-03-24,Meera Nair,Platform Team,Meera Krishnan,5,3,10,4,0,1,16.6,3.42,25,True,2,83,18,66,False,Medium,18806,On Track
+2026-03-24,Meera Nair,Platform Team,Arjun Bhatt,10,7,11,4,2,2,12.0,3.97,24,False,3,80,13,58,False,Low,28359,On Track
+2026-03-24,Meera Nair,Platform Team,Divya Reddy,4,3,9,3,0,1,10.2,4.26,15,False,3,88,16,58,False,Medium,21677,On Track
+2026-03-24,Arjun Pillai,Refund Team,Sanjay Mehta,8,6,15,1,1,0,5.3,3.44,21,False,0,73,13,57,False,High,35725,On Track
+2026-03-24,Arjun Pillai,Refund Team,Tanvi Joshi,7,7,16,3,0,0,3.9,3.6,16,False,0,58,16,63,False,Medium,7322,On Track
+2026-03-24,Arjun Pillai,Refund Team,Kiran Verma,3,6,9,2,0,0,7.8,3.78,7,False,2,51,8,78,False,Low,51812,On Track
+2026-03-24,Arjun Pillai,Refund Team,Bhavya Shah,3,3,15,2,0,1,3.1,4.47,11,True,2,68,7,62,False,Low,20632,On Track
+2026-03-24,Arjun Pillai,Refund Team,Manish Tiwari,2,3,8,6,0,1,5.6,4.14,41,False,2,69,14,54,False,Medium,36087,On Track
+2026-03-24,Supriya Menon,Security Team,Pooja Nair,5,7,5,3,2,1,27.2,3.01,23,False,1,82,13,75,False,High,48472,On Track
+2026-03-24,Supriya Menon,Security Team,Gaurav Kapoor,7,4,12,3,0,2,7.2,3.77,27,False,3,76,14,54,False,Low,17289,On Track
+2026-03-24,Supriya Menon,Security Team,Riya Banerjee,6,4,14,1,0,4,20.4,2.89,17,False,0,100,4,57,False,Medium,22573,Burnout Risk
+2026-03-24,Supriya Menon,Security Team,Farhan Hussain,6,0,18,2,0,5,26.0,3.19,5,False,2,100,15,68,False,Medium,15082,Burnout Risk
+2026-03-24,Supriya Menon,Security Team,Sahil Ansari,4,2,11,2,0,4,21.4,3.27,20,False,1,77,10,63,False,Low,59658,On Track
+2026-03-24,Rajan Bose,Customer Success Team,Anjali Desai,9,2,11,3,0,0,3.9,4.51,14,True,4,63,13,59,False,Medium,21254,On Track
+2026-03-24,Rajan Bose,Customer Success Team,Kunal Chandra,12,1,12,3,0,0,4.3,4.51,16,False,4,59,12,77,False,Low,23916,On Track
+2026-03-24,Rajan Bose,Customer Success Team,Neha Saxena,4,2,13,3,0,0,4.0,3.63,10,False,1,55,12,66,False,Low,23650,On Track
+2026-03-24,Rajan Bose,Customer Success Team,Vishal Pandey,1,4,10,4,0,1,3.7,4.99,10,False,1,63,9,55,False,Medium,23425,On Track
+2026-03-24,Rajan Bose,Customer Success Team,Zara Ahmed,8,6,11,2,0,0,4.1,4.25,21,False,2,61,16,65,False,High,27461,On Track
+2026-03-26,Neha Rao,Billing Team,Anita Verma,3,7,10,2,0,1,7.2,3.32,3,False,5,68,10,56,False,High,7532,On Track
+2026-03-26,Neha Rao,Billing Team,Deepak Malhotra,7,7,17,1,0,2,11.1,4.11,12,True,2,78,10,52,False,Medium,30092,On Track
+2026-03-26,Neha Rao,Billing Team,Priya Sharma,11,7,17,3,2,3,6.3,3.92,19,False,1,80,14,60,False,High,20171,On Track
+2026-03-26,Neha Rao,Billing Team,Suresh Nair,5,0,7,2,2,0,4.5,4.1,20,False,0,91,12,70,False,High,12471,On Track
+2026-03-26,Neha Rao,Billing Team,Kavita Rao,11,2,15,3,0,0,6.9,4.19,22,False,1,68,16,67,False,Medium,38476,On Track
+2026-03-26,Vikram Iyer,Technical Team,Rahul Kumar,7,5,7,1,1,1,16.9,2.97,15,False,2,81,17,71,False,Low,13686,Needs Review
+2026-03-26,Vikram Iyer,Technical Team,Aditya Singh,9,5,12,3,0,1,19.8,3.66,14,False,2,84,16,78,False,High,42887,On Track
+2026-03-26,Vikram Iyer,Technical Team,Sneha Patel,9,5,15,3,1,2,20.9,3.97,19,False,1,86,8,69,False,High,13084,On Track
+2026-03-26,Vikram Iyer,Technical Team,Vikram Iyer,5,7,11,4,2,2,10.6,3.2,14,True,2,91,9,50,False,High,30328,On Track
+2026-03-26,Vikram Iyer,Technical Team,Rohan Das,10,2,12,2,0,2,18.8,3.66,8,False,0,89,3,62,False,Low,17374,On Track
+2026-03-26,Meera Nair,Platform Team,Priya Singh,11,4,11,3,2,2,12.5,3.68,10,True,2,81,9,63,False,Medium,16818,On Track
+2026-03-26,Meera Nair,Platform Team,Nikhil Gupta,8,2,11,3,1,1,17.9,3.51,23,True,3,73,8,55,False,Medium,29319,On Track
+2026-03-26,Meera Nair,Platform Team,Meera Krishnan,9,6,10,3,0,2,19.0,3.5,7,False,2,89,8,83,False,Low,23136,On Track
+2026-03-26,Meera Nair,Platform Team,Arjun Bhatt,6,5,7,3,1,1,17.5,3.41,14,False,2,63,2,66,False,Low,30979,On Track
+2026-03-26,Meera Nair,Platform Team,Divya Reddy,12,3,12,1,2,1,10.3,3.24,9,False,4,75,20,77,False,High,5824,On Track
+2026-03-26,Arjun Pillai,Refund Team,Sanjay Mehta,7,8,11,1,0,1,7.6,3.66,24,True,3,67,11,44,False,Low,28764,On Track
+2026-03-26,Arjun Pillai,Refund Team,Tanvi Joshi,8,5,8,3,2,1,6.2,4.2,16,False,1,62,7,66,False,Medium,24954,On Track
+2026-03-26,Arjun Pillai,Refund Team,Kiran Verma,3,5,14,1,1,0,3.9,4.13,19,False,1,63,13,56,False,Low,29272,On Track
+2026-03-26,Arjun Pillai,Refund Team,Bhavya Shah,2,8,16,2,0,2,5.2,4.15,15,False,0,59,14,78,False,Medium,34500,On Track
+2026-03-26,Arjun Pillai,Refund Team,Manish Tiwari,8,5,2,3,0,0,6.6,4.64,19,False,3,62,8,75,False,Low,29281,On Track
+2026-03-26,Supriya Menon,Security Team,Pooja Nair,11,3,7,2,2,2,10.2,3.64,0,True,3,84,21,77,False,High,32454,On Track
+2026-03-26,Supriya Menon,Security Team,Gaurav Kapoor,6,2,15,1,0,4,31.4,3.21,22,False,3,85,8,87,False,High,34371,On Track
+2026-03-26,Supriya Menon,Security Team,Riya Banerjee,5,3,16,2,2,4,13.1,2.98,20,True,2,85,11,78,False,High,35709,Needs Review
+2026-03-26,Supriya Menon,Security Team,Farhan Hussain,6,5,17,1,0,7,28.9,2.78,15,False,1,96,13,71,False,Medium,31651,Burnout Risk
+2026-03-26,Supriya Menon,Security Team,Sahil Ansari,8,3,15,2,0,3,36.8,2.91,23,True,0,91,20,65,False,Medium,21242,Needs Review
+2026-03-26,Rajan Bose,Customer Success Team,Anjali Desai,6,9,17,2,1,1,4.9,4.06,13,False,0,66,16,60,False,Low,36360,On Track
+2026-03-26,Rajan Bose,Customer Success Team,Kunal Chandra,8,3,7,3,3,0,4.2,3.88,15,False,3,64,13,74,False,High,34530,On Track
+2026-03-26,Rajan Bose,Customer Success Team,Neha Saxena,11,8,9,4,0,0,6.0,4.19,29,False,3,74,11,59,True,Low,46084,Needs Review
+2026-03-26,Rajan Bose,Customer Success Team,Vishal Pandey,7,4,11,3,2,1,1.8,5.0,26,False,3,64,16,58,False,Medium,25214,On Track
+2026-03-26,Rajan Bose,Customer Success Team,Zara Ahmed,9,6,10,2,1,0,3.6,4.78,16,True,2,58,24,71,False,Medium,13284,On Track
+2026-03-28,Neha Rao,Billing Team,Anita Verma,9,4,9,3,1,1,8.0,3.79,7,False,3,63,4,67,False,Low,4361,On Track
+2026-03-28,Neha Rao,Billing Team,Deepak Malhotra,8,5,8,5,1,1,7.7,4.21,24,False,1,53,9,44,False,Low,23219,On Track
+2026-03-28,Neha Rao,Billing Team,Priya Sharma,4,7,6,2,0,0,5.2,4.23,23,False,3,72,7,74,False,High,30562,On Track
+2026-03-28,Neha Rao,Billing Team,Suresh Nair,8,6,16,1,1,1,5.5,3.7,18,False,1,85,16,77,False,Low,18652,On Track
+2026-03-28,Neha Rao,Billing Team,Kavita Rao,2,2,8,1,2,1,8.7,3.94,33,True,2,76,13,68,False,Medium,43294,On Track
+2026-03-28,Vikram Iyer,Technical Team,Rahul Kumar,8,4,17,4,0,3,20.5,3.71,28,False,2,88,2,72,False,Low,49810,On Track
+2026-03-28,Vikram Iyer,Technical Team,Aditya Singh,11,9,8,2,1,1,18.0,3.53,28,True,1,84,12,72,True,High,1000,On Track
+2026-03-28,Vikram Iyer,Technical Team,Sneha Patel,9,5,5,2,0,1,7.5,3.87,21,False,3,86,15,91,False,Low,47575,On Track
+2026-03-28,Vikram Iyer,Technical Team,Vikram Iyer,11,4,7,4,1,1,20.4,3.22,13,False,0,88,9,87,False,Low,32383,On Track
+2026-03-28,Vikram Iyer,Technical Team,Rohan Das,7,3,16,2,1,4,17.0,3.36,23,False,3,99,18,69,False,Medium,24391,Needs Review
+2026-03-28,Meera Nair,Platform Team,Priya Singh,2,7,17,2,0,2,9.5,3.5,31,False,0,83,7,57,False,Medium,25647,On Track
+2026-03-28,Meera Nair,Platform Team,Nikhil Gupta,7,7,10,2,1,1,18.8,3.85,25,False,1,84,17,68,False,Medium,27724,On Track
+2026-03-28,Meera Nair,Platform Team,Meera Krishnan,6,3,8,2,1,1,10.6,3.7,17,False,3,73,10,75,False,Low,2681,On Track
+2026-03-28,Meera Nair,Platform Team,Arjun Bhatt,6,7,9,3,0,1,18.1,3.98,11,False,0,62,13,53,False,High,24497,On Track
+2026-03-28,Meera Nair,Platform Team,Divya Reddy,6,6,11,3,1,2,11.2,3.6,16,False,1,81,9,74,False,Medium,25259,On Track
+2026-03-28,Arjun Pillai,Refund Team,Sanjay Mehta,2,2,15,3,0,1,5.2,4.39,24,False,0,63,19,35,False,Low,6624,On Track
+2026-03-28,Arjun Pillai,Refund Team,Tanvi Joshi,5,7,15,2,2,1,4.6,3.71,12,False,0,65,14,42,False,Low,63313,On Track
+2026-03-28,Arjun Pillai,Refund Team,Kiran Verma,6,5,11,2,1,0,5.7,4.13,20,False,0,68,5,58,False,Low,45528,On Track
+2026-03-28,Arjun Pillai,Refund Team,Bhavya Shah,10,3,8,3,0,1,6.3,4.34,10,False,4,61,2,70,False,Medium,26533,On Track
+2026-03-28,Arjun Pillai,Refund Team,Manish Tiwari,4,3,8,2,1,0,5.5,3.69,11,False,2,69,13,45,False,Low,36689,On Track
+2026-03-28,Supriya Menon,Security Team,Pooja Nair,6,5,13,3,2,3,25.7,2.77,22,True,2,93,11,86,False,Low,43564,Needs Review
+2026-03-28,Supriya Menon,Security Team,Gaurav Kapoor,7,5,13,2,0,3,29.0,3.06,10,True,3,100,9,68,False,High,29518,Needs Review
+2026-03-28,Supriya Menon,Security Team,Riya Banerjee,7,9,9,2,3,2,27.1,3.42,11,False,0,98,12,77,False,Low,37682,Burnout Risk
+2026-03-28,Supriya Menon,Security Team,Farhan Hussain,7,7,8,3,1,2,15.9,3.58,34,False,1,81,18,66,False,Medium,22768,Needs Review
+2026-03-28,Supriya Menon,Security Team,Sahil Ansari,4,7,9,3,0,2,22.3,3.67,16,False,4,100,15,55,False,Low,34130,Needs Review
+2026-03-28,Rajan Bose,Customer Success Team,Anjali Desai,12,6,12,4,2,0,2.6,3.7,18,True,0,69,5,77,False,Medium,20053,On Track
+2026-03-28,Rajan Bose,Customer Success Team,Kunal Chandra,1,6,5,2,0,0,5.1,4.55,5,False,2,60,7,51,False,Low,11300,On Track
+2026-03-28,Rajan Bose,Customer Success Team,Neha Saxena,7,5,14,4,2,0,4.2,3.53,12,False,0,47,13,63,False,Medium,43260,On Track
+2026-03-28,Rajan Bose,Customer Success Team,Vishal Pandey,10,6,19,5,0,1,6.4,4.81,12,False,5,48,14,82,False,Low,16598,On Track
+2026-03-28,Rajan Bose,Customer Success Team,Zara Ahmed,10,6,13,2,0,0,5.0,4.09,16,False,1,65,21,66,False,Low,15310,On Track
+2026-03-30,Neha Rao,Billing Team,Anita Verma,4,6,11,2,0,1,8.6,3.72,24,False,3,67,9,52,False,Low,16808,On Track
+2026-03-30,Neha Rao,Billing Team,Deepak Malhotra,6,2,10,0,0,1,9.7,3.93,19,False,5,91,7,48,False,Low,13464,On Track
+2026-03-30,Neha Rao,Billing Team,Priya Sharma,6,3,14,4,0,1,7.2,2.88,17,False,2,77,9,63,False,Low,41881,On Track
+2026-03-30,Neha Rao,Billing Team,Suresh Nair,10,2,14,2,1,1,8.1,3.49,11,False,4,85,11,78,False,High,44121,On Track
+2026-03-30,Neha Rao,Billing Team,Kavita Rao,8,5,13,2,2,0,10.5,3.9,16,False,1,63,2,66,False,Low,45100,On Track
+2026-03-30,Vikram Iyer,Technical Team,Rahul Kumar,8,6,8,2,2,1,7.6,2.96,7,False,1,97,15,53,False,High,2520,Burnout Risk
+2026-03-30,Vikram Iyer,Technical Team,Aditya Singh,5,0,6,3,0,1,22.1,3.26,10,False,1,84,19,61,False,Medium,22739,Needs Review
+2026-03-30,Vikram Iyer,Technical Team,Sneha Patel,11,4,12,3,0,2,19.6,3.55,25,False,1,94,23,68,False,Low,21120,Needs Review
+2026-03-30,Vikram Iyer,Technical Team,Vikram Iyer,5,5,6,4,1,0,21.4,3.28,29,True,0,71,6,63,False,Medium,13388,On Track
+2026-03-30,Vikram Iyer,Technical Team,Rohan Das,8,1,8,1,0,1,15.3,3.87,19,False,4,73,12,55,False,High,23463,On Track
+2026-03-30,Meera Nair,Platform Team,Priya Singh,8,8,18,3,0,3,15.1,3.71,19,True,1,79,8,51,False,Low,37366,On Track
+2026-03-30,Meera Nair,Platform Team,Nikhil Gupta,11,6,13,3,0,2,16.1,3.36,10,False,1,73,9,88,False,Low,19955,On Track
+2026-03-30,Meera Nair,Platform Team,Meera Krishnan,3,5,10,2,0,2,15.4,2.99,19,False,3,75,5,66,False,Medium,16535,Needs Review
+2026-03-30,Meera Nair,Platform Team,Arjun Bhatt,5,6,12,3,1,2,20.8,3.45,20,False,4,67,14,66,False,Medium,17434,On Track
+2026-03-30,Meera Nair,Platform Team,Divya Reddy,8,5,13,1,0,1,15.2,3.37,15,False,2,75,19,65,False,High,36390,On Track
+2026-03-30,Arjun Pillai,Refund Team,Sanjay Mehta,4,3,10,4,0,0,4.3,3.61,21,False,0,56,11,63,False,Low,28980,On Track
+2026-03-30,Arjun Pillai,Refund Team,Tanvi Joshi,8,6,10,2,0,0,7.0,3.84,22,False,3,61,4,51,False,Low,19905,On Track
+2026-03-30,Arjun Pillai,Refund Team,Kiran Verma,13,4,8,0,1,0,7.2,3.54,15,False,4,68,14,60,False,High,21587,On Track
+2026-03-30,Arjun Pillai,Refund Team,Bhavya Shah,9,5,12,4,0,1,8.4,4.08,16,True,0,69,14,70,False,Low,22721,On Track
+2026-03-30,Arjun Pillai,Refund Team,Manish Tiwari,9,3,15,4,0,1,5.1,3.12,9,False,2,67,13,48,False,High,11587,On Track
+2026-03-30,Supriya Menon,Security Team,Pooja Nair,8,2,6,3,0,1,30.3,2.65,17,True,1,84,18,82,False,Medium,26074,Needs Review
+2026-03-30,Supriya Menon,Security Team,Gaurav Kapoor,8,3,10,2,0,3,18.3,3.75,25,False,4,91,20,54,False,Medium,31373,On Track
+2026-03-30,Supriya Menon,Security Team,Riya Banerjee,5,6,12,5,1,3,23.1,2.85,38,False,4,95,8,50,False,Low,12154,Needs Review
+2026-03-30,Supriya Menon,Security Team,Farhan Hussain,6,2,10,4,0,2,20.7,3.92,18,False,1,72,10,60,False,Low,12585,On Track
+2026-03-30,Supriya Menon,Security Team,Sahil Ansari,3,3,4,3,0,1,28.8,3.65,19,False,1,85,16,64,False,Low,4994,On Track
+2026-03-30,Rajan Bose,Customer Success Team,Anjali Desai,8,5,13,1,1,1,3.6,3.13,20,False,2,54,8,81,False,Medium,30143,On Track
+2026-03-30,Rajan Bose,Customer Success Team,Kunal Chandra,4,8,11,4,0,1,3.1,3.77,15,False,1,73,10,47,False,Low,25159,On Track
+2026-03-30,Rajan Bose,Customer Success Team,Neha Saxena,3,3,10,3,0,0,4.3,4.37,24,False,0,53,16,52,False,Low,17357,On Track
+2026-03-30,Rajan Bose,Customer Success Team,Vishal Pandey,8,0,15,0,1,0,3.5,4.74,27,True,1,44,14,70,False,Medium,35818,On Track
+2026-03-30,Rajan Bose,Customer Success Team,Zara Ahmed,11,4,10,3,0,0,4.6,4.62,24,False,1,61,9,61,False,Medium,22976,On Track
+2026-04-01,Neha Rao,Billing Team,Anita Verma,13,3,12,1,2,0,9.3,3.01,11,False,0,73,5,52,False,Medium,12916,On Track
+2026-04-01,Neha Rao,Billing Team,Deepak Malhotra,10,3,14,0,0,1,6.0,4.1,34,False,1,62,4,60,False,Medium,10226,On Track
+2026-04-01,Neha Rao,Billing Team,Priya Sharma,7,3,11,1,0,1,8.8,3.97,26,False,4,84,12,67,False,Low,18635,On Track
+2026-04-01,Neha Rao,Billing Team,Suresh Nair,3,6,9,2,2,1,10.1,3.86,4,False,3,71,14,70,False,Low,30133,On Track
+2026-04-01,Neha Rao,Billing Team,Kavita Rao,9,3,13,1,0,1,8.1,3.53,22,False,1,78,13,59,False,Medium,13398,On Track
+2026-04-01,Vikram Iyer,Technical Team,Rahul Kumar,8,3,13,3,0,3,13.4,3.54,20,False,5,96,10,65,False,Low,41468,Needs Review
+2026-04-01,Vikram Iyer,Technical Team,Aditya Singh,8,4,10,4,0,3,17.3,3.09,16,False,1,85,2,69,False,High,54528,On Track
+2026-04-01,Vikram Iyer,Technical Team,Sneha Patel,4,5,14,1,0,3,13.4,3.26,31,False,2,82,16,69,False,Medium,30482,On Track
+2026-04-01,Vikram Iyer,Technical Team,Vikram Iyer,10,6,11,2,0,2,25.5,3.21,20,False,1,92,11,63,False,Medium,39811,On Track
+2026-04-01,Vikram Iyer,Technical Team,Rohan Das,11,3,4,4,0,0,10.3,3.33,16,True,1,90,5,59,False,High,15565,On Track
+2026-04-01,Meera Nair,Platform Team,Priya Singh,9,5,6,4,1,1,12.5,3.61,20,False,3,74,17,73,False,Medium,27174,On Track
+2026-04-01,Meera Nair,Platform Team,Nikhil Gupta,6,6,17,1,1,3,15.5,3.24,25,False,0,66,9,48,False,Low,18239,On Track
+2026-04-01,Meera Nair,Platform Team,Meera Krishnan,9,4,17,3,2,3,11.8,3.06,0,False,0,76,6,60,False,Medium,29528,On Track
+2026-04-01,Meera Nair,Platform Team,Arjun Bhatt,11,4,15,2,0,1,10.2,4.12,22,False,1,70,14,72,False,Low,26013,On Track
+2026-04-01,Meera Nair,Platform Team,Divya Reddy,9,7,11,4,1,2,16.6,3.47,15,False,2,67,8,57,False,Low,26574,On Track
+2026-04-01,Arjun Pillai,Refund Team,Sanjay Mehta,10,5,14,0,1,0,6.2,3.44,15,True,1,71,12,67,False,High,22044,On Track
+2026-04-01,Arjun Pillai,Refund Team,Tanvi Joshi,9,4,11,2,0,0,7.4,4.55,26,False,0,58,16,65,False,Medium,17504,On Track
+2026-04-01,Arjun Pillai,Refund Team,Kiran Verma,13,3,8,3,1,0,5.5,3.92,19,False,1,60,9,48,False,Low,35202,On Track
+2026-04-01,Arjun Pillai,Refund Team,Bhavya Shah,7,4,16,5,0,0,8.9,4.04,14,False,1,71,18,65,False,Low,2303,On Track
+2026-04-01,Arjun Pillai,Refund Team,Manish Tiwari,10,3,13,3,2,0,4.8,4.5,10,False,0,59,17,81,False,Low,21816,On Track
+2026-04-01,Supriya Menon,Security Team,Pooja Nair,9,6,12,4,1,3,32.3,3.34,31,False,0,100,12,72,False,Medium,28479,Needs Review
+2026-04-01,Supriya Menon,Security Team,Gaurav Kapoor,10,6,14,4,1,3,27.9,3.35,26,False,4,84,17,66,False,High,28071,On Track
+2026-04-01,Supriya Menon,Security Team,Riya Banerjee,8,2,17,5,2,4,28.2,3.51,7,False,7,86,19,48,False,Low,45299,On Track
+2026-04-01,Supriya Menon,Security Team,Farhan Hussain,9,6,8,4,1,2,32.0,3.46,22,False,3,88,13,71,False,High,1671,On Track
+2026-04-01,Supriya Menon,Security Team,Sahil Ansari,6,6,14,2,0,3,23.5,3.01,10,False,0,91,6,78,False,Medium,24311,On Track
+2026-04-01,Rajan Bose,Customer Success Team,Anjali Desai,11,3,14,3,1,2,3.3,4.51,26,False,0,52,16,68,False,Low,29620,On Track
+2026-04-01,Rajan Bose,Customer Success Team,Kunal Chandra,6,3,9,1,1,0,3.2,4.11,21,False,1,54,20,76,False,Medium,32063,On Track
+2026-04-01,Rajan Bose,Customer Success Team,Neha Saxena,9,5,14,3,1,1,3.4,5.0,15,False,0,88,11,65,False,Low,5469,On Track
+2026-04-01,Rajan Bose,Customer Success Team,Vishal Pandey,13,5,8,1,1,0,3.1,3.63,17,True,1,63,11,51,False,Medium,26697,On Track
+2026-04-01,Rajan Bose,Customer Success Team,Zara Ahmed,3,5,11,3,1,0,4.3,4.72,11,False,1,73,20,86,False,Medium,27120,High Performer
+2026-04-03,Neha Rao,Billing Team,Anita Verma,10,4,8,3,0,0,8.4,4.0,0,False,3,69,7,53,False,Medium,34039,On Track
+2026-04-03,Neha Rao,Billing Team,Deepak Malhotra,5,6,12,3,0,1,8.7,3.69,26,True,3,68,6,66,False,Low,30074,Needs Review
+2026-04-03,Neha Rao,Billing Team,Priya Sharma,12,5,12,2,0,1,6.4,3.91,21,False,1,72,21,58,False,Low,8048,On Track
+2026-04-03,Neha Rao,Billing Team,Suresh Nair,4,5,17,2,0,2,8.0,3.85,20,False,2,75,6,85,False,Low,12173,On Track
+2026-04-03,Neha Rao,Billing Team,Kavita Rao,5,6,9,2,0,0,10.6,3.89,13,False,3,64,2,71,False,Low,2344,On Track
+2026-04-03,Vikram Iyer,Technical Team,Rahul Kumar,8,9,11,5,0,3,15.7,2.89,20,False,3,60,6,70,False,Medium,28445,On Track
+2026-04-03,Vikram Iyer,Technical Team,Aditya Singh,8,2,12,5,1,2,13.6,3.48,2,False,2,85,15,59,False,Medium,39924,On Track
+2026-04-03,Vikram Iyer,Technical Team,Sneha Patel,8,9,16,5,1,3,20.1,3.52,15,False,3,97,15,61,False,Low,19344,Burnout Risk
+2026-04-03,Vikram Iyer,Technical Team,Vikram Iyer,9,5,18,4,0,3,12.5,3.82,13,False,2,85,13,44,False,Low,26139,On Track
+2026-04-03,Vikram Iyer,Technical Team,Rohan Das,1,7,10,3,0,1,23.9,3.02,20,False,1,81,13,57,False,Medium,39803,On Track
+2026-04-03,Meera Nair,Platform Team,Priya Singh,6,6,14,2,1,2,15.8,3.26,24,True,2,67,10,68,False,Medium,1000,On Track
+2026-04-03,Meera Nair,Platform Team,Nikhil Gupta,11,6,19,2,2,5,6.0,2.94,14,False,0,75,7,48,False,High,6469,Under Observation
+2026-04-03,Meera Nair,Platform Team,Meera Krishnan,8,2,8,1,1,1,18.6,3.89,18,False,3,73,11,44,False,Low,18440,On Track
+2026-04-03,Meera Nair,Platform Team,Arjun Bhatt,9,6,21,3,0,2,13.8,3.24,16,False,4,56,10,59,False,High,17574,On Track
+2026-04-03,Meera Nair,Platform Team,Divya Reddy,10,0,10,2,0,1,8.8,3.29,13,False,1,78,13,61,False,Medium,31013,On Track
+2026-04-03,Arjun Pillai,Refund Team,Sanjay Mehta,11,6,16,0,1,1,5.8,3.66,17,False,0,65,16,48,False,Medium,31358,On Track
+2026-04-03,Arjun Pillai,Refund Team,Tanvi Joshi,12,4,13,1,1,0,3.5,4.3,5,True,0,75,12,37,False,Low,24356,On Track
+2026-04-03,Arjun Pillai,Refund Team,Kiran Verma,5,5,8,4,1,0,5.1,4.04,18,False,2,63,6,90,False,Low,12541,Needs Review
+2026-04-03,Arjun Pillai,Refund Team,Bhavya Shah,8,3,10,6,1,0,7.3,4.15,26,False,4,58,6,64,False,Medium,9279,On Track
+2026-04-03,Arjun Pillai,Refund Team,Manish Tiwari,8,3,19,3,0,0,5.3,3.46,17,False,3,64,18,86,False,High,18671,On Track
+2026-04-03,Supriya Menon,Security Team,Pooja Nair,3,2,15,4,0,4,29.8,3.45,13,False,4,87,8,71,False,High,25003,On Track
+2026-04-03,Supriya Menon,Security Team,Gaurav Kapoor,4,2,10,3,0,1,19.9,3.51,33,True,1,100,15,47,False,Low,22935,Needs Review
+2026-04-03,Supriya Menon,Security Team,Riya Banerjee,11,5,14,4,0,4,20.5,3.54,20,False,1,100,6,74,False,Medium,30927,Needs Review
+2026-04-03,Supriya Menon,Security Team,Farhan Hussain,6,6,9,4,0,2,25.7,3.38,18,False,1,93,11,63,False,High,25541,Needs Review
+2026-04-03,Supriya Menon,Security Team,Sahil Ansari,1,3,12,1,1,5,9.2,3.69,1,False,1,91,9,73,False,Low,19410,Under Observation
+2026-04-03,Rajan Bose,Customer Success Team,Anjali Desai,9,4,5,1,0,0,4.4,3.95,9,False,0,55,13,95,False,Low,23055,On Track
+2026-04-03,Rajan Bose,Customer Success Team,Kunal Chandra,9,5,8,1,1,0,4.8,4.67,22,False,6,50,18,44,False,Low,28074,On Track
+2026-04-03,Rajan Bose,Customer Success Team,Neha Saxena,4,4,15,1,2,1,3.5,4.87,2,False,1,56,12,60,False,Medium,17921,On Track
+2026-04-03,Rajan Bose,Customer Success Team,Vishal Pandey,7,2,14,4,2,1,3.0,4.36,24,False,2,57,16,76,False,Low,16786,On Track
+2026-04-03,Rajan Bose,Customer Success Team,Zara Ahmed,12,3,7,1,0,0,3.9,3.91,12,False,0,62,8,68,False,Medium,29268,On Track
+2026-04-05,Neha Rao,Billing Team,Anita Verma,6,6,14,5,0,1,7.9,4.26,22,False,3,71,7,78,False,Low,18714,On Track
+2026-04-05,Neha Rao,Billing Team,Deepak Malhotra,5,6,10,3,2,0,5.8,3.8,14,False,1,75,4,56,False,Low,19565,Needs Review
+2026-04-05,Neha Rao,Billing Team,Priya Sharma,8,1,13,0,1,0,11.9,3.43,31,False,1,57,11,61,False,Low,13461,On Track
+2026-04-05,Neha Rao,Billing Team,Suresh Nair,12,4,19,0,0,2,5.3,2.7,18,False,0,69,19,72,False,Low,48660,Burnout Risk
+2026-04-05,Neha Rao,Billing Team,Kavita Rao,4,6,4,2,0,0,8.9,3.69,12,True,2,85,11,63,False,Low,9673,On Track
+2026-04-05,Vikram Iyer,Technical Team,Rahul Kumar,12,8,5,4,1,1,20.8,3.46,39,False,3,67,4,56,True,Medium,16748,On Track
+2026-04-05,Vikram Iyer,Technical Team,Aditya Singh,8,7,10,1,2,2,11.7,3.64,2,False,1,96,10,69,False,Low,18542,Burnout Risk
+2026-04-05,Vikram Iyer,Technical Team,Sneha Patel,12,5,9,2,0,1,20.2,3.92,13,False,0,87,13,82,False,Medium,13824,On Track
+2026-04-05,Vikram Iyer,Technical Team,Vikram Iyer,8,1,10,1,1,1,14.4,3.55,14,False,5,81,14,79,False,Low,27726,On Track
+2026-04-05,Vikram Iyer,Technical Team,Rohan Das,9,5,14,4,1,2,23.3,3.44,11,False,3,85,11,55,False,High,54135,On Track
+2026-04-05,Meera Nair,Platform Team,Priya Singh,5,2,9,0,0,1,17.5,3.65,22,False,2,83,9,86,False,Medium,28218,Needs Review
+2026-04-05,Meera Nair,Platform Team,Nikhil Gupta,11,7,14,3,0,3,12.8,3.7,18,False,3,75,11,60,False,Low,1000,On Track
+2026-04-05,Meera Nair,Platform Team,Meera Krishnan,11,6,7,2,1,1,13.8,4.14,20,True,2,80,10,63,False,Low,20802,On Track
+2026-04-05,Meera Nair,Platform Team,Arjun Bhatt,9,3,16,3,1,2,20.3,4.16,24,False,4,82,6,46,False,Low,22277,On Track
+2026-04-05,Meera Nair,Platform Team,Divya Reddy,4,7,20,1,1,3,4.8,3.07,16,False,1,78,17,65,False,Low,11161,On Track
+2026-04-05,Arjun Pillai,Refund Team,Sanjay Mehta,12,6,18,2,1,2,5.7,3.75,32,False,1,63,17,88,False,Low,16605,On Track
+2026-04-05,Arjun Pillai,Refund Team,Tanvi Joshi,2,3,14,3,1,0,2.4,4.07,20,False,0,61,21,43,False,Low,24049,On Track
+2026-04-05,Arjun Pillai,Refund Team,Kiran Verma,1,4,16,1,0,1,8.1,3.65,15,False,0,65,20,86,False,Low,18757,On Track
+2026-04-05,Arjun Pillai,Refund Team,Bhavya Shah,5,7,10,4,0,0,6.6,4.26,10,False,0,68,10,69,False,Low,5304,On Track
+2026-04-05,Arjun Pillai,Refund Team,Manish Tiwari,10,6,11,3,0,0,6.3,4.33,28,False,1,73,13,54,False,Medium,16104,On Track

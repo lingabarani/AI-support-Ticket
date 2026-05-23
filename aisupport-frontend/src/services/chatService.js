@@ -5,6 +5,7 @@ const sanitizeReply = (response) => ({
   ...response,
   reply: String(response.reply || '')
     .replace(/\*\*/g, '')
+    .replace(/^Dataset:\s+.*$/gim, '')
     .replace(/^\s*\*\s+/gm, '- ')
     .replace(/^(Sure|Certainly|Here is|Here's)[^\n]*\n+/i, '')
     .trim(),
@@ -20,8 +21,7 @@ export const sendChatMessage = async ({ role, message, sessionId }) => {
     return sanitizeReply({
       ...fallback,
       reply: [
-        'Backend server is not reachable, so Amazon Bedrock AI cannot be called from the UI.',
-        'Start the backend with: cd "E:\\ML Models\\AI-support-Ticket-main\\aisupport-backend" && node src\\server.js',
+        'Bedrock Claude 3 Haiku is temporarily unavailable. Showing dataset-grounded intelligence response.',
         '',
         fallback.reply,
       ].join('\n'),

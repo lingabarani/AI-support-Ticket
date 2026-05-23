@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const path = require('path');
 require('dotenv').config();
 const { connectDB, getDBStatus } = require('./config/db');
+const { preloadDatasets } = require('./services/csvDatasetService');
 
 const app = express();
 
@@ -10,17 +12,20 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
   'http://localhost:5173',
   'http://127.0.0.1:5173',
+  'http://localhost:5174',
+  'http://127.0.0.1:5174',
 ].filter(Boolean);
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+    if (!origin || allowedOrigins.includes(origin) || /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin)) return callback(null, true);
     return callback(new Error(`CORS blocked origin: ${origin}`));
   },
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(morgan('dev'));
+app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 app.get('/', (req, res) => {
   res.json({
@@ -98,3 +103,7 @@ const connectWithRetry = () => {
 };
 
 connectWithRetry();
+
+preloadDatasets().catch(() => {
+  console.error('Dataset preload failed; chat will retry on first request.');
+});

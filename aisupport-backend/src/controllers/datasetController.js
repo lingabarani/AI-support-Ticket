@@ -8,6 +8,7 @@ const TeamManagerPerformance = require('../models/TeamManagerPerformance');
 const BusinessExecutiveInsight = require('../models/BusinessExecutiveInsight');
 const { parseDataset } = require('../utils/parseDataset');
 const { validateAndNormalizeTicketRow } = require('../utils/validateTicketRow');
+const { hasAny, normalizeDatasetRow } = require('../utils/normalizeDatasetRow');
 
 const datasetLabels = {
   tickets: 'tickets',
@@ -65,6 +66,36 @@ const insertGenericDataset = async ({ rows, datasetType, uploadId }) => {
   return AIInsight.insertMany(payload.map((row) => ({ ...row, insight_type: datasetType, role: datasetType })), { ordered: false });
 };
 
+const datasetValidationRules = {
+  tickets: [
+    ['ticket_id'],
+    ['ticket_description'],
+    ['customer_name', 'customer_email'],
+  ],
+  team_manager_performance: [
+    ['team_name', 'department', 'assigned_team', 'team'],
+    ['total_tickets', 'open_tickets', 'resolved_tickets', 'ticket_count'],
+    ['sla_compliance', 'sla_breached', 'sla_breach_count', 'sla_breached_tickets'],
+  ],
+  business_executive_insights: [
+    ['region', 'department', 'product'],
+    ['revenue_risk', 'revenue_impact', 'business_impact', 'revenue_risk_usd'],
+    ['churn_risk', 'churn_risk_customers', 'customer_satisfaction', 'csat_score', 'avg_csat'],
+  ],
+};
+
+const validateDatasetRow = (row, datasetType, index) => {
+  const rules = datasetValidationRules[datasetType] || datasetValidationRules.tickets;
+  const errors = rules
+    .filter((fields) => !hasAny(row, fields))
+    .map((fields) => ({
+      row: index + 1,
+      field: fields[0],
+      message: `Missing required data. Expected one of: ${fields.join(', ')}.`,
+    }));
+  return { valid: errors.length === 0, errors };
+};
+
 const uploadDataset = async (req, res) => {
   const uploadId = uuidv4();
 
@@ -76,7 +107,7 @@ const uploadDataset = async (req, res) => {
     const datasetType = normalizeDatasetType(req.body.datasetType);
     const fileName = req.file.originalname || 'dataset';
     const fileType = fileName.toLowerCase().endsWith('.json') ? 'json' : 'csv';
-    const rows = await parseDataset(req.file);
+    const rows = (await parseDataset(req.file)).map(normalizeDatasetRow);
 
     if (!rows.length) {
       await DatasetUpload.create({
@@ -95,7 +126,11 @@ const uploadDataset = async (req, res) => {
     }
 
     if (datasetType !== 'tickets') {
-      await insertGenericDataset({ rows, datasetType, uploadId });
+      const checked = rows.map((row, index) => ({ row, ...validateDatasetRow(row, datasetType, index) }));
+      const validRows = checked.filter((item) => item.valid).map((item) => item.row);
+      const errors = checked.flatMap((item) => item.errors).slice(0, 100);
+
+      if (validRows.length) await insertGenericDataset({ rows: validRows, datasetType, uploadId });
       const summary = {
         uploadId,
         fileName,
@@ -103,27 +138,32 @@ const uploadDataset = async (req, res) => {
         datasetType,
         uploadedBy: req.user?.email || req.headers['x-user-email'] || 'Team Manager',
         totalRows: rows.length,
-        successRows: rows.length,
-        failedRows: 0,
-        status: 'Completed',
-        errors: [],
+        insertedRows: validRows.length,
+        updatedRows: 0,
+        successRows: validRows.length,
+        failedRows: rows.length - validRows.length,
+        status: validRows.length === rows.length ? 'Success' : validRows.length ? 'Partial' : 'Failed',
+        errors,
+        validationErrors: errors,
       };
       await DatasetUpload.create(summary);
       return res.json({ success: true, message: 'Dataset uploaded successfully', ...summary });
     }
 
-    const normalized = rows.map((row, index) => validateAndNormalizeTicketRow(row, index, uploadId));
+    const normalized = rows.map((row, index) => validateAndNormalizeTicketRow(normalizeDatasetRow(row), index, uploadId));
     const validRows = normalized.filter((item) => item.valid).map((item) => item.ticket);
     const errors = normalized.flatMap((item) => item.errors).slice(0, 100);
+    const operations = validRows.map((ticket) => ({
+      updateOne: {
+        filter: { ticket_id: ticket.ticket_id },
+        update: { $set: ticket },
+        upsert: true,
+      },
+    }));
+    let writeResult = { upsertedCount: 0, modifiedCount: 0, matchedCount: 0 };
 
     if (validRows.length) {
-      await Ticket.bulkWrite(validRows.map((ticket) => ({
-        updateOne: {
-          filter: { ticket_id: ticket.ticket_id },
-          update: { $set: ticket },
-          upsert: true,
-        },
-      })), { ordered: false });
+      writeResult = await Ticket.bulkWrite(operations, { ordered: false });
     }
 
     const summary = {
@@ -133,10 +173,13 @@ const uploadDataset = async (req, res) => {
       datasetType,
       uploadedBy: req.user?.email || req.headers['x-user-email'] || 'Team Manager',
       totalRows: rows.length,
+      insertedRows: writeResult.upsertedCount || 0,
+      updatedRows: writeResult.modifiedCount || writeResult.matchedCount || 0,
       successRows: validRows.length,
       failedRows: rows.length - validRows.length,
-      status: validRows.length === rows.length ? 'Completed' : validRows.length ? 'Partial' : 'Failed',
+      status: validRows.length === rows.length ? 'Success' : validRows.length ? 'Partial' : 'Failed',
       errors,
+      validationErrors: errors,
     };
 
     await DatasetUpload.create(summary);

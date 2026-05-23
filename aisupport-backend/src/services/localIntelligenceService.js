@@ -57,7 +57,7 @@ const detectIntent = (message = '') => {
     ['revenue_risk', /revenue|money|financial impact|highest risk|risk highest/],
     ['churn_risk', /churn|retention|at risk/],
     ['sentiment_trend', /sentiment trend|customer sentiment/],
-    ['system_health', /system health|api status|connectivity|health|api|database|service status/],
+    ['system_health', /system health|\bapi\b status|connectivity|health|\bapi\b|database|service status/],
     ['user_management', /users|active users|inactive users|user management/],
     ['role_permissions', /permissions|roles|role permissions/],
     ['security_alerts', /security|alerts|risk|failed login|mfa|audit/],

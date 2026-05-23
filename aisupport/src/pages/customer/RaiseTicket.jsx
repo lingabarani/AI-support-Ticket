@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, CheckCircle, Clock3, FileUp, Lightbulb, Paperclip, Send, ShieldCheck, Sparkles } from 'lucide-react';
 import Layout from '../../components/Layout';
 import { useAuth } from '../../context/AuthContext';
-import { createTicket } from '../../services/ticketService';
+import { createTicketForm } from '../../services/ticketService';
 import GlassCard from '../../components/premium/GlassCard';
 import GlowButton from '../../components/premium/GlowButton';
 import GradientBadge from '../../components/premium/GradientBadge';
@@ -16,6 +16,8 @@ export default function RaiseTicket() {
   const [ticketId, setTicketId] = useState('');
   const [step, setStep] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const [attachment, setAttachment] = useState(null);
+  const [warning, setWarning] = useState('');
   const [form, setForm] = useState({
     category: '', affected_product: '', subject: '', email: user?.email || '',
     account_company: '', description: '', tags: '', priority: 'Medium',
@@ -36,13 +38,15 @@ export default function RaiseTicket() {
     if (!ready) return;
     setSubmitting(true);
     try {
-      const response = await createTicket({
+      const response = await createTicketForm({
         ...form,
         customer_email: form.email,
         customer_name: user?.name || form.email.split('@')[0],
         source: 'customer_portal',
+        attachment,
       });
-      setTicketId(response.ticket.ticket_id);
+      setTicketId(response.ticket_id || response.ticket?.ticket_id);
+      setWarning(response.warning || '');
     } finally {
       setSubmitting(false);
     }
@@ -57,6 +61,7 @@ export default function RaiseTicket() {
             <h1 className="mt-5 text-3xl font-black text-white">Ticket submitted</h1>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-400">Your ticket is now available in the AWS support intelligence workflow with AI triage and SLA tracking enabled.</p>
             <p className="mt-5 font-mono text-lg font-bold text-cyan-200">{ticketId}</p>
+            {warning ? <p className="mt-3 text-sm text-amber-200">{warning}</p> : null}
             <GlowButton onClick={() => navigate(`/customer/tickets/${ticketId}`)} className="mt-7">View Ticket</GlowButton>
           </GlassCard>
         ) : (
@@ -105,10 +110,27 @@ export default function RaiseTicket() {
                     <input value={form.account_company} onChange={(e) => update('account_company', e.target.value)} className="px-4 py-3.5 text-sm" placeholder="Account / company" />
                     <input value={form.tags} onChange={(e) => update('tags', e.target.value)} className="px-4 py-3.5 text-sm" placeholder="Tags, comma separated" />
                     <select value={form.priority} onChange={(e) => update('priority', e.target.value)} className="px-4 py-3.5 text-sm"><option>Low</option><option>Medium</option><option>High</option><option>Urgent</option></select>
-                    <label className="flex min-h-[120px] items-center justify-center gap-3 rounded-2xl border border-dashed border-cyan-300/30 bg-cyan-400/5 px-4 py-5 text-sm text-slate-300 md:col-span-2">
+                    <label className="flex min-h-[120px] cursor-pointer items-center justify-center gap-3 rounded-2xl border border-dashed border-cyan-300/30 bg-cyan-400/5 px-4 py-5 text-sm text-slate-300 md:col-span-2">
                       <FileUp size={20} className="text-cyan-200" />
-                      Upload attachment, logs, screenshots, or diagnostics
+                      {attachment ? attachment.name : 'Upload attachment, logs, screenshots, or diagnostics'}
+                      <input
+                        type="file"
+                        accept=".png,.jpg,.jpeg,.pdf,.docx,.txt"
+                        className="hidden"
+                        onChange={(event) => {
+                          const selected = event.target.files?.[0];
+                          if (!selected) return;
+                          if (selected.size > 10 * 1024 * 1024) {
+                            setWarning('Attachment is larger than 10 MB. Ticket can still be submitted without it.');
+                            setAttachment(null);
+                            return;
+                          }
+                          setWarning('');
+                          setAttachment(selected);
+                        }}
+                      />
                     </label>
+                    {warning ? <p className="text-sm text-amber-200 md:col-span-2">{warning}</p> : null}
                   </div>
                 ) : null}
 

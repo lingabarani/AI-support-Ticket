@@ -8,9 +8,10 @@ const API_BASE_URL = normalizeApiBase(import.meta.env.VITE_API_BASE_URL);
 const request = async (path, options = {}) => {
   const token = localStorage.getItem('authToken');
   const user = JSON.parse(localStorage.getItem('authUser') || '{}');
+  const isFormData = options.body instanceof FormData;
   const response = await fetch(`${API_BASE_URL}${path}`, {
     headers: {
-      'Content-Type': 'application/json',
+      ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(user?.role ? { 'X-User-Role': user.role } : {}),
       ...(user?.email ? { 'X-User-Email': user.email } : {}),
@@ -76,13 +77,18 @@ export const quickSightApi = {
 export const ticketApi = {
   list: (params = {}) => request(`/tickets?${new URLSearchParams(params).toString()}`),
   get: (id) => request(`/tickets/${encodeURIComponent(id)}`),
+  autoResolution: (id) => request(`/tickets/${encodeURIComponent(id)}/auto-resolution`),
+  autoResolve: (id) => request(`/tickets/${encodeURIComponent(id)}/auto-resolve`, {
+    method: 'POST',
+    body: JSON.stringify({}),
+  }),
   update: (id, payload) => request(`/tickets/${encodeURIComponent(id)}`, {
     method: 'PATCH',
     body: JSON.stringify(payload),
   }),
   create: (payload) => request('/tickets', {
     method: 'POST',
-    body: JSON.stringify(payload),
+    body: payload instanceof FormData ? payload : JSON.stringify(payload),
   }),
   byCustomerEmail: (email) => request(`/tickets/customer/${encodeURIComponent(email)}`),
 };
@@ -90,6 +96,9 @@ export const ticketApi = {
 export const analyticsApi = {
   summary: () => request('/analytics/summary'),
   role: (role) => request(`/analytics/role/${encodeURIComponent(role)}`),
+  supportAgent: () => request('/analytics/support-agent'),
+  teamManager: () => request('/analytics/team-manager'),
+  businessExecutive: () => request('/analytics/business-executive'),
 };
 
 export const userApi = {

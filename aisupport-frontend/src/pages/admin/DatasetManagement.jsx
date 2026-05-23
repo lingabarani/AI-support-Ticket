@@ -192,7 +192,7 @@ export default function DatasetManagement() {
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 {[
                   ['Total Rows', summary.totalRows],
-                  ['Inserted/Updated', summary.successRows],
+                  ['Inserted/Updated', summary.insertedRows ?? summary.successRows],
                   ['Failed Rows', summary.failedRows],
                   ['Status', summary.status],
                 ].map(([label, value]) => (
@@ -230,21 +230,24 @@ export default function DatasetManagement() {
             <table>
               <thead>
                 <tr>
-                  <th>Ticket ID</th><th>Customer</th><th>Category</th><th>Priority</th><th>Status</th><th>Sentiment</th>
+                  {(previewRows[0] ? Object.keys(previewRows[0].data || previewRows[0]).filter((key) => !key.startsWith('_')).slice(0, 8) : ['Preview']).map((key) => (
+                    <th key={key}>{key.replace(/_/g, ' ')}</th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                {previewRows.length ? previewRows.map((row) => (
-                  <tr key={row._id || row.ticket_id}>
-                    <td className="font-mono text-xs text-purple-300">{row.ticket_id || row.ticketId}</td>
-                    <td className="text-slate-300">{row.customer_name}</td>
-                    <td className="text-slate-400">{row.issue_category}</td>
-                    <td className="text-slate-400">{row.priority}</td>
-                    <td className="text-slate-400">{row.status}</td>
-                    <td className="text-slate-400">{row.ai_sentiment || row.sentiment}</td>
-                  </tr>
-                )) : (
-                  <tr><td colSpan="6" className="py-8 text-center text-slate-500">No preview loaded.</td></tr>
+                {previewRows.length ? previewRows.map((row, index) => {
+                  const record = row.data || row;
+                  const keys = Object.keys(record).filter((key) => !key.startsWith('_')).slice(0, 8);
+                  return (
+                    <tr key={row._id || row.ticket_id || index}>
+                      {keys.map((key) => (
+                        <td key={key} className="text-slate-300">{String(record[key] ?? '')}</td>
+                      ))}
+                    </tr>
+                  );
+                }) : (
+                  <tr><td className="py-8 text-center text-slate-500">No preview loaded.</td></tr>
                 )}
               </tbody>
             </table>

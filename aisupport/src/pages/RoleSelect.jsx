@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BarChart3, CheckCircle2, Headphones, ShieldCheck, Users } from 'lucide-react';
+import { CheckCircle2, Crown, Headphones, ShieldCheck, Users } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import logo from '../assets/ai-support-logo.png';
 import AnimatedBackground from '../components/premium/AnimatedBackground';
@@ -14,10 +14,14 @@ const roles = [
     desc: 'Resolve assigned tickets faster with AI summaries, smart replies, and knowledge assistance.',
     icon: Headphones,
     path: '/agent/dashboard',
-    tone: 'from-blue-500 to-cyan-300',
-    border: 'border-cyan-300/30 hover:border-cyan-200/60',
-    glow: 'hover:shadow-cyan-500/25',
-    features: ['Assigned Tickets', 'AI Analysis', 'Smart Replies', 'Knowledge Assistant'],
+    tone: 'from-blue-500 via-indigo-500 to-purple-500',
+    surface: 'from-blue-500/18 via-indigo-500/8 to-purple-500/16',
+    border: 'border-blue-300/30 hover:border-purple-200/70',
+    glow: 'hover:shadow-blue-500/30',
+    accent: 'text-blue-200',
+    kicker: 'Operational Workspace',
+    features: ['Assigned Tickets', 'AI Ticket Analysis', 'Smart Replies', 'SLA Alerts'],
+    cta: 'Continue as Support Agent',
   },
   {
     key: 'team_manager',
@@ -25,21 +29,29 @@ const roles = [
     desc: 'Lead operations with SLA health, throughput visibility, dataset workflows, and team analytics.',
     icon: Users,
     path: '/team-manager/dashboard',
-    tone: 'from-emerald-500 to-teal-300',
-    border: 'border-emerald-300/30 hover:border-emerald-200/60',
-    glow: 'hover:shadow-emerald-500/25',
-    features: ['SLA Monitoring', 'Team Analytics', 'Dataset Management', 'Operations Dashboard'],
+    tone: 'from-emerald-500 via-teal-400 to-cyan-400',
+    surface: 'from-emerald-500/18 via-teal-500/8 to-cyan-500/16',
+    border: 'border-emerald-300/30 hover:border-cyan-200/70',
+    glow: 'hover:shadow-emerald-500/30',
+    accent: 'text-emerald-200',
+    kicker: 'Operations Leadership',
+    features: ['SLA Monitoring', 'Team Workload', 'Dataset Management', 'Performance Insights'],
+    cta: 'Continue as Team Manager',
   },
   {
     key: 'business_executive',
     label: 'Business Executive',
     desc: 'Review executive analytics, revenue signals, churn risk, and strategic support intelligence.',
-    icon: BarChart3,
+    icon: Crown,
     path: '/executive/dashboard',
-    tone: 'from-amber-400 to-orange-300',
-    border: 'border-amber-300/35 hover:border-amber-200/70',
-    glow: 'hover:shadow-amber-500/25',
-    features: ['Revenue Insights', 'Churn Risk', 'Executive Analytics', 'Strategic AI Reports'],
+    tone: 'from-yellow-300 via-amber-400 to-orange-500',
+    surface: 'from-amber-400/20 via-yellow-500/8 to-orange-500/16',
+    border: 'border-amber-300/40 hover:border-yellow-200/80',
+    glow: 'hover:shadow-amber-500/35',
+    accent: 'text-amber-200',
+    kicker: 'Executive Boardroom Analytics',
+    features: ['Revenue Risk', 'Churn Insights', 'Customer Sentiment', 'Strategic Reports'],
+    cta: 'Continue as Business Executive',
   },
 ];
 
@@ -89,24 +101,27 @@ export default function RoleSelect() {
                   variants={{ hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }}
                   whileHover={{ y: -8, scale: 1.015 }}
                   whileTap={{ scale: 0.99 }}
-                  className={`group flex min-h-[440px] flex-col rounded-[1.75rem] border ${role.border} premium-glass p-7 text-left shadow-2xl ${role.glow} transition duration-300`}
+                  className={`group relative flex min-h-[470px] overflow-hidden flex-col rounded-[1.9rem] border ${role.border} bg-gradient-to-br ${role.surface} p-7 text-left shadow-2xl ${role.glow} transition duration-300 before:absolute before:inset-0 before:rounded-[1.9rem] before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 before:transition-opacity hover:before:opacity-100`}
                 >
-                  <div className={`mb-7 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${role.tone} text-white shadow-2xl`}>
+                  <div className="relative z-10">
+                  <div className={`mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${role.tone} text-white shadow-2xl ring-1 ring-white/25`}>
                     <Icon size={38} />
                   </div>
+                  <p className={`mb-3 text-xs font-black uppercase tracking-[0.2em] ${role.accent}`}>{role.kicker}</p>
                   <h2 className="text-2xl font-black tracking-tight text-white">{role.label}</h2>
                   <p className="mt-3 min-h-[78px] text-sm leading-6 text-slate-300">{role.desc}</p>
                   <div className="mt-6 grid gap-3">
                     {role.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3 text-sm text-slate-200">
-                        <CheckCircle2 size={16} className="text-cyan-200" />
+                        <CheckCircle2 size={16} className={role.accent} />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
                   <GlowButton className="mt-auto w-full" subtle>
-                    Continue as {role.label}
+                    {role.cta}
                   </GlowButton>
+                  </div>
                 </motion.button>
               );
             })}

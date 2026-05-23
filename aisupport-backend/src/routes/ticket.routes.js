@@ -4,6 +4,8 @@ const TicketHistory = require('../models/TicketHistory');
 const TicketAnalysis = require('../models/TicketAnalysis');
 const { getDemoTickets, getPrimaryTickets } = require('../services/datasetService');
 const { validateAndNormalizeTicketRow } = require('../utils/validateTicketRow');
+const { optionalTicketAttachment } = require('../middleware/uploadMiddleware');
+const { buildResolutionNote, evaluateAutoResolution } = require('../services/autoResolutionService');
 
 let fallbackStore;
 
@@ -21,6 +23,7 @@ const normalizeTicketId = (value) => {
 };
 
 const makeTicketId = () => `TKT-${Date.now().toString().slice(-6)}-${Math.random().toString(36).slice(2, 5).toUpperCase()}`;
+const makeCustomerTicketId = () => `TKT-${new Date().getFullYear()}-${Date.now().toString().slice(-4)}${Math.random().toString(36).slice(2, 4).toUpperCase()}`;
 
 const normalizePriority = (priority) => {
   if (priority === 'Critical') return 'Urgent';
@@ -81,6 +84,16 @@ const normalizeCustomerTicket = (body) => {
     region: body.region || 'India',
   };
 };
+
+const attachmentFromFile = (file) => file ? [{
+  filename: file.filename,
+  originalName: file.originalname,
+  mimeType: file.mimetype,
+  size: file.size,
+  storagePath: file.path,
+  url: `/uploads/${file.filename}`,
+  uploadedAt: new Date(),
+}] : [];
 
 const filterTickets = (items, query) => {
   const search = String(query.search || query.q || '').toLowerCase();
@@ -167,9 +180,13 @@ router.get('/', async (req, res) => {
   });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', optionalTicketAttachment, async (req, res) => {
   try {
-    const ticketPayload = normalizeCustomerTicket(req.body);
+    const ticketPayload = normalizeCustomerTicket({
+      ...req.body,
+      ticket_id: req.body.ticket_id || makeCustomerTicketId(),
+      attachments: attachmentFromFile(req.file),
+    });
     if (!ticketPayload.customer_email) {
       return res.status(400).json({ success: false, message: 'Customer email is required.' });
     }
@@ -195,7 +212,15 @@ router.post('/', async (req, res) => {
       TicketAnalysis.create({ ticket_id: ticket.ticket_id, ...analysis }),
     ]);
 
-    res.status(201).json({ success: true, ticket: ticket.toObject(), analysis, source: 'mongodb' });
+    res.status(201).json({
+      success: true,
+      ticket_id: ticket.ticket_id,
+      message: 'Ticket submitted successfully',
+      warning: req.attachmentWarning,
+      ticket: ticket.toObject(),
+      analysis,
+      source: 'mongodb',
+    });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message || 'Ticket creation failed.' });
   }
@@ -216,6 +241,97 @@ router.get('/:id', async (req, res) => {
 
   const fallback = fallbackTickets().find((item) => item.ticket_id === id) || fallbackTickets()[0];
   return res.json({ success: true, ticket: fallback, source: 'support_fallback' });
+});
+
+const findTicketById = async (id) => {
+  const normalizedId = normalizeTicketId(id);
+  const ticket = await Ticket.findOne({ $or: [{ ticket_id: normalizedId }, { ticketId: normalizedId }] }).lean();
+  if (ticket) return { ticket, source: 'mongodb', normalizedId };
+  const fallback = fallbackTickets().find((item) => item.ticket_id === normalizedId || item.id === normalizedId);
+  return { ticket: fallback || null, source: 'support_fallback', normalizedId };
+};
+
+router.get('/:id/auto-resolution', async (req, res) => {
+  const { ticket, source } = await findTicketById(req.params.id);
+  if (!ticket) return res.status(404).json({ success: false, message: 'Ticket not found.' });
+  res.json({
+    success: true,
+    source,
+    ticket_id: ticket.ticket_id || ticket.ticketId || ticket.id,
+    evaluation: evaluateAutoResolution(ticket),
+  });
+});
+
+router.post('/:id/auto-resolve', async (req, res) => {
+  const { ticket, source, normalizedId } = await findTicketById(req.params.id);
+  if (!ticket) return res.status(404).json({ success: false, message: 'Ticket not found.' });
+
+  const evaluation = evaluateAutoResolution(ticket);
+  const updatedBy = req.headers['x-user-email'] || req.body.updated_by || 'ai_resolution_policy';
+  const note = buildResolutionNote(ticket, evaluation);
+
+  if (!evaluation.canAutoResolve) {
+    if (source === 'mongodb') {
+      await TicketHistory.create({
+        ticket_id: ticket.ticket_id || ticket.ticketId,
+        action: evaluation.decision,
+        previous_status: ticket.status,
+        new_status: evaluation.nextStatus,
+        updated_by: updatedBy,
+        notes: note,
+      });
+    }
+    return res.status(202).json({
+      success: true,
+      source,
+      autoResolved: false,
+      ticket,
+      evaluation,
+      message: evaluation.recommendation,
+    });
+  }
+
+  const resolutionUpdate = {
+    status: 'Resolved',
+    resolvedAt: new Date(),
+    resolution_summary: ticket.ai_suggested_resolution || ticket.resolution_summary || 'Resolved automatically by AI policy for low-risk ticket.',
+    updated_at: new Date(),
+    ticket_updated_date: new Date(),
+  };
+
+  if (source === 'mongodb') {
+    const updated = await Ticket.findOneAndUpdate(
+      { $or: [{ ticket_id: normalizedId }, { ticketId: normalizedId }] },
+      {
+        $set: resolutionUpdate,
+        $push: {
+          internalNotes: {
+            text: note,
+            createdAt: new Date(),
+          },
+        },
+      },
+      { new: true },
+    ).lean();
+    await TicketHistory.create({
+      ticket_id: updated.ticket_id || updated.ticketId,
+      action: 'auto_resolved',
+      previous_status: ticket.status,
+      new_status: 'Resolved',
+      updated_by: updatedBy,
+      notes: note,
+    });
+    return res.json({ success: true, source, autoResolved: true, ticket: updated, evaluation, message: 'Low-risk ticket auto-resolved.' });
+  }
+
+  const index = fallbackTickets().findIndex((item) => item.ticket_id === normalizedId || item.id === normalizedId);
+  const targetIndex = index >= 0 ? index : 0;
+  fallbackStore[targetIndex] = {
+    ...fallbackStore[targetIndex],
+    ...resolutionUpdate,
+    internal_notes: [...(fallbackStore[targetIndex].internal_notes || []), { text: note, addedBy: updatedBy, createdAt: new Date() }],
+  };
+  res.json({ success: true, source, autoResolved: true, ticket: fallbackStore[targetIndex], evaluation, message: 'Low-risk fallback ticket auto-resolved.' });
 });
 
 const updateTicket = async (req, res) => {

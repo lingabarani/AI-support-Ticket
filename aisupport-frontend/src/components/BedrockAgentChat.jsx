@@ -64,7 +64,7 @@ const MessageList = ({ messages }) => (
   </div>
 );
 
-export default function BedrockAgentChat({ role = 'support_agent', mode = 'floating' }) {
+export default function BedrockAgentChat({ role = 'support_agent', mode = 'floating', placement = 'bottom-right' }) {
   const copy = labels[role] || labels.support_agent;
   const [open, setOpen] = useState(mode !== 'floating');
   const [input, setInput] = useState('');
@@ -83,7 +83,11 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
 
     try {
       const response = await sendChatMessage({ role, message: trimmed, sessionId });
-      setMessages((current) => [...current, { from: 'assistant', text: response.reply }]);
+      setMessages((current) => [...current, {
+        from: 'assistant',
+        text: response.reply,
+        suggestedQuestions: response.suggestedQuestions || response.suggestedActions || [],
+      }]);
     } catch {
       setMessages((current) => [...current, { from: 'assistant', text: 'Live AI service is temporarily unavailable. Showing intelligent response from the built-in enterprise dataset.' }]);
     } finally {
@@ -135,7 +139,17 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
 
       <div className="border-t border-white/10 px-4 py-3">
         <div className="mb-3 flex flex-wrap gap-2">
-          <RolePromptSuggestions role={role} onSelect={submitMessage} />
+          {messages[messages.length - 1]?.suggestedQuestions?.length ? null : <RolePromptSuggestions role={role} onSelect={submitMessage} />}
+          {(messages[messages.length - 1]?.suggestedQuestions || []).map((question) => (
+            <button
+              key={question}
+              type="button"
+              onClick={() => submitMessage(question)}
+              className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
+            >
+              {question}
+            </button>
+          ))}
         </div>
         <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 p-2">
           <input
@@ -157,9 +171,10 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
   );
 
   if (mode !== 'floating') return chatSurface;
+  const floatingPosition = placement === 'bottom-left' ? 'bottom-5 left-5' : 'bottom-5 right-5';
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className={`fixed ${floatingPosition} z-50`}>
       {open && chatSurface}
       <button
         type="button"

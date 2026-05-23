@@ -54,7 +54,15 @@ const ticketSchema = new mongoose.Schema({
   customer:    { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   agent:       { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   tags:        [String],
-  attachments: [{ url: String, filename: String, uploadedAt: Date }],
+  attachments: [{
+    url: String,
+    filename: String,
+    originalName: String,
+    mimeType: String,
+    size: Number,
+    storagePath: String,
+    uploadedAt: Date,
+  }],
   internalNotes: [{
     text:      String,
     addedBy:   { type: mongoose.Schema.Types.ObjectId, ref: 'User' },

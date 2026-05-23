@@ -4,12 +4,24 @@ const {
 } = require('@aws-sdk/client-quicksight');
 const { fromIni } = require('@aws-sdk/credential-provider-ini');
 
+const readEnv = (...names) => names.map((name) => process.env[name]).find(Boolean);
+
 const createQuickSightClient = () => {
   const config = {
     region: process.env.AWS_REGION || 'us-east-1',
   };
 
-  if (process.env.AWS_PROFILE) {
+  const accessKeyId = readEnv('aws_access_key_id', 'AWS_ACCESS_KEY_ID');
+  const secretAccessKey = readEnv('aws_secret_access_key', 'AWS_SECRET_ACCESS_KEY');
+  const sessionToken = readEnv('aws_session_token', 'AWS_SESSION_TOKEN');
+
+  if (accessKeyId && secretAccessKey) {
+    config.credentials = {
+      accessKeyId,
+      secretAccessKey,
+      sessionToken,
+    };
+  } else if (process.env.AWS_PROFILE) {
     config.credentials = fromIni({
       profile: process.env.AWS_PROFILE,
       filepath: process.env.AWS_SHARED_CREDENTIALS_FILE || undefined,
@@ -46,9 +58,14 @@ const getAllowedDomains = () => {
     .filter(Boolean);
 
   return [...new Set([
-    'http://localhost:5173',
+    process.env.FRONTEND_URL,
     ...configured,
-  ].filter((domain) => !domain.includes('127.0.0.1')))].slice(0, 3);
+    'http://localhost:5174',
+    'http://localhost:5173',
+  ]
+    .filter(Boolean)
+    .map((domain) => domain.replace('http://127.0.0.1:', 'http://localhost:'))
+  )].slice(0, 3);
 };
 
 const getDashboardId = (role) => {
