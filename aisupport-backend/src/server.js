@@ -56,6 +56,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/auth',          require('./routes/auth.routes'));
+app.use('/api/customer',      require('./routes/customer.routes'));
 app.use('/api/tickets',       require('./routes/ticket.routes'));
 app.use('/api/users',         require('./routes/user.routes'));
 app.use('/api/notifications', require('./routes/notification.routes'));
@@ -67,6 +68,8 @@ app.use('/api/chat',          require('./routes/chat.routes'));
 app.use('/api/quicksight',    require('./routes/quicksight.routes'));
 app.use('/api/datasets', require('./routes/datasetRoutes'));
 app.use('/api/admin/datasets', require('./routes/datasetRoutes'));
+app.use('/api/enterprise', require('./routes/enterprise.routes'));
+app.use('/api/product-proof', require('./routes/productProof.routes'));
 
 app.use('/api', (req, res) => {
   res.json({

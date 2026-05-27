@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Lock, Mail, PanelsTopLeft } from 'lucide-react';
+import { Bot, Eye, EyeOff, Lock, Mail, PanelsTopLeft, Search, Ticket } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import AuthShell from '../../components/premium/AuthShell';
 import GlowButton from '../../components/premium/GlowButton';
 
 export default function CustomerLogin() {
-  const { login, demoLogin } = useAuth();
+  const { login, demoLogin, logout, user } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
+  const [remember, setRemember] = useState(true);
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -22,24 +23,33 @@ export default function CustomerLogin() {
     }
     setLoading(true);
     try {
-      await login(form.email, form.password, 'customer');
-      navigate('/customer/my-tickets');
+      if (user && user.role !== 'Customer Portal User') logout();
+      await login(form.email, form.password, 'customer', remember);
+      navigate('/customer');
+    } catch (authError) {
+      setError(authError.message || 'Unable to sign in. Check your credentials and try again.');
     } finally {
       setLoading(false);
     }
   };
 
   const providerDemo = () => {
+    if (user && user.role !== 'Customer Portal User') logout();
     demoLogin('customer');
-    navigate('/customer/my-tickets');
+    navigate('/customer');
   };
 
   return (
-    <AuthShell accent="purple" title="Customer Login" subtitle="Track tickets, monitor SLA, and continue AI-assisted support conversations.">
-      <div className="grid gap-3 sm:grid-cols-2">
-        <button onClick={providerDemo} className="rounded-xl border border-white/12 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]">Continue with Google</button>
-        <button onClick={providerDemo} className="rounded-xl border border-white/12 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-blue-300/40 hover:bg-white/[0.08]">Continue with Microsoft</button>
+    <AuthShell accent="purple" title="Customer Portal Login" subtitle="Raise tickets, track status, review ticket history, and chat with the AI assistant.">
+      <div className="mb-5 grid gap-3 rounded-2xl border border-purple-300/15 bg-purple-400/[0.06] p-4 text-sm text-slate-300">
+        {[['Raise tickets', Ticket], ['Track SLA and ticket status', Search], ['Get AI-guided help', Bot]].map(([label, Icon]) => (
+          <div key={label} className="flex items-center gap-3"><Icon size={16} className="text-purple-200" /><span>{label}</span></div>
+        ))}
       </div>
+      <button onClick={providerDemo} className="w-full rounded-xl border border-white/12 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]">
+        <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-black text-slate-900">G</span>
+        Continue with Google
+      </button>
       <div className="my-6 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-500"><span className="h-px flex-1 bg-white/10" />or sign in<span className="h-px flex-1 bg-white/10" /></div>
       <form onSubmit={submit} className="space-y-4">
         <label className="block text-xs font-bold uppercase tracking-[0.12em] text-slate-400">Email
@@ -53,7 +63,7 @@ export default function CustomerLogin() {
           </div>
         </label>
         <div className="flex items-center justify-between text-sm">
-          <label className="flex items-center gap-2 text-slate-400"><input type="checkbox" className="h-4 w-4 rounded" /> Remember me</label>
+          <label className="flex items-center gap-2 text-slate-400"><input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} className="h-4 w-4 rounded" /> Remember me</label>
           <button type="button" className="font-semibold text-cyan-200 hover:text-white">Forgot password?</button>
         </div>
         {error ? <p className="rounded-xl border border-red-400/25 bg-red-500/10 px-3 py-2 text-sm text-red-100">{error}</p> : null}

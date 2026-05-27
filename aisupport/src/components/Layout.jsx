@@ -1,14 +1,14 @@
 import Sidebar from './Sidebar';
-import Topbar from './Topbar';
+import PlatformNavbar from './PlatformNavbar';
 import ChatbotWidget from './ChatbotWidget';
 
 export default function Layout({ children, title }) {
   return (
-    <div className="flex h-screen overflow-hidden bg-[#0f0d1a]">
+    <div className="flex h-screen max-w-full overflow-hidden bg-[#0f0d1a]">
       <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <Topbar title={title} />
-        <main className="flex-1 overflow-y-auto p-6">
+      <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+        <PlatformNavbar title={title} />
+        <main className="min-w-0 flex-1 overflow-x-hidden overflow-y-auto p-4 md:p-6">
           {children}
         </main>
       </div>

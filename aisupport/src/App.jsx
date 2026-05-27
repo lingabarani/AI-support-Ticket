@@ -1,13 +1,16 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
-import Login from './pages/Login';
-import Register from './pages/Register';
+import LandingPage from './pages/LandingPage';
 import RoleSelect from './pages/RoleSelect';
 import AgentDashboard from './pages/AgentDashboard';
 import MyTickets from './pages/MyTickets';
 import TicketDetail from './pages/TicketDetail';
 import AIAnalysis from './pages/AIAnalysis';
+import AICommandCenter from './pages/AICommandCenter';
+import ConversationalBI from './pages/ConversationalBI';
+import GovernanceCenter from './pages/GovernanceCenter';
 import KnowledgeBase from './pages/KnowledgeBase';
 import Notifications from './pages/Notifications';
 import AgentPerformance from './pages/AgentPerformance';
@@ -16,14 +19,16 @@ import ManagerReports from './pages/ManagerReports';
 import ExecutiveDashboard from './pages/ExecutiveDashboard';
 import ExecutiveInsights from './pages/ExecutiveInsights';
 import CustomerHome from './pages/CustomerHome';
-import RaiseTicket from './pages/RaiseTicket';
-import CustomerTickets from './pages/CustomerTickets';
-import FAQ from './pages/FAQ';
-import Feedback from './pages/Feedback';
-import AdminDashboard from './pages/AdminDashboard';
-import UserManagement from './pages/UserManagement';
-import SecurityLogs from './pages/SecurityLogs';
-import AdminSettings from './pages/AdminSettings';
+import CustomerLogin from './pages/customer/CustomerLogin';
+import CustomerRegister from './pages/customer/CustomerRegister';
+import CustomerMyTickets from './pages/customer/MyTickets';
+import CustomerRaiseTicket from './pages/customer/RaiseTicket';
+import CustomerTicketDetails from './pages/customer/TicketDetails';
+import CustomerTrackTicket from './pages/customer/TrackTicket';
+import OrgLogin from './pages/org/OrgLogin';
+import OrgRegister from './pages/org/OrgRegister';
+import TeamManagerDashboard from './pages/teamManager/TeamManagerDashboard';
+import TeamManagerDataset from './pages/teamManager/DatasetManagement';
 import Layout from './components/Layout';
 import { agents } from './data/dummyData';
 
@@ -170,54 +175,99 @@ function AdminSystem() {
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
-  if (!user) return <Navigate to="/login" replace />;
+  if (!user) return <Navigate to="/" replace />;
+  return children;
+}
+
+function RoleProtectedRoute({ children, allowedRoles }) {
+  const { user } = useAuth();
+  const location = useLocation();
+  const isCustomerArea = location.pathname.startsWith('/customer');
+  const isOrgOnlyArea = !allowedRoles.includes('Customer Portal User');
+
+  if (!user) return <Navigate to={isCustomerArea ? '/customer/login' : '/org/login'} replace />;
+  if (!allowedRoles.includes(user.role)) {
+    if (isOrgOnlyArea) return <Navigate to="/org/login" replace />;
+    return <Navigate to={user.role === 'Customer Portal User' ? '/customer' : '/org/role-select'} replace />;
+  }
   return children;
 }
 
 function AppRoutes() {
   const { user } = useAuth();
+  const location = useLocation();
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to={user ? '/role-select' : '/login'} replace />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/role-select" element={<ProtectedRoute><RoleSelect /></ProtectedRoute>} />
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        className="min-h-screen"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.24, ease: 'easeOut' }}
+      >
+    <Routes location={location}>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Navigate to="/org/login" replace />} />
+      <Route path="/register" element={<Navigate to="/org/register" replace />} />
+      <Route path="/customer/login" element={<CustomerLogin />} />
+      <Route path="/customer/register" element={<CustomerRegister />} />
+      <Route path="/org" element={<Navigate to="/org/login" replace />} />
+      <Route path="/org/login" element={<OrgLogin />} />
+      <Route path="/org/register" element={<OrgRegister />} />
+      <Route path="/org/role-select" element={<RoleProtectedRoute allowedRoles={['Support Agent', 'Team Manager', 'Business Executive']}><RoleSelect /></RoleProtectedRoute>} />
+      <Route path="/role-select" element={<Navigate to="/org/role-select" replace />} />
+      <Route path="/ai-command-center" element={<Navigate to="/team-manager/ai-command-center" replace />} />
+      <Route path="/conversational-bi" element={<Navigate to="/executive/conversational-bi" replace />} />
+      <Route path="/root-cause-analyzer" element={<Navigate to="/executive/root-cause" replace />} />
+      <Route path="/governance-center" element={<Navigate to="/team-manager/governance" replace />} />
       {/* Agent */}
-      <Route path="/agent" element={<ProtectedRoute><AgentDashboard /></ProtectedRoute>} />
-      <Route path="/agent/tickets" element={<ProtectedRoute><MyTickets /></ProtectedRoute>} />
-      <Route path="/agent/tickets/:id" element={<ProtectedRoute><TicketDetail /></ProtectedRoute>} />
-      <Route path="/agent/ai-analysis" element={<ProtectedRoute><AIAnalysis /></ProtectedRoute>} />
-      <Route path="/agent/knowledge" element={<ProtectedRoute><KnowledgeBase /></ProtectedRoute>} />
-      <Route path="/agent/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
-      <Route path="/agent/performance" element={<ProtectedRoute><AgentPerformance /></ProtectedRoute>} />
+      <Route path="/agent/dashboard" element={<RoleProtectedRoute allowedRoles={['Support Agent']}><AgentDashboard /></RoleProtectedRoute>} />
+      <Route path="/agent" element={<RoleProtectedRoute allowedRoles={['Support Agent']}><AgentDashboard /></RoleProtectedRoute>} />
+      <Route path="/agent/tickets" element={<RoleProtectedRoute allowedRoles={['Support Agent', 'Team Manager']}><MyTickets /></RoleProtectedRoute>} />
+      <Route path="/agent/tickets/:id" element={<RoleProtectedRoute allowedRoles={['Support Agent', 'Team Manager']}><TicketDetail /></RoleProtectedRoute>} />
+      <Route path="/agent/ai-analysis" element={<RoleProtectedRoute allowedRoles={['Support Agent']}><AIAnalysis /></RoleProtectedRoute>} />
+      <Route path="/agent/knowledge" element={<RoleProtectedRoute allowedRoles={['Support Agent']}><KnowledgeBase /></RoleProtectedRoute>} />
+      <Route path="/agent/notifications" element={<RoleProtectedRoute allowedRoles={['Support Agent']}><Notifications /></RoleProtectedRoute>} />
+      <Route path="/agent/performance" element={<RoleProtectedRoute allowedRoles={['Support Agent', 'Team Manager']}><AgentPerformance /></RoleProtectedRoute>} />
       {/* Manager */}
-      <Route path="/manager" element={<ProtectedRoute><ManagerDashboard /></ProtectedRoute>} />
-      <Route path="/manager/team" element={<ProtectedRoute><ManagerTeam /></ProtectedRoute>} />
-      <Route path="/manager/tickets" element={<ProtectedRoute><MyTickets /></ProtectedRoute>} />
-      <Route path="/manager/performance" element={<ProtectedRoute><AgentPerformance /></ProtectedRoute>} />
-      <Route path="/manager/reports" element={<ProtectedRoute><ManagerReports /></ProtectedRoute>} />
-      <Route path="/manager/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
+      <Route path="/team-manager" element={<Navigate to="/team-manager/dashboard" replace />} />
+      <Route path="/team-manager/dashboard" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><TeamManagerDashboard /></RoleProtectedRoute>} />
+      <Route path="/team-manager/sla" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><AICommandCenter /></RoleProtectedRoute>} />
+      <Route path="/team-manager/analytics" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><AgentPerformance /></RoleProtectedRoute>} />
+      <Route path="/team-manager/dataset-management" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><TeamManagerDataset /></RoleProtectedRoute>} />
+      <Route path="/team-manager/ai-command-center" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><AICommandCenter /></RoleProtectedRoute>} />
+      <Route path="/team-manager/governance" element={<RoleProtectedRoute allowedRoles={['Team Manager']}><GovernanceCenter /></RoleProtectedRoute>} />
+      <Route path="/team-manager/sla-monitoring" element={<Navigate to="/team-manager/sla" replace />} />
+      <Route path="/team-manager/all-tickets" element={<Navigate to="/agent/tickets" replace />} />
+      <Route path="/team-manager/performance" element={<Navigate to="/team-manager/analytics" replace />} />
+      <Route path="/team-manager/quicksight" element={<Navigate to="/team-manager/analytics" replace />} />
+      <Route path="/manager/*" element={<Navigate to="/team-manager/dashboard" replace />} />
       {/* Executive */}
-      <Route path="/executive" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
-      <Route path="/executive/analytics" element={<ProtectedRoute><ExecutiveDashboard /></ProtectedRoute>} />
-      <Route path="/executive/reports" element={<ProtectedRoute><ExecutiveReports /></ProtectedRoute>} />
-      <Route path="/executive/insights" element={<ProtectedRoute><ExecutiveInsights /></ProtectedRoute>} />
-      <Route path="/executive/settings" element={<ProtectedRoute><GenericSettings title="Settings" /></ProtectedRoute>} />
+      <Route path="/executive" element={<RoleProtectedRoute allowedRoles={['Business Executive']}><ExecutiveDashboard /></RoleProtectedRoute>} />
+      <Route path="/executive/dashboard" element={<RoleProtectedRoute allowedRoles={['Business Executive']}><ExecutiveDashboard /></RoleProtectedRoute>} />
+      <Route path="/executive/conversational-bi" element={<RoleProtectedRoute allowedRoles={['Business Executive']}><ConversationalBI /></RoleProtectedRoute>} />
+      <Route path="/executive/root-cause" element={<RoleProtectedRoute allowedRoles={['Business Executive']}><ConversationalBI /></RoleProtectedRoute>} />
+      <Route path="/executive/insights" element={<RoleProtectedRoute allowedRoles={['Business Executive']}><ExecutiveInsights /></RoleProtectedRoute>} />
+      <Route path="/executive/analytics" element={<Navigate to="/executive/conversational-bi" replace />} />
+      <Route path="/executive/quicksight" element={<Navigate to="/executive/insights" replace />} />
+      <Route path="/executive/reports" element={<Navigate to="/executive/insights" replace />} />
+      <Route path="/executive/settings" element={<Navigate to="/executive/dashboard" replace />} />
       {/* Customer */}
-      <Route path="/customer" element={<ProtectedRoute><CustomerHome /></ProtectedRoute>} />
-      <Route path="/customer/raise-ticket" element={<ProtectedRoute><RaiseTicket /></ProtectedRoute>} />
-      <Route path="/customer/tickets" element={<ProtectedRoute><CustomerTickets /></ProtectedRoute>} />
-      <Route path="/customer/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
-      <Route path="/customer/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
+      <Route path="/customer" element={<RoleProtectedRoute allowedRoles={['Customer Portal User']}><CustomerHome /></RoleProtectedRoute>} />
+      <Route path="/customer/my-tickets" element={<RoleProtectedRoute allowedRoles={['Customer Portal User']}><CustomerMyTickets /></RoleProtectedRoute>} />
+      <Route path="/customer/raise-ticket" element={<RoleProtectedRoute allowedRoles={['Customer Portal User']}><CustomerRaiseTicket /></RoleProtectedRoute>} />
+      <Route path="/customer/track-ticket" element={<RoleProtectedRoute allowedRoles={['Customer Portal User']}><CustomerTrackTicket /></RoleProtectedRoute>} />
+      <Route path="/customer/tickets/:id" element={<RoleProtectedRoute allowedRoles={['Customer Portal User']}><CustomerTicketDetails /></RoleProtectedRoute>} />
+      <Route path="/customer/tickets" element={<Navigate to="/customer/my-tickets" replace />} />
+      <Route path="/customer/faq" element={<Navigate to="/customer/track-ticket" replace />} />
+      <Route path="/customer/feedback" element={<Navigate to="/customer" replace />} />
       {/* Admin */}
-      <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-      <Route path="/admin/users" element={<ProtectedRoute><UserManagement /></ProtectedRoute>} />
-      <Route path="/admin/roles" element={<ProtectedRoute><AdminRoles /></ProtectedRoute>} />
-      <Route path="/admin/security" element={<ProtectedRoute><SecurityLogs /></ProtectedRoute>} />
-      <Route path="/admin/system" element={<ProtectedRoute><AdminSystem /></ProtectedRoute>} />
-      <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
+      <Route path="/admin/*" element={<Navigate to="/org/role-select" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

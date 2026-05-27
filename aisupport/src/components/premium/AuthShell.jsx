@@ -3,6 +3,7 @@ import { Bot, Cloud, Database, LineChart, ShieldCheck, Sparkles } from 'lucide-r
 import logo from '../../assets/ai-support-logo.png';
 import AnimatedBackground from './AnimatedBackground';
 import GradientBadge from './GradientBadge';
+import PlatformNavbar from '../PlatformNavbar';
 
 export default function AuthShell({ title, subtitle, accent = 'blue', children }) {
   const metrics = [
@@ -13,6 +14,7 @@ export default function AuthShell({ title, subtitle, accent = 'blue', children }
 
   return (
     <AnimatedBackground variant={accent === 'purple' ? 'purple' : 'blue'}>
+      <PlatformNavbar title={title} compact />
       <main className="grid min-h-screen lg:grid-cols-[0.95fr_1.05fr]">
         <section className="relative hidden min-h-screen flex-col justify-between border-r border-white/10 p-10 lg:flex">
           <div className="flex items-center gap-3">

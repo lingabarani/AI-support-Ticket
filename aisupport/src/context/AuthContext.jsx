@@ -19,51 +19,60 @@ const makeLocalUser = ({ name, email, role }) => ({
 });
 
 const displayRole = (role) => roleMap[role] || role;
+const isCustomerRole = (role) => displayRole(role) === 'Customer Portal User';
+const isOrgRole = (role) => ['Support Agent', 'Team Manager', 'Business Executive'].includes(displayRole(role));
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const stored = localStorage.getItem('authUser');
+    const stored = localStorage.getItem('authUser') || sessionStorage.getItem('authUser');
     return stored ? JSON.parse(stored) : null;
   });
 
-  const persistSession = (payload) => {
+  const persistSession = (payload, remember = true) => {
     const userPayload = { ...payload.user, role: displayRole(payload.user?.role) };
-    localStorage.setItem('authToken', payload.token || 'local-demo-token');
-    localStorage.setItem('authUser', JSON.stringify(userPayload));
+    const targetStorage = remember ? localStorage : sessionStorage;
+    const otherStorage = remember ? sessionStorage : localStorage;
+    otherStorage.removeItem('authToken');
+    otherStorage.removeItem('authUser');
+    targetStorage.setItem('authToken', payload.token || 'local-demo-token');
+    targetStorage.setItem('authUser', JSON.stringify(userPayload));
     setUser(userPayload);
     return userPayload;
   };
 
-  const login = async (email, password, portal = 'org') => {
-    try {
-      const payload = portal === 'customer'
-        ? await authApi.customerLogin({ email, password })
-        : await authApi.orgLogin({ email, password });
-      return persistSession(payload);
-    } catch {
-      return persistSession({
-        user: makeLocalUser({ email, role: portal === 'customer' ? 'Customer Portal User' : 'Support Agent' }),
-      });
+  const login = async (email, password, portal = 'org', remember = true) => {
+    const payload = portal === 'customer'
+      ? await authApi.customerLogin({ email, password })
+      : await authApi.orgLogin({ email, password });
+    const returnedRole = displayRole(payload.user?.role);
+    if (portal === 'org' && !isOrgRole(returnedRole)) {
+      throw new Error('This account belongs to the customer portal. Use an organization account to continue.');
     }
+    if (portal === 'customer' && !isCustomerRole(returnedRole)) {
+      throw new Error('This account belongs to the organization portal. Use the organization login.');
+    }
+    return persistSession(payload, remember);
   };
 
-  const register = async (form, portal = 'org') => {
-    try {
-      const payload = portal === 'customer'
-        ? await authApi.customerRegister(form)
-        : await authApi.orgRegister(form);
-      return persistSession(payload);
-    } catch {
-      return persistSession({
-        user: makeLocalUser({ ...form, role: portal === 'customer' ? 'Customer Portal User' : roleMap[form.role] || 'Support Agent' }),
-      });
+  const register = async (form, portal = 'org', remember = true) => {
+    const payload = portal === 'customer'
+      ? await authApi.customerRegister(form)
+      : await authApi.orgRegister(form);
+    const returnedRole = displayRole(payload.user?.role);
+    if (portal === 'org' && !isOrgRole(returnedRole)) {
+      throw new Error('Organization registration did not return a valid organization role.');
     }
+    if (portal === 'customer' && !isCustomerRole(returnedRole)) {
+      throw new Error('Customer registration did not return a customer role.');
+    }
+    return persistSession(payload, remember);
   };
 
   const selectRole = (roleKey) => {
     const selectedRole = roleMap[roleKey] || roleMap.support_agent;
     const updated = { ...user, role: selectedRole };
-    localStorage.setItem('authUser', JSON.stringify(updated));
+    const storage = localStorage.getItem('authUser') ? localStorage : sessionStorage;
+    storage.setItem('authUser', JSON.stringify(updated));
     setUser(updated);
     return updated;
   };
@@ -79,6 +88,8 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('authUser');
+    sessionStorage.removeItem('authToken');
+    sessionStorage.removeItem('authUser');
     setUser(null);
   };
 

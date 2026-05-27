@@ -1,235 +1,225 @@
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import {
-  Bell,
   BookOpen,
   CheckCircle,
-  ChevronRight,
   Clock,
-  FileQuestion,
   Headphones,
-  LogOut,
+  LifeBuoy,
   MapPin,
-  MessageSquare,
   PlusCircle,
   Search,
   Star,
   Ticket,
 } from 'lucide-react';
-import logo from '../assets/ai-support-logo.png';
-import ChatbotWidget from '../components/ChatbotWidget';
-
-const stats = [
-  { label: 'Open Tickets', value: '5', change: '+25%', icon: Ticket, color: 'purple' },
-  { label: 'Resolved Tickets', value: '24', change: '+41%', icon: CheckCircle, color: 'blue' },
-  { label: 'Avg. Response Time', value: '1h 24m', change: '-15%', icon: Clock, color: 'amber' },
-  { label: 'Satisfaction Score', value: '4.8 / 5', change: '+6%', icon: Star, color: 'green' },
-];
-
-const quickActions = [
-  { label: 'Raise Ticket', desc: 'Submit a new support request', icon: PlusCircle, path: '/customer/raise-ticket', primary: true },
-  { label: 'My Tickets', desc: 'View and manage your tickets', icon: Ticket, path: '/customer/tickets' },
-  { label: 'Track Request', desc: 'Track an existing request', icon: MapPin, path: '/customer/tickets' },
-  { label: 'Contact Support', desc: 'Find support resources', icon: Headphones, path: '/customer/faq' },
-];
-
-const recentTickets = [
-  { id: '#TK-1001', subject: 'Login issue', priority: 'High', status: 'Open', updated: '10 min ago' },
-  { id: '#TK-1002', subject: 'Payment failed', priority: 'Medium', status: 'In Progress', updated: '25 min ago' },
-  { id: '#TK-1003', subject: 'Refund request', priority: 'Low', status: 'Resolved', updated: '1 hr ago' },
-];
+import Layout from '../components/Layout';
+import StatusBadge from '../components/StatusBadge';
+import PriorityBadge from '../components/PriorityBadge';
+import { useAuth } from '../context/AuthContext';
+import { listCustomerTickets } from '../services/ticketService';
+import GlassCard from '../components/premium/GlassCard';
+import GlowButton from '../components/premium/GlowButton';
 
 const articles = [
-  { title: 'How to reset your password', icon: FileQuestion },
-  { title: 'How to track your ticket', icon: MapPin },
-  { title: 'Understanding ticket priority', icon: Star },
-  { title: 'How to contact support', icon: MessageSquare },
+  { title: 'Reset your password securely', desc: 'Account recovery steps and MFA tips', icon: LifeBuoy },
+  { title: 'Track a refund or invoice', desc: 'Where to find payment and refund updates', icon: BookOpen },
+  { title: 'Understand ticket priority', desc: 'How SLA and urgency are calculated', icon: Star },
+  { title: 'Contact support effectively', desc: 'What details help agents resolve faster', icon: Headphones },
 ];
 
-const flow = ['Ticket Created', 'AI Analysis', 'Assigned to Agent', 'Resolution'];
-
-const badgeClass = {
-  High: 'badge-high',
-  Medium: 'badge-medium',
-  Low: 'badge-low',
-  Open: 'badge-open',
-  'In Progress': 'badge-progress',
-  Resolved: 'badge-resolved',
-};
-
-const colorClass = {
-  purple: 'from-purple-500/25 to-purple-700/10 border-purple-500/25 text-purple-300',
-  blue: 'from-blue-500/25 to-blue-700/10 border-blue-500/25 text-blue-300',
-  amber: 'from-amber-500/25 to-amber-700/10 border-amber-500/25 text-amber-300',
-  green: 'from-emerald-500/25 to-emerald-700/10 border-emerald-500/25 text-emerald-300',
-};
+const isResolved = (status) => ['Resolved', 'Closed'].includes(status);
+const getTicketId = (ticket) => ticket.ticket_id || ticket.ticketId || ticket.id;
+const getSubject = (ticket) => ticket.subject || ticket.issue_category || ticket.category || 'Support request';
 
 export default function CustomerHome() {
+  const { user } = useAuth();
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
+  const [tickets, setTickets] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+    listCustomerTickets(user?.email)
+      .then((response) => {
+        if (mounted) setTickets(response.tickets || []);
+      })
+      .catch(() => {
+        if (mounted) setTickets([]);
+      })
+      .finally(() => {
+        if (mounted) setLoading(false);
+      });
+    return () => { mounted = false; };
+  }, [user?.email]);
+
+  const metrics = useMemo(() => {
+    const resolved = tickets.filter((ticket) => isResolved(ticket.status));
+    const active = tickets.filter((ticket) => !isResolved(ticket.status));
+    const responseTimes = tickets
+      .map((ticket) => Number(ticket.first_response_minutes || ticket.response_time_minutes || ticket.resolution_time_hours))
+      .filter(Number.isFinite);
+    const satisfaction = tickets
+      .map((ticket) => Number(ticket.customer_satisfaction || ticket.customer_rating || ticket.avg_csat))
+      .filter(Number.isFinite);
+    return {
+      open: active.length,
+      resolved: resolved.length,
+      avgResponse: responseTimes.length ? `${Math.round(responseTimes.reduce((sum, value) => sum + value, 0) / responseTimes.length)} min` : '-',
+      satisfaction: satisfaction.length ? `${(satisfaction.reduce((sum, value) => sum + value, 0) / satisfaction.length).toFixed(1)} / 5` : '-',
+    };
+  }, [tickets]);
+
+  const recentTickets = tickets.slice(0, 5);
 
   return (
-    <div className="min-h-screen" style={{ background: 'radial-gradient(circle at 80% 0%, rgba(37,99,235,0.18), transparent 32%), linear-gradient(135deg, #0b1022, #130d29 52%, #071426)' }}>
-      <nav className="sticky top-0 z-30 border-b border-white/10 px-5 py-4 backdrop-blur-xl" style={{ background: 'rgba(8,10,24,0.72)' }}>
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="AI Support Intelligence" className="h-11 w-11 rounded-xl object-cover ring-1 ring-purple-400/30" />
-            <div>
-              <div className="font-bold leading-tight text-white">AI Support Intelligence</div>
-              <div className="text-xs text-purple-300">Customer Portal</div>
-            </div>
-          </div>
-
-          <div className="hidden flex-1 justify-center px-6 lg:flex">
-            <div className="relative w-full max-w-xl">
-              <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
-              <input placeholder="Search for articles, tickets or solutions..." className="w-full rounded-xl border border-white/10 bg-white/5 py-3 pl-11 pr-4 text-sm text-white outline-none placeholder:text-slate-500 focus:border-purple-400/50" />
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-2 rounded-xl border border-emerald-400/20 px-3 py-2 text-xs text-slate-300 sm:flex" style={{ background: 'rgba(16,185,129,0.08)' }}>
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              Support Online
-            </div>
-            <button className="relative rounded-xl border border-white/10 p-2.5 text-slate-400 hover:text-white" style={{ background: 'rgba(255,255,255,0.04)' }}>
-              <Bell size={17} />
-            </button>
-            <div className="hidden items-center gap-2 sm:flex">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-blue-500 text-sm font-bold text-white">{user?.name?.[0] || 'C'}</div>
-              <div>
-                <div className="text-sm font-semibold text-white">{user?.name || 'Customer'}</div>
-                <div className="text-xs text-slate-500">Customer</div>
-              </div>
-            </div>
-            <button onClick={logout} className="rounded-xl p-2.5 text-slate-400 hover:text-white">
-              <LogOut size={17} />
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      <main className="mx-auto max-w-7xl space-y-5 px-5 py-6">
-        <section className="rounded-2xl border border-white/10 p-6 shadow-2xl shadow-purple-950/20" style={{ background: 'linear-gradient(135deg, rgba(139,92,246,0.16), rgba(14,165,233,0.07))' }}>
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
-            <div>
-              <h1 className="text-3xl font-bold text-white">Customer Portal</h1>
-              <p className="mt-2 text-slate-300">Raise tickets, track requests, and find support resources.</p>
+    <Layout title="Customer Dashboard">
+      <div className="mx-auto max-w-7xl space-y-6 overflow-x-hidden">
+        <section className="rounded-2xl border border-cyan-300/15 bg-gradient-to-br from-cyan-400/10 via-purple-500/10 to-transparent p-5 lg:p-7">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
+            <div className="min-w-0">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Customer Portal</p>
+              <h1 className="mt-3 text-3xl font-black tracking-tight text-white">Welcome{user?.name ? `, ${user.name}` : ''}</h1>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">Search help articles, raise requests, and track support progress from one customer workspace.</p>
               <div className="relative mt-5 max-w-2xl">
                 <Search size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
-                <input placeholder="Search for solutions, articles or ask a question..." className="w-full rounded-2xl border border-white/10 bg-white/5 py-4 pl-11 pr-28 text-sm text-white outline-none placeholder:text-slate-500 focus:border-blue-400/50" />
-                <button className="btn-primary absolute right-2 top-1/2 -translate-y-1/2 rounded-xl px-6 py-2.5 text-sm font-semibold">Search</button>
+                <input className="w-full rounded-2xl border border-white/10 bg-white/[0.045] py-4 pl-11 pr-28 text-sm text-white outline-none placeholder:text-slate-500 focus:border-cyan-300/50" placeholder="Search support articles..." />
+                <button className="absolute right-2 top-1/2 -translate-y-1/2 rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-white">Search</button>
               </div>
             </div>
-            <div className="hidden rounded-2xl border border-blue-400/20 p-5 lg:block" style={{ background: 'rgba(14,165,233,0.07)' }}>
-              <div className="text-sm font-semibold text-white">AI support workspace</div>
-              <p className="mt-2 text-sm leading-relaxed text-slate-400">Use tickets, knowledge articles, and AI guidance to get faster support outcomes.</p>
-            </div>
+            <GlassCard className="p-5">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-200">
+                  <Ticket size={22} />
+                </div>
+                <div>
+                  <p className="font-bold text-white">Support status</p>
+                  <p className="text-xs text-slate-500">{loading ? 'Loading your workspace' : `${tickets.length} ticket${tickets.length === 1 ? '' : 's'} found`}</p>
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-slate-400">Your dashboard is calculated from tickets linked to {user?.email || 'your customer account'}.</p>
+            </GlassCard>
           </div>
         </section>
 
         <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {stats.map((item) => {
+          {[
+            { label: 'Open Tickets', value: metrics.open, icon: Ticket, tone: 'text-cyan-200' },
+            { label: 'Resolved Tickets', value: metrics.resolved, icon: CheckCircle, tone: 'text-emerald-200' },
+            { label: 'Avg Response Time', value: metrics.avgResponse, icon: Clock, tone: 'text-amber-200' },
+            { label: 'Satisfaction Score', value: metrics.satisfaction, icon: Star, tone: 'text-purple-200' },
+          ].map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.label} className={`rounded-2xl border bg-gradient-to-br p-5 ${colorClass[item.color]}`}>
-                <div className="flex items-start justify-between">
+              <GlassCard key={item.label} className="p-5">
+                <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-sm text-slate-300">{item.label}</p>
-                    <p className="mt-2 text-2xl font-bold text-white">{item.value}</p>
-                    <p className="mt-2 text-xs text-emerald-300">{item.change} vs last 7 days</p>
+                    <p className="text-sm text-slate-400">{item.label}</p>
+                    <p className="mt-2 text-3xl font-black text-white">{item.value}</p>
                   </div>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
-                    <Icon size={23} />
+                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] ${item.tone}`}>
+                    <Icon size={21} />
                   </div>
                 </div>
-              </div>
+              </GlassCard>
             );
           })}
         </section>
 
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {quickActions.map((action) => {
+          {[
+            { label: 'Raise Ticket', desc: 'Submit a new support request', icon: PlusCircle, path: '/customer/raise-ticket', primary: true },
+            { label: 'My Tickets', desc: 'Review all your cases', icon: Ticket, path: '/customer/my-tickets' },
+            { label: 'Track Request', desc: 'Search by ticket ID', icon: MapPin, path: '/customer/track-ticket' },
+            { label: 'Contact Support', desc: 'Open help resources', icon: Headphones, path: '/customer/track-ticket' },
+          ].map((action) => {
             const Icon = action.icon;
             return (
-              <button key={action.label} onClick={() => navigate(action.path)} className={`group rounded-2xl border border-white/10 p-4 text-left transition-all hover:-translate-y-1 hover:border-purple-400/40 ${action.primary ? 'bg-gradient-to-br from-purple-600 to-blue-600' : 'card-glass'}`}>
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
-                      <Icon size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{action.label}</div>
-                      <div className="text-xs text-slate-300">{action.desc}</div>
-                    </div>
+              <button
+                key={action.label}
+                onClick={() => navigate(action.path)}
+                className={`rounded-2xl border p-4 text-left transition hover:-translate-y-0.5 hover:border-cyan-300/35 ${action.primary ? 'border-cyan-300/30 bg-cyan-500/15' : 'border-white/10 bg-white/[0.035]'}`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.07] text-cyan-100">
+                    <Icon size={20} />
                   </div>
-                  <ChevronRight size={18} className="text-slate-400 transition-transform group-hover:translate-x-1" />
+                  <div>
+                    <p className="font-bold text-white">{action.label}</p>
+                    <p className="mt-0.5 text-xs text-slate-400">{action.desc}</p>
+                  </div>
                 </div>
               </button>
             );
           })}
         </section>
 
-        <section className="grid grid-cols-1 gap-5 xl:grid-cols-[1.1fr_1.15fr_0.85fr]">
-          <div className="card-glass rounded-2xl overflow-hidden">
-            <div className="border-b border-white/10 p-5">
+        <section className="grid grid-cols-1 gap-5 xl:grid-cols-[1.15fr_0.95fr_0.8fr]">
+          <GlassCard className="overflow-hidden">
+            <div className="flex items-center justify-between border-b border-white/10 p-5">
               <h2 className="font-bold text-white">Recent Tickets</h2>
+              <Link className="text-sm font-semibold text-cyan-200" to="/customer/my-tickets">View all</Link>
             </div>
-            <div className="overflow-x-auto">
-              <table>
-                <thead>
-                  <tr><th>Ticket ID</th><th>Subject</th><th>Priority</th><th>Status</th><th>Last Updated</th></tr>
-                </thead>
-                <tbody>
-                  {recentTickets.map((ticket) => (
-                    <tr key={ticket.id}>
-                      <td className="text-xs font-mono text-purple-300">{ticket.id}</td>
-                      <td className="text-sm text-slate-300">{ticket.subject}</td>
-                      <td><span className={badgeClass[ticket.priority]}>{ticket.priority}</span></td>
-                      <td><span className={badgeClass[ticket.status]}>{ticket.status}</span></td>
-                      <td className="text-xs text-slate-500">{ticket.updated}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+            {recentTickets.length ? (
+              <div className="overflow-x-auto">
+                <table className="min-w-full">
+                  <thead><tr><th>Ticket</th><th>Subject</th><th>Priority</th><th>Status</th></tr></thead>
+                  <tbody>
+                    {recentTickets.map((ticket) => (
+                      <tr key={getTicketId(ticket)} className="cursor-pointer" onClick={() => navigate(`/customer/tickets/${getTicketId(ticket)}`)}>
+                        <td className="font-mono text-xs text-cyan-200">{getTicketId(ticket)}</td>
+                        <td className="text-sm text-slate-300">{getSubject(ticket)}</td>
+                        <td><PriorityBadge priority={ticket.priority} /></td>
+                        <td><StatusBadge status={ticket.status} /></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="p-8 text-center">
+                <p className="text-sm font-semibold text-white">No recent tickets</p>
+                <p className="mt-1 text-sm text-slate-500">Raise your first support request when you need help.</p>
+                <GlowButton onClick={() => navigate('/customer/raise-ticket')} className="mt-5">Raise Ticket</GlowButton>
+              </div>
+            )}
+          </GlassCard>
 
-          <div className="card-glass rounded-2xl p-5">
+          <GlassCard className="p-5">
             <h2 className="font-bold text-white">Recommended Help Articles</h2>
-            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               {articles.map((article) => {
                 const Icon = article.icon;
                 return (
-                  <button key={article.title} onClick={() => navigate('/customer/faq')} className="rounded-xl border border-white/10 p-4 text-left transition-all hover:border-purple-400/40" style={{ background: 'rgba(255,255,255,0.03)' }}>
-                    <Icon size={20} className="mb-3 text-purple-300" />
-                    <div className="text-sm font-semibold text-white">{article.title}</div>
-                  </button>
+                  <div key={article.title} className="rounded-xl border border-white/10 bg-white/[0.035] p-4">
+                    <Icon size={18} className="text-cyan-200" />
+                    <p className="mt-3 text-sm font-bold text-white">{article.title}</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">{article.desc}</p>
+                  </div>
                 );
               })}
             </div>
-          </div>
+          </GlassCard>
 
-          <div className="card-glass rounded-2xl p-5">
+          <GlassCard className="p-5">
             <h2 className="font-bold text-white">Ticket Resolution Flow</h2>
             <div className="mt-5 space-y-4">
-              {flow.map((step, index) => (
+              {['Ticket Created', 'AI Triage', 'Assigned to Agent', 'Resolution'].map((step, index) => (
                 <div key={step} className="flex gap-3">
                   <div className="flex flex-col items-center">
-                    <div className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${index < 2 ? 'bg-emerald-500 text-white' : 'bg-blue-500/20 text-blue-300'}`}>{index + 1}</div>
-                    {index < flow.length - 1 && <div className="mt-2 h-8 w-px bg-white/10" />}
+                    <div className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${index < 2 ? 'bg-emerald-500 text-white' : 'bg-white/10 text-slate-300'}`}>{index + 1}</div>
+                    {index < 3 && <div className="mt-2 h-8 w-px bg-white/10" />}
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-white">{step}</div>
-                    <div className="text-xs text-slate-500">{index < 2 ? 'Completed' : 'Next step'}</div>
+                    <p className="text-sm font-semibold text-white">{step}</p>
+                    <p className="text-xs text-slate-500">{index < 2 ? 'Automated' : 'Support workflow'}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </GlassCard>
         </section>
-      </main>
-      <ChatbotWidget />
-    </div>
+      </div>
+    </Layout>
   );
 }

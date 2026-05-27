@@ -1,29 +1,57 @@
 # Dependencies
 node_modules/
+*/node_modules/
 
 # Environment files
 .env
-.env.*
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+*/.env
+*/.env.local
+*/.env.development
+*/.env.production
+*/.env.test
+*/.env.*.local
 !.env.example
+!*/.env.example
 
 # Build outputs
 dist/
+*/dist/
 build/
+*/build/
+
+# Coverage
+coverage/
+*/coverage/
 
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Editor and OS files
-.DS_Store
-Thumbs.db
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 
-# Terraform local state
+# Terraform local state and secrets
+terraform.tfstate
+terraform.tfstate.backup
 *.tfstate
 *.tfstate.*
 .terraform/
+*/.terraform/
 .terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+
+# Local caches
+.vite/
+.cache/

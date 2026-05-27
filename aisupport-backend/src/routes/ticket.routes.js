@@ -226,12 +226,23 @@ router.post('/', optionalTicketAttachment, async (req, res) => {
   }
 });
 
+const findCustomerTicketsByEmail = async (emailValue) => {
+  const email = String(emailValue || '').toLowerCase();
+  const rows = await Ticket.find({ customer_email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') }).sort({ created_at: -1, createdAt: -1 }).limit(100).lean();
+  return rows;
+};
+
 router.get('/customer/:email', async (req, res) => {
-  const email = String(req.params.email || '').toLowerCase();
-  const rows = await Ticket.find({ customer_email: email }).sort({ created_at: -1, createdAt: -1 }).limit(100).lean();
+  const rows = await findCustomerTicketsByEmail(req.params.email);
   if (rows.length) return res.json({ success: true, tickets: rows, source: 'mongodb' });
-  const fallback = fallbackTickets().filter((item) => String(item.customer_email || '').toLowerCase() === email);
-  return res.json({ success: true, tickets: fallback, source: 'support_fallback' });
+  return res.json({ success: true, tickets: [], source: 'mongodb_empty' });
+});
+
+router.get('/customer/me/tickets', async (req, res) => {
+  const email = String(req.headers['x-user-email'] || req.query.email || '').trim();
+  if (!email) return res.status(400).json({ success: false, message: 'Customer email is required.' });
+  const rows = await findCustomerTicketsByEmail(email);
+  return res.json({ success: true, tickets: rows, source: rows.length ? 'mongodb' : 'mongodb_empty' });
 });
 
 router.get('/:id', async (req, res) => {

@@ -4,6 +4,7 @@ const User = require('../models/User.model');
 const signToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN || '7d' });
 
 const allowedOrgRoles = new Set(['support_agent', 'team_manager', 'business_executive']);
+const orgRoleAliases = new Set(['Support Agent', 'Team Manager', 'Business Executive']);
 
 const authResponse = (res, status, user) => {
   const token = signToken(user._id);
@@ -58,7 +59,22 @@ exports.orgRegister = async (req, res) => {
 };
 
 exports.orgLogin = async (req, res) => {
-  return exports.login(req, res);
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) return res.status(400).json({ success: false, message: 'Email and password required.' });
+    const user = await User.findOne({ email }).select('+password');
+    if (!user || !(await user.comparePassword(password))) {
+      return res.status(401).json({ success: false, message: 'Invalid credentials.' });
+    }
+    if (!allowedOrgRoles.has(user.role) && !orgRoleAliases.has(user.role)) {
+      return res.status(403).json({ success: false, message: 'This account belongs to the customer portal. Please use organization credentials.' });
+    }
+    user.lastLogin = new Date();
+    await user.save();
+    return authResponse(res, 200, user);
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 };
 
 exports.getMe = async (req, res) => {

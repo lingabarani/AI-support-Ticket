@@ -6,6 +6,7 @@ import logo from '../assets/ai-support-logo.png';
 import AnimatedBackground from '../components/premium/AnimatedBackground';
 import GradientBadge from '../components/premium/GradientBadge';
 import GlowButton from '../components/premium/GlowButton';
+import PlatformNavbar from '../components/PlatformNavbar';
 
 const roles = [
   {
@@ -20,7 +21,7 @@ const roles = [
     glow: 'hover:shadow-blue-500/30',
     accent: 'text-blue-200',
     kicker: 'Operational Workspace',
-    features: ['Assigned Tickets', 'AI Ticket Analysis', 'Smart Replies', 'SLA Alerts'],
+    features: ['Assigned Tickets', 'AI Analysis', 'Smart Replies', 'Knowledge Assistant'],
     cta: 'Continue as Support Agent',
   },
   {
@@ -35,7 +36,7 @@ const roles = [
     glow: 'hover:shadow-emerald-500/30',
     accent: 'text-emerald-200',
     kicker: 'Operations Leadership',
-    features: ['SLA Monitoring', 'Team Workload', 'Dataset Management', 'Performance Insights'],
+    features: ['SLA Monitoring', 'Team Analytics', 'Dataset Management', 'Operations Dashboard'],
     cta: 'Continue as Team Manager',
   },
   {
@@ -50,7 +51,7 @@ const roles = [
     glow: 'hover:shadow-amber-500/35',
     accent: 'text-amber-200',
     kicker: 'Executive Boardroom Analytics',
-    features: ['Revenue Risk', 'Churn Insights', 'Customer Sentiment', 'Strategic Reports'],
+    features: ['Revenue Risk Insights', 'Churn Analytics', 'Executive Reporting', 'Business KPIs'],
     cta: 'Continue as Business Executive',
   },
 ];
@@ -66,6 +67,7 @@ export default function RoleSelect() {
 
   return (
     <AnimatedBackground variant="blue">
+      <PlatformNavbar title="Organization Role Selection" compact />
       <main className="mx-auto flex min-h-screen max-w-7xl flex-col px-5 py-6 lg:px-8">
         <header className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -86,7 +88,7 @@ export default function RoleSelect() {
           </motion.div>
 
           <motion.div
-            className="grid gap-6 lg:grid-cols-3"
+            className="grid items-stretch gap-6 md:grid-cols-3"
             initial="hidden"
             animate="show"
             variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
@@ -94,16 +96,13 @@ export default function RoleSelect() {
             {roles.map((role) => {
               const Icon = role.icon;
               return (
-                <motion.button
+                <motion.article
                   key={role.key}
-                  type="button"
-                  onClick={() => handleRole(role)}
                   variants={{ hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }}
                   whileHover={{ y: -8, scale: 1.015 }}
-                  whileTap={{ scale: 0.99 }}
-                  className={`group relative flex min-h-[470px] overflow-hidden flex-col rounded-[1.9rem] border ${role.border} bg-gradient-to-br ${role.surface} p-7 text-left shadow-2xl ${role.glow} transition duration-300 before:absolute before:inset-0 before:rounded-[1.9rem] before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 before:transition-opacity hover:before:opacity-100`}
+                  className={`group relative flex h-full min-h-[470px] overflow-hidden flex-col rounded-[1.9rem] border ${role.border} bg-gradient-to-br ${role.surface} p-7 text-left shadow-2xl ${role.glow} transition duration-300 before:absolute before:inset-0 before:rounded-[1.9rem] before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 before:transition-opacity hover:before:opacity-100`}
                 >
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex h-full flex-col">
                   <div className={`mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${role.tone} text-white shadow-2xl ring-1 ring-white/25`}>
                     <Icon size={38} />
                   </div>
@@ -113,16 +112,16 @@ export default function RoleSelect() {
                   <div className="mt-6 grid gap-3">
                     {role.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3 text-sm text-slate-200">
-                        <CheckCircle2 size={16} className={role.accent} />
+                        <CheckCircle2 size={16} className={`${role.accent} flex-shrink-0`} />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <GlowButton className="mt-auto w-full" subtle>
+                  <GlowButton type="button" onClick={() => handleRole(role)} className="mt-auto w-full" subtle>
                     {role.cta}
                   </GlowButton>
                   </div>
-                </motion.button>
+                </motion.article>
               );
             })}
           </motion.div>

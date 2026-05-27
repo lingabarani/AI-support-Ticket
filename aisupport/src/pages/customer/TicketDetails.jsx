@@ -4,12 +4,13 @@ import Layout from '../../components/Layout';
 import { getTicket } from '../../services/ticketService';
 
 export default function TicketDetails() {
-  const { ticketId } = useParams();
+  const { id, ticketId } = useParams();
+  const resolvedTicketId = ticketId || id;
   const [ticket, setTicket] = useState(null);
 
   useEffect(() => {
-    getTicket(ticketId).then((response) => setTicket(response.ticket));
-  }, [ticketId]);
+    if (resolvedTicketId) getTicket(resolvedTicketId).then((response) => setTicket(response.ticket));
+  }, [resolvedTicketId]);
 
   return (
     <Layout title="Ticket Details">

@@ -2,33 +2,35 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
-  LayoutDashboard, Ticket, Bot, BarChart3,
+  LayoutDashboard, Ticket, Bot,
   Users, LogOut, ChevronLeft, ChevronRight,
-  TrendingUp, Lightbulb, Home, PlusCircle, Database, Search
+  Home, PlusCircle, Database, Search, ShieldCheck, Command, TimerReset, ChartNoAxesCombined
 } from 'lucide-react';
 import logo from '../assets/ai-support-logo.png';
 
 const navConfigs = {
   'Support Agent': [
     { label: 'Dashboard', icon: LayoutDashboard, path: '/agent/dashboard' },
-    { label: 'Tickets', icon: Ticket, path: '/agent/tickets' },
-    { label: 'AI Analysis', icon: Bot, path: '/agent/ai-analysis' },
+    { label: 'My Tickets', icon: Ticket, path: '/agent/tickets' },
+    { label: 'AI Analysis', icon: ChartNoAxesCombined, path: '/agent/ai-analysis' },
+    { label: 'AI Assistant', icon: Bot, path: '/agent/knowledge' },
   ],
   'Team Manager': [
     { label: 'Dashboard', icon: LayoutDashboard, path: '/team-manager/dashboard' },
-    { label: 'All Tickets', icon: Ticket, path: '/team-manager/all-tickets' },
-    { label: 'Performance', icon: Users, path: '/team-manager/performance' },
+    { label: 'SLA Monitoring', icon: TimerReset, path: '/team-manager/sla' },
+    { label: 'Team Analytics', icon: Users, path: '/team-manager/analytics' },
     { label: 'Dataset Management', icon: Database, path: '/team-manager/dataset-management' },
-    { label: 'QuickSight', icon: BarChart3, path: '/team-manager/quicksight' },
+    { label: 'AI Command Center', icon: Command, path: '/team-manager/ai-command-center' },
+    { label: 'Governance Center', icon: ShieldCheck, path: '/team-manager/governance' },
   ],
   'Business Executive': [
     { label: 'Dashboard', icon: LayoutDashboard, path: '/executive/dashboard' },
-    { label: 'Analytics', icon: TrendingUp, path: '/executive/analytics' },
-    { label: 'QuickSight', icon: BarChart3, path: '/executive/quicksight' },
-    { label: 'Insights', icon: Lightbulb, path: '/executive/analytics' },
+    { label: 'Conversational BI', icon: Bot, path: '/executive/conversational-bi' },
+    { label: 'Root Cause Analyzer', icon: ChartNoAxesCombined, path: '/executive/root-cause' },
+    { label: 'Business Insights', icon: ChartNoAxesCombined, path: '/executive/insights' },
   ],
   'Customer Portal User': [
-    { label: 'Home', icon: Home, path: '/customer/my-tickets' },
+    { label: 'Home', icon: Home, path: '/customer' },
     { label: 'Raise Ticket', icon: PlusCircle, path: '/customer/raise-ticket' },
     { label: 'Track Ticket', icon: Search, path: '/customer/track-ticket' },
     { label: 'My Tickets', icon: Ticket, path: '/customer/my-tickets' },

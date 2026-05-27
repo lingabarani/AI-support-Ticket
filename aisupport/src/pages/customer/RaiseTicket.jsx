@@ -4,6 +4,7 @@ import { Bot, CheckCircle, Clock3, FileUp, Lightbulb, Paperclip, Send, ShieldChe
 import Layout from '../../components/Layout';
 import { useAuth } from '../../context/AuthContext';
 import { createTicketForm } from '../../services/ticketService';
+import { productProofApi } from '../../services/api';
 import GlassCard from '../../components/premium/GlassCard';
 import GlowButton from '../../components/premium/GlowButton';
 import GradientBadge from '../../components/premium/GradientBadge';
@@ -18,6 +19,7 @@ export default function RaiseTicket() {
   const [submitting, setSubmitting] = useState(false);
   const [attachment, setAttachment] = useState(null);
   const [warning, setWarning] = useState('');
+  const [proofAnalysis, setProofAnalysis] = useState(null);
   const [form, setForm] = useState({
     category: '', affected_product: '', subject: '', email: user?.email || '',
     account_company: '', description: '', tags: '', priority: 'Medium',
@@ -47,6 +49,15 @@ export default function RaiseTicket() {
       });
       setTicketId(response.ticket_id || response.ticket?.ticket_id);
       setWarning(response.warning || '');
+      if (attachment && /product defect|refund/i.test(form.category)) {
+        productProofApi.analyze({
+          file: attachment,
+          orderId: response.ticket_id || response.ticket?.ticket_id,
+          productId: form.affected_product,
+          issue: form.category,
+          description: form.description,
+        }).then((proof) => setProofAnalysis(proof.analysis)).catch(() => setProofAnalysis(null));
+      }
     } finally {
       setSubmitting(false);
     }
@@ -62,6 +73,7 @@ export default function RaiseTicket() {
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-400">Your ticket is now available in the AWS support intelligence workflow with AI triage and SLA tracking enabled.</p>
             <p className="mt-5 font-mono text-lg font-bold text-cyan-200">{ticketId}</p>
             {warning ? <p className="mt-3 text-sm text-amber-200">{warning}</p> : null}
+            {proofAnalysis ? <p className="mt-3 text-sm text-cyan-200">Product proof queued: {proofAnalysis.recommendedAction}</p> : null}
             <GlowButton onClick={() => navigate(`/customer/tickets/${ticketId}`)} className="mt-7">View Ticket</GlowButton>
           </GlassCard>
         ) : (
