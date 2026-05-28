@@ -1,6 +1,7 @@
 const { getRiskScore } = require('../decisionEngine');
 const { classifyRootCause } = require('../rootCauseAnalyzer');
 const { evaluateSla } = require('../slaEngine');
+const { invokeBedrock, BEDROCK_FALLBACK_MESSAGE } = require('../bedrockService');
 
 const agentResponse = ({ status = 'completed', confidence = 0.84, input, output, recommendation, nextAction }) => ({
   agentName: 'Categorization Agent',
@@ -45,17 +46,46 @@ const inferSentiment = (ticket = {}) => {
 const inferPriority = (ticket = {}) => {
   if (ticket.priority) return ticket.priority;
   const text = textOf(ticket);
-  if (/urgent|critical|outage|security|breach|payment failed|cannot login/i.test(text)) return 'High';
+  if (/urgent|critical|outage|security|breach|payment failed|payment failure|payment deducted|order failed|fraud|account compromise|cannot login/i.test(text)) return 'High';
   if (/question|how do|request|minor/i.test(text)) return 'Low';
   return 'Medium';
 };
 
-const categorizeTicket = (ticket = {}) => {
+const extractJson = (text = '') => {
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = String(text || '').match(/\{[\s\S]*\}/);
+    if (!match) return {};
+    try {
+      return JSON.parse(match[0]);
+    } catch {
+      return {};
+    }
+  }
+};
+
+const runBedrockCategorization = async (ticket = {}) => {
+  const response = await invokeBedrock([
+    'You are the Categorization Agent for an MSP helpdesk SaaS platform.',
+    'Return strict JSON with keys: category, priority, sentiment, tags, recommendation.',
+    'Priority must be Critical, High, Medium, or Low. Sentiment must be Positive, Neutral, or Negative.',
+    `Ticket: ${JSON.stringify({
+      subject: ticket.subject,
+      description: ticket.description || ticket.ticket_description,
+      category: ticket.category || ticket.issue_category,
+    })}`,
+  ].join('\n'));
+  return response?.fallback || response === BEDROCK_FALLBACK_MESSAGE ? {} : extractJson(response);
+};
+
+const categorizeTicket = async (ticket = {}) => {
+  const ai = await runBedrockCategorization(ticket);
   const enriched = {
     ...ticket,
-    issue_category: inferCategory(ticket),
-    ai_sentiment: inferSentiment(ticket),
-    priority: inferPriority(ticket),
+    issue_category: ai.category || inferCategory(ticket),
+    ai_sentiment: ai.sentiment || inferSentiment(ticket),
+    priority: ai.priority || inferPriority(ticket),
   };
 
   const output = {
@@ -69,16 +99,19 @@ const categorizeTicket = (ticket = {}) => {
       enriched.issue_category,
       enriched.priority,
       enriched.ai_sentiment,
+      ...(Array.isArray(ai.tags) ? ai.tags : []),
     ].filter(Boolean),
+    aiRecommendation: ai.recommendation || '',
     ticket: enriched,
   };
 
   return agentResponse({
     input: ticket,
     output,
+    confidence: ai.category || ai.priority ? 0.88 : 0.76,
     recommendation: output.sla.escalationTriggered
       ? 'Escalate SLA-sensitive ticket before resolution automation.'
-      : 'Proceed to resolution analysis.',
+      : ai.recommendation || 'Proceed to resolution analysis.',
     nextAction: output.sla.escalationTriggered ? 'supervisor_agent' : 'resolution_agent',
   });
 };

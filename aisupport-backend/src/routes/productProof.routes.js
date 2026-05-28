@@ -32,6 +32,8 @@ router.post('/analyze', upload.single('uploadedImage'), async (req, res) => {
     orderId: req.body.orderId,
     metadata: {
       filename: req.file?.originalname,
+      mimeType: req.file?.mimetype,
+      size: req.file?.size,
       description: req.body.description,
       issue: req.body.issue,
       notes: req.body.notes,

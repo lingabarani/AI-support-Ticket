@@ -4,25 +4,53 @@ const normalizeApiBase = (value) => {
 };
 
 const API_BASE_URL = normalizeApiBase(import.meta.env.VITE_API_BASE_URL);
+const REQUEST_TIMEOUT_MS = Number(import.meta.env.VITE_REQUEST_TIMEOUT_MS || 20000);
 
-const request = async (path, options = {}) => {
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const request = async (path, options = {}, attempt = 0) => {
   const token = localStorage.getItem('authToken');
   const user = JSON.parse(localStorage.getItem('authUser') || '{}');
   const isFormData = options.body instanceof FormData;
-  const response = await fetch(`${API_BASE_URL}${path}`, {
-    headers: {
-      ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...(user?.role ? { 'X-User-Role': user.role } : {}),
-      ...(user?.email ? { 'X-User-Email': user.email } : {}),
-      ...(options.headers || {}),
-    },
-    ...options,
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), options.timeoutMs || REQUEST_TIMEOUT_MS);
 
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(data.message || `Request failed: ${response.status}`);
-  return data;
+  try {
+    const response = await fetch(`${API_BASE_URL}${path}`, {
+      headers: {
+        ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        ...(user?.role ? { 'X-User-Role': user.role } : {}),
+        ...(user?.email ? { 'X-User-Email': user.email } : {}),
+        ...(options.headers || {}),
+      },
+      ...options,
+      signal: controller.signal,
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const error = new Error(data.message || `Request failed: ${response.status}`);
+      error.status = response.status;
+      error.timeout = Boolean(data.timeout);
+      throw error;
+    }
+    return data;
+  } catch (error) {
+    const retryable = attempt < 1 && (error.name === 'AbortError' || error.timeout || Number(error.status || 0) >= 500);
+    if (retryable) {
+      await wait(700);
+      return request(path, options, attempt + 1);
+    }
+    if (error.name === 'AbortError') {
+      const timeoutError = new Error('Request timed out');
+      timeoutError.timeout = true;
+      throw timeoutError;
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
 };
 
 export const authApi = {
@@ -123,6 +151,8 @@ export const datasetApi = {
     form.append('datasetType', datasetType);
 
     onProgress?.(25);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), Number(import.meta.env.VITE_UPLOAD_TIMEOUT_MS || 30000));
     const response = await fetch(`${API_BASE_URL}/datasets/upload`, {
       method: 'POST',
       headers: {
@@ -131,7 +161,9 @@ export const datasetApi = {
         ...(user?.email ? { 'X-User-Email': user.email } : {}),
       },
       body: form,
+      signal: controller.signal,
     });
+    clearTimeout(timeout);
     onProgress?.(85);
     const data = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(data.message || `Upload failed: ${response.status}`);

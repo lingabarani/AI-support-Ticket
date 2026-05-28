@@ -1,6 +1,7 @@
 const { evaluateAutoResolution, buildResolutionNote } = require('../autoResolutionService');
 const { decideNextAction } = require('../decisionEngine');
 const { analyzeRootCause } = require('../rootCauseAnalyzer');
+const { invokeBedrock, BEDROCK_FALLBACK_MESSAGE } = require('../bedrockService');
 
 const agentResponse = ({ status = 'completed', confidence = 0.82, input, output, recommendation, nextAction }) => ({
   agentName: 'Resolution Agent',
@@ -31,11 +32,28 @@ const buildSuggestedResolution = (ticket = {}, rootCause = {}) => (
   || DEFAULT_RESOLUTIONS.General
 );
 
-const resolveTicket = (ticket = {}, relatedTickets = []) => {
+const runBedrockResolution = async (ticket = {}, rootCause = {}) => {
+  const response = await invokeBedrock([
+    'You are the Resolution Agent for an MSP helpdesk SaaS platform.',
+    'Recommend a concise support resolution and customer-safe next step.',
+    'Do not expose AWS details or raw provider errors.',
+    `Ticket: ${JSON.stringify({
+      subject: ticket.subject,
+      description: ticket.description || ticket.ticket_description,
+      category: ticket.issue_category || ticket.category,
+      priority: ticket.priority,
+      rootCause: rootCause.category,
+    })}`,
+  ].join('\n'));
+  return response?.fallback || response === BEDROCK_FALLBACK_MESSAGE ? '' : response;
+};
+
+const resolveTicket = async (ticket = {}, relatedTickets = []) => {
   const rootCause = analyzeRootCause(ticket, relatedTickets);
   const decision = decideNextAction(ticket);
   const autoResolution = evaluateAutoResolution(ticket);
-  const suggestedResolution = buildSuggestedResolution(ticket, rootCause);
+  const aiSuggestedResolution = await runBedrockResolution(ticket, rootCause);
+  const suggestedResolution = aiSuggestedResolution || buildSuggestedResolution(ticket, rootCause);
 
   const output = {
     rootCause,
@@ -51,7 +69,7 @@ const resolveTicket = (ticket = {}, relatedTickets = []) => {
   return agentResponse({
     input: { ticket, relatedTickets: relatedTickets.length },
     output,
-    confidence: Math.min(rootCause.confidence, decision.policy?.confidence || 0.82),
+    confidence: aiSuggestedResolution ? Math.min(0.9, decision.policy?.confidence || 0.86) : Math.min(rootCause.confidence, decision.policy?.confidence || 0.82),
     recommendation: suggestedResolution,
     nextAction: decision.decision === 'auto_resolve' ? 'automation_agent' : 'supervisor_agent',
   });

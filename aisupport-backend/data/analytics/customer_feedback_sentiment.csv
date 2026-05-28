@@ -1,0 +1,1201 @@
+feedback_id,ticket_id,customer_id,feedback_text,feedback_rating,sentiment,churn_risk,response_time_satisfaction,agent_behavior_score,resolution_satisfaction,would_recommend,customer_emotion,repeat_customer,feedback_channel,feedback_date
+FB-600000,TKT-101309,CUST-08818,Issue was resolved eventually.,3,Neutral,Low,4,4,2,No,Neutral,Yes,Phone,2024-03-15
+FB-600001,TKT-101508,CUST-05000,Satisfied with the resolution provided.,4,Positive,Low,4,1,5,Yes,Satisfied,Yes,Survey,2024-06-06
+FB-600002,TKT-100065,CUST-14956,Issue was resolved eventually.,3,Neutral,Low,2,3,4,Yes,Neutral,Yes,Social Media,2024-03-29
+FB-600003,TKT-100054,CUST-11488,Support was adequate. Could be better.,3,Neutral,Low,2,3,3,No,Neutral,Yes,Social Media,2024-06-23
+FB-600004,TKT-100569,CUST-05837,Agent was knowledgeable and helpful.,5,Positive,Low,4,1,4,Yes,Satisfied,No,Phone,2024-01-21
+FB-600005,TKT-101429,CUST-02031,Good support experience overall.,5,Positive,Low,5,5,3,Yes,Satisfied,Yes,Phone,2024-02-22
+FB-600006,TKT-101960,CUST-06097,Got the help I needed but could have been faster.,3,Neutral,Low,4,4,5,Yes,Neutral,Yes,Email,2024-02-04
+FB-600007,TKT-100735,CUST-10663,Outstanding service. Highly recommend!,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Email,2024-04-15
+FB-600008,TKT-101494,CUST-11386,Satisfied with the resolution provided.,4,Positive,Low,4,5,5,Yes,Satisfied,Yes,Survey,2024-01-14
+FB-600009,TKT-100161,CUST-04335,Good support experience overall.,4,Positive,Medium,2,1,3,Yes,Satisfied,No,Social Media,2024-03-22
+FB-600010,TKT-101813,CUST-13652,Good support experience overall.,5,Positive,Low,3,4,2,Yes,Satisfied,No,Email,2024-01-15
+FB-600011,TKT-100093,CUST-02977,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,3,1,No,Angry,No,Email,2024-03-21
+FB-600012,TKT-101751,CUST-06956,Agent was knowledgeable and helpful.,4,Positive,Low,1,4,2,Yes,Satisfied,Yes,Survey,2024-05-14
+FB-600013,TKT-101301,CUST-09208,Outstanding service. Highly recommend!,5,Very Positive,Low,1,4,4,Yes,Delighted,Yes,Chat,2024-02-06
+FB-600014,TKT-100429,CUST-14341,Good support experience overall.,5,Positive,Low,4,4,5,Yes,Satisfied,No,Email,2024-05-10
+FB-600015,TKT-101247,CUST-14415,Issue resolved in reasonable time.,5,Positive,Low,3,1,4,Yes,Satisfied,No,Phone,2024-03-30
+FB-600016,TKT-100334,CUST-08618,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Medium,5,4,4,No,Angry,Yes,Social Media,2024-05-11
+FB-600017,TKT-100449,CUST-06471,Outstanding service. Highly recommend!,5,Very Positive,Low,3,5,3,Yes,Delighted,No,Email,2024-06-08
+FB-600018,TKT-100469,CUST-04710,Agent was knowledgeable and helpful.,4,Positive,Medium,5,5,4,Yes,Satisfied,No,Survey,2024-05-13
+FB-600019,TKT-100548,CUST-10900,Issue resolved in reasonable time.,5,Positive,Low,5,4,5,Yes,Satisfied,No,Social Media,2024-04-01
+FB-600020,TKT-101794,CUST-12308,Got the help I needed but could have been faster.,3,Neutral,Low,3,4,1,Yes,Neutral,No,Survey,2024-01-03
+FB-600021,TKT-101811,CUST-03393,Staff doesn't know what they're doing. Product is broken.,2,Very Negative,Low,4,4,3,No,Angry,Yes,Phone,2024-05-31
+FB-600022,TKT-100505,CUST-01129,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,3,Yes,Delighted,No,Social Media,2024-02-21
+FB-600023,TKT-100877,CUST-06832,Nothing special but acceptable.,3,Neutral,Low,4,2,5,No,Neutral,Yes,Phone,2024-04-22
+FB-600024,TKT-101043,CUST-13794,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,3,4,Yes,Delighted,No,Email,2024-05-05
+FB-600025,TKT-100313,CUST-04519,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,4,4,2,No,Frustrated,No,Survey,2024-05-24
+FB-600026,TKT-100781,CUST-01065,Agent explained everything clearly.,5,Positive,Low,5,4,5,Yes,Satisfied,No,Social Media,2024-05-23
+FB-600027,TKT-101762,CUST-06442,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,1,4,Yes,Delighted,No,Social Media,2024-06-12
+FB-600028,TKT-101537,CUST-14451,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,3,2,5,No,Angry,Yes,Survey,2024-06-16
+FB-600029,TKT-100323,CUST-06605,Issue was resolved eventually.,3,Neutral,Low,2,3,2,No,Neutral,No,Phone,2024-05-30
+FB-600030,TKT-101039,CUST-14570,Agent was knowledgeable and helpful.,5,Positive,Low,4,5,4,Yes,Satisfied,No,Chat,2024-02-29
+FB-600031,TKT-101723,CUST-11459,Nothing special but acceptable.,3,Neutral,Low,5,4,5,Yes,Neutral,Yes,Phone,2024-01-09
+FB-600032,TKT-101104,CUST-13483,Nothing special but acceptable.,3,Neutral,Low,5,5,4,Yes,Neutral,No,Survey,2024-06-09
+FB-600033,TKT-100039,CUST-12684,Good support experience overall.,4,Positive,Low,4,4,4,Yes,Satisfied,No,Chat,2024-04-21
+FB-600034,TKT-100490,CUST-13803,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,3,3,4,No,Frustrated,No,Email,2024-06-17
+FB-600035,TKT-100175,CUST-13247,Felt like my issue wasn't prioritized.,3,Negative,Medium,3,5,4,Yes,Angry,No,Social Media,2024-05-24
+FB-600036,TKT-101568,CUST-14182,Support was adequate. Could be better.,3,Neutral,Low,4,4,3,No,Neutral,No,Phone,2024-06-06
+FB-600037,TKT-100542,CUST-02210,Best support experience I've had. Thank you!,5,Very Positive,Low,5,4,5,Yes,Delighted,No,Phone,2024-01-30
+FB-600038,TKT-101902,CUST-09679,Issue resolved in reasonable time.,4,Positive,Low,2,5,3,Yes,Satisfied,No,Survey,2024-02-04
+FB-600039,TKT-101375,CUST-04620,Good support experience overall.,5,Positive,Low,5,5,5,Yes,Satisfied,No,Social Media,2024-04-08
+FB-600040,TKT-100924,CUST-11844,Issue resolved in reasonable time.,4,Positive,Low,3,5,5,Yes,Satisfied,Yes,Chat,2024-04-25
+FB-600041,TKT-100043,CUST-07144,Nothing special but acceptable.,3,Neutral,Low,5,3,2,Yes,Neutral,No,Email,2024-01-25
+FB-600042,TKT-100145,CUST-03921,Issue was resolved eventually.,3,Neutral,Low,5,2,3,Yes,Neutral,Yes,Email,2024-06-23
+FB-600043,TKT-101760,CUST-03102,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,4,5,4,Yes,Delighted,No,Chat,2024-06-09
+FB-600044,TKT-101370,CUST-01600,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,3,5,5,Yes,Angry,No,Social Media,2024-01-13
+FB-600045,TKT-101180,CUST-06145,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,4,4,No,Angry,No,Survey,2024-04-24
+FB-600046,TKT-100389,CUST-02377,Issue was resolved eventually.,3,Neutral,Low,1,4,1,No,Neutral,Yes,Survey,2024-06-01
+FB-600047,TKT-100956,CUST-11812,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,1,1,Yes,Angry,Yes,Chat,2024-02-23
+FB-600048,TKT-101639,CUST-13652,Agent was knowledgeable and helpful.,4,Positive,Low,4,3,4,Yes,Satisfied,Yes,Phone,2024-01-06
+FB-600049,TKT-101098,CUST-05554,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,4,2,2,No,Angry,Yes,Survey,2024-04-15
+FB-600050,TKT-100511,CUST-06914,Issue was resolved eventually.,3,Neutral,Low,3,4,1,No,Neutral,No,Social Media,2024-04-26
+FB-600051,TKT-100200,CUST-12309,Support quality has declined recently.,2,Negative,Low,3,3,2,No,Frustrated,No,Email,2024-05-05
+FB-600052,TKT-101897,CUST-09232,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,3,5,4,No,Frustrated,Yes,Survey,2024-01-22
+FB-600053,TKT-100985,CUST-01138,Agent explained everything clearly.,4,Positive,Low,3,5,1,Yes,Satisfied,No,Phone,2024-03-09
+FB-600054,TKT-100776,CUST-08555,Felt like my issue wasn't prioritized.,3,Negative,Low,4,4,2,No,Frustrated,No,Survey,2024-02-08
+FB-600055,TKT-100584,CUST-07081,Nothing special but acceptable.,3,Neutral,Low,4,1,5,No,Neutral,Yes,Chat,2024-04-09
+FB-600056,TKT-100445,CUST-12171,Terrible support. I'm switching providers immediately.,1,Very Negative,High,5,4,4,No,Angry,No,Email,2024-01-04
+FB-600057,TKT-101531,CUST-01598,Agent was knowledgeable and helpful.,5,Positive,Low,1,4,5,Yes,Satisfied,Yes,Survey,2024-05-31
+FB-600058,TKT-101029,CUST-02382,Satisfied with the resolution provided.,4,Positive,Low,4,4,5,Yes,Satisfied,Yes,Social Media,2024-03-07
+FB-600059,TKT-100164,CUST-02180,Fastest resolution ever. Very impressed.,5,Very Positive,Low,2,3,3,Yes,Delighted,Yes,Email,2024-02-15
+FB-600060,TKT-101382,CUST-05628,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,3,4,3,No,Angry,No,Social Media,2024-03-30
+FB-600061,TKT-100504,CUST-01072,Nothing special but acceptable.,3,Neutral,Low,4,4,3,Yes,Neutral,No,Survey,2024-03-15
+FB-600062,TKT-101346,CUST-14545,Best support experience I've had. Thank you!,5,Very Positive,Low,5,3,2,Yes,Delighted,No,Chat,2024-05-31
+FB-600063,TKT-100418,CUST-06761,Outstanding service. Highly recommend!,5,Very Positive,Low,3,4,5,Yes,Delighted,Yes,Survey,2024-05-31
+FB-600064,TKT-100268,CUST-12796,Outstanding service. Highly recommend!,5,Very Positive,Low,2,4,4,Yes,Delighted,No,Email,2024-04-08
+FB-600065,TKT-100019,CUST-01061,Support quality has declined recently.,2,Negative,Low,4,4,3,No,Frustrated,No,Email,2024-04-09
+FB-600066,TKT-100150,CUST-05838,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,3,5,4,No,Angry,No,Phone,2024-02-21
+FB-600067,TKT-101911,CUST-01815,Agent was knowledgeable and helpful.,4,Positive,Medium,1,4,4,Yes,Satisfied,No,Chat,2024-02-22
+FB-600068,TKT-100583,CUST-06698,Agent explained everything clearly.,4,Positive,Medium,5,5,5,Yes,Satisfied,No,Chat,2024-05-01
+FB-600069,TKT-101252,CUST-14442,Nothing special but acceptable.,3,Neutral,Low,3,2,2,Yes,Neutral,No,Social Media,2024-03-14
+FB-600070,TKT-100613,CUST-01227,Excellent support! Agent went above and beyond.,5,Very Positive,Low,5,4,3,Yes,Delighted,No,Phone,2024-05-16
+FB-600071,TKT-100541,CUST-07198,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,2,5,Yes,Delighted,No,Phone,2024-04-18
+FB-600072,TKT-100557,CUST-08804,Nothing special but acceptable.,3,Neutral,Low,5,5,5,Yes,Neutral,No,Phone,2024-03-10
+FB-600073,TKT-101407,CUST-04437,Good support experience overall.,4,Positive,Low,4,4,5,Yes,Satisfied,No,Chat,2024-02-08
+FB-600074,TKT-101854,CUST-07516,Issue was resolved eventually.,3,Neutral,Low,3,4,4,Yes,Neutral,No,Chat,2024-03-01
+FB-600075,TKT-100090,CUST-07278,Outstanding service. Highly recommend!,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Chat,2024-04-22
+FB-600076,TKT-100330,CUST-09455,Felt like my issue wasn't prioritized.,2,Negative,Medium,5,1,5,No,Frustrated,No,Survey,2024-05-28
+FB-600077,TKT-101148,CUST-05493,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,1,4,5,No,Angry,Yes,Phone,2024-05-25
+FB-600078,TKT-101117,CUST-13951,Resolution took longer than expected.,2,Negative,Low,4,4,4,No,Angry,No,Phone,2024-01-12
+FB-600079,TKT-100880,CUST-04731,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,3,2,3,Yes,Delighted,Yes,Email,2024-05-01
+FB-600080,TKT-101840,CUST-05329,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,2,3,3,Yes,Frustrated,No,Chat,2024-06-03
+FB-600081,TKT-101597,CUST-04944,Agent explained everything clearly.,4,Positive,Low,3,4,3,Yes,Satisfied,No,Phone,2024-05-20
+FB-600082,TKT-101895,CUST-08532,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,5,4,Yes,Delighted,No,Phone,2024-01-10
+FB-600083,TKT-101805,CUST-08727,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,1,3,Yes,Delighted,Yes,Chat,2024-03-05
+FB-600084,TKT-101602,CUST-05090,Issue resolved in reasonable time.,4,Positive,Medium,4,4,5,Yes,Satisfied,Yes,Email,2024-01-27
+FB-600085,TKT-100783,CUST-07443,Agent was knowledgeable and helpful.,4,Positive,Low,3,3,1,Yes,Satisfied,No,Phone,2024-01-06
+FB-600086,TKT-100408,CUST-01964,Agent explained everything clearly.,4,Positive,Low,5,4,5,Yes,Satisfied,Yes,Phone,2024-06-13
+FB-600087,TKT-100456,CUST-11015,Issue resolved in reasonable time.,4,Positive,Low,4,2,5,Yes,Satisfied,Yes,Chat,2024-01-04
+FB-600088,TKT-101770,CUST-12811,Got the help I needed but could have been faster.,3,Neutral,Low,4,4,2,No,Neutral,No,Survey,2024-06-02
+FB-600089,TKT-101391,CUST-08907,Satisfied with the resolution provided.,5,Positive,Low,4,5,4,Yes,Satisfied,Yes,Email,2024-05-12
+FB-600090,TKT-100236,CUST-08332,Resolution took longer than expected.,2,Negative,Low,2,1,5,No,Frustrated,Yes,Chat,2024-03-06
+FB-600091,TKT-100078,CUST-06668,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,4,Yes,Delighted,No,Chat,2024-03-22
+FB-600092,TKT-100893,CUST-11985,Nothing special but acceptable.,3,Neutral,Low,5,3,4,Yes,Neutral,Yes,Social Media,2024-03-19
+FB-600093,TKT-100389,CUST-06402,Issue was resolved eventually.,3,Neutral,Low,5,5,2,No,Neutral,Yes,Social Media,2024-05-24
+FB-600094,TKT-101406,CUST-08157,Issue resolved in reasonable time.,5,Positive,Medium,1,4,3,Yes,Satisfied,Yes,Email,2024-05-05
+FB-600095,TKT-101943,CUST-03438,Good support experience overall.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Email,2024-04-27
+FB-600096,TKT-101474,CUST-03456,Good support experience overall.,5,Positive,Low,3,5,4,Yes,Satisfied,No,Survey,2024-04-02
+FB-600097,TKT-100668,CUST-10083,Outstanding service. Highly recommend!,5,Very Positive,Low,2,5,3,Yes,Delighted,No,Phone,2024-06-18
+FB-600098,TKT-100861,CUST-03655,Felt like my issue wasn't prioritized.,2,Negative,Low,4,4,5,No,Frustrated,No,Phone,2024-02-14
+FB-600099,TKT-101260,CUST-10203,Got the help I needed but could have been faster.,3,Neutral,Medium,4,4,4,No,Neutral,No,Email,2024-04-16
+FB-600100,TKT-100622,CUST-04416,Fastest resolution ever. Very impressed.,5,Very Positive,Medium,3,5,4,Yes,Delighted,No,Social Media,2024-06-28
+FB-600101,TKT-101242,CUST-04879,Got the help I needed but could have been faster.,3,Neutral,Low,4,4,3,No,Neutral,No,Phone,2024-05-09
+FB-600102,TKT-101046,CUST-08873,Issue resolved in reasonable time.,5,Positive,Medium,2,4,5,Yes,Satisfied,No,Chat,2024-04-16
+FB-600103,TKT-101055,CUST-09767,Satisfied with the resolution provided.,4,Positive,Low,3,4,2,Yes,Satisfied,Yes,Phone,2024-04-28
+FB-600104,TKT-101377,CUST-10156,Support was adequate. Could be better.,3,Neutral,Medium,3,3,3,Yes,Neutral,Yes,Email,2024-02-13
+FB-600105,TKT-100501,CUST-09822,Nothing special but acceptable.,3,Neutral,Low,4,4,4,Yes,Neutral,No,Social Media,2024-05-25
+FB-600106,TKT-100398,CUST-13696,Felt like my issue wasn't prioritized.,2,Negative,Low,4,4,4,No,Frustrated,No,Phone,2024-04-10
+FB-600107,TKT-100302,CUST-01542,Issue was resolved eventually.,3,Neutral,Low,4,4,5,Yes,Neutral,No,Phone,2024-04-30
+FB-600108,TKT-100360,CUST-09608,Nothing special but acceptable.,3,Neutral,Medium,2,3,2,No,Neutral,Yes,Phone,2024-03-15
+FB-600109,TKT-101878,CUST-10299,Response time was slow. Could have been resolved faster.,3,Negative,Medium,5,2,4,No,Frustrated,Yes,Survey,2024-02-05
+FB-600110,TKT-101367,CUST-03298,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,1,Yes,Delighted,No,Survey,2024-04-27
+FB-600111,TKT-101254,CUST-13798,Nothing special but acceptable.,3,Neutral,Low,4,5,4,No,Neutral,No,Social Media,2024-05-15
+FB-600112,TKT-100913,CUST-11047,Issue resolved in reasonable time.,4,Positive,Low,2,3,4,Yes,Satisfied,No,Survey,2024-01-20
+FB-600113,TKT-100921,CUST-06463,Support was adequate. Could be better.,3,Neutral,Medium,4,3,4,No,Neutral,No,Social Media,2024-05-18
+FB-600114,TKT-100992,CUST-13056,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,4,Yes,Delighted,Yes,Email,2024-01-05
+FB-600115,TKT-101461,CUST-07772,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Medium,4,2,2,No,Frustrated,Yes,Social Media,2024-01-09
+FB-600116,TKT-100165,CUST-11799,Issue resolved in reasonable time.,5,Positive,Low,4,2,5,Yes,Satisfied,Yes,Phone,2024-06-26
+FB-600117,TKT-101446,CUST-03880,Response time was slow. Could have been resolved faster.,3,Negative,Low,2,4,5,No,Angry,No,Social Media,2024-02-29
+FB-600118,TKT-100954,CUST-08723,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,4,3,2,Yes,Delighted,Yes,Survey,2024-06-13
+FB-600119,TKT-100797,CUST-13177,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,5,Yes,Delighted,No,Email,2024-03-29
+FB-600120,TKT-101754,CUST-11470,Satisfied with the resolution provided.,5,Positive,Low,3,4,3,Yes,Satisfied,Yes,Email,2024-01-23
+FB-600121,TKT-101930,CUST-09860,Got the help I needed but could have been faster.,3,Neutral,Low,3,4,4,No,Neutral,No,Survey,2024-02-22
+FB-600122,TKT-101102,CUST-13458,Best support experience I've had. Thank you!,5,Very Positive,Low,2,5,4,Yes,Delighted,No,Phone,2024-02-11
+FB-600123,TKT-100999,CUST-12502,Resolution took longer than expected.,2,Negative,Low,4,5,4,No,Angry,No,Email,2024-04-06
+FB-600124,TKT-100796,CUST-06664,Agent explained everything clearly.,4,Positive,Low,1,4,5,Yes,Satisfied,No,Survey,2024-05-02
+FB-600125,TKT-101883,CUST-04731,Satisfied with the resolution provided.,5,Positive,Low,2,5,2,Yes,Satisfied,No,Survey,2024-01-15
+FB-600126,TKT-101212,CUST-01842,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,1,Yes,Satisfied,Yes,Survey,2024-04-24
+FB-600127,TKT-100277,CUST-13428,Agent explained everything clearly.,5,Positive,Low,4,5,5,Yes,Satisfied,Yes,Chat,2024-04-13
+FB-600128,TKT-100776,CUST-13732,Issue resolved in reasonable time.,5,Positive,Low,3,4,5,Yes,Satisfied,No,Chat,2024-04-13
+FB-600129,TKT-101558,CUST-08261,Agent explained everything clearly.,4,Positive,Low,4,4,2,Yes,Satisfied,Yes,Survey,2024-03-08
+FB-600130,TKT-100516,CUST-03187,Agent was knowledgeable and helpful.,4,Positive,Low,2,4,4,Yes,Satisfied,No,Social Media,2024-02-20
+FB-600131,TKT-100106,CUST-01591,Issue resolved in reasonable time.,5,Positive,Low,5,2,3,Yes,Satisfied,No,Email,2024-03-30
+FB-600132,TKT-101544,CUST-12150,Fastest resolution ever. Very impressed.,5,Very Positive,Medium,5,5,4,Yes,Delighted,Yes,Email,2024-06-16
+FB-600133,TKT-101272,CUST-01226,Issue resolved in reasonable time.,4,Positive,Medium,3,5,1,Yes,Satisfied,Yes,Email,2024-06-17
+FB-600134,TKT-101155,CUST-08448,Felt like my issue wasn't prioritized.,3,Negative,Low,5,3,3,No,Angry,No,Phone,2024-01-17
+FB-600135,TKT-101240,CUST-12400,Agent was knowledgeable and helpful.,4,Positive,Low,2,3,4,Yes,Satisfied,No,Phone,2024-03-28
+FB-600136,TKT-101975,CUST-11825,Issue was resolved eventually.,3,Neutral,Low,3,3,3,Yes,Neutral,No,Social Media,2024-02-18
+FB-600137,TKT-101387,CUST-07516,Felt like my issue wasn't prioritized.,3,Negative,Low,4,5,4,No,Frustrated,No,Phone,2024-03-11
+FB-600138,TKT-100155,CUST-09306,Issue resolved in reasonable time.,4,Positive,Low,3,5,3,Yes,Satisfied,Yes,Chat,2024-06-06
+FB-600139,TKT-101741,CUST-11633,Support quality has declined recently.,2,Negative,Low,5,4,3,No,Angry,No,Social Media,2024-04-22
+FB-600140,TKT-101602,CUST-04629,Got the help I needed but could have been faster.,3,Neutral,Low,2,3,5,No,Neutral,No,Email,2024-04-12
+FB-600141,TKT-101036,CUST-14852,Good support experience overall.,5,Positive,Low,4,4,1,Yes,Satisfied,Yes,Survey,2024-02-01
+FB-600142,TKT-101684,CUST-06660,Agent was knowledgeable and helpful.,4,Positive,Low,4,3,2,Yes,Satisfied,No,Chat,2024-03-12
+FB-600143,TKT-101301,CUST-10557,Felt like my issue wasn't prioritized.,2,Negative,Low,5,4,4,No,Angry,No,Survey,2024-03-28
+FB-600144,TKT-100360,CUST-05087,Satisfied with the resolution provided.,5,Positive,Low,5,5,2,Yes,Satisfied,No,Chat,2024-05-21
+FB-600145,TKT-101261,CUST-06456,Nothing special but acceptable.,3,Neutral,Low,1,2,3,No,Neutral,No,Social Media,2024-05-26
+FB-600146,TKT-100549,CUST-06851,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,3,5,5,No,Frustrated,No,Email,2024-05-09
+FB-600147,TKT-100571,CUST-06604,Standard support experience.,3,Neutral,Medium,5,3,5,Yes,Neutral,No,Social Media,2024-05-16
+FB-600148,TKT-101249,CUST-11301,Standard support experience.,3,Neutral,Low,5,5,2,No,Neutral,Yes,Chat,2024-06-06
+FB-600149,TKT-100372,CUST-01468,Issue resolved in reasonable time.,5,Positive,Low,2,4,4,Yes,Satisfied,Yes,Chat,2024-01-09
+FB-600150,TKT-100697,CUST-13055,Satisfied with the resolution provided.,4,Positive,Low,2,4,4,Yes,Satisfied,No,Chat,2024-06-02
+FB-600151,TKT-101138,CUST-04436,Satisfied with the resolution provided.,4,Positive,Low,4,5,4,Yes,Satisfied,No,Email,2024-02-11
+FB-600152,TKT-100494,CUST-12584,Agent explained everything clearly.,5,Positive,Medium,3,4,4,Yes,Satisfied,No,Phone,2024-04-26
+FB-600153,TKT-101414,CUST-14129,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Low,3,5,3,No,Angry,No,Email,2024-02-22
+FB-600154,TKT-100190,CUST-04688,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,3,5,4,No,Frustrated,No,Phone,2024-02-23
+FB-600155,TKT-100627,CUST-09767,Satisfied with the resolution provided.,4,Positive,Medium,4,2,5,Yes,Satisfied,Yes,Social Media,2024-01-11
+FB-600156,TKT-101087,CUST-13373,Standard support experience.,3,Neutral,Low,3,4,4,No,Neutral,Yes,Survey,2024-04-20
+FB-600157,TKT-100554,CUST-01246,Outstanding service. Highly recommend!,5,Very Positive,Medium,4,3,4,Yes,Delighted,Yes,Phone,2024-03-21
+FB-600158,TKT-100646,CUST-09436,Satisfied with the resolution provided.,4,Positive,Medium,4,4,3,Yes,Satisfied,No,Phone,2024-02-09
+FB-600159,TKT-100392,CUST-07964,Agent explained everything clearly.,4,Positive,Low,4,4,1,Yes,Satisfied,Yes,Social Media,2024-04-17
+FB-600160,TKT-101556,CUST-03834,Satisfied with the resolution provided.,5,Positive,High,2,3,5,Yes,Satisfied,Yes,Email,2024-02-18
+FB-600161,TKT-101705,CUST-13805,Resolution took longer than expected.,3,Negative,Low,4,2,5,Yes,Angry,Yes,Chat,2024-05-28
+FB-600162,TKT-100028,CUST-07153,Satisfied with the resolution provided.,4,Positive,Low,5,3,4,Yes,Satisfied,Yes,Email,2024-05-22
+FB-600163,TKT-101995,CUST-14631,Satisfied with the resolution provided.,4,Positive,Low,1,5,5,Yes,Satisfied,Yes,Phone,2024-05-30
+FB-600164,TKT-101306,CUST-04132,Agent explained everything clearly.,5,Positive,Low,1,4,3,Yes,Satisfied,Yes,Email,2024-06-24
+FB-600165,TKT-101175,CUST-03170,Felt like my issue wasn't prioritized.,2,Negative,Low,4,5,5,No,Frustrated,No,Chat,2024-04-12
+FB-600166,TKT-100377,CUST-03752,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,4,4,5,No,Angry,No,Survey,2024-06-19
+FB-600167,TKT-100233,CUST-04710,Issue was resolved eventually.,3,Neutral,Low,1,3,4,No,Neutral,No,Social Media,2024-04-02
+FB-600168,TKT-101289,CUST-13847,Agent was knowledgeable and helpful.,4,Positive,Low,5,4,3,Yes,Satisfied,Yes,Social Media,2024-02-24
+FB-600169,TKT-101943,CUST-05490,Agent was knowledgeable and helpful.,5,Positive,Medium,5,4,5,Yes,Satisfied,No,Email,2024-05-02
+FB-600170,TKT-101142,CUST-07595,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Social Media,2024-01-16
+FB-600171,TKT-100462,CUST-01030,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,Yes,Survey,2024-05-12
+FB-600172,TKT-100608,CUST-14554,Satisfied with the resolution provided.,4,Positive,Medium,3,3,3,Yes,Satisfied,No,Chat,2024-02-06
+FB-600173,TKT-101164,CUST-10133,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,1,2,3,No,Angry,No,Email,2024-05-19
+FB-600174,TKT-101940,CUST-03594,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,4,5,Yes,Delighted,No,Chat,2024-03-03
+FB-600175,TKT-101352,CUST-12754,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,3,5,Yes,Delighted,Yes,Social Media,2024-02-28
+FB-600176,TKT-100153,CUST-05763,Issue was resolved eventually.,3,Neutral,Low,2,5,2,No,Neutral,No,Social Media,2024-04-16
+FB-600177,TKT-100962,CUST-02312,Response time was slow. Could have been resolved faster.,3,Negative,High,5,5,5,Yes,Frustrated,Yes,Chat,2024-06-25
+FB-600178,TKT-101439,CUST-02148,Agent explained everything clearly.,5,Positive,Low,2,4,5,Yes,Satisfied,Yes,Phone,2024-03-02
+FB-600179,TKT-101892,CUST-04232,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Phone,2024-03-29
+FB-600180,TKT-100870,CUST-04923,Satisfied with the resolution provided.,5,Positive,Low,4,4,3,Yes,Satisfied,Yes,Phone,2024-01-29
+FB-600181,TKT-101860,CUST-04718,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,5,4,Yes,Delighted,Yes,Phone,2024-01-05
+FB-600182,TKT-101623,CUST-07963,Satisfied with the resolution provided.,5,Positive,Low,3,3,4,Yes,Satisfied,No,Social Media,2024-03-30
+FB-600183,TKT-101886,CUST-05323,Agent explained everything clearly.,4,Positive,Low,4,2,5,Yes,Satisfied,Yes,Chat,2024-02-09
+FB-600184,TKT-101433,CUST-10083,Outstanding service. Highly recommend!,5,Very Positive,Low,5,4,4,Yes,Delighted,No,Survey,2024-02-09
+FB-600185,TKT-100896,CUST-05082,Satisfied with the resolution provided.,4,Positive,Low,4,5,3,Yes,Satisfied,Yes,Survey,2024-02-28
+FB-600186,TKT-101504,CUST-06851,Best support experience I've had. Thank you!,5,Very Positive,Low,5,4,4,Yes,Delighted,Yes,Email,2024-06-03
+FB-600187,TKT-100468,CUST-12744,Satisfied with the resolution provided.,4,Positive,Low,5,4,5,Yes,Satisfied,No,Email,2024-06-18
+FB-600188,TKT-101566,CUST-10202,Resolution took longer than expected.,2,Negative,Medium,5,1,4,No,Angry,No,Phone,2024-01-12
+FB-600189,TKT-100963,CUST-03364,Staff doesn't know what they're doing. Product is broken.,2,Very Negative,Medium,3,4,2,No,Angry,No,Phone,2024-04-07
+FB-600190,TKT-101198,CUST-13841,Agent explained everything clearly.,5,Positive,Low,2,3,1,Yes,Satisfied,No,Survey,2024-03-03
+FB-600191,TKT-100712,CUST-02126,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,2,No,Neutral,No,Phone,2024-03-08
+FB-600192,TKT-100675,CUST-05090,Standard support experience.,3,Neutral,Low,1,4,3,No,Neutral,No,Survey,2024-04-29
+FB-600193,TKT-101666,CUST-11342,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,4,4,4,No,Angry,Yes,Email,2024-06-28
+FB-600194,TKT-100644,CUST-05975,Good support experience overall.,4,Positive,Medium,5,4,5,Yes,Satisfied,Yes,Survey,2024-02-27
+FB-600195,TKT-101771,CUST-07458,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,5,4,4,No,Angry,No,Social Media,2024-02-08
+FB-600196,TKT-100946,CUST-08771,Agent was knowledgeable and helpful.,4,Positive,Low,2,2,4,Yes,Satisfied,Yes,Chat,2024-01-22
+FB-600197,TKT-101275,CUST-03205,Felt like my issue wasn't prioritized.,2,Negative,Low,2,4,5,No,Frustrated,No,Email,2024-03-24
+FB-600198,TKT-100416,CUST-14451,Nothing special but acceptable.,3,Neutral,Low,5,4,5,Yes,Neutral,No,Survey,2024-01-15
+FB-600199,TKT-101803,CUST-06404,Agent explained everything clearly.,4,Positive,Medium,4,4,5,Yes,Satisfied,Yes,Social Media,2024-01-27
+FB-600200,TKT-101636,CUST-09488,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,5,5,Yes,Delighted,Yes,Email,2024-06-22
+FB-600201,TKT-101131,CUST-03755,Agent was knowledgeable and helpful.,4,Positive,Low,2,1,5,Yes,Satisfied,Yes,Email,2024-05-10
+FB-600202,TKT-100945,CUST-05781,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,2,2,4,No,Frustrated,No,Chat,2024-06-14
+FB-600203,TKT-101042,CUST-14619,Got the help I needed but could have been faster.,3,Neutral,Medium,4,3,4,No,Neutral,No,Survey,2024-03-12
+FB-600204,TKT-100499,CUST-05425,Nothing special but acceptable.,3,Neutral,Low,1,2,3,Yes,Neutral,Yes,Social Media,2024-04-19
+FB-600205,TKT-101040,CUST-01424,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,5,Yes,Delighted,No,Chat,2024-06-17
+FB-600206,TKT-101582,CUST-10961,Staff doesn't know what they're doing. Product is broken.,2,Very Negative,Low,2,2,4,No,Angry,Yes,Social Media,2024-03-20
+FB-600207,TKT-100547,CUST-02591,Agent was knowledgeable and helpful.,5,Positive,Low,4,1,3,Yes,Satisfied,Yes,Chat,2024-01-02
+FB-600208,TKT-101715,CUST-12160,Satisfied with the resolution provided.,4,Positive,Low,1,2,3,Yes,Satisfied,No,Survey,2024-06-14
+FB-600209,TKT-101772,CUST-03387,Agent explained everything clearly.,5,Positive,Low,5,1,4,Yes,Satisfied,No,Chat,2024-04-13
+FB-600210,TKT-100680,CUST-04335,Satisfied with the resolution provided.,4,Positive,Low,4,4,4,Yes,Satisfied,Yes,Chat,2024-02-10
+FB-600211,TKT-101780,CUST-04729,Issue resolved in reasonable time.,5,Positive,Low,4,5,4,Yes,Satisfied,No,Phone,2024-05-06
+FB-600212,TKT-101753,CUST-01030,Felt like my issue wasn't prioritized.,3,Negative,Low,4,5,4,Yes,Frustrated,Yes,Survey,2024-04-15
+FB-600213,TKT-101444,CUST-06798,Standard support experience.,3,Neutral,Low,4,4,4,No,Neutral,No,Phone,2024-05-01
+FB-600214,TKT-101014,CUST-12687,Support was adequate. Could be better.,3,Neutral,Low,4,5,4,No,Neutral,No,Survey,2024-02-01
+FB-600215,TKT-100204,CUST-06691,Agent explained everything clearly.,5,Positive,Medium,4,3,4,Yes,Satisfied,Yes,Phone,2024-02-28
+FB-600216,TKT-100839,CUST-12547,Issue resolved in reasonable time.,5,Positive,Low,2,4,3,Yes,Satisfied,Yes,Chat,2024-05-14
+FB-600217,TKT-100693,CUST-02452,Agent explained everything clearly.,5,Positive,Low,3,5,4,Yes,Satisfied,No,Chat,2024-04-17
+FB-600218,TKT-101745,CUST-07372,Satisfied with the resolution provided.,5,Positive,Medium,5,4,4,Yes,Satisfied,Yes,Chat,2024-04-26
+FB-600219,TKT-101283,CUST-13696,Standard support experience.,3,Neutral,Low,4,5,4,Yes,Neutral,No,Phone,2024-04-24
+FB-600220,TKT-101292,CUST-11633,Got the help I needed but could have been faster.,3,Neutral,Low,3,4,5,Yes,Neutral,No,Survey,2024-04-08
+FB-600221,TKT-100201,CUST-11342,Agent was knowledgeable and helpful.,5,Positive,Low,2,3,5,Yes,Satisfied,No,Chat,2024-04-28
+FB-600222,TKT-101850,CUST-07767,Issue was resolved eventually.,3,Neutral,Medium,3,2,4,No,Neutral,No,Chat,2024-01-14
+FB-600223,TKT-100734,CUST-11164,Agent explained everything clearly.,4,Positive,Low,1,4,3,Yes,Satisfied,Yes,Social Media,2024-01-28
+FB-600224,TKT-100843,CUST-02935,Support was adequate. Could be better.,3,Neutral,Low,3,5,2,Yes,Neutral,Yes,Social Media,2024-02-14
+FB-600225,TKT-101783,CUST-14629,Nothing special but acceptable.,3,Neutral,Low,5,4,3,Yes,Neutral,No,Social Media,2024-04-02
+FB-600226,TKT-100293,CUST-14902,Standard support experience.,3,Neutral,Low,3,3,4,No,Neutral,No,Email,2024-01-01
+FB-600227,TKT-101840,CUST-06156,Standard support experience.,3,Neutral,Low,3,4,3,No,Neutral,No,Phone,2024-06-13
+FB-600228,TKT-100151,CUST-11815,Good support experience overall.,5,Positive,Low,4,5,3,Yes,Satisfied,No,Chat,2024-05-27
+FB-600229,TKT-101308,CUST-08529,Got the help I needed but could have been faster.,3,Neutral,Medium,4,5,1,No,Neutral,No,Phone,2024-04-28
+FB-600230,TKT-100787,CUST-10751,Standard support experience.,3,Neutral,Low,1,2,4,Yes,Neutral,Yes,Social Media,2024-01-12
+FB-600231,TKT-100735,CUST-01571,Resolution took longer than expected.,2,Negative,Low,4,1,3,No,Angry,No,Chat,2024-02-08
+FB-600232,TKT-100044,CUST-04097,Agent explained everything clearly.,4,Positive,Low,3,4,2,Yes,Satisfied,Yes,Social Media,2024-05-05
+FB-600233,TKT-101771,CUST-06710,Issue was resolved eventually.,3,Neutral,Low,2,4,5,No,Neutral,No,Chat,2024-05-08
+FB-600234,TKT-101588,CUST-08135,Issue resolved in reasonable time.,4,Positive,Low,5,3,4,Yes,Satisfied,No,Chat,2024-02-24
+FB-600235,TKT-100448,CUST-04948,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,3,5,Yes,Delighted,No,Phone,2024-02-16
+FB-600236,TKT-101286,CUST-07748,Agent was knowledgeable and helpful.,5,Positive,Medium,4,5,4,Yes,Satisfied,Yes,Survey,2024-01-31
+FB-600237,TKT-100068,CUST-14037,Good support experience overall.,4,Positive,Low,4,3,2,Yes,Satisfied,No,Email,2024-03-03
+FB-600238,TKT-101862,CUST-09338,Outstanding service. Highly recommend!,5,Very Positive,Low,5,5,4,Yes,Delighted,No,Phone,2024-03-08
+FB-600239,TKT-100411,CUST-09367,Satisfied with the resolution provided.,5,Positive,Low,4,5,5,Yes,Satisfied,No,Chat,2024-01-23
+FB-600240,TKT-101087,CUST-12645,Got the help I needed but could have been faster.,3,Neutral,Low,2,4,1,Yes,Neutral,Yes,Survey,2024-05-22
+FB-600241,TKT-101981,CUST-01524,Good support experience overall.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Chat,2024-02-18
+FB-600242,TKT-101647,CUST-04923,Agent explained everything clearly.,4,Positive,Low,1,4,4,Yes,Satisfied,No,Phone,2024-03-14
+FB-600243,TKT-101544,CUST-03939,Agent explained everything clearly.,4,Positive,Low,5,4,4,Yes,Satisfied,No,Social Media,2024-04-26
+FB-600244,TKT-100749,CUST-12849,Agent was professional and solved issue immediately.,5,Very Positive,Medium,2,4,3,Yes,Delighted,Yes,Social Media,2024-01-15
+FB-600245,TKT-100253,CUST-07320,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,4,No,Neutral,No,Chat,2024-01-21
+FB-600246,TKT-100221,CUST-14031,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,1,5,4,No,Frustrated,No,Social Media,2024-03-08
+FB-600247,TKT-101810,CUST-11488,Outstanding service. Highly recommend!,5,Very Positive,Low,2,4,3,Yes,Delighted,No,Phone,2024-02-21
+FB-600248,TKT-101326,CUST-08114,Agent explained everything clearly.,4,Positive,Low,4,3,4,Yes,Satisfied,No,Chat,2024-05-25
+FB-600249,TKT-101329,CUST-02126,Issue was resolved eventually.,3,Neutral,Low,5,4,2,Yes,Neutral,Yes,Email,2024-04-17
+FB-600250,TKT-100623,CUST-04212,Response time was slow. Could have been resolved faster.,2,Negative,Medium,3,5,2,No,Angry,Yes,Social Media,2024-03-24
+FB-600251,TKT-100277,CUST-10352,Agent explained everything clearly.,4,Positive,Low,3,4,2,Yes,Satisfied,Yes,Social Media,2024-05-20
+FB-600252,TKT-100858,CUST-12160,Issue resolved in reasonable time.,5,Positive,Low,4,5,4,Yes,Satisfied,No,Email,2024-05-01
+FB-600253,TKT-101707,CUST-09262,Nothing special but acceptable.,3,Neutral,Low,4,4,3,No,Neutral,No,Chat,2024-03-08
+FB-600254,TKT-100067,CUST-14887,Got the help I needed but could have been faster.,3,Neutral,Low,3,4,2,Yes,Neutral,No,Phone,2024-06-12
+FB-600255,TKT-101751,CUST-01100,Response time was slow. Could have been resolved faster.,2,Negative,Low,2,5,5,No,Frustrated,No,Chat,2024-05-29
+FB-600256,TKT-101115,CUST-11000,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,2,4,3,No,Angry,Yes,Chat,2024-03-17
+FB-600257,TKT-100388,CUST-13839,Agent explained everything clearly.,5,Positive,Medium,3,4,4,Yes,Satisfied,Yes,Phone,2024-02-11
+FB-600258,TKT-101314,CUST-02472,Nothing special but acceptable.,3,Neutral,Low,4,5,2,Yes,Neutral,Yes,Chat,2024-01-19
+FB-600259,TKT-100498,CUST-14182,Satisfied with the resolution provided.,5,Positive,Low,3,2,2,Yes,Satisfied,Yes,Social Media,2024-04-06
+FB-600260,TKT-100424,CUST-14970,Issue resolved in reasonable time.,4,Positive,Low,2,4,1,Yes,Satisfied,No,Phone,2024-02-18
+FB-600261,TKT-100672,CUST-04919,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,4,3,Yes,Delighted,No,Social Media,2024-02-19
+FB-600262,TKT-100005,CUST-06141,Issue resolved in reasonable time.,5,Positive,Low,3,4,5,Yes,Satisfied,No,Social Media,2024-01-02
+FB-600263,TKT-100513,CUST-11235,Support was adequate. Could be better.,3,Neutral,Low,3,3,4,Yes,Neutral,No,Email,2024-02-05
+FB-600264,TKT-100269,CUST-03479,Outstanding service. Highly recommend!,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Phone,2024-06-06
+FB-600265,TKT-101205,CUST-14359,Agent was knowledgeable and helpful.,5,Positive,High,3,5,4,Yes,Satisfied,Yes,Email,2024-01-30
+FB-600266,TKT-100259,CUST-01907,Standard support experience.,3,Neutral,Low,2,5,5,Yes,Neutral,No,Survey,2024-04-17
+FB-600267,TKT-100918,CUST-05349,Got the help I needed but could have been faster.,3,Neutral,Low,1,3,5,Yes,Neutral,No,Phone,2024-02-01
+FB-600268,TKT-101936,CUST-07023,Response time was slow. Could have been resolved faster.,3,Negative,Low,2,2,2,No,Frustrated,No,Email,2024-03-06
+FB-600269,TKT-100124,CUST-13026,Standard support experience.,3,Neutral,Low,2,4,5,No,Neutral,No,Survey,2024-05-30
+FB-600270,TKT-101458,CUST-06282,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,5,4,Yes,Delighted,Yes,Email,2024-02-29
+FB-600271,TKT-100659,CUST-14083,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,2,5,Yes,Delighted,Yes,Chat,2024-02-04
+FB-600272,TKT-101278,CUST-10102,Satisfied with the resolution provided.,5,Positive,Low,5,5,3,Yes,Satisfied,No,Chat,2024-03-13
+FB-600273,TKT-100780,CUST-06473,Nothing special but acceptable.,3,Neutral,Medium,2,3,5,No,Neutral,No,Social Media,2024-01-10
+FB-600274,TKT-100881,CUST-12531,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,5,5,4,Yes,Delighted,No,Social Media,2024-04-19
+FB-600275,TKT-101476,CUST-02261,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,5,5,Yes,Delighted,No,Phone,2024-05-20
+FB-600276,TKT-100847,CUST-05262,Standard support experience.,3,Neutral,Medium,1,2,5,No,Neutral,No,Email,2024-01-12
+FB-600277,TKT-100640,CUST-05968,Outstanding service. Highly recommend!,5,Very Positive,Low,3,4,4,Yes,Delighted,No,Chat,2024-02-29
+FB-600278,TKT-101952,CUST-01226,Agent was professional and solved issue immediately.,5,Very Positive,High,1,4,3,Yes,Delighted,Yes,Email,2024-01-31
+FB-600279,TKT-100190,CUST-14844,Response time was slow. Could have been resolved faster.,2,Negative,Medium,2,4,5,No,Frustrated,No,Chat,2024-03-23
+FB-600280,TKT-101662,CUST-09399,Support quality has declined recently.,2,Negative,Medium,3,2,4,No,Frustrated,Yes,Social Media,2024-01-04
+FB-600281,TKT-101150,CUST-08171,Agent was knowledgeable and helpful.,5,Positive,Low,4,3,4,Yes,Satisfied,No,Survey,2024-05-03
+FB-600282,TKT-101777,CUST-12115,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Social Media,2024-01-07
+FB-600283,TKT-100639,CUST-09860,Agent was knowledgeable and helpful.,5,Positive,Low,4,5,1,Yes,Satisfied,No,Phone,2024-05-09
+FB-600284,TKT-100316,CUST-09566,Felt like my issue wasn't prioritized.,2,Negative,High,3,5,2,No,Frustrated,Yes,Email,2024-03-05
+FB-600285,TKT-100717,CUST-03141,Nothing special but acceptable.,3,Neutral,Low,4,3,1,No,Neutral,Yes,Chat,2024-06-08
+FB-600286,TKT-101175,CUST-07654,Agent explained everything clearly.,4,Positive,Low,4,4,3,Yes,Satisfied,No,Social Media,2024-04-26
+FB-600287,TKT-101256,CUST-14031,Satisfied with the resolution provided.,5,Positive,Low,2,4,5,Yes,Satisfied,Yes,Chat,2024-06-28
+FB-600288,TKT-100059,CUST-09921,Outstanding service. Highly recommend!,5,Very Positive,Low,5,2,2,Yes,Delighted,No,Chat,2024-04-29
+FB-600289,TKT-101887,CUST-11969,Got the help I needed but could have been faster.,3,Neutral,Low,3,3,5,Yes,Neutral,Yes,Phone,2024-02-27
+FB-600290,TKT-101159,CUST-12351,Standard support experience.,3,Neutral,Low,5,4,3,Yes,Neutral,Yes,Email,2024-06-25
+FB-600291,TKT-100187,CUST-01424,Satisfied with the resolution provided.,5,Positive,Low,5,2,5,Yes,Satisfied,Yes,Survey,2024-03-27
+FB-600292,TKT-100929,CUST-08640,Issue resolved in reasonable time.,4,Positive,Medium,4,4,5,Yes,Satisfied,Yes,Chat,2024-05-31
+FB-600293,TKT-101590,CUST-05321,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,3,3,3,No,Angry,Yes,Email,2024-05-22
+FB-600294,TKT-100318,CUST-11686,Best support experience I've had. Thank you!,5,Very Positive,Low,3,4,4,Yes,Delighted,Yes,Email,2024-04-05
+FB-600295,TKT-100557,CUST-02369,Felt like my issue wasn't prioritized.,3,Negative,High,1,5,3,No,Angry,No,Survey,2024-06-01
+FB-600296,TKT-100559,CUST-14489,Best support experience I've had. Thank you!,5,Very Positive,Low,1,3,3,Yes,Delighted,Yes,Survey,2024-04-14
+FB-600297,TKT-100227,CUST-07912,Satisfied with the resolution provided.,5,Positive,Low,5,3,2,Yes,Satisfied,No,Chat,2024-03-31
+FB-600298,TKT-100093,CUST-04317,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,5,5,Yes,Delighted,No,Email,2024-05-03
+FB-600299,TKT-100015,CUST-13095,Resolution took longer than expected.,3,Negative,Low,5,3,3,Yes,Frustrated,No,Chat,2024-05-03
+FB-600300,TKT-100592,CUST-11051,Issue was resolved eventually.,3,Neutral,Medium,3,5,4,Yes,Neutral,No,Survey,2024-06-27
+FB-600301,TKT-100359,CUST-13502,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,5,5,Yes,Delighted,No,Phone,2024-01-12
+FB-600302,TKT-101024,CUST-14915,Outstanding service. Highly recommend!,5,Very Positive,Low,4,4,5,Yes,Delighted,Yes,Email,2024-04-13
+FB-600303,TKT-100893,CUST-01953,Agent explained everything clearly.,4,Positive,Low,2,4,5,Yes,Satisfied,No,Chat,2024-01-22
+FB-600304,TKT-101179,CUST-14727,Satisfied with the resolution provided.,4,Positive,Medium,2,5,5,Yes,Satisfied,No,Survey,2024-04-04
+FB-600305,TKT-100592,CUST-04923,Agent explained everything clearly.,4,Positive,Low,4,4,4,Yes,Satisfied,Yes,Chat,2024-01-03
+FB-600306,TKT-100351,CUST-09257,Nothing special but acceptable.,3,Neutral,Low,4,5,4,No,Neutral,No,Chat,2024-05-07
+FB-600307,TKT-100180,CUST-08960,Issue was resolved eventually.,3,Neutral,Medium,4,5,4,Yes,Neutral,No,Survey,2024-01-03
+FB-600308,TKT-101073,CUST-14537,Agent was professional and solved issue immediately.,5,Very Positive,Medium,3,5,3,Yes,Delighted,No,Chat,2024-01-10
+FB-600309,TKT-100453,CUST-08630,Issue resolved in reasonable time.,5,Positive,Low,2,4,5,Yes,Satisfied,Yes,Email,2024-06-12
+FB-600310,TKT-101086,CUST-10367,Waited 3 days for response. Worst experience ever.,2,Very Negative,Low,5,1,4,No,Angry,No,Chat,2024-04-30
+FB-600311,TKT-100719,CUST-01837,Issue resolved in reasonable time.,5,Positive,Medium,3,5,5,Yes,Satisfied,Yes,Phone,2024-05-11
+FB-600312,TKT-100524,CUST-12357,Support was adequate. Could be better.,3,Neutral,Low,4,3,2,Yes,Neutral,No,Email,2024-02-23
+FB-600313,TKT-100362,CUST-06161,Agent explained everything clearly.,4,Positive,Medium,2,3,3,Yes,Satisfied,No,Social Media,2024-01-17
+FB-600314,TKT-101556,CUST-14037,Agent explained everything clearly.,5,Positive,Low,4,2,3,Yes,Satisfied,No,Social Media,2024-05-11
+FB-600315,TKT-101316,CUST-09747,Support quality has declined recently.,3,Negative,Low,5,3,5,No,Frustrated,No,Chat,2024-04-19
+FB-600316,TKT-100309,CUST-05907,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,5,5,No,Frustrated,No,Chat,2024-06-24
+FB-600317,TKT-101630,CUST-14750,Nothing special but acceptable.,3,Neutral,Medium,4,3,3,Yes,Neutral,Yes,Email,2024-04-22
+FB-600318,TKT-100635,CUST-14576,Agent explained everything clearly.,4,Positive,Low,4,3,2,Yes,Satisfied,Yes,Chat,2024-01-04
+FB-600319,TKT-101703,CUST-04416,Agent was knowledgeable and helpful.,4,Positive,Medium,3,5,3,Yes,Satisfied,No,Email,2024-05-16
+FB-600320,TKT-101259,CUST-02576,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,2,Yes,Delighted,Yes,Social Media,2024-04-16
+FB-600321,TKT-101135,CUST-10081,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,4,5,5,No,Angry,No,Social Media,2024-05-26
+FB-600322,TKT-101334,CUST-10654,Got the help I needed but could have been faster.,3,Neutral,Low,5,5,2,No,Neutral,No,Email,2024-02-18
+FB-600323,TKT-100922,CUST-10591,Got the help I needed but could have been faster.,3,Neutral,Low,4,4,1,Yes,Neutral,No,Phone,2024-02-08
+FB-600324,TKT-100080,CUST-01120,Agent explained everything clearly.,4,Positive,Low,1,2,3,Yes,Satisfied,No,Social Media,2024-04-17
+FB-600325,TKT-101070,CUST-13169,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,1,3,No,Frustrated,Yes,Chat,2024-03-26
+FB-600326,TKT-100793,CUST-13211,Got the help I needed but could have been faster.,3,Neutral,Low,5,3,3,Yes,Neutral,No,Chat,2024-04-15
+FB-600327,TKT-100134,CUST-08171,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,5,1,Yes,Delighted,No,Survey,2024-03-22
+FB-600328,TKT-100581,CUST-05975,Best support experience I've had. Thank you!,5,Very Positive,Medium,4,4,3,Yes,Delighted,No,Chat,2024-05-06
+FB-600329,TKT-100166,CUST-10053,Support was adequate. Could be better.,3,Neutral,Low,4,2,5,No,Neutral,Yes,Survey,2024-05-28
+FB-600330,TKT-100264,CUST-14682,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,4,5,No,Frustrated,No,Chat,2024-03-27
+FB-600331,TKT-101665,CUST-04731,Support quality has declined recently.,3,Negative,Low,3,5,5,Yes,Frustrated,No,Survey,2024-06-09
+FB-600332,TKT-101041,CUST-13239,Response time was slow. Could have been resolved faster.,3,Negative,Low,1,4,4,No,Angry,Yes,Phone,2024-03-01
+FB-600333,TKT-100699,CUST-06648,Agent was professional and solved issue immediately.,5,Very Positive,Low,1,5,4,Yes,Delighted,Yes,Phone,2024-04-07
+FB-600334,TKT-100317,CUST-11142,Good support experience overall.,4,Positive,Medium,4,3,2,Yes,Satisfied,No,Email,2024-05-23
+FB-600335,TKT-101039,CUST-06284,Nothing special but acceptable.,3,Neutral,Low,4,2,4,Yes,Neutral,No,Social Media,2024-02-28
+FB-600336,TKT-100268,CUST-06473,Agent explained everything clearly.,5,Positive,Low,4,3,5,Yes,Satisfied,Yes,Phone,2024-06-02
+FB-600337,TKT-101702,CUST-04554,Nothing special but acceptable.,3,Neutral,Low,4,3,5,Yes,Neutral,No,Email,2024-04-25
+FB-600338,TKT-100841,CUST-07975,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,5,Yes,Delighted,No,Social Media,2024-03-06
+FB-600339,TKT-100583,CUST-02493,Felt like my issue wasn't prioritized.,3,Negative,Low,3,4,5,Yes,Frustrated,No,Chat,2024-01-23
+FB-600340,TKT-101977,CUST-12174,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,5,3,Yes,Delighted,No,Phone,2024-03-14
+FB-600341,TKT-100753,CUST-01678,Support quality has declined recently.,3,Negative,Low,4,4,5,No,Frustrated,No,Chat,2024-06-24
+FB-600342,TKT-101593,CUST-14331,Best support experience I've had. Thank you!,5,Very Positive,Low,3,4,2,Yes,Delighted,No,Phone,2024-03-20
+FB-600343,TKT-101672,CUST-01192,Best support experience I've had. Thank you!,5,Very Positive,Low,3,5,2,Yes,Delighted,Yes,Chat,2024-05-08
+FB-600344,TKT-100106,CUST-08971,Staff doesn't know what they're doing. Product is broken.,2,Very Negative,Low,4,3,4,No,Angry,No,Social Media,2024-04-19
+FB-600345,TKT-101913,CUST-02442,Support quality has declined recently.,3,Negative,Medium,4,3,5,Yes,Frustrated,Yes,Phone,2024-01-21
+FB-600346,TKT-100558,CUST-06366,Satisfied with the resolution provided.,5,Positive,Medium,5,4,2,Yes,Satisfied,Yes,Survey,2024-01-27
+FB-600347,TKT-100187,CUST-06196,Issue resolved in reasonable time.,4,Positive,Low,4,5,1,Yes,Satisfied,No,Chat,2024-05-12
+FB-600348,TKT-101905,CUST-10945,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,5,2,Yes,Delighted,Yes,Social Media,2024-02-29
+FB-600349,TKT-100765,CUST-04749,Standard support experience.,3,Neutral,Low,5,4,3,Yes,Neutral,Yes,Email,2024-05-10
+FB-600350,TKT-100652,CUST-01182,Outstanding service. Highly recommend!,5,Very Positive,Low,2,2,2,Yes,Delighted,No,Phone,2024-06-09
+FB-600351,TKT-100078,CUST-04416,Standard support experience.,3,Neutral,Medium,3,4,4,Yes,Neutral,No,Survey,2024-01-23
+FB-600352,TKT-100918,CUST-10696,Agent was knowledgeable and helpful.,5,Positive,Low,5,5,3,Yes,Satisfied,No,Email,2024-02-02
+FB-600353,TKT-100524,CUST-14489,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Medium,3,1,4,No,Frustrated,Yes,Chat,2024-05-27
+FB-600354,TKT-100486,CUST-14081,Issue was resolved eventually.,3,Neutral,Low,3,4,4,Yes,Neutral,Yes,Social Media,2024-06-01
+FB-600355,TKT-100936,CUST-14380,Issue was resolved eventually.,3,Neutral,Low,1,5,4,No,Neutral,No,Email,2024-05-21
+FB-600356,TKT-101294,CUST-09433,Best support experience I've had. Thank you!,5,Very Positive,Low,5,2,5,Yes,Delighted,Yes,Phone,2024-04-24
+FB-600357,TKT-100596,CUST-14727,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,2,4,Yes,Delighted,No,Phone,2024-02-07
+FB-600358,TKT-101168,CUST-12162,Support was adequate. Could be better.,3,Neutral,Low,2,4,5,Yes,Neutral,No,Chat,2024-03-24
+FB-600359,TKT-100138,CUST-06691,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,5,3,5,No,Angry,No,Social Media,2024-03-23
+FB-600360,TKT-101134,CUST-08576,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,5,5,Yes,Delighted,No,Email,2024-03-03
+FB-600361,TKT-101301,CUST-05162,Good support experience overall.,5,Positive,Low,3,5,2,Yes,Satisfied,Yes,Email,2024-06-14
+FB-600362,TKT-100731,CUST-12753,Response time was slow. Could have been resolved faster.,3,Negative,Medium,2,1,4,No,Frustrated,Yes,Email,2024-02-22
+FB-600363,TKT-101580,CUST-04491,Got the help I needed but could have been faster.,3,Neutral,Low,4,1,5,Yes,Neutral,Yes,Social Media,2024-01-08
+FB-600364,TKT-100693,CUST-14657,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,5,4,Yes,Delighted,No,Survey,2024-01-16
+FB-600365,TKT-101424,CUST-13026,Support was adequate. Could be better.,3,Neutral,Low,1,4,5,Yes,Neutral,Yes,Survey,2024-02-19
+FB-600366,TKT-100075,CUST-13363,Issue resolved in reasonable time.,4,Positive,Medium,5,4,2,Yes,Satisfied,Yes,Phone,2024-05-16
+FB-600367,TKT-101814,CUST-12046,Good support experience overall.,4,Positive,Medium,5,1,4,Yes,Satisfied,No,Social Media,2024-06-16
+FB-600368,TKT-100815,CUST-13798,Nothing special but acceptable.,3,Neutral,Low,4,4,5,No,Neutral,Yes,Phone,2024-04-02
+FB-600369,TKT-100585,CUST-10167,Response time was slow. Could have been resolved faster.,2,Negative,Low,4,5,3,No,Frustrated,No,Chat,2024-01-28
+FB-600370,TKT-100559,CUST-14131,Got the help I needed but could have been faster.,3,Neutral,Low,5,3,3,No,Neutral,No,Survey,2024-03-31
+FB-600371,TKT-101832,CUST-06123,Good support experience overall.,4,Positive,Low,3,5,1,Yes,Satisfied,No,Survey,2024-03-01
+FB-600372,TKT-101417,CUST-12800,Good support experience overall.,5,Positive,Low,2,4,4,Yes,Satisfied,No,Social Media,2024-04-18
+FB-600373,TKT-100546,CUST-11914,Agent was knowledgeable and helpful.,5,Positive,Low,3,4,4,Yes,Satisfied,No,Email,2024-02-18
+FB-600374,TKT-100881,CUST-12257,Waited 3 days for response. Worst experience ever.,2,Very Negative,Low,5,3,4,No,Angry,No,Chat,2024-06-25
+FB-600375,TKT-100210,CUST-10951,Got the help I needed but could have been faster.,3,Neutral,Low,1,3,5,No,Neutral,Yes,Social Media,2024-02-18
+FB-600376,TKT-101469,CUST-01895,Issue resolved in reasonable time.,5,Positive,Low,5,4,1,Yes,Satisfied,No,Chat,2024-01-11
+FB-600377,TKT-100915,CUST-08101,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Medium,3,4,4,No,Angry,No,Survey,2024-03-16
+FB-600378,TKT-100562,CUST-02472,Excellent support! Agent went above and beyond.,5,Very Positive,Low,3,4,3,Yes,Delighted,Yes,Survey,2024-03-30
+FB-600379,TKT-100744,CUST-03912,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,4,1,Yes,Delighted,No,Phone,2024-06-23
+FB-600380,TKT-101738,CUST-13565,Felt like my issue wasn't prioritized.,2,Negative,Low,3,4,5,No,Frustrated,Yes,Email,2024-05-26
+FB-600381,TKT-100483,CUST-13483,Good support experience overall.,5,Positive,Low,1,2,3,Yes,Satisfied,Yes,Social Media,2024-06-15
+FB-600382,TKT-100066,CUST-06700,Support was adequate. Could be better.,3,Neutral,Low,4,5,4,No,Neutral,No,Chat,2024-05-21
+FB-600383,TKT-100909,CUST-03594,Agent was knowledgeable and helpful.,5,Positive,Medium,2,3,4,Yes,Satisfied,No,Social Media,2024-04-26
+FB-600384,TKT-100751,CUST-04205,Outstanding service. Highly recommend!,5,Very Positive,Medium,4,2,1,Yes,Delighted,No,Phone,2024-01-12
+FB-600385,TKT-101967,CUST-04237,Issue was resolved eventually.,3,Neutral,Low,4,1,2,Yes,Neutral,No,Survey,2024-02-18
+FB-600386,TKT-101870,CUST-09148,Issue was resolved eventually.,3,Neutral,Low,5,2,3,No,Neutral,No,Survey,2024-04-16
+FB-600387,TKT-100439,CUST-04603,Got the help I needed but could have been faster.,3,Neutral,Low,3,3,5,No,Neutral,Yes,Phone,2024-04-17
+FB-600388,TKT-101746,CUST-07907,Agent explained everything clearly.,4,Positive,Low,4,5,2,Yes,Satisfied,Yes,Survey,2024-03-15
+FB-600389,TKT-100179,CUST-01050,Good support experience overall.,5,Positive,Low,1,4,4,Yes,Satisfied,No,Email,2024-02-03
+FB-600390,TKT-101126,CUST-09086,Resolution took longer than expected.,2,Negative,Low,1,5,5,No,Frustrated,No,Phone,2024-05-25
+FB-600391,TKT-101457,CUST-06446,Issue resolved in reasonable time.,4,Positive,Low,4,4,2,Yes,Satisfied,No,Social Media,2024-03-04
+FB-600392,TKT-100459,CUST-04008,Issue resolved in reasonable time.,5,Positive,Low,4,4,2,Yes,Satisfied,No,Phone,2024-04-22
+FB-600393,TKT-101618,CUST-04220,Response time was slow. Could have been resolved faster.,2,Negative,Medium,5,4,2,No,Frustrated,Yes,Social Media,2024-06-22
+FB-600394,TKT-100755,CUST-14500,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,3,3,2,No,Angry,Yes,Email,2024-01-30
+FB-600395,TKT-100134,CUST-03620,Felt like my issue wasn't prioritized.,3,Negative,Medium,5,3,5,No,Frustrated,No,Survey,2024-04-22
+FB-600396,TKT-101686,CUST-01571,Response time was slow. Could have been resolved faster.,2,Negative,Low,3,4,3,No,Frustrated,Yes,Chat,2024-06-13
+FB-600397,TKT-101315,CUST-07907,Agent explained everything clearly.,4,Positive,Low,4,5,4,Yes,Satisfied,No,Social Media,2024-02-11
+FB-600398,TKT-100705,CUST-08291,Best support experience I've had. Thank you!,5,Very Positive,Low,2,4,4,Yes,Delighted,No,Phone,2024-01-21
+FB-600399,TKT-101572,CUST-13502,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,4,2,Yes,Delighted,No,Email,2024-05-20
+FB-600400,TKT-101702,CUST-14131,Satisfied with the resolution provided.,4,Positive,Low,4,5,3,Yes,Satisfied,Yes,Phone,2024-05-31
+FB-600401,TKT-100331,CUST-06851,Issue resolved in reasonable time.,4,Positive,Low,2,5,4,Yes,Satisfied,Yes,Social Media,2024-04-27
+FB-600402,TKT-101832,CUST-14444,Issue was resolved eventually.,3,Neutral,Low,5,5,4,No,Neutral,Yes,Social Media,2024-05-19
+FB-600403,TKT-100562,CUST-04722,No solution provided. Ticket was escalated multiple times.,2,Very Negative,Low,2,5,3,No,Angry,No,Email,2024-02-15
+FB-600404,TKT-101029,CUST-08163,Waited 3 days for response. Worst experience ever.,2,Very Negative,Medium,4,5,4,No,Angry,No,Social Media,2024-04-05
+FB-600405,TKT-100315,CUST-11243,Satisfied with the resolution provided.,4,Positive,Low,3,3,5,Yes,Satisfied,No,Social Media,2024-05-22
+FB-600406,TKT-100691,CUST-10870,Satisfied with the resolution provided.,5,Positive,Low,4,5,5,Yes,Satisfied,Yes,Email,2024-03-22
+FB-600407,TKT-100166,CUST-08206,Nothing special but acceptable.,3,Neutral,Low,4,5,4,No,Neutral,No,Social Media,2024-03-13
+FB-600408,TKT-100853,CUST-06906,Response time was slow. Could have been resolved faster.,2,Negative,Low,5,5,1,No,Angry,No,Social Media,2024-03-09
+FB-600409,TKT-100593,CUST-02828,Good support experience overall.,5,Positive,Low,4,5,5,Yes,Satisfied,No,Survey,2024-06-19
+FB-600410,TKT-100609,CUST-09437,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,5,Yes,Delighted,No,Phone,2024-06-17
+FB-600411,TKT-100900,CUST-08723,Standard support experience.,3,Neutral,Low,5,1,5,No,Neutral,Yes,Social Media,2024-01-08
+FB-600412,TKT-100294,CUST-08034,Outstanding service. Highly recommend!,5,Very Positive,Medium,1,1,3,Yes,Delighted,No,Chat,2024-02-06
+FB-600413,TKT-101997,CUST-14136,Issue resolved in reasonable time.,4,Positive,High,5,5,5,Yes,Satisfied,No,Social Media,2024-01-01
+FB-600414,TKT-101150,CUST-08684,Outstanding service. Highly recommend!,5,Very Positive,Low,1,4,1,Yes,Delighted,Yes,Email,2024-05-07
+FB-600415,TKT-100547,CUST-06366,Issue resolved in reasonable time.,4,Positive,Medium,3,2,5,Yes,Satisfied,Yes,Email,2024-06-21
+FB-600416,TKT-100594,CUST-14602,Satisfied with the resolution provided.,4,Positive,Low,4,3,1,Yes,Satisfied,No,Phone,2024-04-28
+FB-600417,TKT-101666,CUST-13732,Best support experience I've had. Thank you!,5,Very Positive,Low,4,2,4,Yes,Delighted,No,Phone,2024-04-20
+FB-600418,TKT-101562,CUST-11377,Standard support experience.,3,Neutral,Low,3,3,2,No,Neutral,No,Chat,2024-02-24
+FB-600419,TKT-101018,CUST-08140,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Social Media,2024-01-13
+FB-600420,TKT-100936,CUST-03113,Issue resolved in reasonable time.,4,Positive,Low,4,3,4,Yes,Satisfied,No,Email,2024-02-01
+FB-600421,TKT-100103,CUST-01783,Standard support experience.,3,Neutral,Low,4,2,4,No,Neutral,Yes,Email,2024-01-14
+FB-600422,TKT-101735,CUST-02724,Agent explained everything clearly.,5,Positive,Low,5,4,4,Yes,Satisfied,Yes,Chat,2024-02-28
+FB-600423,TKT-101489,CUST-02245,Agent explained everything clearly.,5,Positive,Low,2,5,5,Yes,Satisfied,Yes,Survey,2024-05-06
+FB-600424,TKT-100104,CUST-03395,Support quality has declined recently.,3,Negative,Low,2,3,5,Yes,Angry,Yes,Chat,2024-02-07
+FB-600425,TKT-100150,CUST-06123,Best support experience I've had. Thank you!,5,Very Positive,Low,4,3,5,Yes,Delighted,No,Social Media,2024-03-04
+FB-600426,TKT-100572,CUST-02059,Nothing special but acceptable.,3,Neutral,Medium,3,3,5,Yes,Neutral,Yes,Email,2024-06-20
+FB-600427,TKT-100806,CUST-08546,Good support experience overall.,5,Positive,Low,3,5,3,Yes,Satisfied,No,Chat,2024-06-27
+FB-600428,TKT-101546,CUST-09799,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,High,4,5,5,No,Frustrated,No,Email,2024-06-23
+FB-600429,TKT-100079,CUST-02647,Resolution took longer than expected.,2,Negative,Low,2,3,2,No,Frustrated,No,Social Media,2024-01-25
+FB-600430,TKT-100935,CUST-01464,Nothing special but acceptable.,3,Neutral,Medium,4,4,1,Yes,Neutral,Yes,Social Media,2024-04-10
+FB-600431,TKT-100652,CUST-06368,Agent explained everything clearly.,4,Positive,Low,3,4,3,Yes,Satisfied,No,Chat,2024-04-14
+FB-600432,TKT-101215,CUST-06664,Support quality has declined recently.,2,Negative,Medium,4,4,4,No,Frustrated,No,Social Media,2024-06-14
+FB-600433,TKT-101003,CUST-03528,Satisfied with the resolution provided.,5,Positive,Low,4,5,1,Yes,Satisfied,Yes,Email,2024-05-16
+FB-600434,TKT-100754,CUST-13150,Response time was slow. Could have been resolved faster.,2,Negative,Medium,4,5,1,No,Frustrated,No,Social Media,2024-02-23
+FB-600435,TKT-100630,CUST-04841,Response time was slow. Could have been resolved faster.,3,Negative,Medium,1,4,5,No,Angry,Yes,Social Media,2024-02-22
+FB-600436,TKT-101182,CUST-01118,Issue was resolved eventually.,3,Neutral,Low,1,4,3,No,Neutral,Yes,Social Media,2024-03-21
+FB-600437,TKT-101586,CUST-03146,Felt like my issue wasn't prioritized.,3,Negative,High,4,3,5,Yes,Frustrated,No,Phone,2024-01-29
+FB-600438,TKT-100064,CUST-09709,Agent was knowledgeable and helpful.,5,Positive,Medium,3,5,4,Yes,Satisfied,Yes,Survey,2024-01-16
+FB-600439,TKT-100642,CUST-06353,Issue resolved in reasonable time.,5,Positive,Medium,5,4,1,Yes,Satisfied,No,Phone,2024-06-23
+FB-600440,TKT-100840,CUST-12645,Best support experience I've had. Thank you!,5,Very Positive,Medium,3,1,3,Yes,Delighted,No,Email,2024-02-02
+FB-600441,TKT-101445,CUST-04005,Satisfied with the resolution provided.,4,Positive,Low,3,1,3,Yes,Satisfied,Yes,Chat,2024-05-14
+FB-600442,TKT-101356,CUST-02425,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,4,Yes,Delighted,Yes,Phone,2024-02-14
+FB-600443,TKT-100941,CUST-03365,Nothing special but acceptable.,3,Neutral,Low,1,3,3,No,Neutral,No,Chat,2024-06-04
+FB-600444,TKT-101249,CUST-07652,Issue resolved in reasonable time.,5,Positive,Low,1,5,5,Yes,Satisfied,No,Chat,2024-05-12
+FB-600445,TKT-101142,CUST-03801,Issue resolved in reasonable time.,5,Positive,Low,5,2,3,Yes,Satisfied,No,Chat,2024-02-28
+FB-600446,TKT-101579,CUST-05323,Issue resolved in reasonable time.,4,Positive,Medium,4,5,4,Yes,Satisfied,No,Survey,2024-01-11
+FB-600447,TKT-100649,CUST-02057,Outstanding service. Highly recommend!,5,Very Positive,Low,5,3,4,Yes,Delighted,No,Chat,2024-03-05
+FB-600448,TKT-100589,CUST-11152,Nothing special but acceptable.,3,Neutral,Low,3,4,5,No,Neutral,No,Survey,2024-06-22
+FB-600449,TKT-101676,CUST-02757,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,3,1,No,Frustrated,Yes,Chat,2024-06-14
+FB-600450,TKT-101956,CUST-01721,Agent was knowledgeable and helpful.,4,Positive,Low,5,5,4,Yes,Satisfied,Yes,Survey,2024-03-02
+FB-600451,TKT-101343,CUST-05636,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,4,1,Yes,Delighted,Yes,Social Media,2024-01-06
+FB-600452,TKT-100555,CUST-14255,Got the help I needed but could have been faster.,3,Neutral,Low,1,5,5,Yes,Neutral,Yes,Social Media,2024-03-17
+FB-600453,TKT-100490,CUST-11321,Agent was knowledgeable and helpful.,4,Positive,Low,5,3,5,Yes,Satisfied,No,Social Media,2024-02-17
+FB-600454,TKT-100462,CUST-12541,Support was adequate. Could be better.,3,Neutral,Low,4,3,4,Yes,Neutral,Yes,Chat,2024-01-18
+FB-600455,TKT-101469,CUST-10671,Agent was knowledgeable and helpful.,4,Positive,Low,1,1,5,Yes,Satisfied,No,Phone,2024-01-29
+FB-600456,TKT-100010,CUST-06431,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,4,5,Yes,Delighted,No,Survey,2024-01-08
+FB-600457,TKT-100977,CUST-06320,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,3,3,4,No,Angry,Yes,Email,2024-03-24
+FB-600458,TKT-101859,CUST-02642,Agent was knowledgeable and helpful.,5,Positive,Low,4,5,5,Yes,Satisfied,No,Phone,2024-06-04
+FB-600459,TKT-101095,CUST-11309,Issue was resolved eventually.,3,Neutral,Low,2,3,5,Yes,Neutral,No,Phone,2024-06-24
+FB-600460,TKT-101912,CUST-09533,Felt like my issue wasn't prioritized.,2,Negative,Medium,3,5,1,No,Angry,No,Phone,2024-06-03
+FB-600461,TKT-101918,CUST-05166,Outstanding service. Highly recommend!,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Email,2024-05-27
+FB-600462,TKT-100611,CUST-13081,Satisfied with the resolution provided.,4,Positive,Medium,3,3,4,Yes,Satisfied,Yes,Chat,2024-06-21
+FB-600463,TKT-100582,CUST-11155,Nothing special but acceptable.,3,Neutral,Low,3,4,3,No,Neutral,No,Phone,2024-02-27
+FB-600464,TKT-101742,CUST-13398,Agent was professional and solved issue immediately.,5,Very Positive,Low,1,5,5,Yes,Delighted,Yes,Email,2024-05-12
+FB-600465,TKT-100677,CUST-06368,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Medium,4,3,4,No,Angry,No,Phone,2024-05-18
+FB-600466,TKT-100028,CUST-13366,Good support experience overall.,4,Positive,Low,4,3,3,Yes,Satisfied,No,Social Media,2024-02-16
+FB-600467,TKT-101381,CUST-09337,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,5,5,Yes,Delighted,Yes,Survey,2024-03-24
+FB-600468,TKT-101693,CUST-12340,Satisfied with the resolution provided.,5,Positive,Low,3,3,4,Yes,Satisfied,Yes,Survey,2024-02-15
+FB-600469,TKT-101370,CUST-14074,Support was adequate. Could be better.,3,Neutral,Medium,1,5,4,Yes,Neutral,No,Phone,2024-04-20
+FB-600470,TKT-100013,CUST-14122,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,4,5,Yes,Delighted,Yes,Chat,2024-01-04
+FB-600471,TKT-101953,CUST-08171,Resolution took longer than expected.,2,Negative,Low,1,3,5,No,Frustrated,No,Social Media,2024-03-02
+FB-600472,TKT-100023,CUST-03568,Good support experience overall.,4,Positive,Low,4,2,5,Yes,Satisfied,No,Email,2024-05-14
+FB-600473,TKT-101367,CUST-08888,Standard support experience.,3,Neutral,High,3,5,1,No,Neutral,Yes,Social Media,2024-03-16
+FB-600474,TKT-101890,CUST-04690,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,4,Yes,Neutral,No,Chat,2024-02-19
+FB-600475,TKT-100752,CUST-03935,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,3,2,Yes,Delighted,Yes,Phone,2024-05-02
+FB-600476,TKT-100979,CUST-02881,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,5,4,Yes,Delighted,No,Social Media,2024-01-16
+FB-600477,TKT-100765,CUST-08723,Support quality has declined recently.,2,Negative,Low,1,3,4,No,Frustrated,No,Social Media,2024-01-10
+FB-600478,TKT-101642,CUST-03438,Issue resolved in reasonable time.,4,Positive,Low,3,5,5,Yes,Satisfied,No,Social Media,2024-04-11
+FB-600479,TKT-101788,CUST-14690,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,5,Yes,Satisfied,No,Social Media,2024-04-13
+FB-600480,TKT-101441,CUST-11482,Response time was slow. Could have been resolved faster.,2,Negative,Low,5,4,4,No,Angry,No,Email,2024-03-21
+FB-600481,TKT-100126,CUST-08199,Terrible support. I'm switching providers immediately.,1,Very Negative,Medium,3,3,5,No,Angry,No,Phone,2024-01-03
+FB-600482,TKT-101172,CUST-09448,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,5,4,No,Frustrated,Yes,Social Media,2024-01-15
+FB-600483,TKT-100904,CUST-06223,Issue resolved in reasonable time.,5,Positive,Low,3,1,5,Yes,Satisfied,No,Survey,2024-03-18
+FB-600484,TKT-100186,CUST-14841,Satisfied with the resolution provided.,5,Positive,Low,1,4,4,Yes,Satisfied,No,Email,2024-05-13
+FB-600485,TKT-100928,CUST-09367,Satisfied with the resolution provided.,4,Positive,Low,3,3,4,Yes,Satisfied,No,Social Media,2024-01-13
+FB-600486,TKT-100118,CUST-14915,Agent was professional and solved issue immediately.,5,Very Positive,Low,5,3,5,Yes,Delighted,No,Chat,2024-03-29
+FB-600487,TKT-101481,CUST-08102,Felt like my issue wasn't prioritized.,3,Negative,Low,3,5,4,No,Frustrated,No,Phone,2024-04-28
+FB-600488,TKT-101184,CUST-01845,Agent was knowledgeable and helpful.,5,Positive,Low,4,3,2,Yes,Satisfied,No,Email,2024-04-22
+FB-600489,TKT-101108,CUST-01575,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,3,4,3,No,Angry,No,Survey,2024-02-26
+FB-600490,TKT-100064,CUST-04416,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,4,2,Yes,Delighted,Yes,Phone,2024-01-19
+FB-600491,TKT-101568,CUST-08971,Agent explained everything clearly.,4,Positive,Medium,3,5,4,Yes,Satisfied,Yes,Survey,2024-05-14
+FB-600492,TKT-100918,CUST-13835,Agent explained everything clearly.,5,Positive,Low,4,4,5,Yes,Satisfied,Yes,Social Media,2024-01-24
+FB-600493,TKT-100272,CUST-04648,Got the help I needed but could have been faster.,3,Neutral,Low,5,2,4,Yes,Neutral,Yes,Social Media,2024-01-17
+FB-600494,TKT-100804,CUST-13410,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Medium,3,5,4,Yes,Frustrated,No,Email,2024-06-25
+FB-600495,TKT-100611,CUST-05920,Nothing special but acceptable.,3,Neutral,Low,2,4,3,No,Neutral,No,Phone,2024-05-03
+FB-600496,TKT-100506,CUST-01347,Good support experience overall.,5,Positive,Low,4,2,1,Yes,Satisfied,Yes,Phone,2024-01-20
+FB-600497,TKT-101919,CUST-09254,Issue was resolved eventually.,3,Neutral,Medium,4,4,4,Yes,Neutral,No,Survey,2024-06-06
+FB-600498,TKT-101259,CUST-01036,Agent was knowledgeable and helpful.,5,Positive,Low,3,4,4,Yes,Satisfied,Yes,Email,2024-02-17
+FB-600499,TKT-100206,CUST-02576,Agent was knowledgeable and helpful.,4,Positive,Low,4,5,5,Yes,Satisfied,No,Email,2024-06-02
+FB-600500,TKT-100501,CUST-05336,Issue was resolved eventually.,3,Neutral,Low,2,5,1,No,Neutral,No,Social Media,2024-01-22
+FB-600501,TKT-100444,CUST-12010,Agent was knowledgeable and helpful.,5,Positive,Low,3,1,4,Yes,Satisfied,Yes,Chat,2024-02-18
+FB-600502,TKT-100479,CUST-12554,Satisfied with the resolution provided.,4,Positive,Low,3,5,2,Yes,Satisfied,Yes,Social Media,2024-02-01
+FB-600503,TKT-101582,CUST-08168,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,3,Yes,Neutral,Yes,Phone,2024-03-25
+FB-600504,TKT-101352,CUST-07176,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,4,4,Yes,Delighted,No,Chat,2024-06-02
+FB-600505,TKT-100124,CUST-11194,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Phone,2024-06-16
+FB-600506,TKT-101282,CUST-13383,Agent explained everything clearly.,4,Positive,Low,4,1,3,Yes,Satisfied,No,Email,2024-04-19
+FB-600507,TKT-101991,CUST-02649,Standard support experience.,3,Neutral,Low,1,4,4,No,Neutral,No,Survey,2024-02-27
+FB-600508,TKT-100305,CUST-03015,Agent explained everything clearly.,5,Positive,Medium,5,5,5,Yes,Satisfied,Yes,Social Media,2024-01-19
+FB-600509,TKT-100969,CUST-03113,Issue resolved in reasonable time.,4,Positive,Low,2,4,4,Yes,Satisfied,Yes,Phone,2024-04-29
+FB-600510,TKT-101650,CUST-05920,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,3,Yes,Delighted,No,Survey,2024-04-16
+FB-600511,TKT-101141,CUST-06270,Issue resolved in reasonable time.,4,Positive,Low,5,5,1,Yes,Satisfied,Yes,Chat,2024-03-25
+FB-600512,TKT-100416,CUST-03102,Issue was resolved eventually.,3,Neutral,Low,4,5,4,No,Neutral,No,Email,2024-04-23
+FB-600513,TKT-101096,CUST-03919,Issue resolved in reasonable time.,4,Positive,Low,3,4,5,Yes,Satisfied,Yes,Survey,2024-01-04
+FB-600514,TKT-101379,CUST-03816,Satisfied with the resolution provided.,4,Positive,Medium,4,5,2,Yes,Satisfied,Yes,Email,2024-02-24
+FB-600515,TKT-100385,CUST-06156,Satisfied with the resolution provided.,5,Positive,Low,3,3,2,Yes,Satisfied,No,Social Media,2024-05-12
+FB-600516,TKT-100444,CUST-02494,Issue resolved in reasonable time.,5,Positive,Low,5,5,4,Yes,Satisfied,No,Chat,2024-02-04
+FB-600517,TKT-100620,CUST-07395,Excellent support! Agent went above and beyond.,5,Very Positive,High,5,4,4,Yes,Delighted,Yes,Phone,2024-06-01
+FB-600518,TKT-101970,CUST-09455,Issue was resolved eventually.,3,Neutral,Low,5,5,3,No,Neutral,No,Social Media,2024-02-01
+FB-600519,TKT-101441,CUST-13095,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,4,3,Yes,Delighted,No,Social Media,2024-03-20
+FB-600520,TKT-100658,CUST-01030,Outstanding service. Highly recommend!,5,Very Positive,Medium,3,4,4,Yes,Delighted,Yes,Social Media,2024-05-29
+FB-600521,TKT-101328,CUST-10474,Good support experience overall.,4,Positive,Low,5,5,4,Yes,Satisfied,Yes,Social Media,2024-02-26
+FB-600522,TKT-101807,CUST-12800,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Medium,4,3,4,No,Angry,Yes,Survey,2024-04-21
+FB-600523,TKT-101559,CUST-11783,Resolution took longer than expected.,2,Negative,Low,5,4,5,No,Frustrated,No,Chat,2024-02-02
+FB-600524,TKT-100640,CUST-04611,Issue was resolved eventually.,3,Neutral,Low,4,5,2,Yes,Neutral,No,Email,2024-04-24
+FB-600525,TKT-100534,CUST-12301,Nothing special but acceptable.,3,Neutral,Low,4,3,1,No,Neutral,Yes,Phone,2024-05-06
+FB-600526,TKT-100675,CUST-02548,Standard support experience.,3,Neutral,Low,5,4,4,Yes,Neutral,No,Chat,2024-06-23
+FB-600527,TKT-100527,CUST-06097,Agent explained everything clearly.,4,Positive,Low,4,5,2,Yes,Satisfied,No,Survey,2024-06-26
+FB-600528,TKT-100943,CUST-10117,Got the help I needed but could have been faster.,3,Neutral,Low,4,1,5,Yes,Neutral,Yes,Social Media,2024-02-17
+FB-600529,TKT-101000,CUST-09671,Satisfied with the resolution provided.,5,Positive,Low,3,5,4,Yes,Satisfied,No,Email,2024-01-13
+FB-600530,TKT-101073,CUST-03116,Issue was resolved eventually.,3,Neutral,Low,2,4,4,Yes,Neutral,No,Survey,2024-03-02
+FB-600531,TKT-100281,CUST-10870,Issue resolved in reasonable time.,4,Positive,Low,3,5,3,Yes,Satisfied,Yes,Phone,2024-01-26
+FB-600532,TKT-100018,CUST-08422,Nothing special but acceptable.,3,Neutral,High,4,4,5,No,Neutral,Yes,Social Media,2024-03-26
+FB-600533,TKT-101306,CUST-07322,Best support experience I've had. Thank you!,5,Very Positive,Low,3,5,4,Yes,Delighted,No,Survey,2024-03-23
+FB-600534,TKT-100032,CUST-14877,Best support experience I've had. Thank you!,5,Very Positive,Low,4,1,4,Yes,Delighted,No,Email,2024-02-26
+FB-600535,TKT-100034,CUST-01378,Outstanding service. Highly recommend!,5,Very Positive,Low,2,2,5,Yes,Delighted,No,Chat,2024-04-13
+FB-600536,TKT-100035,CUST-10762,Agent was professional and solved issue immediately.,5,Very Positive,Medium,4,2,3,Yes,Delighted,No,Phone,2024-02-14
+FB-600537,TKT-100219,CUST-14635,Best support experience I've had. Thank you!,5,Very Positive,Low,5,1,4,Yes,Delighted,Yes,Phone,2024-01-03
+FB-600538,TKT-101269,CUST-02223,Got the help I needed but could have been faster.,3,Neutral,Low,1,4,4,No,Neutral,Yes,Survey,2024-04-25
+FB-600539,TKT-100161,CUST-08546,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Low,1,3,4,No,Angry,No,Phone,2024-02-18
+FB-600540,TKT-101427,CUST-03939,Got the help I needed but could have been faster.,3,Neutral,Low,1,2,1,Yes,Neutral,No,Email,2024-06-12
+FB-600541,TKT-100191,CUST-01641,Agent explained everything clearly.,5,Positive,Low,4,4,4,Yes,Satisfied,Yes,Survey,2024-04-08
+FB-600542,TKT-100114,CUST-10617,Agent was knowledgeable and helpful.,5,Positive,Low,3,4,3,Yes,Satisfied,No,Email,2024-05-13
+FB-600543,TKT-101023,CUST-03141,Agent explained everything clearly.,4,Positive,Low,4,4,5,Yes,Satisfied,No,Chat,2024-03-02
+FB-600544,TKT-101158,CUST-01848,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,4,4,Yes,Frustrated,Yes,Social Media,2024-05-09
+FB-600545,TKT-100973,CUST-10063,Issue was resolved eventually.,3,Neutral,Low,4,3,1,Yes,Neutral,No,Chat,2024-01-02
+FB-600546,TKT-101841,CUST-02242,Support quality has declined recently.,2,Negative,Low,4,5,3,No,Frustrated,No,Phone,2024-06-14
+FB-600547,TKT-101902,CUST-04428,Good support experience overall.,4,Positive,Low,3,3,4,Yes,Satisfied,Yes,Phone,2024-01-13
+FB-600548,TKT-101202,CUST-09799,Agent explained everything clearly.,4,Positive,Low,4,5,5,Yes,Satisfied,No,Chat,2024-01-23
+FB-600549,TKT-100332,CUST-12316,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,2,Yes,Delighted,No,Survey,2024-05-15
+FB-600550,TKT-101386,CUST-07276,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,3,5,5,No,Angry,Yes,Phone,2024-02-29
+FB-600551,TKT-101618,CUST-09835,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,3,3,4,No,Angry,No,Chat,2024-06-05
+FB-600552,TKT-100109,CUST-10836,Standard support experience.,3,Neutral,Low,1,5,5,Yes,Neutral,No,Chat,2024-05-04
+FB-600553,TKT-101239,CUST-02642,Support quality has declined recently.,3,Negative,Low,5,5,5,No,Frustrated,No,Chat,2024-04-18
+FB-600554,TKT-100060,CUST-04437,Good support experience overall.,4,Positive,Medium,3,2,1,Yes,Satisfied,No,Survey,2024-05-28
+FB-600555,TKT-101004,CUST-09021,Good support experience overall.,4,Positive,High,1,3,1,Yes,Satisfied,No,Survey,2024-06-07
+FB-600556,TKT-100884,CUST-11061,Satisfied with the resolution provided.,5,Positive,Low,3,2,4,Yes,Satisfied,No,Email,2024-04-08
+FB-600557,TKT-101581,CUST-09758,Outstanding service. Highly recommend!,5,Very Positive,Low,3,4,1,Yes,Delighted,No,Email,2024-01-29
+FB-600558,TKT-100168,CUST-14600,Issue resolved in reasonable time.,4,Positive,Low,2,4,4,Yes,Satisfied,Yes,Phone,2024-03-27
+FB-600559,TKT-101514,CUST-10275,Outstanding service. Highly recommend!,5,Very Positive,Low,3,4,3,Yes,Delighted,Yes,Email,2024-02-20
+FB-600560,TKT-100010,CUST-01667,Standard support experience.,3,Neutral,Low,5,4,5,No,Neutral,No,Email,2024-01-14
+FB-600561,TKT-100271,CUST-03361,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,3,5,2,No,Angry,No,Social Media,2024-06-20
+FB-600562,TKT-101136,CUST-13242,Agent explained everything clearly.,4,Positive,Low,5,2,4,Yes,Satisfied,Yes,Email,2024-03-05
+FB-600563,TKT-100724,CUST-12864,Agent was knowledgeable and helpful.,5,Positive,Low,2,1,4,Yes,Satisfied,No,Chat,2024-04-02
+FB-600564,TKT-101768,CUST-01881,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,4,1,2,Yes,Delighted,Yes,Survey,2024-01-12
+FB-600565,TKT-101595,CUST-03757,Satisfied with the resolution provided.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Phone,2024-03-06
+FB-600566,TKT-101171,CUST-07176,Issue resolved in reasonable time.,5,Positive,Low,1,5,2,Yes,Satisfied,No,Phone,2024-02-12
+FB-600567,TKT-100284,CUST-09593,Resolution took longer than expected.,3,Negative,Medium,2,5,4,No,Frustrated,No,Email,2024-06-22
+FB-600568,TKT-100342,CUST-10326,Good support experience overall.,4,Positive,Low,5,4,3,Yes,Satisfied,No,Survey,2024-03-28
+FB-600569,TKT-101602,CUST-07230,Outstanding service. Highly recommend!,5,Very Positive,Medium,2,3,4,Yes,Delighted,Yes,Phone,2024-04-28
+FB-600570,TKT-101476,CUST-08634,Agent explained everything clearly.,4,Positive,Low,1,3,1,Yes,Satisfied,No,Phone,2024-04-28
+FB-600571,TKT-100937,CUST-01364,Support was adequate. Could be better.,3,Neutral,Low,5,3,4,No,Neutral,Yes,Survey,2024-04-07
+FB-600572,TKT-100680,CUST-13446,Support quality has declined recently.,3,Negative,Medium,4,2,5,No,Frustrated,No,Chat,2024-01-15
+FB-600573,TKT-100901,CUST-02264,Felt like my issue wasn't prioritized.,2,Negative,Low,2,2,1,No,Frustrated,No,Social Media,2024-05-18
+FB-600574,TKT-100278,CUST-10371,Got the help I needed but could have been faster.,3,Neutral,Low,2,2,3,Yes,Neutral,No,Phone,2024-02-18
+FB-600575,TKT-101975,CUST-04205,Got the help I needed but could have been faster.,3,Neutral,Low,5,3,5,No,Neutral,No,Survey,2024-03-22
+FB-600576,TKT-101981,CUST-06059,Support was adequate. Could be better.,3,Neutral,Low,2,2,4,No,Neutral,Yes,Survey,2024-04-28
+FB-600577,TKT-100747,CUST-02461,Satisfied with the resolution provided.,5,Positive,Low,2,4,4,Yes,Satisfied,Yes,Social Media,2024-05-31
+FB-600578,TKT-100368,CUST-13364,Satisfied with the resolution provided.,5,Positive,Low,5,4,5,Yes,Satisfied,Yes,Survey,2024-02-26
+FB-600579,TKT-101931,CUST-07153,Issue resolved in reasonable time.,4,Positive,Low,4,5,4,Yes,Satisfied,No,Chat,2024-04-24
+FB-600580,TKT-101702,CUST-04554,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,1,2,Yes,Delighted,No,Survey,2024-01-13
+FB-600581,TKT-101378,CUST-02089,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,3,4,Yes,Delighted,No,Phone,2024-03-16
+FB-600582,TKT-100517,CUST-13018,Issue resolved in reasonable time.,4,Positive,Low,2,5,2,Yes,Satisfied,No,Survey,2024-02-08
+FB-600583,TKT-100151,CUST-04712,Satisfied with the resolution provided.,4,Positive,Low,5,5,5,Yes,Satisfied,No,Survey,2024-05-13
+FB-600584,TKT-101094,CUST-02842,Agent explained everything clearly.,4,Positive,Low,5,4,5,Yes,Satisfied,No,Chat,2024-03-12
+FB-600585,TKT-101436,CUST-04690,Nothing special but acceptable.,3,Neutral,Low,2,4,2,Yes,Neutral,Yes,Phone,2024-06-04
+FB-600586,TKT-101346,CUST-03655,Good support experience overall.,5,Positive,Low,3,5,5,Yes,Satisfied,Yes,Social Media,2024-03-12
+FB-600587,TKT-100090,CUST-09752,Standard support experience.,3,Neutral,Low,3,5,5,No,Neutral,No,Survey,2024-03-16
+FB-600588,TKT-100216,CUST-05642,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,1,Yes,Satisfied,Yes,Social Media,2024-01-31
+FB-600589,TKT-101529,CUST-03364,Nothing special but acceptable.,3,Neutral,Low,2,3,1,Yes,Neutral,No,Survey,2024-05-06
+FB-600590,TKT-100948,CUST-07979,Satisfied with the resolution provided.,4,Positive,Low,4,3,4,Yes,Satisfied,No,Phone,2024-05-22
+FB-600591,TKT-100706,CUST-09017,Felt like my issue wasn't prioritized.,3,Negative,Low,5,1,3,Yes,Frustrated,Yes,Email,2024-04-20
+FB-600592,TKT-100237,CUST-13811,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,2,Yes,Delighted,Yes,Chat,2024-01-02
+FB-600593,TKT-100932,CUST-04791,Issue resolved in reasonable time.,4,Positive,Low,5,5,3,Yes,Satisfied,No,Chat,2024-04-03
+FB-600594,TKT-100975,CUST-01193,Agent explained everything clearly.,4,Positive,Medium,2,3,4,Yes,Satisfied,No,Survey,2024-04-25
+FB-600595,TKT-100653,CUST-10776,Good support experience overall.,5,Positive,Low,4,2,1,Yes,Satisfied,Yes,Email,2024-06-09
+FB-600596,TKT-100046,CUST-14096,Outstanding service. Highly recommend!,5,Very Positive,Low,5,5,5,Yes,Delighted,No,Phone,2024-01-09
+FB-600597,TKT-101904,CUST-05336,Support was adequate. Could be better.,3,Neutral,Low,4,5,2,Yes,Neutral,No,Chat,2024-06-03
+FB-600598,TKT-101146,CUST-06644,Felt like my issue wasn't prioritized.,2,Negative,Low,2,2,4,No,Frustrated,Yes,Survey,2024-06-08
+FB-600599,TKT-101289,CUST-12410,Issue resolved in reasonable time.,4,Positive,Low,5,4,1,Yes,Satisfied,No,Survey,2024-06-13
+FB-600600,TKT-100810,CUST-07767,Satisfied with the resolution provided.,4,Positive,Low,4,3,3,Yes,Satisfied,No,Survey,2024-02-18
+FB-600601,TKT-101212,CUST-14727,Standard support experience.,3,Neutral,Low,1,4,4,Yes,Neutral,No,Phone,2024-01-06
+FB-600602,TKT-100570,CUST-02493,Agent was knowledgeable and helpful.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Social Media,2024-06-25
+FB-600603,TKT-100382,CUST-02245,Got the help I needed but could have been faster.,3,Neutral,Low,1,5,4,Yes,Neutral,No,Chat,2024-03-23
+FB-600604,TKT-101373,CUST-05590,Standard support experience.,3,Neutral,Low,1,4,3,No,Neutral,No,Social Media,2024-02-17
+FB-600605,TKT-100803,CUST-12160,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,4,5,Yes,Delighted,Yes,Survey,2024-06-03
+FB-600606,TKT-101264,CUST-11602,Resolution took longer than expected.,3,Negative,Low,3,3,4,Yes,Angry,No,Chat,2024-03-07
+FB-600607,TKT-100241,CUST-13392,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,5,Yes,Neutral,Yes,Phone,2024-01-10
+FB-600608,TKT-101046,CUST-10352,Felt like my issue wasn't prioritized.,3,Negative,Low,4,2,1,Yes,Frustrated,No,Survey,2024-02-13
+FB-600609,TKT-100380,CUST-02932,Nothing special but acceptable.,3,Neutral,Low,5,5,5,Yes,Neutral,No,Survey,2024-03-27
+FB-600610,TKT-100591,CUST-05780,Support was adequate. Could be better.,3,Neutral,Medium,3,5,5,No,Neutral,No,Social Media,2024-05-28
+FB-600611,TKT-100109,CUST-02261,Got the help I needed but could have been faster.,3,Neutral,Low,2,5,4,Yes,Neutral,No,Phone,2024-02-07
+FB-600612,TKT-101669,CUST-14602,Satisfied with the resolution provided.,5,Positive,Low,4,4,2,Yes,Satisfied,No,Survey,2024-04-30
+FB-600613,TKT-100837,CUST-06471,Standard support experience.,3,Neutral,Low,1,3,1,No,Neutral,No,Survey,2024-03-31
+FB-600614,TKT-101000,CUST-14240,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,5,Yes,Delighted,No,Phone,2024-05-17
+FB-600615,TKT-100598,CUST-11343,Got the help I needed but could have been faster.,3,Neutral,High,5,5,2,Yes,Neutral,No,Phone,2024-02-24
+FB-600616,TKT-101598,CUST-02672,Nothing special but acceptable.,3,Neutral,Medium,4,3,5,No,Neutral,No,Email,2024-01-02
+FB-600617,TKT-101172,CUST-02461,Good support experience overall.,5,Positive,Low,5,3,5,Yes,Satisfied,No,Chat,2024-05-02
+FB-600618,TKT-101110,CUST-01176,Agent was knowledgeable and helpful.,5,Positive,Low,5,5,3,Yes,Satisfied,No,Survey,2024-06-10
+FB-600619,TKT-101118,CUST-08422,Felt like my issue wasn't prioritized.,3,Negative,High,4,3,5,Yes,Frustrated,No,Phone,2024-06-18
+FB-600620,TKT-100609,CUST-02923,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,3,Yes,Delighted,No,Chat,2024-06-23
+FB-600621,TKT-101765,CUST-01964,Response time was slow. Could have been resolved faster.,3,Negative,Medium,1,4,4,No,Angry,No,Email,2024-04-19
+FB-600622,TKT-101588,CUST-11631,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,5,4,4,Yes,Frustrated,No,Social Media,2024-06-11
+FB-600623,TKT-101411,CUST-11928,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,4,4,1,No,Angry,No,Phone,2024-01-05
+FB-600624,TKT-101261,CUST-11039,Support was adequate. Could be better.,3,Neutral,Low,4,4,3,Yes,Neutral,No,Social Media,2024-01-14
+FB-600625,TKT-100718,CUST-07171,Outstanding service. Highly recommend!,5,Very Positive,Low,2,4,5,Yes,Delighted,No,Phone,2024-06-11
+FB-600626,TKT-100662,CUST-06845,Resolution took longer than expected.,2,Negative,Medium,4,5,1,No,Frustrated,Yes,Chat,2024-05-04
+FB-600627,TKT-101950,CUST-01848,Nothing special but acceptable.,3,Neutral,Low,2,4,4,Yes,Neutral,Yes,Survey,2024-02-27
+FB-600628,TKT-101881,CUST-04155,Good support experience overall.,4,Positive,Medium,3,3,2,Yes,Satisfied,No,Phone,2024-05-23
+FB-600629,TKT-101436,CUST-11460,Waited 3 days for response. Worst experience ever.,1,Very Negative,Medium,4,5,2,No,Angry,Yes,Chat,2024-05-15
+FB-600630,TKT-101696,CUST-04123,Agent explained everything clearly.,4,Positive,Low,3,5,1,Yes,Satisfied,No,Social Media,2024-04-17
+FB-600631,TKT-101295,CUST-09593,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,4,5,Yes,Delighted,Yes,Email,2024-05-25
+FB-600632,TKT-101297,CUST-06229,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,4,5,2,No,Angry,No,Chat,2024-04-03
+FB-600633,TKT-101422,CUST-08332,Good support experience overall.,5,Positive,Low,2,5,4,Yes,Satisfied,No,Survey,2024-04-15
+FB-600634,TKT-100670,CUST-04491,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Email,2024-04-21
+FB-600635,TKT-101496,CUST-01061,Outstanding service. Highly recommend!,5,Very Positive,Low,5,5,4,Yes,Delighted,No,Social Media,2024-03-21
+FB-600636,TKT-100814,CUST-08448,Agent explained everything clearly.,4,Positive,Low,5,4,2,Yes,Satisfied,No,Survey,2024-05-29
+FB-600637,TKT-100549,CUST-08770,Good support experience overall.,4,Positive,Low,4,5,2,Yes,Satisfied,Yes,Social Media,2024-01-14
+FB-600638,TKT-100267,CUST-02935,Agent explained everything clearly.,4,Positive,Low,2,2,5,Yes,Satisfied,No,Email,2024-03-09
+FB-600639,TKT-100094,CUST-12531,Standard support experience.,3,Neutral,Low,3,3,2,Yes,Neutral,Yes,Phone,2024-04-21
+FB-600640,TKT-100903,CUST-09045,Issue was resolved eventually.,3,Neutral,Low,4,4,3,No,Neutral,Yes,Phone,2024-05-06
+FB-600641,TKT-101806,CUST-08930,No solution provided. Ticket was escalated multiple times.,2,Very Negative,Medium,3,2,3,No,Angry,Yes,Chat,2024-03-25
+FB-600642,TKT-100191,CUST-04879,Outstanding service. Highly recommend!,5,Very Positive,Low,2,3,5,Yes,Delighted,Yes,Chat,2024-03-16
+FB-600643,TKT-101360,CUST-05680,Waited 3 days for response. Worst experience ever.,2,Very Negative,High,1,4,3,No,Angry,Yes,Chat,2024-03-30
+FB-600644,TKT-101486,CUST-10184,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,3,4,Yes,Delighted,No,Email,2024-03-17
+FB-600645,TKT-101441,CUST-02750,Agent was knowledgeable and helpful.,5,Positive,Low,3,5,3,Yes,Satisfied,Yes,Email,2024-01-07
+FB-600646,TKT-100271,CUST-13107,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,1,4,5,No,Angry,No,Survey,2024-04-29
+FB-600647,TKT-100019,CUST-05061,Got the help I needed but could have been faster.,3,Neutral,Medium,1,3,1,Yes,Neutral,No,Survey,2024-06-23
+FB-600648,TKT-101421,CUST-09367,Agent was professional and solved issue immediately.,5,Very Positive,Medium,2,5,1,Yes,Delighted,Yes,Survey,2024-05-03
+FB-600649,TKT-100182,CUST-03639,Agent was knowledgeable and helpful.,4,Positive,Low,3,4,2,Yes,Satisfied,Yes,Chat,2024-04-15
+FB-600650,TKT-101804,CUST-13638,Support was adequate. Could be better.,3,Neutral,Low,5,4,4,No,Neutral,No,Phone,2024-03-03
+FB-600651,TKT-101313,CUST-05006,Support was adequate. Could be better.,3,Neutral,Low,4,2,1,Yes,Neutral,No,Email,2024-02-14
+FB-600652,TKT-101249,CUST-08930,Support was adequate. Could be better.,3,Neutral,Low,2,5,3,No,Neutral,Yes,Phone,2024-06-28
+FB-600653,TKT-101286,CUST-02777,Fastest resolution ever. Very impressed.,5,Very Positive,Low,2,4,3,Yes,Delighted,No,Social Media,2024-03-19
+FB-600654,TKT-101406,CUST-02953,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,4,2,Yes,Delighted,Yes,Email,2024-05-05
+FB-600655,TKT-100286,CUST-10579,Agent was knowledgeable and helpful.,5,Positive,Low,3,2,5,Yes,Satisfied,No,Survey,2024-04-15
+FB-600656,TKT-100719,CUST-14727,Good support experience overall.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Phone,2024-06-07
+FB-600657,TKT-100567,CUST-10079,Issue was resolved eventually.,3,Neutral,Low,4,4,4,Yes,Neutral,No,Social Media,2024-02-29
+FB-600658,TKT-101476,CUST-13565,Good support experience overall.,5,Positive,Low,2,5,4,Yes,Satisfied,No,Email,2024-05-08
+FB-600659,TKT-101736,CUST-11965,Resolution took longer than expected.,2,Negative,Low,1,5,1,No,Angry,Yes,Social Media,2024-04-01
+FB-600660,TKT-101043,CUST-04729,Felt like my issue wasn't prioritized.,2,Negative,Medium,4,3,5,No,Frustrated,Yes,Email,2024-06-02
+FB-600661,TKT-101605,CUST-06832,Support was adequate. Could be better.,3,Neutral,Medium,5,2,2,No,Neutral,Yes,Phone,2024-01-27
+FB-600662,TKT-101023,CUST-12541,Satisfied with the resolution provided.,5,Positive,Low,1,1,3,Yes,Satisfied,Yes,Email,2024-01-28
+FB-600663,TKT-100739,CUST-09127,Issue resolved in reasonable time.,4,Positive,Low,5,3,4,Yes,Satisfied,Yes,Social Media,2024-04-27
+FB-600664,TKT-100861,CUST-08380,Nothing special but acceptable.,3,Neutral,Medium,2,4,5,Yes,Neutral,No,Email,2024-04-16
+FB-600665,TKT-100034,CUST-12160,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,5,3,Yes,Frustrated,Yes,Email,2024-01-10
+FB-600666,TKT-101889,CUST-01575,Felt like my issue wasn't prioritized.,3,Negative,Low,4,5,4,No,Angry,No,Social Media,2024-06-03
+FB-600667,TKT-101571,CUST-14105,Agent explained everything clearly.,4,Positive,Low,1,5,4,Yes,Satisfied,No,Email,2024-05-04
+FB-600668,TKT-101311,CUST-04480,Terrible support. I'm switching providers immediately.,1,Very Negative,High,1,4,3,No,Angry,No,Chat,2024-05-07
+FB-600669,TKT-100171,CUST-13334,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,5,5,4,Yes,Delighted,No,Phone,2024-05-06
+FB-600670,TKT-101995,CUST-04026,Issue resolved in reasonable time.,5,Positive,Low,3,5,4,Yes,Satisfied,No,Survey,2024-02-07
+FB-600671,TKT-101201,CUST-07409,Issue was resolved eventually.,3,Neutral,High,3,3,4,No,Neutral,No,Phone,2024-04-13
+FB-600672,TKT-100118,CUST-03073,Response time was slow. Could have been resolved faster.,2,Negative,High,4,3,4,No,Frustrated,No,Email,2024-02-15
+FB-600673,TKT-100928,CUST-04603,Support quality has declined recently.,3,Negative,Low,4,4,3,Yes,Angry,Yes,Phone,2024-03-27
+FB-600674,TKT-100244,CUST-07002,Issue resolved in reasonable time.,4,Positive,Low,5,1,3,Yes,Satisfied,No,Phone,2024-03-23
+FB-600675,TKT-101016,CUST-02787,Support quality has declined recently.,3,Negative,Low,5,5,4,No,Frustrated,Yes,Phone,2024-03-10
+FB-600676,TKT-101535,CUST-05616,Outstanding service. Highly recommend!,5,Very Positive,Low,4,5,3,Yes,Delighted,No,Email,2024-03-12
+FB-600677,TKT-101579,CUST-10406,Response time was slow. Could have been resolved faster.,3,Negative,Medium,1,5,5,No,Frustrated,No,Chat,2024-02-23
+FB-600678,TKT-101072,CUST-03772,Outstanding service. Highly recommend!,5,Very Positive,Low,4,5,3,Yes,Delighted,No,Social Media,2024-04-20
+FB-600679,TKT-101285,CUST-07230,Standard support experience.,3,Neutral,Low,5,4,4,No,Neutral,No,Email,2024-06-09
+FB-600680,TKT-101023,CUST-03493,Satisfied with the resolution provided.,4,Positive,Low,2,4,3,Yes,Satisfied,Yes,Phone,2024-06-15
+FB-600681,TKT-100522,CUST-09766,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,2,Yes,Delighted,No,Email,2024-03-26
+FB-600682,TKT-100467,CUST-11464,Nothing special but acceptable.,3,Neutral,Low,4,3,3,Yes,Neutral,Yes,Email,2024-02-11
+FB-600683,TKT-100500,CUST-12692,Agent explained everything clearly.,4,Positive,Low,4,4,2,Yes,Satisfied,Yes,Phone,2024-02-08
+FB-600684,TKT-100366,CUST-14473,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,1,3,Yes,Delighted,No,Survey,2024-01-11
+FB-600685,TKT-100459,CUST-06607,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,3,4,4,No,Angry,No,Chat,2024-03-05
+FB-600686,TKT-100555,CUST-06253,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,5,1,Yes,Delighted,No,Email,2024-04-12
+FB-600687,TKT-101028,CUST-09874,Agent was knowledgeable and helpful.,4,Positive,Low,4,3,5,Yes,Satisfied,Yes,Social Media,2024-06-13
+FB-600688,TKT-100094,CUST-07196,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,5,5,3,No,Angry,No,Chat,2024-04-25
+FB-600689,TKT-101584,CUST-10896,Good support experience overall.,4,Positive,Low,4,3,3,Yes,Satisfied,Yes,Social Media,2024-06-21
+FB-600690,TKT-100935,CUST-05061,Resolution took longer than expected.,3,Negative,Low,3,5,4,Yes,Frustrated,Yes,Chat,2024-01-14
+FB-600691,TKT-101514,CUST-04314,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,2,2,5,No,Angry,Yes,Survey,2024-04-19
+FB-600692,TKT-101582,CUST-12623,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,4,4,Yes,Delighted,No,Social Media,2024-06-14
+FB-600693,TKT-101557,CUST-03036,Issue resolved in reasonable time.,4,Positive,Low,4,5,2,Yes,Satisfied,Yes,Survey,2024-05-17
+FB-600694,TKT-100048,CUST-04636,Nothing special but acceptable.,3,Neutral,Low,2,5,3,No,Neutral,No,Email,2024-06-10
+FB-600695,TKT-101947,CUST-07172,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Medium,1,4,4,No,Angry,No,Survey,2024-02-04
+FB-600696,TKT-101738,CUST-14891,Resolution took longer than expected.,3,Negative,Low,4,2,4,Yes,Angry,Yes,Phone,2024-05-25
+FB-600697,TKT-100859,CUST-11028,Response time was slow. Could have been resolved faster.,2,Negative,Medium,2,4,4,No,Frustrated,No,Phone,2024-02-17
+FB-600698,TKT-101457,CUST-02564,Issue was resolved eventually.,3,Neutral,Low,4,3,3,Yes,Neutral,No,Social Media,2024-03-06
+FB-600699,TKT-100845,CUST-10378,Good support experience overall.,5,Positive,Low,3,3,4,Yes,Satisfied,No,Email,2024-05-06
+FB-600700,TKT-101189,CUST-14074,Best support experience I've had. Thank you!,5,Very Positive,Low,2,5,1,Yes,Delighted,Yes,Survey,2024-03-26
+FB-600701,TKT-100153,CUST-09306,Satisfied with the resolution provided.,5,Positive,Low,5,4,4,Yes,Satisfied,Yes,Phone,2024-01-12
+FB-600702,TKT-100484,CUST-12493,Outstanding service. Highly recommend!,5,Very Positive,Medium,5,2,5,Yes,Delighted,No,Survey,2024-06-09
+FB-600703,TKT-101435,CUST-01735,Good support experience overall.,4,Positive,Low,4,4,1,Yes,Satisfied,Yes,Chat,2024-01-03
+FB-600704,TKT-100478,CUST-08870,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,2,4,1,Yes,Angry,No,Social Media,2024-03-08
+FB-600705,TKT-100223,CUST-13852,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,4,5,Yes,Frustrated,No,Chat,2024-01-25
+FB-600706,TKT-100832,CUST-11844,Nothing special but acceptable.,3,Neutral,High,2,5,2,No,Neutral,No,Phone,2024-06-27
+FB-600707,TKT-100925,CUST-01667,Agent explained everything clearly.,4,Positive,Medium,5,5,5,Yes,Satisfied,Yes,Email,2024-02-22
+FB-600708,TKT-100185,CUST-11686,Good support experience overall.,5,Positive,Low,3,4,1,Yes,Satisfied,No,Social Media,2024-05-10
+FB-600709,TKT-100082,CUST-04159,Resolution took longer than expected.,3,Negative,Medium,4,4,5,Yes,Angry,Yes,Phone,2024-03-07
+FB-600710,TKT-101983,CUST-05746,Standard support experience.,3,Neutral,Low,2,4,1,Yes,Neutral,No,Chat,2024-02-14
+FB-600711,TKT-101679,CUST-05535,Agent was knowledgeable and helpful.,5,Positive,Low,5,4,5,Yes,Satisfied,No,Survey,2024-03-11
+FB-600712,TKT-101138,CUST-02777,Support quality has declined recently.,3,Negative,Low,5,4,4,Yes,Frustrated,Yes,Email,2024-04-19
+FB-600713,TKT-101646,CUST-01794,Issue resolved in reasonable time.,4,Positive,Medium,2,2,2,Yes,Satisfied,Yes,Email,2024-04-21
+FB-600714,TKT-101700,CUST-05616,Issue resolved in reasonable time.,5,Positive,Low,5,4,5,Yes,Satisfied,Yes,Survey,2024-01-18
+FB-600715,TKT-100762,CUST-13847,Excellent support! Agent went above and beyond.,5,Very Positive,Medium,3,4,2,Yes,Delighted,No,Chat,2024-04-01
+FB-600716,TKT-101878,CUST-02030,Agent was knowledgeable and helpful.,4,Positive,Low,3,4,4,Yes,Satisfied,Yes,Email,2024-03-08
+FB-600717,TKT-100404,CUST-02344,Felt like my issue wasn't prioritized.,3,Negative,High,5,4,5,Yes,Frustrated,Yes,Chat,2024-06-21
+FB-600718,TKT-100250,CUST-08970,Standard support experience.,3,Neutral,Medium,2,5,4,Yes,Neutral,Yes,Social Media,2024-02-14
+FB-600719,TKT-100887,CUST-02535,Agent explained everything clearly.,4,Positive,Low,3,4,4,Yes,Satisfied,No,Survey,2024-05-26
+FB-600720,TKT-101399,CUST-06644,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,5,3,Yes,Delighted,Yes,Phone,2024-02-20
+FB-600721,TKT-100563,CUST-02564,Agent explained everything clearly.,5,Positive,Low,4,3,4,Yes,Satisfied,No,Email,2024-04-01
+FB-600722,TKT-101257,CUST-10524,Satisfied with the resolution provided.,4,Positive,Low,5,5,1,Yes,Satisfied,Yes,Chat,2024-06-02
+FB-600723,TKT-101021,CUST-05090,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Email,2024-02-23
+FB-600724,TKT-100572,CUST-04723,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,3,2,2,No,Angry,Yes,Social Media,2024-03-25
+FB-600725,TKT-100510,CUST-10868,Nothing special but acceptable.,3,Neutral,Medium,3,4,3,Yes,Neutral,No,Chat,2024-03-27
+FB-600726,TKT-100982,CUST-08973,Agent explained everything clearly.,4,Positive,Low,5,3,3,Yes,Satisfied,Yes,Social Media,2024-05-28
+FB-600727,TKT-101028,CUST-11532,Agent explained everything clearly.,4,Positive,Low,2,2,5,Yes,Satisfied,Yes,Email,2024-06-27
+FB-600728,TKT-100653,CUST-06972,Support was adequate. Could be better.,3,Neutral,Low,4,3,4,Yes,Neutral,No,Chat,2024-04-18
+FB-600729,TKT-100119,CUST-12174,Standard support experience.,3,Neutral,Low,4,2,4,No,Neutral,No,Phone,2024-05-27
+FB-600730,TKT-101994,CUST-11377,Issue was resolved eventually.,3,Neutral,Low,4,4,3,Yes,Neutral,No,Chat,2024-02-10
+FB-600731,TKT-101092,CUST-05016,Agent was knowledgeable and helpful.,4,Positive,Low,1,3,2,Yes,Satisfied,No,Phone,2024-01-03
+FB-600732,TKT-101179,CUST-02055,Felt like my issue wasn't prioritized.,2,Negative,Medium,1,5,3,No,Frustrated,Yes,Phone,2024-02-04
+FB-600733,TKT-100360,CUST-08532,Best support experience I've had. Thank you!,5,Very Positive,Low,1,5,4,Yes,Delighted,Yes,Chat,2024-03-29
+FB-600734,TKT-101871,CUST-11487,Issue was resolved eventually.,3,Neutral,Low,5,4,3,No,Neutral,No,Social Media,2024-03-13
+FB-600735,TKT-100291,CUST-09752,Issue resolved in reasonable time.,4,Positive,Medium,2,5,3,Yes,Satisfied,No,Survey,2024-03-29
+FB-600736,TKT-101110,CUST-03685,Issue resolved in reasonable time.,5,Positive,Low,1,5,2,Yes,Satisfied,No,Email,2024-01-31
+FB-600737,TKT-100115,CUST-06956,Support quality has declined recently.,3,Negative,Low,4,1,3,Yes,Frustrated,Yes,Survey,2024-01-04
+FB-600738,TKT-100001,CUST-01901,Satisfied with the resolution provided.,4,Positive,Low,3,3,3,Yes,Satisfied,Yes,Phone,2024-04-30
+FB-600739,TKT-100697,CUST-12465,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Chat,2024-01-13
+FB-600740,TKT-100121,CUST-08102,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,3,5,1,No,Angry,No,Phone,2024-04-19
+FB-600741,TKT-101585,CUST-14333,Support quality has declined recently.,3,Negative,Low,2,2,5,No,Frustrated,No,Chat,2024-01-12
+FB-600742,TKT-101442,CUST-13186,Standard support experience.,3,Neutral,Low,1,4,4,Yes,Neutral,Yes,Chat,2024-02-29
+FB-600743,TKT-100279,CUST-11686,Standard support experience.,3,Neutral,Low,4,5,3,No,Neutral,No,Phone,2024-06-27
+FB-600744,TKT-101448,CUST-09148,Best support experience I've had. Thank you!,5,Very Positive,Medium,2,3,1,Yes,Delighted,No,Phone,2024-05-09
+FB-600745,TKT-101363,CUST-10529,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,3,Yes,Delighted,Yes,Chat,2024-04-08
+FB-600746,TKT-100260,CUST-01298,Issue was resolved eventually.,3,Neutral,Low,4,3,4,No,Neutral,No,Social Media,2024-05-05
+FB-600747,TKT-100066,CUST-05677,Support quality has declined recently.,3,Negative,Low,5,5,3,No,Angry,No,Social Media,2024-01-14
+FB-600748,TKT-100452,CUST-02472,Support quality has declined recently.,3,Negative,Low,1,5,5,Yes,Frustrated,No,Phone,2024-06-27
+FB-600749,TKT-100678,CUST-09217,Issue was resolved eventually.,3,Neutral,Low,5,5,3,Yes,Neutral,Yes,Chat,2024-01-07
+FB-600750,TKT-100343,CUST-13039,Excellent support! Agent went above and beyond.,5,Very Positive,Low,2,4,5,Yes,Delighted,No,Chat,2024-01-29
+FB-600751,TKT-100914,CUST-06442,Got the help I needed but could have been faster.,3,Neutral,Medium,4,3,3,Yes,Neutral,Yes,Email,2024-05-05
+FB-600752,TKT-100717,CUST-05636,Issue was resolved eventually.,3,Neutral,Low,5,2,5,Yes,Neutral,Yes,Survey,2024-01-21
+FB-600753,TKT-101500,CUST-12576,Issue resolved in reasonable time.,4,Positive,Low,5,5,3,Yes,Satisfied,No,Survey,2024-02-28
+FB-600754,TKT-101805,CUST-04465,Outstanding service. Highly recommend!,5,Very Positive,Low,4,2,4,Yes,Delighted,No,Email,2024-02-04
+FB-600755,TKT-101697,CUST-02494,Best support experience I've had. Thank you!,5,Very Positive,Medium,1,5,4,Yes,Delighted,No,Phone,2024-06-20
+FB-600756,TKT-100333,CUST-06894,Response time was slow. Could have been resolved faster.,2,Negative,Low,4,3,4,No,Frustrated,No,Email,2024-05-06
+FB-600757,TKT-100603,CUST-08576,Good support experience overall.,5,Positive,Low,5,5,2,Yes,Satisfied,Yes,Email,2024-04-25
+FB-600758,TKT-100151,CUST-12680,Issue resolved in reasonable time.,5,Positive,Low,3,5,4,Yes,Satisfied,No,Phone,2024-05-30
+FB-600759,TKT-101499,CUST-08758,Satisfied with the resolution provided.,5,Positive,Low,1,5,4,Yes,Satisfied,No,Email,2024-02-05
+FB-600760,TKT-100692,CUST-02576,Nothing special but acceptable.,3,Neutral,Low,4,5,2,No,Neutral,No,Survey,2024-04-05
+FB-600761,TKT-101930,CUST-04648,Issue resolved in reasonable time.,5,Positive,High,4,5,3,Yes,Satisfied,No,Survey,2024-03-18
+FB-600762,TKT-100321,CUST-04633,Issue was resolved eventually.,3,Neutral,Low,3,5,4,No,Neutral,Yes,Phone,2024-06-01
+FB-600763,TKT-100838,CUST-02451,Support quality has declined recently.,3,Negative,Low,4,4,5,No,Frustrated,No,Chat,2024-03-24
+FB-600764,TKT-100486,CUST-11573,Issue was resolved eventually.,3,Neutral,Low,2,5,4,No,Neutral,No,Survey,2024-04-22
+FB-600765,TKT-100314,CUST-14631,Resolution took longer than expected.,3,Negative,Low,4,4,3,Yes,Frustrated,No,Chat,2024-03-09
+FB-600766,TKT-101687,CUST-02689,Nothing special but acceptable.,3,Neutral,High,3,4,4,No,Neutral,Yes,Email,2024-06-18
+FB-600767,TKT-100423,CUST-02907,Got the help I needed but could have been faster.,3,Neutral,High,5,5,4,Yes,Neutral,No,Email,2024-06-05
+FB-600768,TKT-100631,CUST-12012,Felt like my issue wasn't prioritized.,3,Negative,Low,4,3,4,No,Frustrated,No,Chat,2024-05-04
+FB-600769,TKT-100186,CUST-02828,Nothing special but acceptable.,3,Neutral,Low,4,5,2,No,Neutral,Yes,Survey,2024-03-10
+FB-600770,TKT-100756,CUST-05270,Felt like my issue wasn't prioritized.,3,Negative,Medium,2,1,3,Yes,Angry,Yes,Survey,2024-04-22
+FB-600771,TKT-100539,CUST-07654,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,5,Yes,Neutral,Yes,Email,2024-01-30
+FB-600772,TKT-100175,CUST-11301,Good support experience overall.,5,Positive,Medium,5,3,4,Yes,Satisfied,No,Survey,2024-03-10
+FB-600773,TKT-101988,CUST-03205,Nothing special but acceptable.,3,Neutral,Low,5,5,2,Yes,Neutral,No,Survey,2024-05-28
+FB-600774,TKT-101676,CUST-07669,Agent explained everything clearly.,4,Positive,High,3,3,5,Yes,Satisfied,No,Survey,2024-05-07
+FB-600775,TKT-101172,CUST-06604,Fastest resolution ever. Very impressed.,5,Very Positive,Medium,5,5,2,Yes,Delighted,No,Email,2024-05-07
+FB-600776,TKT-100808,CUST-02344,Response time was slow. Could have been resolved faster.,2,Negative,Low,1,3,3,No,Frustrated,No,Social Media,2024-05-05
+FB-600777,TKT-101639,CUST-04042,Satisfied with the resolution provided.,4,Positive,Low,5,3,4,Yes,Satisfied,Yes,Survey,2024-05-01
+FB-600778,TKT-100354,CUST-14240,Support was adequate. Could be better.,3,Neutral,Low,2,5,2,Yes,Neutral,Yes,Survey,2024-02-25
+FB-600779,TKT-100160,CUST-13561,Standard support experience.,3,Neutral,Low,1,5,1,Yes,Neutral,No,Phone,2024-03-25
+FB-600780,TKT-101708,CUST-14682,Good support experience overall.,4,Positive,Low,4,5,2,Yes,Satisfied,Yes,Email,2024-05-02
+FB-600781,TKT-100178,CUST-12886,Best support experience I've had. Thank you!,5,Very Positive,High,4,5,5,Yes,Delighted,Yes,Chat,2024-06-19
+FB-600782,TKT-101754,CUST-05846,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,2,3,3,No,Angry,No,Email,2024-02-15
+FB-600783,TKT-101610,CUST-07795,Best support experience I've had. Thank you!,5,Very Positive,Low,3,4,4,Yes,Delighted,No,Survey,2024-06-26
+FB-600784,TKT-100230,CUST-14665,Support was adequate. Could be better.,3,Neutral,Low,4,5,4,Yes,Neutral,No,Social Media,2024-02-27
+FB-600785,TKT-101553,CUST-06054,Response time was slow. Could have been resolved faster.,3,Negative,Medium,2,5,3,Yes,Frustrated,No,Social Media,2024-01-27
+FB-600786,TKT-101802,CUST-13373,Standard support experience.,3,Neutral,Medium,2,4,5,No,Neutral,Yes,Survey,2024-03-01
+FB-600787,TKT-101171,CUST-05394,Agent explained everything clearly.,5,Positive,Medium,5,4,5,Yes,Satisfied,Yes,Chat,2024-06-02
+FB-600788,TKT-100825,CUST-11627,Satisfied with the resolution provided.,4,Positive,Low,2,5,5,Yes,Satisfied,No,Survey,2024-01-03
+FB-600789,TKT-100079,CUST-05177,Outstanding service. Highly recommend!,5,Very Positive,Low,5,5,4,Yes,Delighted,No,Email,2024-06-28
+FB-600790,TKT-101527,CUST-09822,Good support experience overall.,4,Positive,Low,5,4,4,Yes,Satisfied,No,Email,2024-04-06
+FB-600791,TKT-100691,CUST-12482,Resolution took longer than expected.,2,Negative,Low,4,5,4,No,Frustrated,Yes,Survey,2024-03-02
+FB-600792,TKT-101757,CUST-14020,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,5,2,Yes,Delighted,No,Phone,2024-02-05
+FB-600793,TKT-100275,CUST-10371,Agent explained everything clearly.,4,Positive,Low,4,1,4,Yes,Satisfied,No,Chat,2024-03-14
+FB-600794,TKT-100551,CUST-09841,Agent explained everything clearly.,5,Positive,Low,3,2,2,Yes,Satisfied,No,Email,2024-04-29
+FB-600795,TKT-100384,CUST-11815,Issue resolved in reasonable time.,5,Positive,Low,1,4,2,Yes,Satisfied,No,Survey,2024-05-16
+FB-600796,TKT-101517,CUST-05681,Nothing special but acceptable.,3,Neutral,Medium,4,4,4,No,Neutral,No,Social Media,2024-03-25
+FB-600797,TKT-101620,CUST-10080,Agent was knowledgeable and helpful.,4,Positive,Low,1,5,4,Yes,Satisfied,Yes,Social Media,2024-04-10
+FB-600798,TKT-100826,CUST-01241,Satisfied with the resolution provided.,4,Positive,Low,4,3,5,Yes,Satisfied,No,Email,2024-05-27
+FB-600799,TKT-100355,CUST-01731,Issue resolved in reasonable time.,4,Positive,Low,1,3,4,Yes,Satisfied,No,Phone,2024-01-19
+FB-600800,TKT-100067,CUST-09045,Response time was slow. Could have been resolved faster.,3,Negative,Low,3,5,4,No,Frustrated,No,Chat,2024-02-11
+FB-600801,TKT-100754,CUST-08429,Agent explained everything clearly.,5,Positive,Low,5,3,4,Yes,Satisfied,No,Email,2024-02-24
+FB-600802,TKT-101395,CUST-03026,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,3,Yes,Delighted,Yes,Social Media,2024-04-09
+FB-600803,TKT-100913,CUST-01298,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,2,4,Yes,Delighted,No,Chat,2024-05-23
+FB-600804,TKT-100705,CUST-09378,Good support experience overall.,4,Positive,Low,4,4,4,Yes,Satisfied,No,Email,2024-03-18
+FB-600805,TKT-100583,CUST-07506,Agent explained everything clearly.,5,Positive,Low,4,1,3,Yes,Satisfied,Yes,Social Media,2024-06-28
+FB-600806,TKT-101597,CUST-03880,Issue resolved in reasonable time.,5,Positive,Low,3,4,5,Yes,Satisfied,No,Phone,2024-02-13
+FB-600807,TKT-100551,CUST-10043,Agent explained everything clearly.,5,Positive,Low,3,2,3,Yes,Satisfied,No,Email,2024-06-16
+FB-600808,TKT-100970,CUST-11699,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,3,4,2,No,Angry,No,Social Media,2024-05-09
+FB-600809,TKT-101640,CUST-11248,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,5,5,No,Frustrated,Yes,Chat,2024-03-23
+FB-600810,TKT-101459,CUST-03662,Got the help I needed but could have been faster.,3,Neutral,Low,1,5,2,No,Neutral,No,Chat,2024-01-12
+FB-600811,TKT-100940,CUST-05975,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,3,4,Yes,Delighted,No,Social Media,2024-01-19
+FB-600812,TKT-101688,CUST-12644,Standard support experience.,3,Neutral,Low,1,5,5,Yes,Neutral,Yes,Chat,2024-01-11
+FB-600813,TKT-101149,CUST-11879,Nothing special but acceptable.,3,Neutral,Low,4,5,2,No,Neutral,Yes,Email,2024-05-10
+FB-600814,TKT-100986,CUST-03772,Resolution took longer than expected.,2,Negative,Low,4,5,4,No,Angry,No,Chat,2024-05-04
+FB-600815,TKT-101764,CUST-06141,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,4,No,Neutral,Yes,Social Media,2024-02-03
+FB-600816,TKT-101567,CUST-05402,Response time was slow. Could have been resolved faster.,3,Negative,Medium,4,5,4,No,Frustrated,No,Phone,2024-06-18
+FB-600817,TKT-101477,CUST-07254,Felt like my issue wasn't prioritized.,3,Negative,Low,5,4,2,No,Frustrated,Yes,Survey,2024-03-14
+FB-600818,TKT-100828,CUST-10352,Agent was knowledgeable and helpful.,5,Positive,Low,4,1,3,Yes,Satisfied,No,Social Media,2024-01-02
+FB-600819,TKT-101671,CUST-06650,Good support experience overall.,4,Positive,Medium,4,5,3,Yes,Satisfied,No,Phone,2024-02-05
+FB-600820,TKT-101405,CUST-09677,Felt like my issue wasn't prioritized.,3,Negative,Low,5,5,5,No,Frustrated,No,Phone,2024-06-15
+FB-600821,TKT-101721,CUST-12351,Best support experience I've had. Thank you!,5,Very Positive,Low,3,5,5,Yes,Delighted,Yes,Email,2024-02-13
+FB-600822,TKT-100964,CUST-08291,Got the help I needed but could have been faster.,3,Neutral,Low,1,1,4,Yes,Neutral,No,Chat,2024-02-07
+FB-600823,TKT-101340,CUST-11983,Issue resolved in reasonable time.,5,Positive,Low,3,3,3,Yes,Satisfied,Yes,Chat,2024-02-08
+FB-600824,TKT-100861,CUST-12753,Good support experience overall.,4,Positive,Low,4,4,5,Yes,Satisfied,Yes,Social Media,2024-02-11
+FB-600825,TKT-100602,CUST-11807,Response time was slow. Could have been resolved faster.,3,Negative,Low,3,5,4,No,Angry,Yes,Social Media,2024-02-26
+FB-600826,TKT-101188,CUST-10133,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,4,5,No,Frustrated,No,Social Media,2024-06-23
+FB-600827,TKT-100245,CUST-06935,Standard support experience.,3,Neutral,Medium,3,4,4,No,Neutral,No,Phone,2024-04-19
+FB-600828,TKT-100281,CUST-12475,Got the help I needed but could have been faster.,3,Neutral,Low,5,3,4,No,Neutral,No,Survey,2024-06-25
+FB-600829,TKT-100293,CUST-02773,Fastest resolution ever. Very impressed.,5,Very Positive,Low,5,4,4,Yes,Delighted,No,Survey,2024-03-08
+FB-600830,TKT-100681,CUST-01766,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,3,3,Yes,Delighted,Yes,Email,2024-03-05
+FB-600831,TKT-100009,CUST-05959,Resolution took longer than expected.,3,Negative,Medium,4,5,4,Yes,Frustrated,No,Phone,2024-01-13
+FB-600832,TKT-101180,CUST-07595,Support was adequate. Could be better.,3,Neutral,Low,4,2,5,No,Neutral,No,Email,2024-05-09
+FB-600833,TKT-100265,CUST-03935,Staff doesn't know what they're doing. Product is broken.,2,Very Negative,Low,5,4,1,No,Angry,No,Survey,2024-05-14
+FB-600834,TKT-100878,CUST-04788,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,4,5,Yes,Delighted,Yes,Social Media,2024-02-01
+FB-600835,TKT-100408,CUST-03639,Resolution took longer than expected.,2,Negative,Low,5,4,2,No,Frustrated,No,Chat,2024-04-15
+FB-600836,TKT-101550,CUST-06081,Satisfied with the resolution provided.,4,Positive,Low,4,3,2,Yes,Satisfied,Yes,Email,2024-03-25
+FB-600837,TKT-101283,CUST-05087,Support was adequate. Could be better.,3,Neutral,Low,4,5,5,Yes,Neutral,No,Chat,2024-03-25
+FB-600838,TKT-100639,CUST-13502,Agent was knowledgeable and helpful.,4,Positive,Low,5,3,5,Yes,Satisfied,Yes,Social Media,2024-03-08
+FB-600839,TKT-100626,CUST-14240,Excellent support! Agent went above and beyond.,5,Very Positive,Low,3,1,3,Yes,Delighted,No,Chat,2024-04-06
+FB-600840,TKT-101942,CUST-11960,Felt like my issue wasn't prioritized.,3,Negative,Low,4,4,2,No,Angry,No,Phone,2024-03-17
+FB-600841,TKT-100701,CUST-11000,Standard support experience.,3,Neutral,Low,5,2,4,No,Neutral,No,Phone,2024-02-02
+FB-600842,TKT-101941,CUST-05720,Standard support experience.,3,Neutral,Low,5,5,1,Yes,Neutral,Yes,Phone,2024-05-22
+FB-600843,TKT-100432,CUST-14344,Agent was knowledgeable and helpful.,4,Positive,Low,2,3,5,Yes,Satisfied,No,Phone,2024-04-04
+FB-600844,TKT-100252,CUST-02551,Agent was knowledgeable and helpful.,5,Positive,Low,3,3,4,Yes,Satisfied,Yes,Chat,2024-01-09
+FB-600845,TKT-101579,CUST-05300,Best support experience I've had. Thank you!,5,Very Positive,Low,5,3,3,Yes,Delighted,Yes,Email,2024-04-14
+FB-600846,TKT-101355,CUST-01695,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,3,Yes,Satisfied,Yes,Email,2024-03-16
+FB-600847,TKT-100853,CUST-12148,Standard support experience.,3,Neutral,Low,3,4,2,Yes,Neutral,No,Survey,2024-03-31
+FB-600848,TKT-101437,CUST-02881,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,1,3,Yes,Delighted,No,Email,2024-05-30
+FB-600849,TKT-100616,CUST-04454,Issue was resolved eventually.,3,Neutral,Low,3,4,1,No,Neutral,No,Phone,2024-05-05
+FB-600850,TKT-100857,CUST-02177,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,3,4,5,No,Angry,No,Social Media,2024-06-25
+FB-600851,TKT-100241,CUST-12880,Agent was knowledgeable and helpful.,5,Positive,Low,4,4,5,Yes,Satisfied,No,Survey,2024-06-06
+FB-600852,TKT-100406,CUST-05394,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,5,4,Yes,Delighted,No,Social Media,2024-02-18
+FB-600853,TKT-101992,CUST-08329,Resolution took longer than expected.,2,Negative,Low,5,3,5,No,Frustrated,No,Chat,2024-05-30
+FB-600854,TKT-100328,CUST-14221,Best support experience I've had. Thank you!,5,Very Positive,Low,3,4,5,Yes,Delighted,No,Phone,2024-06-06
+FB-600855,TKT-101409,CUST-05132,Good support experience overall.,5,Positive,Medium,3,5,4,Yes,Satisfied,Yes,Email,2024-01-07
+FB-600856,TKT-101375,CUST-11983,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,5,3,5,No,Angry,No,Survey,2024-02-11
+FB-600857,TKT-100305,CUST-12849,Nothing special but acceptable.,3,Neutral,Medium,4,3,3,Yes,Neutral,No,Email,2024-05-07
+FB-600858,TKT-101852,CUST-10107,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Medium,5,4,5,No,Frustrated,No,Chat,2024-05-24
+FB-600859,TKT-100540,CUST-06083,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,4,Yes,Satisfied,Yes,Phone,2024-05-26
+FB-600860,TKT-101790,CUST-14221,Good support experience overall.,4,Positive,Medium,4,4,5,Yes,Satisfied,Yes,Chat,2024-02-05
+FB-600861,TKT-100872,CUST-11309,Agent was knowledgeable and helpful.,5,Positive,Low,5,5,4,Yes,Satisfied,Yes,Email,2024-04-01
+FB-600862,TKT-100019,CUST-06862,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,3,Yes,Delighted,No,Phone,2024-06-04
+FB-600863,TKT-100673,CUST-05329,Standard support experience.,3,Neutral,Low,3,5,5,No,Neutral,No,Email,2024-04-06
+FB-600864,TKT-100763,CUST-13798,Outstanding service. Highly recommend!,5,Very Positive,Medium,4,2,2,Yes,Delighted,Yes,Survey,2024-05-06
+FB-600865,TKT-100819,CUST-09045,Got the help I needed but could have been faster.,3,Neutral,Medium,1,2,5,No,Neutral,No,Survey,2024-04-21
+FB-600866,TKT-101638,CUST-11929,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,1,Yes,Delighted,Yes,Email,2024-03-06
+FB-600867,TKT-101930,CUST-11376,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,5,Yes,Delighted,Yes,Social Media,2024-03-13
+FB-600868,TKT-100988,CUST-02824,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,4,5,3,No,Angry,No,Phone,2024-04-26
+FB-600869,TKT-101251,CUST-03903,Outstanding service. Highly recommend!,5,Very Positive,Low,5,2,1,Yes,Delighted,No,Phone,2024-06-01
+FB-600870,TKT-100989,CUST-07193,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Survey,2024-01-14
+FB-600871,TKT-100094,CUST-08114,Got the help I needed but could have been faster.,3,Neutral,Medium,4,2,5,No,Neutral,Yes,Social Media,2024-04-08
+FB-600872,TKT-101571,CUST-06338,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,3,5,4,No,Angry,No,Phone,2024-06-11
+FB-600873,TKT-101957,CUST-06761,Good support experience overall.,4,Positive,Low,4,3,5,Yes,Satisfied,No,Social Media,2024-01-10
+FB-600874,TKT-100195,CUST-07446,Support was adequate. Could be better.,3,Neutral,High,4,4,4,No,Neutral,Yes,Survey,2024-06-22
+FB-600875,TKT-100304,CUST-12989,Support quality has declined recently.,3,Negative,Low,2,4,5,Yes,Frustrated,Yes,Phone,2024-06-10
+FB-600876,TKT-101035,CUST-13419,Standard support experience.,3,Neutral,Medium,4,4,5,No,Neutral,No,Email,2024-06-27
+FB-600877,TKT-101538,CUST-08824,Outstanding service. Highly recommend!,5,Very Positive,Low,3,5,5,Yes,Delighted,Yes,Chat,2024-06-01
+FB-600878,TKT-100103,CUST-14495,Fastest resolution ever. Very impressed.,5,Very Positive,Medium,2,3,2,Yes,Delighted,No,Survey,2024-05-04
+FB-600879,TKT-100825,CUST-07377,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,2,5,1,Yes,Angry,No,Social Media,2024-04-17
+FB-600880,TKT-100917,CUST-02517,Felt like my issue wasn't prioritized.,3,Negative,Low,4,5,4,No,Frustrated,Yes,Survey,2024-01-17
+FB-600881,TKT-101526,CUST-04648,Issue was resolved eventually.,3,Neutral,Low,4,4,2,Yes,Neutral,No,Email,2024-04-28
+FB-600882,TKT-101141,CUST-04772,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,4,3,5,No,Angry,No,Social Media,2024-03-18
+FB-600883,TKT-101972,CUST-07501,Outstanding service. Highly recommend!,5,Very Positive,Low,3,5,4,Yes,Delighted,No,Social Media,2024-02-20
+FB-600884,TKT-100423,CUST-04879,Felt like my issue wasn't prioritized.,3,Negative,Low,2,3,5,No,Frustrated,Yes,Email,2024-03-28
+FB-600885,TKT-101672,CUST-02812,Standard support experience.,3,Neutral,Low,3,5,3,No,Neutral,No,Social Media,2024-01-21
+FB-600886,TKT-101228,CUST-06145,Got the help I needed but could have been faster.,3,Neutral,Low,5,5,3,No,Neutral,Yes,Phone,2024-06-16
+FB-600887,TKT-100004,CUST-08058,Good support experience overall.,4,Positive,Low,4,5,5,Yes,Satisfied,No,Chat,2024-03-18
+FB-600888,TKT-101121,CUST-07123,No solution provided. Ticket was escalated multiple times.,2,Very Negative,Low,3,2,4,No,Angry,No,Email,2024-03-17
+FB-600889,TKT-101836,CUST-08549,Standard support experience.,3,Neutral,Low,4,5,3,Yes,Neutral,No,Survey,2024-03-07
+FB-600890,TKT-100219,CUST-13144,Nothing special but acceptable.,3,Neutral,Low,4,4,5,Yes,Neutral,Yes,Survey,2024-02-10
+FB-600891,TKT-100441,CUST-02672,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,5,3,5,No,Frustrated,No,Email,2024-06-21
+FB-600892,TKT-101550,CUST-14665,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Low,4,5,4,No,Angry,No,Social Media,2024-04-15
+FB-600893,TKT-100252,CUST-07979,Agent explained everything clearly.,4,Positive,Medium,2,4,3,Yes,Satisfied,No,Social Media,2024-02-10
+FB-600894,TKT-101958,CUST-13398,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,3,4,2,No,Angry,Yes,Email,2024-05-18
+FB-600895,TKT-101133,CUST-07446,Support quality has declined recently.,2,Negative,Medium,4,5,5,No,Frustrated,No,Social Media,2024-04-22
+FB-600896,TKT-101599,CUST-06196,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Phone,2024-01-18
+FB-600897,TKT-101496,CUST-13798,Issue resolved in reasonable time.,4,Positive,Low,4,3,3,Yes,Satisfied,Yes,Social Media,2024-05-02
+FB-600898,TKT-101241,CUST-04532,Good support experience overall.,5,Positive,Low,2,4,4,Yes,Satisfied,No,Survey,2024-01-02
+FB-600899,TKT-100857,CUST-05394,Issue resolved in reasonable time.,4,Positive,Low,5,4,2,Yes,Satisfied,Yes,Chat,2024-05-27
+FB-600900,TKT-101987,CUST-04688,Agent explained everything clearly.,4,Positive,Low,4,3,4,Yes,Satisfied,No,Phone,2024-02-16
+FB-600901,TKT-100845,CUST-12257,Nothing special but acceptable.,3,Neutral,Low,5,4,5,No,Neutral,No,Social Media,2024-06-02
+FB-600902,TKT-101762,CUST-01598,Satisfied with the resolution provided.,4,Positive,Low,3,4,3,Yes,Satisfied,No,Phone,2024-01-04
+FB-600903,TKT-100429,CUST-03632,Good support experience overall.,5,Positive,Low,5,1,4,Yes,Satisfied,No,Phone,2024-06-03
+FB-600904,TKT-101454,CUST-08930,Support was adequate. Could be better.,3,Neutral,Low,3,1,2,No,Neutral,No,Chat,2024-04-20
+FB-600905,TKT-101151,CUST-08179,Satisfied with the resolution provided.,4,Positive,Low,4,3,5,Yes,Satisfied,No,Survey,2024-02-12
+FB-600906,TKT-101380,CUST-06880,Nothing special but acceptable.,3,Neutral,Medium,3,5,4,No,Neutral,No,Survey,2024-03-09
+FB-600907,TKT-101655,CUST-04124,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,3,Yes,Delighted,Yes,Survey,2024-06-12
+FB-600908,TKT-100297,CUST-12425,Agent was knowledgeable and helpful.,4,Positive,Low,5,5,4,Yes,Satisfied,Yes,Phone,2024-03-30
+FB-600909,TKT-100586,CUST-13561,Good support experience overall.,5,Positive,Medium,3,4,2,Yes,Satisfied,Yes,Email,2024-05-23
+FB-600910,TKT-101414,CUST-04791,Good support experience overall.,5,Positive,Low,5,5,4,Yes,Satisfied,Yes,Social Media,2024-03-06
+FB-600911,TKT-100066,CUST-03259,Agent explained everything clearly.,5,Positive,Low,4,2,5,Yes,Satisfied,Yes,Social Media,2024-01-08
+FB-600912,TKT-101771,CUST-09949,Nothing special but acceptable.,3,Neutral,Low,3,3,4,No,Neutral,Yes,Chat,2024-03-25
+FB-600913,TKT-101419,CUST-03438,Agent was knowledgeable and helpful.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Survey,2024-01-09
+FB-600914,TKT-100853,CUST-12753,Resolution took longer than expected.,3,Negative,Low,4,5,2,Yes,Frustrated,Yes,Chat,2024-03-11
+FB-600915,TKT-100415,CUST-04618,Agent explained everything clearly.,5,Positive,Medium,4,2,3,Yes,Satisfied,No,Chat,2024-04-26
+FB-600916,TKT-101546,CUST-10356,Nothing special but acceptable.,3,Neutral,Low,4,3,1,Yes,Neutral,No,Phone,2024-06-27
+FB-600917,TKT-100602,CUST-04712,Support was adequate. Could be better.,3,Neutral,Low,4,4,5,Yes,Neutral,Yes,Phone,2024-02-11
+FB-600918,TKT-101505,CUST-11802,Issue was resolved eventually.,3,Neutral,Medium,2,4,5,No,Neutral,Yes,Chat,2024-05-08
+FB-600919,TKT-101139,CUST-04232,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Medium,2,5,4,Yes,Frustrated,No,Chat,2024-03-06
+FB-600920,TKT-100011,CUST-03102,Felt like my issue wasn't prioritized.,3,Negative,Low,1,5,5,Yes,Frustrated,Yes,Chat,2024-03-05
+FB-600921,TKT-101222,CUST-13094,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,1,4,2,No,Angry,No,Chat,2024-02-15
+FB-600922,TKT-101004,CUST-10961,Satisfied with the resolution provided.,5,Positive,Low,4,5,3,Yes,Satisfied,No,Email,2024-02-04
+FB-600923,TKT-101605,CUST-03921,Outstanding service. Highly recommend!,5,Very Positive,Low,2,5,3,Yes,Delighted,No,Phone,2024-05-23
+FB-600924,TKT-101066,CUST-12543,Satisfied with the resolution provided.,5,Positive,Low,4,3,4,Yes,Satisfied,Yes,Social Media,2024-05-20
+FB-600925,TKT-101099,CUST-04994,Excellent support! Agent went above and beyond.,5,Very Positive,Low,3,4,4,Yes,Delighted,Yes,Phone,2024-02-28
+FB-600926,TKT-101358,CUST-01901,Good support experience overall.,5,Positive,Low,5,2,4,Yes,Satisfied,Yes,Phone,2024-05-06
+FB-600927,TKT-101946,CUST-10579,Support quality has declined recently.,3,Negative,Low,4,3,4,No,Frustrated,No,Email,2024-02-04
+FB-600928,TKT-100234,CUST-02861,Got the help I needed but could have been faster.,3,Neutral,Medium,2,2,4,No,Neutral,Yes,Social Media,2024-03-05
+FB-600929,TKT-101881,CUST-12486,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Medium,4,3,2,No,Frustrated,No,Chat,2024-02-05
+FB-600930,TKT-100781,CUST-12115,Issue was resolved eventually.,3,Neutral,Medium,2,4,3,No,Neutral,Yes,Chat,2024-04-09
+FB-600931,TKT-100050,CUST-11699,Satisfied with the resolution provided.,4,Positive,High,2,3,4,Yes,Satisfied,No,Chat,2024-06-07
+FB-600932,TKT-101053,CUST-05888,Support quality has declined recently.,2,Negative,Low,2,4,4,No,Angry,No,Email,2024-04-08
+FB-600933,TKT-100607,CUST-08083,Support was adequate. Could be better.,3,Neutral,Medium,5,3,3,No,Neutral,No,Email,2024-05-02
+FB-600934,TKT-100342,CUST-09766,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Email,2024-04-08
+FB-600935,TKT-100431,CUST-14341,Issue resolved in reasonable time.,5,Positive,Low,5,3,5,Yes,Satisfied,No,Survey,2024-05-16
+FB-600936,TKT-101711,CUST-13829,Issue resolved in reasonable time.,5,Positive,Medium,3,5,4,Yes,Satisfied,No,Survey,2024-06-01
+FB-600937,TKT-101324,CUST-01964,Issue was resolved eventually.,3,Neutral,Low,1,4,4,Yes,Neutral,Yes,Chat,2024-06-25
+FB-600938,TKT-100077,CUST-08875,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,4,Yes,Delighted,Yes,Chat,2024-03-04
+FB-600939,TKT-101142,CUST-05895,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,3,5,5,No,Angry,No,Chat,2024-04-28
+FB-600940,TKT-100834,CUST-12886,Agent explained everything clearly.,5,Positive,Low,1,5,4,Yes,Satisfied,No,Survey,2024-03-09
+FB-600941,TKT-100647,CUST-06988,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,3,2,Yes,Delighted,No,Social Media,2024-01-29
+FB-600942,TKT-100012,CUST-08971,Best support experience I've had. Thank you!,5,Very Positive,Low,1,3,5,Yes,Delighted,Yes,Social Media,2024-06-22
+FB-600943,TKT-100093,CUST-10378,Agent was knowledgeable and helpful.,4,Positive,Medium,5,5,3,Yes,Satisfied,Yes,Social Media,2024-02-10
+FB-600944,TKT-100217,CUST-09959,Good support experience overall.,4,Positive,Low,5,4,5,Yes,Satisfied,No,Chat,2024-02-27
+FB-600945,TKT-101567,CUST-14671,Felt like my issue wasn't prioritized.,3,Negative,Low,2,4,4,No,Frustrated,No,Email,2024-04-27
+FB-600946,TKT-100970,CUST-05763,Satisfied with the resolution provided.,4,Positive,Medium,4,5,3,Yes,Satisfied,Yes,Survey,2024-02-18
+FB-600947,TKT-101631,CUST-11265,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,4,Yes,Delighted,Yes,Phone,2024-03-25
+FB-600948,TKT-100610,CUST-10259,Good support experience overall.,5,Positive,High,5,3,3,Yes,Satisfied,No,Email,2024-05-04
+FB-600949,TKT-101133,CUST-02923,Nothing special but acceptable.,3,Neutral,Low,2,5,5,Yes,Neutral,Yes,Email,2024-01-25
+FB-600950,TKT-101172,CUST-12822,Agent explained everything clearly.,4,Positive,Low,2,1,1,Yes,Satisfied,No,Email,2024-01-26
+FB-600951,TKT-100624,CUST-02172,Got the help I needed but could have been faster.,3,Neutral,Low,2,5,4,Yes,Neutral,No,Social Media,2024-02-02
+FB-600952,TKT-100291,CUST-03432,Support was adequate. Could be better.,3,Neutral,Low,2,5,4,Yes,Neutral,No,Chat,2024-01-12
+FB-600953,TKT-100397,CUST-02815,Support was adequate. Could be better.,3,Neutral,Low,1,4,4,Yes,Neutral,No,Social Media,2024-01-13
+FB-600954,TKT-100944,CUST-10079,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,4,3,4,No,Angry,Yes,Email,2024-05-23
+FB-600955,TKT-100513,CUST-05987,Issue resolved in reasonable time.,4,Positive,Low,4,4,5,Yes,Satisfied,No,Survey,2024-02-15
+FB-600956,TKT-101948,CUST-10984,Outstanding service. Highly recommend!,5,Very Positive,High,4,5,4,Yes,Delighted,Yes,Phone,2024-01-17
+FB-600957,TKT-100204,CUST-12556,Satisfied with the resolution provided.,4,Positive,Low,5,4,4,Yes,Satisfied,Yes,Phone,2024-05-19
+FB-600958,TKT-100650,CUST-06924,Agent explained everything clearly.,5,Positive,Low,4,2,5,Yes,Satisfied,Yes,Chat,2024-05-17
+FB-600959,TKT-101420,CUST-01068,Issue resolved in reasonable time.,4,Positive,Medium,4,5,5,Yes,Satisfied,No,Chat,2024-02-03
+FB-600960,TKT-101654,CUST-02773,Felt like my issue wasn't prioritized.,2,Negative,Medium,5,4,3,No,Frustrated,Yes,Chat,2024-03-07
+FB-600961,TKT-100504,CUST-11495,Support was adequate. Could be better.,3,Neutral,Low,5,5,3,No,Neutral,Yes,Chat,2024-05-08
+FB-600962,TKT-100275,CUST-03504,Good support experience overall.,4,Positive,Low,2,4,1,Yes,Satisfied,No,Survey,2024-06-24
+FB-600963,TKT-100912,CUST-03259,Got the help I needed but could have been faster.,3,Neutral,Low,5,5,5,No,Neutral,No,Phone,2024-05-22
+FB-600964,TKT-101322,CUST-05369,Issue was resolved eventually.,3,Neutral,Low,1,5,5,No,Neutral,No,Phone,2024-03-04
+FB-600965,TKT-101825,CUST-03134,Support was adequate. Could be better.,3,Neutral,Low,5,5,4,No,Neutral,No,Email,2024-01-29
+FB-600966,TKT-101489,CUST-01163,Response time was slow. Could have been resolved faster.,3,Negative,Low,1,2,4,Yes,Angry,No,Social Media,2024-02-07
+FB-600967,TKT-100829,CUST-07745,Satisfied with the resolution provided.,4,Positive,Medium,5,2,4,Yes,Satisfied,Yes,Email,2024-02-13
+FB-600968,TKT-101129,CUST-04078,Satisfied with the resolution provided.,4,Positive,Low,4,3,3,Yes,Satisfied,No,Social Media,2024-02-15
+FB-600969,TKT-100966,CUST-04953,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,5,1,Yes,Delighted,Yes,Phone,2024-06-07
+FB-600970,TKT-101825,CUST-07979,Satisfied with the resolution provided.,5,Positive,Low,5,4,4,Yes,Satisfied,No,Chat,2024-04-30
+FB-600971,TKT-100274,CUST-01171,Terrible support. I'm switching providers immediately.,1,Very Negative,High,1,4,3,No,Angry,No,Survey,2024-06-28
+FB-600972,TKT-100745,CUST-10762,Agent was knowledgeable and helpful.,4,Positive,Low,5,4,2,Yes,Satisfied,No,Social Media,2024-04-30
+FB-600973,TKT-101401,CUST-10032,Satisfied with the resolution provided.,5,Positive,Low,5,4,5,Yes,Satisfied,Yes,Phone,2024-05-26
+FB-600974,TKT-100366,CUST-02935,Satisfied with the resolution provided.,4,Positive,Medium,4,5,4,Yes,Satisfied,No,Phone,2024-04-12
+FB-600975,TKT-101507,CUST-14543,Standard support experience.,3,Neutral,Low,5,5,4,No,Neutral,Yes,Survey,2024-04-13
+FB-600976,TKT-100474,CUST-14380,Good support experience overall.,5,Positive,Low,4,5,3,Yes,Satisfied,Yes,Email,2024-04-18
+FB-600977,TKT-101369,CUST-12394,Terrible support. I'm switching providers immediately.,1,Very Negative,Medium,1,3,5,No,Angry,No,Chat,2024-05-16
+FB-600978,TKT-100794,CUST-08203,Felt like my issue wasn't prioritized.,2,Negative,Medium,4,4,5,No,Frustrated,No,Email,2024-03-03
+FB-600979,TKT-101328,CUST-14359,Issue was resolved eventually.,3,Neutral,Low,4,5,3,No,Neutral,No,Chat,2024-01-04
+FB-600980,TKT-101185,CUST-05629,Satisfied with the resolution provided.,5,Positive,Low,4,2,4,Yes,Satisfied,Yes,Survey,2024-01-14
+FB-600981,TKT-100748,CUST-09611,Agent was knowledgeable and helpful.,4,Positive,Low,5,4,5,Yes,Satisfied,No,Survey,2024-05-21
+FB-600982,TKT-101992,CUST-03986,Issue resolved in reasonable time.,5,Positive,Low,4,4,4,Yes,Satisfied,No,Chat,2024-02-02
+FB-600983,TKT-101673,CUST-01166,Outstanding service. Highly recommend!,5,Very Positive,Low,3,4,4,Yes,Delighted,No,Survey,2024-03-10
+FB-600984,TKT-101816,CUST-03883,Agent was knowledgeable and helpful.,4,Positive,Low,4,5,5,Yes,Satisfied,No,Phone,2024-01-11
+FB-600985,TKT-100900,CUST-10032,Support was adequate. Could be better.,3,Neutral,Medium,4,3,1,Yes,Neutral,No,Chat,2024-01-16
+FB-600986,TKT-100433,CUST-11232,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,3,4,Yes,Delighted,Yes,Social Media,2024-06-19
+FB-600987,TKT-101469,CUST-07377,Issue was resolved eventually.,3,Neutral,Low,2,4,5,Yes,Neutral,No,Chat,2024-03-06
+FB-600988,TKT-101475,CUST-04237,Felt like my issue wasn't prioritized.,2,Negative,High,3,5,3,No,Frustrated,No,Survey,2024-02-14
+FB-600989,TKT-100431,CUST-06582,Issue resolved in reasonable time.,4,Positive,Low,5,4,2,Yes,Satisfied,No,Survey,2024-05-01
+FB-600990,TKT-100045,CUST-02645,Issue was resolved eventually.,3,Neutral,Low,3,3,4,Yes,Neutral,No,Phone,2024-06-12
+FB-600991,TKT-100275,CUST-12233,Support quality has declined recently.,3,Negative,Medium,4,5,3,Yes,Frustrated,No,Phone,2024-04-19
+FB-600992,TKT-100114,CUST-12757,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,3,Yes,Neutral,No,Survey,2024-04-15
+FB-600993,TKT-101227,CUST-12316,Agent was knowledgeable and helpful.,5,Positive,Medium,1,5,5,Yes,Satisfied,No,Chat,2024-04-09
+FB-600994,TKT-101939,CUST-14272,Issue resolved in reasonable time.,4,Positive,Medium,3,4,5,Yes,Satisfied,No,Survey,2024-04-23
+FB-600995,TKT-101776,CUST-05251,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,High,2,4,5,Yes,Frustrated,No,Social Media,2024-03-30
+FB-600996,TKT-100292,CUST-06229,Satisfied with the resolution provided.,5,Positive,Low,2,5,5,Yes,Satisfied,No,Phone,2024-02-19
+FB-600997,TKT-101276,CUST-13241,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,5,4,4,No,Angry,Yes,Chat,2024-06-15
+FB-600998,TKT-101888,CUST-09437,Support quality has declined recently.,3,Negative,Low,2,5,5,Yes,Frustrated,Yes,Survey,2024-05-28
+FB-600999,TKT-100270,CUST-06668,Response time was slow. Could have been resolved faster.,3,Negative,High,4,5,1,Yes,Frustrated,No,Social Media,2024-04-30
+FB-601000,TKT-101401,CUST-12576,Fastest resolution ever. Very impressed.,5,Very Positive,Medium,2,2,4,Yes,Delighted,No,Phone,2024-03-21
+FB-601001,TKT-100974,CUST-11000,Best support experience I've had. Thank you!,5,Very Positive,Low,4,4,2,Yes,Delighted,No,Social Media,2024-03-06
+FB-601002,TKT-101030,CUST-02493,Issue was resolved eventually.,3,Neutral,Low,2,2,5,Yes,Neutral,No,Phone,2024-06-20
+FB-601003,TKT-101847,CUST-05511,Nothing special but acceptable.,3,Neutral,High,3,2,3,Yes,Neutral,No,Survey,2024-03-28
+FB-601004,TKT-101069,CUST-04454,Good support experience overall.,5,Positive,Low,5,1,4,Yes,Satisfied,No,Social Media,2024-01-24
+FB-601005,TKT-100878,CUST-12559,Standard support experience.,3,Neutral,Low,2,2,4,No,Neutral,Yes,Social Media,2024-05-30
+FB-601006,TKT-100200,CUST-08962,Fastest resolution ever. Very impressed.,5,Very Positive,Low,3,5,5,Yes,Delighted,Yes,Phone,2024-05-02
+FB-601007,TKT-101863,CUST-03493,Issue was resolved eventually.,3,Neutral,Low,1,4,2,No,Neutral,No,Social Media,2024-05-11
+FB-601008,TKT-100836,CUST-08095,Support was adequate. Could be better.,3,Neutral,Low,5,3,3,Yes,Neutral,No,Email,2024-06-23
+FB-601009,TKT-101183,CUST-07669,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,4,3,3,No,Angry,No,Survey,2024-02-22
+FB-601010,TKT-101340,CUST-01888,Resolution took longer than expected.,3,Negative,Medium,3,4,4,No,Frustrated,Yes,Phone,2024-04-17
+FB-601011,TKT-100872,CUST-10043,Support quality has declined recently.,3,Negative,Low,2,4,4,No,Frustrated,Yes,Social Media,2024-05-30
+FB-601012,TKT-100867,CUST-07381,Outstanding service. Highly recommend!,5,Very Positive,Medium,4,5,5,Yes,Delighted,No,Survey,2024-02-10
+FB-601013,TKT-101546,CUST-04081,Felt like my issue wasn't prioritized.,3,Negative,High,1,4,5,No,Frustrated,Yes,Social Media,2024-01-27
+FB-601014,TKT-101136,CUST-08116,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,1,5,4,No,Angry,No,Social Media,2024-06-09
+FB-601015,TKT-100705,CUST-04919,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Email,2024-06-24
+FB-601016,TKT-101531,CUST-13282,Agent explained everything clearly.,5,Positive,Low,3,5,5,Yes,Satisfied,No,Phone,2024-01-02
+FB-601017,TKT-100205,CUST-12130,Best support experience I've had. Thank you!,5,Very Positive,Medium,4,4,4,Yes,Delighted,No,Chat,2024-04-10
+FB-601018,TKT-101640,CUST-06431,Satisfied with the resolution provided.,4,Positive,Low,2,5,4,Yes,Satisfied,No,Email,2024-06-03
+FB-601019,TKT-100329,CUST-12419,Response time was slow. Could have been resolved faster.,3,Negative,Medium,4,5,4,Yes,Angry,No,Survey,2024-04-07
+FB-601020,TKT-101896,CUST-07405,Standard support experience.,3,Neutral,Low,5,5,5,Yes,Neutral,Yes,Phone,2024-01-25
+FB-601021,TKT-100759,CUST-10951,Nothing special but acceptable.,3,Neutral,Low,4,4,1,Yes,Neutral,No,Survey,2024-06-24
+FB-601022,TKT-101257,CUST-01542,Nothing special but acceptable.,3,Neutral,Low,4,4,4,No,Neutral,No,Social Media,2024-04-01
+FB-601023,TKT-100117,CUST-06103,Support was adequate. Could be better.,3,Neutral,Low,5,4,4,No,Neutral,No,Phone,2024-02-21
+FB-601024,TKT-101741,CUST-10319,Satisfied with the resolution provided.,4,Positive,Low,5,5,4,Yes,Satisfied,Yes,Email,2024-03-25
+FB-601025,TKT-101605,CUST-05172,Support quality has declined recently.,3,Negative,Low,4,4,3,Yes,Frustrated,No,Email,2024-01-10
+FB-601026,TKT-100736,CUST-03063,Agent was knowledgeable and helpful.,4,Positive,Low,4,2,1,Yes,Satisfied,No,Email,2024-01-11
+FB-601027,TKT-100565,CUST-03511,Standard support experience.,3,Neutral,Low,3,2,2,No,Neutral,No,Survey,2024-05-08
+FB-601028,TKT-101200,CUST-12475,Support quality has declined recently.,3,Negative,Low,4,2,4,Yes,Frustrated,No,Email,2024-03-27
+FB-601029,TKT-101882,CUST-12849,Nothing special but acceptable.,3,Neutral,Medium,3,5,4,No,Neutral,No,Social Media,2024-04-02
+FB-601030,TKT-101873,CUST-10053,Outstanding service. Highly recommend!,5,Very Positive,Low,1,2,5,Yes,Delighted,Yes,Chat,2024-03-02
+FB-601031,TKT-100463,CUST-11985,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,4,Yes,Delighted,No,Survey,2024-02-05
+FB-601032,TKT-101177,CUST-08408,Outstanding service. Highly recommend!,5,Very Positive,Low,4,4,3,Yes,Delighted,Yes,Social Media,2024-06-03
+FB-601033,TKT-100218,CUST-14915,Agent was knowledgeable and helpful.,5,Positive,Low,5,4,3,Yes,Satisfied,No,Chat,2024-04-21
+FB-601034,TKT-101939,CUST-09652,Satisfied with the resolution provided.,4,Positive,Medium,4,5,5,Yes,Satisfied,No,Social Media,2024-04-16
+FB-601035,TKT-101665,CUST-13911,Support quality has declined recently.,2,Negative,Low,1,3,4,No,Frustrated,Yes,Survey,2024-03-07
+FB-601036,TKT-101978,CUST-08741,Best support experience I've had. Thank you!,5,Very Positive,Low,5,4,4,Yes,Delighted,No,Phone,2024-02-21
+FB-601037,TKT-101551,CUST-11969,Agent explained everything clearly.,5,Positive,Medium,3,4,5,Yes,Satisfied,No,Social Media,2024-05-15
+FB-601038,TKT-101765,CUST-07506,Standard support experience.,3,Neutral,Low,4,5,3,Yes,Neutral,Yes,Survey,2024-01-20
+FB-601039,TKT-101297,CUST-02848,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,1,4,Yes,Delighted,No,Phone,2024-04-02
+FB-601040,TKT-101638,CUST-08188,Agent was professional and solved issue immediately.,5,Very Positive,Medium,3,5,3,Yes,Delighted,No,Social Media,2024-03-13
+FB-601041,TKT-101097,CUST-05493,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,5,Yes,Neutral,Yes,Survey,2024-01-06
+FB-601042,TKT-101379,CUST-05166,Outstanding service. Highly recommend!,5,Very Positive,Low,1,3,4,Yes,Delighted,Yes,Phone,2024-03-02
+FB-601043,TKT-100975,CUST-01598,Good support experience overall.,5,Positive,Low,3,4,4,Yes,Satisfied,Yes,Social Media,2024-05-17
+FB-601044,TKT-100551,CUST-01421,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,4,4,Yes,Delighted,No,Phone,2024-05-16
+FB-601045,TKT-100480,CUST-09345,Fastest resolution ever. Very impressed.,5,Very Positive,Low,4,5,3,Yes,Delighted,No,Phone,2024-01-20
+FB-601046,TKT-100469,CUST-09895,Waited 3 days for response. Worst experience ever.,1,Very Negative,Medium,5,4,4,No,Angry,No,Chat,2024-05-02
+FB-601047,TKT-100319,CUST-01284,Agent was knowledgeable and helpful.,5,Positive,Medium,1,1,4,Yes,Satisfied,Yes,Email,2024-02-25
+FB-601048,TKT-101384,CUST-01227,Felt like my issue wasn't prioritized.,2,Negative,Low,2,4,5,No,Frustrated,No,Social Media,2024-06-06
+FB-601049,TKT-101961,CUST-08101,Agent was professional and solved issue immediately.,5,Very Positive,Low,5,2,4,Yes,Delighted,Yes,Chat,2024-03-02
+FB-601050,TKT-101008,CUST-08083,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,4,Yes,Delighted,No,Survey,2024-05-02
+FB-601051,TKT-100374,CUST-07595,Satisfied with the resolution provided.,4,Positive,Low,4,2,4,Yes,Satisfied,Yes,Phone,2024-02-09
+FB-601052,TKT-101536,CUST-12455,Issue resolved in reasonable time.,5,Positive,Low,3,5,2,Yes,Satisfied,Yes,Survey,2024-05-25
+FB-601053,TKT-100979,CUST-07274,Agent was knowledgeable and helpful.,4,Positive,Low,4,4,3,Yes,Satisfied,No,Survey,2024-04-19
+FB-601054,TKT-101762,CUST-13847,Support was adequate. Could be better.,3,Neutral,Low,3,5,4,No,Neutral,No,Social Media,2024-05-14
+FB-601055,TKT-100942,CUST-08188,Issue was resolved eventually.,3,Neutral,Low,2,2,4,Yes,Neutral,No,Survey,2024-01-11
+FB-601056,TKT-101189,CUST-11906,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,4,5,5,No,Angry,Yes,Chat,2024-06-15
+FB-601057,TKT-100383,CUST-03431,Got the help I needed but could have been faster.,3,Neutral,Low,1,2,5,Yes,Neutral,Yes,Social Media,2024-05-20
+FB-601058,TKT-100702,CUST-02245,Issue resolved in reasonable time.,4,Positive,Low,2,3,3,Yes,Satisfied,No,Phone,2024-01-16
+FB-601059,TKT-100858,CUST-10378,Good support experience overall.,4,Positive,Low,1,5,3,Yes,Satisfied,Yes,Survey,2024-03-17
+FB-601060,TKT-100572,CUST-10966,Fastest resolution ever. Very impressed.,5,Very Positive,Low,2,3,3,Yes,Delighted,No,Social Media,2024-04-12
+FB-601061,TKT-101404,CUST-14279,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,5,4,Yes,Delighted,No,Phone,2024-03-10
+FB-601062,TKT-101137,CUST-03633,Agent was professional and solved issue immediately.,5,Very Positive,Low,3,4,2,Yes,Delighted,Yes,Phone,2024-05-06
+FB-601063,TKT-100968,CUST-06588,Agent was knowledgeable and helpful.,5,Positive,Medium,3,3,4,Yes,Satisfied,Yes,Survey,2024-03-24
+FB-601064,TKT-100275,CUST-09697,Nothing special but acceptable.,3,Neutral,Low,1,3,4,No,Neutral,No,Chat,2024-04-19
+FB-601065,TKT-100513,CUST-14255,Satisfied with the resolution provided.,4,Positive,Low,4,4,4,Yes,Satisfied,Yes,Email,2024-03-26
+FB-601066,TKT-101414,CUST-09378,Response time was slow. Could have been resolved faster.,3,Negative,Low,2,4,3,Yes,Angry,No,Survey,2024-06-15
+FB-601067,TKT-101718,CUST-12233,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,Medium,4,5,5,No,Angry,No,Chat,2024-04-29
+FB-601068,TKT-100532,CUST-02906,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,5,No,Neutral,Yes,Survey,2024-03-19
+FB-601069,TKT-100248,CUST-06896,Best support experience I've had. Thank you!,5,Very Positive,Low,3,3,4,Yes,Delighted,Yes,Social Media,2024-05-12
+FB-601070,TKT-101330,CUST-11838,Support quality has declined recently.,2,Negative,Low,2,4,4,No,Frustrated,Yes,Chat,2024-02-17
+FB-601071,TKT-100727,CUST-02212,Best support experience I've had. Thank you!,5,Very Positive,Medium,4,5,4,Yes,Delighted,No,Survey,2024-03-25
+FB-601072,TKT-101821,CUST-11408,Agent explained everything clearly.,5,Positive,Low,4,4,3,Yes,Satisfied,No,Survey,2024-05-03
+FB-601073,TKT-101293,CUST-03378,Issue resolved in reasonable time.,5,Positive,Low,2,2,4,Yes,Satisfied,No,Chat,2024-02-06
+FB-601074,TKT-100863,CUST-01766,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,4,4,4,No,Angry,No,Email,2024-02-20
+FB-601075,TKT-100162,CUST-02015,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,5,Yes,Neutral,Yes,Chat,2024-02-15
+FB-601076,TKT-101454,CUST-04370,Support quality has declined recently.,3,Negative,Medium,3,5,4,No,Angry,Yes,Survey,2024-01-31
+FB-601077,TKT-101599,CUST-14224,Good support experience overall.,5,Positive,Low,1,4,4,Yes,Satisfied,No,Social Media,2024-01-10
+FB-601078,TKT-101977,CUST-08704,Standard support experience.,3,Neutral,Low,4,4,5,Yes,Neutral,Yes,Email,2024-03-03
+FB-601079,TKT-100256,CUST-05137,Issue resolved in reasonable time.,4,Positive,Low,5,4,5,Yes,Satisfied,No,Email,2024-03-11
+FB-601080,TKT-100431,CUST-04792,Felt like my issue wasn't prioritized.,3,Negative,Low,2,3,4,Yes,Frustrated,Yes,Survey,2024-06-14
+FB-601081,TKT-101123,CUST-02875,Response time was slow. Could have been resolved faster.,2,Negative,Low,4,4,3,No,Angry,No,Social Media,2024-05-28
+FB-601082,TKT-101566,CUST-13347,Agent was knowledgeable and helpful.,4,Positive,Low,3,5,3,Yes,Satisfied,Yes,Phone,2024-01-24
+FB-601083,TKT-100172,CUST-06499,Agent was professional and solved issue immediately.,5,Very Positive,Low,1,2,5,Yes,Delighted,Yes,Phone,2024-01-24
+FB-601084,TKT-101510,CUST-14444,Agent explained everything clearly.,5,Positive,Low,4,4,3,Yes,Satisfied,No,Phone,2024-06-27
+FB-601085,TKT-101078,CUST-02706,Waited 3 days for response. Worst experience ever.,1,Very Negative,Low,1,4,3,No,Angry,Yes,Chat,2024-06-19
+FB-601086,TKT-101762,CUST-02214,Got the help I needed but could have been faster.,3,Neutral,Low,5,4,3,No,Neutral,No,Social Media,2024-06-08
+FB-601087,TKT-101914,CUST-03272,Satisfied with the resolution provided.,5,Positive,Low,3,4,3,Yes,Satisfied,No,Social Media,2024-03-21
+FB-601088,TKT-100362,CUST-09160,Satisfied with the resolution provided.,4,Positive,High,2,4,5,Yes,Satisfied,No,Social Media,2024-05-08
+FB-601089,TKT-100890,CUST-02989,Best support experience I've had. Thank you!,5,Very Positive,Low,4,5,2,Yes,Delighted,Yes,Chat,2024-04-14
+FB-601090,TKT-100986,CUST-07376,Support was adequate. Could be better.,3,Neutral,Low,2,1,2,Yes,Neutral,No,Chat,2024-02-17
+FB-601091,TKT-100844,CUST-09809,Support was adequate. Could be better.,3,Neutral,Low,3,5,1,No,Neutral,Yes,Social Media,2024-06-13
+FB-601092,TKT-101669,CUST-08965,Waited 3 days for response. Worst experience ever.,2,Very Negative,Medium,3,2,5,No,Angry,Yes,Survey,2024-01-30
+FB-601093,TKT-101095,CUST-11248,Agent explained everything clearly.,5,Positive,Low,5,3,2,Yes,Satisfied,No,Survey,2024-05-11
+FB-601094,TKT-100613,CUST-12375,Agent explained everything clearly.,4,Positive,High,2,5,2,Yes,Satisfied,No,Social Media,2024-01-28
+FB-601095,TKT-100473,CUST-04841,Agent was knowledgeable and helpful.,4,Positive,Low,5,4,1,Yes,Satisfied,No,Phone,2024-01-15
+FB-601096,TKT-100843,CUST-06171,Best support experience I've had. Thank you!,5,Very Positive,Low,2,4,4,Yes,Delighted,No,Phone,2024-02-25
+FB-601097,TKT-100334,CUST-01954,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Medium,2,5,4,No,Angry,No,Phone,2024-05-04
+FB-601098,TKT-100538,CUST-01685,Standard support experience.,3,Neutral,Medium,2,3,5,Yes,Neutral,No,Social Media,2024-04-02
+FB-601099,TKT-101653,CUST-10551,Good support experience overall.,5,Positive,Low,5,3,2,Yes,Satisfied,Yes,Social Media,2024-01-28
+FB-601100,TKT-101656,CUST-09593,Agent was professional and solved issue immediately.,5,Very Positive,Medium,4,5,2,Yes,Delighted,Yes,Email,2024-04-10
+FB-601101,TKT-100373,CUST-11869,Good support experience overall.,5,Positive,Low,2,4,4,Yes,Satisfied,Yes,Survey,2024-01-15
+FB-601102,TKT-101265,CUST-13892,Got the help I needed but could have been faster.,3,Neutral,Low,5,5,5,No,Neutral,Yes,Email,2024-06-24
+FB-601103,TKT-100311,CUST-04239,Satisfied with the resolution provided.,4,Positive,Low,3,4,3,Yes,Satisfied,Yes,Email,2024-03-20
+FB-601104,TKT-100577,CUST-11218,Support was adequate. Could be better.,3,Neutral,Low,5,3,2,No,Neutral,No,Phone,2024-04-07
+FB-601105,TKT-100184,CUST-02036,Response time was slow. Could have been resolved faster.,2,Negative,Low,3,4,5,No,Angry,No,Chat,2024-01-10
+FB-601106,TKT-100860,CUST-10180,Agent was professional and solved issue immediately.,5,Very Positive,Low,2,2,1,Yes,Delighted,No,Survey,2024-01-20
+FB-601107,TKT-101427,CUST-12112,Excellent support! Agent went above and beyond.,5,Very Positive,Low,1,4,5,Yes,Delighted,Yes,Phone,2024-05-10
+FB-601108,TKT-100114,CUST-14644,Agent explained everything clearly.,4,Positive,Low,5,5,4,Yes,Satisfied,Yes,Survey,2024-05-09
+FB-601109,TKT-100371,CUST-01790,Resolution took longer than expected.,3,Negative,Medium,4,4,5,No,Frustrated,No,Email,2024-02-22
+FB-601110,TKT-101995,CUST-02765,Support was adequate. Could be better.,3,Neutral,Low,3,4,2,No,Neutral,No,Survey,2024-05-18
+FB-601111,TKT-100506,CUST-03807,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,5,4,Yes,Frustrated,No,Email,2024-04-19
+FB-601112,TKT-101067,CUST-09392,Agent wasn't helpful. Had to repeat myself multiple times.,3,Negative,Low,4,4,5,No,Frustrated,Yes,Chat,2024-04-12
+FB-601113,TKT-101917,CUST-08770,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,3,4,Yes,Delighted,No,Email,2024-06-06
+FB-601114,TKT-101525,CUST-04417,Best support experience I've had. Thank you!,5,Very Positive,Low,3,3,5,Yes,Delighted,Yes,Survey,2024-06-07
+FB-601115,TKT-101307,CUST-03801,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Medium,4,3,3,No,Frustrated,Yes,Email,2024-03-17
+FB-601116,TKT-101768,CUST-07322,Issue resolved in reasonable time.,4,Positive,Low,3,3,3,Yes,Satisfied,No,Phone,2024-04-21
+FB-601117,TKT-101296,CUST-08479,Resolution took longer than expected.,3,Negative,Low,4,1,1,Yes,Frustrated,Yes,Chat,2024-05-11
+FB-601118,TKT-101197,CUST-07236,Agent explained everything clearly.,5,Positive,High,5,2,5,Yes,Satisfied,No,Email,2024-06-11
+FB-601119,TKT-101984,CUST-08101,Satisfied with the resolution provided.,4,Positive,Low,4,5,5,Yes,Satisfied,No,Survey,2024-06-25
+FB-601120,TKT-101409,CUST-12822,Fastest resolution ever. Very impressed.,5,Very Positive,Low,1,3,4,Yes,Delighted,Yes,Email,2024-01-19
+FB-601121,TKT-100509,CUST-11686,Agent was professional and solved issue immediately.,5,Very Positive,Low,4,5,3,Yes,Delighted,Yes,Social Media,2024-05-24
+FB-601122,TKT-100693,CUST-14632,Excellent support! Agent went above and beyond.,5,Very Positive,Low,5,2,1,Yes,Delighted,Yes,Phone,2024-01-20
+FB-601123,TKT-101436,CUST-04480,Issue was resolved eventually.,3,Neutral,Low,2,4,5,Yes,Neutral,No,Chat,2024-06-16
+FB-601124,TKT-101143,CUST-12753,Resolution took longer than expected.,3,Negative,Low,1,3,4,No,Frustrated,No,Email,2024-05-04
+FB-601125,TKT-101411,CUST-09638,Got the help I needed but could have been faster.,3,Neutral,Low,4,4,3,Yes,Neutral,Yes,Email,2024-03-17
+FB-601126,TKT-100993,CUST-05715,Agent explained everything clearly.,5,Positive,Medium,5,4,3,Yes,Satisfied,No,Social Media,2024-03-06
+FB-601127,TKT-101427,CUST-06660,Issue resolved in reasonable time.,5,Positive,Low,4,4,1,Yes,Satisfied,No,Social Media,2024-05-22
+FB-601128,TKT-100712,CUST-09009,Agent explained everything clearly.,4,Positive,Low,2,5,5,Yes,Satisfied,Yes,Social Media,2024-05-23
+FB-601129,TKT-101872,CUST-02956,Satisfied with the resolution provided.,5,Positive,Low,1,4,5,Yes,Satisfied,Yes,Social Media,2024-03-18
+FB-601130,TKT-100317,CUST-06366,Good support experience overall.,4,Positive,Low,3,4,3,Yes,Satisfied,No,Social Media,2024-01-30
+FB-601131,TKT-100751,CUST-06605,Excellent support! Agent went above and beyond.,5,Very Positive,Low,3,2,5,Yes,Delighted,No,Social Media,2024-02-14
+FB-601132,TKT-100776,CUST-05087,Issue resolved in reasonable time.,4,Positive,Medium,1,4,4,Yes,Satisfied,No,Social Media,2024-06-20
+FB-601133,TKT-101754,CUST-05971,Nothing special but acceptable.,3,Neutral,Low,5,5,1,Yes,Neutral,Yes,Email,2024-03-06
+FB-601134,TKT-101348,CUST-03134,Agent explained everything clearly.,4,Positive,Low,5,5,3,Yes,Satisfied,Yes,Survey,2024-02-24
+FB-601135,TKT-101568,CUST-12377,Waited 3 days for response. Worst experience ever.,2,Very Negative,Medium,1,5,3,No,Angry,No,Chat,2024-05-29
+FB-601136,TKT-100839,CUST-08163,Good support experience overall.,5,Positive,Low,4,4,5,Yes,Satisfied,Yes,Social Media,2024-02-18
+FB-601137,TKT-101349,CUST-02072,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,3,Yes,Delighted,No,Phone,2024-03-23
+FB-601138,TKT-100365,CUST-14955,Issue was resolved eventually.,3,Neutral,Low,4,1,3,Yes,Neutral,Yes,Phone,2024-01-20
+FB-601139,TKT-100202,CUST-11641,Nothing special but acceptable.,3,Neutral,High,2,4,4,No,Neutral,No,Social Media,2024-05-23
+FB-601140,TKT-101277,CUST-10266,Nothing special but acceptable.,3,Neutral,Medium,3,5,4,No,Neutral,Yes,Phone,2024-05-25
+FB-601141,TKT-101240,CUST-12308,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,4,1,Yes,Delighted,Yes,Phone,2024-04-19
+FB-601142,TKT-101342,CUST-08824,Agent was knowledgeable and helpful.,5,Positive,Medium,4,3,4,Yes,Satisfied,No,Email,2024-04-18
+FB-601143,TKT-100739,CUST-09722,Standard support experience.,3,Neutral,Low,3,4,4,No,Neutral,No,Email,2024-03-24
+FB-601144,TKT-101686,CUST-14040,Got the help I needed but could have been faster.,3,Neutral,Low,4,1,5,Yes,Neutral,No,Chat,2024-03-29
+FB-601145,TKT-100159,CUST-12196,Satisfied with the resolution provided.,5,Positive,Medium,2,4,5,Yes,Satisfied,Yes,Phone,2024-05-12
+FB-601146,TKT-101088,CUST-09302,Support was adequate. Could be better.,3,Neutral,Low,3,4,5,Yes,Neutral,No,Phone,2024-05-09
+FB-601147,TKT-101167,CUST-08634,Support was adequate. Could be better.,3,Neutral,Low,5,5,4,No,Neutral,No,Social Media,2024-06-20
+FB-601148,TKT-100733,CUST-07372,Standard support experience.,3,Neutral,Low,4,3,3,No,Neutral,No,Phone,2024-05-09
+FB-601149,TKT-101622,CUST-09921,Support quality has declined recently.,2,Negative,Low,1,1,5,No,Frustrated,No,Chat,2024-04-02
+FB-601150,TKT-101346,CUST-06698,Support quality has declined recently.,3,Negative,Low,5,4,1,No,Frustrated,No,Chat,2024-04-25
+FB-601151,TKT-101126,CUST-04540,Got the help I needed but could have been faster.,3,Neutral,Low,4,1,4,No,Neutral,No,Survey,2024-01-15
+FB-601152,TKT-101691,CUST-04537,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Medium,5,4,2,No,Angry,No,Social Media,2024-06-20
+FB-601153,TKT-101117,CUST-03880,Standard support experience.,3,Neutral,Low,5,4,3,No,Neutral,Yes,Survey,2024-03-10
+FB-601154,TKT-100916,CUST-05409,Completely unacceptable service. Agent was rude and dismissive.,1,Very Negative,Low,5,3,3,No,Angry,No,Chat,2024-05-14
+FB-601155,TKT-101220,CUST-10817,Terrible support. I'm switching providers immediately.,2,Very Negative,Low,5,5,3,No,Angry,Yes,Chat,2024-03-07
+FB-601156,TKT-100013,CUST-10371,Support was adequate. Could be better.,3,Neutral,Low,4,5,5,Yes,Neutral,No,Email,2024-05-16
+FB-601157,TKT-101580,CUST-04710,No solution provided. Ticket was escalated multiple times.,1,Very Negative,Low,5,2,4,No,Angry,No,Social Media,2024-05-31
+FB-601158,TKT-101139,CUST-08216,Satisfied with the resolution provided.,5,Positive,Low,1,3,3,Yes,Satisfied,Yes,Email,2024-04-16
+FB-601159,TKT-100942,CUST-05746,Issue resolved in reasonable time.,5,Positive,Low,4,3,4,Yes,Satisfied,Yes,Chat,2024-02-26
+FB-601160,TKT-101821,CUST-06614,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,2,5,2,No,Angry,Yes,Chat,2024-06-28
+FB-601161,TKT-100188,CUST-08216,Staff doesn't know what they're doing. Product is broken.,1,Very Negative,Low,4,3,4,No,Angry,No,Phone,2024-04-06
+FB-601162,TKT-101503,CUST-11142,Got the help I needed but could have been faster.,3,Neutral,Low,2,3,5,No,Neutral,Yes,Social Media,2024-03-19
+FB-601163,TKT-101678,CUST-03986,Excellent support! Agent went above and beyond.,5,Very Positive,Low,4,3,4,Yes,Delighted,No,Chat,2024-04-07
+FB-601164,TKT-100076,CUST-03639,Support quality has declined recently.,3,Negative,Low,4,5,1,No,Angry,Yes,Email,2024-03-18
+FB-601165,TKT-101887,CUST-06284,Got the help I needed but could have been faster.,3,Neutral,Low,4,5,3,No,Neutral,No,Survey,2024-05-01
+FB-601166,TKT-100853,CUST-01166,Response time was slow. Could have been resolved faster.,3,Negative,Low,4,4,3,Yes,Frustrated,No,Social Media,2024-03-08
+FB-601167,TKT-101901,CUST-06442,Standard support experience.,3,Neutral,Low,4,3,5,Yes,Neutral,Yes,Email,2024-04-20
+FB-601168,TKT-100653,CUST-07376,Support quality has declined recently.,2,Negative,Low,4,4,4,No,Frustrated,Yes,Social Media,2024-04-12
+FB-601169,TKT-101429,CUST-14779,Fastest resolution ever. Very impressed.,5,Very Positive,Low,2,4,3,Yes,Delighted,Yes,Survey,2024-03-23
+FB-601170,TKT-101988,CUST-03840,Nothing special but acceptable.,3,Neutral,Medium,4,2,5,Yes,Neutral,Yes,Chat,2024-01-30
+FB-601171,TKT-101610,CUST-02361,Issue resolved in reasonable time.,4,Positive,Low,3,5,4,Yes,Satisfied,Yes,Email,2024-01-23
+FB-601172,TKT-100974,CUST-04042,Issue was resolved eventually.,3,Neutral,Low,2,4,4,No,Neutral,Yes,Survey,2024-02-26
+FB-601173,TKT-101027,CUST-08479,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,5,3,2,No,Frustrated,No,Survey,2024-03-26
+FB-601174,TKT-101145,CUST-11832,Standard support experience.,3,Neutral,Low,4,4,3,No,Neutral,No,Phone,2024-02-12
+FB-601175,TKT-101149,CUST-13578,Terrible support. I'm switching providers immediately.,1,Very Negative,Low,3,5,3,No,Angry,Yes,Email,2024-05-10
+FB-601176,TKT-100545,CUST-03640,Agent explained everything clearly.,5,Positive,Low,3,5,5,Yes,Satisfied,Yes,Social Media,2024-04-09
+FB-601177,TKT-100183,CUST-09043,Agent explained everything clearly.,4,Positive,Low,1,4,4,Yes,Satisfied,No,Chat,2024-03-05
+FB-601178,TKT-100390,CUST-06729,Outstanding service. Highly recommend!,5,Very Positive,Low,5,3,5,Yes,Delighted,No,Email,2024-03-14
+FB-601179,TKT-101576,CUST-01037,Support was adequate. Could be better.,3,Neutral,Low,5,5,5,No,Neutral,No,Survey,2024-01-09
+FB-601180,TKT-101276,CUST-07047,Standard support experience.,3,Neutral,Low,4,1,5,Yes,Neutral,No,Phone,2024-02-06
+FB-601181,TKT-100408,CUST-08763,Resolution took longer than expected.,3,Negative,Low,3,5,2,Yes,Frustrated,No,Email,2024-03-04
+FB-601182,TKT-100230,CUST-14874,Completely unacceptable service. Agent was rude and dismissive.,2,Very Negative,High,4,4,5,No,Angry,Yes,Social Media,2024-03-05
+FB-601183,TKT-101897,CUST-05749,Good support experience overall.,5,Positive,Medium,2,5,4,Yes,Satisfied,Yes,Email,2024-02-10
+FB-601184,TKT-100624,CUST-05703,Agent explained everything clearly.,4,Positive,Low,5,4,3,Yes,Satisfied,Yes,Phone,2024-05-13
+FB-601185,TKT-101515,CUST-05838,Agent wasn't helpful. Had to repeat myself multiple times.,2,Negative,Low,4,5,4,No,Frustrated,Yes,Social Media,2024-06-26
+FB-601186,TKT-101536,CUST-03765,Satisfied with the resolution provided.,5,Positive,Low,3,4,4,Yes,Satisfied,No,Phone,2024-05-27
+FB-601187,TKT-101423,CUST-04351,Issue was resolved eventually.,3,Neutral,Low,4,4,2,No,Neutral,No,Social Media,2024-06-18
+FB-601188,TKT-100089,CUST-04513,Issue resolved in reasonable time.,5,Positive,Low,1,4,5,Yes,Satisfied,Yes,Phone,2024-03-20
+FB-601189,TKT-101616,CUST-03667,Satisfied with the resolution provided.,4,Positive,Low,5,3,4,Yes,Satisfied,Yes,Survey,2024-03-01
+FB-601190,TKT-101340,CUST-11248,Issue was resolved eventually.,3,Neutral,Low,4,4,3,No,Neutral,No,Chat,2024-01-12
+FB-601191,TKT-101770,CUST-02724,Agent was knowledgeable and helpful.,5,Positive,Low,2,2,2,Yes,Satisfied,Yes,Survey,2024-03-25
+FB-601192,TKT-100473,CUST-03809,Nothing special but acceptable.,3,Neutral,Medium,3,4,4,Yes,Neutral,No,Survey,2024-04-21
+FB-601193,TKT-101775,CUST-06972,Satisfied with the resolution provided.,5,Positive,Low,4,4,3,Yes,Satisfied,Yes,Phone,2024-04-14
+FB-601194,TKT-101025,CUST-14062,Satisfied with the resolution provided.,4,Positive,Low,5,3,1,Yes,Satisfied,No,Email,2024-05-11
+FB-601195,TKT-100081,CUST-04123,Support quality has declined recently.,2,Negative,Medium,4,5,5,No,Frustrated,Yes,Survey,2024-02-27
+FB-601196,TKT-100805,CUST-10515,Support was adequate. Could be better.,3,Neutral,Low,4,4,2,Yes,Neutral,Yes,Chat,2024-06-16
+FB-601197,TKT-100727,CUST-08634,Got the help I needed but could have been faster.,3,Neutral,Low,4,3,5,Yes,Neutral,No,Social Media,2024-01-02
+FB-601198,TKT-100564,CUST-11631,Agent was knowledgeable and helpful.,5,Positive,Medium,4,2,1,Yes,Satisfied,No,Survey,2024-06-06
+FB-601199,TKT-101823,CUST-03489,Issue was resolved eventually.,3,Neutral,Low,1,4,2,No,Neutral,Yes,Chat,2024-03-22

@@ -2,14 +2,20 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import { getTicket } from '../../services/ticketService';
+import AgentWorkflowTimeline from '../../components/AgentWorkflowTimeline';
+import AIDecisionCard from '../../components/AIDecisionCard';
+import { enterpriseApi } from '../../services/api';
 
 export default function TicketDetails() {
   const { id, ticketId } = useParams();
   const resolvedTicketId = ticketId || id;
   const [ticket, setTicket] = useState(null);
+  const [workflow, setWorkflow] = useState(null);
 
   useEffect(() => {
-    if (resolvedTicketId) getTicket(resolvedTicketId).then((response) => setTicket(response.ticket));
+    if (!resolvedTicketId) return;
+    getTicket(resolvedTicketId).then((response) => setTicket(response.ticket));
+    enterpriseApi.workflow(resolvedTicketId).then((response) => setWorkflow(response)).catch(() => setWorkflow(null));
   }, [resolvedTicketId]);
 
   return (
@@ -28,6 +34,20 @@ export default function TicketDetails() {
               <Info label="SLA Due" value={ticket.sla_due_at ? new Date(ticket.sla_due_at).toLocaleString() : 'Within 48 hours'} />
               <Info label="AI Sentiment" value={ticket.ai_sentiment || ticket.sentiment || 'Neutral'} />
             </div>
+            <AgentWorkflowTimeline steps={workflow?.workflow?.steps} />
+            {workflow?.decision && (
+              <AIDecisionCard
+                title={ticket.subject || 'Support request'}
+                ticketId={ticket.ticket_id || resolvedTicketId}
+                decision={workflow.decision.autoResolved ? 'auto_resolve' : workflow.decision.escalationRequired ? 'escalate' : workflow.decision.decision}
+                riskScore={workflow.decision.riskScore || 0}
+                owner={workflow.decision.assignedTeam || 'Customer Support'}
+                confidence={workflow.decision.confidence}
+                recommendation={workflow.decision.reason}
+                nextAction={workflow.decision.action}
+                supervisorEscalationStatus={workflow.decision.escalationRequired ? 'required' : 'not_required'}
+              />
+            )}
           </div>
         )}
       </div>

@@ -6,6 +6,15 @@ const { getDemoTickets, getPrimaryTickets } = require('../services/datasetServic
 const { validateAndNormalizeTicketRow } = require('../utils/validateTicketRow');
 const { optionalTicketAttachment } = require('../middleware/uploadMiddleware');
 const { buildResolutionNote, evaluateAutoResolution } = require('../services/autoResolutionService');
+const {
+  getDynamoKeys,
+  getDynamoTables,
+  getItem,
+  isDynamoDbProvider,
+  putItem,
+  scanTable,
+  updateItem: updateDynamoItem,
+} = require('../services/dynamoDbService');
 
 let fallbackStore;
 
@@ -119,10 +128,34 @@ const filterTickets = (items, query) => {
   });
 };
 
-const sourceOf = async () => ((await Ticket.estimatedDocumentCount().maxTimeMS(4000)) > 0 ? 'mongodb' : 'support_fallback');
+const toPlainTicket = (ticket) => (typeof ticket?.toObject === 'function' ? ticket.toObject() : ticket);
+const getDynamoTicketKey = (ticketId) => ({ [getDynamoKeys().tickets]: ticketId });
+const sortTickets = (rows) => [...rows].sort((a, b) => new Date(b.ticket_created_date || b.created_at || b.createdAt || 0) - new Date(a.ticket_created_date || a.created_at || a.createdAt || 0));
+
+const getDynamoTickets = async () => scanTable(getDynamoTables().tickets);
+
+const getDynamoTicketById = async (id) => {
+  const normalizedId = normalizeTicketId(id);
+  const direct = await getItem(getDynamoTables().tickets, getDynamoTicketKey(normalizedId));
+  if (direct) return direct;
+  if (normalizedId !== id) {
+    return getItem(getDynamoTables().tickets, getDynamoTicketKey(id));
+  }
+  return null;
+};
+
+const sourceOf = async () => {
+  if (isDynamoDbProvider()) return 'dynamodb';
+  return (await Ticket.estimatedDocumentCount().maxTimeMS(4000)) > 0 ? 'mongodb' : 'support_fallback';
+};
 
 router.get('/stats', async (req, res) => {
-  const rows = await getPrimaryTickets();
+  let rows;
+  try {
+    rows = isDynamoDbProvider() ? await getDynamoTickets() : await getPrimaryTickets();
+  } catch {
+    rows = await getPrimaryTickets();
+  }
   res.json({
     success: true,
     stats: {
@@ -138,6 +171,23 @@ router.get('/stats', async (req, res) => {
 router.get('/', async (req, res) => {
   const page = Math.max(Number(req.query.page) || 1, 1);
   const limit = Math.min(Math.max(Number(req.query.limit) || 50, 1), 300);
+  if (isDynamoDbProvider()) {
+    try {
+      const filtered = filterTickets(sortTickets(await getDynamoTickets()), req.query);
+      const start = (page - 1) * limit;
+      return res.json({
+        success: true,
+        tickets: filtered.slice(start, start + limit),
+        total: filtered.length,
+        page,
+        pages: Math.max(1, Math.ceil(filtered.length / limit)),
+        source: 'dynamodb',
+      });
+    } catch (error) {
+      console.error('DynamoDB ticket list failed; falling back to MongoDB.');
+    }
+  }
+
   const mongoCount = await Ticket.estimatedDocumentCount().maxTimeMS(4000);
   if (mongoCount > 0) {
     const search = String(req.query.search || req.query.q || '').trim();
@@ -200,6 +250,47 @@ router.post('/', optionalTicketAttachment, async (req, res) => {
       sentiment: analysis.sentiment,
     });
 
+    if (isDynamoDbProvider()) {
+      try {
+        const now = new Date().toISOString();
+        const ticket = {
+          ...ticketPayload,
+          id: ticketPayload.ticket_id,
+          ticketId: ticketPayload.ticket_id,
+          created_at: ticketPayload.created_at || now,
+          updated_at: now,
+          ticket_created_date: ticketPayload.ticket_created_date || now,
+          ticket_updated_date: now,
+        };
+        await putItem(getDynamoTables().tickets, ticket);
+        const resultId = `analysis-${ticket.ticket_id}-${Date.now()}`;
+        await putItem(getDynamoTables().aiResults, {
+          [getDynamoKeys().aiResults]: resultId,
+          result_id: resultId,
+          id: resultId,
+          ticket_id: ticket.ticket_id,
+          ticketId: ticket.ticket_id,
+          result_type: 'ticket_creation_analysis',
+          source: analysis.source,
+          analysis,
+          created_at: now,
+          timestamp: now,
+        });
+
+        return res.status(201).json({
+          success: true,
+          ticket_id: ticket.ticket_id,
+          message: 'Ticket submitted successfully',
+          warning: req.attachmentWarning,
+          ticket,
+          analysis,
+          source: 'dynamodb',
+        });
+      } catch (error) {
+        console.error('DynamoDB ticket create failed; falling back to MongoDB.');
+      }
+    }
+
     const ticket = await Ticket.create(ticketPayload);
     await Promise.all([
       TicketHistory.create({
@@ -228,25 +319,43 @@ router.post('/', optionalTicketAttachment, async (req, res) => {
 
 const findCustomerTicketsByEmail = async (emailValue) => {
   const email = String(emailValue || '').toLowerCase();
+  if (isDynamoDbProvider()) {
+    try {
+      return sortTickets((await getDynamoTickets()).filter((ticket) => String(ticket.customer_email || '').toLowerCase() === email)).slice(0, 100);
+    } catch {
+      console.error('DynamoDB customer ticket lookup failed; falling back to MongoDB.');
+    }
+  }
   const rows = await Ticket.find({ customer_email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') }).sort({ created_at: -1, createdAt: -1 }).limit(100).lean();
   return rows;
 };
 
 router.get('/customer/:email', async (req, res) => {
   const rows = await findCustomerTicketsByEmail(req.params.email);
-  if (rows.length) return res.json({ success: true, tickets: rows, source: 'mongodb' });
-  return res.json({ success: true, tickets: [], source: 'mongodb_empty' });
+  const source = isDynamoDbProvider() ? 'dynamodb' : 'mongodb';
+  if (rows.length) return res.json({ success: true, tickets: rows, source });
+  return res.json({ success: true, tickets: [], source: `${source}_empty` });
 });
 
 router.get('/customer/me/tickets', async (req, res) => {
   const email = String(req.headers['x-user-email'] || req.query.email || '').trim();
   if (!email) return res.status(400).json({ success: false, message: 'Customer email is required.' });
   const rows = await findCustomerTicketsByEmail(email);
-  return res.json({ success: true, tickets: rows, source: rows.length ? 'mongodb' : 'mongodb_empty' });
+  const source = isDynamoDbProvider() ? 'dynamodb' : 'mongodb';
+  return res.json({ success: true, tickets: rows, source: rows.length ? source : `${source}_empty` });
 });
 
 router.get('/:id', async (req, res) => {
   const id = normalizeTicketId(req.params.id);
+  if (isDynamoDbProvider()) {
+    try {
+      const ticket = await getDynamoTicketById(id);
+      if (ticket) return res.json({ success: true, ticket, source: 'dynamodb' });
+    } catch {
+      console.error('DynamoDB ticket lookup failed; falling back to MongoDB.');
+    }
+  }
+
   const ticket = await Ticket.findOne({ $or: [{ ticket_id: id }, { ticketId: id }] }).lean();
   if (ticket) return res.json({ success: true, ticket, source: 'mongodb' });
 
@@ -256,6 +365,15 @@ router.get('/:id', async (req, res) => {
 
 const findTicketById = async (id) => {
   const normalizedId = normalizeTicketId(id);
+  if (isDynamoDbProvider()) {
+    try {
+      const ticket = await getDynamoTicketById(normalizedId);
+      if (ticket) return { ticket, source: 'dynamodb', normalizedId };
+    } catch {
+      console.error('DynamoDB ticket lookup failed; falling back to MongoDB.');
+    }
+  }
+
   const ticket = await Ticket.findOne({ $or: [{ ticket_id: normalizedId }, { ticketId: normalizedId }] }).lean();
   if (ticket) return { ticket, source: 'mongodb', normalizedId };
   const fallback = fallbackTickets().find((item) => item.ticket_id === normalizedId || item.id === normalizedId);
@@ -310,6 +428,14 @@ router.post('/:id/auto-resolve', async (req, res) => {
     ticket_updated_date: new Date(),
   };
 
+  if (source === 'dynamodb') {
+    const updated = await updateDynamoItem(getDynamoTables().tickets, getDynamoTicketKey(normalizedId), {
+      ...resolutionUpdate,
+      internal_notes: [...(ticket.internal_notes || ticket.internalNotes || []), { text: note, addedBy: updatedBy, createdAt: new Date() }],
+    });
+    return res.json({ success: true, source, autoResolved: true, ticket: updated, evaluation, message: 'Low-risk ticket auto-resolved.' });
+  }
+
   if (source === 'mongodb') {
     const updated = await Ticket.findOneAndUpdate(
       { $or: [{ ticket_id: normalizedId }, { ticketId: normalizedId }] },
@@ -347,6 +473,19 @@ router.post('/:id/auto-resolve', async (req, res) => {
 
 const updateTicket = async (req, res) => {
   const id = normalizeTicketId(req.params.id);
+  if (isDynamoDbProvider()) {
+    try {
+      const ticket = await updateDynamoItem(getDynamoTables().tickets, getDynamoTicketKey(id), {
+        ...req.body,
+        updated_at: new Date(),
+        ticket_updated_date: new Date(),
+      });
+      if (ticket) return res.json({ success: true, ticket, source: 'dynamodb' });
+    } catch {
+      console.error('DynamoDB ticket update failed; falling back to MongoDB.');
+    }
+  }
+
   const existing = await Ticket.findOne({ $or: [{ ticket_id: id }, { ticketId: id }] }).lean();
   const ticket = await Ticket.findOneAndUpdate(
     { $or: [{ ticket_id: id }, { ticketId: id }] },
@@ -387,6 +526,22 @@ router.post('/:id/notes', async (req, res) => {
     addedBy: req.body.addedBy || 'Support User',
     createdAt: new Date(),
   };
+  if (isDynamoDbProvider()) {
+    try {
+      const current = await getDynamoTicketById(id);
+      if (current) {
+        const ticket = await updateDynamoItem(getDynamoTables().tickets, getDynamoTicketKey(id), {
+          internal_notes: [...(current.internal_notes || current.internalNotes || []), note],
+          updated_at: new Date(),
+          ticket_updated_date: new Date(),
+        });
+        return res.json({ success: true, ticket, note, source: 'dynamodb' });
+      }
+    } catch {
+      console.error('DynamoDB ticket note failed; falling back to MongoDB.');
+    }
+  }
+
   const ticket = await Ticket.findOneAndUpdate(
     { $or: [{ ticket_id: id }, { ticketId: id }] },
     { $push: { internalNotes: note } },
@@ -402,6 +557,20 @@ router.post('/:id/notes', async (req, res) => {
 
 router.put('/:id/assign', async (req, res) => {
   const id = normalizeTicketId(req.params.id);
+  if (isDynamoDbProvider()) {
+    try {
+      const ticket = await updateDynamoItem(getDynamoTables().tickets, getDynamoTicketKey(id), {
+        assigned_agent: req.body.agent || req.body.agentName,
+        status: 'In Progress',
+        updated_at: new Date(),
+        ticket_updated_date: new Date(),
+      });
+      if (ticket) return res.json({ success: true, ticket, source: 'dynamodb' });
+    } catch {
+      console.error('DynamoDB ticket assignment failed; falling back to MongoDB.');
+    }
+  }
+
   const ticket = await Ticket.findOneAndUpdate(
     { $or: [{ ticket_id: id }, { ticketId: id }] },
     { $set: { assigned_agent: req.body.agent || req.body.agentName, status: 'In Progress', ticket_updated_date: new Date() } },

@@ -1,5 +1,6 @@
 const { writeAuditEvent } = require('../auditLogService');
 const { decideNextAction } = require('../decisionEngine');
+const { invokeBedrock, BEDROCK_FALLBACK_MESSAGE } = require('../bedrockService');
 
 const agentResponse = ({ status = 'completed', confidence = 0.8, input, output, recommendation, nextAction }) => ({
   agentName: 'Automation Agent',
@@ -58,15 +59,32 @@ const recordAutomationPlan = async ({ ticket = {}, plan, actor = 'automation_age
   metadata: { actions: plan?.actions || [] },
 });
 
+const runBedrockAutomationReview = async (ticket = {}, plan = {}) => {
+  const response = await invokeBedrock([
+    'You are the Automation Agent for an MSP helpdesk SaaS platform.',
+    'Review the proposed automation plan and return a concise operational recommendation.',
+    'Do not approve high-risk actions without supervisor review.',
+    `Ticket and plan: ${JSON.stringify({
+      ticketId: ticket.ticket_id || ticket.ticketId,
+      subject: ticket.subject,
+      priority: ticket.priority,
+      category: ticket.issue_category || ticket.category,
+      plan,
+    })}`,
+  ].join('\n'));
+  return response?.fallback || response === BEDROCK_FALLBACK_MESSAGE ? '' : response;
+};
+
 const runAutomationAgent = async ({ ticket = {}, resolution = {}, audit = false } = {}) => {
   const plan = buildAutomationPlan(ticket, resolution);
+  const aiRecommendation = await runBedrockAutomationReview(ticket, plan);
   const auditEvent = audit ? await recordAutomationPlan({ ticket, plan }) : null;
   return agentResponse({
     status: plan.executable ? 'ready' : 'blocked',
-    confidence: plan.executable ? 0.84 : 0.62,
+    confidence: aiRecommendation ? (plan.executable ? 0.87 : 0.68) : (plan.executable ? 0.84 : 0.62),
     input: { ticket, resolution: resolution.output || resolution },
-    output: { plan, auditEvent },
-    recommendation: plan.executable ? 'Execute approved automation plan.' : 'Hold automation for human review.',
+    output: { plan, auditEvent, aiRecommendation },
+    recommendation: aiRecommendation || (plan.executable ? 'Execute approved automation plan.' : 'Hold automation for human review.'),
     nextAction: plan.executable ? 'audit_log_service' : 'supervisor_agent',
   });
 };

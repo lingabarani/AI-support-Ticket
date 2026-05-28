@@ -1,0 +1,1001 @@
+analysis_id,ticket_id,product_id,uploaded_image_name,damage_detected,damage_type,color_mismatch,missing_component,ocr_detected_text,image_confidence_score,recommended_decision,fraud_risk_score,manual_review_required,analysis_timestamp
+IMG-800000,TKT-101309,PROD-1522,product_image_00000.jpg,No,,No,No,WARNING: Do not expose to moisture,0.854,No Action Needed,0.024,No,2024-03-15 12:15:31
+IMG-800001,TKT-100501,PROD-1816,product_image_00001.jpg,No,,No,No,Serial: SN-2024-001,0.895,No Action Needed,0.094,No,2024-05-09 01:28:31
+IMG-800002,TKT-101385,PROD-1878,product_image_00002.jpg,No,,No,No,Made in China,0.652,No Action Needed,0.012,Yes,2024-02-28 23:27:58
+IMG-800003,TKT-100065,PROD-1739,product_image_00003.jpg,No,,No,No,MFG: 2024-01,0.805,No Action Needed,0.081,No,2024-02-20 18:43:55
+IMG-800004,TKT-101034,PROD-1790,product_image_00004.jpg,No,,No,Yes,MFG: 2024-01,0.857,Approve Replacement,0.025,No,2024-06-15 02:57:07
+IMG-800005,TKT-101466,PROD-1878,product_image_00005.jpg,No,,No,No,Max Capacity: 5TB,0.655,No Action Needed,0.031,Yes,2024-04-01 06:31:23
+IMG-800006,TKT-101206,PROD-1423,product_image_00006.jpg,No,,No,Yes,,0.959,Approve Replacement,0.033,No,2024-04-13 05:24:17
+IMG-800007,TKT-100013,PROD-1057,product_image_00007.jpg,No,,No,No,Part Number: PN-88421,0.661,No Action Needed,0.086,Yes,2024-02-13 18:14:57
+IMG-800008,TKT-100569,PROD-1057,product_image_00008.jpg,No,,No,No,Part Number: PN-88421,0.761,No Action Needed,0.061,No,2024-02-09 06:27:27
+IMG-800009,TKT-100209,PROD-1522,product_image_00009.jpg,No,,No,No,Part Number: PN-88421,0.978,No Action Needed,0.065,No,2024-02-10 10:34:04
+IMG-800010,TKT-101735,PROD-1232,product_image_00010.jpg,No,,Yes,No,Model: NP-5000X,0.913,Approve Replacement,0.028,No,2024-03-03 01:27:38
+IMG-800011,TKT-101494,PROD-1711,product_image_00011.jpg,No,,No,No,Made in China,0.856,No Action Needed,0.093,No,2024-02-10 14:30:51
+IMG-800012,TKT-100161,PROD-1878,product_image_00012.jpg,No,,No,No,Component: Active Directory,0.672,No Action Needed,0.038,Yes,2024-02-06 23:30:51
+IMG-800013,TKT-101813,PROD-1232,product_image_00013.jpg,No,,No,No,Serial: SN-2024-001,0.691,No Action Needed,0.074,Yes,2024-01-01 23:02:28
+IMG-800014,TKT-100093,PROD-1816,product_image_00014.jpg,No,,No,No,,0.828,No Action Needed,0.048,No,2024-02-11 06:30:19
+IMG-800015,TKT-100163,PROD-1816,product_image_00015.jpg,Yes,Broken Screen,Yes,No,Max Capacity: 5TB,0.757,Approve Refund,0.132,No,2024-05-30 19:58:30
+IMG-800016,TKT-101301,PROD-1232,product_image_00016.jpg,No,,No,No,Part Number: PN-88421,0.676,No Action Needed,0.036,Yes,2024-03-26 06:11:39
+IMG-800017,TKT-100429,PROD-1423,product_image_00017.jpg,No,,No,No,,0.946,No Action Needed,0.082,No,2024-02-13 07:12:19
+IMG-800018,TKT-101399,PROD-1522,product_image_00018.jpg,No,,No,No,Warranty: 12 months,0.955,No Action Needed,0.039,No,2024-05-08 18:34:02
+IMG-800019,TKT-101093,PROD-1816,product_image_00019.jpg,No,,No,No,Made in China,0.652,No Action Needed,0.056,Yes,2024-05-16 01:02:28
+IMG-800020,TKT-100552,PROD-1878,product_image_00020.jpg,No,,No,No,Part Number: PN-88421,0.707,No Action Needed,0.03,Yes,2024-06-28 15:06:24
+IMG-800021,TKT-101726,PROD-1739,product_image_00021.jpg,Yes,Missing Component,No,No,,0.887,Approve Partial Refund,0.046,No,2024-03-21 07:25:36
+IMG-800022,TKT-101648,PROD-1232,product_image_00022.jpg,No,,No,Yes,Serial: SN-2024-001,0.767,Approve Replacement,0.067,No,2024-05-05 14:07:39
+IMG-800023,TKT-100432,PROD-1790,product_image_00023.jpg,No,,No,No,,0.677,No Action Needed,0.043,Yes,2024-05-24 07:02:22
+IMG-800024,TKT-100644,PROD-1816,product_image_00024.jpg,No,,No,No,Made in China,0.786,No Action Needed,0.083,No,2024-05-23 06:59:44
+IMG-800025,TKT-101811,PROD-1711,product_image_00025.jpg,No,,No,No,Warranty: 12 months,0.942,No Action Needed,0.039,No,2024-06-12 20:01:22
+IMG-800026,TKT-100505,PROD-1878,product_image_00026.jpg,No,,No,No,Component: Active Directory,0.683,No Action Needed,0.095,Yes,2024-06-16 19:48:15
+IMG-800027,TKT-100877,PROD-1790,product_image_00027.jpg,No,,No,No,MFG: 2024-01,0.9,No Action Needed,0.029,No,2024-06-07 23:53:01
+IMG-800028,TKT-100283,PROD-1878,product_image_00028.jpg,No,,No,No,Model: NP-5000X,0.984,No Action Needed,0.056,No,2024-04-22 00:34:09
+IMG-800029,TKT-101763,PROD-1522,product_image_00029.jpg,No,,No,No,Warranty: 12 months,0.95,No Action Needed,0.027,No,2024-04-08 11:50:42
+IMG-800030,TKT-101622,PROD-1652,product_image_00030.jpg,No,,No,No,Made in China,0.915,No Action Needed,0.068,No,2024-03-15 09:05:11
+IMG-800031,TKT-100781,PROD-1790,product_image_00031.jpg,No,,No,No,,0.777,No Action Needed,0.095,No,2024-06-01 19:01:37
+IMG-800032,TKT-101083,PROD-1423,product_image_00032.jpg,No,,No,No,,0.872,No Action Needed,0.03,No,2024-06-09 10:41:07
+IMG-800033,TKT-101762,PROD-1739,product_image_00033.jpg,No,,No,No,Serial: SN-2024-001,0.871,No Action Needed,0.086,No,2024-05-24 19:31:11
+IMG-800034,TKT-101396,PROD-1878,product_image_00034.jpg,No,,No,No,,0.74,No Action Needed,0.032,Yes,2024-02-07 13:08:53
+IMG-800035,TKT-101574,PROD-1232,product_image_00035.jpg,No,,No,No,Made in China,0.92,No Action Needed,0.055,No,2024-01-28 11:03:10
+IMG-800036,TKT-100323,PROD-1711,product_image_00036.jpg,No,,No,No,WARNING: Do not expose to moisture,0.745,No Action Needed,0.012,Yes,2024-02-18 20:29:04
+IMG-800037,TKT-101990,PROD-1878,product_image_00037.jpg,No,,No,No,,0.95,No Action Needed,0.077,No,2024-02-06 05:11:51
+IMG-800038,TKT-101039,PROD-1522,product_image_00038.jpg,No,,No,No,,0.983,No Action Needed,0.017,No,2024-06-08 01:41:42
+IMG-800039,TKT-100611,PROD-1878,product_image_00039.jpg,No,,No,No,Warranty: 12 months,0.784,No Action Needed,0.086,No,2024-03-07 14:24:45
+IMG-800040,TKT-100765,PROD-1057,product_image_00040.jpg,Yes,Crack,No,No,,0.698,Approve Replacement,0.221,Yes,2024-01-17 07:42:31
+IMG-800041,TKT-101889,PROD-1878,product_image_00041.jpg,No,,No,No,,0.75,No Action Needed,0.083,No,2024-04-08 14:09:53
+IMG-800042,TKT-101226,PROD-1232,product_image_00042.jpg,No,,No,No,Serial: SN-2024-001,0.821,No Action Needed,0.082,No,2024-03-05 21:32:55
+IMG-800043,TKT-101902,PROD-1232,product_image_00043.jpg,No,,No,No,,0.765,No Action Needed,0.044,No,2024-03-06 03:02:46
+IMG-800044,TKT-101703,PROD-1423,product_image_00044.jpg,No,,No,No,MFG: 2024-01,0.984,No Action Needed,0.086,No,2024-02-27 15:44:21
+IMG-800045,TKT-101798,PROD-1790,product_image_00045.jpg,No,,Yes,No,,0.833,Approve Replacement,0.039,No,2024-01-08 05:25:08
+IMG-800046,TKT-100175,PROD-1711,product_image_00046.jpg,No,,No,No,,0.936,No Action Needed,0.027,No,2024-04-03 19:21:18
+IMG-800047,TKT-101557,PROD-1878,product_image_00047.jpg,No,,No,No,,0.98,No Action Needed,0.074,No,2024-05-26 20:30:47
+IMG-800048,TKT-100262,PROD-1711,product_image_00048.jpg,No,,No,No,,0.659,No Action Needed,0.097,Yes,2024-01-23 00:19:10
+IMG-800049,TKT-100338,PROD-1423,product_image_00049.jpg,No,,No,No,Component: Active Directory,0.703,No Action Needed,0.033,Yes,2024-05-05 01:27:17
+IMG-800050,TKT-100866,PROD-1816,product_image_00050.jpg,No,,No,No,,0.975,No Action Needed,0.076,No,2024-03-09 16:33:58
+IMG-800051,TKT-101546,PROD-1816,product_image_00051.jpg,Yes,Shattered Glass,No,No,Part Number: PN-88421,0.691,Approve Refund,0.092,Yes,2024-03-09 12:14:38
+IMG-800052,TKT-100897,PROD-1878,product_image_00052.jpg,Yes,Paint Chipping,No,No,MFG: 2024-01,0.811,Approve Replacement,0.128,No,2024-02-08 17:25:52
+IMG-800053,TKT-100131,PROD-1232,product_image_00053.jpg,No,,No,Yes,Input: 110-240V,0.973,Approve Replacement,0.09,No,2024-06-28 11:09:18
+IMG-800054,TKT-100471,PROD-1790,product_image_00054.jpg,Yes,Missing Component,No,No,Model: NP-5000X,0.833,Approve Partial Refund,0.158,Yes,2024-03-20 08:36:17
+IMG-800055,TKT-100468,PROD-1522,product_image_00055.jpg,Yes,Scratches,No,No,,0.846,Approve Replacement,0.164,Yes,2024-06-09 19:36:28
+IMG-800056,TKT-100145,PROD-1878,product_image_00056.jpg,No,,No,No,Max Capacity: 5TB,0.977,No Action Needed,0.091,No,2024-02-13 05:46:04
+IMG-800057,TKT-100438,PROD-1878,product_image_00057.jpg,Yes,Dent,No,Yes,,0.682,Approve Partial Refund,0.027,Yes,2024-01-08 04:15:05
+IMG-800058,TKT-101807,PROD-1790,product_image_00058.jpg,Yes,Water Damage,No,No,Max Capacity: 5TB,0.69,Approve Partial Refund,0.161,Yes,2024-06-05 02:05:43
+IMG-800059,TKT-101653,PROD-1652,product_image_00059.jpg,No,,No,No,Serial: SN-2024-001,0.71,No Action Needed,0.078,Yes,2024-06-25 23:04:02
+IMG-800060,TKT-101349,PROD-1652,product_image_00060.jpg,No,,No,No,Made in China,0.766,No Action Needed,0.094,No,2024-02-06 12:26:51
+IMG-800061,TKT-100956,PROD-1739,product_image_00061.jpg,No,,No,No,Serial: SN-2024-001,0.685,No Action Needed,0.091,Yes,2024-03-02 11:32:35
+IMG-800062,TKT-100124,PROD-1652,product_image_00062.jpg,No,,No,No,,0.782,No Action Needed,0.011,No,2024-05-26 10:15:39
+IMG-800063,TKT-101639,PROD-1522,product_image_00063.jpg,No,,No,No,MFG: 2024-01,0.814,No Action Needed,0.054,No,2024-05-23 03:05:30
+IMG-800064,TKT-101098,PROD-1711,product_image_00064.jpg,No,,No,No,Warranty: 12 months,0.689,No Action Needed,0.094,Yes,2024-06-15 02:35:48
+IMG-800065,TKT-100570,PROD-1711,product_image_00065.jpg,No,,No,No,Serial: SN-2024-001,0.979,No Action Needed,0.072,No,2024-05-24 21:24:12
+IMG-800066,TKT-100907,PROD-1878,product_image_00066.jpg,No,,No,No,Input: 110-240V,0.785,No Action Needed,0.09,No,2024-01-05 15:11:33
+IMG-800067,TKT-101712,PROD-1739,product_image_00067.jpg,No,,No,No,,0.926,No Action Needed,0.095,No,2024-02-14 09:58:29
+IMG-800068,TKT-101897,PROD-1816,product_image_00068.jpg,No,,No,No,Max Capacity: 5TB,0.89,No Action Needed,0.032,No,2024-01-19 04:18:05
+IMG-800069,TKT-100985,PROD-1816,product_image_00069.jpg,No,,Yes,No,,0.669,Approve Replacement,0.021,Yes,2024-03-01 07:04:30
+IMG-800070,TKT-101848,PROD-1739,product_image_00070.jpg,No,,No,No,Model: NP-5000X,0.977,No Action Needed,0.044,No,2024-04-22 06:39:20
+IMG-800071,TKT-100799,PROD-1423,product_image_00071.jpg,No,,No,No,,0.654,No Action Needed,0.097,Yes,2024-03-01 05:42:39
+IMG-800072,TKT-101607,PROD-1711,product_image_00072.jpg,No,,No,No,Input: 110-240V,0.838,No Action Needed,0.097,No,2024-05-25 19:55:26
+IMG-800073,TKT-101355,PROD-1711,product_image_00073.jpg,No,,No,No,WARNING: Do not expose to moisture,0.863,No Action Needed,0.063,No,2024-05-23 11:30:30
+IMG-800074,TKT-100445,PROD-1739,product_image_00074.jpg,Yes,Water Damage,No,No,,0.953,Approve Replacement,0.159,Yes,2024-01-08 02:35:37
+IMG-800075,TKT-100124,PROD-1232,product_image_00075.jpg,No,,No,No,Component: Active Directory,0.848,No Action Needed,0.017,No,2024-02-10 01:20:35
+IMG-800076,TKT-100976,PROD-1878,product_image_00076.jpg,No,,No,No,,0.755,No Action Needed,0.083,No,2024-06-05 07:38:52
+IMG-800077,TKT-101087,PROD-1057,product_image_00077.jpg,No,,No,No,Input: 110-240V,0.897,No Action Needed,0.065,No,2024-01-10 23:33:11
+IMG-800078,TKT-100164,PROD-1057,product_image_00078.jpg,No,,No,No,Serial: SN-2024-001,0.79,No Action Needed,0.08,No,2024-05-25 02:20:15
+IMG-800079,TKT-101382,PROD-1816,product_image_00079.jpg,No,,No,No,Component: Active Directory,0.784,No Action Needed,0.085,No,2024-06-25 12:55:40
+IMG-800080,TKT-100504,PROD-1790,product_image_00080.jpg,Yes,Water Damage,Yes,No,Serial: SN-2024-001,0.655,Approve Replacement,0.176,Yes,2024-04-04 02:44:20
+IMG-800081,TKT-100858,PROD-1790,product_image_00081.jpg,No,,No,No,Part Number: PN-88421,0.971,No Action Needed,0.086,No,2024-05-24 15:39:57
+IMG-800082,TKT-101914,PROD-1423,product_image_00082.jpg,No,,No,No,Part Number: PN-88421,0.72,No Action Needed,0.089,Yes,2024-02-01 10:03:07
+IMG-800083,TKT-100488,PROD-1423,product_image_00083.jpg,No,,Yes,No,WARNING: Do not expose to moisture,0.812,Approve Replacement,0.085,No,2024-02-19 10:18:51
+IMG-800084,TKT-100936,PROD-1232,product_image_00084.jpg,No,,No,No,,0.919,No Action Needed,0.063,No,2024-02-16 04:14:14
+IMG-800085,TKT-101916,PROD-1522,product_image_00085.jpg,No,,No,No,Component: Active Directory,0.722,No Action Needed,0.022,Yes,2024-02-07 15:23:13
+IMG-800086,TKT-101153,PROD-1522,product_image_00086.jpg,No,,No,No,MFG: 2024-01,0.897,No Action Needed,0.059,No,2024-03-19 19:29:33
+IMG-800087,TKT-101036,PROD-1423,product_image_00087.jpg,No,,No,No,Part Number: PN-88421,0.7,No Action Needed,0.093,Yes,2024-03-14 05:32:43
+IMG-800088,TKT-101804,PROD-1522,product_image_00088.jpg,Yes,Missing Component,Yes,No,Warranty: 12 months,0.768,Approve Replacement,0.149,No,2024-04-24 01:44:14
+IMG-800089,TKT-100897,PROD-1878,product_image_00089.jpg,No,,No,No,,0.697,No Action Needed,0.068,Yes,2024-04-13 11:27:20
+IMG-800090,TKT-101252,PROD-1878,product_image_00090.jpg,No,,No,No,Input: 110-240V,0.709,No Action Needed,0.027,Yes,2024-05-26 15:51:48
+IMG-800091,TKT-100613,PROD-1522,product_image_00091.jpg,No,,No,No,,0.68,No Action Needed,0.021,Yes,2024-01-12 05:12:57
+IMG-800092,TKT-100275,PROD-1423,product_image_00092.jpg,No,,No,No,Serial: SN-2024-001,0.759,No Action Needed,0.018,No,2024-02-16 01:27:20
+IMG-800093,TKT-101520,PROD-1878,product_image_00093.jpg,No,,No,No,WARNING: Do not expose to moisture,0.778,No Action Needed,0.01,No,2024-02-05 21:58:24
+IMG-800094,TKT-101238,PROD-1816,product_image_00094.jpg,Yes,Burn Mark,No,No,WARNING: Do not expose to moisture,0.832,Approve Partial Refund,0.067,No,2024-01-28 20:28:06
+IMG-800095,TKT-101035,PROD-1711,product_image_00095.jpg,No,,No,No,Model: NP-5000X,0.7,No Action Needed,0.022,Yes,2024-01-03 05:00:30
+IMG-800096,TKT-100189,PROD-1652,product_image_00096.jpg,No,,No,Yes,,0.945,Approve Replacement,0.042,No,2024-04-24 09:57:34
+IMG-800097,TKT-100090,PROD-1739,product_image_00097.jpg,Yes,Burn Mark,No,No,,0.842,Approve Partial Refund,0.031,No,2024-05-05 13:18:35
+IMG-800098,TKT-101304,PROD-1423,product_image_00098.jpg,No,,No,No,Max Capacity: 5TB,0.771,No Action Needed,0.068,No,2024-05-25 07:25:34
+IMG-800099,TKT-101129,PROD-1652,product_image_00099.jpg,No,,No,No,Serial: SN-2024-001,0.849,No Action Needed,0.061,No,2024-02-11 16:40:04
+IMG-800100,TKT-100154,PROD-1057,product_image_00100.jpg,No,,No,No,Part Number: PN-88421,0.771,No Action Needed,0.099,No,2024-04-30 16:17:36
+IMG-800101,TKT-101192,PROD-1878,product_image_00101.jpg,Yes,Dent,No,No,Model: NP-5000X,0.816,Approve Partial Refund,0.031,No,2024-04-03 03:51:58
+IMG-800102,TKT-100631,PROD-1232,product_image_00102.jpg,Yes,Scratches,No,No,,0.656,Approve Partial Refund,0.249,Yes,2024-01-06 11:30:27
+IMG-800103,TKT-100430,PROD-1816,product_image_00103.jpg,No,,No,No,Part Number: PN-88421,0.738,No Action Needed,0.025,Yes,2024-06-27 14:50:41
+IMG-800104,TKT-101597,PROD-1878,product_image_00104.jpg,No,,No,No,,0.912,No Action Needed,0.027,No,2024-04-27 17:52:03
+IMG-800105,TKT-100832,PROD-1790,product_image_00105.jpg,No,,No,No,,0.689,No Action Needed,0.065,Yes,2024-03-04 11:48:53
+IMG-800106,TKT-101895,PROD-1816,product_image_00106.jpg,No,,No,No,,0.831,No Action Needed,0.015,No,2024-06-26 16:29:43
+IMG-800107,TKT-101999,PROD-1057,product_image_00107.jpg,No,,Yes,No,,0.76,Approve Replacement,0.083,No,2024-03-05 00:22:22
+IMG-800108,TKT-100050,PROD-1057,product_image_00108.jpg,No,,No,No,,0.81,No Action Needed,0.047,No,2024-04-03 11:41:18
+IMG-800109,TKT-100680,PROD-1652,product_image_00109.jpg,No,,No,No,,0.692,No Action Needed,0.076,Yes,2024-05-16 18:10:41
+IMG-800110,TKT-101769,PROD-1816,product_image_00110.jpg,No,,Yes,No,Serial: SN-2024-001,0.845,Approve Replacement,0.086,No,2024-03-12 11:37:12
+IMG-800111,TKT-100783,PROD-1739,product_image_00111.jpg,No,,No,No,,0.713,No Action Needed,0.031,Yes,2024-03-18 05:43:31
+IMG-800112,TKT-100455,PROD-1816,product_image_00112.jpg,No,,No,No,,0.804,No Action Needed,0.074,No,2024-02-01 03:19:14
+IMG-800113,TKT-100942,PROD-1232,product_image_00113.jpg,No,,No,No,MFG: 2024-01,0.846,No Action Needed,0.042,No,2024-02-22 10:07:35
+IMG-800114,TKT-100456,PROD-1739,product_image_00114.jpg,No,,No,No,Made in China,0.763,No Action Needed,0.076,No,2024-02-11 15:46:59
+IMG-800115,TKT-100672,PROD-1423,product_image_00115.jpg,No,,No,No,,0.954,No Action Needed,0.081,No,2024-02-07 18:30:56
+IMG-800116,TKT-101980,PROD-1423,product_image_00116.jpg,No,,No,No,Input: 110-240V,0.72,No Action Needed,0.074,Yes,2024-01-05 12:11:12
+IMG-800117,TKT-100818,PROD-1878,product_image_00117.jpg,Yes,Burn Mark,No,No,,0.805,Approve Partial Refund,0.131,No,2024-05-15 17:59:32
+IMG-800118,TKT-100236,PROD-1423,product_image_00118.jpg,No,,No,No,WARNING: Do not expose to moisture,0.654,No Action Needed,0.064,Yes,2024-06-12 19:48:35
+IMG-800119,TKT-100078,PROD-1522,product_image_00119.jpg,No,,No,No,Part Number: PN-88421,0.786,No Action Needed,0.052,No,2024-02-15 00:40:43
+IMG-800120,TKT-101492,PROD-1232,product_image_00120.jpg,No,,No,No,Input: 110-240V,0.737,No Action Needed,0.075,Yes,2024-06-19 23:44:11
+IMG-800121,TKT-100236,PROD-1652,product_image_00121.jpg,Yes,Water Damage,No,No,Model: NP-5000X,0.658,Approve Partial Refund,0.195,Yes,2024-01-31 15:19:36
+IMG-800122,TKT-101451,PROD-1652,product_image_00122.jpg,No,,No,No,Input: 110-240V,0.965,No Action Needed,0.051,No,2024-02-15 06:08:36
+IMG-800123,TKT-101406,PROD-1816,product_image_00123.jpg,No,,No,No,Serial: SN-2024-001,0.963,No Action Needed,0.088,No,2024-02-24 10:54:42
+IMG-800124,TKT-101943,PROD-1232,product_image_00124.jpg,No,,No,No,Serial: SN-2024-001,0.764,No Action Needed,0.082,No,2024-04-26 03:40:24
+IMG-800125,TKT-101474,PROD-1423,product_image_00125.jpg,Yes,Crack,No,No,Made in China,0.964,Approve Replacement,0.125,No,2024-03-31 10:06:08
+IMG-800126,TKT-100668,PROD-1652,product_image_00126.jpg,No,,Yes,No,Input: 110-240V,0.734,Approve Replacement,0.062,Yes,2024-06-28 12:42:45
+IMG-800127,TKT-100260,PROD-1816,product_image_00127.jpg,Yes,Rust,No,No,Made in China,0.744,Approve Replacement,0.061,Yes,2024-02-18 19:34:40
+IMG-800128,TKT-101387,PROD-1057,product_image_00128.jpg,No,,No,No,WARNING: Do not expose to moisture,0.679,No Action Needed,0.1,Yes,2024-02-18 05:46:46
+IMG-800129,TKT-100831,PROD-1878,product_image_00129.jpg,No,,Yes,No,,0.721,Approve Replacement,0.091,Yes,2024-02-01 00:45:17
+IMG-800130,TKT-100622,PROD-1423,product_image_00130.jpg,No,,Yes,No,Component: Active Directory,0.842,Approve Replacement,0.016,No,2024-03-18 10:37:38
+IMG-800131,TKT-101242,PROD-1232,product_image_00131.jpg,No,,No,No,Max Capacity: 5TB,0.786,No Action Needed,0.06,No,2024-03-03 18:05:55
+IMG-800132,TKT-101383,PROD-1816,product_image_00132.jpg,No,,No,No,Warranty: 12 months,0.777,No Action Needed,0.034,No,2024-04-19 14:36:43
+IMG-800133,TKT-101349,PROD-1522,product_image_00133.jpg,No,,No,No,Component: Active Directory,0.945,No Action Needed,0.047,No,2024-02-26 21:15:34
+IMG-800134,TKT-100686,PROD-1522,product_image_00134.jpg,No,,No,No,,0.852,No Action Needed,0.041,No,2024-03-07 11:06:26
+IMG-800135,TKT-101538,PROD-1816,product_image_00135.jpg,No,,No,No,MFG: 2024-01,0.733,No Action Needed,0.075,Yes,2024-04-29 23:27:38
+IMG-800136,TKT-101651,PROD-1816,product_image_00136.jpg,No,,No,No,Model: NP-5000X,0.788,No Action Needed,0.039,No,2024-01-07 01:13:45
+IMG-800137,TKT-100501,PROD-1711,product_image_00137.jpg,Yes,Water Damage,No,Yes,,0.712,Approve Replacement,0.111,Yes,2024-01-02 11:54:40
+IMG-800138,TKT-100149,PROD-1711,product_image_00138.jpg,No,,No,No,Component: Active Directory,0.779,No Action Needed,0.063,No,2024-05-19 04:03:16
+IMG-800139,TKT-100398,PROD-1652,product_image_00139.jpg,No,,No,No,MFG: 2024-01,0.943,No Action Needed,0.03,No,2024-03-26 04:56:11
+IMG-800140,TKT-100302,PROD-1739,product_image_00140.jpg,No,,No,No,,0.954,No Action Needed,0.082,No,2024-04-23 09:59:14
+IMG-800141,TKT-101762,PROD-1522,product_image_00141.jpg,No,,No,No,,0.787,No Action Needed,0.03,No,2024-01-22 14:21:33
+IMG-800142,TKT-100448,PROD-1057,product_image_00142.jpg,No,,No,No,,0.743,No Action Needed,0.012,Yes,2024-05-25 17:01:08
+IMG-800143,TKT-101425,PROD-1878,product_image_00143.jpg,No,,No,No,Input: 110-240V,0.788,No Action Needed,0.055,No,2024-03-16 00:27:02
+IMG-800144,TKT-100510,PROD-1522,product_image_00144.jpg,Yes,Paint Chipping,No,No,Max Capacity: 5TB,0.741,Approve Partial Refund,0.07,Yes,2024-02-22 20:36:22
+IMG-800145,TKT-101367,PROD-1878,product_image_00145.jpg,No,,No,No,,0.912,No Action Needed,0.048,No,2024-05-09 10:45:09
+IMG-800146,TKT-101219,PROD-1232,product_image_00146.jpg,No,,No,No,,0.733,No Action Needed,0.045,Yes,2024-02-09 20:05:55
+IMG-800147,TKT-101825,PROD-1711,product_image_00147.jpg,No,,No,No,Input: 110-240V,0.812,No Action Needed,0.07,No,2024-05-29 06:03:12
+IMG-800148,TKT-100873,PROD-1878,product_image_00148.jpg,No,,No,No,Warranty: 12 months,0.936,No Action Needed,0.086,No,2024-04-18 10:48:10
+IMG-800149,TKT-101523,PROD-1711,product_image_00149.jpg,No,,No,No,MFG: 2024-01,0.676,No Action Needed,0.076,Yes,2024-03-01 20:44:26
+IMG-800150,TKT-101720,PROD-1423,product_image_00150.jpg,No,,No,No,,0.676,No Action Needed,0.01,Yes,2024-06-27 23:44:29
+IMG-800151,TKT-101067,PROD-1711,product_image_00151.jpg,Yes,Missing Component,No,No,Serial: SN-2024-001,0.925,Approve Partial Refund,0.2,Yes,2024-02-26 15:52:14
+IMG-800152,TKT-101461,PROD-1423,product_image_00152.jpg,Yes,Missing Component,No,No,Part Number: PN-88421,0.867,Approve Partial Refund,0.184,Yes,2024-01-25 15:29:21
+IMG-800153,TKT-101828,PROD-1878,product_image_00153.jpg,No,,No,No,Warranty: 12 months,0.971,No Action Needed,0.014,No,2024-01-10 08:15:11
+IMG-800154,TKT-100473,PROD-1652,product_image_00154.jpg,No,,No,No,MFG: 2024-01,0.961,No Action Needed,0.013,No,2024-04-26 06:41:10
+IMG-800155,TKT-100131,PROD-1652,product_image_00155.jpg,No,,No,No,Input: 110-240V,0.971,No Action Needed,0.053,No,2024-04-25 07:05:10
+IMG-800156,TKT-100954,PROD-1652,product_image_00156.jpg,No,,No,No,Made in China,0.871,No Action Needed,0.043,No,2024-04-17 15:52:12
+IMG-800157,TKT-100797,PROD-1790,product_image_00157.jpg,Yes,Scratches,No,No,,0.896,Approve Replacement,0.086,No,2024-01-04 15:10:20
+IMG-800158,TKT-101567,PROD-1790,product_image_00158.jpg,No,,No,No,Model: NP-5000X,0.795,No Action Needed,0.089,No,2024-02-24 14:33:13
+IMG-800159,TKT-101930,PROD-1232,product_image_00159.jpg,No,,Yes,No,Made in China,0.781,Approve Replacement,0.094,No,2024-05-02 11:06:14
+IMG-800160,TKT-101747,PROD-1652,product_image_00160.jpg,Yes,Crack,Yes,No,,0.663,Approve Replacement,0.149,Yes,2024-04-30 13:54:32
+IMG-800161,TKT-101118,PROD-1790,product_image_00161.jpg,No,,No,No,,0.651,No Action Needed,0.052,Yes,2024-04-29 09:00:13
+IMG-800162,TKT-100999,PROD-1816,product_image_00162.jpg,No,,No,No,Max Capacity: 5TB,0.744,No Action Needed,0.092,Yes,2024-03-13 01:14:54
+IMG-800163,TKT-100059,PROD-1652,product_image_00163.jpg,No,,No,No,Made in China,0.973,No Action Needed,0.081,No,2024-06-19 10:26:13
+IMG-800164,TKT-101483,PROD-1057,product_image_00164.jpg,No,,No,No,,0.957,No Action Needed,0.099,No,2024-02-21 17:16:51
+IMG-800165,TKT-101883,PROD-1057,product_image_00165.jpg,No,,No,No,,0.857,No Action Needed,0.056,No,2024-03-14 11:07:22
+IMG-800166,TKT-101093,PROD-1739,product_image_00166.jpg,No,,No,No,,0.915,No Action Needed,0.042,No,2024-01-05 20:29:41
+IMG-800167,TKT-101212,PROD-1790,product_image_00167.jpg,No,,No,No,Serial: SN-2024-001,0.988,No Action Needed,0.026,No,2024-06-11 07:03:45
+IMG-800168,TKT-101316,PROD-1652,product_image_00168.jpg,No,,No,No,Max Capacity: 5TB,0.726,No Action Needed,0.03,Yes,2024-03-29 16:35:20
+IMG-800169,TKT-100372,PROD-1739,product_image_00169.jpg,No,,No,No,Part Number: PN-88421,0.783,No Action Needed,0.035,No,2024-01-29 18:06:00
+IMG-800170,TKT-100433,PROD-1711,product_image_00170.jpg,Yes,Burn Mark,No,Yes,Made in China,0.762,Approve Partial Refund,0.186,Yes,2024-05-03 09:22:22
+IMG-800171,TKT-100569,PROD-1652,product_image_00171.jpg,Yes,Shattered Glass,No,Yes,,0.831,Approve Refund,0.241,Yes,2024-06-24 00:50:20
+IMG-800172,TKT-100963,PROD-1739,product_image_00172.jpg,No,,No,No,,0.95,No Action Needed,0.056,No,2024-04-24 05:18:49
+IMG-800173,TKT-100106,PROD-1232,product_image_00173.jpg,No,,No,No,Serial: SN-2024-001,0.944,No Action Needed,0.076,No,2024-05-26 05:27:03
+IMG-800174,TKT-101599,PROD-1739,product_image_00174.jpg,No,,No,No,,0.764,No Action Needed,0.031,No,2024-06-18 23:56:46
+IMG-800175,TKT-101944,PROD-1816,product_image_00175.jpg,No,,No,No,Model: NP-5000X,0.977,No Action Needed,0.052,No,2024-01-31 13:13:58
+IMG-800176,TKT-101272,PROD-1057,product_image_00176.jpg,Yes,Missing Component,No,No,Serial: SN-2024-001,0.959,Approve Replacement,0.143,No,2024-03-17 09:11:02
+IMG-800177,TKT-101155,PROD-1816,product_image_00177.jpg,No,,No,No,WARNING: Do not expose to moisture,0.84,No Action Needed,0.02,No,2024-04-07 03:36:27
+IMG-800178,TKT-101570,PROD-1232,product_image_00178.jpg,Yes,Dent,No,No,Serial: SN-2024-001,0.746,Approve Replacement,0.114,Yes,2024-03-03 00:23:55
+IMG-800179,TKT-101592,PROD-1057,product_image_00179.jpg,No,,No,No,,0.969,No Action Needed,0.072,No,2024-03-08 13:56:32
+IMG-800180,TKT-100221,PROD-1790,product_image_00180.jpg,No,,No,No,WARNING: Do not expose to moisture,0.67,No Action Needed,0.017,Yes,2024-02-19 06:37:01
+IMG-800181,TKT-101179,PROD-1652,product_image_00181.jpg,No,,No,No,MFG: 2024-01,0.694,No Action Needed,0.078,Yes,2024-01-07 15:56:12
+IMG-800182,TKT-100155,PROD-1790,product_image_00182.jpg,Yes,Missing Component,No,No,WARNING: Do not expose to moisture,0.912,Approve Partial Refund,0.117,No,2024-06-22 03:37:05
+IMG-800183,TKT-101741,PROD-1790,product_image_00183.jpg,No,,No,No,,0.706,No Action Needed,0.082,Yes,2024-06-05 04:51:22
+IMG-800184,TKT-101630,PROD-1790,product_image_00184.jpg,No,,No,No,,0.873,No Action Needed,0.035,No,2024-03-21 12:20:13
+IMG-800185,TKT-100711,PROD-1878,product_image_00185.jpg,No,,No,No,Part Number: PN-88421,0.793,No Action Needed,0.067,No,2024-01-06 17:36:56
+IMG-800186,TKT-100141,PROD-1878,product_image_00186.jpg,No,,No,No,Model: NP-5000X,0.896,No Action Needed,0.077,No,2024-06-11 07:20:31
+IMG-800187,TKT-101739,PROD-1652,product_image_00187.jpg,No,,No,No,,0.81,No Action Needed,0.059,No,2024-02-29 10:55:41
+IMG-800188,TKT-100216,PROD-1652,product_image_00188.jpg,No,,No,No,,0.804,No Action Needed,0.058,No,2024-05-10 17:09:48
+IMG-800189,TKT-101301,PROD-1711,product_image_00189.jpg,No,,Yes,No,,0.86,Approve Replacement,0.082,No,2024-06-01 13:17:17
+IMG-800190,TKT-100891,PROD-1057,product_image_00190.jpg,Yes,Crack,No,No,,0.796,Approve Replacement,0.128,No,2024-03-03 01:25:09
+IMG-800191,TKT-100553,PROD-1790,product_image_00191.jpg,No,,No,No,,0.985,No Action Needed,0.023,No,2024-01-21 07:23:09
+IMG-800192,TKT-101102,PROD-1711,product_image_00192.jpg,No,,No,No,Component: Active Directory,0.749,No Action Needed,0.073,Yes,2024-02-02 14:13:15
+IMG-800193,TKT-100549,PROD-1232,product_image_00193.jpg,No,,Yes,No,,0.686,Approve Replacement,0.032,Yes,2024-04-30 14:31:09
+IMG-800194,TKT-101701,PROD-1522,product_image_00194.jpg,No,,No,No,Max Capacity: 5TB,0.889,No Action Needed,0.06,No,2024-06-08 17:08:01
+IMG-800195,TKT-100499,PROD-1711,product_image_00195.jpg,No,,No,No,Made in China,0.769,No Action Needed,0.013,No,2024-04-25 15:49:45
+IMG-800196,TKT-100688,PROD-1739,product_image_00196.jpg,No,,No,No,Part Number: PN-88421,0.884,No Action Needed,0.082,No,2024-04-15 02:31:18
+IMG-800197,TKT-100372,PROD-1711,product_image_00197.jpg,No,,No,No,WARNING: Do not expose to moisture,0.955,No Action Needed,0.064,No,2024-03-13 07:13:35
+IMG-800198,TKT-100697,PROD-1423,product_image_00198.jpg,No,,No,No,,0.863,No Action Needed,0.081,No,2024-04-20 06:53:46
+IMG-800199,TKT-101436,PROD-1423,product_image_00199.jpg,No,,No,No,Input: 110-240V,0.853,No Action Needed,0.081,No,2024-05-06 15:40:46
+IMG-800200,TKT-101941,PROD-1816,product_image_00200.jpg,No,,No,No,Made in China,0.671,No Action Needed,0.032,Yes,2024-05-20 00:26:00
+IMG-800201,TKT-101000,PROD-1878,product_image_00201.jpg,No,,No,No,,0.765,No Action Needed,0.026,No,2024-04-28 00:39:16
+IMG-800202,TKT-101414,PROD-1711,product_image_00202.jpg,No,,No,No,Max Capacity: 5TB,0.895,No Action Needed,0.031,No,2024-04-05 00:48:40
+IMG-800203,TKT-100917,PROD-1739,product_image_00203.jpg,No,,No,No,MFG: 2024-01,0.725,No Action Needed,0.048,Yes,2024-04-06 08:20:27
+IMG-800204,TKT-100828,PROD-1816,product_image_00204.jpg,No,,No,No,Component: Active Directory,0.938,No Action Needed,0.067,No,2024-04-17 10:57:23
+IMG-800205,TKT-100755,PROD-1711,product_image_00205.jpg,No,,No,No,Part Number: PN-88421,0.85,No Action Needed,0.013,No,2024-04-07 06:06:55
+IMG-800206,TKT-100871,PROD-1878,product_image_00206.jpg,No,,No,No,Max Capacity: 5TB,0.873,No Action Needed,0.099,No,2024-05-04 13:26:04
+IMG-800207,TKT-100554,PROD-1423,product_image_00207.jpg,No,,No,No,Serial: SN-2024-001,0.914,No Action Needed,0.046,No,2024-03-27 03:12:41
+IMG-800208,TKT-101477,PROD-1816,product_image_00208.jpg,No,,No,No,Input: 110-240V,0.94,No Action Needed,0.054,No,2024-03-02 14:04:37
+IMG-800209,TKT-101947,PROD-1057,product_image_00209.jpg,No,,No,No,Max Capacity: 5TB,0.772,No Action Needed,0.063,No,2024-03-10 17:01:12
+IMG-800210,TKT-100566,PROD-1790,product_image_00210.jpg,No,,No,No,,0.761,No Action Needed,0.08,No,2024-06-12 03:29:48
+IMG-800211,TKT-101074,PROD-1790,product_image_00211.jpg,No,,No,No,Serial: SN-2024-001,0.8,No Action Needed,0.04,No,2024-04-02 21:16:59
+IMG-800212,TKT-101705,PROD-1816,product_image_00212.jpg,No,,No,No,Part Number: PN-88421,0.86,No Action Needed,0.074,No,2024-03-04 19:53:55
+IMG-800213,TKT-100367,PROD-1423,product_image_00213.jpg,No,,No,No,Input: 110-240V,0.831,No Action Needed,0.08,No,2024-04-29 07:15:55
+IMG-800214,TKT-100259,PROD-1423,product_image_00214.jpg,No,,No,No,Model: NP-5000X,0.834,No Action Needed,0.013,No,2024-03-18 22:38:57
+IMG-800215,TKT-101133,PROD-1423,product_image_00215.jpg,No,,No,No,Warranty: 12 months,0.868,No Action Needed,0.03,No,2024-02-28 08:17:36
+IMG-800216,TKT-101306,PROD-1711,product_image_00216.jpg,No,,Yes,No,Model: NP-5000X,0.985,Approve Replacement,0.097,No,2024-02-12 18:14:21
+IMG-800217,TKT-101175,PROD-1423,product_image_00217.jpg,No,,No,No,Max Capacity: 5TB,0.805,No Action Needed,0.056,No,2024-06-26 02:31:50
+IMG-800218,TKT-100697,PROD-1057,product_image_00218.jpg,No,,No,Yes,,0.755,Approve Replacement,0.073,No,2024-05-03 01:14:30
+IMG-800219,TKT-100517,PROD-1711,product_image_00219.jpg,No,,No,No,Serial: SN-2024-001,0.703,No Action Needed,0.031,Yes,2024-03-26 13:25:20
+IMG-800220,TKT-100820,PROD-1711,product_image_00220.jpg,No,,No,No,Model: NP-5000X,0.819,No Action Needed,0.066,No,2024-05-15 18:17:18
+IMG-800221,TKT-100310,PROD-1057,product_image_00221.jpg,No,,Yes,No,,0.884,Approve Replacement,0.071,No,2024-05-26 21:58:54
+IMG-800222,TKT-101943,PROD-1423,product_image_00222.jpg,No,,No,No,MFG: 2024-01,0.686,No Action Needed,0.069,Yes,2024-03-03 01:35:04
+IMG-800223,TKT-100242,PROD-1878,product_image_00223.jpg,No,,No,No,,0.681,No Action Needed,0.036,Yes,2024-03-08 08:06:05
+IMG-800224,TKT-101241,PROD-1790,product_image_00224.jpg,No,,No,No,,0.948,No Action Needed,0.039,No,2024-04-18 01:01:52
+IMG-800225,TKT-100462,PROD-1878,product_image_00225.jpg,No,,No,Yes,Max Capacity: 5TB,0.76,Approve Replacement,0.043,No,2024-05-22 02:31:48
+IMG-800226,TKT-100608,PROD-1790,product_image_00226.jpg,No,,No,No,,0.836,No Action Needed,0.05,No,2024-04-11 17:37:29
+IMG-800227,TKT-100625,PROD-1790,product_image_00227.jpg,No,,No,No,Component: Active Directory,0.908,No Action Needed,0.055,No,2024-03-25 01:47:51
+IMG-800228,TKT-101966,PROD-1522,product_image_00228.jpg,No,,No,Yes,,0.766,Approve Replacement,0.044,No,2024-02-17 03:12:36
+IMG-800229,TKT-100425,PROD-1816,product_image_00229.jpg,No,,No,No,Serial: SN-2024-001,0.837,No Action Needed,0.077,No,2024-04-17 21:51:54
+IMG-800230,TKT-100321,PROD-1816,product_image_00230.jpg,No,,No,No,Serial: SN-2024-001,0.955,No Action Needed,0.016,No,2024-05-22 15:34:48
+IMG-800231,TKT-100320,PROD-1739,product_image_00231.jpg,No,,No,No,Component: Active Directory,0.813,No Action Needed,0.028,No,2024-03-18 01:40:12
+IMG-800232,TKT-100962,PROD-1423,product_image_00232.jpg,No,,No,No,WARNING: Do not expose to moisture,0.966,No Action Needed,0.058,No,2024-05-15 15:11:31
+IMG-800233,TKT-101447,PROD-1423,product_image_00233.jpg,No,,No,No,,0.93,No Action Needed,0.057,No,2024-01-07 12:15:39
+IMG-800234,TKT-100929,PROD-1522,product_image_00234.jpg,No,,No,No,WARNING: Do not expose to moisture,0.686,No Action Needed,0.061,Yes,2024-02-11 06:50:11
+IMG-800235,TKT-101613,PROD-1790,product_image_00235.jpg,No,,No,No,MFG: 2024-01,0.777,No Action Needed,0.057,No,2024-02-16 21:17:46
+IMG-800236,TKT-100870,PROD-1522,product_image_00236.jpg,Yes,Crack,No,No,Warranty: 12 months,0.852,Approve Partial Refund,0.165,Yes,2024-05-01 20:56:28
+IMG-800237,TKT-101860,PROD-1423,product_image_00237.jpg,No,,No,No,,0.737,No Action Needed,0.037,Yes,2024-05-31 15:30:26
+IMG-800238,TKT-100146,PROD-1739,product_image_00238.jpg,No,,No,No,WARNING: Do not expose to moisture,0.911,No Action Needed,0.023,No,2024-03-09 17:49:34
+IMG-800239,TKT-101218,PROD-1790,product_image_00239.jpg,No,,No,No,,0.832,No Action Needed,0.026,No,2024-02-06 04:26:54
+IMG-800240,TKT-100899,PROD-1522,product_image_00240.jpg,No,,No,No,WARNING: Do not expose to moisture,0.737,No Action Needed,0.067,Yes,2024-06-01 04:55:27
+IMG-800241,TKT-101433,PROD-1652,product_image_00241.jpg,No,,No,No,,0.796,No Action Needed,0.075,No,2024-01-24 08:09:31
+IMG-800242,TKT-101024,PROD-1878,product_image_00242.jpg,No,,No,No,Serial: SN-2024-001,0.958,No Action Needed,0.08,No,2024-02-05 20:22:59
+IMG-800243,TKT-101224,PROD-1739,product_image_00243.jpg,No,,No,No,,0.771,No Action Needed,0.016,No,2024-02-18 17:51:55
+IMG-800244,TKT-101504,PROD-1232,product_image_00244.jpg,Yes,Water Damage,No,No,Serial: SN-2024-001,0.834,Approve Partial Refund,0.166,Yes,2024-02-13 12:31:53
+IMG-800245,TKT-100468,PROD-1790,product_image_00245.jpg,No,,No,No,Model: NP-5000X,0.875,No Action Needed,0.06,No,2024-04-07 02:41:26
+IMG-800246,TKT-101566,PROD-1423,product_image_00246.jpg,No,,Yes,No,Warranty: 12 months,0.976,Approve Replacement,0.026,No,2024-01-31 19:08:30
+IMG-800247,TKT-100963,PROD-1878,product_image_00247.jpg,No,,No,No,WARNING: Do not expose to moisture,0.803,No Action Needed,0.078,No,2024-05-24 12:54:39
+IMG-800248,TKT-100371,PROD-1790,product_image_00248.jpg,No,,No,No,Max Capacity: 5TB,0.73,No Action Needed,0.046,Yes,2024-04-13 08:08:21
+IMG-800249,TKT-101984,PROD-1522,product_image_00249.jpg,No,,No,No,Made in China,0.936,No Action Needed,0.057,No,2024-05-29 15:37:53
+IMG-800250,TKT-100682,PROD-1232,product_image_00250.jpg,No,,No,No,Warranty: 12 months,0.822,No Action Needed,0.024,No,2024-05-21 04:29:23
+IMG-800251,TKT-100675,PROD-1652,product_image_00251.jpg,No,,No,No,WARNING: Do not expose to moisture,0.68,No Action Needed,0.094,Yes,2024-03-15 10:34:27
+IMG-800252,TKT-101356,PROD-1652,product_image_00252.jpg,No,,No,No,,0.705,No Action Needed,0.081,Yes,2024-05-22 01:13:57
+IMG-800253,TKT-101126,PROD-1739,product_image_00253.jpg,No,,No,No,Part Number: PN-88421,0.785,No Action Needed,0.059,No,2024-06-21 09:36:34
+IMG-800254,TKT-100516,PROD-1232,product_image_00254.jpg,No,,No,No,Made in China,0.698,No Action Needed,0.029,Yes,2024-01-14 20:30:00
+IMG-800255,TKT-101771,PROD-1878,product_image_00255.jpg,No,,Yes,No,,0.726,Approve Replacement,0.096,Yes,2024-01-10 01:34:16
+IMG-800256,TKT-100002,PROD-1878,product_image_00256.jpg,No,,No,No,Model: NP-5000X,0.856,No Action Needed,0.023,No,2024-03-20 10:28:05
+IMG-800257,TKT-100384,PROD-1878,product_image_00257.jpg,No,,No,No,Max Capacity: 5TB,0.931,No Action Needed,0.07,No,2024-05-15 04:49:07
+IMG-800258,TKT-101280,PROD-1711,product_image_00258.jpg,No,,No,No,,0.978,No Action Needed,0.049,No,2024-05-20 20:37:50
+IMG-800259,TKT-100416,PROD-1423,product_image_00259.jpg,No,,No,No,WARNING: Do not expose to moisture,0.868,No Action Needed,0.029,No,2024-05-09 20:02:26
+IMG-800260,TKT-100897,PROD-1711,product_image_00260.jpg,No,,No,No,Component: Active Directory,0.722,No Action Needed,0.054,Yes,2024-06-26 12:52:12
+IMG-800261,TKT-101636,PROD-1816,product_image_00261.jpg,No,,No,No,,0.708,No Action Needed,0.017,Yes,2024-06-04 07:49:01
+IMG-800262,TKT-100636,PROD-1878,product_image_00262.jpg,Yes,Scratches,No,No,Serial: SN-2024-001,0.823,Approve Partial Refund,0.205,Yes,2024-04-12 09:29:31
+IMG-800263,TKT-100460,PROD-1522,product_image_00263.jpg,No,,No,No,Serial: SN-2024-001,0.795,No Action Needed,0.022,No,2024-04-25 15:50:22
+IMG-800264,TKT-101326,PROD-1057,product_image_00264.jpg,No,,No,No,WARNING: Do not expose to moisture,0.791,No Action Needed,0.084,No,2024-03-26 19:14:12
+IMG-800265,TKT-101042,PROD-1423,product_image_00265.jpg,Yes,Rust,No,No,,0.657,Approve Replacement,0.192,Yes,2024-02-27 01:32:22
+IMG-800266,TKT-100967,PROD-1816,product_image_00266.jpg,No,,No,No,Warranty: 12 months,0.864,No Action Needed,0.028,No,2024-06-21 00:11:11
+IMG-800267,TKT-100785,PROD-1816,product_image_00267.jpg,No,,No,No,,0.804,No Action Needed,0.086,No,2024-04-26 02:59:09
+IMG-800268,TKT-101040,PROD-1057,product_image_00268.jpg,No,,No,No,,0.812,No Action Needed,0.044,No,2024-06-28 08:30:20
+IMG-800269,TKT-100565,PROD-1652,product_image_00269.jpg,No,,No,No,Input: 110-240V,0.975,No Action Needed,0.081,No,2024-05-16 17:57:21
+IMG-800270,TKT-100547,PROD-1739,product_image_00270.jpg,No,,No,No,WARNING: Do not expose to moisture,0.663,No Action Needed,0.091,Yes,2024-01-21 07:56:42
+IMG-800271,TKT-101715,PROD-1790,product_image_00271.jpg,No,,No,No,Max Capacity: 5TB,0.803,No Action Needed,0.089,No,2024-03-09 08:21:51
+IMG-800272,TKT-101772,PROD-1057,product_image_00272.jpg,No,,No,Yes,Max Capacity: 5TB,0.663,Approve Replacement,0.077,Yes,2024-05-08 02:09:48
+IMG-800273,TKT-100706,PROD-1232,product_image_00273.jpg,No,,No,Yes,Input: 110-240V,0.823,Approve Replacement,0.045,No,2024-06-07 13:25:55
+IMG-800274,TKT-100772,PROD-1711,product_image_00274.jpg,No,,No,No,,0.713,No Action Needed,0.026,Yes,2024-01-05 21:11:35
+IMG-800275,TKT-101780,PROD-1816,product_image_00275.jpg,No,,Yes,No,,0.979,Approve Replacement,0.037,No,2024-04-13 09:45:44
+IMG-800276,TKT-100489,PROD-1790,product_image_00276.jpg,No,,No,No,Made in China,0.859,No Action Needed,0.08,No,2024-06-17 21:40:40
+IMG-800277,TKT-100089,PROD-1232,product_image_00277.jpg,No,,Yes,No,,0.922,Approve Replacement,0.036,No,2024-01-02 16:36:05
+IMG-800278,TKT-101444,PROD-1652,product_image_00278.jpg,No,,No,No,Warranty: 12 months,0.86,No Action Needed,0.024,No,2024-01-10 12:43:58
+IMG-800279,TKT-101014,PROD-1739,product_image_00279.jpg,Yes,Dent,No,No,Component: Active Directory,0.778,Approve Replacement,0.103,No,2024-04-23 21:36:51
+IMG-800280,TKT-100679,PROD-1522,product_image_00280.jpg,No,,No,No,,0.952,No Action Needed,0.068,No,2024-05-01 13:32:38
+IMG-800281,TKT-100901,PROD-1522,product_image_00281.jpg,No,,No,No,Max Capacity: 5TB,0.866,No Action Needed,0.03,No,2024-05-05 22:09:11
+IMG-800282,TKT-100031,PROD-1057,product_image_00282.jpg,No,,No,No,Warranty: 12 months,0.668,No Action Needed,0.039,Yes,2024-05-29 23:57:30
+IMG-800283,TKT-100153,PROD-1711,product_image_00283.jpg,No,,No,No,,0.687,No Action Needed,0.072,Yes,2024-06-28 06:54:18
+IMG-800284,TKT-100542,PROD-1232,product_image_00284.jpg,No,,No,No,Made in China,0.766,No Action Needed,0.047,No,2024-06-13 18:41:00
+IMG-800285,TKT-101330,PROD-1522,product_image_00285.jpg,No,,No,No,,0.702,No Action Needed,0.018,Yes,2024-04-17 02:38:16
+IMG-800286,TKT-101745,PROD-1878,product_image_00286.jpg,No,,No,No,Part Number: PN-88421,0.653,No Action Needed,0.032,Yes,2024-01-05 13:47:46
+IMG-800287,TKT-101283,PROD-1711,product_image_00287.jpg,No,,No,No,,0.922,No Action Needed,0.028,No,2024-01-10 09:29:56
+IMG-800288,TKT-100073,PROD-1790,product_image_00288.jpg,No,,No,No,WARNING: Do not expose to moisture,0.771,No Action Needed,0.081,No,2024-06-12 13:15:01
+IMG-800289,TKT-100465,PROD-1522,product_image_00289.jpg,No,,No,No,Serial: SN-2024-001,0.654,No Action Needed,0.077,Yes,2024-04-30 04:16:19
+IMG-800290,TKT-101557,PROD-1522,product_image_00290.jpg,No,,No,No,WARNING: Do not expose to moisture,0.948,No Action Needed,0.1,No,2024-05-11 02:39:56
+IMG-800291,TKT-101850,PROD-1739,product_image_00291.jpg,No,,No,No,Model: NP-5000X,0.697,No Action Needed,0.07,Yes,2024-02-23 00:33:43
+IMG-800292,TKT-100600,PROD-1232,product_image_00292.jpg,No,,Yes,No,Warranty: 12 months,0.712,Approve Replacement,0.045,Yes,2024-01-17 07:42:46
+IMG-800293,TKT-100500,PROD-1878,product_image_00293.jpg,No,,No,No,Warranty: 12 months,0.685,No Action Needed,0.03,Yes,2024-05-11 10:12:07
+IMG-800294,TKT-100348,PROD-1057,product_image_00294.jpg,No,,No,No,Made in China,0.742,No Action Needed,0.084,Yes,2024-02-18 19:08:46
+IMG-800295,TKT-101269,PROD-1816,product_image_00295.jpg,Yes,Paint Chipping,Yes,No,,0.917,Approve Partial Refund,0.199,Yes,2024-01-19 16:02:55
+IMG-800296,TKT-100293,PROD-1816,product_image_00296.jpg,No,,No,No,WARNING: Do not expose to moisture,0.73,No Action Needed,0.043,Yes,2024-04-22 23:32:10
+IMG-800297,TKT-100941,PROD-1423,product_image_00297.jpg,No,,No,No,Max Capacity: 5TB,0.752,No Action Needed,0.026,No,2024-01-04 13:50:11
+IMG-800298,TKT-101845,PROD-1423,product_image_00298.jpg,No,,No,No,Warranty: 12 months,0.936,No Action Needed,0.045,No,2024-05-16 00:57:51
+IMG-800299,TKT-100151,PROD-1711,product_image_00299.jpg,No,,No,No,,0.706,No Action Needed,0.073,Yes,2024-04-03 01:46:37
+IMG-800300,TKT-101203,PROD-1423,product_image_00300.jpg,No,,No,No,Made in China,0.916,No Action Needed,0.015,No,2024-02-04 19:35:53
+IMG-800301,TKT-101413,PROD-1423,product_image_00301.jpg,No,,No,No,WARNING: Do not expose to moisture,0.923,No Action Needed,0.051,No,2024-01-05 07:16:41
+IMG-800302,TKT-100407,PROD-1652,product_image_00302.jpg,Yes,Paint Chipping,No,No,Made in China,0.799,Approve Partial Refund,0.194,Yes,2024-06-22 02:05:31
+IMG-800303,TKT-101171,PROD-1232,product_image_00303.jpg,No,,No,No,WARNING: Do not expose to moisture,0.975,No Action Needed,0.016,No,2024-04-17 10:24:41
+IMG-800304,TKT-100044,PROD-1652,product_image_00304.jpg,No,,No,No,Component: Active Directory,0.958,No Action Needed,0.032,No,2024-03-20 02:43:53
+IMG-800305,TKT-101771,PROD-1739,product_image_00305.jpg,No,,No,No,,0.94,No Action Needed,0.014,No,2024-03-22 05:11:21
+IMG-800306,TKT-101526,PROD-1711,product_image_00306.jpg,No,,No,No,,0.912,No Action Needed,0.018,No,2024-05-22 03:58:09
+IMG-800307,TKT-101849,PROD-1423,product_image_00307.jpg,No,,No,No,,0.95,No Action Needed,0.045,No,2024-06-02 00:42:19
+IMG-800308,TKT-100471,PROD-1790,product_image_00308.jpg,No,,No,No,,0.983,No Action Needed,0.023,No,2024-03-27 09:35:21
+IMG-800309,TKT-100448,PROD-1816,product_image_00309.jpg,No,,No,No,Warranty: 12 months,0.972,No Action Needed,0.097,No,2024-06-17 01:45:04
+IMG-800310,TKT-101286,PROD-1522,product_image_00310.jpg,No,,No,No,,0.939,No Action Needed,0.061,No,2024-03-21 20:56:55
+IMG-800311,TKT-101323,PROD-1739,product_image_00311.jpg,Yes,Shattered Glass,No,No,,0.673,Approve Refund,0.18,Yes,2024-01-17 18:39:29
+IMG-800312,TKT-100068,PROD-1790,product_image_00312.jpg,Yes,Burn Mark,No,No,,0.706,Approve Partial Refund,0.214,Yes,2024-03-06 18:13:53
+IMG-800313,TKT-100184,PROD-1423,product_image_00313.jpg,No,,No,No,Made in China,0.749,No Action Needed,0.081,Yes,2024-02-07 08:30:51
+IMG-800314,TKT-100359,PROD-1816,product_image_00314.jpg,No,,No,No,Input: 110-240V,0.819,No Action Needed,0.041,No,2024-01-21 03:33:39
+IMG-800315,TKT-101794,PROD-1232,product_image_00315.jpg,No,,No,No,WARNING: Do not expose to moisture,0.656,No Action Needed,0.021,Yes,2024-03-19 05:02:13
+IMG-800316,TKT-101700,PROD-1057,product_image_00316.jpg,No,,No,No,Max Capacity: 5TB,0.84,No Action Needed,0.078,No,2024-04-22 08:05:18
+IMG-800317,TKT-101981,PROD-1423,product_image_00317.jpg,No,,No,No,,0.746,No Action Needed,0.045,Yes,2024-01-06 17:49:26
+IMG-800318,TKT-100693,PROD-1522,product_image_00318.jpg,No,,No,No,Serial: SN-2024-001,0.914,No Action Needed,0.097,No,2024-01-12 16:56:41
+IMG-800319,TKT-100288,PROD-1816,product_image_00319.jpg,Yes,Rust,No,No,,0.744,Approve Replacement,0.164,Yes,2024-05-22 18:50:21
+IMG-800320,TKT-101647,PROD-1878,product_image_00320.jpg,No,,No,No,Made in China,0.92,No Action Needed,0.039,No,2024-05-10 03:05:16
+IMG-800321,TKT-100028,PROD-1423,product_image_00321.jpg,No,,No,No,Max Capacity: 5TB,0.698,No Action Needed,0.028,Yes,2024-01-08 09:16:20
+IMG-800322,TKT-100754,PROD-1423,product_image_00322.jpg,No,,No,No,Part Number: PN-88421,0.922,No Action Needed,0.097,No,2024-01-19 00:43:11
+IMG-800323,TKT-100221,PROD-1816,product_image_00323.jpg,Yes,Paint Chipping,No,No,Input: 110-240V,0.986,Approve Replacement,0.039,No,2024-06-06 15:41:21
+IMG-800324,TKT-100671,PROD-1790,product_image_00324.jpg,No,,No,No,Serial: SN-2024-001,0.705,No Action Needed,0.011,Yes,2024-01-25 15:23:46
+IMG-800325,TKT-101301,PROD-1711,product_image_00325.jpg,No,,No,No,,0.677,No Action Needed,0.076,Yes,2024-01-09 02:39:47
+IMG-800326,TKT-100618,PROD-1652,product_image_00326.jpg,No,,No,No,Model: NP-5000X,0.986,No Action Needed,0.091,No,2024-04-17 07:21:15
+IMG-800327,TKT-101937,PROD-1739,product_image_00327.jpg,No,,No,No,Max Capacity: 5TB,0.949,No Action Needed,0.057,No,2024-01-21 23:49:11
+IMG-800328,TKT-100237,PROD-1522,product_image_00328.jpg,Yes,Missing Component,No,No,,0.958,Approve Partial Refund,0.056,No,2024-03-15 23:24:06
+IMG-800329,TKT-100277,PROD-1652,product_image_00329.jpg,No,,No,No,Input: 110-240V,0.81,No Action Needed,0.098,No,2024-06-11 21:41:52
+IMG-800330,TKT-100858,PROD-1790,product_image_00330.jpg,No,,No,No,,0.883,No Action Needed,0.016,No,2024-06-15 21:10:29
+IMG-800331,TKT-100316,PROD-1652,product_image_00331.jpg,No,,No,No,Max Capacity: 5TB,0.745,No Action Needed,0.068,Yes,2024-01-04 17:34:38
+IMG-800332,TKT-101260,PROD-1652,product_image_00332.jpg,No,,No,Yes,,0.753,Approve Replacement,0.069,No,2024-05-21 15:21:07
+IMG-800333,TKT-100572,PROD-1739,product_image_00333.jpg,No,,No,No,MFG: 2024-01,0.876,No Action Needed,0.033,No,2024-05-13 20:15:54
+IMG-800334,TKT-100908,PROD-1711,product_image_00334.jpg,Yes,Missing Component,No,No,,0.779,Approve Replacement,0.102,No,2024-02-04 12:58:58
+IMG-800335,TKT-100203,PROD-1232,product_image_00335.jpg,No,,No,No,Part Number: PN-88421,0.664,No Action Needed,0.077,Yes,2024-06-02 09:35:18
+IMG-800336,TKT-100124,PROD-1652,product_image_00336.jpg,No,,No,No,Serial: SN-2024-001,0.931,No Action Needed,0.073,No,2024-01-28 01:24:35
+IMG-800337,TKT-101943,PROD-1711,product_image_00337.jpg,No,,No,No,MFG: 2024-01,0.864,No Action Needed,0.058,No,2024-01-19 14:29:02
+IMG-800338,TKT-101314,PROD-1790,product_image_00338.jpg,No,,No,No,,0.673,No Action Needed,0.034,Yes,2024-01-09 16:35:11
+IMG-800339,TKT-100103,PROD-1232,product_image_00339.jpg,No,,No,No,Warranty: 12 months,0.675,No Action Needed,0.03,Yes,2024-03-18 19:49:23
+IMG-800340,TKT-101611,PROD-1790,product_image_00340.jpg,Yes,Missing Component,No,No,Input: 110-240V,0.762,Approve Replacement,0.247,Yes,2024-01-16 09:48:12
+IMG-800341,TKT-100424,PROD-1790,product_image_00341.jpg,No,,No,No,MFG: 2024-01,0.741,No Action Needed,0.081,Yes,2024-05-28 14:01:40
+IMG-800342,TKT-100672,PROD-1057,product_image_00342.jpg,No,,No,No,,0.901,No Action Needed,0.057,No,2024-05-16 12:53:23
+IMG-800343,TKT-101220,PROD-1739,product_image_00343.jpg,No,,Yes,No,Warranty: 12 months,0.659,Approve Replacement,0.073,Yes,2024-06-16 01:49:41
+IMG-800344,TKT-100266,PROD-1878,product_image_00344.jpg,No,,No,No,Warranty: 12 months,0.953,No Action Needed,0.05,No,2024-01-21 17:12:24
+IMG-800345,TKT-100225,PROD-1739,product_image_00345.jpg,No,,No,No,Part Number: PN-88421,0.685,No Action Needed,0.045,Yes,2024-06-21 02:26:10
+IMG-800346,TKT-101617,PROD-1816,product_image_00346.jpg,No,,No,No,Model: NP-5000X,0.903,No Action Needed,0.056,No,2024-03-27 23:52:05
+IMG-800347,TKT-100356,PROD-1423,product_image_00347.jpg,Yes,Scratches,No,No,Made in China,0.811,Approve Replacement,0.044,No,2024-05-03 08:03:53
+IMG-800348,TKT-101077,PROD-1522,product_image_00348.jpg,No,,No,No,,0.717,No Action Needed,0.065,Yes,2024-03-24 19:49:04
+IMG-800349,TKT-100975,PROD-1711,product_image_00349.jpg,No,,Yes,Yes,,0.724,Approve Replacement,0.013,Yes,2024-05-03 04:38:44
+IMG-800350,TKT-101051,PROD-1790,product_image_00350.jpg,No,,No,No,Input: 110-240V,0.665,No Action Needed,0.035,Yes,2024-03-28 19:34:08
+IMG-800351,TKT-100453,PROD-1790,product_image_00351.jpg,No,,No,No,Input: 110-240V,0.823,No Action Needed,0.089,No,2024-05-20 06:10:07
+IMG-800352,TKT-100617,PROD-1711,product_image_00352.jpg,No,,No,No,Model: NP-5000X,0.743,No Action Needed,0.046,Yes,2024-04-17 02:16:50
+IMG-800353,TKT-100124,PROD-1711,product_image_00353.jpg,No,,No,No,,0.857,No Action Needed,0.038,No,2024-02-14 17:48:09
+IMG-800354,TKT-100873,PROD-1522,product_image_00354.jpg,No,,No,Yes,Max Capacity: 5TB,0.866,Approve Replacement,0.015,No,2024-06-23 18:24:22
+IMG-800355,TKT-100150,PROD-1522,product_image_00355.jpg,Yes,Burn Mark,No,No,Serial: SN-2024-001,0.876,Approve Partial Refund,0.169,Yes,2024-05-26 09:35:42
+IMG-800356,TKT-100258,PROD-1423,product_image_00356.jpg,No,,No,No,Component: Active Directory,0.677,No Action Needed,0.042,Yes,2024-06-15 19:50:25
+IMG-800357,TKT-101123,PROD-1232,product_image_00357.jpg,No,,No,No,Component: Active Directory,0.852,No Action Needed,0.011,No,2024-02-20 21:21:57
+IMG-800358,TKT-101086,PROD-1423,product_image_00358.jpg,Yes,Paint Chipping,No,No,Made in China,0.867,Approve Partial Refund,0.137,No,2024-05-10 01:40:31
+IMG-800359,TKT-100203,PROD-1522,product_image_00359.jpg,No,,No,No,,0.831,No Action Needed,0.05,No,2024-02-24 18:45:34
+IMG-800360,TKT-101333,PROD-1878,product_image_00360.jpg,Yes,Missing Component,No,No,MFG: 2024-01,0.767,Approve Partial Refund,0.167,Yes,2024-01-28 02:55:16
+IMG-800361,TKT-100847,PROD-1232,product_image_00361.jpg,No,,No,No,,0.744,No Action Needed,0.038,Yes,2024-05-01 17:21:33
+IMG-800362,TKT-100816,PROD-1652,product_image_00362.jpg,No,,No,No,,0.942,No Action Needed,0.092,No,2024-03-03 22:51:19
+IMG-800363,TKT-100640,PROD-1652,product_image_00363.jpg,No,,Yes,No,WARNING: Do not expose to moisture,0.659,Approve Replacement,0.045,Yes,2024-05-31 12:42:14
+IMG-800364,TKT-100766,PROD-1057,product_image_00364.jpg,No,,No,No,Max Capacity: 5TB,0.665,No Action Needed,0.079,Yes,2024-02-16 12:16:19
+IMG-800365,TKT-100137,PROD-1522,product_image_00365.jpg,No,,No,No,,0.652,No Action Needed,0.045,Yes,2024-05-05 13:11:38
+IMG-800366,TKT-100190,PROD-1652,product_image_00366.jpg,No,,No,No,Part Number: PN-88421,0.774,No Action Needed,0.03,No,2024-03-05 04:50:38
+IMG-800367,TKT-101662,PROD-1057,product_image_00367.jpg,No,,No,No,Component: Active Directory,0.659,No Action Needed,0.055,Yes,2024-03-15 19:29:48
+IMG-800368,TKT-101959,PROD-1878,product_image_00368.jpg,No,,Yes,Yes,Serial: SN-2024-001,0.782,Approve Replacement,0.024,No,2024-02-19 05:11:33
+IMG-800369,TKT-100841,PROD-1232,product_image_00369.jpg,No,,No,No,,0.956,No Action Needed,0.02,No,2024-06-18 20:30:51
+IMG-800370,TKT-101927,PROD-1652,product_image_00370.jpg,No,,No,No,,0.931,No Action Needed,0.099,No,2024-03-17 05:42:18
+IMG-800371,TKT-101476,PROD-1739,product_image_00371.jpg,No,,No,No,,0.766,No Action Needed,0.059,No,2024-06-13 04:24:08
+IMG-800372,TKT-101229,PROD-1423,product_image_00372.jpg,No,,No,No,Component: Active Directory,0.933,No Action Needed,0.05,No,2024-02-11 02:39:29
+IMG-800373,TKT-101039,PROD-1816,product_image_00373.jpg,No,,No,No,Max Capacity: 5TB,0.766,No Action Needed,0.034,No,2024-02-13 00:02:18
+IMG-800374,TKT-100459,PROD-1522,product_image_00374.jpg,No,,No,No,Input: 110-240V,0.697,No Action Needed,0.05,Yes,2024-04-20 17:52:33
+IMG-800375,TKT-100752,PROD-1522,product_image_00375.jpg,No,,No,No,,0.949,No Action Needed,0.066,No,2024-05-31 23:32:34
+IMG-800376,TKT-101175,PROD-1816,product_image_00376.jpg,No,,No,Yes,,0.812,Approve Replacement,0.059,No,2024-05-26 21:02:54
+IMG-800377,TKT-101730,PROD-1878,product_image_00377.jpg,No,,No,No,,0.831,No Action Needed,0.088,No,2024-05-28 12:26:29
+IMG-800378,TKT-101676,PROD-1790,product_image_00378.jpg,No,,No,No,Input: 110-240V,0.744,No Action Needed,0.089,Yes,2024-01-12 03:51:33
+IMG-800379,TKT-100053,PROD-1790,product_image_00379.jpg,No,,No,No,,0.814,No Action Needed,0.088,No,2024-04-11 16:22:34
+IMG-800380,TKT-101698,PROD-1423,product_image_00380.jpg,No,,No,No,WARNING: Do not expose to moisture,0.824,No Action Needed,0.054,No,2024-06-27 15:20:20
+IMG-800381,TKT-101439,PROD-1423,product_image_00381.jpg,No,,No,No,,0.91,No Action Needed,0.062,No,2024-04-18 14:50:10
+IMG-800382,TKT-100718,PROD-1739,product_image_00382.jpg,No,,No,No,Warranty: 12 months,0.799,No Action Needed,0.086,No,2024-04-05 22:13:38
+IMG-800383,TKT-101159,PROD-1652,product_image_00383.jpg,No,,No,Yes,Model: NP-5000X,0.98,Approve Replacement,0.03,No,2024-04-23 07:31:43
+IMG-800384,TKT-100187,PROD-1878,product_image_00384.jpg,No,,Yes,No,Made in China,0.829,Approve Replacement,0.067,No,2024-01-21 14:12:31
+IMG-800385,TKT-100929,PROD-1232,product_image_00385.jpg,No,,No,No,WARNING: Do not expose to moisture,0.83,No Action Needed,0.081,No,2024-06-11 21:37:22
+IMG-800386,TKT-101477,PROD-1232,product_image_00386.jpg,No,,No,No,,0.651,No Action Needed,0.014,Yes,2024-02-05 09:06:32
+IMG-800387,TKT-101162,PROD-1790,product_image_00387.jpg,No,,Yes,Yes,Model: NP-5000X,0.969,Approve Replacement,0.084,No,2024-05-06 05:35:31
+IMG-800388,TKT-100318,PROD-1057,product_image_00388.jpg,No,,No,No,,0.896,No Action Needed,0.035,No,2024-01-04 02:23:25
+IMG-800389,TKT-100101,PROD-1522,product_image_00389.jpg,Yes,Shattered Glass,No,No,Made in China,0.865,Approve Refund,0.148,No,2024-02-03 18:47:08
+IMG-800390,TKT-100994,PROD-1790,product_image_00390.jpg,No,,No,No,WARNING: Do not expose to moisture,0.676,No Action Needed,0.055,Yes,2024-05-03 22:34:13
+IMG-800391,TKT-100441,PROD-1878,product_image_00391.jpg,Yes,Broken Screen,Yes,No,Serial: SN-2024-001,0.75,Approve Refund,0.066,No,2024-02-08 19:01:27
+IMG-800392,TKT-100580,PROD-1790,product_image_00392.jpg,No,,No,No,WARNING: Do not expose to moisture,0.657,No Action Needed,0.062,Yes,2024-02-08 18:51:44
+IMG-800393,TKT-100093,PROD-1816,product_image_00393.jpg,No,,No,Yes,Component: Active Directory,0.723,Approve Replacement,0.047,Yes,2024-01-25 08:32:30
+IMG-800394,TKT-100112,PROD-1739,product_image_00394.jpg,No,,No,No,MFG: 2024-01,0.849,No Action Needed,0.066,No,2024-02-21 07:00:35
+IMG-800395,TKT-101571,PROD-1057,product_image_00395.jpg,No,,No,No,,0.93,No Action Needed,0.082,No,2024-01-22 23:23:47
+IMG-800396,TKT-100592,PROD-1232,product_image_00396.jpg,No,,No,No,Max Capacity: 5TB,0.819,No Action Needed,0.036,No,2024-03-22 20:24:23
+IMG-800397,TKT-101529,PROD-1652,product_image_00397.jpg,No,,Yes,No,Made in China,0.758,Approve Replacement,0.01,No,2024-04-02 08:51:37
+IMG-800398,TKT-101090,PROD-1816,product_image_00398.jpg,No,,No,No,Part Number: PN-88421,0.848,No Action Needed,0.052,No,2024-05-13 22:26:51
+IMG-800399,TKT-100147,PROD-1652,product_image_00399.jpg,No,,No,No,,0.772,No Action Needed,0.034,No,2024-06-03 01:36:33
+IMG-800400,TKT-100086,PROD-1652,product_image_00400.jpg,No,,No,No,Serial: SN-2024-001,0.797,No Action Needed,0.092,No,2024-04-21 13:31:35
+IMG-800401,TKT-101765,PROD-1232,product_image_00401.jpg,No,,No,No,Component: Active Directory,0.818,No Action Needed,0.045,No,2024-04-29 06:31:18
+IMG-800402,TKT-100828,PROD-1652,product_image_00402.jpg,Yes,Shattered Glass,No,No,Model: NP-5000X,0.877,Approve Refund,0.242,Yes,2024-04-17 15:00:40
+IMG-800403,TKT-101978,PROD-1232,product_image_00403.jpg,No,,No,No,Component: Active Directory,0.869,No Action Needed,0.014,No,2024-04-10 06:06:45
+IMG-800404,TKT-100942,PROD-1232,product_image_00404.jpg,No,,No,No,Serial: SN-2024-001,0.806,No Action Needed,0.029,No,2024-04-14 20:43:39
+IMG-800405,TKT-100498,PROD-1652,product_image_00405.jpg,No,,No,No,Input: 110-240V,0.791,No Action Needed,0.075,No,2024-05-16 05:46:48
+IMG-800406,TKT-100161,PROD-1652,product_image_00406.jpg,No,,No,No,,0.921,No Action Needed,0.078,No,2024-06-10 23:51:36
+IMG-800407,TKT-101527,PROD-1232,product_image_00407.jpg,No,,No,No,Warranty: 12 months,0.757,No Action Needed,0.068,No,2024-05-28 04:42:03
+IMG-800408,TKT-100156,PROD-1878,product_image_00408.jpg,No,,No,No,Input: 110-240V,0.748,No Action Needed,0.043,Yes,2024-02-26 07:24:32
+IMG-800409,TKT-101044,PROD-1816,product_image_00409.jpg,Yes,Burn Mark,No,No,Warranty: 12 months,0.934,Approve Replacement,0.101,No,2024-01-24 10:10:09
+IMG-800410,TKT-100483,PROD-1522,product_image_00410.jpg,Yes,Dent,No,No,Warranty: 12 months,0.818,Approve Replacement,0.137,No,2024-04-25 06:41:27
+IMG-800411,TKT-101233,PROD-1057,product_image_00411.jpg,No,,No,Yes,,0.785,Approve Replacement,0.079,No,2024-04-28 05:26:51
+IMG-800412,TKT-101342,PROD-1522,product_image_00412.jpg,No,,No,No,Max Capacity: 5TB,0.941,No Action Needed,0.062,No,2024-06-18 19:49:14
+IMG-800413,TKT-100950,PROD-1790,product_image_00413.jpg,No,,No,No,,0.798,No Action Needed,0.04,No,2024-06-01 11:23:12
+IMG-800414,TKT-100919,PROD-1790,product_image_00414.jpg,No,,No,No,Component: Active Directory,0.844,No Action Needed,0.061,No,2024-04-26 05:49:23
+IMG-800415,TKT-100661,PROD-1232,product_image_00415.jpg,No,,No,No,Serial: SN-2024-001,0.836,No Action Needed,0.085,No,2024-02-14 17:22:02
+IMG-800416,TKT-100960,PROD-1711,product_image_00416.jpg,No,,Yes,No,WARNING: Do not expose to moisture,0.734,Approve Replacement,0.054,Yes,2024-03-19 13:37:47
+IMG-800417,TKT-101211,PROD-1739,product_image_00417.jpg,Yes,Burn Mark,No,No,WARNING: Do not expose to moisture,0.917,Approve Partial Refund,0.141,No,2024-05-22 17:00:15
+IMG-800418,TKT-100945,PROD-1711,product_image_00418.jpg,Yes,Scratches,No,No,WARNING: Do not expose to moisture,0.717,Approve Replacement,0.159,Yes,2024-05-17 15:29:11
+IMG-800419,TKT-100157,PROD-1522,product_image_00419.jpg,No,,No,No,Input: 110-240V,0.738,No Action Needed,0.041,Yes,2024-02-21 09:09:43
+IMG-800420,TKT-100787,PROD-1711,product_image_00420.jpg,No,,No,No,Model: NP-5000X,0.885,No Action Needed,0.072,No,2024-04-23 01:38:59
+IMG-800421,TKT-100921,PROD-1790,product_image_00421.jpg,No,,Yes,No,Part Number: PN-88421,0.753,Approve Replacement,0.078,No,2024-03-01 06:00:25
+IMG-800422,TKT-101239,PROD-1711,product_image_00422.jpg,No,,Yes,No,Model: NP-5000X,0.924,Approve Replacement,0.051,No,2024-02-15 18:44:28
+IMG-800423,TKT-100922,PROD-1522,product_image_00423.jpg,No,,No,No,,0.814,No Action Needed,0.091,No,2024-04-17 06:44:32
+IMG-800424,TKT-101714,PROD-1232,product_image_00424.jpg,No,,No,No,,0.732,No Action Needed,0.096,Yes,2024-01-16 03:34:27
+IMG-800425,TKT-100172,PROD-1878,product_image_00425.jpg,No,,No,No,Model: NP-5000X,0.984,No Action Needed,0.061,No,2024-05-18 11:28:36
+IMG-800426,TKT-100507,PROD-1711,product_image_00426.jpg,No,,No,No,,0.862,No Action Needed,0.098,No,2024-01-04 18:22:35
+IMG-800427,TKT-101073,PROD-1878,product_image_00427.jpg,No,,No,No,Part Number: PN-88421,0.976,No Action Needed,0.057,No,2024-06-10 19:41:42
+IMG-800428,TKT-100763,PROD-1423,product_image_00428.jpg,No,,No,No,Part Number: PN-88421,0.755,No Action Needed,0.031,No,2024-06-19 05:59:02
+IMG-800429,TKT-101390,PROD-1790,product_image_00429.jpg,No,,No,No,Part Number: PN-88421,0.941,No Action Needed,0.064,No,2024-06-13 06:16:41
+IMG-800430,TKT-100134,PROD-1232,product_image_00430.jpg,No,,No,No,Made in China,0.924,No Action Needed,0.014,No,2024-06-18 17:33:47
+IMG-800431,TKT-100581,PROD-1423,product_image_00431.jpg,No,,No,No,,0.736,No Action Needed,0.032,Yes,2024-04-02 23:51:07
+IMG-800432,TKT-101344,PROD-1790,product_image_00432.jpg,No,,No,No,,0.785,No Action Needed,0.093,No,2024-05-08 23:47:43
+IMG-800433,TKT-100682,PROD-1522,product_image_00433.jpg,No,,No,No,Warranty: 12 months,0.681,No Action Needed,0.013,Yes,2024-04-08 01:01:36
+IMG-800434,TKT-101877,PROD-1232,product_image_00434.jpg,No,,No,No,Made in China,0.987,No Action Needed,0.045,No,2024-03-31 18:30:41
+IMG-800435,TKT-100264,PROD-1790,product_image_00435.jpg,No,,No,No,,0.962,No Action Needed,0.019,No,2024-01-10 03:30:02
+IMG-800436,TKT-100173,PROD-1423,product_image_00436.jpg,No,,Yes,Yes,Part Number: PN-88421,0.71,Approve Replacement,0.088,Yes,2024-06-17 23:31:40
+IMG-800437,TKT-101665,PROD-1057,product_image_00437.jpg,No,,No,No,Input: 110-240V,0.795,No Action Needed,0.039,No,2024-04-24 18:31:08
+IMG-800438,TKT-100191,PROD-1652,product_image_00438.jpg,No,,No,No,Model: NP-5000X,0.953,No Action Needed,0.048,No,2024-05-11 12:09:58
+IMG-800439,TKT-100742,PROD-1423,product_image_00439.jpg,No,,No,No,MFG: 2024-01,0.851,No Action Needed,0.027,No,2024-05-26 22:55:34
+IMG-800440,TKT-100699,PROD-1711,product_image_00440.jpg,Yes,Missing Component,No,No,Warranty: 12 months,0.75,Approve Partial Refund,0.12,No,2024-04-20 12:31:35
+IMG-800441,TKT-100317,PROD-1522,product_image_00441.jpg,Yes,Shattered Glass,No,No,,0.77,Approve Refund,0.208,Yes,2024-02-03 07:30:56
+IMG-800442,TKT-100207,PROD-1878,product_image_00442.jpg,No,,No,No,,0.663,No Action Needed,0.022,Yes,2024-03-02 10:25:44
+IMG-800443,TKT-101710,PROD-1878,product_image_00443.jpg,Yes,Scratches,No,No,Component: Active Directory,0.669,Approve Partial Refund,0.064,Yes,2024-06-14 23:37:56
+IMG-800444,TKT-100268,PROD-1790,product_image_00444.jpg,No,,No,Yes,Warranty: 12 months,0.898,Approve Replacement,0.097,No,2024-02-07 05:41:06
+IMG-800445,TKT-100370,PROD-1790,product_image_00445.jpg,No,,No,No,,0.794,No Action Needed,0.037,No,2024-04-10 06:24:24
+IMG-800446,TKT-100339,PROD-1711,product_image_00446.jpg,No,,No,No,Part Number: PN-88421,0.765,No Action Needed,0.1,No,2024-02-08 07:32:07
+IMG-800447,TKT-101385,PROD-1816,product_image_00447.jpg,No,,No,No,,0.779,No Action Needed,0.047,No,2024-06-18 00:54:33
+IMG-800448,TKT-101250,PROD-1423,product_image_00448.jpg,Yes,Paint Chipping,No,No,MFG: 2024-01,0.741,Approve Partial Refund,0.126,Yes,2024-01-17 21:55:58
+IMG-800449,TKT-100633,PROD-1711,product_image_00449.jpg,No,,No,No,,0.825,No Action Needed,0.056,No,2024-02-05 09:24:32
+IMG-800450,TKT-100397,PROD-1232,product_image_00450.jpg,No,,No,No,Component: Active Directory,0.893,No Action Needed,0.052,No,2024-01-01 18:19:02
+IMG-800451,TKT-100902,PROD-1711,product_image_00451.jpg,No,,No,No,,0.66,No Action Needed,0.015,Yes,2024-03-13 06:00:44
+IMG-800452,TKT-101593,PROD-1652,product_image_00452.jpg,No,,No,No,Made in China,0.69,No Action Needed,0.079,Yes,2024-04-21 00:02:54
+IMG-800453,TKT-101978,PROD-1057,product_image_00453.jpg,No,,No,No,,0.814,No Action Needed,0.056,No,2024-04-05 09:25:19
+IMG-800454,TKT-101640,PROD-1790,product_image_00454.jpg,No,,Yes,No,WARNING: Do not expose to moisture,0.692,Approve Replacement,0.082,Yes,2024-02-02 14:00:45
+IMG-800455,TKT-100106,PROD-1711,product_image_00455.jpg,No,,No,No,,0.82,No Action Needed,0.074,No,2024-06-25 02:56:18
+IMG-800456,TKT-101135,PROD-1522,product_image_00456.jpg,No,,No,No,,0.69,No Action Needed,0.097,Yes,2024-05-26 09:52:11
+IMG-800457,TKT-101056,PROD-1522,product_image_00457.jpg,No,,No,No,Warranty: 12 months,0.88,No Action Needed,0.066,No,2024-01-02 18:01:27
+IMG-800458,TKT-100558,PROD-1711,product_image_00458.jpg,No,,No,No,,0.756,No Action Needed,0.094,No,2024-04-23 06:45:35
+IMG-800459,TKT-100301,PROD-1652,product_image_00459.jpg,No,,No,No,MFG: 2024-01,0.705,No Action Needed,0.027,Yes,2024-01-12 05:26:21
+IMG-800460,TKT-101672,PROD-1711,product_image_00460.jpg,No,,No,No,,0.968,No Action Needed,0.049,No,2024-06-04 20:08:45
+IMG-800461,TKT-101905,PROD-1739,product_image_00461.jpg,No,,No,No,Made in China,0.679,No Action Needed,0.04,Yes,2024-05-02 07:14:09
+IMG-800462,TKT-101028,PROD-1232,product_image_00462.jpg,No,,No,No,Serial: SN-2024-001,0.917,No Action Needed,0.076,No,2024-01-14 06:22:11
+IMG-800463,TKT-100767,PROD-1816,product_image_00463.jpg,No,,No,No,Serial: SN-2024-001,0.983,No Action Needed,0.016,No,2024-06-05 15:21:52
+IMG-800464,TKT-101718,PROD-1232,product_image_00464.jpg,Yes,Dent,No,No,WARNING: Do not expose to moisture,0.839,Approve Replacement,0.15,No,2024-06-25 07:50:30
+IMG-800465,TKT-101878,PROD-1711,product_image_00465.jpg,No,,No,No,Warranty: 12 months,0.741,No Action Needed,0.036,Yes,2024-03-14 01:08:37
+IMG-800466,TKT-101554,PROD-1711,product_image_00466.jpg,No,,No,No,Model: NP-5000X,0.965,No Action Needed,0.016,No,2024-02-10 17:56:59
+IMG-800467,TKT-101855,PROD-1522,product_image_00467.jpg,No,,No,No,MFG: 2024-01,0.868,No Action Needed,0.073,No,2024-05-13 09:35:10
+IMG-800468,TKT-101710,PROD-1057,product_image_00468.jpg,No,,No,No,Component: Active Directory,0.848,No Action Needed,0.057,No,2024-02-28 14:21:47
+IMG-800469,TKT-101080,PROD-1652,product_image_00469.jpg,Yes,Broken Screen,No,No,,0.803,Approve Refund,0.157,Yes,2024-02-28 00:49:54
+IMG-800470,TKT-100486,PROD-1423,product_image_00470.jpg,No,,No,No,MFG: 2024-01,0.888,No Action Needed,0.071,No,2024-01-28 17:28:32
+IMG-800471,TKT-100859,PROD-1790,product_image_00471.jpg,Yes,Paint Chipping,No,No,Max Capacity: 5TB,0.803,Approve Partial Refund,0.106,No,2024-02-15 03:35:05
+IMG-800472,TKT-101222,PROD-1878,product_image_00472.jpg,No,,No,No,Input: 110-240V,0.819,No Action Needed,0.077,No,2024-06-26 05:31:14
+IMG-800473,TKT-101177,PROD-1816,product_image_00473.jpg,No,,No,No,,0.943,No Action Needed,0.084,No,2024-05-02 19:01:38
+IMG-800474,TKT-100596,PROD-1652,product_image_00474.jpg,No,,No,No,Part Number: PN-88421,0.732,No Action Needed,0.074,Yes,2024-06-16 02:51:18
+IMG-800475,TKT-100492,PROD-1790,product_image_00475.jpg,No,,No,No,Serial: SN-2024-001,0.655,No Action Needed,0.032,Yes,2024-04-19 01:23:59
+IMG-800476,TKT-101072,PROD-1232,product_image_00476.jpg,No,,No,No,Input: 110-240V,0.723,No Action Needed,0.064,Yes,2024-01-16 03:30:25
+IMG-800477,TKT-101114,PROD-1878,product_image_00477.jpg,No,,No,No,,0.78,No Action Needed,0.054,No,2024-03-03 04:08:44
+IMG-800478,TKT-101039,PROD-1878,product_image_00478.jpg,No,,No,No,Max Capacity: 5TB,0.736,No Action Needed,0.099,Yes,2024-01-08 09:17:38
+IMG-800479,TKT-100089,PROD-1652,product_image_00479.jpg,No,,No,No,,0.922,No Action Needed,0.04,No,2024-01-28 05:21:36
+IMG-800480,TKT-100519,PROD-1739,product_image_00480.jpg,No,,No,No,Serial: SN-2024-001,0.804,No Action Needed,0.067,No,2024-04-16 17:40:10
+IMG-800481,TKT-100706,PROD-1816,product_image_00481.jpg,No,,No,No,,0.871,No Action Needed,0.094,No,2024-04-01 20:20:33
+IMG-800482,TKT-101286,PROD-1522,product_image_00482.jpg,No,,No,No,,0.657,No Action Needed,0.037,Yes,2024-05-14 15:02:02
+IMG-800483,TKT-101505,PROD-1232,product_image_00483.jpg,No,,No,No,Part Number: PN-88421,0.91,No Action Needed,0.047,No,2024-04-30 15:45:04
+IMG-800484,TKT-101118,PROD-1232,product_image_00484.jpg,No,,No,No,,0.917,No Action Needed,0.095,No,2024-04-18 13:10:06
+IMG-800485,TKT-100358,PROD-1711,product_image_00485.jpg,No,,No,No,,0.755,No Action Needed,0.032,No,2024-02-25 05:53:45
+IMG-800486,TKT-100980,PROD-1057,product_image_00486.jpg,No,,No,No,,0.932,No Action Needed,0.081,No,2024-02-24 00:43:11
+IMG-800487,TKT-100129,PROD-1711,product_image_00487.jpg,No,,No,No,MFG: 2024-01,0.777,No Action Needed,0.034,No,2024-03-20 08:33:36
+IMG-800488,TKT-100089,PROD-1816,product_image_00488.jpg,No,,No,No,,0.932,No Action Needed,0.041,No,2024-06-17 09:07:34
+IMG-800489,TKT-100646,PROD-1423,product_image_00489.jpg,No,,No,No,Input: 110-240V,0.799,No Action Needed,0.065,No,2024-01-29 00:28:20
+IMG-800490,TKT-100969,PROD-1423,product_image_00490.jpg,No,,No,No,MFG: 2024-01,0.816,No Action Needed,0.049,No,2024-04-13 11:33:25
+IMG-800491,TKT-100585,PROD-1232,product_image_00491.jpg,No,,No,No,,0.767,No Action Needed,0.047,No,2024-06-08 20:10:17
+IMG-800492,TKT-100097,PROD-1232,product_image_00492.jpg,No,,No,No,Part Number: PN-88421,0.848,No Action Needed,0.021,No,2024-01-28 19:12:46
+IMG-800493,TKT-100894,PROD-1652,product_image_00493.jpg,No,,No,No,,0.976,No Action Needed,0.065,No,2024-05-16 04:18:54
+IMG-800494,TKT-101832,PROD-1652,product_image_00494.jpg,No,,No,No,Warranty: 12 months,0.79,No Action Needed,0.078,No,2024-06-05 08:20:49
+IMG-800495,TKT-101016,PROD-1711,product_image_00495.jpg,No,,No,No,Input: 110-240V,0.831,No Action Needed,0.02,No,2024-06-25 08:01:56
+IMG-800496,TKT-100546,PROD-1522,product_image_00496.jpg,Yes,Rust,No,No,Component: Active Directory,0.885,Approve Replacement,0.104,No,2024-02-18 04:23:30
+IMG-800497,TKT-101684,PROD-1057,product_image_00497.jpg,No,,No,No,Part Number: PN-88421,0.656,No Action Needed,0.081,Yes,2024-01-25 14:09:00
+IMG-800498,TKT-100210,PROD-1522,product_image_00498.jpg,No,,No,No,WARNING: Do not expose to moisture,0.893,No Action Needed,0.089,No,2024-02-23 11:40:56
+IMG-800499,TKT-100627,PROD-1711,product_image_00499.jpg,No,,No,No,Made in China,0.937,No Action Needed,0.054,No,2024-06-27 20:05:09
+IMG-800500,TKT-100341,PROD-1711,product_image_00500.jpg,No,,No,No,Model: NP-5000X,0.941,No Action Needed,0.089,No,2024-05-10 01:10:34
+IMG-800501,TKT-101488,PROD-1232,product_image_00501.jpg,Yes,Water Damage,No,No,,0.957,Approve Replacement,0.026,No,2024-01-22 14:21:57
+IMG-800502,TKT-100562,PROD-1739,product_image_00502.jpg,No,,No,No,Made in China,0.673,No Action Needed,0.068,Yes,2024-06-21 10:15:45
+IMG-800503,TKT-100744,PROD-1878,product_image_00503.jpg,No,,No,No,,0.989,No Action Needed,0.06,No,2024-03-07 22:08:18
+IMG-800504,TKT-101391,PROD-1057,product_image_00504.jpg,Yes,Scratches,No,No,Component: Active Directory,0.89,Approve Replacement,0.099,No,2024-03-15 02:13:46
+IMG-800505,TKT-101388,PROD-1711,product_image_00505.jpg,No,,No,No,Serial: SN-2024-001,0.777,No Action Needed,0.067,No,2024-03-01 12:22:15
+IMG-800506,TKT-100483,PROD-1232,product_image_00506.jpg,No,,Yes,No,Component: Active Directory,0.848,Approve Replacement,0.08,No,2024-06-21 16:26:37
+IMG-800507,TKT-100066,PROD-1790,product_image_00507.jpg,No,,No,No,Max Capacity: 5TB,0.878,No Action Needed,0.066,No,2024-01-29 09:58:51
+IMG-800508,TKT-101943,PROD-1232,product_image_00508.jpg,No,,No,No,Serial: SN-2024-001,0.959,No Action Needed,0.078,No,2024-05-10 22:37:51
+IMG-800509,TKT-101175,PROD-1057,product_image_00509.jpg,No,,No,No,Made in China,0.908,No Action Needed,0.038,No,2024-01-13 10:52:58
+IMG-800510,TKT-100643,PROD-1423,product_image_00510.jpg,No,,No,No,Serial: SN-2024-001,0.732,No Action Needed,0.029,Yes,2024-04-03 21:15:09
+IMG-800511,TKT-100053,PROD-1057,product_image_00511.jpg,No,,No,No,Made in China,0.676,No Action Needed,0.073,Yes,2024-05-19 13:45:22
+IMG-800512,TKT-101870,PROD-1878,product_image_00512.jpg,No,,No,No,WARNING: Do not expose to moisture,0.742,No Action Needed,0.072,Yes,2024-06-14 03:23:46
+IMG-800513,TKT-101441,PROD-1711,product_image_00513.jpg,No,,No,No,Component: Active Directory,0.715,No Action Needed,0.073,Yes,2024-01-13 18:27:38
+IMG-800514,TKT-100584,PROD-1711,product_image_00514.jpg,No,,No,No,Warranty: 12 months,0.927,No Action Needed,0.08,No,2024-01-23 10:28:21
+IMG-800515,TKT-101746,PROD-1522,product_image_00515.jpg,No,,No,No,Max Capacity: 5TB,0.701,No Action Needed,0.03,Yes,2024-06-13 18:30:29
+IMG-800516,TKT-100179,PROD-1232,product_image_00516.jpg,No,,No,No,Serial: SN-2024-001,0.864,No Action Needed,0.087,No,2024-06-24 00:35:03
+IMG-800517,TKT-101126,PROD-1878,product_image_00517.jpg,No,,No,No,WARNING: Do not expose to moisture,0.798,No Action Needed,0.07,No,2024-05-25 22:32:39
+IMG-800518,TKT-101743,PROD-1057,product_image_00518.jpg,No,,No,No,,0.682,No Action Needed,0.1,Yes,2024-02-12 09:22:04
+IMG-800519,TKT-101899,PROD-1057,product_image_00519.jpg,No,,No,No,,0.989,No Action Needed,0.032,No,2024-05-22 16:53:35
+IMG-800520,TKT-101041,PROD-1816,product_image_00520.jpg,No,,No,Yes,MFG: 2024-01,0.773,Approve Replacement,0.081,No,2024-06-06 03:58:54
+IMG-800521,TKT-101622,PROD-1057,product_image_00521.jpg,Yes,Missing Component,No,Yes,,0.656,Approve Partial Refund,0.179,Yes,2024-04-09 18:06:46
+IMG-800522,TKT-100053,PROD-1232,product_image_00522.jpg,No,,No,No,Part Number: PN-88421,0.862,No Action Needed,0.088,No,2024-05-17 21:11:52
+IMG-800523,TKT-100957,PROD-1878,product_image_00523.jpg,Yes,Dent,No,No,Serial: SN-2024-001,0.88,Approve Replacement,0.149,No,2024-02-17 23:22:58
+IMG-800524,TKT-100134,PROD-1423,product_image_00524.jpg,No,,No,No,Max Capacity: 5TB,0.86,No Action Needed,0.067,No,2024-05-12 06:09:24
+IMG-800525,TKT-101076,PROD-1652,product_image_00525.jpg,No,,No,No,,0.893,No Action Needed,0.063,No,2024-02-01 08:35:08
+IMG-800526,TKT-101686,PROD-1790,product_image_00526.jpg,No,,No,No,Part Number: PN-88421,0.97,No Action Needed,0.025,No,2024-05-12 10:03:02
+IMG-800527,TKT-101315,PROD-1522,product_image_00527.jpg,No,,No,No,Input: 110-240V,0.744,No Action Needed,0.024,Yes,2024-03-04 20:08:38
+IMG-800528,TKT-100705,PROD-1057,product_image_00528.jpg,No,,No,No,,0.805,No Action Needed,0.07,No,2024-04-02 16:37:01
+IMG-800529,TKT-101597,PROD-1878,product_image_00529.jpg,No,,Yes,No,Warranty: 12 months,0.857,Approve Replacement,0.073,No,2024-01-12 09:28:07
+IMG-800530,TKT-101572,PROD-1057,product_image_00530.jpg,No,,No,No,Model: NP-5000X,0.816,No Action Needed,0.046,No,2024-03-06 07:03:00
+IMG-800531,TKT-101702,PROD-1522,product_image_00531.jpg,No,,No,No,WARNING: Do not expose to moisture,0.902,No Action Needed,0.019,No,2024-02-12 21:22:29
+IMG-800532,TKT-100337,PROD-1057,product_image_00532.jpg,No,,Yes,No,MFG: 2024-01,0.961,Approve Replacement,0.065,No,2024-05-23 07:05:17
+IMG-800533,TKT-100708,PROD-1878,product_image_00533.jpg,No,,No,No,,0.951,No Action Needed,0.028,No,2024-03-28 00:55:27
+IMG-800534,TKT-101732,PROD-1522,product_image_00534.jpg,No,,No,Yes,Input: 110-240V,0.955,Approve Replacement,0.066,No,2024-04-28 04:12:40
+IMG-800535,TKT-100562,PROD-1057,product_image_00535.jpg,No,,No,No,Component: Active Directory,0.764,No Action Needed,0.016,No,2024-04-28 21:52:48
+IMG-800536,TKT-101092,PROD-1522,product_image_00536.jpg,No,,No,No,Warranty: 12 months,0.838,No Action Needed,0.081,No,2024-03-11 09:46:19
+IMG-800537,TKT-101212,PROD-1790,product_image_00537.jpg,No,,No,No,Component: Active Directory,0.97,No Action Needed,0.017,No,2024-01-15 05:25:39
+IMG-800538,TKT-101475,PROD-1790,product_image_00538.jpg,No,,No,No,Component: Active Directory,0.8,No Action Needed,0.035,No,2024-04-13 07:04:39
+IMG-800539,TKT-100084,PROD-1739,product_image_00539.jpg,No,,Yes,No,Component: Active Directory,0.774,Approve Replacement,0.042,No,2024-01-13 04:32:31
+IMG-800540,TKT-100542,PROD-1816,product_image_00540.jpg,No,,No,No,,0.914,No Action Needed,0.017,No,2024-03-28 21:34:54
+IMG-800541,TKT-100853,PROD-1790,product_image_00541.jpg,No,,No,No,Max Capacity: 5TB,0.89,No Action Needed,0.066,No,2024-01-10 18:36:23
+IMG-800542,TKT-101820,PROD-1878,product_image_00542.jpg,No,,No,Yes,WARNING: Do not expose to moisture,0.709,Approve Replacement,0.089,Yes,2024-03-05 23:40:38
+IMG-800543,TKT-100989,PROD-1816,product_image_00543.jpg,No,,No,No,,0.746,No Action Needed,0.043,Yes,2024-01-22 19:39:04
+IMG-800544,TKT-101402,PROD-1652,product_image_00544.jpg,No,,No,No,Serial: SN-2024-001,0.943,No Action Needed,0.038,No,2024-03-03 16:21:10
+IMG-800545,TKT-101410,PROD-1739,product_image_00545.jpg,No,,No,No,Made in China,0.776,No Action Needed,0.028,No,2024-03-22 13:53:16
+IMG-800546,TKT-100991,PROD-1711,product_image_00546.jpg,No,,No,No,Component: Active Directory,0.935,No Action Needed,0.043,No,2024-02-17 06:32:49
+IMG-800547,TKT-100294,PROD-1232,product_image_00547.jpg,No,,No,No,,0.825,No Action Needed,0.091,No,2024-04-18 18:46:08
+IMG-800548,TKT-100653,PROD-1232,product_image_00548.jpg,No,,No,No,,0.816,No Action Needed,0.068,No,2024-05-11 23:11:34
+IMG-800549,TKT-100267,PROD-1232,product_image_00549.jpg,No,,No,No,Serial: SN-2024-001,0.695,No Action Needed,0.087,Yes,2024-02-22 20:58:05
+IMG-800550,TKT-100653,PROD-1816,product_image_00550.jpg,No,,No,No,WARNING: Do not expose to moisture,0.957,No Action Needed,0.064,No,2024-06-14 20:06:31
+IMG-800551,TKT-100920,PROD-1816,product_image_00551.jpg,No,,No,No,Model: NP-5000X,0.736,No Action Needed,0.095,Yes,2024-03-16 02:30:18
+IMG-800552,TKT-100594,PROD-1652,product_image_00552.jpg,No,,No,No,,0.879,No Action Needed,0.03,No,2024-03-24 05:32:22
+IMG-800553,TKT-100856,PROD-1816,product_image_00553.jpg,No,,No,No,,0.854,No Action Needed,0.015,No,2024-03-21 11:55:33
+IMG-800554,TKT-101847,PROD-1057,product_image_00554.jpg,No,,No,No,,0.75,No Action Needed,0.031,No,2024-04-18 21:31:25
+IMG-800555,TKT-101912,PROD-1790,product_image_00555.jpg,No,,No,No,,0.851,No Action Needed,0.011,No,2024-06-04 19:45:28
+IMG-800556,TKT-100388,PROD-1057,product_image_00556.jpg,No,,No,No,Input: 110-240V,0.824,No Action Needed,0.073,No,2024-01-13 10:58:39
+IMG-800557,TKT-100956,PROD-1711,product_image_00557.jpg,No,,No,No,,0.879,No Action Needed,0.079,No,2024-04-21 22:03:34
+IMG-800558,TKT-101018,PROD-1739,product_image_00558.jpg,No,,No,No,Made in China,0.809,No Action Needed,0.08,No,2024-02-22 13:12:54
+IMG-800559,TKT-101035,PROD-1711,product_image_00559.jpg,No,,No,No,,0.966,No Action Needed,0.1,No,2024-02-13 09:52:34
+IMG-800560,TKT-100440,PROD-1790,product_image_00560.jpg,No,,No,No,Model: NP-5000X,0.808,No Action Needed,0.08,No,2024-05-15 15:56:55
+IMG-800561,TKT-100576,PROD-1711,product_image_00561.jpg,No,,No,No,Max Capacity: 5TB,0.718,No Action Needed,0.015,Yes,2024-04-12 06:20:00
+IMG-800562,TKT-100585,PROD-1878,product_image_00562.jpg,No,,No,No,Serial: SN-2024-001,0.934,No Action Needed,0.093,No,2024-03-26 03:40:33
+IMG-800563,TKT-100882,PROD-1057,product_image_00563.jpg,No,,No,No,,0.68,No Action Needed,0.035,Yes,2024-04-24 06:29:43
+IMG-800564,TKT-101489,PROD-1232,product_image_00564.jpg,Yes,Rust,No,No,Made in China,0.967,Approve Replacement,0.157,Yes,2024-05-26 22:14:15
+IMG-800565,TKT-100104,PROD-1790,product_image_00565.jpg,No,,No,No,Part Number: PN-88421,0.951,No Action Needed,0.077,No,2024-06-25 21:31:15
+IMG-800566,TKT-101133,PROD-1423,product_image_00566.jpg,No,,Yes,No,Input: 110-240V,0.89,Approve Replacement,0.066,No,2024-03-23 07:12:34
+IMG-800567,TKT-100922,PROD-1878,product_image_00567.jpg,No,,No,No,Component: Active Directory,0.68,No Action Needed,0.099,Yes,2024-04-06 15:29:15
+IMG-800568,TKT-101393,PROD-1790,product_image_00568.jpg,No,,No,No,Serial: SN-2024-001,0.671,No Action Needed,0.018,Yes,2024-05-23 22:48:23
+IMG-800569,TKT-100806,PROD-1232,product_image_00569.jpg,No,,No,No,,0.802,No Action Needed,0.055,No,2024-05-31 15:30:05
+IMG-800570,TKT-100694,PROD-1878,product_image_00570.jpg,Yes,Burn Mark,No,No,,0.743,Approve Replacement,0.081,Yes,2024-01-27 02:58:23
+IMG-800571,TKT-100407,PROD-1790,product_image_00571.jpg,No,,No,No,Input: 110-240V,0.735,No Action Needed,0.075,Yes,2024-04-04 21:44:17
+IMG-800572,TKT-100082,PROD-1739,product_image_00572.jpg,No,,No,No,Part Number: PN-88421,0.885,No Action Needed,0.034,No,2024-03-29 07:16:17
+IMG-800573,TKT-101646,PROD-1711,product_image_00573.jpg,No,,No,No,Warranty: 12 months,0.933,No Action Needed,0.021,No,2024-04-25 14:18:13
+IMG-800574,TKT-101241,PROD-1878,product_image_00574.jpg,No,,No,No,Component: Active Directory,0.9,No Action Needed,0.067,No,2024-04-30 16:44:41
+IMG-800575,TKT-100652,PROD-1057,product_image_00575.jpg,No,,No,No,Component: Active Directory,0.899,No Action Needed,0.069,No,2024-01-18 21:48:04
+IMG-800576,TKT-101514,PROD-1423,product_image_00576.jpg,No,,No,No,Input: 110-240V,0.955,No Action Needed,0.046,No,2024-03-29 02:02:27
+IMG-800577,TKT-101696,PROD-1878,product_image_00577.jpg,Yes,Crack,No,No,Component: Active Directory,0.686,Approve Replacement,0.121,Yes,2024-02-25 05:48:42
+IMG-800578,TKT-100613,PROD-1711,product_image_00578.jpg,No,,No,No,,0.852,No Action Needed,0.076,No,2024-02-20 01:38:18
+IMG-800579,TKT-100754,PROD-1232,product_image_00579.jpg,No,,No,No,Made in China,0.843,No Action Needed,0.037,No,2024-05-04 17:28:21
+IMG-800580,TKT-101195,PROD-1423,product_image_00580.jpg,No,,No,Yes,,0.916,Approve Replacement,0.032,No,2024-06-10 10:57:34
+IMG-800581,TKT-101485,PROD-1739,product_image_00581.jpg,Yes,Water Damage,No,No,Component: Active Directory,0.727,Approve Partial Refund,0.071,Yes,2024-06-18 05:48:04
+IMG-800582,TKT-101182,PROD-1816,product_image_00582.jpg,No,,Yes,No,,0.92,Approve Replacement,0.024,No,2024-01-17 16:39:53
+IMG-800583,TKT-101195,PROD-1711,product_image_00583.jpg,No,,No,No,Component: Active Directory,0.96,No Action Needed,0.061,No,2024-01-14 11:43:42
+IMG-800584,TKT-101586,PROD-1652,product_image_00584.jpg,No,,No,No,MFG: 2024-01,0.916,No Action Needed,0.035,No,2024-06-11 02:34:35
+IMG-800585,TKT-100064,PROD-1790,product_image_00585.jpg,Yes,Broken Screen,No,No,Max Capacity: 5TB,0.831,Approve Refund,0.018,No,2024-01-05 04:49:29
+IMG-800586,TKT-100642,PROD-1652,product_image_00586.jpg,No,,No,No,MFG: 2024-01,0.98,No Action Needed,0.061,No,2024-01-14 16:20:29
+IMG-800587,TKT-100840,PROD-1878,product_image_00587.jpg,Yes,Water Damage,No,No,,0.858,Approve Partial Refund,0.169,Yes,2024-03-21 14:20:18
+IMG-800588,TKT-101787,PROD-1739,product_image_00588.jpg,No,,No,No,,0.933,No Action Needed,0.083,No,2024-03-01 06:21:48
+IMG-800589,TKT-101062,PROD-1816,product_image_00589.jpg,No,,No,No,Max Capacity: 5TB,0.771,No Action Needed,0.047,No,2024-02-27 02:35:43
+IMG-800590,TKT-101076,PROD-1652,product_image_00590.jpg,No,,Yes,No,Warranty: 12 months,0.712,Approve Replacement,0.024,Yes,2024-05-23 17:24:13
+IMG-800591,TKT-100941,PROD-1878,product_image_00591.jpg,No,,No,No,Part Number: PN-88421,0.891,No Action Needed,0.019,No,2024-05-15 19:33:43
+IMG-800592,TKT-101384,PROD-1423,product_image_00592.jpg,No,,No,No,MFG: 2024-01,0.934,No Action Needed,0.015,No,2024-04-17 09:46:26
+IMG-800593,TKT-101960,PROD-1816,product_image_00593.jpg,No,,No,No,WARNING: Do not expose to moisture,0.681,No Action Needed,0.038,Yes,2024-04-23 10:34:44
+IMG-800594,TKT-100460,PROD-1423,product_image_00594.jpg,No,,No,No,,0.954,No Action Needed,0.069,No,2024-04-03 15:53:41
+IMG-800595,TKT-101443,PROD-1816,product_image_00595.jpg,No,,No,No,Max Capacity: 5TB,0.911,No Action Needed,0.055,No,2024-04-15 05:26:41
+IMG-800596,TKT-100649,PROD-1711,product_image_00596.jpg,No,,No,No,WARNING: Do not expose to moisture,0.957,No Action Needed,0.029,No,2024-04-29 21:44:30
+IMG-800597,TKT-100589,PROD-1522,product_image_00597.jpg,No,,Yes,No,Input: 110-240V,0.978,Approve Replacement,0.046,No,2024-02-10 11:38:58
+IMG-800598,TKT-100777,PROD-1652,product_image_00598.jpg,No,,No,No,,0.972,No Action Needed,0.046,No,2024-04-21 23:32:06
+IMG-800599,TKT-101955,PROD-1057,product_image_00599.jpg,No,,No,Yes,WARNING: Do not expose to moisture,0.855,Approve Replacement,0.069,No,2024-01-18 22:15:22
+IMG-800600,TKT-101956,PROD-1522,product_image_00600.jpg,No,,No,No,Max Capacity: 5TB,0.726,No Action Needed,0.038,Yes,2024-01-30 17:42:48
+IMG-800601,TKT-101343,PROD-1423,product_image_00601.jpg,No,,No,No,,0.907,No Action Needed,0.091,No,2024-02-27 01:53:02
+IMG-800602,TKT-100438,PROD-1816,product_image_00602.jpg,Yes,Crack,No,No,Input: 110-240V,0.705,Approve Replacement,0.016,Yes,2024-05-28 11:09:09
+IMG-800603,TKT-101425,PROD-1423,product_image_00603.jpg,No,,No,No,Component: Active Directory,0.945,No Action Needed,0.093,No,2024-02-11 07:05:53
+IMG-800604,TKT-101517,PROD-1790,product_image_00604.jpg,Yes,Missing Component,Yes,No,Input: 110-240V,0.784,Approve Replacement,0.15,No,2024-01-06 22:00:11
+IMG-800605,TKT-100462,PROD-1816,product_image_00605.jpg,No,,No,No,Made in China,0.774,No Action Needed,0.061,No,2024-05-09 01:22:02
+IMG-800606,TKT-100676,PROD-1711,product_image_00606.jpg,No,,No,No,Warranty: 12 months,0.695,No Action Needed,0.056,Yes,2024-03-03 06:32:07
+IMG-800607,TKT-100010,PROD-1878,product_image_00607.jpg,Yes,Dent,No,No,Max Capacity: 5TB,0.725,Approve Replacement,0.072,Yes,2024-01-08 10:45:24
+IMG-800608,TKT-100977,PROD-1816,product_image_00608.jpg,Yes,Shattered Glass,No,No,Model: NP-5000X,0.863,Approve Refund,0.079,No,2024-05-30 06:22:07
+IMG-800609,TKT-101859,PROD-1522,product_image_00609.jpg,No,,No,No,MFG: 2024-01,0.908,No Action Needed,0.075,No,2024-05-22 12:34:43
+IMG-800610,TKT-101095,PROD-1739,product_image_00610.jpg,No,,No,No,,0.721,No Action Needed,0.037,Yes,2024-02-24 22:05:07
+IMG-800611,TKT-100358,PROD-1652,product_image_00611.jpg,No,,No,No,,0.693,No Action Needed,0.025,Yes,2024-04-09 04:33:48
+IMG-800612,TKT-100360,PROD-1739,product_image_00612.jpg,No,,No,No,,0.982,No Action Needed,0.041,No,2024-06-28 18:27:47
+IMG-800613,TKT-100813,PROD-1711,product_image_00613.jpg,No,,No,No,WARNING: Do not expose to moisture,0.948,No Action Needed,0.081,No,2024-05-27 23:07:11
+IMG-800614,TKT-101795,PROD-1739,product_image_00614.jpg,No,,No,No,Component: Active Directory,0.901,No Action Needed,0.042,No,2024-03-08 16:46:20
+IMG-800615,TKT-101234,PROD-1522,product_image_00615.jpg,No,,Yes,No,,0.822,Approve Replacement,0.021,No,2024-06-07 21:39:46
+IMG-800616,TKT-100686,PROD-1423,product_image_00616.jpg,No,,No,No,Input: 110-240V,0.809,No Action Needed,0.066,No,2024-04-25 00:19:21
+IMG-800617,TKT-101073,PROD-1711,product_image_00617.jpg,No,,No,No,,0.939,No Action Needed,0.028,No,2024-06-07 00:52:58
+IMG-800618,TKT-100274,PROD-1878,product_image_00618.jpg,No,,No,No,MFG: 2024-01,0.855,No Action Needed,0.057,No,2024-05-19 09:50:22
+IMG-800619,TKT-101656,PROD-1522,product_image_00619.jpg,No,,No,No,Max Capacity: 5TB,0.872,No Action Needed,0.08,No,2024-05-09 13:34:59
+IMG-800620,TKT-101327,PROD-1423,product_image_00620.jpg,Yes,Dent,No,No,Part Number: PN-88421,0.879,Approve Partial Refund,0.088,No,2024-01-27 04:13:36
+IMG-800621,TKT-101619,PROD-1423,product_image_00621.jpg,No,,No,Yes,MFG: 2024-01,0.65,Approve Replacement,0.044,Yes,2024-01-28 17:22:39
+IMG-800622,TKT-100359,PROD-1790,product_image_00622.jpg,No,,No,No,,0.863,No Action Needed,0.077,No,2024-02-11 14:18:22
+IMG-800623,TKT-101837,PROD-1652,product_image_00623.jpg,Yes,Rust,No,No,Serial: SN-2024-001,0.939,Approve Replacement,0.186,Yes,2024-06-10 13:24:47
+IMG-800624,TKT-100820,PROD-1522,product_image_00624.jpg,No,,No,No,Warranty: 12 months,0.808,No Action Needed,0.011,No,2024-04-05 19:15:45
+IMG-800625,TKT-100977,PROD-1232,product_image_00625.jpg,No,,No,No,,0.879,No Action Needed,0.075,No,2024-06-03 23:08:49
+IMG-800626,TKT-100013,PROD-1423,product_image_00626.jpg,No,,No,No,Max Capacity: 5TB,0.953,No Action Needed,0.062,No,2024-05-04 04:37:43
+IMG-800627,TKT-101543,PROD-1423,product_image_00627.jpg,No,,No,No,,0.693,No Action Needed,0.082,Yes,2024-02-27 05:46:51
+IMG-800628,TKT-100618,PROD-1790,product_image_00628.jpg,No,,No,No,,0.897,No Action Needed,0.081,No,2024-04-09 14:54:47
+IMG-800629,TKT-100023,PROD-1423,product_image_00629.jpg,No,,No,No,MFG: 2024-01,0.972,No Action Needed,0.037,No,2024-04-18 14:49:30
+IMG-800630,TKT-100127,PROD-1522,product_image_00630.jpg,Yes,Paint Chipping,No,No,Made in China,0.693,Approve Replacement,0.02,Yes,2024-05-19 16:10:55
+IMG-800631,TKT-101405,PROD-1878,product_image_00631.jpg,No,,No,No,,0.693,No Action Needed,0.083,Yes,2024-05-24 07:00:56
+IMG-800632,TKT-101818,PROD-1423,product_image_00632.jpg,No,,No,No,WARNING: Do not expose to moisture,0.954,No Action Needed,0.068,No,2024-05-02 18:49:49
+IMG-800633,TKT-100752,PROD-1790,product_image_00633.jpg,Yes,Missing Component,Yes,No,Warranty: 12 months,0.771,Approve Replacement,0.013,No,2024-02-01 18:27:51
+IMG-800634,TKT-100979,PROD-1057,product_image_00634.jpg,No,,No,No,Component: Active Directory,0.838,No Action Needed,0.083,No,2024-04-04 05:37:25
+IMG-800635,TKT-100765,PROD-1652,product_image_00635.jpg,No,,No,No,,0.783,No Action Needed,0.053,No,2024-06-20 17:14:07
+IMG-800636,TKT-101869,PROD-1711,product_image_00636.jpg,No,,No,No,,0.831,No Action Needed,0.089,No,2024-04-08 14:05:33
+IMG-800637,TKT-101642,PROD-1816,product_image_00637.jpg,No,,No,No,,0.758,No Action Needed,0.054,No,2024-03-24 02:04:53
+IMG-800638,TKT-101393,PROD-1790,product_image_00638.jpg,No,,No,No,,0.901,No Action Needed,0.07,No,2024-04-17 02:02:51
+IMG-800639,TKT-100167,PROD-1878,product_image_00639.jpg,No,,No,No,Part Number: PN-88421,0.795,No Action Needed,0.1,No,2024-06-21 15:58:34
+IMG-800640,TKT-100159,PROD-1790,product_image_00640.jpg,No,,Yes,No,Input: 110-240V,0.801,Approve Replacement,0.066,No,2024-03-26 21:06:26
+IMG-800641,TKT-101849,PROD-1878,product_image_00641.jpg,No,,No,No,Input: 110-240V,0.746,No Action Needed,0.037,Yes,2024-03-17 03:42:11
+IMG-800642,TKT-100306,PROD-1057,product_image_00642.jpg,No,,No,No,Input: 110-240V,0.811,No Action Needed,0.016,No,2024-01-11 21:14:01
+IMG-800643,TKT-100904,PROD-1522,product_image_00643.jpg,No,,No,No,Component: Active Directory,0.742,No Action Needed,0.046,Yes,2024-04-25 01:20:37
+IMG-800644,TKT-101001,PROD-1522,product_image_00644.jpg,No,,No,No,,0.835,No Action Needed,0.022,No,2024-06-23 18:18:31
+IMG-800645,TKT-100912,PROD-1739,product_image_00645.jpg,Yes,Paint Chipping,No,No,Made in China,0.888,Approve Partial Refund,0.091,No,2024-02-20 09:16:07
+IMG-800646,TKT-100935,PROD-1790,product_image_00646.jpg,No,,No,No,Max Capacity: 5TB,0.753,No Action Needed,0.097,No,2024-01-04 02:34:50
+IMG-800647,TKT-101377,PROD-1423,product_image_00647.jpg,No,,No,No,,0.776,No Action Needed,0.06,No,2024-06-21 23:44:49
+IMG-800648,TKT-100810,PROD-1423,product_image_00648.jpg,No,,No,No,,0.671,No Action Needed,0.041,Yes,2024-06-12 07:36:45
+IMG-800649,TKT-101527,PROD-1816,product_image_00649.jpg,No,,No,No,Model: NP-5000X,0.804,No Action Needed,0.042,No,2024-04-02 05:52:44
+IMG-800650,TKT-100867,PROD-1232,product_image_00650.jpg,Yes,Broken Screen,No,No,Model: NP-5000X,0.782,Approve Refund,0.168,Yes,2024-03-04 17:59:17
+IMG-800651,TKT-101914,PROD-1522,product_image_00651.jpg,No,,Yes,No,,0.97,Approve Replacement,0.068,No,2024-06-17 08:03:21
+IMG-800652,TKT-100966,PROD-1739,product_image_00652.jpg,No,,No,No,Warranty: 12 months,0.786,No Action Needed,0.04,No,2024-01-01 01:37:47
+IMG-800653,TKT-101574,PROD-1057,product_image_00653.jpg,No,,No,No,,0.721,No Action Needed,0.015,Yes,2024-01-01 02:51:50
+IMG-800654,TKT-101493,PROD-1652,product_image_00654.jpg,No,,No,No,Made in China,0.767,No Action Needed,0.082,No,2024-06-26 02:29:07
+IMG-800655,TKT-100918,PROD-1652,product_image_00655.jpg,Yes,Rust,No,No,Input: 110-240V,0.785,Approve Replacement,0.044,No,2024-02-16 04:28:42
+IMG-800656,TKT-100272,PROD-1232,product_image_00656.jpg,No,,No,No,Input: 110-240V,0.969,No Action Needed,0.078,No,2024-02-08 22:36:24
+IMG-800657,TKT-100804,PROD-1878,product_image_00657.jpg,No,,No,No,MFG: 2024-01,0.864,No Action Needed,0.085,No,2024-01-18 00:11:32
+IMG-800658,TKT-101709,PROD-1739,product_image_00658.jpg,No,,No,No,,0.986,No Action Needed,0.039,No,2024-05-13 02:00:11
+IMG-800659,TKT-100611,PROD-1711,product_image_00659.jpg,Yes,Crack,No,No,Made in China,0.847,Approve Partial Refund,0.171,Yes,2024-02-02 01:41:29
+IMG-800660,TKT-101686,PROD-1816,product_image_00660.jpg,No,,No,Yes,Part Number: PN-88421,0.984,Approve Replacement,0.018,No,2024-01-29 00:19:44
+IMG-800661,TKT-100317,PROD-1423,product_image_00661.jpg,No,,No,No,Serial: SN-2024-001,0.658,No Action Needed,0.02,Yes,2024-01-18 05:11:30
+IMG-800662,TKT-100065,PROD-1652,product_image_00662.jpg,No,,No,No,Model: NP-5000X,0.958,No Action Needed,0.085,No,2024-04-04 22:36:58
+IMG-800663,TKT-100492,PROD-1816,product_image_00663.jpg,No,,No,No,Component: Active Directory,0.922,No Action Needed,0.06,No,2024-06-20 17:10:22
+IMG-800664,TKT-100068,PROD-1711,product_image_00664.jpg,No,,No,No,Model: NP-5000X,0.791,No Action Needed,0.096,No,2024-05-21 19:48:54
+IMG-800665,TKT-100501,PROD-1739,product_image_00665.jpg,No,,No,No,MFG: 2024-01,0.844,No Action Needed,0.027,No,2024-06-08 23:31:34
+IMG-800666,TKT-101105,PROD-1816,product_image_00666.jpg,No,,No,No,,0.835,No Action Needed,0.044,No,2024-06-05 14:15:22
+IMG-800667,TKT-101589,PROD-1739,product_image_00667.jpg,No,,No,No,WARNING: Do not expose to moisture,0.781,No Action Needed,0.015,No,2024-04-20 10:02:13
+IMG-800668,TKT-100479,PROD-1790,product_image_00668.jpg,No,,No,No,Component: Active Directory,0.935,No Action Needed,0.023,No,2024-05-11 11:51:14
+IMG-800669,TKT-101582,PROD-1232,product_image_00669.jpg,Yes,Missing Component,Yes,No,Warranty: 12 months,0.842,Approve Partial Refund,0.144,No,2024-03-17 18:12:04
+IMG-800670,TKT-101352,PROD-1878,product_image_00670.jpg,Yes,Missing Component,No,Yes,WARNING: Do not expose to moisture,0.713,Approve Replacement,0.165,Yes,2024-01-01 09:44:41
+IMG-800671,TKT-100124,PROD-1878,product_image_00671.jpg,No,,No,No,,0.676,No Action Needed,0.025,Yes,2024-06-02 16:21:01
+IMG-800672,TKT-101801,PROD-1057,product_image_00672.jpg,No,,No,No,Made in China,0.986,No Action Needed,0.072,No,2024-06-19 07:41:12
+IMG-800673,TKT-101138,PROD-1711,product_image_00673.jpg,No,,No,No,Part Number: PN-88421,0.676,No Action Needed,0.01,Yes,2024-04-01 05:10:10
+IMG-800674,TKT-101928,PROD-1652,product_image_00674.jpg,No,,No,No,,0.872,No Action Needed,0.062,No,2024-03-08 22:58:53
+IMG-800675,TKT-100652,PROD-1652,product_image_00675.jpg,No,,Yes,No,WARNING: Do not expose to moisture,0.837,Approve Replacement,0.097,No,2024-04-03 19:07:56
+IMG-800676,TKT-100770,PROD-1057,product_image_00676.jpg,No,,Yes,No,,0.721,Approve Replacement,0.063,Yes,2024-02-14 19:23:26
+IMG-800677,TKT-100969,PROD-1816,product_image_00677.jpg,No,,Yes,No,,0.769,Approve Replacement,0.08,No,2024-02-04 02:33:10
+IMG-800678,TKT-100615,PROD-1057,product_image_00678.jpg,No,,No,No,,0.726,No Action Needed,0.046,Yes,2024-02-20 12:11:34
+IMG-800679,TKT-101873,PROD-1739,product_image_00679.jpg,No,,Yes,No,Made in China,0.926,Approve Replacement,0.035,No,2024-02-02 00:49:22
+IMG-800680,TKT-101141,PROD-1878,product_image_00680.jpg,No,,Yes,No,MFG: 2024-01,0.975,Approve Replacement,0.09,No,2024-05-06 19:45:38
+IMG-800681,TKT-100522,PROD-1816,product_image_00681.jpg,No,,No,No,Serial: SN-2024-001,0.843,No Action Needed,0.015,No,2024-01-28 12:30:39
+IMG-800682,TKT-101888,PROD-1711,product_image_00682.jpg,No,,No,Yes,,0.898,Approve Replacement,0.061,No,2024-01-26 07:59:16
+IMG-800683,TKT-100189,PROD-1878,product_image_00683.jpg,No,,No,No,,0.878,No Action Needed,0.054,No,2024-05-30 00:22:55
+IMG-800684,TKT-100390,PROD-1739,product_image_00684.jpg,No,,No,No,Component: Active Directory,0.705,No Action Needed,0.052,Yes,2024-05-30 09:37:30
+IMG-800685,TKT-101234,PROD-1739,product_image_00685.jpg,No,,No,No,,0.659,No Action Needed,0.042,Yes,2024-02-19 12:55:11
+IMG-800686,TKT-100385,PROD-1790,product_image_00686.jpg,No,,No,No,,0.843,No Action Needed,0.082,No,2024-03-30 00:35:59
+IMG-800687,TKT-101144,PROD-1816,product_image_00687.jpg,No,,No,No,Part Number: PN-88421,0.96,No Action Needed,0.015,No,2024-01-28 06:31:04
+IMG-800688,TKT-100620,PROD-1739,product_image_00688.jpg,No,,No,No,MFG: 2024-01,0.959,No Action Needed,0.032,No,2024-05-13 23:13:17
+IMG-800689,TKT-101970,PROD-1522,product_image_00689.jpg,Yes,Paint Chipping,No,No,,0.671,Approve Replacement,0.181,Yes,2024-04-25 20:09:32
+IMG-800690,TKT-101424,PROD-1790,product_image_00690.jpg,No,,No,No,,0.744,No Action Needed,0.055,Yes,2024-05-05 23:44:33
+IMG-800691,TKT-100812,PROD-1816,product_image_00691.jpg,No,,No,No,WARNING: Do not expose to moisture,0.796,No Action Needed,0.077,No,2024-03-13 11:50:24
+IMG-800692,TKT-100779,PROD-1711,product_image_00692.jpg,No,,No,No,Part Number: PN-88421,0.919,No Action Needed,0.045,No,2024-03-29 22:43:08
+IMG-800693,TKT-100631,PROD-1423,product_image_00693.jpg,No,,No,No,Max Capacity: 5TB,0.933,No Action Needed,0.026,No,2024-01-31 18:28:57
+IMG-800694,TKT-100954,PROD-1522,product_image_00694.jpg,No,,No,No,,0.655,No Action Needed,0.042,Yes,2024-01-15 00:08:35
+IMG-800695,TKT-101479,PROD-1711,product_image_00695.jpg,No,,No,No,,0.967,No Action Needed,0.012,No,2024-04-08 01:40:08
+IMG-800696,TKT-100655,PROD-1816,product_image_00696.jpg,No,,No,No,Made in China,0.875,No Action Needed,0.071,No,2024-01-13 01:23:53
+IMG-800697,TKT-100093,PROD-1790,product_image_00697.jpg,No,,No,No,,0.867,No Action Needed,0.039,No,2024-01-09 16:34:18
+IMG-800698,TKT-101518,PROD-1057,product_image_00698.jpg,No,,No,No,Input: 110-240V,0.82,No Action Needed,0.071,No,2024-03-14 15:47:07
+IMG-800699,TKT-101914,PROD-1790,product_image_00699.jpg,No,,No,No,Made in China,0.79,No Action Needed,0.029,No,2024-02-09 16:26:39
+IMG-800700,TKT-100604,PROD-1057,product_image_00700.jpg,No,,No,No,MFG: 2024-01,0.916,No Action Needed,0.079,No,2024-03-29 00:13:18
+IMG-800701,TKT-100777,PROD-1790,product_image_00701.jpg,No,,No,No,,0.878,No Action Needed,0.076,No,2024-04-12 00:12:11
+IMG-800702,TKT-101022,PROD-1878,product_image_00702.jpg,No,,No,No,Part Number: PN-88421,0.795,No Action Needed,0.068,No,2024-03-09 19:36:50
+IMG-800703,TKT-100527,PROD-1711,product_image_00703.jpg,No,,Yes,No,,0.963,Approve Replacement,0.083,No,2024-04-14 16:47:10
+IMG-800704,TKT-101314,PROD-1711,product_image_00704.jpg,No,,No,No,Part Number: PN-88421,0.712,No Action Needed,0.096,Yes,2024-01-07 08:39:46
+IMG-800705,TKT-100346,PROD-1057,product_image_00705.jpg,No,,No,No,,0.926,No Action Needed,0.017,No,2024-03-20 22:36:35
+IMG-800706,TKT-101000,PROD-1057,product_image_00706.jpg,No,,No,No,,0.946,No Action Needed,0.081,No,2024-02-05 17:12:37
+IMG-800707,TKT-101110,PROD-1739,product_image_00707.jpg,No,,No,No,Serial: SN-2024-001,0.763,No Action Needed,0.055,No,2024-05-31 21:08:26
+IMG-800708,TKT-101935,PROD-1739,product_image_00708.jpg,No,,No,No,,0.923,No Action Needed,0.088,No,2024-03-18 06:31:14
+IMG-800709,TKT-100844,PROD-1057,product_image_00709.jpg,No,,No,No,,0.906,No Action Needed,0.083,No,2024-01-20 14:32:15
+IMG-800710,TKT-100473,PROD-1522,product_image_00710.jpg,No,,No,No,,0.89,No Action Needed,0.077,No,2024-02-25 20:28:37
+IMG-800711,TKT-100018,PROD-1816,product_image_00711.jpg,No,,No,No,Part Number: PN-88421,0.668,No Action Needed,0.075,Yes,2024-06-20 19:04:54
+IMG-800712,TKT-100123,PROD-1790,product_image_00712.jpg,No,,No,No,Component: Active Directory,0.714,No Action Needed,0.075,Yes,2024-05-06 03:14:55
+IMG-800713,TKT-101869,PROD-1711,product_image_00713.jpg,No,,No,No,Model: NP-5000X,0.686,No Action Needed,0.085,Yes,2024-04-21 03:11:56
+IMG-800714,TKT-100013,PROD-1878,product_image_00714.jpg,No,,No,No,Model: NP-5000X,0.697,No Action Needed,0.065,Yes,2024-03-19 04:16:26
+IMG-800715,TKT-100034,PROD-1878,product_image_00715.jpg,No,,No,No,,0.735,No Action Needed,0.095,Yes,2024-04-14 20:57:32
+IMG-800716,TKT-101097,PROD-1423,product_image_00716.jpg,No,,Yes,No,Made in China,0.982,Approve Replacement,0.043,No,2024-03-18 07:04:24
+IMG-800717,TKT-101651,PROD-1057,product_image_00717.jpg,No,,No,No,Serial: SN-2024-001,0.661,No Action Needed,0.021,Yes,2024-06-01 05:50:29
+IMG-800718,TKT-101073,PROD-1057,product_image_00718.jpg,Yes,Missing Component,No,No,Input: 110-240V,0.803,Approve Partial Refund,0.137,No,2024-03-24 14:23:16
+IMG-800719,TKT-100516,PROD-1232,product_image_00719.jpg,No,,No,No,Made in China,0.94,No Action Needed,0.071,No,2024-06-19 17:18:07
+IMG-800720,TKT-100161,PROD-1232,product_image_00720.jpg,No,,No,No,,0.759,No Action Needed,0.064,No,2024-03-09 07:51:47
+IMG-800721,TKT-100940,PROD-1790,product_image_00721.jpg,Yes,Missing Component,No,No,,0.813,Approve Partial Refund,0.035,No,2024-04-16 11:11:17
+IMG-800722,TKT-100462,PROD-1423,product_image_00722.jpg,No,,No,No,Serial: SN-2024-001,0.691,No Action Needed,0.016,Yes,2024-01-18 07:29:10
+IMG-800723,TKT-101338,PROD-1739,product_image_00723.jpg,No,,No,No,Made in China,0.824,No Action Needed,0.041,No,2024-06-19 11:57:46
+IMG-800724,TKT-100772,PROD-1878,product_image_00724.jpg,No,,No,No,Model: NP-5000X,0.662,No Action Needed,0.099,Yes,2024-02-03 19:52:17
+IMG-800725,TKT-101439,PROD-1057,product_image_00725.jpg,No,,Yes,No,Made in China,0.923,Approve Replacement,0.041,No,2024-06-19 22:50:14
+IMG-800726,TKT-101320,PROD-1232,product_image_00726.jpg,No,,No,No,Serial: SN-2024-001,0.878,No Action Needed,0.013,No,2024-04-07 11:36:25
+IMG-800727,TKT-101832,PROD-1878,product_image_00727.jpg,Yes,Scratches,No,No,Component: Active Directory,0.841,Approve Replacement,0.198,Yes,2024-03-08 10:56:45
+IMG-800728,TKT-100973,PROD-1423,product_image_00728.jpg,No,,No,No,Serial: SN-2024-001,0.832,No Action Needed,0.087,No,2024-06-23 09:37:15
+IMG-800729,TKT-101401,PROD-1423,product_image_00729.jpg,No,,No,Yes,,0.957,Approve Replacement,0.016,No,2024-03-12 22:29:20
+IMG-800730,TKT-101154,PROD-1739,product_image_00730.jpg,No,,No,No,Part Number: PN-88421,0.713,No Action Needed,0.049,Yes,2024-02-29 06:59:46
+IMG-800731,TKT-100032,PROD-1816,product_image_00731.jpg,No,,No,No,Made in China,0.925,No Action Needed,0.076,No,2024-02-11 23:29:37
+IMG-800732,TKT-101902,PROD-1522,product_image_00732.jpg,No,,No,No,Component: Active Directory,0.988,No Action Needed,0.038,No,2024-04-19 06:39:51
+IMG-800733,TKT-100492,PROD-1790,product_image_00733.jpg,No,,No,No,,0.674,No Action Needed,0.092,Yes,2024-05-04 17:53:04
+IMG-800734,TKT-100796,PROD-1878,product_image_00734.jpg,No,,No,No,Warranty: 12 months,0.975,No Action Needed,0.032,No,2024-01-16 20:36:59
+IMG-800735,TKT-101618,PROD-1522,product_image_00735.jpg,No,,No,No,Part Number: PN-88421,0.689,No Action Needed,0.085,Yes,2024-06-19 08:53:36
+IMG-800736,TKT-100109,PROD-1522,product_image_00736.jpg,No,,No,No,Serial: SN-2024-001,0.747,No Action Needed,0.036,Yes,2024-02-15 02:33:16
+IMG-800737,TKT-100697,PROD-1790,product_image_00737.jpg,No,,No,No,,0.885,No Action Needed,0.025,No,2024-05-04 22:19:16
+IMG-800738,TKT-101955,PROD-1790,product_image_00738.jpg,No,,No,No,Part Number: PN-88421,0.876,No Action Needed,0.021,No,2024-02-27 16:16:05
+IMG-800739,TKT-100060,PROD-1423,product_image_00739.jpg,No,,No,No,,0.973,No Action Needed,0.029,No,2024-03-19 23:03:07
+IMG-800740,TKT-100922,PROD-1711,product_image_00740.jpg,No,,No,No,Input: 110-240V,0.94,No Action Needed,0.02,No,2024-03-09 22:08:57
+IMG-800741,TKT-101927,PROD-1652,product_image_00741.jpg,Yes,Rust,No,No,Component: Active Directory,0.914,Approve Replacement,0.161,Yes,2024-03-27 17:40:56
+IMG-800742,TKT-101353,PROD-1652,product_image_00742.jpg,No,,No,No,Component: Active Directory,0.887,No Action Needed,0.093,No,2024-04-14 13:22:08
+IMG-800743,TKT-100604,PROD-1816,product_image_00743.jpg,No,,No,No,,0.861,No Action Needed,0.084,No,2024-06-06 15:23:41
+IMG-800744,TKT-100168,PROD-1423,product_image_00744.jpg,No,,No,No,Warranty: 12 months,0.874,No Action Needed,0.061,No,2024-02-25 05:16:24
+IMG-800745,TKT-101514,PROD-1652,product_image_00745.jpg,No,,No,No,Serial: SN-2024-001,0.716,No Action Needed,0.052,Yes,2024-05-09 20:15:02
+IMG-800746,TKT-100187,PROD-1739,product_image_00746.jpg,No,,No,No,,0.675,No Action Needed,0.062,Yes,2024-03-14 07:32:40
+IMG-800747,TKT-100910,PROD-1232,product_image_00747.jpg,No,,No,No,,0.677,No Action Needed,0.023,Yes,2024-04-29 08:42:56
+IMG-800748,TKT-100209,PROD-1057,product_image_00748.jpg,No,,No,No,Made in China,0.733,No Action Needed,0.083,Yes,2024-03-08 04:21:36
+IMG-800749,TKT-100919,PROD-1878,product_image_00749.jpg,Yes,Crack,No,No,Serial: SN-2024-001,0.893,Approve Replacement,0.117,No,2024-06-05 09:08:39
+IMG-800750,TKT-100053,PROD-1522,product_image_00750.jpg,Yes,Burn Mark,No,No,Component: Active Directory,0.752,Approve Replacement,0.058,No,2024-01-14 09:08:44
+IMG-800751,TKT-101224,PROD-1232,product_image_00751.jpg,No,,No,No,,0.853,No Action Needed,0.089,No,2024-01-09 21:23:24
+IMG-800752,TKT-100025,PROD-1423,product_image_00752.jpg,No,,No,No,Serial: SN-2024-001,0.903,No Action Needed,0.093,No,2024-06-02 00:02:33
+IMG-800753,TKT-101484,PROD-1878,product_image_00753.jpg,No,,No,No,,0.715,No Action Needed,0.093,Yes,2024-01-19 19:25:04
+IMG-800754,TKT-100497,PROD-1790,product_image_00754.jpg,No,,No,No,Made in China,0.897,No Action Needed,0.082,No,2024-06-02 05:30:10
+IMG-800755,TKT-100347,PROD-1057,product_image_00755.jpg,No,,No,No,WARNING: Do not expose to moisture,0.765,No Action Needed,0.059,No,2024-05-31 09:26:20
+IMG-800756,TKT-101009,PROD-1057,product_image_00756.jpg,No,,No,Yes,Made in China,0.671,Approve Replacement,0.045,Yes,2024-06-05 01:16:22
+IMG-800757,TKT-100565,PROD-1652,product_image_00757.jpg,No,,No,No,Serial: SN-2024-001,0.905,No Action Needed,0.059,No,2024-03-30 12:34:14
+IMG-800758,TKT-100739,PROD-1423,product_image_00758.jpg,No,,Yes,No,,0.686,Approve Replacement,0.058,Yes,2024-06-02 14:20:58
+IMG-800759,TKT-101476,PROD-1711,product_image_00759.jpg,No,,No,No,MFG: 2024-01,0.977,No Action Needed,0.058,No,2024-03-18 07:18:47
+IMG-800760,TKT-100937,PROD-1522,product_image_00760.jpg,No,,No,No,Model: NP-5000X,0.796,No Action Needed,0.015,No,2024-03-27 16:14:06
+IMG-800761,TKT-101943,PROD-1652,product_image_00761.jpg,No,,No,No,Component: Active Directory,0.901,No Action Needed,0.087,No,2024-02-15 01:23:14
+IMG-800762,TKT-100778,PROD-1232,product_image_00762.jpg,No,,No,No,Made in China,0.792,No Action Needed,0.038,No,2024-02-13 00:33:16
+IMG-800763,TKT-101670,PROD-1790,product_image_00763.jpg,No,,No,No,Part Number: PN-88421,0.927,No Action Needed,0.064,No,2024-02-20 19:38:46
+IMG-800764,TKT-101235,PROD-1816,product_image_00764.jpg,No,,No,No,Warranty: 12 months,0.939,No Action Needed,0.018,No,2024-05-14 16:03:06
+IMG-800765,TKT-101975,PROD-1652,product_image_00765.jpg,No,,No,No,,0.902,No Action Needed,0.081,No,2024-01-09 10:01:50
+IMG-800766,TKT-100596,PROD-1711,product_image_00766.jpg,No,,No,No,,0.904,No Action Needed,0.085,No,2024-06-14 09:33:29
+IMG-800767,TKT-101601,PROD-1816,product_image_00767.jpg,No,,No,No,WARNING: Do not expose to moisture,0.895,No Action Needed,0.094,No,2024-04-17 02:52:38
+IMG-800768,TKT-101672,PROD-1652,product_image_00768.jpg,No,,Yes,No,Component: Active Directory,0.691,Approve Replacement,0.037,Yes,2024-04-24 05:37:04
+IMG-800769,TKT-100409,PROD-1790,product_image_00769.jpg,No,,No,No,,0.779,No Action Needed,0.066,No,2024-05-11 16:44:01
+IMG-800770,TKT-100368,PROD-1878,product_image_00770.jpg,No,,No,No,Max Capacity: 5TB,0.851,No Action Needed,0.027,No,2024-02-20 18:02:32
+IMG-800771,TKT-101931,PROD-1816,product_image_00771.jpg,No,,No,No,WARNING: Do not expose to moisture,0.764,No Action Needed,0.057,No,2024-01-10 08:05:40
+IMG-800772,TKT-101702,PROD-1522,product_image_00772.jpg,No,,No,No,,0.798,No Action Needed,0.069,No,2024-03-26 05:35:16
+IMG-800773,TKT-101629,PROD-1652,product_image_00773.jpg,No,,Yes,No,Warranty: 12 months,0.782,Approve Replacement,0.036,No,2024-06-02 12:55:01
+IMG-800774,TKT-101297,PROD-1423,product_image_00774.jpg,No,,No,No,Warranty: 12 months,0.94,No Action Needed,0.014,No,2024-05-13 23:13:20
+IMG-800775,TKT-101464,PROD-1652,product_image_00775.jpg,No,,Yes,No,,0.879,Approve Replacement,0.04,No,2024-03-10 23:50:44
+IMG-800776,TKT-100151,PROD-1711,product_image_00776.jpg,No,,No,No,,0.916,No Action Needed,0.078,No,2024-04-05 15:18:07
+IMG-800777,TKT-100981,PROD-1790,product_image_00777.jpg,Yes,Rust,No,No,Made in China,0.779,Approve Partial Refund,0.122,No,2024-01-23 11:25:39
+IMG-800778,TKT-101113,PROD-1739,product_image_00778.jpg,No,,No,No,,0.836,No Action Needed,0.095,No,2024-01-02 21:45:53
+IMG-800779,TKT-100736,PROD-1878,product_image_00779.jpg,Yes,Water Damage,No,No,Serial: SN-2024-001,0.943,Approve Replacement,0.167,Yes,2024-03-28 01:52:07
+IMG-800780,TKT-100223,PROD-1816,product_image_00780.jpg,Yes,Burn Mark,No,No,Component: Active Directory,0.911,Approve Partial Refund,0.243,Yes,2024-06-12 22:42:11
+IMG-800781,TKT-100090,PROD-1790,product_image_00781.jpg,No,,No,No,,0.718,No Action Needed,0.034,Yes,2024-03-05 09:15:13
+IMG-800782,TKT-101387,PROD-1652,product_image_00782.jpg,Yes,Burn Mark,No,No,,0.858,Approve Replacement,0.07,No,2024-01-29 15:08:50
+IMG-800783,TKT-100881,PROD-1522,product_image_00783.jpg,No,,No,No,WARNING: Do not expose to moisture,0.684,No Action Needed,0.011,Yes,2024-06-04 03:00:28
+IMG-800784,TKT-100454,PROD-1878,product_image_00784.jpg,No,,No,Yes,,0.784,Approve Replacement,0.087,No,2024-01-16 06:55:04
+IMG-800785,TKT-101142,PROD-1790,product_image_00785.jpg,No,,No,No,MFG: 2024-01,0.956,No Action Needed,0.066,No,2024-04-19 00:10:54
+IMG-800786,TKT-100912,PROD-1232,product_image_00786.jpg,No,,No,No,Component: Active Directory,0.88,No Action Needed,0.037,No,2024-03-25 16:41:41
+IMG-800787,TKT-101414,PROD-1878,product_image_00787.jpg,No,,No,No,Model: NP-5000X,0.664,No Action Needed,0.039,Yes,2024-06-16 14:21:00
+IMG-800788,TKT-100988,PROD-1522,product_image_00788.jpg,No,,No,No,Serial: SN-2024-001,0.795,No Action Needed,0.061,No,2024-02-22 03:39:21
+IMG-800789,TKT-100237,PROD-1057,product_image_00789.jpg,Yes,Burn Mark,No,No,Max Capacity: 5TB,0.951,Approve Replacement,0.139,No,2024-01-28 07:45:59
+IMG-800790,TKT-101606,PROD-1816,product_image_00790.jpg,No,,No,No,Part Number: PN-88421,0.801,No Action Needed,0.054,No,2024-02-27 00:43:57
+IMG-800791,TKT-100975,PROD-1522,product_image_00791.jpg,Yes,Paint Chipping,No,No,,0.723,Approve Partial Refund,0.232,Yes,2024-02-20 12:59:22
+IMG-800792,TKT-100926,PROD-1232,product_image_00792.jpg,No,,No,No,Model: NP-5000X,0.782,No Action Needed,0.035,No,2024-05-19 07:23:47
+IMG-800793,TKT-101659,PROD-1522,product_image_00793.jpg,No,,Yes,No,Part Number: PN-88421,0.788,Approve Replacement,0.032,No,2024-04-10 11:44:52
+IMG-800794,TKT-101327,PROD-1522,product_image_00794.jpg,No,,No,No,Warranty: 12 months,0.761,No Action Needed,0.078,No,2024-01-04 15:42:54
+IMG-800795,TKT-101904,PROD-1816,product_image_00795.jpg,No,,No,No,Input: 110-240V,0.67,No Action Needed,0.037,Yes,2024-01-01 19:00:47
+IMG-800796,TKT-100327,PROD-1232,product_image_00796.jpg,No,,No,No,Max Capacity: 5TB,0.848,No Action Needed,0.09,No,2024-06-15 19:45:01
+IMG-800797,TKT-100474,PROD-1652,product_image_00797.jpg,No,,No,No,Warranty: 12 months,0.79,No Action Needed,0.055,No,2024-05-09 21:29:20
+IMG-800798,TKT-101311,PROD-1652,product_image_00798.jpg,No,,No,Yes,Component: Active Directory,0.775,Approve Replacement,0.098,No,2024-02-20 21:32:07
+IMG-800799,TKT-101808,PROD-1816,product_image_00799.jpg,No,,No,No,Made in China,0.894,No Action Needed,0.05,No,2024-06-06 00:58:11
+IMG-800800,TKT-100796,PROD-1739,product_image_00800.jpg,No,,No,No,,0.989,No Action Needed,0.048,No,2024-03-16 04:55:18
+IMG-800801,TKT-100421,PROD-1423,product_image_00801.jpg,Yes,Broken Screen,No,No,Input: 110-240V,0.725,Approve Refund,0.048,Yes,2024-03-24 17:07:26
+IMG-800802,TKT-100382,PROD-1232,product_image_00802.jpg,No,,No,No,Max Capacity: 5TB,0.821,No Action Needed,0.086,No,2024-05-26 02:23:25
+IMG-800803,TKT-100233,PROD-1423,product_image_00803.jpg,No,,No,No,Max Capacity: 5TB,0.893,No Action Needed,0.098,No,2024-02-13 04:16:06
+IMG-800804,TKT-101080,PROD-1232,product_image_00804.jpg,Yes,Water Damage,Yes,No,Made in China,0.929,Approve Replacement,0.12,No,2024-02-10 12:28:41
+IMG-800805,TKT-101202,PROD-1522,product_image_00805.jpg,No,,No,No,Max Capacity: 5TB,0.667,No Action Needed,0.019,Yes,2024-04-01 23:00:00
+IMG-800806,TKT-101264,PROD-1057,product_image_00806.jpg,No,,No,Yes,,0.657,Approve Replacement,0.08,Yes,2024-03-02 09:48:14
+IMG-800807,TKT-101445,PROD-1423,product_image_00807.jpg,No,,No,No,,0.749,No Action Needed,0.061,Yes,2024-05-20 22:08:13
+IMG-800808,TKT-101208,PROD-1522,product_image_00808.jpg,No,,No,No,Part Number: PN-88421,0.985,No Action Needed,0.033,No,2024-04-04 04:37:25
+IMG-800809,TKT-100241,PROD-1816,product_image_00809.jpg,No,,No,No,Warranty: 12 months,0.971,No Action Needed,0.015,No,2024-04-25 05:56:35
+IMG-800810,TKT-100764,PROD-1057,product_image_00810.jpg,No,,No,No,Made in China,0.811,No Action Needed,0.039,No,2024-02-26 19:47:40
+IMG-800811,TKT-101221,PROD-1057,product_image_00811.jpg,No,,No,No,Made in China,0.929,No Action Needed,0.045,No,2024-02-09 12:19:14
+IMG-800812,TKT-100380,PROD-1711,product_image_00812.jpg,No,,No,No,Warranty: 12 months,0.675,No Action Needed,0.02,Yes,2024-04-07 06:48:22
+IMG-800813,TKT-101136,PROD-1057,product_image_00813.jpg,No,,No,No,Warranty: 12 months,0.768,No Action Needed,0.081,No,2024-03-06 21:07:30
+IMG-800814,TKT-100383,PROD-1232,product_image_00814.jpg,No,,No,No,,0.977,No Action Needed,0.058,No,2024-01-17 03:06:22
+IMG-800815,TKT-101268,PROD-1739,product_image_00815.jpg,No,,No,No,,0.722,No Action Needed,0.088,Yes,2024-03-21 19:46:46
+IMG-800816,TKT-101949,PROD-1739,product_image_00816.jpg,No,,No,No,MFG: 2024-01,0.94,No Action Needed,0.055,No,2024-01-29 14:10:12
+IMG-800817,TKT-101669,PROD-1652,product_image_00817.jpg,No,,No,No,,0.776,No Action Needed,0.079,No,2024-04-08 05:52:00
+IMG-800818,TKT-101035,PROD-1711,product_image_00818.jpg,No,,No,No,Max Capacity: 5TB,0.815,No Action Needed,0.081,No,2024-01-27 13:57:31
+IMG-800819,TKT-100851,PROD-1711,product_image_00819.jpg,No,,No,No,Serial: SN-2024-001,0.73,No Action Needed,0.023,Yes,2024-04-05 15:03:25
+IMG-800820,TKT-101157,PROD-1739,product_image_00820.jpg,No,,No,No,,0.677,No Action Needed,0.074,Yes,2024-06-15 08:16:17
+IMG-800821,TKT-100451,PROD-1423,product_image_00821.jpg,No,,No,No,MFG: 2024-01,0.776,No Action Needed,0.018,No,2024-02-07 03:57:46
+IMG-800822,TKT-101101,PROD-1423,product_image_00822.jpg,No,,No,No,Max Capacity: 5TB,0.979,No Action Needed,0.096,No,2024-05-12 10:38:05
+IMG-800823,TKT-101158,PROD-1711,product_image_00823.jpg,No,,No,No,Serial: SN-2024-001,0.801,No Action Needed,0.039,No,2024-05-29 21:22:38
+IMG-800824,TKT-101172,PROD-1522,product_image_00824.jpg,No,,No,No,Input: 110-240V,0.667,No Action Needed,0.045,Yes,2024-01-01 16:15:02
+IMG-800825,TKT-101686,PROD-1232,product_image_00825.jpg,No,,No,No,Model: NP-5000X,0.715,No Action Needed,0.038,Yes,2024-05-19 15:53:10
+IMG-800826,TKT-101556,PROD-1711,product_image_00826.jpg,No,,No,No,Made in China,0.984,No Action Needed,0.032,No,2024-03-02 14:04:14
+IMG-800827,TKT-100209,PROD-1816,product_image_00827.jpg,No,,No,No,Model: NP-5000X,0.653,No Action Needed,0.054,Yes,2024-02-14 21:42:17
+IMG-800828,TKT-100921,PROD-1423,product_image_00828.jpg,No,,No,No,Serial: SN-2024-001,0.927,No Action Needed,0.048,No,2024-06-08 23:23:01
+IMG-800829,TKT-100899,PROD-1522,product_image_00829.jpg,No,,No,No,,0.814,No Action Needed,0.03,No,2024-01-13 01:31:35
+IMG-800830,TKT-100485,PROD-1816,product_image_00830.jpg,No,,No,No,,0.742,No Action Needed,0.078,Yes,2024-05-16 18:07:22
+IMG-800831,TKT-101204,PROD-1232,product_image_00831.jpg,No,,No,No,,0.946,No Action Needed,0.048,No,2024-03-08 16:15:35
+IMG-800832,TKT-101249,PROD-1652,product_image_00832.jpg,No,,No,No,Warranty: 12 months,0.797,No Action Needed,0.018,No,2024-02-15 18:26:21
+IMG-800833,TKT-101607,PROD-1816,product_image_00833.jpg,Yes,Missing Component,No,No,,0.729,Approve Partial Refund,0.248,Yes,2024-03-17 03:27:47
+IMG-800834,TKT-101167,PROD-1232,product_image_00834.jpg,No,,No,No,Component: Active Directory,0.801,No Action Needed,0.022,No,2024-03-07 02:20:18
+IMG-800835,TKT-101103,PROD-1057,product_image_00835.jpg,No,,No,No,WARNING: Do not expose to moisture,0.94,No Action Needed,0.015,No,2024-02-26 16:03:56
+IMG-800836,TKT-100592,PROD-1790,product_image_00836.jpg,No,,No,No,Input: 110-240V,0.906,No Action Needed,0.061,No,2024-06-21 01:34:26
+IMG-800837,TKT-101843,PROD-1522,product_image_00837.jpg,No,,No,No,Made in China,0.952,No Action Needed,0.061,No,2024-04-15 15:06:27
+IMG-800838,TKT-101881,PROD-1739,product_image_00838.jpg,No,,Yes,No,,0.817,Approve Replacement,0.038,No,2024-02-10 12:04:14
+IMG-800839,TKT-101775,PROD-1057,product_image_00839.jpg,No,,No,No,,0.808,No Action Needed,0.022,No,2024-05-24 12:02:13
+IMG-800840,TKT-100271,PROD-1816,product_image_00840.jpg,No,,No,No,Part Number: PN-88421,0.925,No Action Needed,0.079,No,2024-03-29 23:42:06
+IMG-800841,TKT-101696,PROD-1816,product_image_00841.jpg,No,,No,No,,0.87,No Action Needed,0.051,No,2024-05-12 16:46:30
+IMG-800842,TKT-101384,PROD-1652,product_image_00842.jpg,No,,No,No,Component: Active Directory,0.82,No Action Needed,0.037,No,2024-03-19 04:26:34
+IMG-800843,TKT-101295,PROD-1423,product_image_00843.jpg,No,,No,No,Made in China,0.685,No Action Needed,0.023,Yes,2024-06-04 05:05:16
+IMG-800844,TKT-100925,PROD-1522,product_image_00844.jpg,No,,No,No,Serial: SN-2024-001,0.945,No Action Needed,0.085,No,2024-01-24 08:52:12
+IMG-800845,TKT-100825,PROD-1878,product_image_00845.jpg,Yes,Shattered Glass,No,Yes,Part Number: PN-88421,0.738,Approve Refund,0.043,Yes,2024-02-22 23:39:38
+IMG-800846,TKT-100931,PROD-1711,product_image_00846.jpg,No,,No,No,Model: NP-5000X,0.934,No Action Needed,0.074,No,2024-04-04 23:17:28
+IMG-800847,TKT-101779,PROD-1522,product_image_00847.jpg,No,,No,No,,0.798,No Action Needed,0.052,No,2024-03-04 21:37:32
+IMG-800848,TKT-100938,PROD-1232,product_image_00848.jpg,No,,Yes,No,,0.897,Approve Replacement,0.085,No,2024-04-11 19:04:13
+IMG-800849,TKT-101629,PROD-1878,product_image_00849.jpg,Yes,Rust,No,No,Made in China,0.949,Approve Replacement,0.139,No,2024-06-04 17:08:40
+IMG-800850,TKT-101689,PROD-1816,product_image_00850.jpg,No,,No,No,Part Number: PN-88421,0.683,No Action Needed,0.016,Yes,2024-03-09 17:42:25
+IMG-800851,TKT-101696,PROD-1423,product_image_00851.jpg,No,,No,No,Component: Active Directory,0.744,No Action Needed,0.046,Yes,2024-03-25 18:13:04
+IMG-800852,TKT-100267,PROD-1790,product_image_00852.jpg,No,,No,No,,0.875,No Action Needed,0.084,No,2024-03-30 18:50:38
+IMG-800853,TKT-101614,PROD-1232,product_image_00853.jpg,No,,No,No,,0.873,No Action Needed,0.014,No,2024-06-13 16:00:02
+IMG-800854,TKT-101561,PROD-1739,product_image_00854.jpg,No,,No,No,Max Capacity: 5TB,0.806,No Action Needed,0.017,No,2024-06-03 01:02:29
+IMG-800855,TKT-100033,PROD-1522,product_image_00855.jpg,No,,No,No,,0.969,No Action Needed,0.042,No,2024-04-06 03:35:16
+IMG-800856,TKT-100323,PROD-1711,product_image_00856.jpg,No,,No,No,Made in China,0.865,No Action Needed,0.012,No,2024-01-20 18:50:47
+IMG-800857,TKT-100414,PROD-1057,product_image_00857.jpg,No,,No,No,,0.836,No Action Needed,0.018,No,2024-06-02 07:13:13
+IMG-800858,TKT-100618,PROD-1057,product_image_00858.jpg,No,,No,No,,0.713,No Action Needed,0.015,Yes,2024-05-30 17:28:08
+IMG-800859,TKT-101795,PROD-1423,product_image_00859.jpg,No,,Yes,Yes,Part Number: PN-88421,0.845,Approve Replacement,0.084,No,2024-03-13 00:55:20
+IMG-800860,TKT-100512,PROD-1522,product_image_00860.jpg,No,,No,Yes,Warranty: 12 months,0.9,Approve Replacement,0.066,No,2024-03-12 18:24:22
+IMG-800861,TKT-100106,PROD-1652,product_image_00861.jpg,No,,No,No,MFG: 2024-01,0.746,No Action Needed,0.072,Yes,2024-03-06 21:11:52
+IMG-800862,TKT-100879,PROD-1522,product_image_00862.jpg,No,,No,No,,0.824,No Action Needed,0.041,No,2024-05-04 18:13:22
+IMG-800863,TKT-100002,PROD-1816,product_image_00863.jpg,No,,No,No,Warranty: 12 months,0.674,No Action Needed,0.069,Yes,2024-01-02 00:37:31
+IMG-800864,TKT-101215,PROD-1816,product_image_00864.jpg,No,,No,No,Max Capacity: 5TB,0.752,No Action Needed,0.012,No,2024-05-08 08:08:19
+IMG-800865,TKT-100019,PROD-1739,product_image_00865.jpg,No,,No,No,Serial: SN-2024-001,0.913,No Action Needed,0.03,No,2024-02-14 11:20:57
+IMG-800866,TKT-101761,PROD-1652,product_image_00866.jpg,No,,Yes,No,Max Capacity: 5TB,0.982,Approve Replacement,0.03,No,2024-01-16 18:33:50
+IMG-800867,TKT-100145,PROD-1816,product_image_00867.jpg,No,,No,No,Serial: SN-2024-001,0.755,No Action Needed,0.05,No,2024-05-20 23:26:01
+IMG-800868,TKT-100211,PROD-1232,product_image_00868.jpg,Yes,Burn Mark,No,No,,0.669,Approve Partial Refund,0.12,Yes,2024-01-07 03:16:41
+IMG-800869,TKT-100280,PROD-1652,product_image_00869.jpg,No,,No,No,,0.859,No Action Needed,0.03,No,2024-01-20 02:58:57
+IMG-800870,TKT-101542,PROD-1057,product_image_00870.jpg,No,,No,No,Warranty: 12 months,0.809,No Action Needed,0.016,No,2024-01-30 23:20:03
+IMG-800871,TKT-100140,PROD-1878,product_image_00871.jpg,No,,No,No,Component: Active Directory,0.92,No Action Needed,0.023,No,2024-01-22 05:36:23
+IMG-800872,TKT-101331,PROD-1057,product_image_00872.jpg,No,,No,No,MFG: 2024-01,0.707,No Action Needed,0.093,Yes,2024-06-26 14:03:59
+IMG-800873,TKT-101286,PROD-1057,product_image_00873.jpg,No,,No,No,,0.882,No Action Needed,0.067,No,2024-02-08 18:34:04
+IMG-800874,TKT-101261,PROD-1711,product_image_00874.jpg,Yes,Missing Component,No,No,Serial: SN-2024-001,0.844,Approve Partial Refund,0.248,Yes,2024-04-10 15:30:09
+IMG-800875,TKT-100286,PROD-1522,product_image_00875.jpg,No,,No,No,Made in China,0.985,No Action Needed,0.072,No,2024-06-27 02:49:55
+IMG-800876,TKT-100719,PROD-1652,product_image_00876.jpg,No,,No,No,Warranty: 12 months,0.928,No Action Needed,0.05,No,2024-01-29 06:54:05
+IMG-800877,TKT-100507,PROD-1423,product_image_00877.jpg,No,,No,No,MFG: 2024-01,0.968,No Action Needed,0.095,No,2024-03-21 17:22:12
+IMG-800878,TKT-101133,PROD-1790,product_image_00878.jpg,No,,No,No,Component: Active Directory,0.673,No Action Needed,0.034,Yes,2024-01-29 18:54:05
+IMG-800879,TKT-100583,PROD-1739,product_image_00879.jpg,No,,No,No,,0.881,No Action Needed,0.037,No,2024-06-25 06:35:23
+IMG-800880,TKT-101348,PROD-1423,product_image_00880.jpg,No,,No,No,Component: Active Directory,0.945,No Action Needed,0.026,No,2024-04-11 07:13:48
+IMG-800881,TKT-101043,PROD-1816,product_image_00881.jpg,No,,No,No,,0.652,No Action Needed,0.082,Yes,2024-04-28 21:27:41
+IMG-800882,TKT-100605,PROD-1739,product_image_00882.jpg,No,,No,No,,0.912,No Action Needed,0.067,No,2024-03-09 10:23:40
+IMG-800883,TKT-101625,PROD-1816,product_image_00883.jpg,No,,No,No,Serial: SN-2024-001,0.684,No Action Needed,0.034,Yes,2024-05-10 23:31:04
+IMG-800884,TKT-100493,PROD-1711,product_image_00884.jpg,No,,No,No,Serial: SN-2024-001,0.792,No Action Needed,0.056,No,2024-06-27 04:52:28
+IMG-800885,TKT-101081,PROD-1739,product_image_00885.jpg,No,,No,No,,0.656,No Action Needed,0.023,Yes,2024-06-20 20:04:15
+IMG-800886,TKT-101912,PROD-1232,product_image_00886.jpg,No,,No,No,Component: Active Directory,0.754,No Action Needed,0.053,No,2024-04-15 00:12:47
+IMG-800887,TKT-100861,PROD-1232,product_image_00887.jpg,No,,No,No,Warranty: 12 months,0.82,No Action Needed,0.022,No,2024-04-27 11:15:02
+IMG-800888,TKT-101562,PROD-1711,product_image_00888.jpg,No,,Yes,No,,0.942,Approve Replacement,0.041,No,2024-02-18 12:08:43
+IMG-800889,TKT-101577,PROD-1522,product_image_00889.jpg,No,,No,No,Serial: SN-2024-001,0.792,No Action Needed,0.023,No,2024-04-13 10:40:45
+IMG-800890,TKT-100028,PROD-1423,product_image_00890.jpg,No,,No,No,Model: NP-5000X,0.767,No Action Needed,0.026,No,2024-01-30 02:37:59
+IMG-800891,TKT-101942,PROD-1652,product_image_00891.jpg,No,,No,No,Input: 110-240V,0.894,No Action Needed,0.07,No,2024-03-15 01:54:22
+IMG-800892,TKT-101571,PROD-1652,product_image_00892.jpg,Yes,Rust,No,No,,0.865,Approve Replacement,0.136,No,2024-06-26 20:06:01
+IMG-800893,TKT-100168,PROD-1878,product_image_00893.jpg,No,,No,No,Warranty: 12 months,0.949,No Action Needed,0.034,No,2024-01-16 01:21:26
+IMG-800894,TKT-100568,PROD-1522,product_image_00894.jpg,No,,No,No,Input: 110-240V,0.8,No Action Needed,0.016,No,2024-06-25 10:36:09
+IMG-800895,TKT-101886,PROD-1816,product_image_00895.jpg,No,,No,Yes,,0.834,Approve Replacement,0.015,No,2024-01-18 02:46:09
+IMG-800896,TKT-100318,PROD-1878,product_image_00896.jpg,Yes,Burn Mark,No,No,Serial: SN-2024-001,0.823,Approve Replacement,0.041,No,2024-05-09 09:29:20
+IMG-800897,TKT-100635,PROD-1652,product_image_00897.jpg,No,,No,Yes,,0.852,Approve Replacement,0.075,No,2024-03-14 17:34:08
+IMG-800898,TKT-101733,PROD-1816,product_image_00898.jpg,No,,No,No,Serial: SN-2024-001,0.764,No Action Needed,0.096,No,2024-06-15 20:56:43
+IMG-800899,TKT-101893,PROD-1652,product_image_00899.jpg,No,,No,No,Component: Active Directory,0.778,No Action Needed,0.019,No,2024-05-20 06:19:20
+IMG-800900,TKT-101246,PROD-1739,product_image_00900.jpg,No,,No,No,Warranty: 12 months,0.809,No Action Needed,0.087,No,2024-02-20 18:32:25
+IMG-800901,TKT-100244,PROD-1739,product_image_00901.jpg,No,,No,No,,0.985,No Action Needed,0.07,No,2024-06-24 16:07:27
+IMG-800902,TKT-101436,PROD-1739,product_image_00902.jpg,No,,No,No,Part Number: PN-88421,0.709,No Action Needed,0.068,Yes,2024-05-18 09:08:08
+IMG-800903,TKT-101071,PROD-1878,product_image_00903.jpg,No,,No,No,,0.859,No Action Needed,0.09,No,2024-03-17 03:12:40
+IMG-800904,TKT-101476,PROD-1423,product_image_00904.jpg,No,,No,No,Warranty: 12 months,0.782,No Action Needed,0.076,No,2024-02-27 17:23:57
+IMG-800905,TKT-101535,PROD-1423,product_image_00905.jpg,No,,No,Yes,,0.72,Approve Replacement,0.093,Yes,2024-03-14 03:45:03
+IMG-800906,TKT-100241,PROD-1739,product_image_00906.jpg,No,,No,No,Made in China,0.989,No Action Needed,0.087,No,2024-01-26 07:15:40
+IMG-800907,TKT-100557,PROD-1878,product_image_00907.jpg,No,,No,No,Component: Active Directory,0.665,No Action Needed,0.066,Yes,2024-03-30 07:56:01
+IMG-800908,TKT-101285,PROD-1522,product_image_00908.jpg,No,,No,No,Input: 110-240V,0.786,No Action Needed,0.095,No,2024-02-13 14:05:15
+IMG-800909,TKT-100737,PROD-1739,product_image_00909.jpg,No,,No,No,Component: Active Directory,0.968,No Action Needed,0.084,No,2024-02-15 05:19:17
+IMG-800910,TKT-100341,PROD-1232,product_image_00910.jpg,No,,No,No,Serial: SN-2024-001,0.712,No Action Needed,0.061,Yes,2024-06-07 20:40:00
+IMG-800911,TKT-101831,PROD-1790,product_image_00911.jpg,No,,No,No,Serial: SN-2024-001,0.832,No Action Needed,0.055,No,2024-04-30 08:17:05
+IMG-800912,TKT-100467,PROD-1878,product_image_00912.jpg,No,,Yes,Yes,Model: NP-5000X,0.854,Approve Replacement,0.041,No,2024-06-28 06:36:46
+IMG-800913,TKT-100500,PROD-1739,product_image_00913.jpg,No,,No,No,Made in China,0.91,No Action Needed,0.029,No,2024-06-17 03:02:56
+IMG-800914,TKT-101884,PROD-1057,product_image_00914.jpg,No,,No,No,Model: NP-5000X,0.857,No Action Needed,0.018,No,2024-02-04 00:33:37
+IMG-800915,TKT-101132,PROD-1652,product_image_00915.jpg,No,,No,No,MFG: 2024-01,0.928,No Action Needed,0.098,No,2024-06-07 00:59:03
+IMG-800916,TKT-100852,PROD-1232,product_image_00916.jpg,No,,No,No,Serial: SN-2024-001,0.878,No Action Needed,0.083,No,2024-04-25 18:17:47
+IMG-800917,TKT-101170,PROD-1232,product_image_00917.jpg,No,,Yes,No,Model: NP-5000X,0.962,Approve Replacement,0.079,No,2024-04-21 12:10:22
+IMG-800918,TKT-100367,PROD-1816,product_image_00918.jpg,No,,No,Yes,,0.86,Approve Replacement,0.096,No,2024-01-15 20:42:11
+IMG-800919,TKT-100094,PROD-1652,product_image_00919.jpg,Yes,Broken Screen,No,No,,0.909,Approve Refund,0.203,Yes,2024-05-25 22:07:02
+IMG-800920,TKT-101773,PROD-1423,product_image_00920.jpg,No,,Yes,No,,0.803,Approve Replacement,0.021,No,2024-01-29 21:31:02
+IMG-800921,TKT-100636,PROD-1232,product_image_00921.jpg,No,,No,No,Max Capacity: 5TB,0.715,No Action Needed,0.053,Yes,2024-05-21 01:18:20
+IMG-800922,TKT-100016,PROD-1232,product_image_00922.jpg,No,,No,No,Component: Active Directory,0.81,No Action Needed,0.054,No,2024-02-02 02:11:50
+IMG-800923,TKT-101606,PROD-1423,product_image_00923.jpg,No,,No,No,,0.897,No Action Needed,0.093,No,2024-03-10 11:39:14
+IMG-800924,TKT-100496,PROD-1711,product_image_00924.jpg,No,,No,No,Max Capacity: 5TB,0.983,No Action Needed,0.08,No,2024-01-11 18:26:34
+IMG-800925,TKT-101582,PROD-1816,product_image_00925.jpg,No,,No,No,,0.722,No Action Needed,0.072,Yes,2024-01-16 18:36:23
+IMG-800926,TKT-101119,PROD-1816,product_image_00926.jpg,Yes,Dent,No,No,Made in China,0.762,Approve Replacement,0.054,No,2024-05-13 01:07:35
+IMG-800927,TKT-100048,PROD-1816,product_image_00927.jpg,No,,No,No,Model: NP-5000X,0.876,No Action Needed,0.031,No,2024-04-12 21:53:36
+IMG-800928,TKT-101947,PROD-1232,product_image_00928.jpg,No,,No,No,Made in China,0.848,No Action Needed,0.052,No,2024-04-30 18:10:21
+IMG-800929,TKT-101738,PROD-1423,product_image_00929.jpg,No,,No,No,Input: 110-240V,0.796,No Action Needed,0.027,No,2024-01-29 23:29:45
+IMG-800930,TKT-100487,PROD-1652,product_image_00930.jpg,No,,No,No,Model: NP-5000X,0.692,No Action Needed,0.021,Yes,2024-03-31 09:40:40
+IMG-800931,TKT-101991,PROD-1057,product_image_00931.jpg,No,,Yes,No,,0.961,Approve Replacement,0.054,No,2024-03-04 02:31:47
+IMG-800932,TKT-100190,PROD-1739,product_image_00932.jpg,No,,No,No,,0.687,No Action Needed,0.045,Yes,2024-01-11 12:22:07
+IMG-800933,TKT-101837,PROD-1878,product_image_00933.jpg,No,,No,No,Part Number: PN-88421,0.85,No Action Needed,0.07,No,2024-06-13 23:12:49
+IMG-800934,TKT-100938,PROD-1522,product_image_00934.jpg,No,,No,No,Input: 110-240V,0.867,No Action Needed,0.073,No,2024-06-14 14:43:34
+IMG-800935,TKT-100273,PROD-1652,product_image_00935.jpg,No,,No,No,Component: Active Directory,0.984,No Action Needed,0.077,No,2024-05-18 21:23:48
+IMG-800936,TKT-100127,PROD-1652,product_image_00936.jpg,No,,No,Yes,Warranty: 12 months,0.787,Approve Replacement,0.099,No,2024-05-18 07:38:19
+IMG-800937,TKT-100484,PROD-1423,product_image_00937.jpg,No,,Yes,No,Part Number: PN-88421,0.714,Approve Replacement,0.013,Yes,2024-01-21 03:10:34
+IMG-800938,TKT-101896,PROD-1652,product_image_00938.jpg,No,,No,No,,0.964,No Action Needed,0.011,No,2024-05-30 16:13:56
+IMG-800939,TKT-101506,PROD-1232,product_image_00939.jpg,No,,No,No,WARNING: Do not expose to moisture,0.985,No Action Needed,0.015,No,2024-05-25 20:32:50
+IMG-800940,TKT-100478,PROD-1522,product_image_00940.jpg,No,,No,No,,0.951,No Action Needed,0.011,No,2024-05-19 08:08:03
+IMG-800941,TKT-100278,PROD-1790,product_image_00941.jpg,No,,No,No,Serial: SN-2024-001,0.823,No Action Needed,0.055,No,2024-06-04 10:55:39
+IMG-800942,TKT-100336,PROD-1711,product_image_00942.jpg,No,,Yes,No,Made in China,0.681,Approve Replacement,0.033,Yes,2024-03-28 15:59:32
+IMG-800943,TKT-100247,PROD-1878,product_image_00943.jpg,Yes,Burn Mark,No,No,,0.651,Approve Partial Refund,0.044,Yes,2024-01-18 00:09:15
+IMG-800944,TKT-100425,PROD-1711,product_image_00944.jpg,Yes,Shattered Glass,No,No,Serial: SN-2024-001,0.65,Approve Refund,0.225,Yes,2024-05-18 20:19:33
+IMG-800945,TKT-100185,PROD-1057,product_image_00945.jpg,No,,No,No,,0.814,No Action Needed,0.038,No,2024-01-24 23:21:25
+IMG-800946,TKT-100623,PROD-1790,product_image_00946.jpg,No,,No,No,Part Number: PN-88421,0.913,No Action Needed,0.082,No,2024-01-30 05:25:58
+IMG-800947,TKT-100303,PROD-1522,product_image_00947.jpg,No,,Yes,No,,0.773,Approve Replacement,0.047,No,2024-06-15 13:02:30
+IMG-800948,TKT-101983,PROD-1232,product_image_00948.jpg,Yes,Rust,No,No,WARNING: Do not expose to moisture,0.985,Approve Partial Refund,0.104,No,2024-01-07 03:39:23
+IMG-800949,TKT-100532,PROD-1057,product_image_00949.jpg,No,,No,No,Made in China,0.869,No Action Needed,0.069,No,2024-03-07 08:56:54
+IMG-800950,TKT-101750,PROD-1711,product_image_00950.jpg,No,,No,No,Input: 110-240V,0.835,No Action Needed,0.077,No,2024-02-17 16:13:28
+IMG-800951,TKT-100511,PROD-1522,product_image_00951.jpg,No,,No,No,Warranty: 12 months,0.679,No Action Needed,0.052,Yes,2024-04-28 16:18:23
+IMG-800952,TKT-100248,PROD-1739,product_image_00952.jpg,No,,No,No,MFG: 2024-01,0.663,No Action Needed,0.093,Yes,2024-05-02 21:36:46
+IMG-800953,TKT-100267,PROD-1816,product_image_00953.jpg,No,,No,No,,0.827,No Action Needed,0.027,No,2024-06-24 13:16:59
+IMG-800954,TKT-100762,PROD-1522,product_image_00954.jpg,No,,No,No,WARNING: Do not expose to moisture,0.867,No Action Needed,0.042,No,2024-04-20 15:51:29
+IMG-800955,TKT-101878,PROD-1522,product_image_00955.jpg,No,,No,No,Serial: SN-2024-001,0.914,No Action Needed,0.066,No,2024-04-06 15:38:45
+IMG-800956,TKT-100404,PROD-1711,product_image_00956.jpg,No,,No,No,,0.909,No Action Needed,0.074,No,2024-02-02 16:04:13
+IMG-800957,TKT-100188,PROD-1232,product_image_00957.jpg,No,,No,No,Max Capacity: 5TB,0.979,No Action Needed,0.051,No,2024-04-29 18:41:53
+IMG-800958,TKT-100103,PROD-1057,product_image_00958.jpg,No,,No,No,,0.95,No Action Needed,0.042,No,2024-06-22 11:25:11
+IMG-800959,TKT-100887,PROD-1652,product_image_00959.jpg,No,,Yes,No,Made in China,0.657,Approve Replacement,0.067,Yes,2024-02-15 10:15:01
+IMG-800960,TKT-101399,PROD-1652,product_image_00960.jpg,No,,No,Yes,MFG: 2024-01,0.773,Approve Replacement,0.064,No,2024-05-06 15:26:08
+IMG-800961,TKT-101860,PROD-1057,product_image_00961.jpg,No,,No,No,Max Capacity: 5TB,0.758,No Action Needed,0.041,No,2024-04-22 09:12:52
+IMG-800962,TKT-101809,PROD-1057,product_image_00962.jpg,No,,No,No,Component: Active Directory,0.891,No Action Needed,0.042,No,2024-01-20 21:50:48
+IMG-800963,TKT-101263,PROD-1816,product_image_00963.jpg,No,,No,No,Max Capacity: 5TB,0.757,No Action Needed,0.071,No,2024-05-17 07:04:56
+IMG-800964,TKT-100843,PROD-1878,product_image_00964.jpg,No,,No,No,Serial: SN-2024-001,0.741,No Action Needed,0.048,Yes,2024-02-25 06:21:52
+IMG-800965,TKT-100572,PROD-1652,product_image_00965.jpg,No,,No,No,MFG: 2024-01,0.734,No Action Needed,0.068,Yes,2024-06-07 09:54:30
+IMG-800966,TKT-101316,PROD-1878,product_image_00966.jpg,No,,Yes,No,Input: 110-240V,0.983,Approve Replacement,0.064,No,2024-04-02 09:09:19
+IMG-800967,TKT-101627,PROD-1739,product_image_00967.jpg,Yes,Rust,No,Yes,,0.844,Approve Partial Refund,0.242,Yes,2024-04-07 11:39:24
+IMG-800968,TKT-100735,PROD-1711,product_image_00968.jpg,No,,No,No,Max Capacity: 5TB,0.958,No Action Needed,0.059,No,2024-06-07 20:39:13
+IMG-800969,TKT-100704,PROD-1790,product_image_00969.jpg,No,,No,No,Made in China,0.821,No Action Needed,0.085,No,2024-05-19 04:04:52
+IMG-800970,TKT-100553,PROD-1057,product_image_00970.jpg,No,,No,No,Component: Active Directory,0.721,No Action Needed,0.014,Yes,2024-03-25 03:01:00
+IMG-800971,TKT-100448,PROD-1739,product_image_00971.jpg,No,,No,No,,0.854,No Action Needed,0.058,No,2024-03-29 15:57:22
+IMG-800972,TKT-101594,PROD-1423,product_image_00972.jpg,No,,No,No,Max Capacity: 5TB,0.987,No Action Needed,0.034,No,2024-04-28 13:21:53
+IMG-800973,TKT-101084,PROD-1232,product_image_00973.jpg,No,,No,No,,0.865,No Action Needed,0.023,No,2024-04-21 07:44:45
+IMG-800974,TKT-100476,PROD-1057,product_image_00974.jpg,No,,No,No,MFG: 2024-01,0.941,No Action Needed,0.072,No,2024-05-02 23:44:28
+IMG-800975,TKT-100545,PROD-1878,product_image_00975.jpg,No,,No,No,,0.828,No Action Needed,0.012,No,2024-02-07 04:19:00
+IMG-800976,TKT-101878,PROD-1739,product_image_00976.jpg,No,,No,No,,0.72,No Action Needed,0.027,Yes,2024-03-19 02:49:10
+IMG-800977,TKT-101941,PROD-1816,product_image_00977.jpg,No,,No,No,Made in China,0.909,No Action Needed,0.055,No,2024-05-01 07:47:54
+IMG-800978,TKT-100726,PROD-1057,product_image_00978.jpg,No,,No,No,Component: Active Directory,0.685,No Action Needed,0.076,Yes,2024-05-23 03:48:23
+IMG-800979,TKT-100651,PROD-1232,product_image_00979.jpg,No,,No,No,,0.9,No Action Needed,0.033,No,2024-04-30 02:41:56
+IMG-800980,TKT-100057,PROD-1232,product_image_00980.jpg,No,,No,No,,0.689,No Action Needed,0.021,Yes,2024-02-15 12:17:03
+IMG-800981,TKT-101154,PROD-1057,product_image_00981.jpg,No,,No,No,MFG: 2024-01,0.699,No Action Needed,0.1,Yes,2024-04-27 22:13:52
+IMG-800982,TKT-101713,PROD-1711,product_image_00982.jpg,Yes,Crack,No,No,Max Capacity: 5TB,0.989,Approve Replacement,0.087,No,2024-02-15 22:39:02
+IMG-800983,TKT-100077,PROD-1522,product_image_00983.jpg,Yes,Scratches,No,No,MFG: 2024-01,0.883,Approve Partial Refund,0.176,Yes,2024-06-06 20:42:34
+IMG-800984,TKT-100040,PROD-1878,product_image_00984.jpg,No,,No,No,Part Number: PN-88421,0.833,No Action Needed,0.016,No,2024-02-28 05:10:08
+IMG-800985,TKT-101879,PROD-1790,product_image_00985.jpg,No,,No,No,Warranty: 12 months,0.87,No Action Needed,0.097,No,2024-06-23 07:45:37
+IMG-800986,TKT-100697,PROD-1057,product_image_00986.jpg,No,,No,No,,0.905,No Action Needed,0.075,No,2024-03-07 12:06:41
+IMG-800987,TKT-101729,PROD-1232,product_image_00987.jpg,No,,No,No,Warranty: 12 months,0.688,No Action Needed,0.034,Yes,2024-06-28 03:40:31
+IMG-800988,TKT-101201,PROD-1057,product_image_00988.jpg,No,,No,No,,0.672,No Action Needed,0.074,Yes,2024-02-24 21:22:08
+IMG-800989,TKT-101733,PROD-1878,product_image_00989.jpg,No,,No,No,,0.79,No Action Needed,0.023,No,2024-04-02 04:00:29
+IMG-800990,TKT-101967,PROD-1522,product_image_00990.jpg,No,,No,No,Made in China,0.662,No Action Needed,0.069,Yes,2024-05-20 10:48:09
+IMG-800991,TKT-101200,PROD-1522,product_image_00991.jpg,No,,No,No,Part Number: PN-88421,0.66,No Action Needed,0.018,Yes,2024-05-07 02:11:09
+IMG-800992,TKT-100279,PROD-1057,product_image_00992.jpg,No,,No,No,,0.703,No Action Needed,0.03,Yes,2024-03-15 22:45:48
+IMG-800993,TKT-100894,PROD-1711,product_image_00993.jpg,No,,No,No,Warranty: 12 months,0.99,No Action Needed,0.012,No,2024-01-19 01:24:22
+IMG-800994,TKT-101448,PROD-1878,product_image_00994.jpg,No,,No,No,Component: Active Directory,0.957,No Action Needed,0.093,No,2024-03-01 11:14:33
+IMG-800995,TKT-101611,PROD-1232,product_image_00995.jpg,Yes,Missing Component,No,No,Warranty: 12 months,0.952,Approve Replacement,0.156,Yes,2024-03-10 05:34:40
+IMG-800996,TKT-100774,PROD-1423,product_image_00996.jpg,No,,No,No,,0.983,No Action Needed,0.073,No,2024-04-24 23:49:25
+IMG-800997,TKT-100603,PROD-1057,product_image_00997.jpg,No,,No,No,Model: NP-5000X,0.827,No Action Needed,0.063,No,2024-02-21 09:00:50
+IMG-800998,TKT-101943,PROD-1790,product_image_00998.jpg,No,,No,No,Component: Active Directory,0.668,No Action Needed,0.078,Yes,2024-06-02 10:28:04
+IMG-800999,TKT-100066,PROD-1057,product_image_00999.jpg,No,,No,No,Component: Active Directory,0.88,No Action Needed,0.027,No,2024-01-06 22:02:12

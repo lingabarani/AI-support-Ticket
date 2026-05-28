@@ -10,6 +10,10 @@ const productProofAnalysisSchema = new mongoose.Schema({
   confidence: { type: Number, default: 0 },
   recommendedAction: String,
   provider: { type: String, default: 'rules_ready' },
+  fileMetadata: mongoose.Schema.Types.Mixed,
+  analysisPlaceholder: mongoose.Schema.Types.Mixed,
+  supportedProofTypes: [String],
+  metadata: mongoose.Schema.Types.Mixed,
 }, { timestamps: true, collection: 'product_proof_analyses' });
 
 module.exports = mongoose.model('ProductProofAnalysis', productProofAnalysisSchema);

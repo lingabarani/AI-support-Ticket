@@ -18,6 +18,9 @@ export default function DatasetManagement() {
   const [dragging, setDragging] = useState(false);
   const [progress, setProgress] = useState(0);
   const [summary, setSummary] = useState(null);
+  const [datasetHealth, setDatasetHealth] = useState(null);
+  const [syncInstructions, setSyncInstructions] = useState([]);
+  const [lastSynced, setLastSynced] = useState(null);
   const [uploads, setUploads] = useState([]);
   const [previewRows, setPreviewRows] = useState([]);
   const [errors, setErrors] = useState([]);
@@ -38,8 +41,54 @@ export default function DatasetManagement() {
     }
   };
 
+  const loadHealth = async () => {
+    try {
+      const response = await datasetApi.health();
+      setDatasetHealth(response);
+      setSyncInstructions(response?.knowledgeBaseDocs ? [
+        'Store all KB artifacts in the backend knowledge-base folder.',
+        'Upload to S3 using the Upload to S3 button.',
+        'Confirm the dataset health status and required knowledge base files.',
+      ] : []);
+      setLastSynced(new Date().toISOString());
+    } catch (error) {
+      setToast(error.message || 'Unable to load dataset health.');
+    }
+  };
+
+  const importAllDatasets = async () => {
+    setLoading(true);
+    try {
+      const response = await datasetApi.importAll();
+      setToast('Datasets imported to DynamoDB.');
+      setSummary(response);
+      await loadHealth();
+      return response;
+    } catch (error) {
+      setToast(error.message || 'Import failed.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const uploadAllToS3 = async () => {
+    setLoading(true);
+    try {
+      const response = await datasetApi.uploadS3();
+      setToast('Datasets uploaded to S3.');
+      setSummary(response);
+      await loadHealth();
+      return response;
+    } catch (error) {
+      setToast(error.message || 'S3 upload failed.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     loadUploads();
+    loadHealth();
   }, []);
 
   const acceptFile = (selected) => {
@@ -177,6 +226,73 @@ export default function DatasetManagement() {
             )}
           </section>
         </div>
+
+        <section className="card-glass rounded-xl p-5">
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <div>
+              <h2 className="text-sm font-semibold text-white">Dataset Health</h2>
+              <p className="text-xs text-slate-400">Detected datasets, row counts, and validation status.</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <button type="button" onClick={importAllDatasets} className="btn-secondary rounded-xl px-4 py-2 text-sm">Import to DynamoDB</button>
+              <button type="button" onClick={uploadAllToS3} className="btn-secondary rounded-xl px-4 py-2 text-sm">Upload to S3</button>
+            </div>
+          </div>
+          {datasetHealth ? (
+            <div className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-xs text-slate-400">Datasets Detected</p>
+                  <p className="mt-2 text-2xl font-bold text-white">{datasetHealth.datasets?.length || 0}</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-xs text-slate-400">Last Synced</p>
+                  <p className="mt-2 text-sm text-white">{lastSynced ? new Date(lastSynced).toLocaleString() : '-'}</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-xs text-slate-400">Knowledge Base Files</p>
+                  <p className="mt-2 text-sm text-white">{Object.values(datasetHealth.knowledgeBaseDocs || {}).filter(Boolean).length}/3 ready</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-xs text-slate-400">Manifest</p>
+                  <p className="mt-2 text-sm text-white">{datasetHealth.manifestAvailable ? 'Available' : 'Missing'}</p>
+                </div>
+              </div>
+              <div className="overflow-x-auto rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="text-slate-400">
+                      <th className="p-3">Dataset</th>
+                      <th className="p-3">Rows</th>
+                      <th className="p-3">Valid</th>
+                      <th className="p-3">Invalid</th>
+                      <th className="p-3">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(datasetHealth.datasets || []).map((item) => (
+                      <tr key={item.datasetName} className="border-t border-white/10">
+                        <td className="p-3 text-slate-200">{item.datasetName}</td>
+                        <td className="p-3 text-slate-200">{item.totalRows}</td>
+                        <td className="p-3 text-slate-200">{item.validRows}</td>
+                        <td className="p-3 text-slate-200">{item.invalidRows}</td>
+                        <td className="p-3 text-slate-200">{item.available ? 'Available' : 'Missing'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                <h3 className="text-sm font-semibold text-white">Knowledge Base Sync Instructions</h3>
+                <div className="mt-2 space-y-2 text-sm text-slate-300">
+                  {syncInstructions.length ? syncInstructions.map((line, index) => <p key={index}>{line}</p>) : <p>No instructions available yet.</p>}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 text-sm text-slate-400">Loading dataset health...</div>
+          )}
+        </section>
 
         <section className="card-glass rounded-xl p-5">
           <div className="mb-4 flex items-center justify-between">

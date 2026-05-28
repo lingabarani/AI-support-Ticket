@@ -9,12 +9,16 @@ import { enterpriseApi } from '../services/api';
 const toCardDecision = (item) => ({
   title: item.title,
   ticketId: item.ticketId,
-  decision: item.decision?.autoResolved ? 'auto_resolve' : item.decision?.escalationRequired ? 'escalate' : 'agent_review',
+  decision: item.autoResolved || item.decision?.autoResolved ? 'auto_resolve' : item.escalationRequired || item.decision?.escalationRequired ? 'escalate' : item.decision || 'agent_review',
   riskScore: item.riskScore || 0,
-  owner: item.owner || item.decision?.assignedTeam || 'Support Agent',
+  owner: item.owner || item.assignedTeam || item.decision?.assignedTeam || 'Support Agent',
   slaStatus: item.sla?.status || 'on_track',
-  reasons: [item.decision?.reason].filter(Boolean),
-  actions: item.nextActions || [item.decision?.action].filter(Boolean),
+  confidence: item.confidence,
+  recommendation: item.recommendation,
+  nextAction: item.nextAction,
+  supervisorEscalationStatus: item.supervisorEscalationStatus,
+  reasons: [item.recommendation || item.decision?.reason].filter(Boolean),
+  actions: item.nextActions || [item.nextAction || item.decision?.action].filter(Boolean),
 });
 
 const EmptyState = ({ message }) => (
@@ -43,7 +47,8 @@ export default function AICommandCenter() {
     return () => { mounted = false; };
   }, []);
 
-  const decisions = command.decisions || [];
+  const decisions = (command.aiDecisions?.length ? command.aiDecisions : command.decisions) || [];
+  const activeWorkflow = command.workflows?.[0];
   const metrics = command.metrics || {};
   const averageRisk = Math.round(decisions.reduce((sum, item) => sum + Number(item.riskScore || 0), 0) / Math.max(decisions.length, 1));
 
@@ -73,7 +78,7 @@ export default function AICommandCenter() {
           <KpiCard title="Average Risk" value={`${averageRisk}/100`} icon={Gauge} color="amber" subtitle="Decision engine score" />
         </div>
 
-        <AgentWorkflowTimeline />
+        <AgentWorkflowTimeline steps={activeWorkflow?.steps} />
 
         <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.2fr_0.8fr]">
           <section className="rounded-xl border border-white/10 bg-white/[0.035] p-5">
@@ -100,9 +105,10 @@ export default function AICommandCenter() {
             <div className="space-y-3">
               {[
                 { label: 'Highest risk ticket', value: decisions[0]?.ticketId || 'None' },
-                { label: 'Primary owner', value: metrics.escalated ? 'Team Manager' : 'Support Agent' },
+                { label: 'Primary owner', value: decisions[0]?.assignedTeam || (metrics.escalated ? 'Team Manager' : 'Support Agent') },
                 { label: 'Supervisor queue', value: metrics.supervisorQueue || 0 },
-                { label: 'Governance state', value: 'Policy checks active' },
+                { label: 'Escalation status', value: decisions[0]?.supervisorEscalationStatus || 'not_required' },
+                { label: 'AI confidence', value: decisions[0]?.confidence ? `${Math.round(decisions[0].confidence * 100)}%` : 'Pending' },
               ].map((row) => (
                 <div key={row.label} className="flex items-center justify-between rounded-lg bg-black/20 px-3 py-3">
                   <span className="text-xs text-slate-400">{row.label}</span>
@@ -114,7 +120,7 @@ export default function AICommandCenter() {
               <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-cyan-100">
                 <Activity size={15} /> Next action
               </div>
-              <p className="text-sm leading-6 text-slate-300">{decisions[0]?.nextActions?.join(', ') || 'No active queue item.'}</p>
+              <p className="text-sm leading-6 text-slate-300">{decisions[0]?.nextAction || decisions[0]?.nextActions?.join(', ') || 'No active queue item.'}</p>
             </div>
           </section>
         </div>

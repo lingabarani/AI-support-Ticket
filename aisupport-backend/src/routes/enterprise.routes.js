@@ -12,10 +12,26 @@ const { analyzeRootCause } = require('../services/rootCauseAnalyzer');
 const { buildAutomationInsights } = require('../services/smartAutomationService');
 const { readAuditEvents, writeAuditEvent } = require('../services/auditLogService');
 const { runSupervisorWorkflow } = require('../services/agents/supervisorAgent');
+const { runMultiAgentWorkflow } = require('../services/multiAgentOrchestrator');
+const {
+  getDynamoTables,
+  isDynamoDbProvider,
+  scanTable,
+} = require('../services/dynamoDbService');
 
 const isDbConnected = () => mongoose.connection.readyState === 1;
 
 const loadLiveTickets = async (limit = 100) => {
+  if (isDynamoDbProvider()) {
+    try {
+      return (await scanTable(getDynamoTables().tickets))
+        .sort((a, b) => new Date(b.ticket_created_date || b.created_at || 0) - new Date(a.ticket_created_date || a.created_at || 0))
+        .slice(0, limit);
+    } catch {
+      console.error('DynamoDB command center ticket load failed; falling back to MongoDB.');
+    }
+  }
+
   if (!isDbConnected()) return [];
   return Ticket.find({})
     .sort({ ticket_created_date: -1, createdAt: -1 })
@@ -25,12 +41,31 @@ const loadLiveTickets = async (limit = 100) => {
 };
 
 const sourceMeta = (tickets) => ({
-  source: isDbConnected() ? 'mongodb' : 'database_unavailable',
+  source: isDynamoDbProvider() ? 'dynamodb' : isDbConnected() ? 'mongodb' : 'database_unavailable',
   empty: tickets.length === 0,
 });
 
 router.get('/command-center', async (req, res) => {
   const tickets = await loadLiveTickets(Number(req.query.limit) || 100);
+  const dynamoAiResults = isDynamoDbProvider()
+    ? await scanTable(getDynamoTables().aiResults).catch(() => [])
+    : [];
+  const latestWorkflows = isDynamoDbProvider()
+    ? dynamoAiResults
+      .filter((item) => item.result_type === 'multi_agent_workflow')
+      .sort((a, b) => new Date(b.created_at || b.timestamp || 0) - new Date(a.created_at || a.timestamp || 0))
+      .slice(0, 10)
+    : isDbConnected()
+      ? await AgentWorkflow.find({}).sort({ createdAt: -1 }).limit(10).lean()
+      : [];
+  const latestAiDecisions = isDynamoDbProvider()
+    ? dynamoAiResults
+      .filter((item) => item.finalDecision || item.analysis)
+      .sort((a, b) => new Date(b.created_at || b.timestamp || 0) - new Date(a.created_at || a.timestamp || 0))
+      .slice(0, 30)
+    : isDbConnected()
+      ? await AIDecision.find({}).sort({ createdAt: -1 }).limit(30).lean()
+      : [];
   const ranked = rankTicketsForAction(tickets);
   const decisions = ranked.slice(0, 30).map(({ ticket, decision }) => ({
     ticketId: ticket.ticket_id || ticket.ticketId,
@@ -42,6 +77,10 @@ router.get('/command-center', async (req, res) => {
     sla: decision.sla,
     owner: decision.owner,
     nextActions: decision.nextActions,
+    confidence: decision.policy?.confidence || 0.78,
+    recommendation: decision.policy?.reason || decision.nextActions?.[0],
+    nextAction: decision.nextActions?.[0] || decision.policy?.action,
+    supervisorEscalationStatus: decision.policy?.escalationRequired ? 'required' : 'not_required',
   }));
   const autoResolved = decisions.filter((item) => item.decision.autoResolved).length;
   const escalated = decisions.filter((item) => item.decision.escalationRequired).length;
@@ -63,6 +102,78 @@ router.get('/command-center', async (req, res) => {
     },
     slaSummary: summarizeSlaQueue(tickets),
     decisions,
+    aiDecisions: latestAiDecisions.map((decision) => ({
+      ticketId: decision.ticket_id,
+      decision: decision.finalDecision?.decision || decision.decision,
+      confidence: decision.finalDecision?.confidence || decision.confidence || decision.analysis?.confidenceScore,
+      recommendation: decision.finalDecision?.reason || decision.reason || decision.analysis?.recommendedAction,
+      nextAction: decision.finalDecision?.action || decision.action || decision.analysis?.recommendedAction,
+      assignedTeam: decision.finalDecision?.assignedTeam || decision.assignedTeam || decision.analysis?.escalationTeam,
+      autoResolved: decision.finalDecision?.autoResolved ?? decision.autoResolved,
+      escalationRequired: decision.finalDecision?.escalationRequired ?? decision.escalationRequired ?? decision.analysis?.escalationNeeded,
+      supervisorEscalationStatus: (decision.finalDecision?.escalationRequired ?? decision.escalationRequired ?? decision.analysis?.escalationNeeded) ? 'required' : 'not_required',
+      riskScore: decision.finalDecision?.riskScore || decision.riskScore,
+    })),
+    workflows: latestWorkflows.map((workflow) => ({
+      ticketId: workflow.ticket_id,
+      status: workflow.status,
+      summary: workflow.summary,
+      steps: workflow.steps,
+      createdAt: workflow.createdAt || workflow.created_at || workflow.timestamp,
+    })),
+  });
+});
+
+router.post('/workflows/run', async (req, res) => {
+  const workflow = await runMultiAgentWorkflow({
+    ticket: req.body.ticket || req.body,
+    relatedTickets: req.body.relatedTickets || [],
+    actor: req.headers['x-user-email'] || req.body.actor || 'system',
+  });
+
+  res.status(201).json({ success: true, workflow });
+});
+
+router.get('/workflows/:ticketId', async (req, res) => {
+  if (isDynamoDbProvider()) {
+    const ticketId = req.params.ticketId;
+    const aiResults = await scanTable(getDynamoTables().aiResults).catch(() => []);
+    const workflow = aiResults
+      .filter((item) => item.ticket_id === ticketId && item.result_type === 'multi_agent_workflow')
+      .sort((a, b) => new Date(b.created_at || b.timestamp || 0) - new Date(a.created_at || a.timestamp || 0))[0] || null;
+    const decision = workflow?.finalDecision || null;
+    return res.json({
+      success: true,
+      source: 'dynamodb',
+      workflow,
+      decision,
+      auditLogs: [],
+    });
+  }
+
+  if (!isDbConnected()) {
+    return res.json({
+      success: true,
+      source: 'database_unavailable',
+      workflow: null,
+      decision: null,
+      auditLogs: [],
+    });
+  }
+
+  const ticketId = req.params.ticketId;
+  const [workflow, decision, auditLogs] = await Promise.all([
+    AgentWorkflow.findOne({ ticket_id: ticketId }).sort({ createdAt: -1 }).lean(),
+    AIDecision.findOne({ ticket_id: ticketId }).sort({ createdAt: -1 }).lean(),
+    readAuditEvents({ entityId: ticketId, limit: 25 }),
+  ]);
+
+  res.json({
+    success: true,
+    source: 'mongodb',
+    workflow,
+    decision,
+    auditLogs,
   });
 });
 

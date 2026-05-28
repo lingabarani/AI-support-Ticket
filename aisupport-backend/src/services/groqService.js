@@ -61,13 +61,28 @@ const buildMessages = async (role, message) => {
   ];
 };
 
+const withTimeout = (promise, timeoutMs = Number(process.env.EXTERNAL_AI_TIMEOUT_MS || 15000)) => {
+  let timer;
+  const timeoutPromise = new Promise((_, reject) => {
+    timer = setTimeout(() => {
+      const error = new Error('External AI request timed out.');
+      error.name = 'TimeoutError';
+      reject(error);
+    }, Math.min(timeoutMs, 15000));
+  });
+  return Promise.race([promise, timeoutPromise]).finally(() => clearTimeout(timer));
+};
+
 const generateGroqResponse = async ({ role, message }) => {
-  const response = await getClient().chat.completions.create({
+  console.info(`[GROQ_SERVICE] Before AI call ${JSON.stringify({ role, timestamp: new Date().toISOString() })}`);
+  const startedAt = Date.now();
+  const response = await withTimeout(getClient().chat.completions.create({
     model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
     temperature: 0.2,
     max_tokens: 900,
     messages: await buildMessages(role, message),
-  });
+  }));
+  console.info(`[GROQ_SERVICE] After AI call ${JSON.stringify({ role, durationMs: Date.now() - startedAt })}`);
 
   const reply = response.choices?.[0]?.message?.content
     ?.replace(/\*\*/g, '')

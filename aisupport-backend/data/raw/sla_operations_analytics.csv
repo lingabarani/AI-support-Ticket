@@ -1,0 +1,1201 @@
+sla_event_id,ticket_id,assigned_team,severity,sla_target_hours,first_response_time,resolution_time,breach_risk_score,breached,escalation_triggered,workload_score,agent_utilization,queue_size,region,business_unit,manager_name,support_shift,incident_type,operational_risk,created_date
+SLA-500000,TKT-101309,Tier2-Technical,Medium,24,270,1250,86.81,No,Yes,84.58,72.83,20,North America,SMB,Manager_B,Afternoon,Performance,Low,2024-03-28
+SLA-500001,TKT-101508,Tier2-Technical,Low,48,871,370,12.85,No,No,31.44,93.35,31,North America,Startup,Manager_A,Morning,Service Down,Low,2024-01-21
+SLA-500002,TKT-100447,Billing-Team,Medium,24,313,141,9.79,No,No,30.49,41.27,28,North America,Mid-Market,Manager_F,Night,Performance,Medium,2024-06-18
+SLA-500003,TKT-100919,Security-Team,Low,48,699,1215,42.19,No,No,46.29,44.98,4,North America,Mid-Market,Manager_F,Night,Security,High,2024-05-14
+SLA-500004,TKT-100569,Tier3-Engineering,Low,48,166,1537,53.37,No,No,96.42,93.11,10,Europe,SMB,Manager_A,Morning,Data Loss,Low,2024-05-09
+SLA-500005,TKT-100198,Network-Operations,Medium,24,366,1075,74.65,No,No,38.54,67.23,36,Asia-Pacific,SMB,Manager_A,Night,Integration,Critical,2024-06-12
+SLA-500006,TKT-100255,Infrastructure,Low,48,1025,1261,43.78,No,No,66.4,70.07,30,North America,SMB,Manager_F,Evening,Integration,Critical,2024-02-13
+SLA-500007,TKT-100393,Tier2-Technical,Critical,4,61,299,124.58,Yes,Yes,80.91,57.96,15,North America,Mid-Market,Manager_C,Morning,Performance,Low,2024-02-09
+SLA-500008,TKT-101774,Tier2-Technical,High,8,236,397,82.71,No,Yes,67.78,72.27,26,LATAM,SMB,Manager_D,Evening,Performance,Low,2024-05-03
+SLA-500009,TKT-100758,Network-Operations,Low,48,1180,2302,79.93,No,No,41.57,40.86,10,Europe,SMB,Manager_F,Morning,Integration,High,2024-05-15
+SLA-500010,TKT-101300,Tier3-Engineering,Low,48,1162,1762,61.18,No,No,79.48,80.1,34,Europe,Mid-Market,Manager_D,Night,Security,Medium,2024-02-10
+SLA-500011,TKT-101895,Billing-Team,Critical,4,72,357,148.75,Yes,Yes,61.46,45.25,24,Asia-Pacific,Enterprise,Manager_B,Morning,Security,High,2024-02-06
+SLA-500012,TKT-100821,Security-Team,High,8,213,606,126.25,Yes,Yes,63.06,46.58,15,North America,Mid-Market,Manager_E,Evening,Performance,High,2024-01-05
+SLA-500013,TKT-101342,Cloud-Support,Medium,24,397,990,68.75,No,No,32.83,79.09,27,LATAM,Startup,Manager_B,Evening,Performance,Low,2024-06-27
+SLA-500014,TKT-100505,Security-Team,Low,48,742,3552,123.33,Yes,Yes,52.0,67.97,31,LATAM,Startup,Manager_C,Afternoon,Performance,Low,2024-05-22
+SLA-500015,TKT-101043,Cloud-Support,High,8,35,584,121.67,Yes,Yes,35.39,55.94,23,North America,Enterprise,Manager_A,Afternoon,Configuration,High,2024-06-18
+SLA-500016,TKT-100327,Infrastructure,High,8,133,87,18.12,No,No,45.29,62.91,12,North America,Startup,Manager_D,Night,Integration,Medium,2024-04-01
+SLA-500017,TKT-100514,Tier1-Support,Medium,24,189,1368,95.0,No,Yes,49.05,75.62,14,North America,SMB,Manager_F,Evening,Service Down,High,2024-04-12
+SLA-500018,TKT-100601,Infrastructure,Low,48,648,557,19.34,No,No,45.55,46.59,25,Europe,Startup,Manager_A,Evening,Integration,Critical,2024-04-27
+SLA-500019,TKT-101560,Tier3-Engineering,Low,48,1136,2093,72.67,No,No,98.02,92.93,40,North America,SMB,Manager_F,Afternoon,Performance,Medium,2024-04-22
+SLA-500020,TKT-100765,Tier3-Engineering,Low,48,951,3392,117.78,Yes,Yes,48.67,93.71,29,North America,SMB,Manager_D,Morning,Service Down,Low,2024-05-08
+SLA-500021,TKT-101902,Network-Operations,Low,48,1153,1316,45.69,No,No,64.26,94.21,33,Asia-Pacific,Mid-Market,Manager_A,Afternoon,Integration,Medium,2024-05-02
+SLA-500022,TKT-101939,Tier2-Technical,Low,48,293,2567,89.13,No,Yes,62.92,94.09,23,North America,Startup,Manager_A,Afternoon,Performance,Medium,2024-05-23
+SLA-500023,TKT-101351,Cloud-Support,High,8,123,246,51.25,No,No,43.06,42.24,21,Europe,SMB,Manager_E,Night,Performance,Medium,2024-06-12
+SLA-500024,TKT-101902,Billing-Team,Low,48,146,3459,120.1,Yes,Yes,75.16,49.59,34,Asia-Pacific,Startup,Manager_F,Evening,Data Loss,Medium,2024-02-08
+SLA-500025,TKT-101842,Cloud-Support,Critical,4,0,296,123.33,Yes,Yes,53.87,46.24,24,North America,Mid-Market,Manager_B,Morning,Security,Medium,2024-02-11
+SLA-500026,TKT-100043,Billing-Team,Low,48,143,2633,91.42,No,Yes,98.75,68.41,3,Europe,Enterprise,Manager_A,Morning,Performance,Critical,2024-05-19
+SLA-500027,TKT-100138,Tier1-Support,Medium,24,159,1134,78.75,No,No,53.73,59.21,17,Asia-Pacific,Enterprise,Manager_E,Afternoon,Security,High,2024-05-31
+SLA-500028,TKT-101370,Cloud-Support,Medium,24,586,1768,122.78,Yes,Yes,41.31,89.42,21,Europe,Mid-Market,Manager_F,Night,Performance,Medium,2024-04-21
+SLA-500029,TKT-101606,Cloud-Support,Low,48,98,2440,84.72,No,Yes,30.35,48.84,19,LATAM,Mid-Market,Manager_A,Morning,Configuration,Medium,2024-06-11
+SLA-500030,TKT-100882,Network-Operations,Medium,24,160,1723,119.65,Yes,Yes,46.61,57.9,21,LATAM,Startup,Manager_D,Morning,Configuration,Medium,2024-05-15
+SLA-500031,TKT-101338,Tier2-Technical,High,8,127,92,19.17,No,No,67.98,67.98,23,North America,Startup,Manager_F,Evening,Service Down,Low,2024-06-06
+SLA-500032,TKT-100509,Billing-Team,Critical,4,108,80,33.33,No,No,92.44,74.71,35,Europe,Startup,Manager_B,Night,Performance,Medium,2024-04-06
+SLA-500033,TKT-100570,Cloud-Support,Medium,24,480,572,39.72,No,No,46.11,67.46,5,Europe,Enterprise,Manager_D,Morning,Service Down,Low,2024-02-18
+SLA-500034,TKT-101335,Tier1-Support,Low,48,1195,1483,51.49,No,No,62.9,55.38,7,North America,Mid-Market,Manager_B,Night,Data Loss,Medium,2024-02-06
+SLA-500035,TKT-100985,Billing-Team,Critical,4,112,331,137.92,Yes,Yes,97.67,93.0,34,LATAM,Enterprise,Manager_B,Night,Service Down,Low,2024-06-08
+SLA-500036,TKT-100799,Security-Team,High,8,255,382,79.58,No,No,41.86,70.62,32,LATAM,SMB,Manager_D,Night,Performance,High,2024-03-07
+SLA-500037,TKT-100388,Security-Team,Medium,24,287,973,67.57,No,No,55.11,53.98,43,Europe,Enterprise,Manager_E,Morning,Configuration,High,2024-01-17
+SLA-500038,TKT-100642,Tier1-Support,High,8,298,305,63.54,No,No,55.16,56.15,27,North America,Startup,Manager_E,Afternoon,Service Down,High,2024-06-01
+SLA-500039,TKT-101967,Tier2-Technical,Medium,24,505,1022,70.97,No,No,65.11,83.91,2,Europe,Enterprise,Manager_E,Morning,Configuration,Low,2024-05-23
+SLA-500040,TKT-101765,Billing-Team,Low,48,470,1406,48.82,No,No,56.29,45.17,24,LATAM,Enterprise,Manager_E,Afternoon,Integration,High,2024-02-20
+SLA-500041,TKT-101217,Tier1-Support,Medium,24,574,1333,92.57,No,Yes,50.06,72.5,23,North America,Startup,Manager_F,Evening,Security,Low,2024-06-18
+SLA-500042,TKT-100418,Network-Operations,High,8,53,503,104.79,Yes,Yes,52.87,85.53,6,Europe,SMB,Manager_D,Afternoon,Configuration,Medium,2024-01-06
+SLA-500043,TKT-101321,Security-Team,Low,48,883,286,9.93,No,No,78.97,47.61,17,LATAM,SMB,Manager_A,Morning,Data Loss,Critical,2024-05-03
+SLA-500044,TKT-101272,Tier2-Technical,High,8,146,716,149.17,Yes,Yes,57.92,63.84,27,North America,Mid-Market,Manager_E,Evening,Performance,Low,2024-04-26
+SLA-500045,TKT-101911,Network-Operations,Low,48,1150,2171,75.38,No,No,58.63,49.53,2,North America,Mid-Market,Manager_C,Evening,Performance,Medium,2024-04-05
+SLA-500046,TKT-100897,Security-Team,Medium,24,559,1744,121.11,Yes,Yes,76.21,55.4,17,North America,SMB,Manager_F,Morning,Performance,Medium,2024-03-09
+SLA-500047,TKT-100541,Tier2-Technical,Medium,24,246,1219,84.65,No,Yes,69.62,48.73,23,North America,Mid-Market,Manager_C,Evening,Integration,Low,2024-03-09
+SLA-500048,TKT-100431,Network-Operations,Low,48,93,2013,69.9,No,No,98.57,49.64,17,Europe,SMB,Manager_E,Night,Security,Low,2024-06-24
+SLA-500049,TKT-101854,Tier1-Support,High,8,99,348,72.5,No,No,62.53,75.74,11,North America,Startup,Manager_C,Morning,Service Down,Critical,2024-04-09
+SLA-500050,TKT-100683,Tier3-Engineering,Low,48,761,2729,94.76,No,Yes,65.07,69.67,5,Asia-Pacific,Mid-Market,Manager_F,Night,Integration,Medium,2024-03-20
+SLA-500051,TKT-101445,Infrastructure,Medium,24,496,1015,70.49,No,No,74.55,84.05,13,North America,Enterprise,Manager_A,Afternoon,Integration,Medium,2024-05-03
+SLA-500052,TKT-100073,Network-Operations,Low,48,956,2978,103.4,Yes,Yes,87.44,74.43,2,Europe,Startup,Manager_B,Morning,Security,Critical,2024-03-14
+SLA-500053,TKT-100746,Tier1-Support,Low,48,284,2684,93.19,No,Yes,45.02,60.75,36,Asia-Pacific,Mid-Market,Manager_F,Afternoon,Configuration,Medium,2024-03-30
+SLA-500054,TKT-100210,Network-Operations,Low,48,969,1865,64.76,No,No,53.84,54.34,8,LATAM,Mid-Market,Manager_B,Afternoon,Performance,Low,2024-04-23
+SLA-500055,TKT-101805,Infrastructure,Medium,24,412,1519,105.49,Yes,Yes,81.45,84.19,37,North America,Mid-Market,Manager_F,Evening,Data Loss,Low,2024-05-31
+SLA-500056,TKT-101642,Billing-Team,High,8,176,158,32.92,No,No,58.88,60.46,40,Asia-Pacific,Mid-Market,Manager_F,Morning,Data Loss,Medium,2024-05-30
+SLA-500057,TKT-101786,Tier1-Support,Critical,4,36,297,123.75,Yes,Yes,60.03,81.3,26,LATAM,Mid-Market,Manager_B,Night,Security,Low,2024-01-30
+SLA-500058,TKT-100625,Billing-Team,Critical,4,61,113,47.08,No,No,87.85,57.6,20,Europe,Enterprise,Manager_F,Afternoon,Data Loss,Medium,2024-05-19
+SLA-500059,TKT-100672,Security-Team,Critical,4,18,105,43.75,No,No,54.84,92.62,32,North America,SMB,Manager_C,Night,Configuration,Critical,2024-03-23
+SLA-500060,TKT-101727,Network-Operations,Medium,24,143,1004,69.72,No,No,36.42,73.13,22,North America,Enterprise,Manager_C,Afternoon,Integration,High,2024-05-30
+SLA-500061,TKT-101971,Security-Team,High,8,38,168,35.0,No,No,95.17,93.58,15,North America,Enterprise,Manager_E,Night,Security,Medium,2024-05-12
+SLA-500062,TKT-101492,Network-Operations,High,8,220,294,61.25,No,No,79.41,93.28,10,LATAM,Enterprise,Manager_D,Afternoon,Security,High,2024-05-24
+SLA-500063,TKT-100090,Infrastructure,Low,48,1197,1916,66.53,No,No,45.58,61.82,28,North America,Mid-Market,Manager_C,Night,Service Down,High,2024-01-05
+SLA-500064,TKT-101943,Network-Operations,Medium,24,421,458,31.81,No,No,70.69,87.47,23,Asia-Pacific,Enterprise,Manager_F,Evening,Integration,High,2024-03-11
+SLA-500065,TKT-100633,Infrastructure,Critical,4,3,321,133.75,Yes,Yes,56.34,44.59,40,Asia-Pacific,Startup,Manager_F,Evening,Integration,Medium,2024-03-30
+SLA-500066,TKT-100260,Billing-Team,Low,48,1149,412,14.31,No,No,30.79,65.78,21,LATAM,Startup,Manager_F,Afternoon,Integration,Low,2024-03-01
+SLA-500067,TKT-101165,Security-Team,High,8,0,446,92.92,No,Yes,70.84,92.92,26,LATAM,Enterprise,Manager_C,Evening,Performance,High,2024-06-14
+SLA-500068,TKT-100880,Network-Operations,Medium,24,57,1699,117.99,Yes,Yes,98.45,70.58,22,LATAM,Startup,Manager_D,Afternoon,Integration,Low,2024-06-12
+SLA-500069,TKT-100969,Tier3-Engineering,Medium,24,531,1584,110.0,Yes,Yes,66.62,74.62,15,North America,SMB,Manager_E,Evening,Service Down,Low,2024-01-01
+SLA-500070,TKT-101676,Billing-Team,Medium,24,258,775,53.82,No,No,81.6,90.34,11,Asia-Pacific,Mid-Market,Manager_B,Afternoon,Service Down,Critical,2024-04-11
+SLA-500071,TKT-100094,Billing-Team,Medium,24,372,1151,79.93,No,No,41.88,75.58,9,LATAM,Enterprise,Manager_D,Night,Configuration,Medium,2024-06-26
+SLA-500072,TKT-101178,Billing-Team,Low,48,868,280,9.72,No,No,48.2,64.93,18,LATAM,Startup,Manager_D,Afternoon,Performance,Low,2024-06-05
+SLA-500073,TKT-101343,Tier1-Support,Low,48,389,1857,64.48,No,No,59.16,71.96,26,North America,Startup,Manager_B,Afternoon,Configuration,Medium,2024-02-25
+SLA-500074,TKT-101060,Cloud-Support,High,8,250,64,13.33,No,No,31.85,60.71,2,North America,Mid-Market,Manager_A,Night,Performance,Medium,2024-06-25
+SLA-500075,TKT-101641,Cloud-Support,Medium,24,281,182,12.64,No,No,57.51,85.6,14,Asia-Pacific,Startup,Manager_E,Night,Integration,Low,2024-04-14
+SLA-500076,TKT-100913,Tier3-Engineering,Medium,24,384,524,36.39,No,No,33.95,87.56,18,LATAM,Startup,Manager_C,Afternoon,Configuration,Medium,2024-05-12
+SLA-500077,TKT-100567,Cloud-Support,Critical,4,52,52,21.67,No,No,83.83,91.96,11,Europe,SMB,Manager_D,Morning,Configuration,Medium,2024-03-25
+SLA-500078,TKT-100585,Billing-Team,Medium,24,0,170,11.81,No,No,49.23,51.4,2,Asia-Pacific,SMB,Manager_C,Morning,Performance,High,2024-02-01
+SLA-500079,TKT-100308,Billing-Team,Low,48,94,3383,117.47,Yes,Yes,31.55,67.4,4,LATAM,Mid-Market,Manager_F,Afternoon,Service Down,Medium,2024-01-12
+SLA-500080,TKT-100849,Infrastructure,High,8,235,448,93.33,No,Yes,36.19,83.55,18,Asia-Pacific,Startup,Manager_D,Morning,Performance,Low,2024-02-16
+SLA-500081,TKT-101705,Infrastructure,Medium,24,228,972,67.5,No,No,74.76,84.28,40,LATAM,Enterprise,Manager_E,Night,Data Loss,Low,2024-02-07
+SLA-500082,TKT-100012,Network-Operations,Medium,24,334,978,67.92,No,No,36.37,79.95,39,Asia-Pacific,Startup,Manager_D,Afternoon,Data Loss,Medium,2024-03-19
+SLA-500083,TKT-100449,Security-Team,Medium,24,105,1706,118.47,Yes,Yes,78.83,83.81,11,LATAM,Startup,Manager_A,Night,Security,Critical,2024-03-14
+SLA-500084,TKT-101369,Infrastructure,High,8,68,605,126.04,Yes,Yes,73.46,59.11,44,Europe,Startup,Manager_B,Morning,Data Loss,Medium,2024-04-24
+SLA-500085,TKT-101212,Tier1-Support,Medium,24,182,967,67.15,No,No,40.63,47.64,9,North America,Startup,Manager_B,Night,Performance,Low,2024-05-11
+SLA-500086,TKT-100102,Security-Team,Low,48,666,332,11.53,No,No,98.12,73.11,20,LATAM,SMB,Manager_B,Night,Security,High,2024-04-01
+SLA-500087,TKT-100691,Infrastructure,Low,48,533,1668,57.92,No,No,68.41,69.39,13,Asia-Pacific,Startup,Manager_C,Morning,Data Loss,Low,2024-02-03
+SLA-500088,TKT-100039,Tier1-Support,Low,48,1096,3081,106.98,Yes,Yes,85.96,74.53,31,Asia-Pacific,Mid-Market,Manager_F,Morning,Configuration,Low,2024-02-17
+SLA-500089,TKT-100082,Tier1-Support,Low,48,1049,3091,107.33,Yes,Yes,86.43,81.15,16,Europe,Mid-Market,Manager_A,Afternoon,Performance,Medium,2024-02-25
+SLA-500090,TKT-100258,Cloud-Support,Medium,24,473,147,10.21,No,No,55.82,65.44,27,North America,Mid-Market,Manager_D,Evening,Security,Low,2024-02-25
+SLA-500091,TKT-100343,Tier2-Technical,Low,48,1026,1886,65.49,No,No,89.11,81.23,19,Europe,SMB,Manager_A,Morning,Security,Medium,2024-04-24
+SLA-500092,TKT-101179,Infrastructure,Low,48,484,2315,80.38,No,Yes,31.4,57.71,40,LATAM,Mid-Market,Manager_A,Afternoon,Service Down,Low,2024-05-05
+SLA-500093,TKT-101427,Security-Team,Low,48,144,3523,122.33,Yes,Yes,63.18,59.53,42,North America,Enterprise,Manager_C,Night,Configuration,Medium,2024-04-20
+SLA-500094,TKT-100758,Tier2-Technical,Medium,24,469,153,10.62,No,No,69.04,72.26,20,Asia-Pacific,Enterprise,Manager_D,Night,Service Down,Medium,2024-04-10
+SLA-500095,TKT-100887,Network-Operations,Medium,24,281,1463,101.6,Yes,Yes,69.95,59.59,7,LATAM,Mid-Market,Manager_D,Afternoon,Configuration,Medium,2024-02-02
+SLA-500096,TKT-101068,Security-Team,Low,48,276,1973,68.51,No,No,55.57,66.83,31,LATAM,Startup,Manager_D,Evening,Security,Low,2024-03-02
+SLA-500097,TKT-101744,Billing-Team,High,8,151,196,40.83,No,No,35.62,68.85,41,North America,SMB,Manager_D,Afternoon,Data Loss,High,2024-05-31
+SLA-500098,TKT-101167,Infrastructure,Low,48,467,1995,69.27,No,No,94.22,40.29,31,Asia-Pacific,Enterprise,Manager_D,Evening,Performance,Low,2024-06-27
+SLA-500099,TKT-100998,Billing-Team,High,8,193,774,161.25,Yes,Yes,70.01,55.4,6,Asia-Pacific,SMB,Manager_C,Evening,Integration,Low,2024-04-27
+SLA-500100,TKT-101436,Security-Team,High,8,211,284,59.17,No,No,81.54,69.14,2,North America,Mid-Market,Manager_A,Afternoon,Configuration,Medium,2024-03-04
+SLA-500101,TKT-100832,Cloud-Support,Low,48,138,3132,108.75,Yes,Yes,67.28,42.85,11,Europe,Startup,Manager_F,Night,Data Loss,Medium,2024-05-17
+SLA-500102,TKT-101623,Tier1-Support,Critical,4,12,197,82.08,No,Yes,86.69,54.01,38,North America,SMB,Manager_B,Night,Configuration,Low,2024-01-09
+SLA-500103,TKT-100498,Security-Team,Medium,24,549,1562,108.47,Yes,Yes,54.42,91.12,15,Asia-Pacific,Startup,Manager_E,Evening,Data Loss,Critical,2024-05-16
+SLA-500104,TKT-101527,Network-Operations,Low,48,512,1559,54.13,No,No,80.51,42.65,30,Asia-Pacific,Startup,Manager_C,Evening,Security,Low,2024-04-14
+SLA-500105,TKT-100472,Tier2-Technical,High,8,285,350,72.92,No,No,41.5,84.8,15,Europe,SMB,Manager_A,Afternoon,Performance,Medium,2024-05-11
+SLA-500106,TKT-100443,Cloud-Support,Low,48,1065,2376,82.5,No,Yes,77.81,64.86,41,Asia-Pacific,SMB,Manager_A,Afternoon,Security,Medium,2024-06-27
+SLA-500107,TKT-100465,Network-Operations,Medium,24,22,694,48.19,No,No,65.19,52.77,34,Europe,SMB,Manager_A,Afternoon,Security,Medium,2024-02-22
+SLA-500108,TKT-100093,Tier1-Support,Critical,4,50,68,28.33,No,No,38.18,91.69,8,Asia-Pacific,Mid-Market,Manager_F,Night,Service Down,High,2024-02-11
+SLA-500109,TKT-101787,Tier1-Support,Low,48,1038,1886,65.49,No,No,73.41,69.34,40,Asia-Pacific,Startup,Manager_D,Night,Security,Medium,2024-06-05
+SLA-500110,TKT-100377,Tier1-Support,Low,48,1120,3308,114.86,Yes,Yes,47.39,80.92,5,Asia-Pacific,Startup,Manager_A,Morning,Data Loss,Medium,2024-01-10
+SLA-500111,TKT-101007,Tier2-Technical,Medium,24,117,925,64.24,No,No,67.55,60.84,25,North America,Mid-Market,Manager_B,Evening,Service Down,Medium,2024-01-15
+SLA-500112,TKT-100508,Tier2-Technical,High,8,260,216,45.0,No,No,46.05,79.72,3,LATAM,Mid-Market,Manager_E,Night,Data Loss,Low,2024-04-24
+SLA-500113,TKT-101860,Cloud-Support,Medium,24,291,913,63.4,No,No,47.63,59.01,12,Asia-Pacific,Startup,Manager_C,Morning,Integration,Critical,2024-04-13
+SLA-500114,TKT-101966,Tier2-Technical,Medium,24,22,934,64.86,No,No,50.16,73.82,27,Europe,Mid-Market,Manager_C,Morning,Performance,Medium,2024-04-20
+SLA-500115,TKT-100491,Tier3-Engineering,High,8,170,519,108.12,Yes,Yes,37.15,90.53,6,North America,Mid-Market,Manager_A,Night,Data Loss,Critical,2024-03-12
+SLA-500116,TKT-101411,Cloud-Support,Medium,24,377,1133,78.68,No,No,35.41,45.73,42,Asia-Pacific,Enterprise,Manager_B,Evening,Configuration,Critical,2024-05-30
+SLA-500117,TKT-100579,Cloud-Support,Low,48,419,1445,50.17,No,No,88.62,58.27,41,North America,Mid-Market,Manager_C,Afternoon,Data Loss,Medium,2024-06-23
+SLA-500118,TKT-100235,Billing-Team,Low,48,1160,441,15.31,No,No,86.2,40.25,42,Europe,SMB,Manager_B,Morning,Service Down,Low,2024-01-25
+SLA-500119,TKT-100339,Security-Team,High,8,293,445,92.71,No,Yes,62.6,66.45,28,Asia-Pacific,Startup,Manager_A,Night,Configuration,Medium,2024-06-19
+SLA-500120,TKT-100622,Infrastructure,Low,48,762,1442,50.07,No,No,47.38,71.77,7,Asia-Pacific,Startup,Manager_D,Morning,Integration,Low,2024-06-09
+SLA-500121,TKT-100081,Infrastructure,Medium,24,62,1122,77.92,No,No,74.26,40.72,22,Asia-Pacific,SMB,Manager_A,Morning,Performance,Medium,2024-03-21
+SLA-500122,TKT-101969,Tier1-Support,Critical,4,48,177,73.75,No,No,59.02,44.69,41,Asia-Pacific,Enterprise,Manager_B,Night,Integration,Medium,2024-01-01
+SLA-500123,TKT-101334,Cloud-Support,Low,48,989,2502,86.88,No,Yes,59.88,83.99,33,Asia-Pacific,Mid-Market,Manager_E,Night,Configuration,Medium,2024-02-18
+SLA-500124,TKT-101667,Cloud-Support,Low,48,285,3455,119.97,Yes,Yes,69.54,43.61,15,North America,Startup,Manager_C,Night,Security,High,2024-04-22
+SLA-500125,TKT-100657,Tier2-Technical,Medium,24,263,1044,72.5,No,No,35.29,81.43,11,Europe,SMB,Manager_D,Night,Security,Low,2024-04-19
+SLA-500126,TKT-101356,Infrastructure,Medium,24,86,174,12.08,No,No,40.93,79.38,30,North America,Startup,Manager_A,Evening,Security,Medium,2024-02-26
+SLA-500127,TKT-100662,Tier2-Technical,Low,48,442,2030,70.49,No,No,31.38,45.73,38,LATAM,Enterprise,Manager_F,Night,Data Loss,Low,2024-04-06
+SLA-500128,TKT-100111,Billing-Team,Medium,24,263,1561,108.4,Yes,Yes,86.37,94.38,33,Asia-Pacific,Startup,Manager_F,Night,Service Down,High,2024-05-23
+SLA-500129,TKT-100416,Security-Team,Medium,24,164,301,20.9,No,No,44.35,56.12,19,Europe,SMB,Manager_D,Night,Service Down,Low,2024-01-07
+SLA-500130,TKT-100059,Billing-Team,High,8,84,206,42.92,No,No,38.59,88.2,30,Europe,SMB,Manager_E,Morning,Integration,Medium,2024-01-02
+SLA-500131,TKT-100835,Tier2-Technical,Critical,4,68,40,16.67,No,No,48.16,60.88,24,Europe,Enterprise,Manager_D,Morning,Configuration,Low,2024-01-20
+SLA-500132,TKT-101704,Tier3-Engineering,Medium,24,255,1024,71.11,No,No,60.53,56.2,23,LATAM,SMB,Manager_E,Evening,Data Loss,High,2024-03-21
+SLA-500133,TKT-101709,Cloud-Support,High,8,119,118,24.58,No,No,92.62,83.99,18,LATAM,Mid-Market,Manager_D,Afternoon,Data Loss,Medium,2024-01-14
+SLA-500134,TKT-100390,Tier3-Engineering,High,8,236,340,70.83,No,No,48.05,47.66,44,North America,SMB,Manager_D,Evening,Integration,Medium,2024-06-02
+SLA-500135,TKT-100547,Tier1-Support,Medium,24,108,729,50.62,No,No,49.06,41.01,19,Asia-Pacific,SMB,Manager_E,Night,Performance,Medium,2024-02-11
+SLA-500136,TKT-100914,Cloud-Support,Medium,24,33,1160,80.56,No,Yes,58.37,67.36,13,Asia-Pacific,SMB,Manager_E,Night,Data Loss,Low,2024-04-15
+SLA-500137,TKT-101910,Network-Operations,Low,48,26,3598,124.93,Yes,Yes,91.17,72.86,13,Europe,Mid-Market,Manager_E,Night,Performance,Medium,2024-02-22
+SLA-500138,TKT-101753,Infrastructure,Low,48,921,3268,113.47,Yes,Yes,56.82,68.54,3,North America,SMB,Manager_F,Night,Configuration,Low,2024-04-16
+SLA-500139,TKT-101870,Infrastructure,Low,48,692,1634,56.74,No,No,47.17,61.41,41,LATAM,Mid-Market,Manager_D,Morning,Performance,Medium,2024-06-12
+SLA-500140,TKT-101028,Network-Operations,High,8,294,286,59.58,No,No,96.45,61.82,25,North America,Startup,Manager_A,Night,Service Down,Critical,2024-03-09
+SLA-500141,TKT-101479,Tier3-Engineering,Medium,24,547,870,60.42,No,No,48.36,72.73,44,LATAM,Mid-Market,Manager_A,Night,Security,High,2024-04-18
+SLA-500142,TKT-100693,Infrastructure,Low,48,200,393,13.65,No,No,63.2,58.94,41,North America,SMB,Manager_F,Night,Security,High,2024-03-01
+SLA-500143,TKT-101283,Cloud-Support,Medium,24,41,144,10.0,No,No,47.25,85.05,38,North America,Enterprise,Manager_B,Evening,Performance,Low,2024-06-27
+SLA-500144,TKT-101529,Tier2-Technical,Low,48,865,2811,97.6,No,Yes,55.27,45.04,18,LATAM,Enterprise,Manager_F,Morning,Data Loss,Critical,2024-02-24
+SLA-500145,TKT-100340,Security-Team,Medium,24,11,1461,101.46,Yes,Yes,97.07,81.71,32,North America,Enterprise,Manager_C,Morning,Security,High,2024-04-27
+SLA-500146,TKT-100734,Network-Operations,Medium,24,199,1680,116.67,Yes,Yes,93.24,75.57,27,LATAM,Mid-Market,Manager_B,Night,Integration,Low,2024-01-26
+SLA-500147,TKT-101396,Tier3-Engineering,Low,48,777,1279,44.41,No,No,94.77,49.93,22,Europe,Mid-Market,Manager_A,Night,Integration,Medium,2024-05-14
+SLA-500148,TKT-101399,Billing-Team,Low,48,628,376,13.06,No,No,43.48,46.34,24,LATAM,Mid-Market,Manager_B,Night,Configuration,High,2024-04-25
+SLA-500149,TKT-100520,Cloud-Support,High,8,102,332,69.17,No,No,75.51,60.06,35,Asia-Pacific,Enterprise,Manager_D,Evening,Configuration,High,2024-06-19
+SLA-500150,TKT-101119,Tier3-Engineering,Low,48,182,3270,113.54,Yes,Yes,34.57,57.34,5,North America,Startup,Manager_C,Evening,Configuration,High,2024-06-01
+SLA-500151,TKT-101970,Infrastructure,High,8,160,75,15.62,No,No,59.88,88.22,3,Asia-Pacific,Startup,Manager_C,Afternoon,Data Loss,Low,2024-06-18
+SLA-500152,TKT-101747,Cloud-Support,Critical,4,118,298,124.17,Yes,Yes,67.03,91.65,36,North America,Mid-Market,Manager_D,Evening,Integration,Low,2024-02-15
+SLA-500153,TKT-100605,Security-Team,Medium,24,476,437,30.35,No,No,63.59,74.51,11,North America,Startup,Manager_C,Morning,Integration,Low,2024-04-12
+SLA-500154,TKT-101771,Tier1-Support,Medium,24,576,122,8.47,No,No,62.71,56.34,5,LATAM,SMB,Manager_B,Evening,Performance,High,2024-02-06
+SLA-500155,TKT-101303,Billing-Team,Low,48,704,3236,112.36,Yes,Yes,99.14,63.53,25,Asia-Pacific,Mid-Market,Manager_F,Morning,Configuration,Low,2024-02-06
+SLA-500156,TKT-101323,Tier1-Support,High,8,197,499,103.96,Yes,Yes,91.89,73.04,14,Asia-Pacific,Startup,Manager_A,Evening,Configuration,Critical,2024-02-21
+SLA-500157,TKT-100269,Tier2-Technical,Low,48,884,3554,123.4,Yes,Yes,65.89,52.69,35,Asia-Pacific,SMB,Manager_F,Night,Performance,Medium,2024-06-17
+SLA-500158,TKT-100411,Tier3-Engineering,Low,48,258,2151,74.69,No,No,54.51,43.18,24,Asia-Pacific,SMB,Manager_B,Evening,Data Loss,High,2024-04-08
+SLA-500159,TKT-101981,Security-Team,Medium,24,572,1633,113.4,Yes,Yes,66.07,67.02,18,Asia-Pacific,Enterprise,Manager_D,Morning,Performance,Low,2024-06-08
+SLA-500160,TKT-101544,Billing-Team,Medium,24,119,1012,70.28,No,No,67.59,72.61,15,LATAM,SMB,Manager_A,Night,Service Down,High,2024-01-11
+SLA-500161,TKT-100541,Tier2-Technical,High,8,122,600,125.0,Yes,Yes,92.21,92.56,13,LATAM,SMB,Manager_F,Evening,Integration,Low,2024-02-09
+SLA-500162,TKT-100780,Network-Operations,Critical,4,10,255,106.25,Yes,Yes,58.59,60.5,9,North America,Mid-Market,Manager_D,Morning,Integration,High,2024-06-24
+SLA-500163,TKT-101810,Network-Operations,Medium,24,453,156,10.83,No,No,45.41,77.58,6,Europe,Enterprise,Manager_F,Night,Configuration,Critical,2024-04-23
+SLA-500164,TKT-100618,Infrastructure,Medium,24,223,437,30.35,No,No,71.47,85.36,41,North America,Mid-Market,Manager_A,Morning,Security,High,2024-03-31
+SLA-500165,TKT-101008,Tier2-Technical,High,8,288,321,66.88,No,No,66.49,87.75,29,North America,Mid-Market,Manager_E,Afternoon,Data Loss,High,2024-02-28
+SLA-500166,TKT-100929,Network-Operations,Low,48,780,602,20.9,No,No,46.71,91.15,37,LATAM,Mid-Market,Manager_D,Morning,Data Loss,Medium,2024-06-14
+SLA-500167,TKT-101260,Infrastructure,Low,48,132,796,27.64,No,No,91.03,41.61,24,Asia-Pacific,Enterprise,Manager_F,Evening,Performance,Low,2024-06-08
+SLA-500168,TKT-100908,Cloud-Support,Low,48,81,2643,91.77,No,Yes,68.93,81.61,13,Europe,SMB,Manager_A,Evening,Integration,Low,2024-01-13
+SLA-500169,TKT-101846,Network-Operations,Medium,24,112,1376,95.56,No,Yes,74.23,54.29,25,North America,Startup,Manager_C,Afternoon,Service Down,High,2024-03-10
+SLA-500170,TKT-101943,Cloud-Support,Low,48,585,1496,51.94,No,No,97.41,58.8,16,North America,Mid-Market,Manager_F,Morning,Service Down,Critical,2024-01-22
+SLA-500171,TKT-101611,Network-Operations,Critical,4,95,271,112.92,Yes,Yes,96.31,49.15,13,Europe,Mid-Market,Manager_E,Afternoon,Service Down,Low,2024-05-17
+SLA-500172,TKT-101699,Billing-Team,Medium,24,21,593,41.18,No,No,35.23,86.88,15,Europe,Mid-Market,Manager_C,Afternoon,Integration,Critical,2024-01-29
+SLA-500173,TKT-100005,Security-Team,Medium,24,226,1067,74.1,No,No,83.08,41.35,12,Europe,Mid-Market,Manager_E,Evening,Performance,High,2024-04-20
+SLA-500174,TKT-100225,Tier1-Support,Medium,24,458,689,47.85,No,No,30.07,48.74,35,Europe,Enterprise,Manager_C,Afternoon,Integration,Critical,2024-04-08
+SLA-500175,TKT-100663,Tier1-Support,Medium,24,38,1414,98.19,No,Yes,85.64,78.15,33,Europe,SMB,Manager_A,Afternoon,Configuration,Low,2024-03-24
+SLA-500176,TKT-100862,Tier2-Technical,Medium,24,538,968,67.22,No,No,97.43,41.72,30,North America,Startup,Manager_D,Evening,Integration,Critical,2024-04-10
+SLA-500177,TKT-101215,Tier2-Technical,Medium,24,452,1530,106.25,Yes,Yes,51.84,57.64,39,LATAM,Mid-Market,Manager_E,Morning,Configuration,Low,2024-06-11
+SLA-500178,TKT-101604,Security-Team,Low,48,792,1031,35.8,No,No,55.8,87.54,17,LATAM,Enterprise,Manager_A,Night,Data Loss,Medium,2024-02-29
+SLA-500179,TKT-100873,Tier2-Technical,Low,48,519,830,28.82,No,No,61.76,69.17,8,LATAM,Startup,Manager_A,Morning,Security,Medium,2024-06-20
+SLA-500180,TKT-101245,Tier3-Engineering,Low,48,377,3186,110.62,Yes,Yes,42.98,65.42,31,North America,Mid-Market,Manager_C,Evening,Data Loss,Low,2024-01-17
+SLA-500181,TKT-101223,Security-Team,Medium,24,520,1136,78.89,No,No,41.26,75.83,3,LATAM,Startup,Manager_A,Morning,Configuration,High,2024-05-18
+SLA-500182,TKT-101333,Billing-Team,Critical,4,80,101,42.08,No,No,62.52,77.43,19,LATAM,Startup,Manager_B,Night,Security,Medium,2024-04-04
+SLA-500183,TKT-101694,Cloud-Support,High,8,10,360,75.0,No,No,82.99,92.4,42,LATAM,Startup,Manager_F,Morning,Security,Low,2024-06-27
+SLA-500184,TKT-100874,Network-Operations,Low,48,400,2875,99.83,No,Yes,99.07,47.84,17,Asia-Pacific,SMB,Manager_B,Night,Service Down,Medium,2024-04-01
+SLA-500185,TKT-100186,Tier2-Technical,High,8,201,301,62.71,No,No,52.85,68.47,34,North America,Startup,Manager_A,Evening,Performance,High,2024-06-06
+SLA-500186,TKT-101139,Tier1-Support,Low,48,115,1157,40.17,No,No,52.55,93.76,27,Asia-Pacific,Enterprise,Manager_D,Evening,Configuration,High,2024-05-22
+SLA-500187,TKT-101927,Infrastructure,Low,48,886,667,23.16,No,No,37.32,75.0,4,North America,SMB,Manager_E,Evening,Security,High,2024-01-09
+SLA-500188,TKT-100212,Billing-Team,Critical,4,102,252,105.0,Yes,Yes,67.89,79.0,9,Europe,Startup,Manager_B,Morning,Security,Critical,2024-04-01
+SLA-500189,TKT-101731,Network-Operations,High,8,110,310,64.58,No,No,63.91,76.35,17,North America,SMB,Manager_E,Afternoon,Data Loss,Medium,2024-02-27
+SLA-500190,TKT-101730,Tier1-Support,High,8,2,186,38.75,No,No,66.85,80.24,12,Asia-Pacific,Enterprise,Manager_B,Evening,Configuration,High,2024-01-12
+SLA-500191,TKT-101561,Security-Team,Low,48,908,1800,62.5,No,No,91.02,52.06,37,Asia-Pacific,SMB,Manager_A,Afternoon,Performance,High,2024-04-28
+SLA-500192,TKT-101159,Infrastructure,Medium,24,287,426,29.58,No,No,41.32,41.15,20,North America,Mid-Market,Manager_F,Morning,Service Down,Low,2024-04-05
+SLA-500193,TKT-101528,Billing-Team,Medium,24,58,1786,124.03,Yes,Yes,35.71,62.18,30,LATAM,Startup,Manager_D,Evening,Performance,Medium,2024-04-06
+SLA-500194,TKT-100757,Security-Team,High,8,212,218,45.42,No,No,59.11,86.54,38,Asia-Pacific,Enterprise,Manager_A,Afternoon,Performance,Medium,2024-04-17
+SLA-500195,TKT-101545,Tier1-Support,High,8,151,621,129.38,Yes,Yes,90.69,71.83,37,North America,SMB,Manager_D,Night,Data Loss,Low,2024-04-07
+SLA-500196,TKT-101243,Cloud-Support,Medium,24,577,454,31.53,No,No,93.05,63.19,43,LATAM,SMB,Manager_B,Morning,Security,Critical,2024-05-04
+SLA-500197,TKT-100880,Tier2-Technical,Low,48,529,2308,80.14,No,Yes,81.32,47.24,9,Asia-Pacific,Startup,Manager_E,Evening,Service Down,Medium,2024-03-27
+SLA-500198,TKT-100451,Infrastructure,Medium,24,525,453,31.46,No,No,65.88,62.72,39,North America,Enterprise,Manager_B,Evening,Performance,Medium,2024-03-02
+SLA-500199,TKT-101571,Tier3-Engineering,Low,48,380,1886,65.49,No,No,71.5,71.87,21,Asia-Pacific,SMB,Manager_C,Morning,Service Down,Medium,2024-03-10
+SLA-500200,TKT-101018,Infrastructure,Medium,24,27,185,12.85,No,No,90.06,40.5,2,Europe,Mid-Market,Manager_D,Afternoon,Integration,High,2024-06-12
+SLA-500201,TKT-101144,Network-Operations,Critical,4,46,316,131.67,Yes,Yes,46.52,44.04,15,North America,Startup,Manager_F,Morning,Data Loss,Medium,2024-04-02
+SLA-500202,TKT-100038,Cloud-Support,Low,48,861,1520,52.78,No,No,61.46,72.33,13,North America,SMB,Manager_E,Night,Integration,High,2024-03-04
+SLA-500203,TKT-100828,Infrastructure,Medium,24,283,1264,87.78,No,Yes,72.39,59.62,13,Asia-Pacific,Enterprise,Manager_D,Morning,Security,Medium,2024-04-29
+SLA-500204,TKT-100351,Cloud-Support,High,8,155,426,88.75,No,Yes,90.78,51.32,21,Asia-Pacific,Enterprise,Manager_D,Morning,Performance,Low,2024-05-09
+SLA-500205,TKT-100892,Infrastructure,Low,48,1043,521,18.09,No,No,32.75,46.72,7,North America,Startup,Manager_C,Evening,Performance,Low,2024-02-28
+SLA-500206,TKT-100682,Tier3-Engineering,Low,48,1008,2978,103.4,Yes,Yes,32.91,48.16,25,North America,Enterprise,Manager_E,Afternoon,Security,High,2024-05-05
+SLA-500207,TKT-100719,Tier3-Engineering,Critical,4,49,314,130.83,Yes,Yes,90.75,65.01,44,Europe,Enterprise,Manager_B,Evening,Performance,Medium,2024-06-20
+SLA-500208,TKT-100355,Tier3-Engineering,Medium,24,150,503,34.93,No,No,39.29,47.89,43,North America,Mid-Market,Manager_F,Night,Data Loss,High,2024-01-08
+SLA-500209,TKT-101545,Cloud-Support,Critical,4,0,293,122.08,Yes,Yes,40.93,52.9,23,Asia-Pacific,SMB,Manager_B,Night,Service Down,Low,2024-02-24
+SLA-500210,TKT-100960,Cloud-Support,Critical,4,42,143,59.58,No,No,47.09,85.7,41,Asia-Pacific,SMB,Manager_E,Morning,Security,High,2024-03-12
+SLA-500211,TKT-101039,Tier2-Technical,High,8,288,60,12.5,No,No,45.1,76.24,6,Asia-Pacific,Startup,Manager_D,Morning,Service Down,Medium,2024-03-03
+SLA-500212,TKT-100755,Security-Team,Critical,4,40,118,49.17,No,No,90.95,83.03,14,North America,Enterprise,Manager_E,Night,Data Loss,Low,2024-03-08
+SLA-500213,TKT-101188,Tier1-Support,Medium,24,101,613,42.57,No,No,94.8,64.1,35,LATAM,Mid-Market,Manager_C,Night,Integration,High,2024-01-23
+SLA-500214,TKT-100308,Tier1-Support,Medium,24,330,1784,123.89,Yes,Yes,38.41,69.95,26,LATAM,Enterprise,Manager_C,Morning,Integration,Medium,2024-03-05
+SLA-500215,TKT-101323,Tier3-Engineering,Medium,24,142,1036,71.94,No,No,56.63,70.17,34,North America,Mid-Market,Manager_F,Night,Data Loss,Low,2024-02-04
+SLA-500216,TKT-101073,Tier3-Engineering,Low,48,866,3255,113.02,Yes,Yes,76.77,74.07,10,Asia-Pacific,SMB,Manager_C,Night,Data Loss,Medium,2024-01-26
+SLA-500217,TKT-101586,Network-Operations,Critical,4,65,146,60.83,No,No,86.96,45.99,6,North America,SMB,Manager_A,Evening,Service Down,Medium,2024-02-06
+SLA-500218,TKT-101142,Infrastructure,Low,48,782,282,9.79,No,No,83.54,84.71,44,Asia-Pacific,SMB,Manager_F,Afternoon,Security,Low,2024-05-30
+SLA-500219,TKT-100166,Tier3-Engineering,Medium,24,335,1260,87.5,No,Yes,92.86,53.39,12,Asia-Pacific,SMB,Manager_F,Night,Performance,Medium,2024-03-08
+SLA-500220,TKT-101218,Tier2-Technical,Critical,4,85,304,126.67,Yes,Yes,37.1,66.72,28,Asia-Pacific,Startup,Manager_F,Evening,Performance,Critical,2024-06-04
+SLA-500221,TKT-101372,Tier2-Technical,Medium,24,143,225,15.62,No,No,72.72,79.39,14,LATAM,SMB,Manager_A,Evening,Security,Medium,2024-03-29
+SLA-500222,TKT-100369,Billing-Team,Medium,24,262,1494,103.75,Yes,Yes,90.16,83.99,32,Asia-Pacific,Startup,Manager_B,Afternoon,Performance,High,2024-02-25
+SLA-500223,TKT-100317,Tier2-Technical,High,8,297,95,19.79,No,No,59.72,44.79,2,Asia-Pacific,Enterprise,Manager_E,Morning,Configuration,Medium,2024-06-21
+SLA-500224,TKT-100689,Tier3-Engineering,Medium,24,140,1006,69.86,No,No,74.66,68.33,29,LATAM,Mid-Market,Manager_B,Afternoon,Configuration,Low,2024-01-09
+SLA-500225,TKT-101579,Tier3-Engineering,Medium,24,377,1776,123.33,Yes,Yes,88.79,89.5,17,LATAM,Enterprise,Manager_D,Evening,Configuration,Medium,2024-03-31
+SLA-500226,TKT-101473,Billing-Team,High,8,49,723,150.62,Yes,Yes,87.58,63.31,11,LATAM,SMB,Manager_F,Night,Performance,High,2024-05-26
+SLA-500227,TKT-101093,Billing-Team,Medium,24,438,361,25.07,No,No,40.71,52.94,35,Asia-Pacific,Startup,Manager_B,Evening,Configuration,Medium,2024-05-28
+SLA-500228,TKT-101939,Cloud-Support,Low,48,804,2706,93.96,No,Yes,72.5,70.07,11,LATAM,SMB,Manager_D,Night,Performance,Low,2024-03-17
+SLA-500229,TKT-101672,Billing-Team,Medium,24,253,1040,72.22,No,No,99.14,47.5,22,Europe,SMB,Manager_A,Night,Security,High,2024-02-11
+SLA-500230,TKT-101135,Tier2-Technical,Medium,24,166,578,40.14,No,No,99.39,47.06,20,North America,SMB,Manager_A,Afternoon,Security,Medium,2024-04-11
+SLA-500231,TKT-100920,Tier3-Engineering,Medium,24,166,740,51.39,No,No,35.56,44.71,34,LATAM,Enterprise,Manager_B,Night,Security,Medium,2024-03-13
+SLA-500232,TKT-101905,Tier1-Support,Low,48,1093,2712,94.17,No,Yes,73.2,64.33,3,LATAM,Enterprise,Manager_D,Evening,Performance,High,2024-06-20
+SLA-500233,TKT-100790,Tier2-Technical,Low,48,148,3063,106.35,Yes,Yes,91.61,75.8,4,Asia-Pacific,Mid-Market,Manager_A,Evening,Service Down,Low,2024-05-09
+SLA-500234,TKT-101718,Network-Operations,Critical,4,1,131,54.58,No,No,69.04,80.19,31,Europe,Mid-Market,Manager_A,Evening,Data Loss,Medium,2024-05-29
+SLA-500235,TKT-101425,Tier3-Engineering,Medium,24,547,572,39.72,No,No,42.27,77.95,17,LATAM,Startup,Manager_E,Morning,Service Down,Medium,2024-06-06
+SLA-500236,TKT-100038,Security-Team,Medium,24,11,776,53.89,No,No,51.06,93.97,4,Europe,Mid-Market,Manager_E,Night,Service Down,Critical,2024-01-23
+SLA-500237,TKT-101589,Security-Team,Medium,24,103,749,52.01,No,No,99.47,90.99,2,Europe,SMB,Manager_A,Morning,Performance,High,2024-05-28
+SLA-500238,TKT-100859,Cloud-Support,Low,48,405,3265,113.37,Yes,Yes,85.15,87.56,17,North America,Enterprise,Manager_D,Morning,Configuration,Medium,2024-05-21
+SLA-500239,TKT-101055,Billing-Team,Low,48,113,3036,105.42,Yes,Yes,55.21,44.82,28,Europe,SMB,Manager_D,Morning,Integration,Low,2024-03-15
+SLA-500240,TKT-100722,Billing-Team,High,8,189,466,97.08,No,Yes,95.97,88.03,7,LATAM,Mid-Market,Manager_F,Morning,Integration,Critical,2024-06-19
+SLA-500241,TKT-101996,Network-Operations,Medium,24,315,1244,86.39,No,Yes,57.37,67.56,43,North America,Enterprise,Manager_D,Night,Service Down,Medium,2024-06-21
+SLA-500242,TKT-101301,Infrastructure,Medium,24,215,1605,111.46,Yes,Yes,86.41,83.45,15,Asia-Pacific,SMB,Manager_F,Morning,Security,Low,2024-05-28
+SLA-500243,TKT-101614,Tier2-Technical,Low,48,858,369,12.81,No,No,45.65,92.65,19,Asia-Pacific,Mid-Market,Manager_F,Morning,Integration,Medium,2024-01-25
+SLA-500244,TKT-101505,Network-Operations,Medium,24,252,941,65.35,No,No,51.96,73.35,2,Europe,Enterprise,Manager_C,Evening,Configuration,Medium,2024-02-23
+SLA-500245,TKT-100358,Cloud-Support,High,8,24,712,148.33,Yes,Yes,55.73,43.75,35,LATAM,Mid-Market,Manager_B,Morning,Configuration,Medium,2024-03-19
+SLA-500246,TKT-101589,Cloud-Support,Critical,4,59,41,17.08,No,No,97.61,63.79,14,North America,SMB,Manager_B,Morning,Performance,Critical,2024-01-20
+SLA-500247,TKT-101814,Tier1-Support,Medium,24,446,509,35.35,No,No,30.02,40.97,3,Asia-Pacific,SMB,Manager_E,Night,Integration,High,2024-01-31
+SLA-500248,TKT-100969,Security-Team,Low,48,777,2632,91.39,No,Yes,34.07,94.72,32,North America,Mid-Market,Manager_C,Evening,Service Down,High,2024-03-23
+SLA-500249,TKT-101773,Network-Operations,Low,48,148,1592,55.28,No,No,84.79,54.6,8,Asia-Pacific,Enterprise,Manager_C,Night,Data Loss,High,2024-04-06
+SLA-500250,TKT-101522,Cloud-Support,Medium,24,551,904,62.78,No,No,46.29,52.14,30,LATAM,SMB,Manager_B,Night,Configuration,Medium,2024-05-03
+SLA-500251,TKT-101018,Network-Operations,High,8,177,122,25.42,No,No,85.45,62.26,36,Asia-Pacific,Enterprise,Manager_F,Night,Service Down,Medium,2024-04-01
+SLA-500252,TKT-100881,Tier3-Engineering,Medium,24,454,717,49.79,No,No,97.47,53.67,28,Asia-Pacific,SMB,Manager_A,Morning,Security,Medium,2024-03-19
+SLA-500253,TKT-101353,Security-Team,Medium,24,470,1566,108.75,Yes,Yes,73.33,57.79,27,Asia-Pacific,Startup,Manager_E,Night,Performance,Low,2024-03-22
+SLA-500254,TKT-101412,Cloud-Support,Low,48,671,403,13.99,No,No,56.0,54.62,12,Asia-Pacific,Startup,Manager_A,Evening,Integration,Medium,2024-02-21
+SLA-500255,TKT-100890,Security-Team,Low,48,628,2797,97.12,No,Yes,40.5,57.86,19,North America,Enterprise,Manager_F,Night,Security,Medium,2024-06-28
+SLA-500256,TKT-101050,Tier3-Engineering,High,8,41,80,16.67,No,No,96.94,47.32,18,North America,Mid-Market,Manager_E,Night,Service Down,High,2024-06-17
+SLA-500257,TKT-100258,Tier2-Technical,Medium,24,571,1703,118.26,Yes,Yes,47.83,86.25,41,Europe,SMB,Manager_C,Night,Integration,Medium,2024-02-03
+SLA-500258,TKT-100066,Tier3-Engineering,Medium,24,199,1064,73.89,No,No,72.98,43.67,25,LATAM,SMB,Manager_C,Night,Service Down,High,2024-03-09
+SLA-500259,TKT-101175,Tier3-Engineering,High,8,86,160,33.33,No,No,33.35,42.09,24,Asia-Pacific,Startup,Manager_C,Evening,Performance,High,2024-04-18
+SLA-500260,TKT-101967,Tier2-Technical,High,8,151,76,15.83,No,No,96.96,80.56,32,North America,Mid-Market,Manager_D,Night,Integration,Low,2024-05-18
+SLA-500261,TKT-100241,Security-Team,Critical,4,82,57,23.75,No,No,54.84,62.67,6,Asia-Pacific,Startup,Manager_B,Evening,Configuration,High,2024-04-05
+SLA-500262,TKT-101876,Cloud-Support,Low,48,137,1813,62.95,No,No,35.78,68.31,18,Europe,Enterprise,Manager_B,Morning,Data Loss,Low,2024-04-13
+SLA-500263,TKT-100353,Cloud-Support,Medium,24,462,1065,73.96,No,No,30.73,54.05,5,North America,SMB,Manager_F,Evening,Configuration,High,2024-06-17
+SLA-500264,TKT-100132,Security-Team,Critical,4,118,219,91.25,No,Yes,92.71,57.72,37,Asia-Pacific,Mid-Market,Manager_F,Afternoon,Security,Low,2024-01-02
+SLA-500265,TKT-101041,Billing-Team,Medium,24,159,470,32.64,No,No,66.45,73.91,35,North America,Mid-Market,Manager_B,Afternoon,Data Loss,Low,2024-01-15
+SLA-500266,TKT-100053,Network-Operations,Low,48,182,1928,66.94,No,No,56.32,70.26,26,Asia-Pacific,Startup,Manager_E,Afternoon,Integration,Low,2024-06-06
+SLA-500267,TKT-101810,Tier2-Technical,Critical,4,43,317,132.08,Yes,Yes,64.72,40.7,22,North America,SMB,Manager_D,Night,Integration,Low,2024-02-01
+SLA-500268,TKT-100841,Infrastructure,Low,48,38,2784,96.67,No,Yes,48.09,69.92,22,North America,Mid-Market,Manager_C,Morning,Data Loss,High,2024-05-28
+SLA-500269,TKT-100954,Network-Operations,Critical,4,45,389,162.08,Yes,Yes,69.05,49.93,33,Europe,Mid-Market,Manager_B,Night,Integration,Low,2024-03-26
+SLA-500270,TKT-101865,Tier1-Support,High,8,21,525,109.38,Yes,Yes,37.56,77.69,28,North America,Mid-Market,Manager_C,Afternoon,Performance,Critical,2024-05-30
+SLA-500271,TKT-100660,Billing-Team,High,8,277,742,154.58,Yes,Yes,83.07,80.89,4,Asia-Pacific,SMB,Manager_A,Evening,Performance,Low,2024-01-19
+SLA-500272,TKT-101300,Security-Team,Low,48,1053,2070,71.88,No,No,70.4,88.24,38,Europe,SMB,Manager_E,Morning,Integration,Low,2024-04-15
+SLA-500273,TKT-101312,Tier3-Engineering,Medium,24,583,248,17.22,No,No,81.92,88.48,5,Europe,Mid-Market,Manager_F,Evening,Integration,Low,2024-03-04
+SLA-500274,TKT-100084,Tier1-Support,High,8,9,464,96.67,No,Yes,81.31,73.88,28,North America,Enterprise,Manager_F,Evening,Configuration,High,2024-04-21
+SLA-500275,TKT-100431,Infrastructure,High,8,85,293,61.04,No,No,83.27,41.94,18,North America,Startup,Manager_F,Evening,Configuration,Low,2024-04-30
+SLA-500276,TKT-101959,Security-Team,Critical,4,19,104,43.33,No,No,82.94,86.31,7,LATAM,Mid-Market,Manager_F,Night,Security,High,2024-04-10
+SLA-500277,TKT-100928,Tier2-Technical,Low,48,1155,1283,44.55,No,No,84.63,51.95,27,North America,Mid-Market,Manager_D,Night,Data Loss,Medium,2024-02-23
+SLA-500278,TKT-100951,Billing-Team,Medium,24,404,321,22.29,No,No,73.37,59.55,21,Asia-Pacific,Mid-Market,Manager_C,Evening,Configuration,Medium,2024-03-11
+SLA-500279,TKT-101762,Network-Operations,Medium,24,525,1658,115.14,Yes,Yes,34.54,71.9,5,LATAM,Mid-Market,Manager_C,Morning,Security,Low,2024-01-24
+SLA-500280,TKT-100495,Cloud-Support,Medium,24,593,278,19.31,No,No,31.61,57.72,20,North America,SMB,Manager_D,Afternoon,Performance,Low,2024-04-18
+SLA-500281,TKT-100198,Tier1-Support,High,8,116,763,158.96,Yes,Yes,66.42,60.54,31,Asia-Pacific,Startup,Manager_E,Night,Performance,Medium,2024-05-25
+SLA-500282,TKT-101971,Tier3-Engineering,Medium,24,112,882,61.25,No,No,86.1,82.16,34,Asia-Pacific,SMB,Manager_B,Afternoon,Data Loss,Medium,2024-01-04
+SLA-500283,TKT-101054,Cloud-Support,Medium,24,46,518,35.97,No,No,58.69,86.19,12,LATAM,SMB,Manager_D,Morning,Service Down,High,2024-03-30
+SLA-500284,TKT-101935,Infrastructure,Medium,24,504,619,42.99,No,No,55.36,58.4,14,LATAM,Mid-Market,Manager_B,Evening,Service Down,High,2024-04-03
+SLA-500285,TKT-100103,Security-Team,High,8,197,622,129.58,Yes,Yes,95.85,54.26,27,LATAM,Startup,Manager_C,Morning,Service Down,High,2024-04-02
+SLA-500286,TKT-100882,Tier3-Engineering,Medium,24,48,1036,71.94,No,No,62.07,66.56,7,Asia-Pacific,SMB,Manager_D,Evening,Service Down,Medium,2024-05-05
+SLA-500287,TKT-100820,Tier1-Support,High,8,128,372,77.5,No,No,30.49,43.15,32,Europe,SMB,Manager_E,Evening,Service Down,Critical,2024-02-05
+SLA-500288,TKT-100791,Cloud-Support,Low,48,875,857,29.76,No,No,49.75,54.39,36,Asia-Pacific,Enterprise,Manager_B,Morning,Data Loss,Low,2024-01-14
+SLA-500289,TKT-100764,Network-Operations,Low,48,204,821,28.51,No,No,34.58,66.82,44,Asia-Pacific,Mid-Market,Manager_B,Night,Integration,Low,2024-04-16
+SLA-500290,TKT-100082,Tier1-Support,Low,48,195,929,32.26,No,No,58.78,59.1,16,North America,Mid-Market,Manager_F,Evening,Data Loss,Low,2024-05-27
+SLA-500291,TKT-101063,Cloud-Support,Low,48,943,2486,86.32,No,Yes,57.54,85.53,15,Europe,Mid-Market,Manager_C,Evening,Performance,High,2024-02-27
+SLA-500292,TKT-100804,Security-Team,Critical,4,68,160,66.67,No,No,80.76,50.52,20,Asia-Pacific,Startup,Manager_F,Evening,Data Loss,Medium,2024-03-25
+SLA-500293,TKT-101670,Tier1-Support,Medium,24,444,544,37.78,No,No,31.54,79.6,43,Asia-Pacific,SMB,Manager_F,Morning,Data Loss,Low,2024-03-26
+SLA-500294,TKT-101195,Security-Team,Medium,24,592,1716,119.17,Yes,Yes,45.92,62.22,44,North America,Startup,Manager_C,Afternoon,Configuration,Low,2024-03-26
+SLA-500295,TKT-100105,Cloud-Support,Medium,24,493,317,22.01,No,No,89.28,63.57,6,Europe,Startup,Manager_B,Afternoon,Service Down,Critical,2024-04-21
+SLA-500296,TKT-101172,Tier2-Technical,Low,48,841,337,11.7,No,No,90.34,65.31,40,Europe,Enterprise,Manager_D,Evening,Data Loss,Medium,2024-03-28
+SLA-500297,TKT-100310,Infrastructure,High,8,293,630,131.25,Yes,Yes,62.15,42.86,33,Europe,Startup,Manager_E,Night,Configuration,Low,2024-01-20
+SLA-500298,TKT-101489,Tier1-Support,Medium,24,67,1003,69.65,No,No,66.36,51.27,22,Europe,Mid-Market,Manager_E,Evening,Configuration,High,2024-04-25
+SLA-500299,TKT-100979,Infrastructure,High,8,167,117,24.38,No,No,82.55,70.69,3,Asia-Pacific,Mid-Market,Manager_D,Evening,Integration,Low,2024-05-10
+SLA-500300,TKT-100725,Security-Team,Critical,4,96,71,29.58,No,No,64.85,45.8,24,LATAM,Mid-Market,Manager_B,Evening,Integration,High,2024-06-26
+SLA-500301,TKT-100611,Billing-Team,Low,48,708,546,18.96,No,No,43.69,50.27,9,Asia-Pacific,SMB,Manager_F,Afternoon,Configuration,Low,2024-02-10
+SLA-500302,TKT-101443,Cloud-Support,Medium,24,596,1215,84.38,No,Yes,85.85,61.78,41,Asia-Pacific,Startup,Manager_C,Evening,Security,Medium,2024-02-29
+SLA-500303,TKT-100249,Infrastructure,Medium,24,267,505,35.07,No,No,52.17,87.14,4,LATAM,SMB,Manager_B,Evening,Service Down,High,2024-04-16
+SLA-500304,TKT-100589,Tier2-Technical,Critical,4,32,249,103.75,Yes,Yes,44.14,50.13,38,Asia-Pacific,Startup,Manager_F,Evening,Configuration,High,2024-06-24
+SLA-500305,TKT-100981,Billing-Team,Low,48,259,3277,113.78,Yes,Yes,73.07,44.59,33,Europe,SMB,Manager_E,Evening,Performance,Low,2024-05-18
+SLA-500306,TKT-100223,Billing-Team,Medium,24,15,1272,88.33,No,Yes,59.24,94.13,22,Europe,Enterprise,Manager_F,Afternoon,Configuration,High,2024-06-10
+SLA-500307,TKT-100476,Tier1-Support,Low,48,1125,1769,61.42,No,No,59.92,48.92,28,North America,Startup,Manager_C,Night,Service Down,High,2024-05-10
+SLA-500308,TKT-101395,Tier3-Engineering,Medium,24,381,1141,79.24,No,No,81.2,50.31,30,North America,Mid-Market,Manager_D,Night,Data Loss,Low,2024-06-26
+SLA-500309,TKT-101332,Billing-Team,Low,48,942,1627,56.49,No,No,62.15,59.68,35,Asia-Pacific,SMB,Manager_C,Morning,Service Down,High,2024-03-16
+SLA-500310,TKT-101335,Billing-Team,Low,48,985,3588,124.58,Yes,Yes,37.91,44.79,34,North America,Mid-Market,Manager_D,Afternoon,Service Down,Low,2024-06-28
+SLA-500311,TKT-101712,Infrastructure,Critical,4,50,367,152.92,Yes,Yes,82.42,75.81,23,LATAM,Mid-Market,Manager_F,Evening,Service Down,High,2024-04-17
+SLA-500312,TKT-100018,Security-Team,Medium,24,288,843,58.54,No,No,81.75,45.85,36,North America,SMB,Manager_C,Night,Configuration,High,2024-06-04
+SLA-500313,TKT-101112,Cloud-Support,Medium,24,453,320,22.22,No,No,75.87,94.55,24,Europe,Startup,Manager_C,Afternoon,Service Down,Low,2024-03-07
+SLA-500314,TKT-100677,Tier3-Engineering,Medium,24,142,1334,92.64,No,Yes,34.8,81.97,15,LATAM,SMB,Manager_F,Afternoon,Service Down,Critical,2024-05-24
+SLA-500315,TKT-101508,Network-Operations,High,8,251,266,55.42,No,No,48.22,89.9,28,Asia-Pacific,Mid-Market,Manager_B,Night,Data Loss,Medium,2024-03-31
+SLA-500316,TKT-101055,Network-Operations,Medium,24,557,669,46.46,No,No,45.87,60.99,36,North America,Startup,Manager_F,Morning,Performance,Medium,2024-03-18
+SLA-500317,TKT-100287,Cloud-Support,Medium,24,280,543,37.71,No,No,81.79,90.49,24,Asia-Pacific,Mid-Market,Manager_A,Evening,Data Loss,Low,2024-03-23
+SLA-500318,TKT-100482,Cloud-Support,Critical,4,2,304,126.67,Yes,Yes,86.34,40.99,8,Asia-Pacific,SMB,Manager_C,Morning,Security,Medium,2024-03-13
+SLA-500319,TKT-101338,Network-Operations,Low,48,632,1771,61.49,No,No,74.46,64.74,39,Europe,Enterprise,Manager_F,Morning,Data Loss,Low,2024-06-12
+SLA-500320,TKT-100628,Tier3-Engineering,Low,48,285,504,17.5,No,No,30.87,65.78,26,LATAM,SMB,Manager_F,Morning,Configuration,High,2024-02-22
+SLA-500321,TKT-101876,Security-Team,Low,48,333,2509,87.12,No,Yes,71.92,43.55,29,Asia-Pacific,Mid-Market,Manager_B,Afternoon,Data Loss,High,2024-04-14
+SLA-500322,TKT-100313,Cloud-Support,Low,48,1150,1518,52.71,No,No,35.53,53.17,31,Asia-Pacific,Startup,Manager_F,Night,Integration,Medium,2024-01-11
+SLA-500323,TKT-101642,Billing-Team,Critical,4,49,284,118.33,Yes,Yes,76.12,53.88,38,Europe,Enterprise,Manager_E,Night,Integration,Medium,2024-06-09
+SLA-500324,TKT-101441,Network-Operations,High,8,200,504,105.0,Yes,Yes,32.29,87.77,35,North America,Enterprise,Manager_A,Afternoon,Integration,High,2024-03-05
+SLA-500325,TKT-101099,Tier3-Engineering,Low,48,342,1687,58.58,No,No,52.19,63.9,16,Europe,SMB,Manager_E,Night,Service Down,Medium,2024-01-26
+SLA-500326,TKT-101393,Billing-Team,Low,48,405,2519,87.47,No,Yes,96.37,64.49,30,LATAM,Enterprise,Manager_E,Night,Service Down,Medium,2024-02-24
+SLA-500327,TKT-100928,Tier3-Engineering,Medium,24,539,891,61.88,No,No,56.92,66.82,23,LATAM,Startup,Manager_E,Morning,Integration,Low,2024-06-10
+SLA-500328,TKT-100946,Security-Team,Medium,24,360,1727,119.93,Yes,Yes,74.39,43.9,26,North America,Startup,Manager_C,Morning,Configuration,Low,2024-03-01
+SLA-500329,TKT-100446,Tier2-Technical,Medium,24,282,1791,124.37,Yes,Yes,46.72,65.83,30,North America,Startup,Manager_C,Morning,Integration,Medium,2024-04-08
+SLA-500330,TKT-100123,Tier2-Technical,Low,48,748,2115,73.44,No,No,44.49,68.41,39,LATAM,Enterprise,Manager_C,Night,Performance,High,2024-04-22
+SLA-500331,TKT-101574,Tier3-Engineering,Low,48,554,643,22.33,No,No,37.56,58.64,22,LATAM,SMB,Manager_D,Night,Data Loss,Medium,2024-03-02
+SLA-500332,TKT-100769,Tier2-Technical,Medium,24,381,352,24.44,No,No,57.79,44.79,42,Europe,SMB,Manager_A,Afternoon,Integration,High,2024-01-21
+SLA-500333,TKT-100804,Tier3-Engineering,Low,48,182,3352,116.39,Yes,Yes,32.08,77.15,20,Europe,Enterprise,Manager_A,Evening,Data Loss,Medium,2024-05-06
+SLA-500334,TKT-101379,Infrastructure,Low,48,0,3479,120.8,Yes,Yes,59.53,62.61,9,LATAM,Mid-Market,Manager_B,Night,Security,High,2024-04-18
+SLA-500335,TKT-100317,Security-Team,Medium,24,239,1444,100.28,Yes,Yes,80.29,92.47,6,Europe,Enterprise,Manager_A,Night,Integration,Low,2024-03-31
+SLA-500336,TKT-101568,Tier1-Support,Low,48,1004,2718,94.38,No,Yes,34.17,73.21,19,Europe,Mid-Market,Manager_A,Morning,Integration,Low,2024-03-08
+SLA-500337,TKT-100068,Cloud-Support,Medium,24,419,713,49.51,No,No,36.46,72.8,41,North America,Mid-Market,Manager_F,Morning,Data Loss,High,2024-03-16
+SLA-500338,TKT-100898,Billing-Team,Low,48,654,2328,80.83,No,Yes,95.92,76.77,42,Europe,Enterprise,Manager_B,Evening,Performance,Medium,2024-02-20
+SLA-500339,TKT-101670,Network-Operations,Medium,24,265,1029,71.46,No,No,74.53,90.23,40,Asia-Pacific,Mid-Market,Manager_C,Afternoon,Configuration,High,2024-03-24
+SLA-500340,TKT-101067,Billing-Team,Medium,24,513,1748,121.39,Yes,Yes,34.65,69.37,41,LATAM,SMB,Manager_C,Morning,Integration,High,2024-06-17
+SLA-500341,TKT-101942,Tier3-Engineering,Medium,24,418,354,24.58,No,No,64.02,71.75,27,LATAM,Startup,Manager_A,Evening,Configuration,Critical,2024-03-02
+SLA-500342,TKT-101374,Infrastructure,Medium,24,222,1040,72.22,No,No,81.04,75.88,29,Asia-Pacific,Startup,Manager_D,Afternoon,Security,Medium,2024-04-16
+SLA-500343,TKT-100770,Tier3-Engineering,Medium,24,428,494,34.31,No,No,67.98,87.4,31,LATAM,Mid-Market,Manager_B,Evening,Configuration,Medium,2024-04-07
+SLA-500344,TKT-100295,Cloud-Support,Medium,24,194,1299,90.21,No,Yes,70.55,81.76,24,North America,Startup,Manager_D,Afternoon,Data Loss,Medium,2024-02-17
+SLA-500345,TKT-100497,Security-Team,Low,48,1141,1875,65.1,No,No,57.51,68.92,35,Europe,SMB,Manager_F,Morning,Data Loss,Low,2024-06-13
+SLA-500346,TKT-101734,Network-Operations,Medium,24,420,1711,118.82,Yes,Yes,83.33,92.07,20,North America,Mid-Market,Manager_A,Evening,Data Loss,Low,2024-05-25
+SLA-500347,TKT-101379,Tier1-Support,Medium,24,426,1126,78.19,No,No,35.02,62.53,39,North America,Mid-Market,Manager_E,Afternoon,Data Loss,High,2024-05-15
+SLA-500348,TKT-100427,Network-Operations,Medium,24,439,1347,93.54,No,Yes,69.18,45.79,6,Asia-Pacific,Enterprise,Manager_B,Afternoon,Configuration,Low,2024-03-28
+SLA-500349,TKT-100240,Cloud-Support,Medium,24,74,676,46.94,No,No,56.89,42.14,44,Europe,Mid-Market,Manager_D,Afternoon,Integration,Medium,2024-02-20
+SLA-500350,TKT-100658,Security-Team,Low,48,124,1150,39.93,No,No,64.15,47.15,38,LATAM,Startup,Manager_E,Evening,Security,Critical,2024-04-10
+SLA-500351,TKT-100535,Network-Operations,Medium,24,200,488,33.89,No,No,36.17,73.38,18,LATAM,Startup,Manager_A,Night,Security,Medium,2024-01-22
+SLA-500352,TKT-101872,Billing-Team,Medium,24,164,1632,113.33,Yes,Yes,68.76,69.79,23,Asia-Pacific,SMB,Manager_D,Morning,Integration,Low,2024-03-27
+SLA-500353,TKT-101769,Billing-Team,Medium,24,553,1497,103.96,Yes,Yes,48.15,50.7,22,Europe,Enterprise,Manager_C,Night,Security,Medium,2024-01-21
+SLA-500354,TKT-100312,Billing-Team,Critical,4,102,353,147.08,Yes,Yes,54.31,71.93,25,Asia-Pacific,Mid-Market,Manager_D,Afternoon,Data Loss,Critical,2024-05-20
+SLA-500355,TKT-101127,Network-Operations,Medium,24,138,1115,77.43,No,No,58.12,94.66,19,Asia-Pacific,Startup,Manager_F,Night,Data Loss,Medium,2024-05-31
+SLA-500356,TKT-100344,Network-Operations,Medium,24,164,1118,77.64,No,No,57.66,42.17,18,Europe,Mid-Market,Manager_F,Night,Performance,High,2024-04-27
+SLA-500357,TKT-101877,Tier1-Support,Low,48,63,3402,118.12,Yes,Yes,93.66,79.72,13,North America,Enterprise,Manager_F,Morning,Service Down,Low,2024-05-18
+SLA-500358,TKT-100844,Tier3-Engineering,Medium,24,516,1096,76.11,No,No,77.65,65.67,13,Europe,Enterprise,Manager_F,Afternoon,Service Down,Critical,2024-04-24
+SLA-500359,TKT-100447,Cloud-Support,Medium,24,303,739,51.32,No,No,63.84,87.5,37,Asia-Pacific,Enterprise,Manager_E,Night,Configuration,Low,2024-06-09
+SLA-500360,TKT-100999,Tier1-Support,Medium,24,406,518,35.97,No,No,72.4,90.53,18,North America,Startup,Manager_A,Morning,Integration,High,2024-03-22
+SLA-500361,TKT-101479,Security-Team,Medium,24,364,282,19.58,No,No,44.03,46.01,18,Asia-Pacific,Enterprise,Manager_E,Night,Performance,Medium,2024-04-05
+SLA-500362,TKT-100219,Tier2-Technical,Low,48,442,3124,108.47,Yes,Yes,65.73,74.46,32,Europe,Mid-Market,Manager_B,Evening,Security,High,2024-04-23
+SLA-500363,TKT-100547,Infrastructure,Medium,24,348,802,55.69,No,No,91.04,69.0,22,North America,SMB,Manager_D,Night,Integration,Medium,2024-06-17
+SLA-500364,TKT-100498,Billing-Team,Low,48,695,1549,53.78,No,No,97.02,40.49,20,Asia-Pacific,Enterprise,Manager_F,Morning,Service Down,Low,2024-01-26
+SLA-500365,TKT-100830,Infrastructure,High,8,29,706,147.08,Yes,Yes,33.09,58.8,38,LATAM,Startup,Manager_A,Morning,Configuration,High,2024-02-06
+SLA-500366,TKT-100350,Tier2-Technical,Low,48,647,2475,85.94,No,Yes,76.1,82.14,37,LATAM,Startup,Manager_F,Evening,Integration,High,2024-04-13
+SLA-500367,TKT-101757,Tier2-Technical,Medium,24,383,1403,97.43,No,Yes,58.5,43.63,36,North America,Mid-Market,Manager_B,Night,Security,Medium,2024-05-21
+SLA-500368,TKT-100095,Tier2-Technical,High,8,172,349,72.71,No,No,30.43,45.55,39,Asia-Pacific,Enterprise,Manager_B,Evening,Service Down,Low,2024-06-16
+SLA-500369,TKT-101969,Billing-Team,Low,48,161,3499,121.49,Yes,Yes,40.16,79.06,32,Europe,Startup,Manager_A,Evening,Performance,Low,2024-02-08
+SLA-500370,TKT-101154,Billing-Team,Medium,24,214,1093,75.9,No,No,40.66,54.64,30,LATAM,SMB,Manager_D,Afternoon,Configuration,Medium,2024-02-08
+SLA-500371,TKT-101483,Tier2-Technical,Low,48,436,3068,106.53,Yes,Yes,72.24,59.68,26,Asia-Pacific,Enterprise,Manager_A,Night,Performance,Low,2024-03-21
+SLA-500372,TKT-101717,Tier2-Technical,High,8,31,505,105.21,Yes,Yes,61.78,85.18,21,Asia-Pacific,Startup,Manager_C,Morning,Configuration,High,2024-01-14
+SLA-500373,TKT-100559,Cloud-Support,Medium,24,52,527,36.6,No,No,50.3,70.98,5,LATAM,Mid-Market,Manager_C,Night,Data Loss,Low,2024-01-08
+SLA-500374,TKT-100380,Infrastructure,Low,48,849,593,20.59,No,No,80.52,54.94,16,North America,SMB,Manager_B,Morning,Service Down,Low,2024-04-02
+SLA-500375,TKT-100548,Tier3-Engineering,Low,48,1119,2581,89.62,No,Yes,92.7,72.08,9,LATAM,Mid-Market,Manager_F,Night,Security,Low,2024-03-09
+SLA-500376,TKT-100738,Tier2-Technical,Critical,4,63,186,77.5,No,No,95.16,85.47,44,North America,Enterprise,Manager_C,Night,Security,Low,2024-06-03
+SLA-500377,TKT-101559,Security-Team,High,8,99,200,41.67,No,No,59.57,60.75,13,North America,Mid-Market,Manager_A,Afternoon,Data Loss,High,2024-05-24
+SLA-500378,TKT-100919,Infrastructure,Medium,24,217,1048,72.78,No,No,95.11,86.43,11,North America,Enterprise,Manager_A,Evening,Integration,Low,2024-05-28
+SLA-500379,TKT-100190,Network-Operations,High,8,100,595,123.96,Yes,Yes,83.27,92.29,26,LATAM,Enterprise,Manager_C,Night,Data Loss,Low,2024-01-21
+SLA-500380,TKT-101595,Tier2-Technical,Medium,24,292,929,64.51,No,No,37.34,67.42,40,Europe,Mid-Market,Manager_F,Night,Performance,Medium,2024-02-10
+SLA-500381,TKT-100284,Security-Team,Medium,24,495,346,24.03,No,No,55.89,42.88,42,Asia-Pacific,SMB,Manager_D,Afternoon,Service Down,Low,2024-05-20
+SLA-500382,TKT-100342,Infrastructure,Medium,24,527,768,53.33,No,No,76.01,65.98,23,Asia-Pacific,Startup,Manager_C,Night,Service Down,Low,2024-04-18
+SLA-500383,TKT-100739,Security-Team,High,8,236,221,46.04,No,No,57.63,91.19,37,Europe,Startup,Manager_E,Afternoon,Data Loss,High,2024-01-28
+SLA-500384,TKT-100219,Tier3-Engineering,Critical,4,43,178,74.17,No,No,77.75,65.75,2,Asia-Pacific,Enterprise,Manager_D,Evening,Integration,High,2024-01-13
+SLA-500385,TKT-100778,Network-Operations,Low,48,117,2341,81.28,No,Yes,66.11,54.72,11,LATAM,SMB,Manager_D,Afternoon,Security,Low,2024-06-13
+SLA-500386,TKT-100656,Billing-Team,Critical,4,1,366,152.5,Yes,Yes,38.71,62.75,26,LATAM,SMB,Manager_B,Night,Security,High,2024-04-11
+SLA-500387,TKT-100596,Cloud-Support,Medium,24,181,1003,69.65,No,No,30.69,65.53,37,Europe,SMB,Manager_D,Evening,Data Loss,Low,2024-03-30
+SLA-500388,TKT-100747,Tier2-Technical,Medium,24,118,1299,90.21,No,Yes,48.71,52.09,29,Europe,Mid-Market,Manager_F,Morning,Configuration,Critical,2024-01-27
+SLA-500389,TKT-100945,Billing-Team,Medium,24,174,864,60.0,No,No,38.41,54.61,33,LATAM,SMB,Manager_F,Morning,Data Loss,Medium,2024-06-01
+SLA-500390,TKT-101378,Cloud-Support,High,8,6,697,145.21,Yes,Yes,69.95,71.25,37,Europe,SMB,Manager_B,Evening,Configuration,Medium,2024-04-20
+SLA-500391,TKT-100315,Infrastructure,Medium,24,159,450,31.25,No,No,88.08,73.34,9,LATAM,Enterprise,Manager_D,Night,Integration,Low,2024-02-28
+SLA-500392,TKT-100820,Infrastructure,Low,48,194,728,25.28,No,No,95.62,73.18,14,North America,SMB,Manager_F,Morning,Service Down,High,2024-06-20
+SLA-500393,TKT-101574,Billing-Team,Low,48,1127,632,21.94,No,No,46.74,69.19,21,Asia-Pacific,Mid-Market,Manager_F,Morning,Integration,Medium,2024-05-22
+SLA-500394,TKT-101321,Infrastructure,Medium,24,277,352,24.44,No,No,44.35,79.91,8,Asia-Pacific,Startup,Manager_A,Morning,Service Down,Low,2024-01-26
+SLA-500395,TKT-100529,Billing-Team,High,8,266,520,108.33,Yes,Yes,86.78,74.98,32,Europe,Startup,Manager_C,Night,Data Loss,High,2024-03-05
+SLA-500396,TKT-101581,Tier3-Engineering,Low,48,563,3413,118.51,Yes,Yes,50.34,65.85,32,Asia-Pacific,Enterprise,Manager_D,Morning,Security,High,2024-01-26
+SLA-500397,TKT-100851,Tier2-Technical,Low,48,4,2083,72.33,No,No,46.12,42.45,34,North America,Mid-Market,Manager_C,Evening,Security,Critical,2024-06-03
+SLA-500398,TKT-100932,Billing-Team,High,8,223,632,131.67,Yes,Yes,96.43,92.93,7,LATAM,SMB,Manager_D,Morning,Data Loss,Low,2024-03-26
+SLA-500399,TKT-101478,Cloud-Support,High,8,77,773,161.04,Yes,Yes,42.62,65.22,4,Asia-Pacific,Enterprise,Manager_C,Morning,Configuration,Low,2024-04-02
+SLA-500400,TKT-100235,Tier1-Support,Medium,24,492,1378,95.69,No,Yes,77.2,47.53,12,Asia-Pacific,Enterprise,Manager_F,Afternoon,Configuration,High,2024-01-11
+SLA-500401,TKT-100499,Tier3-Engineering,Medium,24,491,1725,119.79,Yes,Yes,37.62,75.01,27,Europe,SMB,Manager_E,Night,Data Loss,Medium,2024-03-16
+SLA-500402,TKT-100474,Infrastructure,Low,48,273,3330,115.62,Yes,Yes,42.33,51.77,19,Europe,Mid-Market,Manager_F,Night,Data Loss,Critical,2024-01-04
+SLA-500403,TKT-100059,Billing-Team,High,8,284,630,131.25,Yes,Yes,54.85,78.41,44,LATAM,Startup,Manager_D,Morning,Configuration,Medium,2024-06-10
+SLA-500404,TKT-100439,Billing-Team,High,8,140,421,87.71,No,Yes,63.38,79.51,31,Asia-Pacific,Enterprise,Manager_E,Morning,Integration,Medium,2024-02-08
+SLA-500405,TKT-100382,Network-Operations,High,8,83,659,137.29,Yes,Yes,83.45,87.04,10,Asia-Pacific,Mid-Market,Manager_D,Morning,Security,High,2024-02-05
+SLA-500406,TKT-101373,Cloud-Support,Medium,24,511,1299,90.21,No,Yes,46.01,74.89,25,Asia-Pacific,Startup,Manager_E,Night,Integration,High,2024-04-13
+SLA-500407,TKT-100233,Network-Operations,High,8,90,672,140.0,Yes,Yes,47.21,62.15,14,Asia-Pacific,Startup,Manager_E,Afternoon,Configuration,Low,2024-01-09
+SLA-500408,TKT-101445,Security-Team,Low,48,666,2833,98.37,No,Yes,99.53,42.47,30,North America,Mid-Market,Manager_C,Morning,Performance,Medium,2024-03-07
+SLA-500409,TKT-100625,Tier2-Technical,Medium,24,358,1746,121.25,Yes,Yes,49.29,74.21,30,Europe,SMB,Manager_F,Afternoon,Integration,Medium,2024-03-31
+SLA-500410,TKT-100795,Infrastructure,Medium,24,113,1201,83.4,No,Yes,91.41,93.59,24,Europe,Startup,Manager_D,Afternoon,Data Loss,Medium,2024-02-10
+SLA-500411,TKT-101301,Tier3-Engineering,Low,48,353,3303,114.69,Yes,Yes,49.77,92.28,6,Europe,Startup,Manager_C,Afternoon,Performance,High,2024-02-25
+SLA-500412,TKT-100644,Cloud-Support,Medium,24,98,707,49.1,No,No,83.11,55.54,8,North America,SMB,Manager_A,Night,Performance,High,2024-03-11
+SLA-500413,TKT-100399,Infrastructure,High,8,132,464,96.67,No,Yes,83.42,85.27,21,LATAM,Startup,Manager_F,Night,Data Loss,Medium,2024-04-25
+SLA-500414,TKT-101454,Cloud-Support,Low,48,552,1631,56.63,No,No,53.21,87.03,29,LATAM,Mid-Market,Manager_A,Morning,Performance,Medium,2024-03-08
+SLA-500415,TKT-100598,Tier1-Support,Low,48,420,2160,75.0,No,No,58.66,84.6,41,Asia-Pacific,Mid-Market,Manager_E,Evening,Performance,Low,2024-06-12
+SLA-500416,TKT-101598,Cloud-Support,Medium,24,535,655,45.49,No,No,75.83,48.34,24,LATAM,Enterprise,Manager_E,Morning,Security,Low,2024-04-25
+SLA-500417,TKT-101587,Network-Operations,Medium,24,580,982,68.19,No,No,38.95,82.11,7,North America,Startup,Manager_E,Afternoon,Data Loss,Low,2024-05-17
+SLA-500418,TKT-100209,Billing-Team,Low,48,1108,451,15.66,No,No,46.13,40.08,5,Asia-Pacific,Enterprise,Manager_D,Evening,Security,Critical,2024-02-07
+SLA-500419,TKT-101765,Tier2-Technical,High,8,238,228,47.5,No,No,89.39,63.24,31,LATAM,Enterprise,Manager_B,Afternoon,Configuration,Medium,2024-01-25
+SLA-500420,TKT-101204,Network-Operations,Low,48,205,3496,121.39,Yes,Yes,55.97,89.61,37,LATAM,Mid-Market,Manager_E,Afternoon,Performance,Critical,2024-01-22
+SLA-500421,TKT-101666,Billing-Team,Medium,24,271,1714,119.03,Yes,Yes,59.01,81.46,33,North America,SMB,Manager_E,Evening,Integration,Low,2024-01-09
+SLA-500422,TKT-101103,Tier3-Engineering,Low,48,9,3013,104.62,Yes,Yes,48.57,73.09,26,Asia-Pacific,SMB,Manager_C,Evening,Integration,Low,2024-04-10
+SLA-500423,TKT-101843,Tier2-Technical,Low,48,562,1344,46.67,No,No,95.3,85.51,41,Europe,Startup,Manager_A,Evening,Configuration,Low,2024-06-15
+SLA-500424,TKT-100259,Tier3-Engineering,Medium,24,0,1126,78.19,No,No,78.62,80.09,18,Europe,Mid-Market,Manager_F,Evening,Performance,Low,2024-06-17
+SLA-500425,TKT-101559,Infrastructure,Low,48,1164,821,28.51,No,No,53.49,93.82,4,LATAM,Mid-Market,Manager_E,Evening,Configuration,Low,2024-02-18
+SLA-500426,TKT-100848,Infrastructure,High,8,174,168,35.0,No,No,96.3,67.29,4,LATAM,Enterprise,Manager_F,Morning,Data Loss,Medium,2024-04-09
+SLA-500427,TKT-101055,Security-Team,High,8,127,511,106.46,Yes,Yes,56.9,41.39,36,Asia-Pacific,Startup,Manager_D,Evening,Integration,Low,2024-02-27
+SLA-500428,TKT-100005,Tier2-Technical,Medium,24,314,1044,72.5,No,No,87.2,70.05,41,LATAM,SMB,Manager_A,Night,Performance,Low,2024-01-27
+SLA-500429,TKT-101982,Infrastructure,Medium,24,524,1383,96.04,No,Yes,86.0,70.4,13,Europe,Startup,Manager_C,Evening,Security,Low,2024-02-12
+SLA-500430,TKT-100691,Tier3-Engineering,High,8,147,154,32.08,No,No,51.69,55.95,23,LATAM,SMB,Manager_F,Morning,Service Down,High,2024-03-12
+SLA-500431,TKT-100203,Cloud-Support,Low,48,374,690,23.96,No,No,89.55,94.0,19,North America,Enterprise,Manager_B,Night,Data Loss,Low,2024-03-12
+SLA-500432,TKT-100001,Infrastructure,Low,48,112,1275,44.27,No,No,50.13,56.87,28,Europe,Mid-Market,Manager_F,Evening,Performance,Medium,2024-05-13
+SLA-500433,TKT-101790,Security-Team,Low,48,568,2187,75.94,No,No,58.32,43.76,34,North America,SMB,Manager_C,Morning,Security,Low,2024-04-21
+SLA-500434,TKT-101360,Tier3-Engineering,Low,48,725,2484,86.25,No,Yes,35.05,51.3,40,North America,Startup,Manager_F,Evening,Configuration,Critical,2024-05-20
+SLA-500435,TKT-101432,Billing-Team,High,8,78,274,57.08,No,No,43.93,63.01,30,LATAM,Enterprise,Manager_F,Morning,Service Down,Low,2024-01-29
+SLA-500436,TKT-100437,Cloud-Support,Low,48,830,3001,104.2,Yes,Yes,94.03,40.63,30,North America,Mid-Market,Manager_E,Afternoon,Integration,Critical,2024-03-06
+SLA-500437,TKT-101392,Cloud-Support,Critical,4,68,347,144.58,Yes,Yes,68.88,50.44,21,North America,Enterprise,Manager_F,Evening,Service Down,Medium,2024-06-25
+SLA-500438,TKT-101761,Infrastructure,Medium,24,386,897,62.29,No,No,66.18,80.71,3,Europe,Startup,Manager_A,Afternoon,Data Loss,Low,2024-03-14
+SLA-500439,TKT-100182,Tier2-Technical,Medium,24,153,1582,109.86,Yes,Yes,35.39,44.16,39,North America,SMB,Manager_C,Evening,Performance,Low,2024-02-10
+SLA-500440,TKT-100783,Tier3-Engineering,Low,48,1131,642,22.29,No,No,73.66,75.67,31,Europe,Enterprise,Manager_E,Morning,Integration,Medium,2024-05-29
+SLA-500441,TKT-101331,Tier3-Engineering,Critical,4,78,312,130.0,Yes,Yes,77.32,78.86,7,LATAM,SMB,Manager_F,Afternoon,Configuration,Medium,2024-04-09
+SLA-500442,TKT-101532,Tier3-Engineering,Low,48,257,652,22.64,No,No,42.19,46.44,26,LATAM,Startup,Manager_B,Morning,Service Down,Low,2024-03-19
+SLA-500443,TKT-100286,Tier2-Technical,Low,48,946,799,27.74,No,No,30.47,82.48,37,LATAM,SMB,Manager_D,Evening,Performance,High,2024-01-25
+SLA-500444,TKT-100507,Security-Team,Low,48,880,540,18.75,No,No,70.8,53.92,37,North America,Mid-Market,Manager_E,Evening,Configuration,Critical,2024-05-17
+SLA-500445,TKT-100054,Security-Team,Medium,24,236,165,11.46,No,No,43.2,76.99,39,Europe,Mid-Market,Manager_F,Night,Security,Low,2024-04-23
+SLA-500446,TKT-101323,Tier1-Support,High,8,177,478,99.58,No,Yes,92.3,44.64,26,Europe,Startup,Manager_D,Morning,Performance,Medium,2024-01-15
+SLA-500447,TKT-101023,Tier2-Technical,High,8,72,307,63.96,No,No,46.04,70.08,42,North America,SMB,Manager_C,Afternoon,Data Loss,Low,2024-06-16
+SLA-500448,TKT-101762,Infrastructure,Medium,24,150,1254,87.08,No,Yes,81.71,40.76,34,Asia-Pacific,Mid-Market,Manager_D,Morning,Service Down,Low,2024-03-09
+SLA-500449,TKT-101202,Tier2-Technical,Low,48,801,2583,89.69,No,Yes,54.84,63.36,34,North America,SMB,Manager_B,Morning,Service Down,High,2024-03-22
+SLA-500450,TKT-101942,Infrastructure,Medium,24,502,1793,124.51,Yes,Yes,91.95,61.08,37,Asia-Pacific,Startup,Manager_D,Night,Service Down,Critical,2024-03-17
+SLA-500451,TKT-101311,Tier3-Engineering,High,8,90,750,156.25,Yes,Yes,83.95,63.51,7,Asia-Pacific,Enterprise,Manager_C,Morning,Integration,High,2024-02-08
+SLA-500452,TKT-101886,Billing-Team,Low,48,795,3152,109.44,Yes,Yes,92.67,76.66,22,Europe,SMB,Manager_D,Morning,Security,Medium,2024-02-27
+SLA-500453,TKT-101430,Infrastructure,Low,48,741,2281,79.2,No,No,64.96,69.43,44,Europe,Enterprise,Manager_B,Morning,Data Loss,Critical,2024-04-01
+SLA-500454,TKT-100237,Cloud-Support,Medium,24,62,631,43.82,No,No,61.07,41.21,5,North America,SMB,Manager_F,Afternoon,Service Down,Medium,2024-05-14
+SLA-500455,TKT-100025,Tier3-Engineering,Low,48,821,2375,82.47,No,Yes,94.9,45.8,4,North America,Mid-Market,Manager_D,Evening,Integration,Medium,2024-04-30
+SLA-500456,TKT-101059,Security-Team,Low,48,1061,1604,55.69,No,No,41.23,43.88,11,Europe,SMB,Manager_B,Evening,Configuration,Critical,2024-04-18
+SLA-500457,TKT-101815,Tier2-Technical,High,8,82,128,26.67,No,No,30.56,90.85,28,North America,SMB,Manager_D,Evening,Integration,Medium,2024-01-23
+SLA-500458,TKT-100130,Security-Team,Low,48,60,2153,74.76,No,No,88.0,83.41,33,North America,Startup,Manager_D,Evening,Service Down,High,2024-05-12
+SLA-500459,TKT-101023,Tier3-Engineering,Low,48,313,3094,107.43,Yes,Yes,46.22,57.52,10,Asia-Pacific,Mid-Market,Manager_C,Morning,Integration,Low,2024-04-18
+SLA-500460,TKT-101380,Tier2-Technical,Medium,24,424,749,52.01,No,No,85.61,88.64,13,Europe,Enterprise,Manager_A,Morning,Performance,High,2024-06-06
+SLA-500461,TKT-100094,Cloud-Support,Medium,24,456,1428,99.17,No,Yes,62.14,62.61,33,Asia-Pacific,Startup,Manager_B,Afternoon,Service Down,High,2024-04-21
+SLA-500462,TKT-101132,Infrastructure,Low,48,596,689,23.92,No,No,67.23,83.42,31,Europe,SMB,Manager_B,Night,Configuration,Low,2024-02-02
+SLA-500463,TKT-100655,Security-Team,Low,48,637,2522,87.57,No,Yes,81.27,88.49,11,North America,SMB,Manager_A,Morning,Performance,Medium,2024-04-24
+SLA-500464,TKT-100457,Tier1-Support,Low,48,1034,2493,86.56,No,Yes,41.69,53.41,20,LATAM,Enterprise,Manager_D,Evening,Security,Medium,2024-05-05
+SLA-500465,TKT-100670,Tier2-Technical,Critical,4,71,392,163.33,Yes,Yes,68.98,62.87,34,LATAM,Enterprise,Manager_C,Afternoon,Security,Medium,2024-03-14
+SLA-500466,TKT-101154,Security-Team,Medium,24,448,1065,73.96,No,No,52.93,70.07,2,Europe,Startup,Manager_C,Night,Performance,Medium,2024-06-24
+SLA-500467,TKT-101500,Billing-Team,Critical,4,47,274,114.17,Yes,Yes,38.2,58.55,25,Europe,Enterprise,Manager_D,Morning,Performance,High,2024-03-11
+SLA-500468,TKT-101109,Network-Operations,Low,48,304,1270,44.1,No,No,84.11,92.33,2,North America,SMB,Manager_A,Night,Configuration,Low,2024-01-17
+SLA-500469,TKT-101489,Security-Team,High,8,250,446,92.92,No,Yes,69.25,74.56,33,North America,Mid-Market,Manager_E,Afternoon,Data Loss,High,2024-05-23
+SLA-500470,TKT-101007,Tier1-Support,Low,48,667,1336,46.39,No,No,67.5,85.99,23,Europe,SMB,Manager_A,Morning,Performance,High,2024-04-17
+SLA-500471,TKT-101837,Infrastructure,Low,48,717,578,20.07,No,No,87.44,62.25,16,Asia-Pacific,Startup,Manager_F,Morning,Integration,Medium,2024-06-22
+SLA-500472,TKT-100195,Tier3-Engineering,Medium,24,231,777,53.96,No,No,93.12,51.19,33,LATAM,Enterprise,Manager_E,Morning,Data Loss,Low,2024-01-06
+SLA-500473,TKT-101356,Tier3-Engineering,Medium,24,184,411,28.54,No,No,89.35,70.01,19,Europe,SMB,Manager_C,Evening,Data Loss,Medium,2024-02-14
+SLA-500474,TKT-101435,Network-Operations,Critical,4,19,250,104.17,Yes,Yes,69.13,57.66,20,Asia-Pacific,Startup,Manager_C,Afternoon,Service Down,Low,2024-03-04
+SLA-500475,TKT-101932,Billing-Team,Medium,24,573,763,52.99,No,No,62.5,79.75,32,Europe,Enterprise,Manager_B,Morning,Performance,High,2024-03-31
+SLA-500476,TKT-100920,Cloud-Support,Medium,24,61,1399,97.15,No,Yes,63.88,40.29,35,Asia-Pacific,Startup,Manager_A,Evening,Performance,High,2024-02-17
+SLA-500477,TKT-100925,Security-Team,Low,48,1159,3512,121.94,Yes,Yes,70.86,83.01,40,LATAM,SMB,Manager_A,Morning,Performance,High,2024-04-08
+SLA-500478,TKT-101653,Security-Team,Medium,24,43,1684,116.94,Yes,Yes,57.06,76.44,29,North America,Mid-Market,Manager_C,Afternoon,Service Down,Medium,2024-05-24
+SLA-500479,TKT-101456,Billing-Team,Low,48,990,3186,110.62,Yes,Yes,60.32,82.59,43,Asia-Pacific,Startup,Manager_E,Morning,Configuration,Medium,2024-03-02
+SLA-500480,TKT-100612,Security-Team,Low,48,266,293,10.17,No,No,57.03,72.37,41,Europe,Enterprise,Manager_D,Night,Integration,Medium,2024-05-09
+SLA-500481,TKT-101532,Billing-Team,Medium,24,299,514,35.69,No,No,43.15,44.23,3,North America,Startup,Manager_A,Afternoon,Service Down,Low,2024-04-24
+SLA-500482,TKT-100024,Tier1-Support,High,8,145,377,78.54,No,No,85.74,54.96,39,Europe,Mid-Market,Manager_B,Night,Security,Medium,2024-06-14
+SLA-500483,TKT-101405,Tier2-Technical,High,8,60,188,39.17,No,No,67.01,85.43,22,Asia-Pacific,Enterprise,Manager_A,Morning,Performance,High,2024-01-13
+SLA-500484,TKT-101848,Cloud-Support,Medium,24,585,1118,77.64,No,No,84.38,85.19,33,Europe,Enterprise,Manager_C,Morning,Service Down,High,2024-03-10
+SLA-500485,TKT-101929,Cloud-Support,High,8,203,220,45.83,No,No,60.26,41.71,23,North America,Mid-Market,Manager_E,Night,Configuration,Low,2024-05-28
+SLA-500486,TKT-100808,Cloud-Support,High,8,78,576,120.0,Yes,Yes,74.1,87.2,7,North America,Startup,Manager_F,Night,Performance,Medium,2024-04-19
+SLA-500487,TKT-100724,Billing-Team,High,8,231,514,107.08,Yes,Yes,99.73,85.4,3,Europe,SMB,Manager_C,Night,Performance,High,2024-05-04
+SLA-500488,TKT-100070,Billing-Team,Low,48,687,2314,80.35,No,Yes,99.92,57.97,32,Asia-Pacific,Startup,Manager_D,Night,Service Down,High,2024-03-01
+SLA-500489,TKT-100179,Security-Team,High,8,162,410,85.42,No,Yes,32.82,62.62,36,LATAM,Mid-Market,Manager_D,Afternoon,Configuration,Low,2024-05-28
+SLA-500490,TKT-101811,Billing-Team,High,8,290,657,136.88,Yes,Yes,31.01,82.04,33,North America,Startup,Manager_F,Evening,Data Loss,Medium,2024-04-08
+SLA-500491,TKT-101115,Cloud-Support,Critical,4,68,370,154.17,Yes,Yes,58.16,61.48,5,Asia-Pacific,SMB,Manager_D,Evening,Performance,Critical,2024-05-06
+SLA-500492,TKT-100053,Network-Operations,High,8,73,632,131.67,Yes,Yes,57.25,52.59,20,Europe,Enterprise,Manager_C,Morning,Data Loss,High,2024-05-18
+SLA-500493,TKT-101084,Network-Operations,Critical,4,54,57,23.75,No,No,66.94,51.64,22,Europe,Mid-Market,Manager_A,Afternoon,Configuration,Critical,2024-05-11
+SLA-500494,TKT-100493,Security-Team,High,8,169,527,109.79,Yes,Yes,95.8,67.72,33,North America,Mid-Market,Manager_E,Night,Security,Medium,2024-05-25
+SLA-500495,TKT-101915,Tier3-Engineering,Medium,24,470,1218,84.58,No,Yes,41.71,67.52,42,Europe,Mid-Market,Manager_E,Evening,Configuration,Medium,2024-03-29
+SLA-500496,TKT-101428,Network-Operations,Medium,24,457,1037,72.01,No,No,40.93,74.98,5,North America,SMB,Manager_E,Afternoon,Integration,Medium,2024-04-13
+SLA-500497,TKT-101942,Billing-Team,High,8,213,780,162.5,Yes,Yes,88.62,49.34,21,LATAM,SMB,Manager_B,Night,Service Down,High,2024-06-09
+SLA-500498,TKT-100184,Tier1-Support,Medium,24,42,326,22.64,No,No,88.67,84.15,31,Europe,Mid-Market,Manager_A,Night,Service Down,Critical,2024-06-04
+SLA-500499,TKT-100679,Billing-Team,Medium,24,93,132,9.17,No,No,40.76,71.49,39,Europe,SMB,Manager_F,Afternoon,Security,Medium,2024-01-26
+SLA-500500,TKT-100121,Tier1-Support,High,8,298,209,43.54,No,No,79.18,43.66,27,Europe,Mid-Market,Manager_A,Evening,Service Down,Low,2024-05-07
+SLA-500501,TKT-100765,Infrastructure,Medium,24,438,1287,89.38,No,Yes,78.35,72.82,17,North America,SMB,Manager_C,Evening,Performance,High,2024-06-24
+SLA-500502,TKT-101998,Tier3-Engineering,Medium,24,214,207,14.37,No,No,91.92,46.89,21,LATAM,Startup,Manager_F,Evening,Performance,Low,2024-04-28
+SLA-500503,TKT-101448,Network-Operations,Medium,24,206,726,50.42,No,No,84.31,47.04,40,Europe,Mid-Market,Manager_D,Evening,Configuration,Medium,2024-01-12
+SLA-500504,TKT-101410,Security-Team,High,8,63,409,85.21,No,Yes,51.42,70.35,35,Europe,Mid-Market,Manager_F,Morning,Configuration,Low,2024-04-17
+SLA-500505,TKT-101942,Infrastructure,Low,48,762,2563,88.99,No,Yes,33.87,91.83,33,North America,Mid-Market,Manager_E,Evening,Integration,Low,2024-03-24
+SLA-500506,TKT-100452,Tier2-Technical,Critical,4,39,101,42.08,No,No,60.78,55.31,41,LATAM,Mid-Market,Manager_C,Morning,Performance,Low,2024-05-15
+SLA-500507,TKT-100710,Network-Operations,Low,48,567,1323,45.94,No,No,87.86,60.11,37,Europe,Enterprise,Manager_F,Evening,Data Loss,High,2024-02-05
+SLA-500508,TKT-100023,Security-Team,Low,48,1109,3534,122.71,Yes,Yes,84.38,44.21,25,Europe,Mid-Market,Manager_F,Morning,Security,Low,2024-01-22
+SLA-500509,TKT-100525,Tier2-Technical,Medium,24,374,130,9.03,No,No,69.44,84.21,6,North America,Enterprise,Manager_D,Night,Configuration,Medium,2024-01-10
+SLA-500510,TKT-100859,Tier3-Engineering,Medium,24,237,1498,104.03,Yes,Yes,30.22,49.58,24,LATAM,Startup,Manager_D,Evening,Integration,Low,2024-02-26
+SLA-500511,TKT-100768,Tier2-Technical,High,8,180,243,50.62,No,No,55.47,50.49,26,LATAM,Mid-Market,Manager_B,Night,Service Down,Medium,2024-04-24
+SLA-500512,TKT-101636,Tier1-Support,Critical,4,16,135,56.25,No,No,51.97,69.59,40,Asia-Pacific,Enterprise,Manager_C,Evening,Service Down,Medium,2024-02-01
+SLA-500513,TKT-100151,Network-Operations,High,8,147,277,57.71,No,No,43.66,66.92,17,Europe,Startup,Manager_B,Morning,Integration,High,2024-03-16
+SLA-500514,TKT-101928,Tier2-Technical,Medium,24,210,563,39.1,No,No,55.3,87.29,19,Asia-Pacific,Startup,Manager_F,Morning,Data Loss,Low,2024-02-08
+SLA-500515,TKT-101930,Tier3-Engineering,Medium,24,344,343,23.82,No,No,38.82,50.8,18,LATAM,Mid-Market,Manager_A,Morning,Security,High,2024-05-13
+SLA-500516,TKT-100420,Billing-Team,Medium,24,187,389,27.01,No,No,75.13,52.64,40,LATAM,SMB,Manager_F,Evening,Security,Critical,2024-03-17
+SLA-500517,TKT-100486,Tier2-Technical,Medium,24,485,1334,92.64,No,Yes,69.96,50.19,31,North America,Startup,Manager_E,Night,Performance,High,2024-05-10
+SLA-500518,TKT-100111,Network-Operations,Low,48,737,959,33.3,No,No,50.0,90.99,9,North America,Startup,Manager_A,Evening,Configuration,Medium,2024-03-02
+SLA-500519,TKT-101280,Cloud-Support,Low,48,905,626,21.74,No,No,92.58,58.56,32,Europe,Enterprise,Manager_A,Afternoon,Performance,Medium,2024-03-09
+SLA-500520,TKT-101307,Security-Team,Low,48,1150,2200,76.39,No,No,47.69,68.6,21,North America,Startup,Manager_A,Evening,Data Loss,Low,2024-05-29
+SLA-500521,TKT-100964,Cloud-Support,High,8,44,698,145.42,Yes,Yes,72.02,42.94,14,Asia-Pacific,Enterprise,Manager_F,Night,Performance,Low,2024-06-12
+SLA-500522,TKT-100759,Infrastructure,Medium,24,272,1201,83.4,No,Yes,46.6,92.17,24,Asia-Pacific,Mid-Market,Manager_D,Morning,Security,Low,2024-01-08
+SLA-500523,TKT-100900,Cloud-Support,Critical,4,110,216,90.0,No,Yes,71.3,40.35,29,Asia-Pacific,Mid-Market,Manager_C,Morning,Performance,High,2024-01-16
+SLA-500524,TKT-101540,Tier2-Technical,Medium,24,510,1032,71.67,No,No,79.29,91.43,30,North America,SMB,Manager_E,Night,Integration,High,2024-03-22
+SLA-500525,TKT-100465,Tier1-Support,Low,48,605,2948,102.36,Yes,Yes,33.18,75.56,20,LATAM,Startup,Manager_E,Night,Integration,Medium,2024-06-28
+SLA-500526,TKT-101805,Billing-Team,Medium,24,478,684,47.5,No,No,33.52,41.92,34,LATAM,SMB,Manager_A,Night,Configuration,High,2024-05-16
+SLA-500527,TKT-100071,Tier3-Engineering,High,8,0,103,21.46,No,No,31.75,64.7,10,North America,Startup,Manager_B,Afternoon,Performance,Medium,2024-05-19
+SLA-500528,TKT-101655,Billing-Team,High,8,71,726,151.25,Yes,Yes,42.14,60.89,41,Europe,Enterprise,Manager_D,Morning,Configuration,Low,2024-04-24
+SLA-500529,TKT-100891,Billing-Team,High,8,170,332,69.17,No,No,44.75,70.61,22,Europe,SMB,Manager_C,Morning,Service Down,Medium,2024-05-30
+SLA-500530,TKT-100794,Infrastructure,Critical,4,85,131,54.58,No,No,31.34,85.48,9,Asia-Pacific,SMB,Manager_E,Night,Service Down,High,2024-04-24
+SLA-500531,TKT-101610,Infrastructure,Low,48,816,3460,120.14,Yes,Yes,97.3,76.73,20,North America,Startup,Manager_B,Afternoon,Integration,Medium,2024-01-17
+SLA-500532,TKT-101204,Tier2-Technical,Medium,24,183,1171,81.32,No,Yes,89.37,92.09,5,North America,Enterprise,Manager_C,Evening,Data Loss,Medium,2024-06-25
+SLA-500533,TKT-100540,Infrastructure,Low,48,57,1532,53.19,No,No,30.72,79.38,42,LATAM,Startup,Manager_A,Afternoon,Security,Medium,2024-03-23
+SLA-500534,TKT-100825,Tier3-Engineering,Low,48,795,1136,39.44,No,No,36.23,94.54,34,LATAM,Enterprise,Manager_D,Evening,Configuration,Critical,2024-04-23
+SLA-500535,TKT-100486,Tier1-Support,Critical,4,107,166,69.17,No,No,46.8,79.06,32,LATAM,SMB,Manager_C,Morning,Security,Low,2024-05-21
+SLA-500536,TKT-101674,Security-Team,Medium,24,510,921,63.96,No,No,43.26,40.28,43,Asia-Pacific,SMB,Manager_D,Morning,Performance,Critical,2024-05-27
+SLA-500537,TKT-100275,Security-Team,High,8,9,270,56.25,No,No,93.31,84.96,28,LATAM,SMB,Manager_C,Night,Integration,Low,2024-01-15
+SLA-500538,TKT-101322,Tier2-Technical,Medium,24,104,1699,117.99,Yes,Yes,58.78,62.13,32,Europe,Startup,Manager_B,Night,Configuration,Medium,2024-05-19
+SLA-500539,TKT-100992,Network-Operations,Critical,4,86,205,85.42,No,Yes,78.37,54.94,26,North America,Mid-Market,Manager_A,Evening,Configuration,High,2024-05-10
+SLA-500540,TKT-101037,Infrastructure,Low,48,984,1091,37.88,No,No,88.17,46.59,34,Europe,Enterprise,Manager_B,Afternoon,Performance,Low,2024-05-22
+SLA-500541,TKT-101714,Tier1-Support,Critical,4,109,331,137.92,Yes,Yes,74.26,72.1,6,Europe,Enterprise,Manager_D,Morning,Security,Medium,2024-04-16
+SLA-500542,TKT-101443,Billing-Team,Low,48,470,2227,77.33,No,No,70.7,45.82,36,Asia-Pacific,SMB,Manager_D,Night,Configuration,Medium,2024-05-30
+SLA-500543,TKT-101890,Tier2-Technical,Medium,24,551,1385,96.18,No,Yes,69.24,91.85,9,North America,Mid-Market,Manager_C,Night,Integration,High,2024-03-01
+SLA-500544,TKT-100913,Tier3-Engineering,High,8,236,752,156.67,Yes,Yes,62.48,46.53,39,LATAM,SMB,Manager_C,Afternoon,Security,Low,2024-03-13
+SLA-500545,TKT-101533,Tier2-Technical,High,8,1,508,105.83,Yes,Yes,78.98,73.93,12,Asia-Pacific,Enterprise,Manager_D,Morning,Performance,Medium,2024-03-16
+SLA-500546,TKT-101748,Billing-Team,High,8,204,504,105.0,Yes,Yes,47.24,63.3,31,Europe,Mid-Market,Manager_F,Afternoon,Security,Low,2024-06-10
+SLA-500547,TKT-101334,Infrastructure,Low,48,856,1851,64.27,No,No,66.65,52.0,38,North America,Enterprise,Manager_D,Afternoon,Configuration,Medium,2024-03-05
+SLA-500548,TKT-100354,Tier1-Support,Low,48,693,1689,58.65,No,No,87.65,85.14,39,Europe,SMB,Manager_E,Evening,Configuration,High,2024-01-08
+SLA-500549,TKT-101980,Security-Team,Low,48,528,2277,79.06,No,No,44.63,44.66,18,LATAM,Startup,Manager_C,Night,Security,Medium,2024-06-21
+SLA-500550,TKT-100446,Cloud-Support,High,8,13,298,62.08,No,No,39.77,71.71,28,Asia-Pacific,Startup,Manager_E,Morning,Service Down,High,2024-06-07
+SLA-500551,TKT-101047,Network-Operations,Low,48,674,1323,45.94,No,No,38.31,91.36,24,Asia-Pacific,SMB,Manager_F,Morning,Data Loss,Medium,2024-01-26
+SLA-500552,TKT-100130,Network-Operations,Critical,4,89,49,20.42,No,No,47.48,75.98,19,Asia-Pacific,SMB,Manager_C,Evening,Configuration,Medium,2024-01-14
+SLA-500553,TKT-101456,Security-Team,High,8,43,458,95.42,No,Yes,72.9,91.62,36,Europe,Mid-Market,Manager_E,Afternoon,Service Down,Low,2024-05-26
+SLA-500554,TKT-101649,Infrastructure,Low,48,121,671,23.3,No,No,33.28,57.58,18,Asia-Pacific,Mid-Market,Manager_F,Morning,Configuration,High,2024-02-19
+SLA-500555,TKT-101018,Security-Team,Low,48,799,3475,120.66,Yes,Yes,58.92,77.17,15,Asia-Pacific,Startup,Manager_D,Night,Configuration,Low,2024-03-08
+SLA-500556,TKT-100072,Billing-Team,Medium,24,189,1531,106.32,Yes,Yes,59.34,49.25,3,Asia-Pacific,Mid-Market,Manager_F,Night,Configuration,Medium,2024-05-15
+SLA-500557,TKT-100734,Security-Team,Medium,24,170,278,19.31,No,No,97.07,52.12,9,Europe,Mid-Market,Manager_C,Morning,Data Loss,Low,2024-04-17
+SLA-500558,TKT-100262,Security-Team,Critical,4,105,154,64.17,No,No,74.09,62.18,11,Europe,SMB,Manager_F,Morning,Performance,Medium,2024-04-23
+SLA-500559,TKT-100727,Billing-Team,Medium,24,422,691,47.99,No,No,61.07,89.15,24,Asia-Pacific,Startup,Manager_C,Evening,Security,High,2024-05-13
+SLA-500560,TKT-101199,Security-Team,Critical,4,109,137,57.08,No,No,56.53,90.33,33,LATAM,Enterprise,Manager_D,Morning,Configuration,Medium,2024-01-15
+SLA-500561,TKT-101195,Tier2-Technical,Medium,24,456,1345,93.4,No,Yes,70.11,57.89,4,LATAM,Mid-Market,Manager_E,Morning,Configuration,High,2024-02-12
+SLA-500562,TKT-100781,Security-Team,Critical,4,3,366,152.5,Yes,Yes,80.99,59.02,23,LATAM,Enterprise,Manager_B,Afternoon,Performance,High,2024-02-04
+SLA-500563,TKT-100701,Infrastructure,Critical,4,83,179,74.58,No,No,84.83,54.63,43,LATAM,Mid-Market,Manager_C,Afternoon,Service Down,Low,2024-02-29
+SLA-500564,TKT-100998,Network-Operations,Low,48,224,1793,62.26,No,No,38.43,91.62,24,Europe,SMB,Manager_F,Morning,Service Down,Low,2024-05-04
+SLA-500565,TKT-100925,Security-Team,Low,48,1070,3171,110.1,Yes,Yes,68.25,62.95,29,Europe,Mid-Market,Manager_E,Afternoon,Data Loss,Low,2024-04-21
+SLA-500566,TKT-101608,Tier2-Technical,Medium,24,585,837,58.13,No,No,80.7,77.97,31,Europe,Startup,Manager_F,Night,Data Loss,Low,2024-06-17
+SLA-500567,TKT-100878,Cloud-Support,Low,48,115,2335,81.08,No,Yes,41.41,52.86,12,LATAM,Enterprise,Manager_A,Afternoon,Configuration,High,2024-06-21
+SLA-500568,TKT-100764,Tier1-Support,Low,48,893,1839,63.85,No,No,49.44,41.98,19,Asia-Pacific,Mid-Market,Manager_A,Morning,Configuration,Low,2024-03-15
+SLA-500569,TKT-101502,Billing-Team,Medium,24,529,602,41.81,No,No,32.01,72.08,7,Europe,SMB,Manager_C,Afternoon,Service Down,High,2024-06-23
+SLA-500570,TKT-100785,Security-Team,Low,48,297,315,10.94,No,No,55.49,71.14,3,Europe,Enterprise,Manager_A,Evening,Security,Low,2024-06-03
+SLA-500571,TKT-100933,Network-Operations,High,8,71,322,67.08,No,No,39.24,68.23,41,LATAM,Mid-Market,Manager_C,Night,Security,Low,2024-05-20
+SLA-500572,TKT-101536,Billing-Team,High,8,16,122,25.42,No,No,45.7,52.43,22,Europe,Startup,Manager_A,Afternoon,Performance,Low,2024-03-30
+SLA-500573,TKT-101489,Tier3-Engineering,Low,48,795,869,30.17,No,No,53.62,87.89,31,Europe,Enterprise,Manager_E,Afternoon,Service Down,Low,2024-01-14
+SLA-500574,TKT-100750,Tier1-Support,High,8,179,183,38.12,No,No,83.14,80.01,16,LATAM,SMB,Manager_E,Morning,Integration,Medium,2024-06-22
+SLA-500575,TKT-100098,Tier2-Technical,Medium,24,460,737,51.18,No,No,44.6,56.3,30,North America,Enterprise,Manager_F,Morning,Data Loss,Low,2024-03-10
+SLA-500576,TKT-100909,Infrastructure,Low,48,917,463,16.08,No,No,77.58,43.12,37,North America,SMB,Manager_D,Afternoon,Performance,Medium,2024-01-19
+SLA-500577,TKT-101423,Tier1-Support,Medium,24,426,949,65.9,No,No,98.32,58.96,37,Asia-Pacific,Startup,Manager_F,Morning,Configuration,Low,2024-05-26
+SLA-500578,TKT-101065,Security-Team,Medium,24,115,358,24.86,No,No,85.34,47.76,33,Europe,Startup,Manager_A,Morning,Security,High,2024-03-22
+SLA-500579,TKT-100233,Tier2-Technical,Low,48,637,517,17.95,No,No,76.99,54.89,35,LATAM,Mid-Market,Manager_E,Afternoon,Security,Low,2024-05-16
+SLA-500580,TKT-101702,Billing-Team,Low,48,134,819,28.44,No,No,98.41,83.66,36,Asia-Pacific,Startup,Manager_C,Afternoon,Service Down,Medium,2024-06-07
+SLA-500581,TKT-101122,Cloud-Support,Low,48,287,2097,72.81,No,No,60.41,64.55,3,Europe,Startup,Manager_C,Afternoon,Service Down,Medium,2024-01-17
+SLA-500582,TKT-100026,Tier2-Technical,Medium,24,15,1445,100.35,Yes,Yes,31.65,63.63,25,North America,Startup,Manager_B,Morning,Integration,High,2024-04-28
+SLA-500583,TKT-100153,Tier2-Technical,Low,48,305,1147,39.83,No,No,32.81,88.95,29,Asia-Pacific,Mid-Market,Manager_D,Evening,Security,Low,2024-02-16
+SLA-500584,TKT-100950,Tier1-Support,Low,48,617,2998,104.1,Yes,Yes,47.71,87.61,20,North America,Mid-Market,Manager_A,Evening,Security,Low,2024-02-09
+SLA-500585,TKT-101641,Network-Operations,Low,48,492,3506,121.74,Yes,Yes,52.7,77.21,3,LATAM,Enterprise,Manager_A,Morning,Service Down,High,2024-05-09
+SLA-500586,TKT-101744,Tier3-Engineering,Medium,24,29,1739,120.76,Yes,Yes,49.31,82.27,11,Europe,SMB,Manager_C,Night,Integration,High,2024-02-09
+SLA-500587,TKT-100549,Tier2-Technical,Low,48,1015,1624,56.39,No,No,75.66,53.81,17,Asia-Pacific,SMB,Manager_B,Morning,Data Loss,Low,2024-04-16
+SLA-500588,TKT-100819,Cloud-Support,Low,48,335,2449,85.03,No,Yes,42.84,72.68,13,Asia-Pacific,Startup,Manager_F,Night,Data Loss,Medium,2024-03-16
+SLA-500589,TKT-101328,Tier3-Engineering,Low,48,521,2127,73.85,No,No,86.47,86.31,40,North America,Mid-Market,Manager_F,Morning,Performance,Medium,2024-03-05
+SLA-500590,TKT-100212,Infrastructure,Medium,24,407,1042,72.36,No,No,74.34,84.3,3,LATAM,Startup,Manager_B,Night,Security,Low,2024-01-12
+SLA-500591,TKT-101252,Tier1-Support,Medium,24,339,244,16.94,No,No,31.73,59.95,15,Europe,Startup,Manager_D,Morning,Data Loss,High,2024-05-21
+SLA-500592,TKT-100902,Tier1-Support,High,8,149,513,106.88,Yes,Yes,80.03,56.13,15,North America,SMB,Manager_F,Evening,Service Down,High,2024-04-09
+SLA-500593,TKT-101442,Billing-Team,Medium,24,95,1060,73.61,No,No,77.57,92.03,4,Asia-Pacific,Enterprise,Manager_D,Afternoon,Data Loss,Low,2024-04-18
+SLA-500594,TKT-100708,Infrastructure,Low,48,698,1204,41.81,No,No,76.33,74.85,15,Europe,Enterprise,Manager_A,Afternoon,Integration,Medium,2024-05-19
+SLA-500595,TKT-101738,Cloud-Support,Low,48,1004,3453,119.9,Yes,Yes,38.92,46.94,16,LATAM,Mid-Market,Manager_A,Night,Security,Low,2024-06-17
+SLA-500596,TKT-100493,Network-Operations,Medium,24,555,729,50.62,No,No,52.28,89.18,24,Asia-Pacific,Enterprise,Manager_E,Afternoon,Integration,High,2024-05-02
+SLA-500597,TKT-101317,Infrastructure,Low,48,42,1104,38.33,No,No,30.95,57.75,29,LATAM,Mid-Market,Manager_A,Night,Data Loss,Low,2024-02-01
+SLA-500598,TKT-101640,Cloud-Support,High,8,250,783,163.12,Yes,Yes,69.6,68.3,7,North America,Startup,Manager_D,Evening,Service Down,High,2024-04-04
+SLA-500599,TKT-101018,Tier1-Support,Medium,24,507,850,59.03,No,No,46.82,45.22,21,North America,Startup,Manager_D,Morning,Integration,Low,2024-04-05
+SLA-500600,TKT-101124,Tier1-Support,Low,48,565,1607,55.8,No,No,58.33,44.82,17,North America,SMB,Manager_E,Afternoon,Configuration,Critical,2024-02-15
+SLA-500601,TKT-101375,Cloud-Support,Medium,24,57,1580,109.72,Yes,Yes,51.4,62.15,30,Asia-Pacific,SMB,Manager_A,Afternoon,Data Loss,High,2024-01-08
+SLA-500602,TKT-100679,Cloud-Support,Low,48,946,2418,83.96,No,Yes,81.7,76.66,13,Asia-Pacific,Startup,Manager_A,Morning,Configuration,Medium,2024-01-20
+SLA-500603,TKT-100454,Tier1-Support,High,8,259,302,62.92,No,No,65.0,80.16,44,Asia-Pacific,SMB,Manager_F,Evening,Integration,Low,2024-03-26
+SLA-500604,TKT-101069,Network-Operations,Low,48,110,2212,76.81,No,No,85.76,52.79,9,North America,Enterprise,Manager_B,Night,Performance,Low,2024-02-11
+SLA-500605,TKT-101683,Infrastructure,Medium,24,25,418,29.03,No,No,49.45,82.43,20,North America,SMB,Manager_E,Afternoon,Performance,High,2024-06-27
+SLA-500606,TKT-100247,Infrastructure,Medium,24,438,785,54.51,No,No,50.7,91.29,35,Europe,Startup,Manager_B,Evening,Service Down,Medium,2024-05-13
+SLA-500607,TKT-101550,Infrastructure,Low,48,741,1632,56.67,No,No,72.95,89.39,41,North America,Enterprise,Manager_D,Night,Configuration,Medium,2024-02-21
+SLA-500608,TKT-101206,Tier3-Engineering,High,8,262,326,67.92,No,No,93.54,94.81,13,LATAM,Enterprise,Manager_E,Morning,Integration,High,2024-04-19
+SLA-500609,TKT-101915,Infrastructure,Low,48,45,839,29.13,No,No,94.69,93.63,5,LATAM,Mid-Market,Manager_F,Afternoon,Configuration,Medium,2024-02-18
+SLA-500610,TKT-101669,Tier3-Engineering,Medium,24,522,1491,103.54,Yes,Yes,95.43,53.8,24,North America,Startup,Manager_F,Evening,Integration,Medium,2024-04-20
+SLA-500611,TKT-101805,Infrastructure,Low,48,920,1317,45.73,No,No,62.67,44.22,15,LATAM,Mid-Market,Manager_C,Night,Security,Low,2024-01-30
+SLA-500612,TKT-101987,Security-Team,Medium,24,413,619,42.99,No,No,58.05,46.33,26,LATAM,Mid-Market,Manager_B,Night,Integration,Medium,2024-04-15
+SLA-500613,TKT-101433,Security-Team,Medium,24,180,695,48.26,No,No,62.02,61.83,24,Asia-Pacific,Mid-Market,Manager_B,Afternoon,Integration,Medium,2024-01-07
+SLA-500614,TKT-101463,Security-Team,Medium,24,168,449,31.18,No,No,63.42,73.1,39,Asia-Pacific,Mid-Market,Manager_F,Afternoon,Integration,High,2024-06-09
+SLA-500615,TKT-101111,Network-Operations,Low,48,948,1451,50.38,No,No,41.39,80.39,44,North America,SMB,Manager_E,Night,Integration,High,2024-01-04
+SLA-500616,TKT-101168,Infrastructure,Medium,24,477,1321,91.74,No,Yes,91.03,71.73,25,Asia-Pacific,Startup,Manager_A,Morning,Service Down,High,2024-06-26
+SLA-500617,TKT-100780,Tier3-Engineering,Medium,24,282,1687,117.15,Yes,Yes,93.56,61.8,30,North America,Enterprise,Manager_B,Evening,Performance,Low,2024-02-16
+SLA-500618,TKT-100586,Security-Team,High,8,30,319,66.46,No,No,73.01,68.8,27,Europe,Enterprise,Manager_F,Evening,Performance,Medium,2024-05-11
+SLA-500619,TKT-101543,Tier1-Support,Low,48,1089,2395,83.16,No,Yes,94.11,59.79,27,Asia-Pacific,Startup,Manager_A,Afternoon,Configuration,Low,2024-01-01
+SLA-500620,TKT-101325,Infrastructure,Low,48,598,1353,46.98,No,No,42.4,79.71,9,Europe,SMB,Manager_F,Morning,Data Loss,High,2024-01-19
+SLA-500621,TKT-100793,Infrastructure,Medium,24,356,1685,117.01,Yes,Yes,77.06,66.47,38,Asia-Pacific,Enterprise,Manager_A,Evening,Performance,High,2024-04-03
+SLA-500622,TKT-101270,Cloud-Support,Low,48,904,1509,52.4,No,No,36.03,84.79,34,Europe,SMB,Manager_E,Afternoon,Configuration,Medium,2024-04-26
+SLA-500623,TKT-101974,Billing-Team,Medium,24,486,291,20.21,No,No,33.82,72.97,44,Asia-Pacific,Startup,Manager_B,Morning,Performance,Medium,2024-06-14
+SLA-500624,TKT-101971,Tier3-Engineering,Low,48,363,2665,92.53,No,Yes,60.88,50.97,5,North America,Startup,Manager_A,Night,Security,Medium,2024-04-02
+SLA-500625,TKT-101139,Security-Team,Low,48,1195,622,21.6,No,No,74.2,83.14,22,Europe,Mid-Market,Manager_E,Evening,Service Down,Medium,2024-05-23
+SLA-500626,TKT-100676,Cloud-Support,High,8,166,471,98.12,No,Yes,59.06,40.79,10,Europe,Enterprise,Manager_B,Evening,Integration,Low,2024-05-29
+SLA-500627,TKT-100104,Security-Team,Low,48,726,2484,86.25,No,Yes,83.46,68.79,11,LATAM,SMB,Manager_A,Evening,Integration,Medium,2024-05-01
+SLA-500628,TKT-100450,Tier3-Engineering,Low,48,924,2410,83.68,No,Yes,41.44,50.15,29,North America,Mid-Market,Manager_D,Night,Service Down,Low,2024-02-04
+SLA-500629,TKT-100715,Billing-Team,Low,48,622,828,28.75,No,No,96.67,88.6,9,Europe,SMB,Manager_C,Evening,Security,High,2024-03-24
+SLA-500630,TKT-100447,Cloud-Support,Medium,24,596,570,39.58,No,No,34.98,71.56,14,North America,Enterprise,Manager_F,Evening,Data Loss,Critical,2024-01-09
+SLA-500631,TKT-100492,Billing-Team,Medium,24,332,1136,78.89,No,No,94.23,82.78,35,North America,SMB,Manager_D,Morning,Data Loss,Low,2024-05-31
+SLA-500632,TKT-100525,Security-Team,Medium,24,427,120,8.33,No,No,53.13,72.41,9,North America,SMB,Manager_E,Night,Data Loss,Low,2024-02-19
+SLA-500633,TKT-100089,Security-Team,Low,48,936,659,22.88,No,No,55.07,94.42,6,Europe,SMB,Manager_E,Morning,Service Down,Critical,2024-01-18
+SLA-500634,TKT-100342,Tier1-Support,Critical,4,42,363,151.25,Yes,Yes,50.01,76.98,29,North America,Mid-Market,Manager_F,Afternoon,Configuration,Medium,2024-06-03
+SLA-500635,TKT-100868,Tier2-Technical,High,8,136,291,60.62,No,No,75.71,71.88,5,Europe,Startup,Manager_F,Morning,Configuration,Low,2024-03-07
+SLA-500636,TKT-101405,Tier3-Engineering,Critical,4,5,309,128.75,Yes,Yes,52.08,61.62,14,North America,Startup,Manager_F,Evening,Service Down,Low,2024-05-27
+SLA-500637,TKT-100179,Tier2-Technical,Low,48,366,3137,108.92,Yes,Yes,77.43,70.08,13,North America,Mid-Market,Manager_C,Morning,Integration,Low,2024-04-23
+SLA-500638,TKT-101682,Billing-Team,Medium,24,438,1290,89.58,No,Yes,99.48,53.24,15,Asia-Pacific,Startup,Manager_D,Night,Configuration,High,2024-06-20
+SLA-500639,TKT-100828,Infrastructure,Medium,24,562,1058,73.47,No,No,98.48,49.95,20,Asia-Pacific,Enterprise,Manager_D,Morning,Integration,Medium,2024-04-01
+SLA-500640,TKT-100012,Tier2-Technical,High,8,288,599,124.79,Yes,Yes,86.29,87.65,38,North America,Enterprise,Manager_C,Morning,Security,High,2024-04-07
+SLA-500641,TKT-101611,Security-Team,Medium,24,167,711,49.38,No,No,77.3,74.02,23,North America,SMB,Manager_D,Night,Data Loss,Low,2024-06-11
+SLA-500642,TKT-101683,Tier1-Support,Medium,24,557,959,66.6,No,No,41.11,92.21,22,LATAM,Mid-Market,Manager_E,Afternoon,Performance,Medium,2024-03-25
+SLA-500643,TKT-101529,Infrastructure,Critical,4,64,163,67.92,No,No,54.88,76.81,44,Asia-Pacific,Mid-Market,Manager_C,Evening,Service Down,High,2024-04-05
+SLA-500644,TKT-101133,Tier3-Engineering,Medium,24,490,1606,111.53,Yes,Yes,41.3,65.95,24,North America,Enterprise,Manager_A,Night,Integration,Medium,2024-06-20
+SLA-500645,TKT-101121,Tier2-Technical,Low,48,679,674,23.4,No,No,54.84,82.91,21,Asia-Pacific,Mid-Market,Manager_F,Evening,Performance,High,2024-03-31
+SLA-500646,TKT-100845,Tier3-Engineering,Medium,24,108,652,45.28,No,No,81.45,73.56,14,Europe,Mid-Market,Manager_B,Evening,Performance,Medium,2024-05-27
+SLA-500647,TKT-100234,Tier3-Engineering,Low,48,628,1867,64.83,No,No,71.95,68.25,26,North America,Startup,Manager_F,Morning,Security,Medium,2024-02-10
+SLA-500648,TKT-101375,Tier2-Technical,Medium,24,248,1140,79.17,No,No,81.42,41.32,15,Asia-Pacific,Enterprise,Manager_B,Night,Security,Low,2024-01-03
+SLA-500649,TKT-100731,Tier3-Engineering,Low,48,145,2223,77.19,No,No,68.54,62.41,36,Europe,Enterprise,Manager_C,Morning,Performance,High,2024-06-01
+SLA-500650,TKT-100650,Cloud-Support,Low,48,507,3437,119.34,Yes,Yes,70.4,88.99,35,LATAM,SMB,Manager_E,Evening,Configuration,Medium,2024-05-30
+SLA-500651,TKT-101196,Tier3-Engineering,Medium,24,527,1325,92.01,No,Yes,93.91,71.47,20,Asia-Pacific,SMB,Manager_D,Afternoon,Service Down,Low,2024-03-20
+SLA-500652,TKT-100641,Billing-Team,Low,48,344,284,9.86,No,No,71.16,63.46,33,Europe,Startup,Manager_C,Evening,Performance,High,2024-02-08
+SLA-500653,TKT-101391,Network-Operations,High,8,9,601,125.21,Yes,Yes,80.04,71.84,25,LATAM,Startup,Manager_D,Evening,Security,Medium,2024-03-13
+SLA-500654,TKT-100997,Tier2-Technical,Medium,24,515,310,21.53,No,No,90.44,56.98,27,Europe,Enterprise,Manager_C,Afternoon,Integration,Critical,2024-01-16
+SLA-500655,TKT-100402,Security-Team,Low,48,1092,2534,87.99,No,Yes,76.38,84.42,3,North America,Enterprise,Manager_A,Morning,Integration,High,2024-01-04
+SLA-500656,TKT-101185,Infrastructure,Critical,4,73,218,90.83,No,Yes,50.11,88.39,10,Europe,Enterprise,Manager_E,Evening,Integration,Low,2024-01-11
+SLA-500657,TKT-101830,Cloud-Support,Low,48,1187,615,21.35,No,No,59.14,59.61,10,Europe,SMB,Manager_D,Afternoon,Integration,High,2024-05-09
+SLA-500658,TKT-101501,Security-Team,Medium,24,571,910,63.19,No,No,73.43,84.21,22,Europe,Startup,Manager_E,Morning,Data Loss,Critical,2024-06-27
+SLA-500659,TKT-100745,Tier1-Support,High,8,222,148,30.83,No,No,40.63,58.07,18,Europe,Mid-Market,Manager_E,Afternoon,Data Loss,Low,2024-06-01
+SLA-500660,TKT-100326,Tier3-Engineering,High,8,219,165,34.38,No,No,80.83,60.18,36,Europe,Startup,Manager_C,Morning,Performance,Medium,2024-04-27
+SLA-500661,TKT-101559,Cloud-Support,Low,48,324,1218,42.29,No,No,57.88,40.37,17,Europe,Enterprise,Manager_C,Evening,Performance,High,2024-04-14
+SLA-500662,TKT-100087,Billing-Team,Medium,24,216,1635,113.54,Yes,Yes,92.79,86.54,20,Asia-Pacific,Startup,Manager_D,Night,Service Down,Critical,2024-01-07
+SLA-500663,TKT-100081,Network-Operations,Low,48,304,1407,48.85,No,No,64.03,46.0,9,North America,SMB,Manager_F,Evening,Integration,Low,2024-03-20
+SLA-500664,TKT-101114,Tier3-Engineering,High,8,41,332,69.17,No,No,51.17,87.23,28,LATAM,Startup,Manager_C,Morning,Integration,High,2024-02-05
+SLA-500665,TKT-100515,Infrastructure,Low,48,913,2502,86.88,No,Yes,89.73,58.05,18,Europe,Startup,Manager_C,Evening,Data Loss,High,2024-03-15
+SLA-500666,TKT-101623,Cloud-Support,Medium,24,114,1013,70.35,No,No,51.84,84.13,39,North America,Mid-Market,Manager_D,Afternoon,Performance,Low,2024-06-27
+SLA-500667,TKT-100157,Security-Team,Critical,4,20,83,34.58,No,No,76.36,81.35,9,Europe,Mid-Market,Manager_B,Afternoon,Security,High,2024-04-21
+SLA-500668,TKT-101232,Tier2-Technical,Low,48,1082,1590,55.21,No,No,39.22,78.78,9,Europe,Startup,Manager_C,Morning,Data Loss,High,2024-02-04
+SLA-500669,TKT-101382,Cloud-Support,High,8,245,296,61.67,No,No,33.75,79.46,28,LATAM,Mid-Market,Manager_E,Afternoon,Configuration,Low,2024-06-20
+SLA-500670,TKT-101706,Infrastructure,Low,48,1146,1082,37.57,No,No,77.37,74.98,37,North America,Mid-Market,Manager_A,Afternoon,Integration,Medium,2024-05-06
+SLA-500671,TKT-101213,Tier3-Engineering,Medium,24,431,1532,106.39,Yes,Yes,98.69,91.29,36,Europe,Enterprise,Manager_E,Afternoon,Service Down,High,2024-04-21
+SLA-500672,TKT-100340,Security-Team,Medium,24,414,1238,85.97,No,Yes,91.55,79.9,24,Europe,Startup,Manager_E,Morning,Configuration,Medium,2024-03-19
+SLA-500673,TKT-101490,Security-Team,Low,48,1050,2558,88.82,No,Yes,90.37,52.82,16,North America,Mid-Market,Manager_D,Night,Data Loss,Low,2024-02-16
+SLA-500674,TKT-100349,Billing-Team,High,8,188,315,65.62,No,No,30.75,69.93,2,LATAM,Mid-Market,Manager_E,Afternoon,Integration,Low,2024-03-19
+SLA-500675,TKT-101350,Security-Team,Medium,24,348,1241,86.18,No,Yes,41.72,65.44,32,Europe,SMB,Manager_D,Morning,Performance,Low,2024-06-01
+SLA-500676,TKT-100774,Infrastructure,Low,48,391,2597,90.17,No,Yes,63.18,64.82,26,Europe,Enterprise,Manager_A,Afternoon,Integration,Medium,2024-04-02
+SLA-500677,TKT-101760,Infrastructure,Medium,24,444,876,60.83,No,No,87.23,89.23,44,Europe,Enterprise,Manager_B,Night,Integration,Medium,2024-05-09
+SLA-500678,TKT-101228,Tier1-Support,Critical,4,38,379,157.92,Yes,Yes,71.72,94.77,6,North America,Enterprise,Manager_D,Afternoon,Integration,Low,2024-01-16
+SLA-500679,TKT-101104,Tier1-Support,Medium,24,164,1631,113.26,Yes,Yes,63.51,87.41,3,LATAM,Startup,Manager_C,Morning,Configuration,Low,2024-04-09
+SLA-500680,TKT-101085,Infrastructure,Medium,24,277,793,55.07,No,No,41.75,46.62,34,Europe,Startup,Manager_D,Evening,Integration,High,2024-05-06
+SLA-500681,TKT-101647,Tier2-Technical,Medium,24,215,1275,88.54,No,Yes,65.87,59.19,44,LATAM,Mid-Market,Manager_C,Night,Performance,High,2024-06-09
+SLA-500682,TKT-101863,Tier2-Technical,High,8,104,498,103.75,Yes,Yes,32.49,94.69,17,Asia-Pacific,Startup,Manager_C,Afternoon,Service Down,Low,2024-04-23
+SLA-500683,TKT-101452,Tier1-Support,Low,48,1079,2912,101.11,Yes,Yes,57.43,84.13,14,North America,Enterprise,Manager_D,Afternoon,Configuration,High,2024-06-19
+SLA-500684,TKT-101647,Network-Operations,Medium,24,425,1096,76.11,No,No,90.3,87.63,31,LATAM,SMB,Manager_A,Afternoon,Data Loss,High,2024-02-27
+SLA-500685,TKT-101334,Security-Team,Low,48,70,2535,88.02,No,Yes,52.45,70.93,7,Asia-Pacific,Startup,Manager_E,Evening,Integration,Low,2024-03-08
+SLA-500686,TKT-100564,Infrastructure,Critical,4,51,399,166.25,Yes,Yes,36.82,78.85,15,Europe,Startup,Manager_E,Night,Performance,High,2024-06-23
+SLA-500687,TKT-100758,Cloud-Support,Medium,24,434,810,56.25,No,No,31.28,89.73,28,Asia-Pacific,SMB,Manager_E,Evening,Configuration,Low,2024-03-05
+SLA-500688,TKT-100815,Tier3-Engineering,Critical,4,112,53,22.08,No,No,67.63,50.17,23,North America,Mid-Market,Manager_D,Afternoon,Service Down,Medium,2024-02-29
+SLA-500689,TKT-100439,Infrastructure,Medium,24,285,1108,76.94,No,No,91.31,89.79,30,Asia-Pacific,Enterprise,Manager_B,Night,Configuration,High,2024-02-11
+SLA-500690,TKT-100010,Tier2-Technical,Low,48,1181,2399,83.3,No,Yes,79.62,94.66,39,Europe,Startup,Manager_E,Night,Service Down,Medium,2024-04-19
+SLA-500691,TKT-100131,Security-Team,Critical,4,66,85,35.42,No,No,49.85,57.95,35,Europe,SMB,Manager_A,Morning,Configuration,Critical,2024-05-04
+SLA-500692,TKT-100787,Infrastructure,Low,48,852,2997,104.06,Yes,Yes,35.45,92.55,28,Asia-Pacific,Enterprise,Manager_B,Night,Data Loss,High,2024-01-16
+SLA-500693,TKT-100021,Billing-Team,Low,48,60,1317,45.73,No,No,30.93,68.15,2,Asia-Pacific,Mid-Market,Manager_A,Afternoon,Integration,High,2024-06-19
+SLA-500694,TKT-100347,Tier1-Support,Low,48,534,2980,103.47,Yes,Yes,49.89,55.89,5,Asia-Pacific,Mid-Market,Manager_F,Morning,Performance,High,2024-01-16
+SLA-500695,TKT-100177,Security-Team,Low,48,658,241,8.37,No,No,41.73,57.07,38,LATAM,SMB,Manager_F,Night,Data Loss,High,2024-05-29
+SLA-500696,TKT-101200,Billing-Team,High,8,128,497,103.54,Yes,Yes,38.28,62.08,20,North America,Enterprise,Manager_A,Evening,Configuration,Medium,2024-02-14
+SLA-500697,TKT-101699,Network-Operations,Low,48,534,1673,58.09,No,No,44.69,54.35,28,Asia-Pacific,SMB,Manager_B,Afternoon,Data Loss,Medium,2024-02-05
+SLA-500698,TKT-101904,Infrastructure,Low,48,703,1482,51.46,No,No,96.34,47.77,34,North America,SMB,Manager_B,Night,Integration,Medium,2024-02-07
+SLA-500699,TKT-100218,Tier2-Technical,Medium,24,333,1297,90.07,No,Yes,83.76,74.57,30,Asia-Pacific,SMB,Manager_A,Evening,Integration,Low,2024-06-17
+SLA-500700,TKT-101665,Security-Team,Medium,24,582,634,44.03,No,No,87.82,78.31,44,LATAM,Startup,Manager_E,Night,Performance,Low,2024-01-01
+SLA-500701,TKT-101551,Network-Operations,Medium,24,179,637,44.24,No,No,54.92,48.17,35,LATAM,Startup,Manager_E,Morning,Data Loss,High,2024-05-28
+SLA-500702,TKT-100238,Security-Team,Medium,24,208,1240,86.11,No,Yes,43.77,53.06,43,North America,Startup,Manager_F,Afternoon,Configuration,Medium,2024-02-25
+SLA-500703,TKT-101436,Billing-Team,Medium,24,31,1670,115.97,Yes,Yes,83.15,79.2,3,Asia-Pacific,Startup,Manager_C,Morning,Configuration,Medium,2024-04-23
+SLA-500704,TKT-101704,Security-Team,High,8,270,660,137.5,Yes,Yes,77.87,41.39,27,Europe,SMB,Manager_A,Night,Configuration,Medium,2024-03-14
+SLA-500705,TKT-101533,Network-Operations,High,8,175,486,101.25,Yes,Yes,36.09,51.12,25,North America,Mid-Market,Manager_D,Evening,Security,Low,2024-04-29
+SLA-500706,TKT-100447,Security-Team,Medium,24,228,944,65.56,No,No,30.42,66.61,25,Europe,Mid-Market,Manager_D,Afternoon,Performance,Medium,2024-03-21
+SLA-500707,TKT-101506,Billing-Team,Low,48,817,2655,92.19,No,Yes,70.71,79.31,22,Asia-Pacific,Mid-Market,Manager_B,Afternoon,Performance,Medium,2024-06-05
+SLA-500708,TKT-101712,Network-Operations,Medium,24,273,1697,117.85,Yes,Yes,41.64,90.41,19,Europe,Enterprise,Manager_A,Morning,Configuration,Low,2024-01-14
+SLA-500709,TKT-101957,Cloud-Support,High,8,222,191,39.79,No,No,96.64,80.59,44,North America,Enterprise,Manager_D,Evening,Integration,Low,2024-03-19
+SLA-500710,TKT-100645,Cloud-Support,Medium,24,246,650,45.14,No,No,36.1,66.81,27,Asia-Pacific,Startup,Manager_B,Evening,Data Loss,Medium,2024-04-01
+SLA-500711,TKT-100454,Tier3-Engineering,Medium,24,479,1274,88.47,No,Yes,54.62,90.03,18,North America,Startup,Manager_D,Morning,Integration,Low,2024-03-16
+SLA-500712,TKT-100711,Infrastructure,High,8,130,108,22.5,No,No,89.39,59.98,37,Europe,Startup,Manager_A,Night,Security,Critical,2024-01-07
+SLA-500713,TKT-101411,Tier1-Support,Low,48,867,3199,111.08,Yes,Yes,32.87,80.97,2,North America,Mid-Market,Manager_D,Morning,Security,Low,2024-01-10
+SLA-500714,TKT-100740,Security-Team,Low,48,143,2729,94.76,No,Yes,70.84,65.53,7,Europe,SMB,Manager_B,Evening,Data Loss,Medium,2024-03-20
+SLA-500715,TKT-101963,Network-Operations,Medium,24,333,930,64.58,No,No,37.9,72.8,34,Asia-Pacific,Mid-Market,Manager_D,Night,Performance,High,2024-02-14
+SLA-500716,TKT-100858,Network-Operations,Medium,24,435,187,12.99,No,No,80.06,92.64,15,Asia-Pacific,Startup,Manager_C,Night,Performance,High,2024-02-18
+SLA-500717,TKT-101170,Tier3-Engineering,High,8,43,649,135.21,Yes,Yes,47.65,64.57,27,Europe,Enterprise,Manager_F,Evening,Performance,Medium,2024-02-17
+SLA-500718,TKT-101137,Infrastructure,Low,48,745,1720,59.72,No,No,55.06,58.35,18,LATAM,Mid-Market,Manager_B,Afternoon,Data Loss,High,2024-05-03
+SLA-500719,TKT-101650,Tier1-Support,High,8,275,758,157.92,Yes,Yes,95.71,67.08,41,Europe,Startup,Manager_D,Afternoon,Configuration,High,2024-04-09
+SLA-500720,TKT-101058,Network-Operations,Medium,24,338,793,55.07,No,No,95.57,68.36,14,LATAM,SMB,Manager_C,Morning,Data Loss,High,2024-01-22
+SLA-500721,TKT-100202,Tier3-Engineering,Low,48,179,362,12.57,No,No,72.99,57.92,41,North America,Mid-Market,Manager_C,Night,Configuration,Medium,2024-02-17
+SLA-500722,TKT-100197,Cloud-Support,Medium,24,83,1298,90.14,No,Yes,89.6,44.63,8,Asia-Pacific,SMB,Manager_C,Evening,Integration,High,2024-01-11
+SLA-500723,TKT-101141,Security-Team,Low,48,377,2868,99.58,No,Yes,79.46,69.44,16,Asia-Pacific,Enterprise,Manager_D,Morning,Security,Low,2024-01-17
+SLA-500724,TKT-101776,Billing-Team,Medium,24,148,1008,70.0,No,No,69.18,87.19,25,Europe,SMB,Manager_C,Evening,Configuration,High,2024-04-28
+SLA-500725,TKT-101045,Cloud-Support,Critical,4,13,295,122.92,Yes,Yes,95.11,69.02,35,LATAM,Enterprise,Manager_D,Evening,Data Loss,Low,2024-05-01
+SLA-500726,TKT-101293,Tier3-Engineering,Low,48,962,3245,112.67,Yes,Yes,86.81,66.53,40,Europe,SMB,Manager_D,Night,Service Down,Medium,2024-05-20
+SLA-500727,TKT-100162,Tier3-Engineering,High,8,84,273,56.88,No,No,92.88,72.05,20,Asia-Pacific,Mid-Market,Manager_C,Evening,Configuration,Critical,2024-03-21
+SLA-500728,TKT-100596,Security-Team,High,8,261,451,93.96,No,Yes,52.99,66.8,13,LATAM,SMB,Manager_D,Evening,Configuration,Medium,2024-01-08
+SLA-500729,TKT-101202,Cloud-Support,Low,48,635,979,33.99,No,No,43.83,84.28,9,LATAM,Mid-Market,Manager_B,Morning,Performance,High,2024-04-15
+SLA-500730,TKT-101490,Billing-Team,Medium,24,525,871,60.49,No,No,60.64,55.22,22,Asia-Pacific,Enterprise,Manager_B,Afternoon,Data Loss,Low,2024-06-15
+SLA-500731,TKT-100210,Tier2-Technical,High,8,134,188,39.17,No,No,80.73,86.0,23,North America,Startup,Manager_E,Morning,Service Down,Medium,2024-04-28
+SLA-500732,TKT-101578,Infrastructure,Low,48,1074,481,16.7,No,No,34.42,57.85,9,North America,Enterprise,Manager_C,Afternoon,Service Down,Medium,2024-03-10
+SLA-500733,TKT-101341,Infrastructure,Medium,24,381,158,10.97,No,No,63.84,63.6,29,Asia-Pacific,Mid-Market,Manager_B,Evening,Data Loss,Low,2024-04-05
+SLA-500734,TKT-101283,Tier3-Engineering,High,8,297,342,71.25,No,No,47.87,85.54,43,Europe,Mid-Market,Manager_A,Morning,Configuration,Low,2024-01-26
+SLA-500735,TKT-100730,Network-Operations,Medium,24,56,299,20.76,No,No,59.75,61.06,32,LATAM,Startup,Manager_E,Evening,Integration,Low,2024-02-02
+SLA-500736,TKT-100911,Tier3-Engineering,High,8,17,746,155.42,Yes,Yes,59.52,42.2,36,Europe,Startup,Manager_F,Night,Integration,High,2024-05-25
+SLA-500737,TKT-101310,Security-Team,Low,48,87,2871,99.69,No,Yes,37.46,60.17,11,Asia-Pacific,Startup,Manager_E,Afternoon,Service Down,Medium,2024-06-25
+SLA-500738,TKT-100904,Security-Team,Critical,4,57,247,102.92,Yes,Yes,90.55,73.04,41,Asia-Pacific,Startup,Manager_C,Afternoon,Security,Medium,2024-02-11
+SLA-500739,TKT-100021,Tier1-Support,Medium,24,274,1073,74.51,No,No,83.04,55.51,2,Europe,SMB,Manager_C,Night,Integration,Low,2024-02-03
+SLA-500740,TKT-100017,Cloud-Support,Low,48,56,2399,83.3,No,Yes,72.73,70.05,14,LATAM,SMB,Manager_A,Night,Security,Medium,2024-01-03
+SLA-500741,TKT-101222,Billing-Team,High,8,185,309,64.38,No,No,82.62,89.84,29,North America,SMB,Manager_B,Night,Integration,Medium,2024-01-02
+SLA-500742,TKT-100895,Infrastructure,Low,48,281,3273,113.65,Yes,Yes,70.3,46.94,41,Europe,Mid-Market,Manager_F,Night,Data Loss,High,2024-03-13
+SLA-500743,TKT-100451,Security-Team,Medium,24,396,1660,115.28,Yes,Yes,43.44,79.56,42,North America,Startup,Manager_F,Afternoon,Integration,Low,2024-06-26
+SLA-500744,TKT-101565,Security-Team,High,8,247,698,145.42,Yes,Yes,76.88,62.13,36,Asia-Pacific,SMB,Manager_D,Afternoon,Service Down,Medium,2024-03-25
+SLA-500745,TKT-100373,Tier3-Engineering,Medium,24,10,1763,122.43,Yes,Yes,73.16,42.22,30,Asia-Pacific,Enterprise,Manager_F,Night,Integration,Medium,2024-06-16
+SLA-500746,TKT-100927,Security-Team,Low,48,634,3455,119.97,Yes,Yes,53.93,94.22,41,LATAM,Mid-Market,Manager_C,Morning,Performance,Medium,2024-02-22
+SLA-500747,TKT-100101,Tier1-Support,Low,48,299,1865,64.76,No,No,87.17,88.69,29,Europe,Enterprise,Manager_C,Evening,Performance,Medium,2024-03-09
+SLA-500748,TKT-101464,Cloud-Support,Critical,4,53,313,130.42,Yes,Yes,88.07,47.35,35,North America,Mid-Market,Manager_A,Afternoon,Service Down,High,2024-04-15
+SLA-500749,TKT-101010,Billing-Team,Medium,24,569,709,49.24,No,No,36.95,63.58,34,Asia-Pacific,Startup,Manager_C,Night,Security,Low,2024-04-14
+SLA-500750,TKT-100949,Tier1-Support,High,8,255,366,76.25,No,No,44.34,83.89,39,Asia-Pacific,Enterprise,Manager_B,Morning,Security,Medium,2024-03-23
+SLA-500751,TKT-101588,Infrastructure,Low,48,521,1659,57.6,No,No,96.82,90.52,17,North America,Startup,Manager_B,Afternoon,Security,High,2024-01-25
+SLA-500752,TKT-101673,Infrastructure,Medium,24,419,220,15.28,No,No,60.42,87.82,19,North America,Enterprise,Manager_F,Afternoon,Data Loss,High,2024-03-03
+SLA-500753,TKT-101579,Cloud-Support,Medium,24,225,224,15.56,No,No,71.51,66.91,16,Europe,Enterprise,Manager_B,Night,Configuration,Low,2024-03-20
+SLA-500754,TKT-101578,Tier2-Technical,Low,48,1092,1105,38.37,No,No,63.2,49.24,27,Europe,Startup,Manager_D,Evening,Security,Low,2024-03-31
+SLA-500755,TKT-100324,Tier1-Support,High,8,173,229,47.71,No,No,77.18,40.92,39,North America,SMB,Manager_D,Evening,Performance,High,2024-05-11
+SLA-500756,TKT-100738,Tier1-Support,High,8,198,274,57.08,No,No,30.51,78.04,32,Europe,Enterprise,Manager_B,Night,Security,Medium,2024-04-20
+SLA-500757,TKT-100030,Tier3-Engineering,Critical,4,50,328,136.67,Yes,Yes,65.14,90.05,27,Asia-Pacific,Enterprise,Manager_D,Afternoon,Service Down,Medium,2024-04-20
+SLA-500758,TKT-101984,Tier1-Support,High,8,26,511,106.46,Yes,Yes,95.72,56.22,31,LATAM,Mid-Market,Manager_C,Morning,Performance,Critical,2024-04-22
+SLA-500759,TKT-100322,Cloud-Support,Low,48,1016,993,34.48,No,No,63.64,43.78,22,North America,SMB,Manager_F,Morning,Service Down,Medium,2024-04-04
+SLA-500760,TKT-100728,Tier3-Engineering,High,8,185,305,63.54,No,No,69.04,43.0,29,North America,Mid-Market,Manager_D,Afternoon,Security,Medium,2024-05-28
+SLA-500761,TKT-101143,Network-Operations,Low,48,1009,2324,80.69,No,Yes,90.05,56.77,19,LATAM,Mid-Market,Manager_A,Night,Security,Low,2024-06-12
+SLA-500762,TKT-101483,Tier3-Engineering,Low,48,819,258,8.96,No,No,63.01,52.51,5,Asia-Pacific,Enterprise,Manager_D,Night,Integration,Medium,2024-03-09
+SLA-500763,TKT-100603,Cloud-Support,Low,48,991,281,9.76,No,No,53.05,42.89,11,Europe,Mid-Market,Manager_E,Evening,Security,Low,2024-05-07
+SLA-500764,TKT-101499,Cloud-Support,Low,48,391,1456,50.56,No,No,80.43,55.5,22,Asia-Pacific,Mid-Market,Manager_A,Afternoon,Data Loss,High,2024-02-18
+SLA-500765,TKT-100605,Security-Team,Low,48,68,3369,116.98,Yes,Yes,39.41,65.72,41,Asia-Pacific,Startup,Manager_A,Night,Configuration,Medium,2024-03-03
+SLA-500766,TKT-100379,Tier1-Support,Low,48,1015,2896,100.56,Yes,Yes,69.79,83.56,37,Asia-Pacific,Mid-Market,Manager_C,Morning,Configuration,Medium,2024-01-10
+SLA-500767,TKT-101980,Infrastructure,Medium,24,70,338,23.47,No,No,73.05,90.98,24,Europe,Startup,Manager_E,Afternoon,Integration,Low,2024-01-25
+SLA-500768,TKT-100579,Network-Operations,Critical,4,119,306,127.5,Yes,Yes,70.59,55.54,30,LATAM,SMB,Manager_A,Morning,Integration,High,2024-04-06
+SLA-500769,TKT-101349,Tier2-Technical,Critical,4,2,306,127.5,Yes,Yes,57.46,64.62,26,North America,Mid-Market,Manager_B,Morning,Performance,Medium,2024-02-24
+SLA-500770,TKT-100219,Cloud-Support,Low,48,683,2396,83.19,No,Yes,90.88,65.97,24,Europe,Enterprise,Manager_A,Night,Configuration,Medium,2024-04-26
+SLA-500771,TKT-101003,Security-Team,Medium,24,598,320,22.22,No,No,30.43,84.59,20,North America,SMB,Manager_B,Morning,Service Down,High,2024-04-27
+SLA-500772,TKT-101905,Billing-Team,Low,48,41,554,19.24,No,No,67.63,40.78,3,LATAM,Enterprise,Manager_D,Morning,Security,Medium,2024-04-09
+SLA-500773,TKT-101142,Infrastructure,High,8,245,140,29.17,No,No,91.78,45.33,5,Asia-Pacific,Enterprise,Manager_E,Evening,Integration,Critical,2024-06-06
+SLA-500774,TKT-100083,Tier2-Technical,Medium,24,284,315,21.88,No,No,68.07,78.22,19,Asia-Pacific,Enterprise,Manager_B,Morning,Service Down,Low,2024-01-12
+SLA-500775,TKT-101485,Billing-Team,Low,48,797,583,20.24,No,No,87.2,40.75,2,LATAM,Mid-Market,Manager_B,Afternoon,Integration,Medium,2024-01-09
+SLA-500776,TKT-101280,Tier3-Engineering,High,8,187,478,99.58,No,Yes,70.35,58.81,13,LATAM,Enterprise,Manager_F,Evening,Configuration,High,2024-06-25
+SLA-500777,TKT-100939,Infrastructure,High,8,9,106,22.08,No,No,40.05,50.2,40,North America,Mid-Market,Manager_B,Night,Integration,Medium,2024-05-25
+SLA-500778,TKT-100691,Tier3-Engineering,High,8,26,791,164.79,Yes,Yes,90.44,47.67,30,LATAM,SMB,Manager_C,Evening,Security,Low,2024-03-12
+SLA-500779,TKT-100844,Infrastructure,Medium,24,161,1051,72.99,No,No,36.47,65.18,10,Asia-Pacific,Mid-Market,Manager_E,Afternoon,Data Loss,High,2024-06-27
+SLA-500780,TKT-101568,Security-Team,Critical,4,4,249,103.75,Yes,Yes,78.31,86.06,26,Asia-Pacific,Startup,Manager_D,Night,Service Down,High,2024-05-29
+SLA-500781,TKT-101487,Tier1-Support,Low,48,815,643,22.33,No,No,46.12,45.85,16,Asia-Pacific,Enterprise,Manager_E,Afternoon,Security,Medium,2024-01-01
+SLA-500782,TKT-100013,Security-Team,High,8,139,677,141.04,Yes,Yes,52.45,50.57,39,Europe,Mid-Market,Manager_C,Morning,Configuration,High,2024-04-12
+SLA-500783,TKT-101684,Security-Team,Medium,24,585,582,40.42,No,No,70.36,94.08,5,Europe,Enterprise,Manager_A,Night,Security,Medium,2024-02-10
+SLA-500784,TKT-100319,Tier3-Engineering,High,8,251,562,117.08,Yes,Yes,64.72,40.43,39,Asia-Pacific,SMB,Manager_E,Afternoon,Performance,Critical,2024-06-27
+SLA-500785,TKT-100524,Security-Team,Low,48,555,1341,46.56,No,No,87.04,62.96,33,North America,Startup,Manager_E,Afternoon,Configuration,Low,2024-03-26
+SLA-500786,TKT-100158,Network-Operations,Critical,4,66,361,150.42,Yes,Yes,63.85,52.1,14,LATAM,Mid-Market,Manager_D,Morning,Integration,Medium,2024-01-04
+SLA-500787,TKT-101315,Security-Team,Low,48,599,1792,62.22,No,No,48.98,81.82,33,North America,Startup,Manager_A,Morning,Security,High,2024-01-21
+SLA-500788,TKT-100712,Infrastructure,Medium,24,515,271,18.82,No,No,96.83,84.01,38,LATAM,Enterprise,Manager_B,Morning,Configuration,Low,2024-02-23
+SLA-500789,TKT-101592,Infrastructure,Medium,24,55,739,51.32,No,No,60.26,45.03,15,North America,SMB,Manager_E,Morning,Security,Low,2024-01-06
+SLA-500790,TKT-101105,Tier3-Engineering,Medium,24,240,474,32.92,No,No,74.49,94.61,14,Asia-Pacific,Mid-Market,Manager_B,Morning,Configuration,Medium,2024-02-21
+SLA-500791,TKT-101498,Infrastructure,Low,48,473,2821,97.95,No,Yes,51.29,84.64,36,LATAM,Enterprise,Manager_B,Night,Security,High,2024-05-19
+SLA-500792,TKT-101610,Infrastructure,High,8,83,674,140.42,Yes,Yes,99.12,52.38,13,Europe,Mid-Market,Manager_C,Morning,Data Loss,Medium,2024-04-06
+SLA-500793,TKT-101170,Tier1-Support,Medium,24,335,759,52.71,No,No,49.23,66.09,6,LATAM,SMB,Manager_A,Night,Integration,Medium,2024-05-05
+SLA-500794,TKT-100889,Tier3-Engineering,High,8,183,175,36.46,No,No,66.31,42.81,12,Europe,Startup,Manager_E,Afternoon,Data Loss,Medium,2024-03-06
+SLA-500795,TKT-100809,Billing-Team,Critical,4,62,49,20.42,No,No,52.6,54.2,26,Europe,Mid-Market,Manager_A,Evening,Data Loss,Medium,2024-02-08
+SLA-500796,TKT-100662,Tier2-Technical,Critical,4,10,355,147.92,Yes,Yes,79.53,45.84,7,North America,Startup,Manager_D,Evening,Security,Medium,2024-03-24
+SLA-500797,TKT-100390,Network-Operations,Low,48,368,1847,64.13,No,No,70.41,75.55,23,Asia-Pacific,Enterprise,Manager_C,Afternoon,Security,High,2024-05-12
+SLA-500798,TKT-101262,Cloud-Support,Low,48,1189,1637,56.84,No,No,35.7,63.93,32,Europe,Startup,Manager_A,Afternoon,Performance,Low,2024-03-19
+SLA-500799,TKT-101403,Network-Operations,Low,48,687,1563,54.27,No,No,85.65,48.98,39,Europe,Enterprise,Manager_A,Morning,Performance,Low,2024-06-04
+SLA-500800,TKT-101943,Tier3-Engineering,Medium,24,463,1518,105.42,Yes,Yes,60.5,47.1,21,Asia-Pacific,Enterprise,Manager_C,Morning,Security,Medium,2024-03-31
+SLA-500801,TKT-100921,Cloud-Support,Low,48,492,1162,40.35,No,No,45.39,64.47,39,North America,SMB,Manager_B,Afternoon,Performance,Medium,2024-02-22
+SLA-500802,TKT-101119,Security-Team,High,8,153,619,128.96,Yes,Yes,37.88,80.48,30,LATAM,Mid-Market,Manager_F,Morning,Data Loss,High,2024-06-27
+SLA-500803,TKT-101193,Tier1-Support,Medium,24,2,1135,78.82,No,No,49.54,91.19,34,Asia-Pacific,Mid-Market,Manager_A,Evening,Performance,Critical,2024-06-03
+SLA-500804,TKT-101616,Security-Team,Low,48,734,1365,47.4,No,No,98.29,43.59,12,North America,Startup,Manager_F,Morning,Service Down,High,2024-05-02
+SLA-500805,TKT-100795,Security-Team,Medium,24,290,790,54.86,No,No,47.86,82.23,44,Asia-Pacific,Enterprise,Manager_A,Evening,Configuration,Medium,2024-02-20
+SLA-500806,TKT-100791,Billing-Team,Low,48,125,731,25.38,No,No,71.49,85.38,10,LATAM,Enterprise,Manager_C,Night,Integration,Medium,2024-06-07
+SLA-500807,TKT-101088,Tier2-Technical,Medium,24,75,795,55.21,No,No,66.77,43.63,7,Europe,Mid-Market,Manager_E,Night,Integration,Critical,2024-05-10
+SLA-500808,TKT-101897,Tier1-Support,Medium,24,217,1124,78.06,No,No,78.97,56.88,27,North America,Mid-Market,Manager_E,Evening,Security,Medium,2024-01-15
+SLA-500809,TKT-101003,Infrastructure,Medium,24,256,1799,124.93,Yes,Yes,71.84,87.83,32,Europe,Enterprise,Manager_C,Evening,Security,Critical,2024-02-24
+SLA-500810,TKT-101280,Security-Team,Medium,24,437,274,19.03,No,No,87.49,53.46,39,Europe,SMB,Manager_A,Evening,Data Loss,High,2024-05-18
+SLA-500811,TKT-101823,Tier1-Support,Medium,24,198,951,66.04,No,No,53.37,53.98,22,Asia-Pacific,Mid-Market,Manager_B,Evening,Data Loss,High,2024-01-20
+SLA-500812,TKT-101345,Tier3-Engineering,Medium,24,301,150,10.42,No,No,74.23,68.99,10,North America,Startup,Manager_E,Afternoon,Data Loss,Low,2024-06-02
+SLA-500813,TKT-100492,Tier3-Engineering,High,8,79,143,29.79,No,No,43.26,62.06,8,LATAM,SMB,Manager_E,Evening,Data Loss,Medium,2024-04-02
+SLA-500814,TKT-101110,Tier3-Engineering,Low,48,411,2719,94.41,No,Yes,70.09,85.07,34,Europe,Mid-Market,Manager_E,Afternoon,Performance,Medium,2024-03-31
+SLA-500815,TKT-100632,Tier3-Engineering,Low,48,987,3531,122.6,Yes,Yes,80.09,77.78,43,LATAM,Mid-Market,Manager_F,Afternoon,Security,Low,2024-06-12
+SLA-500816,TKT-100138,Tier2-Technical,Low,48,1081,3121,108.37,Yes,Yes,77.33,87.22,2,Europe,SMB,Manager_B,Morning,Security,Low,2024-06-18
+SLA-500817,TKT-101802,Infrastructure,Low,48,1148,306,10.62,No,No,72.16,57.73,3,LATAM,SMB,Manager_D,Evening,Performance,Low,2024-03-22
+SLA-500818,TKT-101595,Billing-Team,High,8,203,721,150.21,Yes,Yes,82.33,86.8,21,North America,Mid-Market,Manager_B,Morning,Integration,Medium,2024-05-08
+SLA-500819,TKT-101263,Security-Team,Low,48,748,344,11.94,No,No,41.66,79.17,12,Europe,Mid-Market,Manager_B,Morning,Security,Low,2024-02-14
+SLA-500820,TKT-100162,Cloud-Support,Critical,4,64,53,22.08,No,No,40.1,81.74,29,Europe,Startup,Manager_F,Evening,Performance,Low,2024-01-16
+SLA-500821,TKT-101745,Infrastructure,High,8,242,266,55.42,No,No,40.97,77.59,12,LATAM,Startup,Manager_B,Afternoon,Performance,High,2024-04-24
+SLA-500822,TKT-100463,Tier1-Support,Critical,4,68,104,43.33,No,No,50.46,56.21,43,LATAM,Enterprise,Manager_C,Night,Performance,Low,2024-02-28
+SLA-500823,TKT-101520,Billing-Team,Medium,24,6,168,11.67,No,No,92.71,45.69,16,Europe,Enterprise,Manager_B,Night,Integration,Low,2024-05-06
+SLA-500824,TKT-101003,Network-Operations,Low,48,275,2785,96.7,No,Yes,77.88,50.46,14,LATAM,Mid-Market,Manager_D,Night,Service Down,Medium,2024-02-25
+SLA-500825,TKT-101245,Infrastructure,Low,48,35,2280,79.17,No,No,70.22,68.31,20,Asia-Pacific,Startup,Manager_E,Morning,Integration,High,2024-05-07
+SLA-500826,TKT-100223,Cloud-Support,Medium,24,108,1515,105.21,Yes,Yes,88.8,69.97,5,LATAM,Enterprise,Manager_B,Night,Configuration,Critical,2024-06-26
+SLA-500827,TKT-100080,Infrastructure,Low,48,913,1797,62.4,No,No,46.06,52.01,40,North America,Mid-Market,Manager_C,Night,Data Loss,Low,2024-01-29
+SLA-500828,TKT-101811,Security-Team,Low,48,784,1451,50.38,No,No,69.86,85.78,15,Asia-Pacific,Startup,Manager_B,Night,Security,Medium,2024-01-02
+SLA-500829,TKT-101255,Tier1-Support,Medium,24,237,1029,71.46,No,No,98.6,94.21,40,Europe,Startup,Manager_F,Night,Service Down,Low,2024-06-27
+SLA-500830,TKT-101479,Tier2-Technical,High,8,242,356,74.17,No,No,84.65,90.06,17,Europe,Mid-Market,Manager_D,Night,Security,Medium,2024-01-29
+SLA-500831,TKT-100923,Tier1-Support,Medium,24,11,1532,106.39,Yes,Yes,83.35,91.49,11,Europe,Startup,Manager_E,Afternoon,Data Loss,Critical,2024-03-09
+SLA-500832,TKT-100184,Security-Team,High,8,136,492,102.5,Yes,Yes,47.7,43.7,10,Asia-Pacific,Mid-Market,Manager_F,Morning,Service Down,Low,2024-01-29
+SLA-500833,TKT-100233,Cloud-Support,Medium,24,461,1040,72.22,No,No,48.0,79.57,30,Asia-Pacific,Enterprise,Manager_E,Night,Configuration,High,2024-01-04
+SLA-500834,TKT-101620,Tier3-Engineering,Medium,24,440,1315,91.32,No,Yes,92.87,91.45,4,LATAM,Startup,Manager_A,Afternoon,Security,Medium,2024-03-02
+SLA-500835,TKT-101158,Tier3-Engineering,Low,48,101,1692,58.75,No,No,70.57,90.19,21,Europe,Mid-Market,Manager_B,Morning,Data Loss,High,2024-02-26
+SLA-500836,TKT-100630,Security-Team,Low,48,707,1126,39.1,No,No,76.4,93.1,38,LATAM,SMB,Manager_F,Afternoon,Service Down,Low,2024-04-07
+SLA-500837,TKT-101840,Tier3-Engineering,High,8,68,616,128.33,Yes,Yes,97.5,49.01,4,Europe,Enterprise,Manager_E,Evening,Service Down,Low,2024-01-29
+SLA-500838,TKT-100939,Cloud-Support,High,8,184,312,65.0,No,No,36.19,58.82,4,LATAM,Enterprise,Manager_E,Night,Performance,Medium,2024-01-25
+SLA-500839,TKT-100444,Cloud-Support,High,8,230,359,74.79,No,No,39.64,42.99,3,LATAM,Startup,Manager_D,Morning,Integration,Low,2024-02-10
+SLA-500840,TKT-101229,Tier1-Support,Medium,24,30,166,11.53,No,No,95.01,67.32,6,Europe,SMB,Manager_E,Afternoon,Service Down,Medium,2024-02-13
+SLA-500841,TKT-100378,Tier3-Engineering,Medium,24,382,1305,90.62,No,Yes,74.61,43.89,7,North America,SMB,Manager_A,Afternoon,Service Down,Medium,2024-03-07
+SLA-500842,TKT-101366,Security-Team,Critical,4,25,342,142.5,Yes,Yes,87.12,63.76,44,Asia-Pacific,Enterprise,Manager_A,Morning,Data Loss,Medium,2024-02-18
+SLA-500843,TKT-100365,Tier3-Engineering,High,8,10,413,86.04,No,Yes,59.22,47.94,41,Asia-Pacific,Mid-Market,Manager_D,Evening,Service Down,Low,2024-02-13
+SLA-500844,TKT-100190,Security-Team,High,8,186,685,142.71,Yes,Yes,54.17,49.5,31,Asia-Pacific,SMB,Manager_D,Morning,Data Loss,Medium,2024-02-26
+SLA-500845,TKT-101727,Tier2-Technical,Critical,4,114,305,127.08,Yes,Yes,80.22,76.54,12,Asia-Pacific,Startup,Manager_B,Morning,Configuration,High,2024-03-12
+SLA-500846,TKT-101760,Security-Team,Medium,24,551,145,10.07,No,No,60.47,68.88,43,Asia-Pacific,Startup,Manager_E,Afternoon,Configuration,High,2024-06-17
+SLA-500847,TKT-100428,Tier1-Support,Low,48,228,2242,77.85,No,No,48.84,94.02,8,North America,Enterprise,Manager_D,Evening,Data Loss,Medium,2024-01-12
+SLA-500848,TKT-101246,Network-Operations,Medium,24,105,851,59.1,No,No,34.85,71.8,6,Asia-Pacific,SMB,Manager_B,Night,Integration,Low,2024-01-13
+SLA-500849,TKT-101493,Cloud-Support,Low,48,790,2128,73.89,No,No,64.15,51.23,31,LATAM,Mid-Market,Manager_E,Afternoon,Configuration,Critical,2024-02-08
+SLA-500850,TKT-100594,Billing-Team,Medium,24,421,1512,105.0,Yes,Yes,90.83,89.74,43,North America,Enterprise,Manager_A,Night,Configuration,High,2024-06-03
+SLA-500851,TKT-101631,Tier2-Technical,High,8,272,505,105.21,Yes,Yes,47.21,90.32,23,Europe,Startup,Manager_D,Morning,Security,Medium,2024-01-26
+SLA-500852,TKT-100716,Billing-Team,Medium,24,98,1421,98.68,No,Yes,92.91,65.11,41,North America,Mid-Market,Manager_F,Evening,Security,Low,2024-05-20
+SLA-500853,TKT-101618,Tier2-Technical,Medium,24,393,1644,114.17,Yes,Yes,51.17,42.79,3,Asia-Pacific,SMB,Manager_E,Evening,Service Down,High,2024-02-20
+SLA-500854,TKT-100233,Network-Operations,Critical,4,34,259,107.92,Yes,Yes,56.74,41.55,7,Asia-Pacific,Startup,Manager_F,Morning,Performance,Medium,2024-05-26
+SLA-500855,TKT-100397,Network-Operations,Low,48,614,568,19.72,No,No,42.23,75.64,12,Asia-Pacific,Startup,Manager_D,Morning,Configuration,Low,2024-05-08
+SLA-500856,TKT-100278,Cloud-Support,Medium,24,574,148,10.28,No,No,92.47,44.32,3,Europe,Startup,Manager_E,Evening,Data Loss,Low,2024-06-24
+SLA-500857,TKT-101605,Infrastructure,Low,48,355,378,13.12,No,No,77.93,51.66,36,North America,SMB,Manager_E,Evening,Integration,Medium,2024-05-22
+SLA-500858,TKT-101097,Tier1-Support,Medium,24,553,418,29.03,No,No,55.63,45.7,33,Europe,SMB,Manager_C,Morning,Performance,Medium,2024-01-02
+SLA-500859,TKT-100574,Tier1-Support,Low,48,833,2453,85.17,No,Yes,90.07,62.44,30,Asia-Pacific,Startup,Manager_F,Afternoon,Integration,Low,2024-03-18
+SLA-500860,TKT-101240,Infrastructure,High,8,293,658,137.08,Yes,Yes,39.38,46.37,28,Europe,Enterprise,Manager_C,Evening,Configuration,Critical,2024-02-13
+SLA-500861,TKT-100064,Security-Team,Medium,24,428,1160,80.56,No,Yes,93.54,44.81,4,LATAM,Enterprise,Manager_D,Afternoon,Security,High,2024-02-15
+SLA-500862,TKT-100925,Security-Team,High,8,157,128,26.67,No,No,50.24,92.37,36,Europe,SMB,Manager_B,Morning,Security,Medium,2024-06-07
+SLA-500863,TKT-101607,Tier1-Support,Medium,24,173,234,16.25,No,No,97.23,42.45,24,Europe,Enterprise,Manager_D,Morning,Data Loss,Low,2024-04-14
+SLA-500864,TKT-101853,Tier3-Engineering,Low,48,1025,1110,38.54,No,No,71.96,58.79,22,Europe,SMB,Manager_D,Evening,Security,Medium,2024-03-01
+SLA-500865,TKT-100293,Tier2-Technical,Low,48,927,1289,44.76,No,No,63.97,48.22,34,Europe,Mid-Market,Manager_F,Morning,Data Loss,Medium,2024-01-05
+SLA-500866,TKT-100793,Tier2-Technical,High,8,47,430,89.58,No,Yes,75.01,81.94,35,North America,SMB,Manager_A,Morning,Security,Medium,2024-06-23
+SLA-500867,TKT-100956,Tier1-Support,Low,48,820,2755,95.66,No,Yes,65.13,65.02,34,North America,SMB,Manager_A,Evening,Configuration,Low,2024-06-26
+SLA-500868,TKT-101827,Billing-Team,Medium,24,15,1641,113.96,Yes,Yes,48.25,56.33,43,Asia-Pacific,Mid-Market,Manager_B,Evening,Security,High,2024-06-22
+SLA-500869,TKT-101090,Network-Operations,Critical,4,87,397,165.42,Yes,Yes,91.23,47.09,24,LATAM,Enterprise,Manager_C,Afternoon,Performance,Low,2024-03-17
+SLA-500870,TKT-100560,Tier2-Technical,Critical,4,95,44,18.33,No,No,46.36,75.16,23,North America,Enterprise,Manager_B,Evening,Integration,Medium,2024-03-14
+SLA-500871,TKT-100652,Security-Team,High,8,145,575,119.79,Yes,Yes,71.55,46.99,17,Europe,SMB,Manager_E,Afternoon,Performance,Medium,2024-01-29
+SLA-500872,TKT-100145,Security-Team,High,8,269,138,28.75,No,No,65.43,84.8,18,Asia-Pacific,Startup,Manager_A,Afternoon,Service Down,Medium,2024-05-21
+SLA-500873,TKT-100964,Tier1-Support,Medium,24,157,1502,104.31,Yes,Yes,53.87,84.3,34,North America,Startup,Manager_A,Morning,Data Loss,High,2024-01-18
+SLA-500874,TKT-100802,Tier3-Engineering,Medium,24,16,1674,116.25,Yes,Yes,46.68,83.67,38,LATAM,SMB,Manager_C,Evening,Performance,Medium,2024-06-01
+SLA-500875,TKT-101460,Tier2-Technical,Low,48,343,2116,73.47,No,No,37.44,82.81,31,LATAM,Mid-Market,Manager_A,Night,Service Down,Medium,2024-03-20
+SLA-500876,TKT-100933,Security-Team,Medium,24,15,1567,108.82,Yes,Yes,35.74,56.42,22,LATAM,Startup,Manager_B,Afternoon,Performance,Critical,2024-01-17
+SLA-500877,TKT-101763,Security-Team,Low,48,1157,1546,53.68,No,No,83.17,51.33,29,Asia-Pacific,Startup,Manager_B,Evening,Security,High,2024-06-14
+SLA-500878,TKT-100928,Cloud-Support,Medium,24,102,1112,77.22,No,No,80.59,91.99,35,North America,Enterprise,Manager_D,Morning,Security,Medium,2024-01-26
+SLA-500879,TKT-100980,Cloud-Support,High,8,181,770,160.42,Yes,Yes,54.68,79.75,25,Europe,SMB,Manager_C,Afternoon,Integration,Low,2024-01-29
+SLA-500880,TKT-100210,Infrastructure,Low,48,272,2519,87.47,No,Yes,46.41,46.8,25,North America,SMB,Manager_E,Morning,Security,Critical,2024-03-31
+SLA-500881,TKT-101091,Cloud-Support,Medium,24,287,1771,122.99,Yes,Yes,68.14,54.84,27,LATAM,Startup,Manager_B,Afternoon,Integration,Medium,2024-03-04
+SLA-500882,TKT-100325,Cloud-Support,Low,48,85,1165,40.45,No,No,37.96,40.22,12,LATAM,Enterprise,Manager_C,Afternoon,Configuration,High,2024-04-09
+SLA-500883,TKT-101210,Infrastructure,High,8,14,474,98.75,No,Yes,76.69,51.04,30,LATAM,SMB,Manager_E,Afternoon,Performance,Medium,2024-06-02
+SLA-500884,TKT-101357,Tier2-Technical,Low,48,83,510,17.71,No,No,74.68,78.47,39,LATAM,Enterprise,Manager_E,Night,Security,Medium,2024-03-30
+SLA-500885,TKT-101136,Tier2-Technical,Medium,24,503,242,16.81,No,No,81.83,46.49,19,LATAM,Mid-Market,Manager_C,Night,Service Down,Low,2024-02-19
+SLA-500886,TKT-101225,Tier2-Technical,Low,48,904,634,22.01,No,No,70.58,69.71,40,LATAM,SMB,Manager_D,Morning,Service Down,Low,2024-06-04
+SLA-500887,TKT-100445,Tier3-Engineering,Medium,24,20,1314,91.25,No,Yes,99.69,76.61,22,North America,Mid-Market,Manager_F,Afternoon,Data Loss,Low,2024-02-19
+SLA-500888,TKT-101088,Security-Team,High,8,68,319,66.46,No,No,34.32,64.75,36,LATAM,Startup,Manager_B,Afternoon,Configuration,Low,2024-05-25
+SLA-500889,TKT-101796,Network-Operations,Low,48,242,3040,105.56,Yes,Yes,33.82,86.0,35,Asia-Pacific,SMB,Manager_D,Evening,Service Down,High,2024-03-07
+SLA-500890,TKT-101193,Tier1-Support,High,8,11,296,61.67,No,No,53.22,79.77,30,LATAM,Mid-Market,Manager_C,Morning,Security,Low,2024-05-14
+SLA-500891,TKT-101845,Tier1-Support,Low,48,653,2715,94.27,No,Yes,46.87,40.86,7,North America,SMB,Manager_A,Evening,Service Down,Low,2024-01-06
+SLA-500892,TKT-100481,Infrastructure,Low,48,855,468,16.25,No,No,37.07,50.95,41,LATAM,SMB,Manager_F,Night,Data Loss,Critical,2024-01-24
+SLA-500893,TKT-100781,Infrastructure,Low,48,555,1083,37.6,No,No,44.65,43.99,8,Europe,Mid-Market,Manager_D,Afternoon,Performance,Medium,2024-06-10
+SLA-500894,TKT-101137,Infrastructure,Medium,24,115,724,50.28,No,No,94.87,66.6,15,Asia-Pacific,Startup,Manager_B,Evening,Configuration,Medium,2024-01-24
+SLA-500895,TKT-100257,Tier3-Engineering,Medium,24,117,1380,95.83,No,Yes,78.48,53.39,37,North America,Enterprise,Manager_F,Morning,Performance,High,2024-02-18
+SLA-500896,TKT-101477,Cloud-Support,Low,48,327,3414,118.54,Yes,Yes,69.6,40.84,38,LATAM,Mid-Market,Manager_A,Afternoon,Configuration,High,2024-05-06
+SLA-500897,TKT-101650,Infrastructure,Medium,24,189,595,41.32,No,No,33.31,49.7,39,LATAM,Startup,Manager_E,Afternoon,Data Loss,Critical,2024-04-17
+SLA-500898,TKT-101043,Infrastructure,Medium,24,6,787,54.65,No,No,30.28,67.56,43,LATAM,Startup,Manager_C,Afternoon,Performance,Critical,2024-03-23
+SLA-500899,TKT-100869,Tier1-Support,Medium,24,470,894,62.08,No,No,76.61,51.85,35,LATAM,Mid-Market,Manager_F,Evening,Data Loss,Medium,2024-02-27
+SLA-500900,TKT-101897,Network-Operations,Medium,24,114,329,22.85,No,No,41.84,50.31,26,North America,Enterprise,Manager_E,Night,Configuration,High,2024-04-17
+SLA-500901,TKT-100754,Tier2-Technical,Medium,24,38,238,16.53,No,No,50.1,58.03,11,LATAM,Enterprise,Manager_B,Evening,Data Loss,Medium,2024-05-26
+SLA-500902,TKT-101058,Tier2-Technical,Medium,24,212,1778,123.47,Yes,Yes,88.54,51.85,11,North America,Mid-Market,Manager_D,Morning,Configuration,Medium,2024-01-22
+SLA-500903,TKT-101297,Security-Team,Low,48,104,1729,60.03,No,No,88.98,67.55,7,North America,SMB,Manager_E,Morning,Data Loss,Low,2024-06-16
+SLA-500904,TKT-100929,Cloud-Support,High,8,221,317,66.04,No,No,94.99,43.61,34,Asia-Pacific,Startup,Manager_C,Evening,Security,High,2024-04-10
+SLA-500905,TKT-100343,Tier1-Support,Medium,24,5,1379,95.76,No,Yes,67.88,84.21,33,Asia-Pacific,SMB,Manager_A,Night,Integration,High,2024-02-02
+SLA-500906,TKT-100346,Tier1-Support,Medium,24,568,417,28.96,No,No,61.66,47.85,36,Asia-Pacific,Enterprise,Manager_C,Night,Service Down,Critical,2024-02-23
+SLA-500907,TKT-100259,Tier2-Technical,High,8,280,382,79.58,No,No,54.51,44.58,25,Asia-Pacific,SMB,Manager_B,Evening,Security,Medium,2024-01-22
+SLA-500908,TKT-101756,Security-Team,High,8,7,294,61.25,No,No,74.18,49.0,9,North America,Enterprise,Manager_E,Afternoon,Integration,Medium,2024-04-01
+SLA-500909,TKT-101513,Tier3-Engineering,Medium,24,78,867,60.21,No,No,89.4,88.88,17,LATAM,SMB,Manager_B,Evening,Configuration,Medium,2024-02-02
+SLA-500910,TKT-100483,Cloud-Support,Critical,4,92,234,97.5,No,Yes,70.4,75.62,11,Europe,Enterprise,Manager_C,Morning,Performance,High,2024-04-24
+SLA-500911,TKT-101219,Tier3-Engineering,Medium,24,64,1419,98.54,No,Yes,55.16,44.48,11,LATAM,Startup,Manager_D,Afternoon,Configuration,High,2024-05-18
+SLA-500912,TKT-100901,Tier3-Engineering,Medium,24,176,336,23.33,No,No,80.2,69.6,40,Europe,SMB,Manager_A,Evening,Service Down,Medium,2024-02-25
+SLA-500913,TKT-100107,Tier3-Engineering,Low,48,55,357,12.4,No,No,62.25,55.75,36,LATAM,Startup,Manager_D,Evening,Data Loss,Medium,2024-06-07
+SLA-500914,TKT-101528,Billing-Team,Medium,24,79,1790,124.31,Yes,Yes,49.16,93.9,34,LATAM,Startup,Manager_D,Evening,Performance,Low,2024-04-12
+SLA-500915,TKT-101086,Infrastructure,Medium,24,566,350,24.31,No,No,94.45,93.26,41,North America,SMB,Manager_D,Night,Configuration,Critical,2024-04-07
+SLA-500916,TKT-100646,Tier1-Support,Critical,4,54,321,133.75,Yes,Yes,89.39,89.83,3,North America,SMB,Manager_D,Evening,Security,Medium,2024-04-02
+SLA-500917,TKT-100553,Security-Team,Low,48,222,983,34.13,No,No,65.26,85.66,13,North America,SMB,Manager_F,Night,Data Loss,Medium,2024-01-23
+SLA-500918,TKT-101583,Billing-Team,Critical,4,111,299,124.58,Yes,Yes,44.65,42.17,22,Europe,SMB,Manager_F,Afternoon,Security,Medium,2024-05-01
+SLA-500919,TKT-101121,Tier1-Support,High,8,140,727,151.46,Yes,Yes,78.31,75.51,40,North America,Enterprise,Manager_A,Night,Service Down,High,2024-03-07
+SLA-500920,TKT-101075,Tier2-Technical,Critical,4,38,66,27.5,No,No,88.32,63.47,9,LATAM,SMB,Manager_B,Evening,Security,Medium,2024-03-31
+SLA-500921,TKT-100395,Tier1-Support,Medium,24,336,929,64.51,No,No,61.01,70.88,28,North America,Enterprise,Manager_A,Afternoon,Integration,Medium,2024-05-30
+SLA-500922,TKT-101306,Tier2-Technical,Critical,4,112,93,38.75,No,No,91.77,51.19,21,North America,Enterprise,Manager_E,Afternoon,Data Loss,Critical,2024-01-19
+SLA-500923,TKT-101344,Tier3-Engineering,Medium,24,165,1693,117.57,Yes,Yes,65.85,91.74,27,North America,Mid-Market,Manager_C,Evening,Data Loss,Low,2024-03-16
+SLA-500924,TKT-101352,Tier2-Technical,Low,48,78,824,28.61,No,No,51.77,88.73,33,LATAM,SMB,Manager_D,Evening,Security,Critical,2024-05-25
+SLA-500925,TKT-100331,Tier2-Technical,High,8,5,693,144.38,Yes,Yes,92.12,47.55,35,Asia-Pacific,Enterprise,Manager_D,Night,Security,Low,2024-03-02
+SLA-500926,TKT-100123,Security-Team,High,8,143,451,93.96,No,Yes,84.91,67.11,23,Asia-Pacific,Mid-Market,Manager_D,Morning,Data Loss,High,2024-05-17
+SLA-500927,TKT-101901,Billing-Team,High,8,91,641,133.54,Yes,Yes,69.35,70.4,10,LATAM,Mid-Market,Manager_F,Night,Service Down,Critical,2024-02-15
+SLA-500928,TKT-100294,Infrastructure,High,8,7,438,91.25,No,Yes,75.98,50.9,38,Europe,Enterprise,Manager_D,Evening,Service Down,Medium,2024-03-15
+SLA-500929,TKT-100071,Tier2-Technical,Medium,24,160,1778,123.47,Yes,Yes,68.62,86.26,8,North America,SMB,Manager_D,Morning,Data Loss,Low,2024-03-02
+SLA-500930,TKT-100304,Tier1-Support,Medium,24,117,820,56.94,No,No,58.4,42.26,35,North America,Startup,Manager_C,Afternoon,Configuration,Critical,2024-05-07
+SLA-500931,TKT-100675,Infrastructure,Medium,24,393,971,67.43,No,No,79.16,86.86,28,North America,Startup,Manager_D,Night,Data Loss,Low,2024-02-28
+SLA-500932,TKT-101728,Tier2-Technical,Critical,4,62,189,78.75,No,No,87.67,75.61,42,Europe,Enterprise,Manager_D,Night,Service Down,High,2024-02-03
+SLA-500933,TKT-101161,Network-Operations,High,8,144,263,54.79,No,No,38.88,72.59,19,Asia-Pacific,SMB,Manager_D,Morning,Configuration,Medium,2024-03-04
+SLA-500934,TKT-101963,Tier2-Technical,Low,48,261,1023,35.52,No,No,64.39,92.28,44,Asia-Pacific,SMB,Manager_A,Night,Security,Medium,2024-06-25
+SLA-500935,TKT-101326,Billing-Team,Low,48,1161,1078,37.43,No,No,58.76,51.97,37,Europe,Enterprise,Manager_D,Afternoon,Security,Medium,2024-04-25
+SLA-500936,TKT-101425,Infrastructure,Medium,24,536,758,52.64,No,No,66.7,92.96,8,North America,SMB,Manager_D,Morning,Configuration,Low,2024-05-01
+SLA-500937,TKT-100896,Billing-Team,High,8,11,94,19.58,No,No,86.53,82.43,14,Europe,Enterprise,Manager_B,Morning,Configuration,High,2024-06-15
+SLA-500938,TKT-101214,Billing-Team,Low,48,988,1391,48.3,No,No,74.14,81.1,40,LATAM,Startup,Manager_A,Evening,Data Loss,Critical,2024-03-15
+SLA-500939,TKT-101093,Cloud-Support,High,8,195,88,18.33,No,No,85.48,50.28,14,North America,Enterprise,Manager_C,Morning,Security,Critical,2024-05-28
+SLA-500940,TKT-101613,Tier1-Support,Low,48,966,3388,117.64,Yes,Yes,90.09,52.79,12,LATAM,Enterprise,Manager_B,Night,Configuration,Critical,2024-03-01
+SLA-500941,TKT-101782,Tier3-Engineering,Low,48,614,565,19.62,No,No,64.98,43.37,3,Europe,Enterprise,Manager_A,Afternoon,Data Loss,Medium,2024-03-10
+SLA-500942,TKT-101339,Tier1-Support,High,8,164,632,131.67,Yes,Yes,48.8,67.22,26,LATAM,Enterprise,Manager_B,Afternoon,Service Down,High,2024-04-24
+SLA-500943,TKT-100352,Tier1-Support,Low,48,1033,331,11.49,No,No,82.52,57.45,38,Asia-Pacific,Enterprise,Manager_D,Afternoon,Integration,Medium,2024-02-21
+SLA-500944,TKT-100130,Tier2-Technical,Low,48,717,1038,36.04,No,No,55.64,42.91,30,North America,Startup,Manager_E,Afternoon,Service Down,Low,2024-06-02
+SLA-500945,TKT-101647,Billing-Team,Low,48,597,1772,61.53,No,No,42.87,71.73,6,LATAM,SMB,Manager_F,Night,Security,Low,2024-01-06
+SLA-500946,TKT-100247,Tier3-Engineering,Medium,24,117,1628,113.06,Yes,Yes,53.88,81.11,40,Asia-Pacific,Mid-Market,Manager_A,Afternoon,Security,Low,2024-01-14
+SLA-500947,TKT-100129,Tier2-Technical,Low,48,848,388,13.47,No,No,98.23,85.41,21,Asia-Pacific,Mid-Market,Manager_D,Afternoon,Configuration,Medium,2024-01-08
+SLA-500948,TKT-100757,Tier3-Engineering,Medium,24,472,394,27.36,No,No,95.93,80.68,11,LATAM,Mid-Market,Manager_E,Morning,Performance,High,2024-02-15
+SLA-500949,TKT-100204,Infrastructure,Low,48,140,2164,75.14,No,No,43.37,83.48,15,Europe,Enterprise,Manager_D,Morning,Service Down,Medium,2024-04-24
+SLA-500950,TKT-100014,Tier3-Engineering,High,8,93,619,128.96,Yes,Yes,93.63,41.6,30,North America,SMB,Manager_D,Night,Configuration,Critical,2024-02-09
+SLA-500951,TKT-100259,Billing-Team,Medium,24,56,567,39.38,No,No,86.5,68.78,11,Europe,SMB,Manager_E,Night,Data Loss,Low,2024-05-03
+SLA-500952,TKT-100489,Tier3-Engineering,Medium,24,215,1091,75.76,No,No,51.58,87.82,38,North America,Mid-Market,Manager_F,Night,Integration,Low,2024-05-13
+SLA-500953,TKT-101946,Tier2-Technical,Medium,24,599,1268,88.06,No,Yes,59.59,51.05,25,Asia-Pacific,SMB,Manager_D,Morning,Integration,Low,2024-04-15
+SLA-500954,TKT-100482,Billing-Team,High,8,35,775,161.46,Yes,Yes,34.98,59.01,40,North America,Enterprise,Manager_E,Evening,Integration,Medium,2024-02-05
+SLA-500955,TKT-101039,Billing-Team,Low,48,1164,3457,120.03,Yes,Yes,96.35,43.81,10,LATAM,Mid-Market,Manager_C,Morning,Performance,Critical,2024-02-24
+SLA-500956,TKT-100230,Tier3-Engineering,Low,48,699,2673,92.81,No,Yes,82.94,83.68,32,LATAM,Startup,Manager_B,Afternoon,Configuration,High,2024-02-25
+SLA-500957,TKT-101889,Tier1-Support,Low,48,627,843,29.27,No,No,92.74,77.71,8,North America,SMB,Manager_C,Afternoon,Data Loss,Low,2024-03-22
+SLA-500958,TKT-100514,Network-Operations,Low,48,599,753,26.15,No,No,46.76,62.99,27,LATAM,Enterprise,Manager_A,Morning,Integration,Low,2024-04-03
+SLA-500959,TKT-100360,Tier3-Engineering,Low,48,1088,529,18.37,No,No,55.13,84.46,22,North America,Startup,Manager_E,Morning,Service Down,High,2024-05-28
+SLA-500960,TKT-101833,Billing-Team,High,8,277,463,96.46,No,Yes,40.64,47.17,34,LATAM,SMB,Manager_D,Afternoon,Configuration,Medium,2024-02-05
+SLA-500961,TKT-101386,Network-Operations,Low,48,23,3243,112.6,Yes,Yes,39.22,87.23,25,Europe,Enterprise,Manager_C,Afternoon,Service Down,Medium,2024-01-26
+SLA-500962,TKT-100485,Infrastructure,Low,48,421,2013,69.9,No,No,91.3,81.38,36,Europe,Startup,Manager_B,Morning,Data Loss,Medium,2024-06-13
+SLA-500963,TKT-101198,Cloud-Support,Medium,24,565,1438,99.86,No,Yes,50.82,77.49,4,North America,Startup,Manager_B,Afternoon,Integration,Low,2024-05-21
+SLA-500964,TKT-100931,Tier3-Engineering,Medium,24,553,1559,108.26,Yes,Yes,69.33,80.75,2,LATAM,SMB,Manager_B,Night,Configuration,Medium,2024-05-01
+SLA-500965,TKT-100397,Network-Operations,Medium,24,375,862,59.86,No,No,30.27,52.5,23,Asia-Pacific,Mid-Market,Manager_C,Afternoon,Service Down,Medium,2024-02-18
+SLA-500966,TKT-101417,Tier1-Support,High,8,52,415,86.46,No,Yes,45.91,58.66,10,Asia-Pacific,Mid-Market,Manager_A,Night,Data Loss,Low,2024-05-29
+SLA-500967,TKT-100856,Tier3-Engineering,Low,48,873,538,18.68,No,No,30.88,48.47,8,Asia-Pacific,Mid-Market,Manager_C,Afternoon,Configuration,Medium,2024-01-16
+SLA-500968,TKT-101951,Tier3-Engineering,High,8,36,546,113.75,Yes,Yes,87.93,63.52,18,Europe,Enterprise,Manager_D,Night,Performance,Medium,2024-03-02
+SLA-500969,TKT-101211,Cloud-Support,Low,48,380,2960,102.78,Yes,Yes,90.04,66.08,19,LATAM,SMB,Manager_A,Night,Configuration,Low,2024-05-31
+SLA-500970,TKT-101787,Billing-Team,Low,48,36,2931,101.77,Yes,Yes,79.62,49.78,25,Europe,SMB,Manager_D,Afternoon,Integration,Critical,2024-02-02
+SLA-500971,TKT-101937,Tier3-Engineering,High,8,200,599,124.79,Yes,Yes,74.75,86.94,11,North America,Startup,Manager_A,Morning,Data Loss,Critical,2024-03-25
+SLA-500972,TKT-101502,Tier1-Support,Medium,24,440,1760,122.22,Yes,Yes,37.99,68.51,24,LATAM,Startup,Manager_D,Morning,Data Loss,Low,2024-05-30
+SLA-500973,TKT-101014,Billing-Team,Critical,4,90,134,55.83,No,No,42.43,90.33,10,North America,Enterprise,Manager_F,Night,Performance,Low,2024-02-18
+SLA-500974,TKT-100271,Network-Operations,Medium,24,581,1430,99.31,No,Yes,98.08,69.92,15,Asia-Pacific,Mid-Market,Manager_F,Morning,Service Down,Medium,2024-03-19
+SLA-500975,TKT-100982,Security-Team,Low,48,1051,1971,68.44,No,No,74.53,49.06,17,Europe,Startup,Manager_E,Morning,Data Loss,High,2024-06-18
+SLA-500976,TKT-100949,Tier3-Engineering,Low,48,638,1089,37.81,No,No,71.17,47.61,2,LATAM,Mid-Market,Manager_C,Night,Configuration,Medium,2024-03-05
+SLA-500977,TKT-101297,Tier1-Support,Medium,24,187,1460,101.39,Yes,Yes,58.0,82.81,35,North America,Startup,Manager_F,Evening,Integration,High,2024-06-24
+SLA-500978,TKT-100066,Security-Team,Medium,24,316,1409,97.85,No,Yes,51.25,61.92,2,LATAM,SMB,Manager_F,Afternoon,Configuration,High,2024-01-15
+SLA-500979,TKT-100165,Network-Operations,Low,48,734,1798,62.43,No,No,51.9,45.39,35,North America,SMB,Manager_A,Morning,Data Loss,Low,2024-05-18
+SLA-500980,TKT-100748,Cloud-Support,Medium,24,98,436,30.28,No,No,60.33,83.98,10,North America,SMB,Manager_C,Afternoon,Configuration,Medium,2024-05-28
+SLA-500981,TKT-101144,Tier2-Technical,Medium,24,541,1622,112.64,Yes,Yes,30.9,83.75,10,Europe,Mid-Market,Manager_C,Afternoon,Integration,Medium,2024-05-08
+SLA-500982,TKT-100232,Cloud-Support,Low,48,1077,1129,39.2,No,No,90.17,79.04,24,Europe,Mid-Market,Manager_C,Evening,Security,High,2024-02-03
+SLA-500983,TKT-101031,Infrastructure,Critical,4,93,307,127.92,Yes,Yes,45.07,84.61,3,Asia-Pacific,Enterprise,Manager_A,Evening,Security,Medium,2024-05-23
+SLA-500984,TKT-100926,Cloud-Support,Medium,24,583,551,38.26,No,No,89.71,61.32,9,North America,Startup,Manager_F,Evening,Data Loss,Critical,2024-03-09
+SLA-500985,TKT-101271,Network-Operations,Low,48,1189,1402,48.68,No,No,41.16,93.24,22,North America,Mid-Market,Manager_D,Morning,Service Down,Medium,2024-06-26
+SLA-500986,TKT-100800,Tier3-Engineering,Low,48,1177,2189,76.01,No,No,93.66,50.65,43,Asia-Pacific,Enterprise,Manager_A,Afternoon,Security,Medium,2024-03-10
+SLA-500987,TKT-100229,Tier3-Engineering,Low,48,601,1886,65.49,No,No,95.2,89.96,7,LATAM,Mid-Market,Manager_B,Morning,Security,Medium,2024-03-15
+SLA-500988,TKT-100853,Tier3-Engineering,High,8,152,163,33.96,No,No,74.04,60.37,23,LATAM,SMB,Manager_D,Night,Configuration,High,2024-06-07
+SLA-500989,TKT-101320,Tier1-Support,Low,48,680,2310,80.21,No,Yes,80.06,57.32,3,Asia-Pacific,Mid-Market,Manager_A,Morning,Performance,Medium,2024-06-04
+SLA-500990,TKT-101709,Network-Operations,Low,48,680,1212,42.08,No,No,81.3,58.5,35,LATAM,SMB,Manager_F,Evening,Data Loss,High,2024-02-10
+SLA-500991,TKT-101215,Cloud-Support,Medium,24,229,1239,86.04,No,Yes,63.99,78.73,38,LATAM,SMB,Manager_E,Afternoon,Security,High,2024-03-14
+SLA-500992,TKT-100351,Security-Team,Low,48,381,2425,84.2,No,Yes,30.34,91.52,13,Europe,Startup,Manager_C,Evening,Service Down,Medium,2024-06-11
+SLA-500993,TKT-100303,Network-Operations,Medium,24,252,1428,99.17,No,Yes,95.1,61.1,35,Asia-Pacific,Startup,Manager_B,Afternoon,Configuration,Medium,2024-01-31
+SLA-500994,TKT-101096,Security-Team,High,8,169,245,51.04,No,No,52.4,63.2,20,Europe,Mid-Market,Manager_F,Afternoon,Performance,High,2024-05-15
+SLA-500995,TKT-100487,Tier2-Technical,Medium,24,235,973,67.57,No,No,46.17,84.11,10,North America,SMB,Manager_E,Afternoon,Data Loss,Medium,2024-05-28
+SLA-500996,TKT-100533,Network-Operations,Low,48,1162,1539,53.44,No,No,45.08,56.05,12,Europe,Mid-Market,Manager_E,Morning,Configuration,High,2024-01-04
+SLA-500997,TKT-100649,Network-Operations,Critical,4,39,387,161.25,Yes,Yes,58.84,91.39,28,Europe,SMB,Manager_D,Afternoon,Integration,Low,2024-03-24
+SLA-500998,TKT-100617,Tier2-Technical,High,8,138,264,55.0,No,No,75.93,61.02,10,North America,Startup,Manager_D,Afternoon,Data Loss,High,2024-06-02
+SLA-500999,TKT-101900,Network-Operations,Low,48,550,3113,108.09,Yes,Yes,39.01,92.12,14,Europe,Enterprise,Manager_F,Evening,Configuration,Low,2024-01-28
+SLA-501000,TKT-101444,Security-Team,High,8,265,441,91.88,No,Yes,51.7,84.66,34,LATAM,SMB,Manager_E,Afternoon,Integration,Medium,2024-04-21
+SLA-501001,TKT-101492,Cloud-Support,Low,48,351,784,27.22,No,No,83.43,47.51,14,Asia-Pacific,Enterprise,Manager_F,Night,Service Down,High,2024-02-16
+SLA-501002,TKT-100285,Tier2-Technical,Low,48,449,3008,104.44,Yes,Yes,63.16,64.57,4,Asia-Pacific,Enterprise,Manager_D,Afternoon,Data Loss,Medium,2024-03-24
+SLA-501003,TKT-100731,Tier2-Technical,Medium,24,463,1202,83.47,No,Yes,77.41,78.64,44,Asia-Pacific,Enterprise,Manager_E,Afternoon,Integration,Medium,2024-02-02
+SLA-501004,TKT-101078,Billing-Team,Critical,4,75,44,18.33,No,No,90.95,63.2,24,Asia-Pacific,Mid-Market,Manager_A,Morning,Integration,High,2024-02-14
+SLA-501005,TKT-101739,Cloud-Support,Medium,24,198,1414,98.19,No,Yes,43.93,73.09,39,North America,Startup,Manager_B,Night,Security,Medium,2024-06-20
+SLA-501006,TKT-101235,Tier1-Support,Medium,24,563,1231,85.49,No,Yes,32.72,50.68,21,Asia-Pacific,Startup,Manager_B,Night,Security,High,2024-01-25
+SLA-501007,TKT-100790,Network-Operations,High,8,132,114,23.75,No,No,32.82,84.27,16,North America,SMB,Manager_C,Evening,Security,Medium,2024-05-10
+SLA-501008,TKT-100912,Tier2-Technical,Low,48,494,577,20.03,No,No,93.81,59.01,2,Europe,Startup,Manager_F,Night,Data Loss,Low,2024-01-27
+SLA-501009,TKT-100591,Tier3-Engineering,Medium,24,132,1726,119.86,Yes,Yes,78.3,61.3,16,LATAM,Startup,Manager_B,Morning,Performance,Medium,2024-04-10
+SLA-501010,TKT-100425,Security-Team,Low,48,1181,2196,76.25,No,No,47.53,84.32,40,LATAM,SMB,Manager_A,Night,Service Down,Medium,2024-01-23
+SLA-501011,TKT-100013,Infrastructure,Medium,24,468,1543,107.15,Yes,Yes,46.89,44.32,18,Asia-Pacific,Startup,Manager_B,Night,Configuration,Medium,2024-05-25
+SLA-501012,TKT-101163,Tier3-Engineering,Critical,4,8,170,70.83,No,No,72.27,67.13,44,Europe,Mid-Market,Manager_D,Evening,Integration,High,2024-06-09
+SLA-501013,TKT-101004,Tier1-Support,Low,48,147,2285,79.34,No,No,71.07,64.52,13,Asia-Pacific,SMB,Manager_D,Night,Performance,Critical,2024-04-03
+SLA-501014,TKT-100054,Tier1-Support,Medium,24,228,1718,119.31,Yes,Yes,76.45,83.12,26,Europe,SMB,Manager_C,Night,Service Down,Medium,2024-05-05
+SLA-501015,TKT-101339,Security-Team,Critical,4,88,384,160.0,Yes,Yes,81.07,41.12,2,LATAM,Mid-Market,Manager_D,Afternoon,Service Down,Low,2024-03-12
+SLA-501016,TKT-100244,Security-Team,High,8,104,542,112.92,Yes,Yes,62.74,55.0,31,LATAM,Enterprise,Manager_E,Evening,Integration,Low,2024-02-02
+SLA-501017,TKT-100984,Infrastructure,Medium,24,256,1489,103.4,Yes,Yes,93.76,91.88,27,Asia-Pacific,Startup,Manager_F,Morning,Security,Low,2024-01-14
+SLA-501018,TKT-101049,Tier1-Support,Medium,24,182,1542,107.08,Yes,Yes,32.4,67.37,28,Asia-Pacific,Mid-Market,Manager_E,Morning,Performance,Critical,2024-03-12
+SLA-501019,TKT-100654,Cloud-Support,Medium,24,579,1029,71.46,No,No,35.21,67.7,2,Europe,SMB,Manager_B,Morning,Security,Low,2024-03-03
+SLA-501020,TKT-100739,Infrastructure,Medium,24,345,1246,86.53,No,Yes,53.49,82.08,16,Asia-Pacific,Enterprise,Manager_C,Evening,Integration,Medium,2024-05-03
+SLA-501021,TKT-101308,Tier2-Technical,Low,48,599,250,8.68,No,No,73.3,57.04,42,Europe,Mid-Market,Manager_A,Afternoon,Integration,Critical,2024-03-13
+SLA-501022,TKT-100660,Network-Operations,Critical,4,27,94,39.17,No,No,38.9,59.62,38,Asia-Pacific,SMB,Manager_F,Evening,Service Down,High,2024-06-23
+SLA-501023,TKT-101094,Network-Operations,Low,48,1127,443,15.38,No,No,44.1,92.75,11,Europe,Enterprise,Manager_B,Evening,Security,Low,2024-03-19
+SLA-501024,TKT-101594,Cloud-Support,Low,48,1081,344,11.94,No,No,47.13,88.48,40,LATAM,SMB,Manager_B,Morning,Performance,High,2024-02-06
+SLA-501025,TKT-100316,Billing-Team,Critical,4,113,328,136.67,Yes,Yes,43.39,68.44,13,Europe,Enterprise,Manager_D,Night,Service Down,High,2024-05-16
+SLA-501026,TKT-100238,Tier3-Engineering,Low,48,380,331,11.49,No,No,37.93,82.51,41,North America,Startup,Manager_C,Evening,Configuration,Medium,2024-05-31
+SLA-501027,TKT-100742,Tier3-Engineering,Medium,24,217,1365,94.79,No,Yes,83.6,43.84,44,LATAM,SMB,Manager_B,Evening,Service Down,High,2024-03-30
+SLA-501028,TKT-101524,Tier2-Technical,Medium,24,29,478,33.19,No,No,83.48,40.28,44,Europe,Mid-Market,Manager_F,Afternoon,Configuration,High,2024-01-09
+SLA-501029,TKT-100464,Security-Team,Critical,4,8,298,124.17,Yes,Yes,84.2,76.09,22,Europe,Mid-Market,Manager_B,Morning,Data Loss,High,2024-06-28
+SLA-501030,TKT-101414,Tier2-Technical,Low,48,1186,2046,71.04,No,No,82.77,52.05,22,North America,Enterprise,Manager_D,Night,Service Down,Medium,2024-06-28
+SLA-501031,TKT-100402,Tier2-Technical,Medium,24,411,854,59.31,No,No,49.64,85.13,16,North America,Enterprise,Manager_D,Morning,Security,High,2024-04-16
+SLA-501032,TKT-100088,Tier2-Technical,Low,48,389,483,16.77,No,No,50.14,80.54,39,Asia-Pacific,Enterprise,Manager_A,Morning,Integration,Medium,2024-04-01
+SLA-501033,TKT-100420,Billing-Team,Medium,24,72,1778,123.47,Yes,Yes,73.69,47.26,15,Europe,SMB,Manager_A,Morning,Performance,Low,2024-03-28
+SLA-501034,TKT-101732,Security-Team,Critical,4,42,105,43.75,No,No,54.24,84.43,20,Asia-Pacific,SMB,Manager_B,Afternoon,Integration,Low,2024-06-21
+SLA-501035,TKT-101167,Tier2-Technical,Critical,4,119,111,46.25,No,No,44.74,67.58,18,North America,Enterprise,Manager_E,Afternoon,Configuration,Critical,2024-03-01
+SLA-501036,TKT-100392,Security-Team,Low,48,707,2617,90.87,No,Yes,63.46,65.93,3,Europe,Enterprise,Manager_F,Morning,Performance,Medium,2024-06-25
+SLA-501037,TKT-101885,Cloud-Support,Low,48,711,3410,118.4,Yes,Yes,37.91,81.66,2,Asia-Pacific,Mid-Market,Manager_D,Morning,Performance,Low,2024-04-12
+SLA-501038,TKT-101709,Network-Operations,High,8,195,736,153.33,Yes,Yes,83.63,91.28,20,LATAM,Startup,Manager_B,Afternoon,Data Loss,Medium,2024-04-12
+SLA-501039,TKT-100231,Network-Operations,Medium,24,333,1312,91.11,No,Yes,50.53,66.99,32,North America,Startup,Manager_A,Afternoon,Data Loss,Medium,2024-01-31
+SLA-501040,TKT-101561,Network-Operations,Medium,24,471,1625,112.85,Yes,Yes,41.95,54.7,41,Asia-Pacific,Enterprise,Manager_A,Evening,Data Loss,High,2024-06-17
+SLA-501041,TKT-100236,Infrastructure,Medium,24,202,444,30.83,No,No,80.03,91.57,28,Asia-Pacific,Startup,Manager_E,Evening,Configuration,Medium,2024-03-19
+SLA-501042,TKT-101999,Cloud-Support,Low,48,906,1643,57.05,No,No,51.16,89.23,25,Europe,Startup,Manager_C,Night,Performance,High,2024-01-04
+SLA-501043,TKT-101754,Tier2-Technical,Medium,24,503,393,27.29,No,No,69.31,44.02,40,LATAM,SMB,Manager_B,Morning,Configuration,Low,2024-03-13
+SLA-501044,TKT-101006,Tier2-Technical,High,8,155,119,24.79,No,No,40.0,78.27,15,LATAM,Startup,Manager_E,Morning,Service Down,High,2024-05-22
+SLA-501045,TKT-100293,Infrastructure,Critical,4,77,349,145.42,Yes,Yes,31.57,72.99,25,LATAM,Enterprise,Manager_F,Afternoon,Service Down,Low,2024-03-31
+SLA-501046,TKT-100744,Billing-Team,Medium,24,206,1425,98.96,No,Yes,41.84,57.73,2,Asia-Pacific,Mid-Market,Manager_E,Night,Service Down,High,2024-04-19
+SLA-501047,TKT-100476,Infrastructure,Critical,4,73,216,90.0,No,Yes,68.66,42.78,27,LATAM,SMB,Manager_F,Evening,Configuration,High,2024-05-20
+SLA-501048,TKT-101931,Infrastructure,High,8,69,444,92.5,No,Yes,76.9,40.02,32,Asia-Pacific,Startup,Manager_F,Night,Data Loss,Low,2024-06-23
+SLA-501049,TKT-101047,Security-Team,Low,48,973,879,30.52,No,No,54.85,57.64,37,Europe,Startup,Manager_A,Morning,Security,Low,2024-03-04
+SLA-501050,TKT-101002,Cloud-Support,Low,48,559,953,33.09,No,No,91.25,56.58,14,Europe,Mid-Market,Manager_A,Morning,Configuration,High,2024-02-02
+SLA-501051,TKT-100108,Tier2-Technical,Medium,24,409,580,40.28,No,No,39.83,74.24,42,LATAM,Enterprise,Manager_B,Night,Integration,Medium,2024-06-25
+SLA-501052,TKT-101391,Network-Operations,Critical,4,48,85,35.42,No,No,88.97,79.73,7,Europe,SMB,Manager_E,Morning,Service Down,Low,2024-01-25
+SLA-501053,TKT-101353,Cloud-Support,Medium,24,489,865,60.07,No,No,92.71,75.93,44,LATAM,Mid-Market,Manager_C,Night,Data Loss,Medium,2024-01-02
+SLA-501054,TKT-101033,Security-Team,High,8,144,425,88.54,No,Yes,49.23,88.83,13,Asia-Pacific,Enterprise,Manager_A,Night,Service Down,Low,2024-06-26
+SLA-501055,TKT-100785,Cloud-Support,High,8,56,621,129.38,Yes,Yes,85.25,41.72,43,Asia-Pacific,Startup,Manager_D,Night,Service Down,Medium,2024-03-20
+SLA-501056,TKT-100067,Tier3-Engineering,Low,48,1171,469,16.28,No,No,76.8,93.49,17,Asia-Pacific,Mid-Market,Manager_D,Night,Performance,High,2024-03-05
+SLA-501057,TKT-100639,Infrastructure,Low,48,712,1989,69.06,No,No,46.28,73.42,29,LATAM,Enterprise,Manager_E,Night,Configuration,High,2024-04-03
+SLA-501058,TKT-101134,Cloud-Support,High,8,213,133,27.71,No,No,76.31,53.0,13,LATAM,Mid-Market,Manager_E,Morning,Data Loss,Medium,2024-02-01
+SLA-501059,TKT-100539,Cloud-Support,Medium,24,236,1324,91.94,No,Yes,35.65,94.6,17,LATAM,SMB,Manager_C,Evening,Service Down,Low,2024-02-21
+SLA-501060,TKT-100057,Tier1-Support,Medium,24,111,1435,99.65,No,Yes,88.08,59.24,18,Europe,SMB,Manager_C,Morning,Configuration,Medium,2024-06-06
+SLA-501061,TKT-100698,Infrastructure,Low,48,116,1818,63.12,No,No,84.41,70.62,36,North America,Startup,Manager_C,Evening,Data Loss,Medium,2024-03-20
+SLA-501062,TKT-100719,Tier1-Support,Critical,4,99,176,73.33,No,No,98.95,92.02,23,Europe,Mid-Market,Manager_B,Evening,Integration,High,2024-03-03
+SLA-501063,TKT-100173,Tier2-Technical,High,8,167,225,46.88,No,No,40.79,87.06,12,Asia-Pacific,Enterprise,Manager_C,Afternoon,Service Down,Low,2024-05-23
+SLA-501064,TKT-101102,Network-Operations,Medium,24,363,191,13.26,No,No,36.96,73.23,18,North America,Startup,Manager_F,Night,Integration,Low,2024-06-06
+SLA-501065,TKT-101054,Infrastructure,Medium,24,274,126,8.75,No,No,36.25,63.7,41,Asia-Pacific,Enterprise,Manager_F,Night,Integration,High,2024-03-01
+SLA-501066,TKT-100045,Network-Operations,Medium,24,177,361,25.07,No,No,52.78,45.21,17,LATAM,Startup,Manager_C,Morning,Data Loss,Low,2024-05-07
+SLA-501067,TKT-100204,Billing-Team,High,8,286,747,155.62,Yes,Yes,86.72,69.51,29,Asia-Pacific,Startup,Manager_E,Evening,Performance,High,2024-01-19
+SLA-501068,TKT-101259,Security-Team,Low,48,133,1882,65.35,No,No,47.49,43.61,32,Asia-Pacific,Startup,Manager_B,Night,Configuration,Low,2024-02-23
+SLA-501069,TKT-101735,Tier2-Technical,Medium,24,234,1115,77.43,No,No,65.92,67.26,25,Europe,SMB,Manager_C,Morning,Security,Low,2024-05-24
+SLA-501070,TKT-101174,Infrastructure,Low,48,310,796,27.64,No,No,47.79,85.38,22,Europe,Enterprise,Manager_F,Morning,Integration,High,2024-06-19
+SLA-501071,TKT-100689,Security-Team,Low,48,299,911,31.63,No,No,79.99,50.79,6,North America,Startup,Manager_D,Afternoon,Security,Low,2024-01-28
+SLA-501072,TKT-101629,Tier2-Technical,Medium,24,50,1403,97.43,No,Yes,66.9,80.38,11,Asia-Pacific,SMB,Manager_D,Evening,Performance,High,2024-01-23
+SLA-501073,TKT-100848,Infrastructure,Low,48,290,2095,72.74,No,No,43.54,51.57,2,Asia-Pacific,Startup,Manager_F,Afternoon,Service Down,High,2024-02-06
+SLA-501074,TKT-101285,Tier3-Engineering,High,8,88,476,99.17,No,Yes,32.46,90.15,27,LATAM,Mid-Market,Manager_F,Night,Security,Low,2024-01-14
+SLA-501075,TKT-101919,Infrastructure,High,8,175,446,92.92,No,Yes,88.97,81.83,5,North America,Mid-Market,Manager_C,Night,Performance,High,2024-06-19
+SLA-501076,TKT-100492,Tier3-Engineering,Low,48,40,1385,48.09,No,No,48.75,73.22,42,Asia-Pacific,Startup,Manager_D,Evening,Service Down,Low,2024-02-29
+SLA-501077,TKT-101298,Billing-Team,Critical,4,115,90,37.5,No,No,52.43,94.8,23,LATAM,SMB,Manager_C,Afternoon,Security,Medium,2024-05-02
+SLA-501078,TKT-101406,Billing-Team,Medium,24,143,452,31.39,No,No,90.79,85.89,39,LATAM,Mid-Market,Manager_A,Afternoon,Performance,High,2024-06-09
+SLA-501079,TKT-100056,Billing-Team,High,8,197,730,152.08,Yes,Yes,90.96,68.2,34,Asia-Pacific,Startup,Manager_D,Night,Data Loss,Medium,2024-05-17
+SLA-501080,TKT-101324,Tier1-Support,Low,48,588,1650,57.29,No,No,36.66,42.98,29,Europe,Mid-Market,Manager_C,Afternoon,Service Down,Low,2024-04-18
+SLA-501081,TKT-100529,Security-Team,Medium,24,247,1724,119.72,Yes,Yes,97.05,88.61,8,Europe,Enterprise,Manager_F,Night,Service Down,Low,2024-05-30
+SLA-501082,TKT-100113,Tier2-Technical,Medium,24,311,428,29.72,No,No,35.08,86.77,29,Asia-Pacific,SMB,Manager_A,Night,Security,Critical,2024-06-28
+SLA-501083,TKT-101375,Tier2-Technical,Medium,24,120,1340,93.06,No,Yes,85.47,52.39,2,LATAM,Mid-Market,Manager_B,Morning,Integration,Medium,2024-02-23
+SLA-501084,TKT-101504,Tier2-Technical,High,8,160,348,72.5,No,No,43.02,52.34,27,Asia-Pacific,Startup,Manager_A,Afternoon,Integration,Medium,2024-03-02
+SLA-501085,TKT-100250,Network-Operations,Low,48,1065,251,8.72,No,No,82.39,83.12,27,Asia-Pacific,Startup,Manager_F,Afternoon,Data Loss,Medium,2024-06-27
+SLA-501086,TKT-100446,Tier3-Engineering,Critical,4,113,363,151.25,Yes,Yes,85.26,79.79,25,North America,Mid-Market,Manager_B,Evening,Data Loss,High,2024-05-09
+SLA-501087,TKT-100836,Security-Team,Low,48,638,3332,115.69,Yes,Yes,38.35,52.35,12,North America,Startup,Manager_E,Evening,Configuration,Medium,2024-03-25
+SLA-501088,TKT-101942,Tier2-Technical,High,8,71,580,120.83,Yes,Yes,50.47,88.12,20,Asia-Pacific,Startup,Manager_D,Afternoon,Security,Medium,2024-03-10
+SLA-501089,TKT-101801,Tier3-Engineering,Medium,24,88,605,42.01,No,No,95.93,73.21,24,Asia-Pacific,Startup,Manager_F,Evening,Security,Critical,2024-06-02
+SLA-501090,TKT-100043,Tier1-Support,Medium,24,263,1096,76.11,No,No,74.14,64.73,34,North America,Mid-Market,Manager_C,Night,Security,Medium,2024-01-04
+SLA-501091,TKT-101308,Network-Operations,Medium,24,471,1253,87.01,No,Yes,76.47,46.24,34,North America,Mid-Market,Manager_D,Night,Service Down,Low,2024-05-04
+SLA-501092,TKT-101863,Infrastructure,High,8,31,628,130.83,Yes,Yes,87.44,42.07,20,Asia-Pacific,SMB,Manager_A,Afternoon,Security,Critical,2024-01-14
+SLA-501093,TKT-100430,Tier3-Engineering,High,8,79,251,52.29,No,No,58.85,52.31,29,LATAM,SMB,Manager_F,Night,Service Down,High,2024-03-20
+SLA-501094,TKT-100561,Tier2-Technical,Medium,24,96,615,42.71,No,No,55.98,79.61,10,LATAM,Startup,Manager_F,Night,Security,Low,2024-01-17
+SLA-501095,TKT-101469,Infrastructure,Medium,24,7,327,22.71,No,No,81.15,68.7,2,North America,Mid-Market,Manager_F,Evening,Integration,Medium,2024-02-10
+SLA-501096,TKT-100135,Network-Operations,High,8,79,748,155.83,Yes,Yes,38.23,94.46,9,LATAM,SMB,Manager_D,Morning,Service Down,Low,2024-01-25
+SLA-501097,TKT-101313,Tier3-Engineering,High,8,182,739,153.96,Yes,Yes,42.32,83.26,32,LATAM,Mid-Market,Manager_A,Night,Performance,Critical,2024-05-25
+SLA-501098,TKT-101286,Security-Team,High,8,230,554,115.42,Yes,Yes,53.55,51.62,44,Asia-Pacific,Enterprise,Manager_A,Afternoon,Performance,Low,2024-04-21
+SLA-501099,TKT-101057,Tier3-Engineering,Critical,4,37,179,74.58,No,No,47.17,64.66,17,LATAM,SMB,Manager_D,Night,Configuration,Low,2024-03-04
+SLA-501100,TKT-100273,Security-Team,Critical,4,12,357,148.75,Yes,Yes,77.35,45.07,4,Europe,SMB,Manager_C,Afternoon,Service Down,High,2024-04-30
+SLA-501101,TKT-100848,Network-Operations,Medium,24,439,1635,113.54,Yes,Yes,40.19,62.34,30,Europe,Startup,Manager_D,Afternoon,Service Down,High,2024-04-09
+SLA-501102,TKT-101941,Tier1-Support,Low,48,1079,2513,87.26,No,Yes,92.05,86.08,4,Europe,Enterprise,Manager_D,Afternoon,Security,Low,2024-04-03
+SLA-501103,TKT-101436,Tier3-Engineering,Low,48,956,3206,111.32,Yes,Yes,68.99,89.17,14,North America,Startup,Manager_E,Night,Integration,Medium,2024-04-07
+SLA-501104,TKT-100532,Tier3-Engineering,Medium,24,228,436,30.28,No,No,82.92,75.21,37,North America,SMB,Manager_B,Morning,Service Down,Medium,2024-06-28
+SLA-501105,TKT-101471,Infrastructure,Medium,24,177,876,60.83,No,No,92.33,71.31,9,LATAM,Startup,Manager_A,Afternoon,Configuration,High,2024-01-12
+SLA-501106,TKT-100416,Billing-Team,High,8,94,184,38.33,No,No,40.95,86.75,24,Asia-Pacific,SMB,Manager_F,Night,Data Loss,Medium,2024-03-09
+SLA-501107,TKT-100266,Infrastructure,Low,48,541,3573,124.06,Yes,Yes,49.42,75.35,3,Europe,Mid-Market,Manager_C,Afternoon,Data Loss,High,2024-02-06
+SLA-501108,TKT-100369,Infrastructure,Low,48,1100,3599,124.97,Yes,Yes,69.29,88.56,44,Europe,Enterprise,Manager_C,Evening,Performance,Critical,2024-06-12
+SLA-501109,TKT-101265,Cloud-Support,Medium,24,414,1496,103.89,Yes,Yes,97.53,44.05,24,Europe,SMB,Manager_E,Night,Service Down,Critical,2024-03-07
+SLA-501110,TKT-100021,Cloud-Support,Medium,24,162,1158,80.42,No,Yes,63.77,45.15,40,Europe,SMB,Manager_F,Night,Configuration,Low,2024-06-19
+SLA-501111,TKT-100434,Infrastructure,Low,48,485,2071,71.91,No,No,88.65,43.98,32,LATAM,SMB,Manager_A,Morning,Integration,Low,2024-02-05
+SLA-501112,TKT-100120,Tier1-Support,Medium,24,364,209,14.51,No,No,92.83,54.56,14,Asia-Pacific,Mid-Market,Manager_D,Evening,Integration,Critical,2024-03-18
+SLA-501113,TKT-101923,Tier1-Support,Medium,24,103,1595,110.76,Yes,Yes,85.71,58.71,5,North America,SMB,Manager_E,Night,Security,Medium,2024-04-04
+SLA-501114,TKT-100808,Network-Operations,High,8,52,136,28.33,No,No,55.67,53.04,11,Europe,Enterprise,Manager_E,Afternoon,Security,Low,2024-06-13
+SLA-501115,TKT-100347,Cloud-Support,Low,48,1093,3529,122.53,Yes,Yes,39.95,75.19,20,Asia-Pacific,Startup,Manager_B,Morning,Security,Low,2024-06-08
+SLA-501116,TKT-101454,Infrastructure,High,8,39,609,126.88,Yes,Yes,36.73,63.35,44,Europe,SMB,Manager_A,Evening,Service Down,High,2024-03-26
+SLA-501117,TKT-100261,Cloud-Support,Low,48,1160,2121,73.65,No,No,53.91,88.1,22,Asia-Pacific,SMB,Manager_D,Evening,Security,Medium,2024-05-26
+SLA-501118,TKT-101255,Security-Team,Medium,24,23,743,51.6,No,No,77.19,47.34,32,Asia-Pacific,Startup,Manager_B,Evening,Configuration,Medium,2024-02-01
+SLA-501119,TKT-101006,Tier3-Engineering,Medium,24,449,912,63.33,No,No,33.25,40.76,43,LATAM,Enterprise,Manager_B,Afternoon,Service Down,High,2024-03-16
+SLA-501120,TKT-100470,Tier3-Engineering,Medium,24,254,595,41.32,No,No,66.36,71.08,23,North America,Startup,Manager_C,Afternoon,Configuration,Critical,2024-01-18
+SLA-501121,TKT-100956,Infrastructure,High,8,115,651,135.62,Yes,Yes,72.97,44.82,44,North America,Startup,Manager_A,Night,Security,High,2024-02-26
+SLA-501122,TKT-101452,Cloud-Support,Critical,4,49,317,132.08,Yes,Yes,85.16,86.22,14,LATAM,Startup,Manager_A,Afternoon,Service Down,High,2024-03-02
+SLA-501123,TKT-100715,Tier2-Technical,Medium,24,21,952,66.11,No,No,50.9,90.81,36,Europe,SMB,Manager_B,Afternoon,Configuration,Low,2024-04-10
+SLA-501124,TKT-101041,Security-Team,High,8,162,744,155.0,Yes,Yes,66.28,65.05,9,Europe,Enterprise,Manager_E,Afternoon,Data Loss,Low,2024-06-20
+SLA-501125,TKT-101885,Tier2-Technical,Low,48,1063,1949,67.67,No,No,57.97,86.88,14,Europe,Startup,Manager_F,Morning,Security,Low,2024-01-01
+SLA-501126,TKT-100053,Security-Team,Medium,24,380,563,39.1,No,No,96.82,73.2,28,North America,Startup,Manager_C,Morning,Security,High,2024-01-28
+SLA-501127,TKT-100314,Tier1-Support,Critical,4,54,342,142.5,Yes,Yes,46.35,54.49,17,North America,Startup,Manager_F,Night,Data Loss,High,2024-06-17
+SLA-501128,TKT-101286,Security-Team,Medium,24,174,444,30.83,No,No,37.49,79.57,31,North America,SMB,Manager_A,Night,Security,Medium,2024-06-03
+SLA-501129,TKT-101940,Tier3-Engineering,Low,48,742,2091,72.6,No,No,63.68,65.27,32,Europe,Enterprise,Manager_F,Evening,Security,Medium,2024-05-03
+SLA-501130,TKT-101634,Tier1-Support,Medium,24,444,1378,95.69,No,Yes,69.68,59.49,18,North America,Startup,Manager_A,Night,Security,Medium,2024-03-11
+SLA-501131,TKT-100364,Billing-Team,High,8,244,135,28.12,No,No,96.09,58.48,5,LATAM,Enterprise,Manager_A,Afternoon,Performance,Low,2024-06-08
+SLA-501132,TKT-100795,Infrastructure,Low,48,899,2789,96.84,No,Yes,91.36,48.71,2,Asia-Pacific,Mid-Market,Manager_A,Evening,Data Loss,Low,2024-03-26
+SLA-501133,TKT-101640,Infrastructure,Medium,24,400,501,34.79,No,No,90.84,71.26,14,Asia-Pacific,Mid-Market,Manager_C,Morning,Security,Low,2024-05-09
+SLA-501134,TKT-101049,Billing-Team,Medium,24,255,426,29.58,No,No,90.65,41.83,37,LATAM,Startup,Manager_D,Night,Security,Low,2024-02-11
+SLA-501135,TKT-101153,Infrastructure,Medium,24,270,1203,83.54,No,Yes,50.7,67.26,3,North America,Startup,Manager_C,Afternoon,Data Loss,Medium,2024-03-17
+SLA-501136,TKT-101291,Infrastructure,Medium,24,490,1762,122.36,Yes,Yes,58.66,55.94,43,North America,Enterprise,Manager_E,Evening,Data Loss,Low,2024-06-20
+SLA-501137,TKT-101385,Billing-Team,Medium,24,363,321,22.29,No,No,60.1,94.14,10,Europe,Startup,Manager_E,Morning,Security,Low,2024-01-08
+SLA-501138,TKT-100958,Infrastructure,High,8,134,100,20.83,No,No,53.01,73.6,16,North America,Startup,Manager_C,Afternoon,Performance,Medium,2024-04-23
+SLA-501139,TKT-101401,Security-Team,Medium,24,3,363,25.21,No,No,59.12,81.07,27,Europe,Startup,Manager_C,Morning,Integration,Medium,2024-04-01
+SLA-501140,TKT-100156,Tier1-Support,Medium,24,204,1645,114.24,Yes,Yes,81.23,61.11,19,North America,Startup,Manager_D,Morning,Data Loss,Medium,2024-04-21
+SLA-501141,TKT-101353,Security-Team,Medium,24,240,878,60.97,No,No,35.26,78.93,36,Asia-Pacific,SMB,Manager_E,Morning,Integration,High,2024-05-04
+SLA-501142,TKT-100033,Tier2-Technical,Critical,4,75,50,20.83,No,No,91.94,71.74,20,LATAM,Mid-Market,Manager_B,Night,Service Down,Low,2024-03-17
+SLA-501143,TKT-100170,Infrastructure,Medium,24,242,719,49.93,No,No,50.46,84.61,29,Asia-Pacific,SMB,Manager_E,Night,Configuration,Medium,2024-02-07
+SLA-501144,TKT-100921,Security-Team,High,8,14,706,147.08,Yes,Yes,30.16,53.46,30,Asia-Pacific,Mid-Market,Manager_B,Afternoon,Service Down,Medium,2024-06-21
+SLA-501145,TKT-101529,Security-Team,Low,48,395,1614,56.04,No,No,42.49,44.38,18,North America,Startup,Manager_E,Morning,Service Down,Low,2024-05-08
+SLA-501146,TKT-100808,Tier2-Technical,Low,48,756,2910,101.04,Yes,Yes,36.65,45.22,37,North America,Mid-Market,Manager_F,Night,Data Loss,High,2024-04-18
+SLA-501147,TKT-101416,Infrastructure,Critical,4,78,190,79.17,No,No,38.53,68.04,30,LATAM,SMB,Manager_E,Evening,Configuration,Critical,2024-01-24
+SLA-501148,TKT-101379,Infrastructure,Medium,24,265,1248,86.67,No,Yes,44.67,47.98,31,Asia-Pacific,Enterprise,Manager_B,Afternoon,Service Down,Critical,2024-02-24
+SLA-501149,TKT-100390,Tier2-Technical,Medium,24,462,486,33.75,No,No,34.0,89.16,17,North America,Mid-Market,Manager_A,Afternoon,Data Loss,High,2024-04-01
+SLA-501150,TKT-101328,Tier3-Engineering,Critical,4,42,279,116.25,Yes,Yes,83.43,72.26,25,Europe,Startup,Manager_F,Afternoon,Service Down,Low,2024-03-08
+SLA-501151,TKT-100616,Cloud-Support,High,8,299,192,40.0,No,No,31.83,77.86,30,Europe,Startup,Manager_D,Morning,Service Down,Medium,2024-06-02
+SLA-501152,TKT-100340,Tier3-Engineering,Low,48,733,3426,118.96,Yes,Yes,48.15,41.04,44,LATAM,Startup,Manager_D,Morning,Data Loss,Critical,2024-02-18
+SLA-501153,TKT-101198,Billing-Team,Critical,4,116,326,135.83,Yes,Yes,81.22,79.0,6,Europe,SMB,Manager_E,Night,Service Down,Low,2024-03-31
+SLA-501154,TKT-100683,Tier1-Support,Medium,24,543,587,40.76,No,No,63.8,57.77,30,North America,Startup,Manager_D,Night,Configuration,Medium,2024-01-08
+SLA-501155,TKT-101185,Security-Team,High,8,40,529,110.21,Yes,Yes,93.93,73.47,42,North America,Startup,Manager_D,Night,Integration,Critical,2024-05-10
+SLA-501156,TKT-101210,Cloud-Support,Low,48,854,3560,123.61,Yes,Yes,79.37,80.45,19,Europe,Enterprise,Manager_E,Morning,Data Loss,High,2024-01-17
+SLA-501157,TKT-101180,Network-Operations,Critical,4,22,333,138.75,Yes,Yes,87.48,45.08,32,North America,SMB,Manager_F,Night,Data Loss,Low,2024-03-18
+SLA-501158,TKT-100239,Cloud-Support,Medium,24,235,1133,78.68,No,No,58.11,56.53,7,Asia-Pacific,Startup,Manager_F,Night,Service Down,Medium,2024-05-17
+SLA-501159,TKT-100330,Security-Team,High,8,233,773,161.04,Yes,Yes,47.49,58.51,11,Europe,Startup,Manager_C,Night,Performance,Medium,2024-02-21
+SLA-501160,TKT-101039,Billing-Team,High,8,161,120,25.0,No,No,84.36,85.19,12,Asia-Pacific,Startup,Manager_B,Evening,Configuration,Medium,2024-01-21
+SLA-501161,TKT-101456,Infrastructure,Low,48,81,3143,109.13,Yes,Yes,89.86,59.06,13,LATAM,SMB,Manager_D,Afternoon,Integration,Low,2024-04-23
+SLA-501162,TKT-100424,Security-Team,High,8,32,121,25.21,No,No,86.41,54.93,2,North America,Startup,Manager_B,Afternoon,Performance,High,2024-05-02
+SLA-501163,TKT-100320,Cloud-Support,Medium,24,594,1168,81.11,No,Yes,79.41,90.14,14,North America,Startup,Manager_D,Evening,Performance,High,2024-06-27
+SLA-501164,TKT-100428,Tier1-Support,Low,48,132,325,11.28,No,No,68.63,74.75,5,North America,SMB,Manager_C,Evening,Configuration,Critical,2024-01-21
+SLA-501165,TKT-100324,Tier3-Engineering,Critical,4,104,95,39.58,No,No,63.68,58.34,18,North America,Enterprise,Manager_C,Night,Service Down,Low,2024-03-27
+SLA-501166,TKT-101264,Billing-Team,Medium,24,577,1780,123.61,Yes,Yes,53.18,55.54,35,North America,Mid-Market,Manager_D,Evening,Security,High,2024-01-10
+SLA-501167,TKT-101607,Network-Operations,Medium,24,92,1650,114.58,Yes,Yes,39.93,51.76,37,North America,SMB,Manager_B,Morning,Configuration,High,2024-02-05
+SLA-501168,TKT-100103,Cloud-Support,Medium,24,96,1238,85.97,No,Yes,89.53,52.63,23,LATAM,Enterprise,Manager_A,Morning,Integration,Medium,2024-04-25
+SLA-501169,TKT-100085,Tier2-Technical,Medium,24,261,529,36.74,No,No,67.26,89.79,11,Europe,Enterprise,Manager_B,Evening,Performance,Low,2024-03-05
+SLA-501170,TKT-101491,Security-Team,Low,48,985,571,19.83,No,No,57.22,42.61,5,LATAM,Startup,Manager_F,Morning,Performance,Critical,2024-05-17
+SLA-501171,TKT-101325,Network-Operations,Low,48,1017,467,16.22,No,No,81.96,82.37,15,Asia-Pacific,Mid-Market,Manager_A,Afternoon,Data Loss,Low,2024-06-19
+SLA-501172,TKT-101985,Infrastructure,Low,48,277,3123,108.44,Yes,Yes,49.63,80.21,20,North America,Mid-Market,Manager_D,Evening,Security,Low,2024-06-01
+SLA-501173,TKT-101034,Tier3-Engineering,High,8,84,710,147.92,Yes,Yes,98.95,41.59,33,North America,SMB,Manager_C,Night,Security,Low,2024-05-02
+SLA-501174,TKT-101289,Billing-Team,Critical,4,60,129,53.75,No,No,46.35,82.81,3,Europe,Startup,Manager_B,Afternoon,Data Loss,Medium,2024-06-28
+SLA-501175,TKT-100846,Infrastructure,Medium,24,132,562,39.03,No,No,57.74,93.01,23,LATAM,SMB,Manager_A,Night,Performance,Medium,2024-05-04
+SLA-501176,TKT-101577,Tier1-Support,High,8,265,705,146.88,Yes,Yes,68.58,78.98,7,North America,Enterprise,Manager_C,Evening,Data Loss,Medium,2024-03-03
+SLA-501177,TKT-101581,Tier3-Engineering,Medium,24,186,938,65.14,No,No,77.05,50.82,33,LATAM,Enterprise,Manager_D,Morning,Configuration,High,2024-06-28
+SLA-501178,TKT-101889,Tier3-Engineering,Medium,24,33,701,48.68,No,No,58.16,83.08,20,North America,SMB,Manager_D,Night,Configuration,Low,2024-04-04
+SLA-501179,TKT-101435,Security-Team,High,8,80,234,48.75,No,No,36.39,41.07,32,Asia-Pacific,SMB,Manager_A,Evening,Integration,High,2024-04-08
+SLA-501180,TKT-101250,Tier3-Engineering,Critical,4,64,97,40.42,No,No,75.56,50.94,20,LATAM,Startup,Manager_F,Afternoon,Integration,Low,2024-05-03
+SLA-501181,TKT-101278,Cloud-Support,Critical,4,0,37,15.42,No,No,43.86,47.38,25,Asia-Pacific,Startup,Manager_B,Evening,Service Down,Low,2024-03-23
+SLA-501182,TKT-100075,Network-Operations,Low,48,823,1531,53.16,No,No,40.45,53.25,11,LATAM,Mid-Market,Manager_E,Evening,Performance,Low,2024-03-10
+SLA-501183,TKT-100190,Security-Team,Medium,24,209,872,60.56,No,No,54.55,81.68,14,Asia-Pacific,Mid-Market,Manager_A,Morning,Integration,Low,2024-03-20
+SLA-501184,TKT-101213,Security-Team,Low,48,901,1130,39.24,No,No,58.52,91.53,14,Europe,SMB,Manager_F,Night,Integration,Medium,2024-03-30
+SLA-501185,TKT-100226,Tier1-Support,Low,48,318,2504,86.94,No,Yes,51.38,48.67,21,Asia-Pacific,SMB,Manager_F,Evening,Service Down,Critical,2024-03-20
+SLA-501186,TKT-100097,Tier2-Technical,Low,48,1035,640,22.22,No,No,55.69,45.84,20,LATAM,SMB,Manager_E,Morning,Data Loss,Medium,2024-01-12
+SLA-501187,TKT-100694,Billing-Team,High,8,57,568,118.33,Yes,Yes,43.48,45.37,36,Europe,SMB,Manager_C,Evening,Configuration,Medium,2024-01-25
+SLA-501188,TKT-101607,Tier3-Engineering,Medium,24,250,205,14.24,No,No,59.64,40.25,25,LATAM,Mid-Market,Manager_A,Evening,Integration,Medium,2024-04-30
+SLA-501189,TKT-101192,Billing-Team,Low,48,255,1005,34.9,No,No,60.99,53.93,6,Asia-Pacific,Startup,Manager_A,Afternoon,Configuration,Low,2024-03-26
+SLA-501190,TKT-100871,Infrastructure,Low,48,592,1889,65.59,No,No,76.23,80.17,16,North America,Enterprise,Manager_A,Night,Performance,High,2024-02-06
+SLA-501191,TKT-100975,Billing-Team,Medium,24,446,922,64.03,No,No,85.85,90.68,31,LATAM,Enterprise,Manager_C,Night,Integration,Low,2024-06-12
+SLA-501192,TKT-101144,Infrastructure,Medium,24,153,935,64.93,No,No,47.63,93.96,9,Asia-Pacific,Startup,Manager_F,Night,Data Loss,High,2024-02-25
+SLA-501193,TKT-101411,Cloud-Support,Medium,24,570,1713,118.96,Yes,Yes,93.11,41.91,20,LATAM,Mid-Market,Manager_B,Afternoon,Data Loss,Low,2024-06-15
+SLA-501194,TKT-101456,Cloud-Support,Medium,24,356,1447,100.49,Yes,Yes,87.1,43.45,15,Europe,Enterprise,Manager_F,Afternoon,Data Loss,Medium,2024-01-29
+SLA-501195,TKT-100969,Tier1-Support,Medium,24,329,1327,92.15,No,Yes,59.57,61.89,34,Europe,SMB,Manager_A,Night,Service Down,Low,2024-01-09
+SLA-501196,TKT-100247,Network-Operations,Low,48,1042,2933,101.84,Yes,Yes,71.15,86.6,13,Asia-Pacific,Enterprise,Manager_E,Afternoon,Service Down,Critical,2024-02-11
+SLA-501197,TKT-100760,Security-Team,Low,48,254,3396,117.92,Yes,Yes,97.86,78.13,29,Asia-Pacific,SMB,Manager_C,Night,Service Down,Low,2024-02-06
+SLA-501198,TKT-101620,Tier3-Engineering,High,8,139,739,153.96,Yes,Yes,78.88,51.43,40,Europe,Startup,Manager_A,Evening,Security,Medium,2024-05-07
+SLA-501199,TKT-100441,Tier3-Engineering,Low,48,1028,1211,42.05,No,No,71.03,82.03,20,LATAM,Enterprise,Manager_A,Evening,Service Down,High,2024-04-24

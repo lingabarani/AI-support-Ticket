@@ -27,6 +27,7 @@ export const sendChatMessage = async ({ role, message, sessionId }) => {
       ].join('\n'),
       source: 'frontend_backend_offline',
       error: error.message,
+      timeout: Boolean(error.timeout),
     });
   }
 };

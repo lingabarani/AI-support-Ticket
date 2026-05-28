@@ -1,6 +1,11 @@
 const crypto = require('crypto');
 const { S3Client, PutObjectCommand, ListObjectsV2Command, GetObjectCommand } = require('@aws-sdk/client-s3');
 const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-bedrock-runtime');
+const {
+  getDynamoTables,
+  isDynamoDbProvider,
+  putItem,
+} = require('./dynamoDbService');
 
 const REGION = process.env.AWS_REGION || 'us-east-1';
 const RAW_BUCKET = process.env.RAW_BUCKET || 'support-ticket-ai-linga-dev-raw-68dec6e5';
@@ -27,12 +32,20 @@ const dateParts = () => {
 
 const normalizeTicket = (body) => {
   const ticketId = body.ticket_id || `WEB-${crypto.randomBytes(4).toString('hex').toUpperCase()}`;
+  const now = new Date().toISOString();
   return {
     ticket_id: ticketId,
+    ticketId,
+    id: ticketId,
     customer_name: body.customer_name || body.name || 'Frontend User',
     customer_email: body.customer_email || body.email || 'frontend.user@example.com',
     product: body.product || 'Web Portal',
+    affected_product: body.affected_product || body.product || 'Web Portal',
     category: body.category || 'General Support',
+    issue_category: body.issue_category || body.category || 'General Support',
+    subject: body.subject || body.issue_description || body.description || 'Support request',
+    description: body.description || body.issue_description || body.subject || '',
+    ticket_description: body.ticket_description || body.issue_description || body.description || body.subject || '',
     issue_description: body.issue_description || body.description || body.subject || '',
     resolution_notes: body.resolution_notes || '',
     priority: body.priority || 'Medium',
@@ -58,6 +71,10 @@ const normalizeTicket = (body) => {
     preferred_contact_time: body.preferred_contact_time || '',
     issue_complexity_score: body.issue_complexity_score ?? 5,
     customer_segment: body.customer_segment || 'Web Customer',
+    source: body.source || 'pipeline',
+    created_at: body.created_at || now,
+    updated_at: now,
+    ticket_updated_date: body.ticket_updated_date || now,
   };
 };
 
@@ -72,6 +89,16 @@ exports.submitTicket = async (body) => {
   const ticket = normalizeTicket(body);
   const { year, month, day } = dateParts();
   const key = `tickets/incoming/year=${year}/month=${month}/day=${day}/${ticket.ticket_id}.json`;
+  let databaseSource = 's3';
+
+  if (isDynamoDbProvider()) {
+    try {
+      await putItem(getDynamoTables().tickets, ticket);
+      databaseSource = 'dynamodb';
+    } catch (error) {
+      console.error('DynamoDB pipeline ticket save failed; continuing with S3 pipeline fallback.');
+    }
+  }
 
   await s3.send(new PutObjectCommand({
     Bucket: RAW_BUCKET,
@@ -80,7 +107,7 @@ exports.submitTicket = async (body) => {
     ContentType: 'application/json',
   }));
 
-  return { ticket, bucket: RAW_BUCKET, key };
+  return { ticket, bucket: RAW_BUCKET, key, source: databaseSource };
 };
 
 exports.listRecentAnalytics = async (limit = 10) => {

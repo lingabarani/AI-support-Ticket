@@ -89,13 +89,16 @@ const DashboardHeader = ({ title, subtitle, onRefresh, loading }) => (
 export default function LocalAnalyticsDashboard({ role = 'support_agent' }) {
   const [serverAnalytics, setServerAnalytics] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [loadError, setLoadError] = useState('');
 
   const load = async () => {
     setLoading(true);
+    setLoadError('');
     try {
       const data = await analyticsApi.summary();
       setServerAnalytics(data);
-    } catch {
+    } catch (error) {
+      setLoadError(error.timeout ? 'Analytics request timed out. Showing cached demo analytics.' : 'Analytics service is temporarily unavailable. Showing cached demo analytics.');
       setServerAnalytics(null);
     } finally {
       setLoading(false);
@@ -132,6 +135,11 @@ export default function LocalAnalyticsDashboard({ role = 'support_agent' }) {
   return (
     <div className="space-y-6">
       <DashboardHeader title={title} subtitle={subtitle} onRefresh={load} loading={loading} />
+      {loadError ? (
+        <div className="rounded-2xl border border-amber-300/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">
+          {loadError}
+        </div>
+      ) : null}
 
       {view === 'businessExecutiveAnalytics' ? (
         <>

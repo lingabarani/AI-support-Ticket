@@ -69,6 +69,7 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
   const [open, setOpen] = useState(mode !== 'floating');
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [timeoutState, setTimeoutState] = useState(false);
   const [sessionId] = useState(() => `web-${role}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`);
   const [messages, setMessages] = useState([{ from: 'assistant', text: copy.welcome }]);
 
@@ -79,17 +80,25 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
     setOpen(true);
     setInput('');
     setLoading(true);
+    setTimeoutState(false);
     setMessages((current) => [...current, { from: 'user', text: trimmed }]);
 
     try {
       const response = await sendChatMessage({ role, message: trimmed, sessionId });
+      setTimeoutState(Boolean(response.timeout));
       setMessages((current) => [...current, {
         from: 'assistant',
         text: response.reply,
         suggestedQuestions: response.suggestedQuestions || response.suggestedActions || [],
       }]);
-    } catch {
-      setMessages((current) => [...current, { from: 'assistant', text: 'Live AI service is temporarily unavailable. Showing intelligent response from the built-in enterprise dataset.' }]);
+    } catch (error) {
+      setTimeoutState(Boolean(error.timeout || /timed out/i.test(error.message || '')));
+      setMessages((current) => [...current, {
+        from: 'assistant',
+        text: error.timeout || /timed out/i.test(error.message || '')
+          ? 'The request timed out. You can retry, or ask a narrower ticket or analytics question.'
+          : 'Live AI service is temporarily unavailable. Showing intelligent response from the built-in enterprise dataset.',
+      }]);
     } finally {
       setLoading(false);
     }
@@ -138,6 +147,11 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
       <MessageList messages={messages} />
 
       <div className="border-t border-white/10 px-4 py-3">
+        {timeoutState && (
+          <div className="mb-3 rounded-xl border border-amber-300/25 bg-amber-400/10 px-3 py-2 text-xs text-amber-100">
+            Request timed out. Please retry or narrow the question.
+          </div>
+        )}
         <div className="mb-3 flex flex-wrap gap-2">
           {messages[messages.length - 1]?.suggestedQuestions?.length ? null : <RolePromptSuggestions role={role} onSelect={submitMessage} />}
           {(messages[messages.length - 1]?.suggestedQuestions || []).map((question) => (
@@ -158,7 +172,7 @@ export default function BedrockAgentChat({ role = 'support_agent', mode = 'float
             onKeyDown={(e) => {
               if (e.key === 'Enter') submitMessage();
             }}
-            placeholder={loading ? 'Waiting for response...' : 'Type your question...'}
+            placeholder={loading ? 'Waiting for response...' : timeoutState ? 'Retry or ask a narrower question...' : 'Type your question...'}
             disabled={loading}
             className="min-w-0 flex-1 bg-transparent px-2 text-sm text-white outline-none placeholder:text-slate-500 disabled:cursor-wait"
           />

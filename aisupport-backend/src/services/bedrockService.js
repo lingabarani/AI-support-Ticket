@@ -3,18 +3,19 @@ const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-be
 const { getRelevantAgentTrainingContextAsync } = require('./datasetService');
 
 const MODEL_ID = process.env.BEDROCK_MODEL_ID || 'anthropic.claude-3-haiku-20240307-v1:0';
+const BEDROCK_FALLBACK_MESSAGE = 'AI analysis temporarily unavailable. Using fallback intelligence.';
 const PRIMARY_ANALYZE_MODEL_ID = process.env.BEDROCK_PRIMARY_MODEL_ID
   || process.env.BEDROCK_ANALYZE_MODEL_ID
   || process.env.BEDROCK_CLAUDE_SONNET_MODEL_ID
-  || 'anthropic.claude-sonnet-4-5-20250929-v1:0';
+  || MODEL_ID;
 const FALLBACK_ANALYZE_MODEL_ID = process.env.BEDROCK_FALLBACK_MODEL_ID
   || process.env.BEDROCK_OPUS_MODEL_ID
   || process.env.BEDROCK_CLAUDE_OPUS_MODEL_ID
-  || 'anthropic.claude-opus-4-1-20250805-v1:0';
+  || MODEL_ID;
 const AGENT_ID = process.env.BEDROCK_AGENT_ID;
 const AGENT_ALIAS_ID = process.env.BEDROCK_AGENT_ALIAS_ID;
-const BEDROCK_TIMEOUT_MS = Number(process.env.BEDROCK_TIMEOUT_MS || 25000);
-const BEDROCK_MAX_RETRIES = Number(process.env.BEDROCK_MAX_RETRIES || 2);
+const BEDROCK_TIMEOUT_MS = Math.min(Number(process.env.BEDROCK_TIMEOUT_MS || 15000), 15000);
+const BEDROCK_MAX_RETRIES = Math.min(Number(process.env.BEDROCK_MAX_RETRIES || 1), 1);
 const BEDROCK_ANALYZE_CONFIDENCE_THRESHOLD = Number(process.env.BEDROCK_ANALYZE_CONFIDENCE_THRESHOLD || 0.75);
 
 const ROLE_PROMPTS = {
@@ -41,13 +42,12 @@ const logBedrock = (level, message, meta = {}) => {
     secretKey: undefined,
     token: undefined,
   };
-  const line = JSON.stringify({
+  const line = `[BEDROCK_SERVICE] ${message} ${JSON.stringify({
     level,
     service: 'bedrockService',
-    message,
     timestamp: new Date().toISOString(),
     ...safeMeta,
-  });
+  })}`;
   if (level === 'error') console.error(line);
   else if (level === 'warn') console.warn(line);
   else console.info(line);
@@ -114,16 +114,35 @@ const sendWithTimeoutAndRetry = async (command, {
   maxRetries = BEDROCK_MAX_RETRIES,
 } = {}) => {
   let lastError;
+  const deadline = Date.now() + Math.min(timeoutMs, 15000);
 
   for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+    const remainingMs = deadline - Date.now();
+    if (remainingMs <= 0) {
+      const error = new Error('Bedrock request timed out.');
+      error.name = 'TimeoutError';
+      throw error;
+    }
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+    const timeoutError = new Error('Bedrock request timed out.');
+    timeoutError.name = 'TimeoutError';
+    let timeout;
+    const timeoutPromise = new Promise((_, reject) => {
+      timeout = setTimeout(() => {
+        controller.abort();
+        logBedrock('warn', 'Bedrock invocation timeout', { operation, modelId, attempt: attempt + 1, timeoutMs: remainingMs });
+        reject(timeoutError);
+      }, remainingMs);
+    });
     const startedAt = Date.now();
 
     try {
-      logBedrock('info', 'Bedrock invocation started', { operation, modelId, attempt: attempt + 1, timeoutMs });
-      const response = await bedrockClient.send(command, { abortSignal: controller.signal });
-      logBedrock('info', 'Bedrock invocation completed', {
+      logBedrock('info', 'Before Bedrock call', { operation, modelId, attempt: attempt + 1, timeoutMs: remainingMs });
+      const response = await Promise.race([
+        bedrockClient.send(command, { abortSignal: controller.signal }),
+        timeoutPromise,
+      ]);
+      logBedrock('info', 'After Bedrock call', {
         operation,
         modelId,
         attempt: attempt + 1,
@@ -136,7 +155,7 @@ const sendWithTimeoutAndRetry = async (command, {
       lastError.$modelId = modelId;
       lastError.$retryCount = attempt;
       const retryable = attempt < maxRetries && isRetryableBedrockError(error);
-      logBedrock(retryable ? 'warn' : 'error', 'Bedrock invocation failed', {
+      logBedrock(retryable ? 'warn' : 'error', 'Bedrock invocation error', {
         operation,
         modelId,
         attempt: attempt + 1,
@@ -148,7 +167,8 @@ const sendWithTimeoutAndRetry = async (command, {
       });
 
       if (!retryable) break;
-      await sleep(Math.min(2000 * (attempt + 1), 6000));
+      const delayMs = Math.min(2000 * (attempt + 1), 6000, Math.max(0, deadline - Date.now()));
+      if (delayMs > 0) await sleep(delayMs);
     } finally {
       clearTimeout(timeout);
     }
@@ -257,6 +277,49 @@ const invokeModel = async ({ role, message }) => {
   }
 
   return { reply, mode: 'model' };
+};
+
+const invokeBedrock = async (prompt) => {
+  const cleanPrompt = String(prompt || '').trim();
+  if (!cleanPrompt) return '';
+
+  try {
+    const command = new InvokeModelCommand({
+      modelId: process.env.BEDROCK_MODEL_ID || MODEL_ID,
+      body: JSON.stringify({
+        anthropic_version: process.env.BEDROCK_ANTHROPIC_VERSION || 'bedrock-2023-05-31',
+        max_tokens: Number(process.env.BEDROCK_MAX_TOKENS || 700),
+        temperature: Number(process.env.BEDROCK_TEMPERATURE || 0.2),
+        messages: [
+          {
+            role: 'user',
+            content: [{ type: 'text', text: cleanPrompt }],
+          },
+        ],
+      }),
+      contentType: 'application/json',
+      accept: 'application/json',
+    });
+
+    const response = await sendWithTimeoutAndRetry(command, {
+      operation: 'invoke-bedrock',
+      modelId: process.env.BEDROCK_MODEL_ID || MODEL_ID,
+    });
+    const payload = JSON.parse(Buffer.from(response.body).toString('utf-8'));
+    const text = payload.content?.find((item) => item.type === 'text')?.text || payload.content?.[0]?.text || '';
+    return String(text || '').trim() || BEDROCK_FALLBACK_MESSAGE;
+  } catch (error) {
+    logBedrock('warn', 'Safe Bedrock fallback returned', {
+      operation: 'invoke-bedrock',
+      modelId: process.env.BEDROCK_MODEL_ID || MODEL_ID,
+      errorName: error?.name || error?.code,
+      statusCode: error?.$metadata?.httpStatusCode,
+    });
+    return {
+      fallback: true,
+      message: BEDROCK_FALLBACK_MESSAGE,
+    };
+  }
 };
 
 const requiredAnalysisKeys = [
@@ -608,20 +671,29 @@ const sendChatMessage = async ({ role, message, sessionId }) => {
 
     return invokeModel({ role, message });
   } catch (error) {
-    const friendlyMessage = mapBedrockError(error);
-    const wrapped = new Error(friendlyMessage);
-    wrapped.statusCode = ['AccessDeniedException', 'ValidationException', 'ResourceNotFoundException'].includes(error?.name) ? 403 : 502;
-    wrapped.cause = error;
-    throw wrapped;
+    logBedrock('warn', 'Safe chat fallback returned', {
+      operation: 'chat',
+      errorName: error?.name || error?.code,
+      statusCode: error?.$metadata?.httpStatusCode,
+    });
+    return {
+      reply: BEDROCK_FALLBACK_MESSAGE,
+      fallback: true,
+      message: BEDROCK_FALLBACK_MESSAGE,
+      mode: 'fallback',
+      providerStatus: 'unavailable',
+    };
   }
 };
 
 module.exports = {
   ANALYZE_MODEL_ID: PRIMARY_ANALYZE_MODEL_ID,
+  BEDROCK_FALLBACK_MESSAGE,
   FALLBACK_ANALYZE_MODEL_ID,
   PRIMARY_ANALYZE_MODEL_ID,
   ROLE_PROMPTS,
   analyzeTicketWithBedrock,
   fallbackTicketAnalysis,
+  invokeBedrock,
   sendChatMessage,
 };

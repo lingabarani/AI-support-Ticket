@@ -38,6 +38,10 @@ export default function AIDecisionCard({
   riskScore = 0,
   owner = 'support_agent',
   slaStatus = 'on_track',
+  confidence,
+  recommendation,
+  nextAction,
+  supervisorEscalationStatus,
   reasons = [],
   actions = [],
 }) {
@@ -66,13 +70,15 @@ export default function AIDecisionCard({
           <p className="mt-1 text-xs font-semibold text-white">{riskScore}/100</p>
         </div>
         <div className="rounded-lg bg-black/20 p-2">
-          <p className="text-[10px] uppercase tracking-wider text-slate-500">SLA</p>
-          <p className="mt-1 text-xs font-semibold text-cyan-200">{slaStatus.replace('_', ' ')}</p>
+          <p className="text-[10px] uppercase tracking-wider text-slate-500">Confidence</p>
+          <p className="mt-1 text-xs font-semibold text-cyan-200">{confidence ? `${Math.round(confidence * 100)}%` : slaStatus.replace('_', ' ')}</p>
         </div>
       </div>
 
       <div className="mt-4 space-y-2">
         <p className="text-xs text-slate-400">Owner: <span className="font-medium text-slate-200">{owner.replace('_', ' ')}</span></p>
+        <p className="text-xs text-slate-400">Escalation: <span className="font-medium text-slate-200">{(supervisorEscalationStatus || 'not_required').replace('_', ' ')}</span></p>
+        {recommendation && <p className="text-xs leading-5 text-slate-400">{recommendation}</p>}
         {reasons.slice(0, 2).map((reason) => (
           <p key={reason} className="text-xs leading-5 text-slate-400">{reason}</p>
         ))}
@@ -80,8 +86,8 @@ export default function AIDecisionCard({
 
       {actions.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
-          {actions.slice(0, 3).map((action) => (
-            <span key={action} className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-[11px] text-slate-300">
+          {([nextAction, ...actions].filter(Boolean)).slice(0, 3).map((action, index) => (
+            <span key={`${action}-${index}`} className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-[11px] text-slate-300">
               {action}
             </span>
           ))}

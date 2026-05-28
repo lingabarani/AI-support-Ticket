@@ -1,0 +1,2508 @@
+issue_category,issue_subcategory,question,answer,resolution_steps,automation_possible,estimated_resolution_time,required_team,risk_level,policy_reference,escalation_required
+Account Access,Password Reset,How do I reset my account password?,Use the 'Forgot Password' link on the login page or contact support.,"1. Click Forgot Password
+2. Enter email
+3. Check inbox
+4. Click reset link
+5. Set new password",Yes,10,Account Management,Low,POL-001,No
+VPN,Connection Failure,VPN client won't connect to the gateway,"Verify internet connection, update VPN client, check firewall settings, restart device.","1. Verify internet connectivity
+2. Check VPN server status
+3. Update client software
+4. Clear client cache
+5. Restart VPN application",Partial,30,Network Operations,Medium,POL-002,No
+Billing,Invoice Dispute,How do I dispute an invoice charge?,Contact billing team with invoice number within 30 days. Provide transaction details.,"1. Gather invoice details
+2. Contact billing support
+3. Provide transaction info
+4. Wait for investigation
+5. Receive resolution",No,1440,Billing Team,High,POL-003,Yes
+Security,MFA Setup,How do I enable two-factor authentication?,"Navigate to Security Settings, select 2FA, choose authenticator app or SMS.","1. Go to account settings
+2. Select Security
+3. Enable 2FA
+4. Scan QR code
+5. Verify code
+6. Save backup codes",Yes,15,Security Team,Low,POL-004,No
+Network,Latency,Network latency is causing performance issues,"Check for network congestion, upgrade bandwidth, optimize routing, check ISP status.","1. Run speed test
+2. Monitor bandwidth usage
+3. Check for interference
+4. Review QoS settings
+5. Contact ISP if needed",Partial,120,Network Operations,Medium,POL-005,No
+Cloud Service,Data Migration,How long does cloud data migration take?,Migration time depends on data volume. Typically 2-7 days. Plan in advance.,"1. Assess data volume
+2. Schedule migration
+3. Prepare systems
+4. Execute migration
+5. Verify data integrity",No,10080,Cloud Support,High,POL-006,Yes
+Software,Installation,Application fails to install on Windows,"Check system requirements, disable antivirus, run as admin, update Windows.","1. Verify system requirements
+2. Check disk space
+3. Disable antivirus
+4. Run installer as admin
+5. Restart system",Partial,45,Tier2-Technical,Medium,POL-007,No
+Refund Request,Return Process,What is your return and refund policy?,30-day return window from purchase. Items must be unused. Original packaging required.,"1. Initiate return within 30 days
+2. Print shipping label
+3. Pack item
+4. Ship to warehouse
+5. Receive refund",Yes,1440,Billing Team,Medium,POL-008,No
+API Failure,Integration Issue,API calls returning 500 errors,"Check API status page, verify authentication, review rate limits, check payload format.","1. Check API status
+2. Verify credentials
+3. Review logs
+4. Check request format
+5. Test with sample payload",Partial,60,Tier3-Engineering,High,POL-009,Yes
+Hardware,Device Failure,Server hardware is showing errors,"Log hardware alerts in system, contact support with error codes.","1. Document error codes
+2. Check system logs
+3. Monitor temperatures
+4. Contact hardware support
+5. Arrange replacement",No,480,Infrastructure,Critical,POL-010,Yes
+Infrastructure,Server Down,Production server is unavailable,Immediate escalation to Infrastructure team. Check failover systems. Notify stakeholders.,"1. Declare incident
+2. Check monitoring
+3. Failover if available
+4. Check logs
+5. Restore service
+6. Post-incident review",No,120,Infrastructure,Critical,POL-011,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Critical,POL-011,Yes
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Critical,POL-012,No
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier2-Technical,High,POL-013,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,High,POL-014,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Medium,POL-015,No
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Billing-Team,Low,POL-016,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Critical,POL-017,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Low,POL-018,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Critical,POL-019,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Critical,POL-020,No
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,Medium,POL-021,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Low,POL-022,Yes
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Billing-Team,Medium,POL-023,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier2-Technical,Medium,POL-024,Yes
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier3-Engineering,Low,POL-025,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier1-Support,Medium,POL-026,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Medium,POL-027,No
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,Low,POL-028,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Low,POL-029,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier3-Engineering,High,POL-030,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,Critical,POL-031,Yes
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Medium,POL-032,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier2-Technical,Low,POL-033,No
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier1-Support,High,POL-034,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Low,POL-035,Yes
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Medium,POL-036,No
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier3-Engineering,High,POL-037,Yes
+API Failure,Rate Limit,API Failure issue: Rate Limit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Billing-Team,High,POL-038,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,Critical,POL-039,No
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,Medium,POL-040,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Medium,POL-041,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Low,POL-042,Yes
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Billing-Team,High,POL-043,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,High,POL-044,Yes
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,High,POL-045,Yes
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,High,POL-046,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier3-Engineering,Critical,POL-047,No
+API Failure,Rate Limit,API Failure issue: Rate Limit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,Critical,POL-048,No
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,Critical,POL-049,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier1-Support,Low,POL-050,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Low,POL-051,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,High,POL-052,No
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Medium,POL-053,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier1-Support,Critical,POL-054,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Medium,POL-055,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Low,POL-056,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,Low,POL-057,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,Medium,POL-058,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Low,POL-059,Yes
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,Critical,POL-060,Yes
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Low,POL-061,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Critical,POL-062,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier3-Engineering,High,POL-063,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Low,POL-064,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier1-Support,High,POL-065,Yes
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Low,POL-066,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,High,POL-067,Yes
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,Low,POL-068,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Critical,POL-069,Yes
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Critical,POL-070,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,High,POL-071,No
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Low,POL-072,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier3-Engineering,Critical,POL-073,No
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Billing-Team,High,POL-074,Yes
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Critical,POL-075,Yes
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Medium,POL-076,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier3-Engineering,Medium,POL-077,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Billing-Team,Critical,POL-078,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier1-Support,High,POL-079,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier1-Support,Medium,POL-080,Yes
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier2-Technical,Critical,POL-081,Yes
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Billing-Team,Critical,POL-082,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,Critical,POL-083,Yes
+Delivery,Lost Package,Delivery issue: Lost Package?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Medium,POL-084,No
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Critical,POL-085,No
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Billing-Team,Critical,POL-086,Yes
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,Medium,POL-087,Yes
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier1-Support,Medium,POL-088,No
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Billing-Team,Low,POL-089,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Billing-Team,Critical,POL-090,Yes
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier1-Support,Medium,POL-091,No
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,High,POL-092,Yes
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,Critical,POL-093,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Critical,POL-094,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,Critical,POL-095,No
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier2-Technical,Low,POL-096,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier3-Engineering,Critical,POL-097,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier2-Technical,High,POL-098,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier2-Technical,Critical,POL-099,Yes
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier1-Support,Medium,POL-100,No
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier1-Support,Low,POL-101,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,Low,POL-102,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,Medium,POL-103,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,High,POL-104,No
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier3-Engineering,Low,POL-105,Yes
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Medium,POL-106,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier3-Engineering,Critical,POL-107,No
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier2-Technical,Critical,POL-108,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Critical,POL-109,Yes
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Medium,POL-110,Yes
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,Critical,POL-111,Yes
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier3-Engineering,Low,POL-112,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Low,POL-113,No
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier3-Engineering,Low,POL-114,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Critical,POL-115,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,Critical,POL-116,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,Low,POL-117,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Critical,POL-118,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,Low,POL-119,Yes
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,Low,POL-120,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,Low,POL-121,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Billing-Team,High,POL-122,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,High,POL-123,Yes
+Delivery,Lost Package,Delivery issue: Lost Package?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier3-Engineering,Low,POL-124,No
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,Low,POL-125,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Critical,POL-126,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,High,POL-127,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Low,POL-128,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier2-Technical,High,POL-129,Yes
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Critical,POL-130,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier1-Support,Low,POL-131,No
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier1-Support,Low,POL-132,No
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Critical,POL-133,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier1-Support,High,POL-134,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Critical,POL-135,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Medium,POL-136,No
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,Low,POL-137,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,High,POL-138,No
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Medium,POL-139,Yes
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,Medium,POL-140,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier3-Engineering,High,POL-141,Yes
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier1-Support,Low,POL-142,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier3-Engineering,Medium,POL-143,Yes
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Low,POL-144,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier3-Engineering,Low,POL-145,No
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Low,POL-146,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier3-Engineering,High,POL-147,Yes
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Billing-Team,High,POL-148,No
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,Critical,POL-149,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,Critical,POL-150,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Billing-Team,Medium,POL-151,Yes
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Billing-Team,Medium,POL-152,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,Critical,POL-153,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier1-Support,Critical,POL-154,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Billing-Team,High,POL-155,No
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier3-Engineering,High,POL-156,Yes
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,High,POL-157,Yes
+API Failure,Rate Limit,API Failure issue: Rate Limit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Medium,POL-158,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier3-Engineering,Low,POL-159,No
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Critical,POL-160,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Billing-Team,High,POL-161,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Billing-Team,Critical,POL-162,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Low,POL-163,Yes
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Billing-Team,Medium,POL-164,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,Medium,POL-165,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,High,POL-166,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier3-Engineering,Critical,POL-167,Yes
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier3-Engineering,Low,POL-168,No
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,High,POL-169,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,High,POL-170,Yes
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier3-Engineering,High,POL-171,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier2-Technical,Low,POL-172,No
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier1-Support,Critical,POL-173,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Billing-Team,Medium,POL-174,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,Low,POL-175,No
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Critical,POL-176,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Low,POL-177,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,High,POL-178,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier3-Engineering,High,POL-179,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Medium,POL-180,No
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Medium,POL-181,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,Medium,POL-182,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier2-Technical,Critical,POL-183,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier2-Technical,Low,POL-184,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Low,POL-185,No
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,Critical,POL-186,Yes
+Account Access,2FA,Account Access issue: 2FA?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,Low,POL-187,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier2-Technical,High,POL-188,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Critical,POL-189,No
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,High,POL-190,No
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Billing-Team,Low,POL-191,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Low,POL-192,Yes
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier1-Support,Critical,POL-193,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Medium,POL-194,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,High,POL-195,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Billing-Team,Low,POL-196,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,High,POL-197,No
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,High,POL-198,No
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier3-Engineering,Medium,POL-199,No
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Billing-Team,High,POL-200,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier1-Support,Critical,POL-201,Yes
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,High,POL-202,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Medium,POL-203,No
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Billing-Team,Critical,POL-204,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier2-Technical,Low,POL-205,Yes
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier2-Technical,Critical,POL-206,No
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier2-Technical,High,POL-207,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Billing-Team,Critical,POL-208,Yes
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,Critical,POL-209,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier3-Engineering,High,POL-210,No
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Low,POL-211,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Medium,POL-212,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier1-Support,Low,POL-213,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier1-Support,Low,POL-214,No
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,High,POL-215,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,High,POL-216,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Billing-Team,Critical,POL-217,No
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Medium,POL-218,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,Critical,POL-219,No
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier2-Technical,Critical,POL-220,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier1-Support,High,POL-221,Yes
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,High,POL-222,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier3-Engineering,High,POL-223,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Critical,POL-224,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier3-Engineering,Critical,POL-225,Yes
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,Low,POL-226,Yes
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,High,POL-227,No
+Product Defect,Cosmetic Damage,Product Defect issue: Cosmetic Damage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Medium,POL-228,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Billing-Team,Critical,POL-229,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,Low,POL-230,Yes
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,High,POL-231,No
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier1-Support,Low,POL-232,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,High,POL-233,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,High,POL-234,Yes
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier3-Engineering,Critical,POL-235,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier3-Engineering,High,POL-236,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier2-Technical,Critical,POL-237,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Medium,POL-238,No
+Account Access,2FA,Account Access issue: 2FA?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier3-Engineering,High,POL-239,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Low,POL-240,No
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier3-Engineering,Critical,POL-241,Yes
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Low,POL-242,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Medium,POL-243,No
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,High,POL-244,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier2-Technical,Critical,POL-245,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Medium,POL-246,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier2-Technical,High,POL-247,No
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,High,POL-248,Yes
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Medium,POL-249,No
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Low,POL-250,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Medium,POL-251,Yes
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Critical,POL-252,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Critical,POL-253,Yes
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier1-Support,Medium,POL-254,Yes
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier3-Engineering,High,POL-255,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier2-Technical,Critical,POL-256,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier2-Technical,Low,POL-257,Yes
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Critical,POL-258,No
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Billing-Team,Low,POL-259,Yes
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Critical,POL-260,Yes
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,High,POL-261,Yes
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,High,POL-262,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier3-Engineering,Low,POL-263,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier1-Support,High,POL-264,Yes
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,Low,POL-265,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Low,POL-266,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Critical,POL-267,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Billing-Team,High,POL-268,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier1-Support,High,POL-269,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Critical,POL-270,No
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,Critical,POL-271,Yes
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier3-Engineering,Low,POL-272,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,Critical,POL-273,Yes
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Critical,POL-274,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,High,POL-275,No
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Billing-Team,High,POL-276,No
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,High,POL-277,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Billing-Team,High,POL-278,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier3-Engineering,High,POL-279,Yes
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier3-Engineering,Medium,POL-280,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier3-Engineering,Low,POL-281,Yes
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Medium,POL-282,No
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier3-Engineering,Critical,POL-283,No
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier2-Technical,Low,POL-284,Yes
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier2-Technical,Medium,POL-285,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Critical,POL-286,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,High,POL-287,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier3-Engineering,Low,POL-288,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Medium,POL-289,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Low,POL-290,Yes
+Delivery,Lost Package,Delivery issue: Lost Package?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier3-Engineering,Medium,POL-291,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier2-Technical,Critical,POL-292,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Low,POL-293,Yes
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Low,POL-294,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier3-Engineering,High,POL-295,No
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier3-Engineering,High,POL-296,Yes
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,Medium,POL-297,Yes
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier3-Engineering,High,POL-298,Yes
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,High,POL-299,Yes
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Billing-Team,Low,POL-300,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Critical,POL-301,Yes
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier3-Engineering,Critical,POL-302,Yes
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier3-Engineering,High,POL-303,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Medium,POL-304,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,High,POL-305,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Medium,POL-306,No
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Billing-Team,Medium,POL-307,No
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier3-Engineering,Low,POL-308,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Medium,POL-309,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Billing-Team,Medium,POL-310,Yes
+Account Access,2FA,Account Access issue: 2FA?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier1-Support,Low,POL-311,No
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier1-Support,Critical,POL-312,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Billing-Team,Low,POL-313,Yes
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier2-Technical,Critical,POL-314,Yes
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Low,POL-315,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Low,POL-316,Yes
+API Failure,Rate Limit,API Failure issue: Rate Limit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Medium,POL-317,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,High,POL-318,No
+Billing,Subscription Issue,Billing issue: Subscription Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Critical,POL-319,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Low,POL-320,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Critical,POL-321,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Billing-Team,Medium,POL-322,Yes
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Billing-Team,Medium,POL-323,No
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Low,POL-324,No
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Billing-Team,High,POL-325,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Billing-Team,Medium,POL-326,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier3-Engineering,Critical,POL-327,Yes
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,High,POL-328,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Critical,POL-329,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,High,POL-330,No
+Billing,Payment Failure,Billing issue: Payment Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Critical,POL-331,No
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier2-Technical,Medium,POL-332,No
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,Medium,POL-333,Yes
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Low,POL-334,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier1-Support,Critical,POL-335,No
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Billing-Team,High,POL-336,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier1-Support,High,POL-337,Yes
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,Critical,POL-338,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier3-Engineering,Low,POL-339,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Medium,POL-340,Yes
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Critical,POL-341,Yes
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier2-Technical,Critical,POL-342,No
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Medium,POL-343,No
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,Medium,POL-344,No
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Tier2-Technical,Critical,POL-345,No
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Billing-Team,High,POL-346,No
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Medium,POL-347,Yes
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Low,POL-348,No
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier2-Technical,Low,POL-349,Yes
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,High,POL-350,No
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,High,POL-351,No
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,Medium,POL-352,Yes
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Low,POL-353,No
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,Critical,POL-354,No
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,High,POL-355,Yes
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,Medium,POL-356,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Critical,POL-357,Yes
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Medium,POL-358,No
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Medium,POL-359,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Critical,POL-360,Yes
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier2-Technical,Medium,POL-361,Yes
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,Low,POL-362,Yes
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,Critical,POL-363,Yes
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Billing-Team,Low,POL-364,Yes
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Critical,POL-365,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier2-Technical,High,POL-366,Yes
+API Failure,Rate Limit,API Failure issue: Rate Limit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier3-Engineering,High,POL-367,Yes
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Medium,POL-368,Yes
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier1-Support,High,POL-369,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,High,POL-370,Yes
+Hardware,Warranty Claim,Hardware issue: Warranty Claim?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier1-Support,Medium,POL-371,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,High,POL-372,No
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,Medium,POL-373,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Critical,POL-374,Yes
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,Critical,POL-375,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,Low,POL-376,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Medium,POL-377,Yes
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier1-Support,Medium,POL-378,Yes
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Medium,POL-379,Yes
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Billing-Team,High,POL-380,No
+Delivery,Delayed Delivery,Delivery issue: Delayed Delivery?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,High,POL-381,Yes
+Account Access,Password Reset,Account Access issue: Password Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Low,POL-382,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier2-Technical,Low,POL-383,Yes
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Medium,POL-384,No
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier1-Support,Medium,POL-385,Yes
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,High,POL-386,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,Low,POL-387,No
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,Critical,POL-388,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Medium,POL-389,No
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier1-Support,Critical,POL-390,Yes
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier1-Support,Medium,POL-391,No
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Billing-Team,Medium,POL-392,No
+Delivery,Lost Package,Delivery issue: Lost Package?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Billing-Team,Low,POL-393,Yes
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Low,POL-394,Yes
+Delivery,Lost Package,Delivery issue: Lost Package?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier1-Support,High,POL-395,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier2-Technical,Medium,POL-396,No
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier2-Technical,Critical,POL-397,Yes
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier3-Engineering,Medium,POL-398,No
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Critical,POL-399,Yes
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier3-Engineering,Critical,POL-400,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Billing-Team,Medium,POL-401,Yes
+Account Access,2FA,Account Access issue: 2FA?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier1-Support,High,POL-402,Yes
+VPN,Configuration,VPN issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier3-Engineering,Low,POL-403,Yes
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,Medium,POL-404,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Critical,POL-405,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,Medium,POL-406,No
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier3-Engineering,Low,POL-407,Yes
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Critical,POL-408,No
+Product Defect,Quality Issue,Product Defect issue: Quality Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier2-Technical,Low,POL-409,Yes
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,Critical,POL-410,No
+Network,Bandwidth,Network issue: Bandwidth?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Billing-Team,High,POL-411,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Billing-Team,Low,POL-412,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier3-Engineering,Low,POL-413,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Critical,POL-414,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Billing-Team,High,POL-415,Yes
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Low,POL-416,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier3-Engineering,Medium,POL-417,No
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Critical,POL-418,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier2-Technical,Critical,POL-419,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Billing-Team,Critical,POL-420,No
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier2-Technical,Low,POL-421,Yes
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier2-Technical,High,POL-422,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Billing-Team,Medium,POL-423,No
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Billing-Team,Medium,POL-424,No
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier2-Technical,High,POL-425,Yes
+Billing,Refund Process,Billing issue: Refund Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,Critical,POL-426,Yes
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier2-Technical,Critical,POL-427,Yes
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier2-Technical,Medium,POL-428,No
+Software,Update Issue,Software issue: Update Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier1-Support,High,POL-429,Yes
+Infrastructure,Backup,Infrastructure issue: Backup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier1-Support,High,POL-430,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,240,Tier3-Engineering,Low,POL-431,No
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier3-Engineering,Critical,POL-432,Yes
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier1-Support,Medium,POL-433,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier3-Engineering,Critical,POL-434,No
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Billing-Team,Low,POL-435,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier1-Support,Medium,POL-436,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier3-Engineering,Low,POL-437,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,1440,Tier1-Support,High,POL-438,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,15,Tier3-Engineering,Low,POL-439,Yes
+Security,Access Control,Security issue: Access Control?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,High,POL-440,Yes
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier3-Engineering,Critical,POL-441,Yes
+VPN,Connection Failure,VPN issue: Connection Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Billing-Team,High,POL-442,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Medium,POL-443,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Medium,POL-444,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier2-Technical,Medium,POL-445,Yes
+Security,Credential Reset,Security issue: Credential Reset?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier2-Technical,Low,POL-446,No
+Infrastructure,Server Down,Infrastructure issue: Server Down?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier1-Support,Critical,POL-447,Yes
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier1-Support,Critical,POL-448,Yes
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Billing-Team,High,POL-449,No
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Billing-Team,Critical,POL-450,Yes
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Tier2-Technical,Medium,POL-451,Yes
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Tier2-Technical,Critical,POL-452,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,High,POL-453,No
+VPN,Authentication,VPN issue: Authentication?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Billing-Team,High,POL-454,No
+Product Defect,Performance,Product Defect issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier1-Support,Critical,POL-455,No
+VPN,Performance,VPN issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier3-Engineering,Critical,POL-456,Yes
+Cloud Service,Performance,Cloud Service issue: Performance?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,Medium,POL-457,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier1-Support,Medium,POL-458,Yes
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Billing-Team,High,POL-459,Yes
+Refund Request,Refund Status,Refund Request issue: Refund Status?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,15,Billing-Team,Medium,POL-460,Yes
+Cloud Service,Migration,Cloud Service issue: Migration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier1-Support,Medium,POL-461,Yes
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Medium,POL-462,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier2-Technical,High,POL-463,No
+Account Access,Login Failed,Account Access issue: Login Failed?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Medium,POL-464,Yes
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Tier2-Technical,Medium,POL-465,No
+Refund Request,Credit,Refund Request issue: Credit?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,120,Tier2-Technical,Low,POL-466,No
+API Failure,Integration Issue,API Failure issue: Integration Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier3-Engineering,Low,POL-467,Yes
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Billing-Team,Medium,POL-468,No
+Account Access,Permission Issue,Account Access issue: Permission Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,15,Tier1-Support,Medium,POL-469,Yes
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier1-Support,Critical,POL-470,No
+Software,Bug Report,Software issue: Bug Report?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Critical,POL-471,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,60,Tier2-Technical,Low,POL-472,Yes
+Software,Feature Request,Software issue: Feature Request?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Medium,POL-473,No
+Cloud Service,Configuration,Cloud Service issue: Configuration?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,480,Tier3-Engineering,Critical,POL-474,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,1440,Tier2-Technical,Low,POL-475,No
+Refund Request,Return Process,Refund Request issue: Return Process?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,10080,Billing-Team,Medium,POL-476,No
+Network,Latency,Network issue: Latency?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier1-Support,Medium,POL-477,Yes
+Billing,Invoice Dispute,Billing issue: Invoice Dispute?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,30,Tier3-Engineering,Low,POL-478,No
+Software,Installation,Software issue: Installation?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Billing-Team,Low,POL-479,No
+Network,Connectivity,Network issue: Connectivity?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Billing-Team,Critical,POL-480,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,240,Billing-Team,Critical,POL-481,Yes
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,120,Tier2-Technical,High,POL-482,Yes
+Security,MFA Setup,Security issue: MFA Setup?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Medium,POL-483,No
+Product Defect,Malfunction,Product Defect issue: Malfunction?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier1-Support,Critical,POL-484,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier2-Technical,Critical,POL-485,No
+Infrastructure,Database Issue,Infrastructure issue: Database Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,480,Tier3-Engineering,Medium,POL-486,No
+API Failure,Error Response,API Failure issue: Error Response?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,480,Tier3-Engineering,Medium,POL-487,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier1-Support,Low,POL-488,No
+Hardware,Replacement,Hardware issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,120,Tier3-Engineering,Low,POL-489,No
+Security,Account Breach,Security issue: Account Breach?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,30,Tier2-Technical,Low,POL-490,No
+Hardware,Device Failure,Hardware issue: Device Failure?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,10080,Tier3-Engineering,Critical,POL-491,Yes
+Infrastructure,Storage,Infrastructure issue: Storage?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Billing-Team,Medium,POL-492,No
+Hardware,Repair,Hardware issue: Repair?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier2-Technical,High,POL-493,No
+Network,DNS Resolution,Network issue: DNS Resolution?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,30,Tier3-Engineering,Critical,POL-494,Yes
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,1440,Tier3-Engineering,High,POL-495,Yes
+Cloud Service,Service Unavailable,Cloud Service issue: Service Unavailable?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,240,Tier2-Technical,Low,POL-496,Yes
+Delivery,Tracking,Delivery issue: Tracking?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Yes,10080,Tier3-Engineering,High,POL-497,Yes
+Refund Request,Replacement,Refund Request issue: Replacement?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",Partial,60,Billing-Team,Critical,POL-498,No
+API Failure,Timeout,API Failure issue: Timeout?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier3-Engineering,Medium,POL-499,No
+Delivery,Address Issue,Delivery issue: Address Issue?,"Check documentation, verify configuration, restart service if applicable.","1. Identify root cause
+2. Apply troubleshooting
+3. Test solution
+4. Verify resolution
+5. Document issue",No,60,Tier2-Technical,Medium,POL-500,No

@@ -23,6 +23,9 @@ const quickSightDatasetFiles = {
 
 const candidateDirs = [
   path.join(backendRoot, 'data'),
+  path.join(backendRoot, 'data', 'raw'),
+  path.join(backendRoot, 'data', 'analytics'),
+  path.join(backendRoot, 'data', 'knowledge-base'),
   ...DATASET_DIR_NAMES.map((dir) => path.join(repoRoot, dir)),
   ...DATASET_DIR_NAMES.map((dir) => path.join(backendRoot, dir)),
   path.join(repoRoot, 'src', 'data'),
@@ -197,6 +200,16 @@ const getMongoTickets = async () => {
   }
 };
 
+const getDynamoTickets = async () => {
+  if (String(process.env.DATABASE_PROVIDER || '').toLowerCase() !== 'dynamodb') return [];
+  try {
+    const { getDynamoTables, scanTable } = require('./dynamoDbService');
+    return await scanTable(getDynamoTables().tickets, { Limit: 50, maxPages: 1 });
+  } catch {
+    return [];
+  }
+};
+
 const normalizeTicketForDataset = (ticket) => ({
   ...ticket,
   ticket_id: ticket.ticket_id || ticket.ticketId,
@@ -212,6 +225,8 @@ const normalizeTicketForDataset = (ticket) => ({
 });
 
 const getPrimaryTickets = async () => {
+  const dynamoTickets = await getDynamoTickets();
+  if (dynamoTickets.length) return dynamoTickets.map(normalizeTicketForDataset);
   const mongoTickets = await getMongoTickets();
   if (mongoTickets.length) return mongoTickets.map(normalizeTicketForDataset);
   return getDemoTickets();

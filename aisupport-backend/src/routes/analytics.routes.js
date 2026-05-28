@@ -3,6 +3,7 @@ const Ticket = require('../models/Ticket');
 const { getDemoAnalytics, getPrimaryTickets } = require('../services/datasetService');
 const { loadRoleDataset } = require('../services/csvDatasetService');
 const { buildDashboardMetrics } = require('../services/dashboardMetricsService');
+const { getSupportAgentMetrics, getTeamManagerMetrics, getBusinessExecutiveMetrics } = require('../services/analyticsDatasetService');
 
 const roleMap = {
   customer: 'supportAgentAnalytics',
@@ -231,6 +232,33 @@ router.get('/:roleKey(support-agent|team-manager|business-executive)', async (re
     ].filter(Boolean),
     generatedAt: new Date().toISOString(),
   });
+});
+
+router.get('/support-agent', async (req, res) => {
+  try {
+    const metrics = await getSupportAgentMetrics();
+    res.json({ success: true, source: 'dataset_registry', role: 'support_agent', analytics: metrics });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Support agent analytics failed.', errors: [error.message] });
+  }
+});
+
+router.get('/team-manager', async (req, res) => {
+  try {
+    const metrics = await getTeamManagerMetrics();
+    res.json({ success: true, source: 'dataset_registry', role: 'team_manager', analytics: metrics });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Team manager analytics failed.', errors: [error.message] });
+  }
+});
+
+router.get('/business-executive', async (req, res) => {
+  try {
+    const metrics = await getBusinessExecutiveMetrics();
+    res.json({ success: true, source: 'dataset_registry', role: 'business_executive', analytics: metrics });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Business executive analytics failed.', errors: [error.message] });
+  }
 });
 
 router.get('/overview', async (req, res) => {

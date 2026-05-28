@@ -3,8 +3,8 @@ const router = require('express').Router();
 const { validateRole } = require('../middleware/validateRole');
 const { generateChatReply } = require('../services/chatOrchestrator');
 
-const MIN_RESPONSE_DELAY_MS = Number(process.env.CHAT_MIN_RESPONSE_DELAY_MS || 4200);
-const MAX_RESPONSE_DELAY_MS = Number(process.env.CHAT_MAX_RESPONSE_DELAY_MS || 5200);
+const MIN_RESPONSE_DELAY_MS = Number(process.env.CHAT_MIN_RESPONSE_DELAY_MS || 0);
+const MAX_RESPONSE_DELAY_MS = Number(process.env.CHAT_MAX_RESPONSE_DELAY_MS || 0);
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const waitForNaturalResponseTime = async (startedAt) => {
   const target = MIN_RESPONSE_DELAY_MS + Math.floor(Math.random() * Math.max(1, MAX_RESPONSE_DELAY_MS - MIN_RESPONSE_DELAY_MS));

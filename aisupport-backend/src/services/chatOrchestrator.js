@@ -10,7 +10,7 @@ const {
   saveSession,
 } = require('./conversationMemoryService');
 
-const shouldTryExternalAi = () => process.env.ENABLE_EXTERNAL_AI === 'true';
+const shouldTryExternalAi = () => process.env.ENABLE_EXTERNAL_AI === 'true' || getProvider() === 'bedrock';
 
 const getProvider = () => String(process.env.AI_PROVIDER || 'bedrock').toLowerCase();
 
@@ -94,6 +94,9 @@ const RELIABLE_ROLE_INTENTS = {
 const sanitizeReply = (reply) => String(reply || '')
   .replace(/\*\*/g, '')
   .replace(/^\s*\*\s+/gm, '- ')
+  .replace(/\b[\w-]+_\d+\.csv\b/gi, 'enterprise support data')
+  .replace(/- Source:\s.*(?:csv|dataset).*$/gim, '- Source: enterprise support intelligence')
+  .replace(/\bQuickSight role dataset\b/gi, 'enterprise support intelligence')
   .replace(/^(Sure|Certainly|Here is|Here's)[^\n]*\n+/i, '')
   .trim();
 
@@ -182,6 +185,27 @@ const generateChatReply = async ({ role, message, sessionId }) => {
   }
 
   const intent = detectIntent(message);
+  if (shouldTryExternalAi()) {
+    try {
+      const externalFirst = await buildExternalReply({
+        role: normalizedRole,
+        message,
+        sessionId,
+        intent,
+      });
+      saveSession(sessionId, {
+        lastRole: normalizedRole,
+        lastIntent: intent,
+        lastMessage: message,
+        lastReply: externalFirst.reply,
+        lastTopic: extractTopic(message),
+      });
+      return externalFirst;
+    } catch {
+      // Continue to local intelligence fallback.
+    }
+  }
+
   const topic = extractTopic(message) || memory.lastTopic;
   const contextualMessage = topic && !extractTopic(message)
     ? `${memory.lastMessage || ''} ${message} ${topic}`
@@ -208,6 +232,7 @@ const generateChatReply = async ({ role, message, sessionId }) => {
     });
     return {
       ...datasetGrounded,
+      reply: sanitizeReply(datasetGrounded.reply),
       intent: datasetGrounded.intent || intent,
       sessionId,
     };
@@ -221,6 +246,7 @@ const generateChatReply = async ({ role, message, sessionId }) => {
   if (shouldUseVerifiedAnswer && !shouldFallbackToExternal(datasetGrounded)) {
     return {
       ...verified,
+      reply: sanitizeReply(verified.reply),
       intent,
       sessionId,
       source: verified.source || 'dataset_verified',
@@ -237,8 +263,10 @@ const generateChatReply = async ({ role, message, sessionId }) => {
         intent,
       });
     } catch (error) {
+      const fallback = datasetGrounded || verified;
       return {
-        ...(datasetGrounded || verified),
+        ...fallback,
+        reply: sanitizeReply(fallback.reply),
         intent,
         sessionId,
         source: 'support_fallback',
@@ -247,7 +275,7 @@ const generateChatReply = async ({ role, message, sessionId }) => {
     }
   }
 
-  return { ...verified, intent, sessionId, source: 'local_intelligence' };
+  return { ...verified, reply: sanitizeReply(verified.reply), intent, sessionId, source: 'local_intelligence' };
 };
 
 module.exports = { generateChatReply };

@@ -1,5 +1,6 @@
-const { categorizeTicket } = require('./categorizationAgent');
 const { calculateSlaDueAt } = require('../slaEngine');
+const { invokeBedrock, BEDROCK_FALLBACK_MESSAGE } = require('../bedrockService');
+const { inferCategory, inferPriority, inferSentiment } = require('./categorizationAgent');
 
 const agentResponse = ({ status = 'completed', confidence = 0.86, input, output, recommendation, nextAction }) => ({
   agentName: 'Intake Agent',
@@ -11,7 +12,21 @@ const agentResponse = ({ status = 'completed', confidence = 0.86, input, output,
   nextAction,
 });
 
-const normalizeTicketInput = (input = {}) => {
+const runBedrockIntake = async (ticket) => {
+  const response = await invokeBedrock([
+    'You are the Intake Agent for an MSP helpdesk SaaS platform.',
+    'Validate and summarize the submitted ticket in one concise sentence.',
+    'Do not expose AWS details. Return practical support language only.',
+    `Ticket: ${JSON.stringify({
+      subject: ticket.subject,
+      description: ticket.description,
+      customer: ticket.customer_name,
+    })}`,
+  ].join('\n'));
+  return response?.fallback || response === BEDROCK_FALLBACK_MESSAGE ? '' : response;
+};
+
+const normalizeTicketInput = async (input = {}) => {
   const now = new Date();
   const ticket = {
     ...input,
@@ -24,13 +39,19 @@ const normalizeTicketInput = (input = {}) => {
     ticket_created_date: input.ticket_created_date || input.created_at || input.createdAt || now,
   };
 
-  const categorized = categorizeTicket(ticket);
-  const categorizedOutput = categorized.output || {};
+  const aiSummary = await runBedrockIntake(ticket);
+  const quickCategory = inferCategory(ticket);
+  const quickPriority = inferPriority(ticket);
+  const quickSentiment = inferSentiment(ticket);
   const enriched = {
-    ...(categorizedOutput.ticket || ticket),
+    ...ticket,
+    issue_category: ticket.issue_category || quickCategory,
+    ai_sentiment: ticket.ai_sentiment || quickSentiment,
+    priority: ticket.priority || quickPriority,
+    ai_summary: ticket.ai_summary || aiSummary,
     sla_due_at: ticket.sla_due_at || ticket.slaDueAt || calculateSlaDueAt({
       createdAt: ticket.ticket_created_date,
-      priority: categorizedOutput.priority || ticket.priority,
+      priority: ticket.priority || quickPriority,
     }),
   };
 
@@ -47,7 +68,7 @@ const normalizeTicketInput = (input = {}) => {
     output: {
       ticket: enriched,
       intake,
-      categorization: categorized.output || categorized,
+      aiSummary: aiSummary || 'Rule-based intake summary used.',
     },
     recommendation: intake.missingFields.length
       ? `Request missing fields: ${intake.missingFields.join(', ')}.`

@@ -3,13 +3,14 @@ const path = require('path');
 const { parse } = require('csv-parse/sync');
 
 const backendRoot = path.resolve(__dirname, '..', '..');
-const dataDir = path.join(backendRoot, 'data');
+const rawDataDir = path.join(backendRoot, 'data', 'raw');
+const legacyDataDir = path.join(backendRoot, 'data');
 
 const roleDatasets = {
-  support_agent: 'support_agent_tickets_200_improved.csv',
-  customer: 'support_agent_tickets_200_improved.csv',
-  team_manager: 'team_manager_performance_200_improved.csv',
-  business_executive: 'business_executive_insights_200_improved.csv',
+  support_agent: 'support_tickets_enterprise.csv',
+  customer: 'support_tickets_enterprise.csv',
+  team_manager: 'sla_operations_analytics.csv',
+  business_executive: 'enterprise_orders_products.csv',
 };
 
 const requiredFields = {
@@ -51,17 +52,25 @@ const validateRows = (role, rows) => {
   return { valid: missing.length === 0, missing };
 };
 
-const readCsvDataset = (fileName, role) => {
-  const filePath = path.join(dataDir, fileName);
-  if (!fs.existsSync(filePath)) return { rows: [], sourceDataset: fileName, available: false, validation: { valid: false, missing: [] } };
-  const raw = fs.readFileSync(filePath, 'utf-8').replace(/^\uFEFF/, '');
+const readCsvDataset = async (fileName, role) => {
+  const candidatePaths = [
+    path.join(rawDataDir, fileName),
+    path.join(legacyDataDir, fileName),
+  ];
+  const filePath = candidatePaths.find((candidate) => fs.existsSync(candidate));
+  if (!filePath) return { rows: [], sourceDataset: fileName, available: false, validation: { valid: false, missing: [] } };
+  console.info(`[DATASET_SERVICE] Before dataset load ${JSON.stringify({ role, fileName, timestamp: new Date().toISOString() })}`);
+  const startedAt = Date.now();
+  const raw = (await fs.promises.readFile(filePath, 'utf-8')).replace(/^\uFEFF/, '');
   const parsed = parse(raw, { columns: true, skip_empty_lines: true, trim: true });
-  const rows = parsed.map((row, index) => normalizeRow(row, index, fileName));
-  return { rows, sourceDataset: fileName, available: true, validation: validateRows(role, rows) };
+  const rows = parsed.slice(0, Number(process.env.MAX_ROLE_DATASET_ROWS || 5000)).map((row, index) => normalizeRow(row, index, fileName));
+  console.info(`[DATASET_SERVICE] After dataset load ${JSON.stringify({ role, fileName, rows: rows.length, durationMs: Date.now() - startedAt })}`);
+  return { rows, sourceDataset: fileName, sourcePath: filePath, available: true, validation: validateRows(role, rows) };
 };
 
 const getDatabaseRows = async (role) => {
   try {
+    if (String(process.env.DATABASE_PROVIDER || '').toLowerCase() === 'dynamodb') return [];
     if (role === 'team_manager') {
       const Model = require('../models/TeamManagerPerformance');
       const records = await Model.find({}).sort({ createdAt: -1 }).limit(1000).maxTimeMS(4000).lean();
@@ -96,13 +105,14 @@ const loadRoleDataset = async (role = 'support_agent', { refresh = false } = {})
     return cache[normalizedRole];
   }
 
-  const csv = readCsvDataset(roleDatasets[normalizedRole], normalizedRole);
+  const csv = await readCsvDataset(roleDatasets[normalizedRole], normalizedRole);
   cache[normalizedRole] = { ...csv, sourceType: 'csv' };
   return cache[normalizedRole];
 };
 
 const preloadDatasets = async () => {
-  await Promise.all(Object.keys(roleDatasets).map((role) => loadRoleDataset(role, { refresh: true })));
+  console.info('[DATASET_SERVICE] Startup preload skipped; role datasets load lazily.');
+  return { skipped: true, roles: Object.keys(roleDatasets) };
 };
 
 module.exports = {

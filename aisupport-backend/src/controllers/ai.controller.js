@@ -2,6 +2,46 @@ const Ticket = require('../models/Ticket.model');
 const AIInsight = require('../models/AIInsight.model');
 const { analyzeTicketWithBedrock, sendChatMessage } = require('../services/bedrockService');
 const mongoose = require('mongoose');
+const {
+  getDynamoKeys,
+  getDynamoTables,
+  getItem,
+  isDynamoDbProvider,
+  putItem,
+  updateItem: updateDynamoItem,
+} = require('../services/dynamoDbService');
+
+const getDynamoTicket = async (ticketId) => {
+  if (!ticketId) return null;
+  return getItem(getDynamoTables().tickets, { [getDynamoKeys().tickets]: ticketId });
+};
+
+const saveDynamoAiResult = async ({ ticketId, analysisText, result, metadata }) => {
+  const now = new Date().toISOString();
+  const resultId = `ai-${ticketId || 'ad-hoc'}-${Date.now()}`;
+  return putItem(getDynamoTables().aiResults, {
+    [getDynamoKeys().aiResults]: resultId,
+    result_id: resultId,
+    id: resultId,
+    ticket_id: ticketId || metadata?.ticketId || '',
+    ticketId: ticketId || metadata?.ticketId || '',
+    result_type: 'bedrock_ticket_analysis',
+    source: result.source,
+    modelId: result.modelId,
+    modelUsed: result.modelUsed,
+    fallback: result.fallback,
+    fallbackTriggered: result.fallbackTriggered,
+    responseLatencyMs: result.responseLatencyMs,
+    retryCount: result.retryCount,
+    routingReason: result.routingReason,
+    providerStatus: result.providerStatus,
+    analysis: result.analysis,
+    input: { textLength: analysisText.length, metadata },
+    modelErrors: result.modelErrors || [],
+    created_at: now,
+    timestamp: now,
+  });
+};
 
 // POST /api/ai/analyze-ticket
 exports.analyzeTicket = async (req, res) => {
@@ -9,6 +49,23 @@ exports.analyzeTicket = async (req, res) => {
     const { ticketId, ticketText, text, metadata = {} } = req.body;
     let ticket = null;
     let analysisText = String(ticketText || text || '').trim();
+
+    if (!analysisText && ticketId && isDynamoDbProvider()) {
+      try {
+        ticket = await getDynamoTicket(ticketId);
+        if (ticket) {
+          analysisText = [
+            `Subject: ${ticket.subject || ''}`,
+            `Description: ${ticket.description || ticket.ticket_description || ''}`,
+            `Category: ${ticket.category || ticket.issue_category || ''}`,
+            `Priority: ${ticket.priority || ''}`,
+            `Status: ${ticket.status || ''}`,
+          ].join('\n');
+        }
+      } catch {
+        console.error('DynamoDB ticket lookup failed during AI analysis; falling back to MongoDB.');
+      }
+    }
 
     if (!analysisText && ticketId) {
       const filters = [{ ticket_id: ticketId }, { ticketId }];
@@ -36,7 +93,30 @@ exports.analyzeTicket = async (req, res) => {
       },
     });
 
-    if (ticket) {
+    if (isDynamoDbProvider()) {
+      try {
+        await saveDynamoAiResult({ ticketId, analysisText, result, metadata });
+        if (ticket && !(typeof ticket.save === 'function')) {
+          await updateDynamoItem(getDynamoTables().tickets, { [getDynamoKeys().tickets]: ticket.ticket_id || ticket.ticketId || ticketId }, {
+            aiSummary: result.analysis.resolutionSummary,
+            aiRootCause: result.analysis.subcategory,
+            sentiment: result.analysis.sentiment,
+            priority: ['Urgent', 'Critical'].includes(result.analysis.priority) ? 'Urgent' : result.analysis.priority,
+            ai_summary: result.analysis.resolutionSummary,
+            ai_sentiment: result.analysis.sentiment,
+            ai_root_cause: result.analysis.subcategory,
+            ai_suggested_resolution: result.analysis.recommendedAction,
+            ai_confidence_score: result.analysis.confidenceScore,
+            updated_at: new Date(),
+            ticket_updated_date: new Date(),
+          });
+        }
+      } catch {
+        console.error('DynamoDB AI result persistence failed; continuing with response and MongoDB fallback if available.');
+      }
+    }
+
+    if (ticket && typeof ticket.save === 'function') {
       await AIInsight.create({
         insight_type: 'ticket_analysis',
         role: 'support_agent',

@@ -3,10 +3,9 @@ import { Bot, CheckCircle2, GitBranch, RadioTower, Search, ShieldCheck, Wand2 } 
 const defaultSteps = [
   { id: 'intake', label: 'Intake', status: 'complete', detail: 'Ticket normalized', icon: RadioTower },
   { id: 'categorize', label: 'Categorize', status: 'complete', detail: 'Priority and sentiment scored', icon: GitBranch },
-  { id: 'root-cause', label: 'Root Cause', status: 'active', detail: 'Evidence matched', icon: Search },
-  { id: 'decision', label: 'Decision', status: 'active', detail: 'Risk and SLA evaluated', icon: Bot },
+  { id: 'resolution', label: 'Resolution', status: 'active', detail: 'Evidence matched', icon: Search },
+  { id: 'supervisor', label: 'Supervisor', status: 'active', detail: 'Risk and SLA evaluated', icon: ShieldCheck },
   { id: 'automation', label: 'Automation', status: 'pending', detail: 'Plan awaiting approval', icon: Wand2 },
-  { id: 'audit', label: 'Audit', status: 'pending', detail: 'Governance trail ready', icon: ShieldCheck },
 ];
 
 const statusClass = {
@@ -17,10 +16,17 @@ const statusClass = {
 };
 
 export default function AgentWorkflowTimeline({ steps = defaultSteps }) {
+  const normalizedSteps = (steps.length ? steps : defaultSteps).map((step) => ({
+    ...step,
+    id: step.id || step.agentName || step.label,
+    label: step.label || step.agentName || 'Agent',
+    status: ['completed', 'approved', 'ready'].includes(step.status) ? 'complete' : ['review_required', 'blocked', 'needs_input'].includes(step.status) ? 'blocked' : step.status || 'pending',
+    detail: step.detail || step.recommendation || step.nextAction || 'Agent step completed',
+  }));
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.035] p-4">
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-3 xl:grid-cols-6">
-        {steps.map((step, index) => {
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-3 xl:grid-cols-5">
+        {normalizedSteps.map((step, index) => {
           const Icon = step.icon || CheckCircle2;
           return (
             <div key={step.id || step.label} className="relative">

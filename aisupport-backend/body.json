@@ -1,0 +1,15 @@
+{
+  "anthropic_version": "bedrock-2023-05-31",
+  "max_tokens": 800,
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Analyze this ticket: Customer says payment was deducted but order failed. Return summary, sentiment, priority, and recommended action."
+        }
+      ]
+    }
+  ]
+}   

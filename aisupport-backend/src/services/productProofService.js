@@ -25,6 +25,13 @@ const analyzeProductProof = async ({
     orderId,
     productId,
     uploadedImage,
+    fileMetadata: {
+      originalName: metadata.filename || metadata.originalName || '',
+      mimeType: metadata.mimeType || '',
+      size: metadata.size || 0,
+      storagePath: uploadedImage,
+      uploadedAt: new Date().toISOString(),
+    },
     damageDetected,
     mismatchDetected,
     fakeProductDetected: /fake|counterfeit|not original/.test(text),
@@ -34,10 +41,28 @@ const analyzeProductProof = async ({
     recommendedAction,
     refundEligible,
     metadata,
+    supportedProofTypes: [
+      'product_image',
+      'damaged_product',
+      'wrong_item',
+      'color_mismatch',
+      'invoice_screenshot',
+      'error_screenshot',
+    ],
+    analysisPlaceholder: {
+      provider: 'bedrock_image_ready',
+      status: 'metadata_stored',
+      promptTemplate: [
+        'Analyze the uploaded support proof for damage, wrong item, color mismatch, invoice details, or error screenshot.',
+        'Return JSON with evidence, confidence, recommended action, and refund review status.',
+      ].join(' '),
+      note: 'Bedrock image prompt support prepared for later multimodal enablement.',
+    },
     integrationReady: {
       rekognition: true,
       textract: true,
-      requiredEnv: ['AWS_REGION', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY'],
+      bedrockImagePrompt: true,
+      requiredEnv: ['AWS_REGION', 'BEDROCK_MODEL_ID'],
     },
   };
 };

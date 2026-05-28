@@ -41,20 +41,23 @@ const evaluateDecision = (ticket = {}) => {
   const text = textOf(ticket);
   const sla = evaluateSla(ticket);
   const confidence = getConfidence(ticket);
+  const lowRiskKnownIssue = /password reset|reset password|forgot password|invoice request|invoice copy|refund status|where is my refund|refund update|faq|how do i|how to|basic troubleshooting|clear cache|restart|troubleshoot/.test(text);
+  const mediumRiskIssue = /payment failure|payment failed|payment deducted|order failed|transaction failed|product mismatch|wrong product|wrong item|delivery delay|late delivery|card declined/.test(text);
+  const highRiskIssue = /fraud suspicion|fraud|account compromise|account compromised|account takeover|unauthorized|high-value refund|high value refund|legal complaint|lawsuit|stolen|identity theft|chargeback|security breach/.test(text);
 
   if (confidence < 0.6) {
     return {
-      decision: 'human_review',
-      action: 'Route to support agent for manual validation',
-      assignedTeam: ticket.assigned_team || 'Customer Support',
+      decision: 'supervisor_review',
+      action: 'Escalate to supervisor for low-confidence validation',
+      assignedTeam: 'Team Manager',
       autoResolved: false,
-      escalationRequired: false,
-      reason: 'Low AI confidence requires human review.',
+      escalationRequired: true,
+      reason: 'Low AI confidence requires supervisor escalation.',
       confidence,
     };
   }
 
-  if (/fraud|stolen|chargeback|identity theft|suspicious/.test(text)) {
+  if (highRiskIssue) {
     return {
       decision: 'supervisor_review',
       action: 'Hold automation and request supervisor review',
@@ -90,26 +93,34 @@ const evaluateDecision = (ticket = {}) => {
     };
   }
 
-  if (/payment failed|payment failure|transaction failed|card declined/.test(text)) {
+  if (mediumRiskIssue) {
     return {
       decision: 'route_to_billing',
-      action: 'Route to Billing Team',
-      assignedTeam: 'Billing Team',
+      action: /product mismatch|wrong product|wrong item/.test(text)
+        ? 'Route to Product Support Team'
+        : /delivery delay|late delivery/.test(text)
+          ? 'Route to Logistics Team'
+          : 'Route to Billing Team',
+      assignedTeam: /product mismatch|wrong product|wrong item/.test(text)
+        ? 'Product Support Team'
+        : /delivery delay|late delivery/.test(text)
+          ? 'Logistics Team'
+          : 'Billing Team',
       autoResolved: false,
       escalationRequired: false,
-      reason: 'Payment failure requires billing queue ownership.',
+      reason: 'Medium-risk ticket requires assignment to the correct operating team.',
       confidence,
     };
   }
 
-  if (/password reset|reset password|forgot password|invoice|refund status|where is my refund|refund update/.test(text)) {
+  if (lowRiskKnownIssue) {
     return {
-      decision: 'auto_reply',
-      action: 'Send approved support reply',
-      assignedTeam: 'Customer Support',
-      autoResolved: false,
+      decision: 'auto_resolve',
+      action: 'Auto resolve with approved support guidance',
+      assignedTeam: 'Automation',
+      autoResolved: true,
       escalationRequired: false,
-      reason: 'Known password, invoice, or refund-status request can receive an approved reply.',
+      reason: 'Low-risk known issue is eligible for auto-resolution.',
       confidence,
     };
   }

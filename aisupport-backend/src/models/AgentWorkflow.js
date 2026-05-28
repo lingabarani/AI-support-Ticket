@@ -4,6 +4,7 @@ const agentStepSchema = new mongoose.Schema({
   agentName: String,
   status: String,
   confidence: Number,
+  input: mongoose.Schema.Types.Mixed,
   recommendation: String,
   nextAction: String,
   output: mongoose.Schema.Types.Mixed,
